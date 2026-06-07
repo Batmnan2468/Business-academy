@@ -39,6 +39,7 @@ export default async function PracticePage({ params }: Props) {
 
       <LearnAndPractice
         topicTitle={topic.title}
+        topicSlug={topicSlug}
         learn={topic.learn}
         courseSlug={courseSlug}
         nextTopic={nextTopic}

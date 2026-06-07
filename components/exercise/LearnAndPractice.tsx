@@ -18,9 +18,22 @@ interface NextTopic {
 
 interface Props {
   topicTitle: string
+  topicSlug: string
   learn?: LearnContent
   courseSlug: string
   nextTopic?: NextTopic | null
+}
+
+function markTopicComplete(courseSlug: string, topicSlug: string) {
+  try {
+    const key = `completed:${courseSlug}`
+    const existing: string[] = JSON.parse(localStorage.getItem(key) ?? '[]')
+    if (!existing.includes(topicSlug)) {
+      localStorage.setItem(key, JSON.stringify([...existing, topicSlug]))
+    }
+  } catch {
+    // localStorage unavailable
+  }
 }
 
 interface Session {
@@ -39,7 +52,7 @@ const INITIAL_SESSION: Session = {
   showMastery: false,
 }
 
-export default function LearnAndPractice({ topicTitle, learn, courseSlug, nextTopic }: Props) {
+export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, nextTopic }: Props) {
   const [mode, setMode] = useState<'learn' | 'practice'>(learn ? 'learn' : 'practice')
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
 
@@ -57,6 +70,7 @@ export default function LearnAndPractice({ topicTitle, learn, courseSlug, nextTo
   }
 
   function handleMasteryTransition() {
+    markTopicComplete(courseSlug, topicSlug)
     setSession((prev) => ({ ...prev, showMastery: true }))
   }
 

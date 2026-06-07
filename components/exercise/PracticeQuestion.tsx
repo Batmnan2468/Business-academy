@@ -9,6 +9,19 @@ interface Question {
   explanation: string
 }
 
+function shuffleOptions(q: Question): Question {
+  const indices = Array.from({ length: q.options.length }, (_, i) => i)
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[indices[i], indices[j]] = [indices[j], indices[i]]
+  }
+  return {
+    ...q,
+    options: indices.map((i) => q.options[i]),
+    correctIndex: indices.indexOf(q.correctIndex),
+  }
+}
+
 interface Props {
   topicTitle: string
   onAnswer?: (correct: boolean) => void
@@ -37,7 +50,7 @@ export default function PracticeQuestion({ topicTitle, onAnswer, nextLabel, onNe
       if (!res.ok) {
         throw new Error(data.error ?? `HTTP ${res.status}`)
       }
-      setQuestion(data as Question)
+      setQuestion(shuffleOptions(data as Question))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not load question. Please try again.')
     } finally {
