@@ -1,0 +1,1260 @@
+{
+  "id": "bus-350",
+  "slug": "bus-350",
+  "title": "BUS 350 — Economics and Business Statistics",
+  "description": "The full BUS 350 curriculum at NC State. Build statistical intuition for real business decisions — from descriptive stats and probability through regression, ANOVA, and R-based analysis.",
+  "subject": "Business Statistics",
+  "level": "beginner",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Diagnostic and Metalearning",
+      "topics": [
+        {
+          "id": "t1",
+          "slug": "what-business-statistics-is",
+          "title": "What Business Statistics Is and Why It Matters",
+          "learn": {
+            "explanation": "Business statistics is the discipline of turning raw data into decisions. Every time a manager asks 'is this campaign actually working?', 'should we expand to a new market?', or 'why did sales drop last quarter?', statistics is the tool that separates a defensible answer from a guess. It combines math, logic, and domain knowledge to quantify uncertainty — because in business, you almost never have perfect information, but you still have to act. A business analyst who can read a regression output, interpret a p-value, or design a proper A/B test is more valuable than one who can only describe what already happened.",
+            "example": "A retail chain is considering whether to extend store hours from 9pm to 11pm at all 200 locations, costing $4M per year in labor. Rather than guessing, the analytics team runs a 30-store pilot for 60 days, collecting hourly sales data. Statistics lets them estimate the revenue lift, quantify the uncertainty around that estimate, and make a financially defensible go/no-go recommendation — rather than relying on the gut feel of a regional manager.",
+            "keyPoints": [
+              "Statistics converts uncertainty into quantified risk — the foundation of every serious business decision",
+              "Descriptive statistics summarizes what happened; inferential statistics predicts what will happen or tests whether a difference is real",
+              "Business analysts who speak statistics fluently bridge the gap between data teams and executives who must act on the results"
+            ]
+          }
+        },
+        {
+          "id": "t2",
+          "slug": "types-of-statistical-questions",
+          "title": "Types of Questions Statistics Can Answer",
+          "learn": {
+            "explanation": "Not all business questions are the same, and using the wrong statistical tool gives you a useless answer. Descriptive questions ask 'what happened?' — average order value last month, churn rate by segment, median salary by department. Inferential questions ask 'is this difference real or just noise?' — did the new checkout flow actually improve conversion, or did we just get lucky in a two-week test? Predictive questions ask 'what will happen?' — can we forecast next quarter's revenue from leading indicators? Causal questions ask 'did this cause that?' — the hardest category, requiring careful experimental design. Knowing which type of question you are answering determines every methodological choice you make.",
+            "example": "A SaaS company's head of product asks: 'Did our new onboarding flow increase 30-day retention?' This sounds like one question but actually contains four: (1) What was retention before and after? (descriptive) (2) Is the difference statistically significant? (inferential) (3) What will retention look like next quarter if we keep the new flow? (predictive) (4) Did the new flow cause the retention change, or did something else change at the same time? (causal). Each requires a different analytical approach.",
+            "keyPoints": [
+              "Descriptive, inferential, predictive, and causal are four distinct question types requiring different methods",
+              "Most business analytics questions are inferential — testing whether observed differences reflect reality or sampling noise",
+              "Causal claims require experimental design (randomization) or strong quasi-experimental techniques — correlation alone never establishes causation"
+            ]
+          }
+        },
+        {
+          "id": "t3",
+          "slug": "statistical-problem-solving-framework",
+          "title": "The Statistical Problem-Solving Framework",
+          "learn": {
+            "explanation": "A reliable framework for any statistics problem: (1) Define the business question in plain English. (2) Identify the population you care about and the variable you will measure. (3) Determine what data you have or can collect. (4) Choose the appropriate statistical method. (5) Run the analysis and check assumptions. (6) Interpret the results in business terms — not just 'p = 0.03' but 'we are 95% confident the new pricing model increases average order value by $8 to $22'. Steps 1 and 6 are where most analysts fail: they jump to running models without a clear question, and they report numbers without translating them back into decisions. Statistics done well is a loop between the business question and the data, not a one-way trip.",
+            "example": "Question: 'Is the West region underperforming?' Framework applied: (1) Restate: Is West revenue per store lower than the national average? (2) Population: all stores; sample: the 40 West stores. (3) Data: monthly revenue per store for 12 months. (4) Method: one-sample t-test comparing West mean to known national mean. (5) Run test: t = -2.4, p = 0.02. (6) Business interpretation: West stores generate $18,000 less per month on average and this gap is statistically significant — not random variation.",
+            "keyPoints": [
+              "Always start with a precise business question before touching any data — vague questions produce useless analysis",
+              "The final step is translating statistics back into plain English that a decision-maker can act on",
+              "Checking assumptions (normality, independence, equal variance) is not optional — violated assumptions invalidate conclusions"
+            ]
+          }
+        },
+        {
+          "id": "t4",
+          "slug": "how-to-avoid-being-misled-by-data",
+          "title": "How to Avoid Being Misled by Data",
+          "learn": {
+            "explanation": "Data can mislead in predictable ways, and a good analyst spots these traps before presenting findings. Simpson's Paradox occurs when a trend present in several groups reverses when the groups are combined — UC Berkeley famously appeared to discriminate against women applicants until departments were analyzed separately, revealing the opposite. Survivorship bias means you only see the data from whatever survived — studying successful startups without accounting for all the failed ones gives a warped picture of what predicts success. Cherry-picking time ranges, using the wrong baseline, or confusing absolute and relative numbers are all standard ways that correct-but-misleading statistics appear in business presentations. Your job is to present the full picture, not the most flattering one.",
+            "example": "A marketing director shows that customers acquired through paid search have a 40% higher average order value than organic customers, claiming paid search is the superior channel. But the analyst notices that paid search customers make their first purchase immediately, while organic customers take longer to convert but make 3x more purchases over 12 months. The 'superior channel' conclusion was based on first-order value only — a survivorship and framing issue that disappears when you look at 12-month lifetime value.",
+            "keyPoints": [
+              "Simpson's Paradox: always segment before aggregating — combined totals can hide or reverse the true relationship",
+              "Survivorship bias: the data you see is biased toward whatever survived — always ask what is missing from your dataset",
+              "Relative vs. absolute numbers: '50% more likely' sounds impressive; '2 in a million vs. 3 in a million' sounds trivial — both are the same fact"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Data Types and Descriptive Statistics",
+      "topics": [
+        {
+          "id": "t5",
+          "slug": "scales-of-measurement",
+          "title": "Scales of Measurement",
+          "learn": {
+            "explanation": "Before running any analysis, you need to know what kind of data you have — because the scale of measurement determines which statistics are even meaningful. Nominal data are categories with no inherent order: product category, country, gender. Ordinal data have a meaningful order but unequal spacing: customer satisfaction ratings of 1–5, where the gap between 4 and 5 is not necessarily the same as between 1 and 2. Interval data have equal spacing but no true zero: temperature in Celsius, where 0° does not mean 'no temperature.' Ratio data have equal spacing and a true zero: revenue, units sold, time — where zero means none and a ratio like '2x' is meaningful. Calculating the average of nominal data (average product category) is meaningless; calculating it for ratio data (average revenue) is perfectly valid.",
+            "example": "A customer survey collects four pieces of data: (1) Preferred payment method: credit, debit, PayPal, cash — nominal. (2) Satisfaction rating 1–5 — ordinal. (3) Year of birth — interval (no true zero year). (4) Annual spend in dollars — ratio. The analyst can compute a median satisfaction score and average annual spend, but should not calculate an 'average preferred payment method' — that is meaningless for nominal data.",
+            "keyPoints": [
+              "Nominal = categories, no order; ordinal = ordered categories, unequal gaps; interval = equal gaps, no true zero; ratio = equal gaps, true zero",
+              "The scale of measurement determines which operations are valid — means only make sense for interval and ratio data",
+              "Most business metrics (revenue, units, time, cost) are ratio scale — the most powerful and flexible type"
+            ]
+          }
+        },
+        {
+          "id": "t6",
+          "slug": "measures-of-center",
+          "title": "Measures of Center: Mean, Median, and Mode",
+          "learn": {
+            "explanation": "The mean (average) is the most familiar measure of center but can be misleading when data is skewed. If five employees earn $40K, $45K, $50K, $55K, and $800K, the mean salary is $198K — a number that describes no one's actual salary. The median (the middle value when sorted) would be $50K, a far more representative picture of what a typical employee earns. The mode is the most frequently occurring value, useful for categorical data or when you care about the most common outcome. In business, always ask whether the distribution is skewed before reporting a mean — for income, home prices, company valuations, or any variable with extreme outliers, median is almost always the more honest summary.",
+            "example": "A real estate firm reports the 'average home sale price' in a neighborhood as $1.2M because three mansions sold for $5M+ and skewed the mean. The median sale price is $380K. A buyer relying on the mean would have a completely wrong mental model of what homes in that area actually cost. News outlets report median household income precisely because mean income is distorted by billionaires.",
+            "keyPoints": [
+              "Mean is sensitive to outliers and extreme values — one $10M sale can inflate an average dramatically",
+              "Use median when data is skewed or has outliers; use mean when the distribution is roughly symmetric",
+              "Mode is most useful for categorical variables ('the most common product category is Electronics') or finding peaks in multimodal distributions"
+            ]
+          }
+        },
+        {
+          "id": "t7",
+          "slug": "measures-of-spread",
+          "title": "Measures of Spread: Range, Variance, and Standard Deviation",
+          "learn": {
+            "explanation": "Two datasets can have the same mean but completely different characters. A company where every salesperson closes $50K per quarter versus one where closings range from $10K to $200K both average $50K — but the risk profile, management approach, and forecasting difficulty are entirely different. The range (max minus min) is a crude measure of spread that is very sensitive to outliers. Variance and standard deviation are more rigorous: variance averages the squared deviations from the mean; standard deviation is the square root of variance, returning it to the original units. A standard deviation of $12K in quarterly sales means most salespeople close within about $12K above or below the mean — useful for benchmarking, setting quotas, and identifying underperformers.",
+            "example": "Two factories both produce parts with a target diameter of 50mm. Factory A has a standard deviation of 0.1mm; Factory B has a standard deviation of 2.5mm. Both are 'on average' hitting 50mm. But Factory B's output is so variable that many parts fall outside specification, causing returns and rework. Standard deviation is the difference between a reliable supplier and an unreliable one.",
+            "keyPoints": [
+              "Standard deviation tells you how spread out values are around the mean — high SD means high variability, low SD means consistency",
+              "Variance is standard deviation squared; it is used in formulas but hard to interpret directly because the units are squared",
+              "In business, low variability is usually desirable (consistent quality, predictable revenue) — high variance often signals a problem or hidden risk"
+            ]
+          }
+        },
+        {
+          "id": "t8",
+          "slug": "percentiles-quartiles-five-number-summary",
+          "title": "Percentiles, Quartiles, and the Five-Number Summary",
+          "learn": {
+            "explanation": "When the mean and standard deviation do not tell the full story — especially for skewed data — percentiles and quartiles provide a richer view. The 25th percentile (Q1), 50th percentile (median/Q2), and 75th percentile (Q3) divide the data into four equal groups. The interquartile range (IQR = Q3 - Q1) captures the spread of the middle 50% of the data, making it resistant to outliers. The five-number summary — minimum, Q1, median, Q3, maximum — is the foundation of the box plot. In business, percentiles are everywhere: a customer at the 90th percentile of lifetime value is in the top 10% of spenders; a sales rep at the 30th percentile of quota attainment is in the bottom third.",
+            "example": "An e-commerce company analyzes customer order values. Five-number summary: Min = $5, Q1 = $35, Median = $62, Q3 = $110, Max = $4,800. The IQR is $75 (Q3 - Q1). The huge gap between Q3 ($110) and the max ($4,800) reveals a few very large orders pulling up the mean. The median of $62 is the honest center. The IQR tells the team that the 'typical' customer spends between $35 and $110 — useful for setting free-shipping thresholds.",
+            "keyPoints": [
+              "The IQR (Q3 - Q1) measures the spread of the middle 50% of data and is resistant to outliers — prefer it over range for skewed distributions",
+              "The five-number summary (min, Q1, median, Q3, max) is the basis of a box plot and gives a quick visual of distribution shape",
+              "Percentile rankings are how you compare individual performance to a population — 'top 10%' is a 90th percentile statement"
+            ]
+          }
+        },
+        {
+          "id": "t9",
+          "slug": "skewness-and-outliers",
+          "title": "Skewness and Outliers",
+          "learn": {
+            "explanation": "Skewness describes the asymmetry of a distribution. In a right-skewed distribution, most values cluster at the low end but a long tail stretches to the right — income, company valuations, and customer lifetime value are all right-skewed (most customers spend a little, a few spend a lot). In a left-skewed distribution, the tail goes left — scores on an easy exam, for example. Outliers are individual data points that lie far from the rest. They might represent data entry errors (a $10,000 purchase when the field should have been $100), legitimate extreme events (one very large corporate order), or genuine signals (a product returning unusually high margins). The first job is to identify outliers; the second is to investigate why they exist before deciding how to handle them.",
+            "example": "A VC fund analyzes returns across its 50 portfolio companies. 46 companies returned between 0x and 3x invested capital. Two returned 0x (total losses). Two returned 80x and 120x (massive wins). The distribution is extremely right-skewed — the mean return looks impressive at 4.1x, but the median is only 1.2x. The entire fund's performance depends on two outliers. Understanding this skew matters enormously for how the fund communicates performance to its investors.",
+            "keyPoints": [
+              "Right skew: mean > median > mode — a long tail of high values pulls the mean up. Left skew is the mirror image",
+              "Outliers should be investigated before being removed — they may be data errors, or they may be the most important data points you have",
+              "For right-skewed business data (revenue, valuations, salaries), always report median alongside mean to give an honest picture"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Data Visualization",
+      "topics": [
+        {
+          "id": "t10",
+          "slug": "choosing-the-right-chart",
+          "title": "Choosing the Right Chart for the Question",
+          "learn": {
+            "explanation": "The chart type you choose should match the question you are answering and the data type you have. Comparing categories? Use a bar chart. Showing a distribution? Use a histogram. Showing a relationship between two numeric variables? Use a scatter plot. Showing change over time? Use a line chart. Showing a part-to-whole breakdown with only a few categories? A pie chart works, but a stacked bar chart is almost always clearer. The most common mistake is reaching for the wrong chart — putting time series data in a bar chart when a line chart would reveal trends far more clearly, or using a pie chart with 12 slices when a ranked bar chart would be immediately readable. Every chart should answer one specific question without requiring the viewer to do mental math.",
+            "example": "A quarterly business review includes three charts: (1) Revenue by product category this quarter — horizontal bar chart, sorted by value, so rankings are instantly visible. (2) Monthly revenue for the past 24 months — line chart, so the trend and seasonality are apparent. (3) What percentage of customers are in each tier (Bronze, Silver, Gold) — stacked 100% bar chart comparing this year to last year, showing how the mix shifted. Each chart answers exactly one question in the format best suited to that data.",
+            "keyPoints": [
+              "Match chart type to the question: comparison → bar, distribution → histogram, relationship → scatter, trend → line, composition → stacked bar or pie",
+              "Sort bar charts by value unless a natural order exists — alphabetical sorting forces viewers to visually hunt for rankings",
+              "Every chart should have a headline that states the conclusion, not just a description of what data is shown"
+            ]
+          }
+        },
+        {
+          "id": "t11",
+          "slug": "histograms-and-frequency-distributions",
+          "title": "Histograms and Frequency Distributions",
+          "learn": {
+            "explanation": "A histogram is how you visualize the distribution of a single numeric variable — it shows how frequently values fall within defined ranges (bins). Unlike a bar chart, which compares distinct categories, a histogram reveals the shape of a continuous distribution: is it roughly bell-shaped, or skewed, or bimodal (two peaks)? A frequency distribution is the underlying table — counts or percentages for each bin — that the histogram visualizes. For a business analyst, histograms are the first tool you reach for after collecting a new dataset: before running any test, you want to see the shape because shape affects which statistical methods are appropriate and what story the data tells.",
+            "example": "A subscription service analyzes time-to-first-purchase for 10,000 new users. Plotting a histogram reveals a bimodal distribution: one peak at day 1 (users who bought immediately) and a second smaller peak at day 7 (users who came back after the free trial expired). Without the histogram, the mean of 4.2 days would have been reported — a number that describes neither group accurately. The bimodal shape reveals two distinct user behaviors that should drive separate marketing campaigns.",
+            "keyPoints": [
+              "Histograms reveal distribution shape — symmetric, right-skewed, left-skewed, or bimodal — which determines which statistical methods are appropriate",
+              "Bin width matters: too few bins hide detail, too many bins create noise — aim for 5–20 bins for most business datasets",
+              "Always look at the histogram before computing means — the shape tells you whether the mean is a meaningful summary"
+            ]
+          }
+        },
+        {
+          "id": "t12",
+          "slug": "bar-charts-and-categorical-data",
+          "title": "Bar Charts and Categorical Data",
+          "learn": {
+            "explanation": "Bar charts are the workhorse of business visualization for categorical data. A simple bar chart compares a single metric across categories; a grouped bar chart compares two or more metrics side by side; a stacked bar chart shows both totals and sub-group composition simultaneously. The key design principle is that bar length encodes the value, so bars must always start at zero — truncating the y-axis to exaggerate differences is a misleading practice that distorts perception. Horizontal bar charts work better than vertical when category labels are long or when there are many categories. Always sort bars by value (descending) unless the categories have a natural order like months or rankings.",
+            "example": "A retailer's monthly category report uses three bar charts: (1) A horizontal bar chart of revenue by department, sorted from highest to lowest — immediately shows which departments drive the business. (2) A grouped bar chart comparing this year vs. last year by department — highlights which departments are growing and which are shrinking. (3) A 100% stacked bar chart showing the revenue mix by department for each of the last 12 months — reveals if the product mix is shifting over time.",
+            "keyPoints": [
+              "Bar charts must start at zero — a y-axis that starts at 50 to 'zoom in' makes a 5% difference look like 100%",
+              "Sort by value to reveal rankings; use horizontal bars when labels are long or when there are more than 6–8 categories",
+              "Grouped bar charts compare groups; stacked bar charts show totals and composition — don't use stacked when you need to compare sub-segments precisely"
+            ]
+          }
+        },
+        {
+          "id": "t13",
+          "slug": "scatter-plots-and-relationships",
+          "title": "Scatter Plots and Relationships Between Variables",
+          "learn": {
+            "explanation": "A scatter plot places two numeric variables on x and y axes and plots each observation as a point, revealing the relationship between them. Before running a correlation or regression, always draw the scatter plot — it shows whether the relationship is linear (appropriate for most statistical methods), curved (requiring transformation or a different model), or whether there are no visible patterns at all. You can also spot clusters, outliers, and subgroups that would be invisible in summary statistics. Adding a trend line (regression line) to a scatter plot quantifies the direction and strength of a linear relationship, bridging the gap between visual exploration and formal modeling.",
+            "example": "A logistics company plots advertising spend (x-axis) against weekly revenue (y-axis) across 52 weeks. The scatter plot reveals a moderate positive relationship — more advertising correlates with higher revenue — but also shows two clusters: weeks in Q4 (holiday season) where revenue is high regardless of ad spend, and weeks in Q1–Q3 where ad spend matters more. Without the scatter plot, a single correlation coefficient would have given a misleading picture of the relationship.",
+            "keyPoints": [
+              "Always draw the scatter plot before computing correlations — the number alone cannot reveal curves, clusters, or outliers",
+              "A scatter plot with no visible pattern means correlation will be near zero — no amount of statistical modeling will find a relationship that doesn't exist visually",
+              "Color-coding points by a third categorical variable (like region or season) often reveals subgroup patterns invisible in a plain scatter plot"
+            ]
+          }
+        },
+        {
+          "id": "t14",
+          "slug": "time-series-plots-and-trend-analysis",
+          "title": "Time Series Plots and Trend Analysis",
+          "learn": {
+            "explanation": "A time series plot puts time on the x-axis and any business metric on the y-axis, allowing you to see trend (the long-run direction), seasonality (patterns that repeat on a regular schedule), and anomalies (sudden jumps or drops that need explanation). Most business metrics — revenue, website traffic, inventory levels, stock prices — are time series. The core insight is that time series data is not independent: today's revenue is correlated with yesterday's, which violates the independence assumption in standard statistical tests. Visual analysis of time series is often the most valuable first step: you can spot seasonal peaks, identify when a business decision caused a change, or flag suspicious data quality issues.",
+            "example": "A coffee chain's weekly revenue time series plot shows three things simultaneously: (1) An upward trend of about 8% year-over-year revenue growth. (2) Strong seasonality — revenue spikes every November–December and dips in August. (3) An anomalous drop in March of the prior year matching when a road construction project closed parking near three high-volume locations. Without the time series plot, a simple year-over-year comparison would have shown a confusing mix of growth and apparent decline.",
+            "keyPoints": [
+              "Time series plots reveal trend, seasonality, and anomalies simultaneously — always plot before computing growth rates or running comparisons",
+              "Seasonality means you must compare like-for-like: year-over-year comparisons are more meaningful than month-over-month for seasonal businesses",
+              "Sudden changes in a time series almost always have a cause — a business decision, an external event, or a data quality issue worth investigating"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Probability for Business Decisions",
+      "topics": [
+        {
+          "id": "t15",
+          "slug": "basic-probability-concepts",
+          "title": "Basic Probability Concepts and Notation",
+          "learn": {
+            "explanation": "Probability quantifies uncertainty on a scale from 0 (impossible) to 1 (certain). In business, probability is everywhere: the probability a prospect converts, the probability a shipment arrives on time, the probability a new product hits its revenue target. The sample space is all possible outcomes; an event is a subset of those outcomes. P(A) denotes the probability of event A. The complement rule says P(not A) = 1 - P(A) — if there is a 30% chance a deal closes, there is a 70% chance it does not. Empirical probability is calculated from observed data; theoretical probability comes from known models. Most business probabilities are empirical: historical conversion rates, default rates, or failure rates estimated from data.",
+            "example": "A software company knows from three years of data that 12% of free trial users convert to paid subscriptions. P(conversion) = 0.12. P(no conversion) = 1 - 0.12 = 0.88. If 5,000 users start a free trial this month, the expected number of conversions is 5,000 × 0.12 = 600. This simple probability statement drives hiring decisions for the sales team, revenue forecasts, and customer acquisition cost calculations.",
+            "keyPoints": [
+              "Probability runs from 0 to 1; complement rule: P(not A) = 1 - P(A) — if a deal has 30% chance of closing, it has 70% chance of not closing",
+              "Empirical probability is estimated from historical data — conversion rates, default rates, and failure rates are all empirical probabilities",
+              "Expected count = probability × sample size — this simple formula drives forecasts, staffing models, and inventory planning"
+            ]
+          }
+        },
+        {
+          "id": "t16",
+          "slug": "addition-and-multiplication-rules",
+          "title": "Addition and Multiplication Rules",
+          "learn": {
+            "explanation": "The addition rule calculates the probability that at least one of two events occurs. For mutually exclusive events (they cannot both happen at once): P(A or B) = P(A) + P(B). For non-mutually exclusive events: P(A or B) = P(A) + P(B) - P(A and B) — subtract the overlap to avoid double-counting. The multiplication rule calculates the probability that both events occur. For independent events (one does not affect the other): P(A and B) = P(A) × P(B). For dependent events: P(A and B) = P(A) × P(B|A), where P(B|A) is the conditional probability of B given A already occurred. Independence is a critical assumption — shipping delays and supplier shortages are not independent events; both are caused by the same supply chain disruptions.",
+            "example": "A data center has two independent backup power systems, each with 95% reliability (5% failure rate per storm). P(both fail) = 0.05 × 0.05 = 0.0025, a 0.25% outage risk. Now add a third independent system: P(all three fail) = 0.05³ = 0.000125, a 0.0125% risk. This is why redundancy works multiplicatively — each independent backup cuts the risk by a factor of 20. But if the backups share a single power grid, they are not independent, and the multiplication rule does not apply.",
+            "keyPoints": [
+              "Addition rule (or): for mutually exclusive events, just add probabilities; for overlapping events, subtract the overlap to avoid double-counting",
+              "Multiplication rule (and): for independent events, multiply probabilities; for dependent events, use conditional probability",
+              "Independence is an assumption, not a guarantee — always ask whether two events could share a common cause before treating them as independent"
+            ]
+          }
+        },
+        {
+          "id": "t17",
+          "slug": "conditional-probability",
+          "title": "Conditional Probability",
+          "learn": {
+            "explanation": "Conditional probability — P(B|A), read as 'the probability of B given A' — updates your probability estimate once you have new information. P(B|A) = P(A and B) / P(A). In business, this is the core of segmentation: the probability a customer churns is different conditioned on whether they logged in this week versus not. Conditional probability also exposes the difference between joint probability (both A and B happen) and conditional probability (B happens given A already happened). Confusing the two is a classic error: the probability a person is a top customer given they used a loyalty card is not the same as the probability they used a loyalty card given they are a top customer.",
+            "example": "An insurance company knows that 3% of all drivers file a claim in a given year. But conditioned on being under age 25, the claim rate is 8%. Conditioned on having a prior claim in the last 3 years, it is 14%. P(claim | under 25 with prior claim) is even higher. This is why car insurance rates are not uniform — they are conditional probabilities based on risk factors, and properly estimating those conditional rates is the entire actuarial business.",
+            "keyPoints": [
+              "P(B|A) = P(A and B) / P(A) — conditional probability divides the joint probability by the probability of the condition",
+              "Conditioning on new information always changes your probability estimate — that is the whole point of collecting data",
+              "Confusing P(A|B) and P(B|A) is a classic error: the probability of having a disease given a positive test is not the same as the probability of a positive test given the disease"
+            ]
+          }
+        },
+        {
+          "id": "t18",
+          "slug": "bayes-theorem",
+          "title": "Bayes' Theorem",
+          "learn": {
+            "explanation": "Bayes' Theorem formalizes how to update a prior belief when new evidence arrives: P(A|B) = [P(B|A) × P(A)] / P(B). The prior probability P(A) is your belief before seeing the evidence. The likelihood P(B|A) is how probable the evidence is if A is true. The posterior P(A|B) is your updated belief after seeing the evidence. This is the foundation of a rational approach to decision-making under uncertainty: start with a base rate, collect evidence, update your estimate. In business, Bayes is used for spam filtering, credit scoring, medical diagnosis, A/B test analysis, and any situation where you want to update a probability as evidence accumulates.",
+            "example": "A fraud detection model flags 1% of transactions as suspicious. Historical data: 0.1% of all transactions are actually fraudulent. P(fraudulent) = 0.001. The model correctly flags 90% of real fraud cases, P(flagged|fraud) = 0.90. The model incorrectly flags 5% of legitimate transactions, P(flagged|legit) = 0.05. Bayes' Theorem: P(fraud|flagged) = (0.90 × 0.001) / (0.90×0.001 + 0.05×0.999) ≈ 1.77%. Even with a flagged transaction, there is only a 1.77% chance of actual fraud — because real fraud is so rare that false positives swamp true positives.",
+            "keyPoints": [
+              "Bayes' Theorem updates probabilities with new evidence: posterior ∝ likelihood × prior",
+              "Base rates matter enormously — rare events have low posterior probabilities even after positive evidence, because false positives dominate",
+              "The counterintuitive results from Bayes (like the low fraud probability above) are why ignoring base rates leads to terrible decisions in medicine, security, and business"
+            ]
+          }
+        },
+        {
+          "id": "t19",
+          "slug": "expected-value-and-decision-trees",
+          "title": "Expected Value and Decision Trees",
+          "learn": {
+            "explanation": "Expected value (EV) is the probability-weighted average outcome of a decision: EV = Σ [P(outcome) × value(outcome)]. It is the single most useful concept in business decision-making under uncertainty. A project with a 40% chance of earning $500K and a 60% chance of losing $100K has EV = 0.4 × $500K + 0.6 × (-$100K) = $140K. If EV is positive, the project is worth doing on average. Decision trees extend this to sequential decisions — visualizing multi-stage choices and their probabilities, then solving backward (fold back) to find the optimal strategy. EV analysis forces you to quantify both the upside probability and the downside scenario, which is more disciplined than optimistic planning.",
+            "example": "A pharma company must decide whether to run a Phase 3 trial ($20M cost). If the trial succeeds (30% probability), the drug will earn $200M in profit. If it fails (70% probability), they lose the $20M. EV of running trial: 0.30×$200M + 0.70×(-$20M) = $60M - $14M = $46M. EV of not running the trial: $0. The trial has positive expected value of $46M, so the decision to proceed is rational even though it will fail 70% of the time.",
+            "keyPoints": [
+              "Expected value = Σ (probability × payoff) — always sum all outcomes, including the losses, weighted by their probabilities",
+              "Positive EV does not mean you will win every time — it means the strategy is profitable on average across many repetitions",
+              "Decision trees make multi-stage decisions tractable by making probabilities and payoffs explicit at each branch — solve backward from the final outcomes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Random Variables and Common Distributions",
+      "topics": [
+        {
+          "id": "t20",
+          "slug": "discrete-vs-continuous-random-variables",
+          "title": "Discrete vs. Continuous Random Variables",
+          "learn": {
+            "explanation": "A random variable is a numeric outcome of a random process. Discrete random variables take countable values — number of customers in a store, number of defects in a batch, number of calls to a help desk. Continuous random variables can take any value within a range — transaction amount, delivery time, employee height. The distinction matters because discrete variables use probability mass functions (the probability of each exact value) while continuous variables use probability density functions (probability is measured over intervals, not at points). In practice, some variables that are technically continuous are treated as discrete for simplicity, and some count variables are approximated by continuous distributions when counts are large.",
+            "example": "A call center tracks two variables: (1) Number of calls per hour — discrete (you can have 42 or 43 calls but not 42.7). The probability distribution lists P(X = 40), P(X = 41), etc. (2) Call duration in minutes — continuous (calls can last 4.37 minutes or 4.38 minutes). You cannot ask 'what is the probability a call lasts exactly 4.37 minutes?' — you must ask 'what is the probability a call lasts between 4 and 5 minutes?' These are fundamentally different questions requiring different probability tools.",
+            "keyPoints": [
+              "Discrete: countable, whole-number outcomes — use probability mass functions (exact probabilities at each value)",
+              "Continuous: any value in a range — use probability density functions (probability over intervals, not at points)",
+              "Most business counts (transactions, customers, defects) are discrete; most business measurements (revenue per transaction, time, weight) are continuous"
+            ]
+          }
+        },
+        {
+          "id": "t21",
+          "slug": "the-binomial-distribution",
+          "title": "The Binomial Distribution",
+          "learn": {
+            "explanation": "The binomial distribution models the number of successes in a fixed number of independent trials, each with the same probability of success. It applies whenever you can frame an outcome as a series of yes/no events: each customer either buys or does not, each email either gets opened or does not, each quality inspection either passes or fails. The two parameters are n (number of trials) and p (probability of success on each trial). The mean is n×p and the standard deviation is √(n×p×(1-p)). These formulas let you forecast expected outcomes and their uncertainty without running simulations — if you send 10,000 emails with a 22% open rate, you expect 2,200 opens with a standard deviation of about 41.",
+            "example": "A sales team makes 50 cold calls per week. Historical data shows a 15% conversion rate per call. Using the binomial distribution: expected conversions = 50 × 0.15 = 7.5 per week; standard deviation = √(50 × 0.15 × 0.85) = √6.375 ≈ 2.5. A week with only 3 conversions is about 1.8 standard deviations below the mean — unusual but not shocking. A week with zero conversions is about 3 standard deviations below — a signal worth investigating (bad leads? rep absent?)",
+            "keyPoints": [
+              "Binomial applies when: fixed number of trials, each trial is independent, only two outcomes (success/failure), same probability each trial",
+              "Mean = n×p; Standard deviation = √(n×p×(1-p)) — these two numbers characterize the entire expected distribution of outcomes",
+              "Use the binomial to set realistic expectations around conversion rates, defect rates, or any yes/no metric measured across a batch"
+            ]
+          }
+        },
+        {
+          "id": "t22",
+          "slug": "the-poisson-distribution",
+          "title": "The Poisson Distribution",
+          "learn": {
+            "explanation": "The Poisson distribution models the number of events that occur in a fixed time period or space when events happen at a constant average rate and independently of each other. It is the right model for: customer arrivals per hour, website visits per minute, insurance claims per month, server failures per year. The single parameter λ (lambda) is both the mean and the variance. Unlike the binomial (which requires knowing n and p), Poisson only requires the average rate. If λ = 12 customers per hour, the Poisson distribution tells you the probability of exactly 8, or 15, or 20 arrivals in a given hour — critical for staffing and capacity planning.",
+            "example": "A bank branch receives an average of 30 customers per hour (λ = 30). The Poisson distribution gives the probability of receiving fewer than 20 customers in an hour (understaffed scenario) and more than 45 (overwhelmed scenario). The staffing manager uses these probabilities to decide how many tellers to schedule: enough to handle normal volume plus a buffer for likely surge hours, without overstaffing quiet periods. This is fundamentally a Poisson problem.",
+            "keyPoints": [
+              "Poisson models count of events in a fixed interval when events are independent and occur at a constant average rate λ",
+              "Mean and variance are both equal to λ — so higher average rates also mean more variability in counts",
+              "Use Poisson for arrivals, failures, calls, claims, and any 'how many events happen per time period' question"
+            ]
+          }
+        },
+        {
+          "id": "t23",
+          "slug": "the-normal-distribution",
+          "title": "The Normal Distribution",
+          "learn": {
+            "explanation": "The normal distribution — the bell curve — is the most important distribution in statistics, not because most raw business data is normally distributed, but because sample means and many statistical estimators are approximately normal due to the Central Limit Theorem (covered in Unit 6). Its two parameters are the mean μ (center of the bell) and standard deviation σ (width of the bell). The empirical rule (68-95-99.7 rule): about 68% of values fall within 1σ of the mean, 95% within 2σ, and 99.7% within 3σ. These benchmarks are used everywhere in business for setting quality control limits, risk thresholds, and performance benchmarks. A process that stays within ±3σ of target is operating normally; deviations beyond that are signals.",
+            "example": "A manufacturing plant produces bolts with a target length of 100mm, standard deviation 1mm (normally distributed). The empirical rule: 68% of bolts are 99–101mm; 95% are 98–102mm; 99.7% are 97–103mm. The quality specification allows ±2mm (98–102mm). This means about 5% of bolts fall outside spec and must be reworked. The plant manager uses this calculation to justify a $200K machine upgrade that would reduce σ from 1mm to 0.5mm, cutting the out-of-spec rate from 5% to 0.3%.",
+            "keyPoints": [
+              "Empirical rule: 68% of values within ±1σ, 95% within ±2σ, 99.7% within ±3σ — memorize these benchmarks",
+              "Normal distribution is defined entirely by mean and standard deviation — if you know both, you can calculate any probability",
+              "Most raw business data is not normally distributed, but sample means and test statistics are — which is why normal-distribution methods are used everywhere"
+            ]
+          }
+        },
+        {
+          "id": "t24",
+          "slug": "z-scores-and-standardization",
+          "title": "Z-Scores and Standardization",
+          "learn": {
+            "explanation": "A z-score converts any value from any normal distribution into a standardized unit: z = (x - μ) / σ. A z-score tells you how many standard deviations above or below the mean a specific value lies. A z-score of +2.0 means the value is 2 standard deviations above the mean — in the top 2.3% of a normal distribution. Standardization allows comparison across different scales and units: is a $180K salary more or less exceptional than a 780 SAT score? Only by converting to z-scores can you compare apples to oranges. In business, z-scores power outlier detection (values beyond ±3 are rare), credit scoring normalization, and the mechanics of hypothesis testing.",
+            "example": "A company benchmarks its customer satisfaction score (CSAT) against industry peers. Its own score: 78. Industry mean: 72, standard deviation: 8. Z-score = (78 - 72) / 8 = 0.75. This company's CSAT is 0.75 standard deviations above the mean — better than about 77% of industry peers. Meanwhile, its Net Promoter Score (NPS) of 42 vs. industry mean 38, SD 6: z = (42-38)/6 = 0.67. Both metrics are above average by similar margins, which gives the executive team confidence both measures tell a consistent story.",
+            "keyPoints": [
+              "Z = (x - μ) / σ — converts any value to standard deviations from the mean, enabling comparisons across different scales",
+              "Z-scores and the standard normal table let you find the percentage of a distribution above or below any value",
+              "Values beyond ±3 z are very rare (0.3% of a normal distribution) — they are the standard threshold for flagging outliers"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Sampling and Sampling Distributions",
+      "topics": [
+        {
+          "id": "t25",
+          "slug": "why-we-sample",
+          "title": "Why We Sample Instead of Census",
+          "learn": {
+            "explanation": "A census measures every member of a population; a sample measures a subset and uses it to infer properties of the whole. Sampling is necessary when the population is too large (all U.S. consumers), too expensive to measure in full (destructive testing of products), or too time-sensitive (you need results before you can interview everyone). The trade-off is sampling error — your estimate from the sample will differ from the true population value, but that difference can be quantified and controlled by choosing the right sample size. The key insight is that you do not need a huge sample to get accurate estimates: a well-designed random sample of 1,000 people can accurately represent a population of 300 million, because precision depends on sample size, not on what fraction of the population you sampled.",
+            "example": "The U.S. Census Bureau conducts a full census only once per decade. For annual economic statistics, they use the Current Population Survey — a random sample of about 60,000 households — to estimate unemployment, income, and poverty rates for a population of 130M+ households. The monthly unemployment rate you see in the news is a sample estimate with a margin of error, not an exact count. A sample of 60,000 provides estimates accurate to ±0.2 percentage points — more than sufficient for policy decisions.",
+            "keyPoints": [
+              "Sampling is cheaper and faster than a census; sampling error is the price — but it can be quantified and controlled through sample design",
+              "Sample precision depends on sample size (n), not on the fraction of the population sampled — a sample of 1,000 is about as precise whether the population is 10,000 or 10 billion",
+              "A biased sample (where some groups are systematically over- or under-represented) produces wrong answers no matter how large it is — bias cannot be fixed by increasing n"
+            ]
+          }
+        },
+        {
+          "id": "t26",
+          "slug": "sampling-methods",
+          "title": "Sampling Methods",
+          "learn": {
+            "explanation": "The sampling method determines whether your sample is representative and what statistical methods you can validly apply. Simple random sampling gives every unit an equal chance of selection — the gold standard for unbiased estimation but requires a complete list (sampling frame). Stratified sampling divides the population into subgroups (strata) and samples each separately, ensuring representation — use it when subgroups are small but important (regional offices, product lines). Cluster sampling divides the population into geographic or natural clusters and randomly selects whole clusters — more practical but less precise. Systematic sampling selects every kth unit from a list — efficient but vulnerable to hidden periodicity in the list. Convenience sampling (whoever is available) is not scientific and produces biased results; avoid it for any decision with real consequences.",
+            "example": "A retail chain wants to survey 500 customers about their satisfaction. Option 1: Simple random sample — randomly select 500 receipts from all transactions. Good if they have complete transaction data. Option 2: Stratified sample — 200 from in-store customers, 200 from online customers, 100 from mobile app customers — ensures each channel is represented in proportion to its importance. Option 3: Cluster sample — randomly select 10 store locations and survey 50 customers at each — practical but results depend heavily on which stores were chosen.",
+            "keyPoints": [
+              "Simple random sampling: every unit equally likely — unbiased but requires a complete sampling frame",
+              "Stratified sampling: sample each subgroup separately — use when subgroups differ from each other and you need representation from each",
+              "Convenience sampling is not scientifically valid — it produces biased results that cannot be corrected statistically, no matter how large the sample"
+            ]
+          }
+        },
+        {
+          "id": "t27",
+          "slug": "sampling-error-and-bias",
+          "title": "Sampling Error and Bias",
+          "learn": {
+            "explanation": "Sampling error is the expected difference between a sample estimate and the true population value, caused purely by chance — it decreases as sample size increases and can be quantified with confidence intervals. Bias is a systematic error that pushes estimates in one direction regardless of sample size — it cannot be fixed by collecting more data. Common sources of bias: selection bias (the sample systematically excludes a portion of the population), non-response bias (people who respond to a survey are different from those who do not), and response bias (people give inaccurate answers because of how a question is worded or who is asking). Distinguishing random sampling error from systematic bias is critical: more data helps with sampling error but is useless against bias.",
+            "example": "A firm surveys customer satisfaction by emailing a link to recent purchasers. Response rate: 18%. The results show 91% satisfaction. But non-response bias is severe: happy customers who just received their order are far more likely to respond than customers whose order was late or wrong. The 18% of respondents are not representative of all customers. No amount of additional surveys to the same email list will fix this — the bias comes from who responds, not from sample size.",
+            "keyPoints": [
+              "Sampling error is random and quantifiable — it shrinks as sample size grows and is expressed as a margin of error",
+              "Bias is systematic and directional — more data never fixes a biased sample design",
+              "Non-response bias is one of the most common and most overlooked problems in business surveys — always ask who chose not to respond and why"
+            ]
+          }
+        },
+        {
+          "id": "t28",
+          "slug": "sampling-distribution-of-the-mean",
+          "title": "The Sampling Distribution of the Mean",
+          "learn": {
+            "explanation": "If you draw many random samples of the same size from a population and compute the mean of each sample, those sample means form a distribution — the sampling distribution of the mean. This theoretical distribution has two critical properties: its mean equals the true population mean (it is unbiased), and its standard deviation equals σ/√n, called the standard error. The standard error tells you how much sample means typically vary from the population mean. As sample size n grows, the standard error shrinks — larger samples produce more precise estimates. This is not a coincidence or a rule we invented; it follows mathematically from the definition of the mean and the properties of variance.",
+            "example": "Population of 100,000 customers with average lifetime value μ = $840, σ = $320. A sample of n = 64 customers has a standard error = 320/√64 = 320/8 = $40. This means sample means from n=64 samples typically land within about $40 of the true $840 mean. Now increase to n = 256: standard error = 320/16 = $20. Quadrupling the sample size halves the standard error — the precision of estimation scales with √n, not n itself.",
+            "keyPoints": [
+              "The sampling distribution of the mean has mean = μ (the population mean) and standard error = σ/√n",
+              "Standard error decreases as sample size increases — to halve the standard error, you need to quadruple the sample size",
+              "The standard error is not the standard deviation of the data — it is the standard deviation of sample means, measuring how precisely you estimated the population mean"
+            ]
+          }
+        },
+        {
+          "id": "t29",
+          "slug": "central-limit-theorem",
+          "title": "The Central Limit Theorem",
+          "learn": {
+            "explanation": "The Central Limit Theorem (CLT) states that the sampling distribution of the mean approaches a normal distribution as sample size increases, regardless of the shape of the underlying population distribution. For most business data, this approximation is excellent by n = 30 or so. The CLT is why normal-distribution methods work in practice even when the raw data is skewed or non-normal: you are not assuming the data is normal, you are relying on the fact that sample means are approximately normal. This is the mathematical foundation behind confidence intervals, hypothesis tests, and nearly all of classical inferential statistics — it is arguably the most important theorem in applied statistics.",
+            "example": "A bank's individual loan default amounts are highly right-skewed — most are small (partial defaults), but a few are enormous (total losses on large commercial loans). The distribution looks nothing like a bell curve. But if the bank estimates average loss per loan from a random sample of 200 loans, that sample mean will be approximately normally distributed, thanks to the CLT. The bank's risk models can use normal-distribution confidence intervals for the average, even though the individual losses are non-normal.",
+            "keyPoints": [
+              "CLT: sample means are approximately normal for sufficiently large n (typically n ≥ 30), regardless of how the raw data is distributed",
+              "This is why confidence intervals and t-tests work even for non-normal data — they operate on sample means, not raw values",
+              "The CLT is the reason normal-distribution statistics are so universally applicable: almost all estimators converge to normality with enough data"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Confidence Intervals",
+      "topics": [
+        {
+          "id": "t30",
+          "slug": "what-a-confidence-interval-means",
+          "title": "What a Confidence Interval Actually Means",
+          "learn": {
+            "explanation": "A 95% confidence interval does not mean 'there is a 95% probability the true value is in this range.' The true population value is fixed — it either is or is not in your interval. The correct interpretation is: if you used this same procedure to build 100 intervals from 100 different samples, about 95 of those intervals would contain the true population value. In practice, the distinction matters because the 95% refers to the procedure's reliability, not to any individual interval. The width of a confidence interval reflects two things: how much data you have (more data = narrower interval) and how confident you want to be (higher confidence = wider interval). A 95% CI gives you a balance between precision and confidence that is standard in business reporting.",
+            "example": "A market researcher reports: 'Based on a random sample of 400 customers, we estimate average lifetime value is $840, with a 95% confidence interval of $795 to $885.' This means: the estimation procedure, applied to 400-customer samples, produces intervals that contain the true average LTV about 95% of the time. It does not mean the true average is definitely between $795 and $885 — but the researcher would be willing to bet 19:1 odds that this particular interval contains it.",
+            "keyPoints": [
+              "95% CI means: 95% of intervals constructed this way contain the true value — it is a statement about the procedure, not about any specific interval",
+              "Wider intervals are more confident but less precise; narrower intervals are more precise but riskier — there is always a trade-off",
+              "A confidence interval is more informative than a p-value alone because it tells you both whether an effect is significant and how large it is"
+            ]
+          }
+        },
+        {
+          "id": "t31",
+          "slug": "z-interval-for-population-mean",
+          "title": "The Z-Interval for a Population Mean",
+          "learn": {
+            "explanation": "When the population standard deviation σ is known (rare in practice) and the sample size is large enough for the CLT to apply, the confidence interval for the population mean is: x̄ ± z* × (σ/√n), where z* is the critical value from the standard normal distribution (1.96 for 95% confidence, 2.576 for 99%). The margin of error is z* × (σ/√n) — half the width of the interval. Understanding the margin of error formula is practically important: it shows that to cut the margin of error in half, you must quadruple the sample size. The z-interval is the foundation for understanding all confidence intervals, even though in practice you usually use the t-interval (unknown σ).",
+            "example": "A logistics company knows from years of data that delivery time has σ = 2.4 hours. A sample of 64 deliveries has mean x̄ = 18.5 hours. 95% CI: 18.5 ± 1.96 × (2.4/√64) = 18.5 ± 1.96 × 0.3 = 18.5 ± 0.588 = (17.91, 19.09) hours. The company can report with 95% confidence that average delivery time is between 17.9 and 19.1 hours. To halve the margin of error to ±0.29 hours, they would need 64 × 4 = 256 deliveries in the sample.",
+            "keyPoints": [
+              "Z-interval formula: x̄ ± z* × (σ/√n); z* = 1.96 for 95% confidence, 2.576 for 99%",
+              "Margin of error = z* × (σ/√n) — to halve the margin of error, you must quadruple the sample size (because of the √n denominator)",
+              "Z-intervals require knowing σ — in practice, σ is almost never known, so t-intervals (which estimate σ from the data) are used instead"
+            ]
+          }
+        },
+        {
+          "id": "t32",
+          "slug": "t-interval-for-population-mean",
+          "title": "The T-Interval for a Population Mean",
+          "learn": {
+            "explanation": "In the real world, the population standard deviation σ is almost never known — you estimate it from your sample as s. The t-interval accounts for this additional uncertainty by replacing the normal distribution's z* with a t* critical value from the t-distribution, which has heavier tails (higher critical values) for smaller samples. The formula is: x̄ ± t* × (s/√n), where t* depends on the confidence level and the degrees of freedom (n-1). For large samples (n > 30), the t-distribution is nearly identical to the normal distribution, so the practical difference disappears. For small samples (n < 30), the t-distribution provides properly wider intervals that honestly reflect the extra uncertainty in estimating σ.",
+            "example": "A startup surveys 16 customers on willingness to pay for a new feature. Sample mean x̄ = $42/month, sample standard deviation s = $12. With df = 15 and 95% confidence, t* ≈ 2.131. 95% CI: 42 ± 2.131 × (12/√16) = 42 ± 2.131 × 3 = 42 ± 6.39 = ($35.61, $48.39). The team now knows customers would likely pay between $36 and $48 per month — wide because the sample of 16 is small, but still useful for go/no-go pricing decisions.",
+            "keyPoints": [
+              "T-interval formula: x̄ ± t* × (s/√n) — use whenever σ is unknown, which is almost always",
+              "T-distribution has heavier tails than the normal for small n — this gives honest (wider) intervals that reflect uncertainty in estimating σ",
+              "As n increases, the t-distribution converges to the normal — for n > 30, the practical difference between z* and t* is negligible"
+            ]
+          }
+        },
+        {
+          "id": "t33",
+          "slug": "confidence-intervals-for-proportions",
+          "title": "Confidence Intervals for Proportions",
+          "learn": {
+            "explanation": "When the variable of interest is a proportion (conversion rate, churn rate, defect rate, survey agreement rate), the confidence interval formula changes. The sample proportion p̂ = successes/n is the estimator. The standard error of a proportion is √(p̂(1-p̂)/n), and the 95% confidence interval is: p̂ ± 1.96 × √(p̂(1-p̂)/n). The margin of error is maximized when p̂ = 0.5 (which equals 1/(2√n) at 95% confidence) — this is the conservative assumption used in political polling when the true proportion is unknown. When p̂ is far from 0.5 (very high or low conversion rates), the interval is narrower and you need a smaller sample for the same precision.",
+            "example": "An e-commerce site runs an A/B test on a new checkout button. Variant B had 1,200 visitors and 168 purchases. p̂ = 168/1200 = 0.14 (14% conversion rate). Standard error = √(0.14 × 0.86 / 1200) = √(0.0001003) = 0.01001. 95% CI: 0.14 ± 1.96 × 0.01001 = 0.14 ± 0.0196 = (12.0%, 16.0%). The true conversion rate for Variant B is estimated between 12% and 16% — this precision is sufficient to decide whether to implement the change.",
+            "keyPoints": [
+              "Proportion CI: p̂ ± 1.96 × √(p̂(1-p̂)/n); standard error is largest when p̂ = 0.5, driving sample size calculations for political polls",
+              "For rare events (p̂ very small), you need a much larger sample to achieve the same absolute precision",
+              "Before reporting a conversion rate change, always compute the confidence interval — a change from 2.0% to 2.3% may not be statistically distinguishable with typical sample sizes"
+            ]
+          }
+        },
+        {
+          "id": "t34",
+          "slug": "determining-sample-size",
+          "title": "Determining Sample Size",
+          "learn": {
+            "explanation": "Sample size planning before data collection is how you ensure your study will have enough statistical power to detect a meaningful difference. For estimating a mean with a target margin of error E at confidence level z*: n = (z* × σ / E)². For estimating a proportion: n = (z*)² × p̂(1-p̂) / E². The key decisions are: (1) What margin of error E is acceptable? (2) What confidence level? (3) What is the likely variability (σ or p̂)? Larger required precision (smaller E), higher confidence, and more variability all require larger samples. Running this calculation before a study prevents the common failure of collecting data only to discover the sample is too small to draw any conclusions.",
+            "example": "A company wants to estimate its customer NPS within ±3 points at 95% confidence. From prior surveys, estimated σ = 25 points. Required n = (1.96 × 25 / 3)² = (16.33)² ≈ 267 customers. They need at least 267 responses. If they only get 100 responses (common with low email response rates), the margin of error widens to ±1.96×25/√100 = ±4.9 points — less precise but possibly still actionable. Knowing this beforehand allows them to either invest in getting more responses or adjust their precision requirements.",
+            "keyPoints": [
+              "Sample size for mean: n = (z* × σ / E)²; for proportion: n = (z*)² × p(1-p) / E² — always plan before collecting data",
+              "To halve the margin of error, you must quadruple the sample size — precision is expensive",
+              "Use σ = 0.5 (or p = 0.5 for proportions) as a conservative estimate when you have no prior information — this gives the largest (safest) required sample size"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Hypothesis Testing Foundations",
+      "topics": [
+        {
+          "id": "t35",
+          "slug": "null-and-alternative-hypotheses",
+          "title": "Null and Alternative Hypotheses",
+          "learn": {
+            "explanation": "Hypothesis testing is how you use sample data to make decisions about population parameters. The null hypothesis (H₀) represents the status quo — no effect, no difference, no change. The alternative hypothesis (H₁ or Hₐ) is the claim you want to establish with evidence. You never 'prove' the alternative; you either reject the null (the data provides sufficient evidence against H₀) or fail to reject it (insufficient evidence). This asymmetry is intentional: the burden of proof is on the claim of a new effect, just as in a court of law the burden is on the prosecution. Setting up hypotheses correctly before looking at the data is critical — defining your hypothesis after seeing the results is p-hacking, a form of data dredging that produces false discoveries.",
+            "example": "A company claims its new sales training program increases quarterly revenue per rep. H₀: μ_after ≤ μ_before (training does not increase revenue — null is no improvement). H₁: μ_after > μ_before (training increases revenue — alternative is the claim). You then collect data on revenue per rep before and after training, compute a test statistic, and determine whether the evidence is strong enough to reject H₀. You never prove H₁ is true — you only establish that the data is inconsistent with H₀ at a chosen level of confidence.",
+            "keyPoints": [
+              "H₀ is always the null (no effect, no difference); H₁ is the alternative claim you need evidence to support",
+              "Rejecting H₀ means the data is inconsistent with 'no effect' — it does not prove the alternative is true",
+              "Set up hypotheses before looking at the data — defining them after seeing results invalidates the test (this is p-hacking)"
+            ]
+          }
+        },
+        {
+          "id": "t36",
+          "slug": "type-i-and-type-ii-errors",
+          "title": "Type I and Type II Errors",
+          "learn": {
+            "explanation": "When hypothesis testing, you can make two types of mistakes. A Type I error (false positive) is rejecting H₀ when it is actually true — concluding the new drug works when it does not, or concluding the new design improves conversion when it does not. The probability of a Type I error is α (alpha), the significance level — typically set at 0.05. A Type II error (false negative) is failing to reject H₀ when it is actually false — concluding the new drug has no effect when it does, or concluding a real conversion improvement is not there. The probability of a Type II error is β (beta); statistical power is 1 - β. Reducing α (being more conservative) increases β — the two error rates are in tension, and the right balance depends on the relative cost of each mistake.",
+            "example": "A pharmaceutical company tests a new drug. Type I error (α): concluding the drug works when it does not → patients receive an ineffective treatment, costing money and potentially delaying better care → serious harm, so α = 0.01 is appropriate. Type II error (β): concluding the drug does not work when it does → a genuinely effective treatment is abandoned → also serious, so the trial is designed with high statistical power (80–90%) to minimize β. In A/B testing for a website button color, the stakes are lower — α = 0.05 is typically acceptable.",
+            "keyPoints": [
+              "Type I error (α): false positive — rejecting H₀ when it is true. Controlled by setting the significance level α (commonly 0.05)",
+              "Type II error (β): false negative — failing to reject H₀ when it is false. Power = 1 - β is the probability of detecting a real effect",
+              "Lower α reduces false positives but increases false negatives — the right trade-off depends on the relative cost of each error in your specific context"
+            ]
+          }
+        },
+        {
+          "id": "t37",
+          "slug": "p-values",
+          "title": "P-Values: What They Mean and How to Interpret Them",
+          "learn": {
+            "explanation": "A p-value is the probability of observing a test statistic as extreme or more extreme than the one you got, assuming the null hypothesis is true. A small p-value means the data would be very unlikely if H₀ were true — providing evidence against H₀. If p < α (the significance level, usually 0.05), you reject H₀. A p-value does not measure the probability that H₀ is true, the probability of a mistake, or the size of the effect. These are the most common misinterpretations. In business, a p-value of 0.04 in an A/B test means: if the new design truly had no effect, you would see a difference this large or larger only 4% of the time from sampling variation alone — a low enough probability to conclude the effect is real.",
+            "example": "An analyst runs an A/B test on email subject lines. Version A (control): 22% open rate. Version B (test): 25% open rate. The statistical test yields p = 0.031. Interpretation: 'If there were truly no difference in open rates between A and B, a 3-percentage-point gap this large would appear only 3.1% of the time due to random sampling variation. Since p = 0.031 < 0.05, we reject the null of no difference.' The analyst does not say 'there is a 96.9% probability B is better' — that is a misinterpretation.",
+            "keyPoints": [
+              "P-value = probability of data this extreme if H₀ is true — NOT the probability H₀ is true, and NOT the probability of being wrong",
+              "p < α → reject H₀; p ≥ α → fail to reject H₀ (not the same as proving H₀ is true)",
+              "A very small p-value only means the effect is statistically distinguishable from zero — it says nothing about whether the effect is large enough to matter in practice"
+            ]
+          }
+        },
+        {
+          "id": "t38",
+          "slug": "statistical-vs-practical-significance",
+          "title": "Statistical Significance vs. Practical Significance",
+          "learn": {
+            "explanation": "Statistical significance means you have enough evidence to reject the null — the observed effect is unlikely to be due to chance. Practical significance (also called effect size) means the effect is large enough to matter in the real world. These are entirely separate questions. With a large enough sample, you can detect tiny effects that are statistically significant but economically meaningless. A test involving one million users might detect a 0.01% improvement in conversion rate with p = 0.001 — but 0.01% on 100,000 daily transactions is 10 extra sales per day, worth investigating. Conversely, a 5% improvement with p = 0.3 means you cannot tell it from noise even if it would be valuable. Business analysts must evaluate both: a statistically significant but tiny effect may not be worth implementing; a practically significant effect that is not yet statistically significant may justify more data collection.",
+            "example": "A streaming service tests a new recommendation algorithm on 2 million users. Result: new algorithm increases average watch time by 12 seconds per session. p < 0.0001 (highly statistically significant). Business impact: 12 seconds × 2M daily active users = 400,000 minutes of extra viewing per day. Multiplied by ad revenue, this is worth $150,000 per year. Is it worth the engineering cost to deploy? That depends on the cost, not the p-value. Statistical significance alone does not answer the business question.",
+            "keyPoints": [
+              "Statistical significance: is the effect distinguishable from zero? Practical significance: is the effect large enough to act on?",
+              "Large samples detect tiny effects as statistically significant — always report effect size (the actual magnitude of the difference) alongside p-values",
+              "Common effect size measures: Cohen's d for means (d=0.2 small, 0.5 medium, 0.8 large), relative lift for proportions (10% increase in conversion rate)"
+            ]
+          }
+        },
+        {
+          "id": "t39",
+          "slug": "one-tailed-vs-two-tailed-tests",
+          "title": "One-Tailed vs. Two-Tailed Tests",
+          "learn": {
+            "explanation": "A two-tailed test asks: 'Is the parameter different from the hypothesized value in either direction?' A one-tailed test asks: 'Is the parameter specifically larger (or smaller) than the hypothesized value?' Two-tailed tests are more conservative and appropriate when you would care about a difference in either direction. One-tailed tests are more powerful (they detect effects in the specified direction more easily) but should only be used when you have a genuine prior reason to expect the effect in only one direction — and when a result in the opposite direction would be irrelevant or impossible. In practice, most business hypothesis tests should be two-tailed: a new design could hurt conversion or help it, and you care about both outcomes. One-tailed tests are sometimes used inappropriately to push a p-value below 0.05 — a form of p-hacking.",
+            "example": "A pricing team changes a product's price from $29.99 to $34.99 and tests whether conversion rate changed. This should be two-tailed: a 15% price increase might hurt conversion (expected) or surprisingly not change it, or even (unlikely but possible) help it due to perceived quality effects. However, if the same team is testing whether a free shipping threshold reduces cart abandonment, they could justify a one-tailed test because reducing cart abandonment in the opposite direction (more abandonment with free shipping) is not a meaningful outcome to test.",
+            "keyPoints": [
+              "Two-tailed: tests for differences in either direction; one-tailed: tests for a specific direction only",
+              "Two-tailed tests split the significance level (α = 0.05) between both tails — the critical value is larger and the test is more conservative",
+              "Use one-tailed tests only when a result in the opposite direction would be meaningless or impossible — never choose one-tailed just to get a lower p-value"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u9",
+      "title": "One-Sample and Two-Sample Tests",
+      "topics": [
+        {
+          "id": "t40",
+          "slug": "one-sample-t-test",
+          "title": "One-Sample T-Test",
+          "learn": {
+            "explanation": "The one-sample t-test tests whether a population mean is equal to a specified value. Test statistic: t = (x̄ - μ₀) / (s/√n), where μ₀ is the hypothesized value, x̄ is the sample mean, s is the sample standard deviation, and n is the sample size. Compare this t to the critical value from the t-distribution with df = n-1, or compute a p-value directly. Use it when you have one sample of continuous data and want to test a claim about the mean — 'Is our average delivery time still 5 days?' or 'Is average order value above the $75 breakeven threshold?' The assumptions are that observations are independent and the distribution is reasonably normal (or n is large enough for CLT to apply).",
+            "example": "A bakery claims their bread loaves average 500g. Quality control samples 25 loaves and finds x̄ = 492g, s = 18g. H₀: μ = 500g vs. H₁: μ ≠ 500g (two-tailed). t = (492 - 500) / (18/√25) = -8/3.6 = -2.22. With df = 24 and α = 0.05, the critical value is ±2.064. Since |t| = 2.22 > 2.064, reject H₀ — the sample provides significant evidence that average loaf weight is below 500g. The p-value ≈ 0.036 confirms this.",
+            "keyPoints": [
+              "One-sample t-test: t = (x̄ - μ₀) / (s/√n), compare to t-distribution with df = n-1",
+              "Use when: one sample, testing a claim about the population mean against a specific value",
+              "Check assumptions: observations independent, distribution roughly normal (or n ≥ 30 for CLT)"
+            ]
+          }
+        },
+        {
+          "id": "t41",
+          "slug": "one-sample-proportion-test",
+          "title": "One-Sample Proportion Test",
+          "learn": {
+            "explanation": "The one-sample proportion test asks whether a population proportion equals a specified value. Test statistic: z = (p̂ - p₀) / √(p₀(1-p₀)/n), where p₀ is the hypothesized proportion and p̂ is the sample proportion. Use the standard normal (z) distribution for this test, not the t-distribution. Applications: Is our customer satisfaction rate still at the industry benchmark of 85%? Has our defect rate exceeded the contractual limit of 2%? Is the click-through rate on this email above 10%? The test requires that both np₀ ≥ 10 and n(1-p₀) ≥ 10 to ensure the normal approximation is valid — for very rare or very common events with small samples, use exact binomial methods instead.",
+            "example": "Industry benchmark for on-time delivery is 92%. A freight company samples 200 recent shipments and finds 178 were on time (p̂ = 0.89). H₀: p = 0.92. z = (0.89 - 0.92) / √(0.92×0.08/200) = -0.03 / 0.01921 = -1.56. For a two-tailed test at α = 0.05, critical z = ±1.96. Since |z| = 1.56 < 1.96, fail to reject H₀ — insufficient evidence that the company's true on-time rate differs from 92%, though the trend warrants monitoring.",
+            "keyPoints": [
+              "One-sample proportion test: z = (p̂ - p₀) / √(p₀(1-p₀)/n), compared to the standard normal distribution",
+              "Validity check: both np₀ ≥ 10 and n(1-p₀) ≥ 10 required for the normal approximation to be valid",
+              "Use for comparing an observed rate (conversion, defect, satisfaction) to a benchmark, contract threshold, or prior period value"
+            ]
+          }
+        },
+        {
+          "id": "t42",
+          "slug": "independent-samples-t-test",
+          "title": "Independent Samples T-Test",
+          "learn": {
+            "explanation": "The two-sample independent t-test compares the means of two unrelated groups. It answers questions like: Does Group A have a higher average spend than Group B? Is average processing time different for the two production lines? The groups must be independent — different customers, different employees, different locations. The test statistic compares (x̄₁ - x̄₂) to the expected variation under H₀ (no difference). A pooled version assumes equal variances; Welch's t-test (the default in most software) does not assume equal variances and is more robust. Always check whether the groups are truly independent — if the same person appears in both groups (like a before/after measurement), you need a paired t-test instead.",
+            "example": "An e-commerce company runs an A/B test: 800 users see the old checkout (Group A, mean order value $68.40, s = $42) and 800 see the new checkout (Group B, mean $73.20, s = $39). The two-sample t-test yields t = 2.41, p = 0.016. The $4.80 difference in average order value is statistically significant at α = 0.05. Given 1,000 daily transactions, this represents approximately $4,800 in additional daily revenue — worth the engineering cost to implement.",
+            "keyPoints": [
+              "Use the independent samples t-test when comparing means of two unrelated groups — different people, locations, or time periods",
+              "Welch's t-test (does not assume equal variances) is the safer default; use the pooled version only when equal variances are verified",
+              "Always verify independence — if the same subjects appear in both groups, you need a paired t-test, not an independent samples test"
+            ]
+          }
+        },
+        {
+          "id": "t43",
+          "slug": "paired-t-test",
+          "title": "Paired T-Test",
+          "learn": {
+            "explanation": "The paired t-test is used when the same subjects (or naturally matched pairs) are measured under both conditions — a before/after design, or two measurements on the same unit. The key insight is that pairing removes between-subject variability: if Person A has high blood pressure and Person B has low blood pressure, an independent t-test would be noisy. A paired test subtracts each person's before score from their after score, then tests whether those differences have mean zero. Pairing dramatically increases statistical power when within-subject correlation is high. Business applications: compare each employee's sales performance before vs. after training, compare each store's revenue before vs. after a promotion, compare each machine's output before vs. after a maintenance procedure.",
+            "example": "A training program is evaluated with 20 sales reps measured before and after. Rather than comparing group means, the analyst computes each rep's difference (after minus before). Differences: mean d̄ = +$8,200, s_d = $11,400, n = 20. t = 8200 / (11400/√20) = 8200 / 2549 = 3.22, p = 0.004. Strong evidence the training increased revenue per rep. The paired approach was essential: rep-to-rep variation (some reps are just better) would have swamped the training effect in an independent t-test.",
+            "keyPoints": [
+              "Use paired t-test when the same subjects are measured twice (before/after) or when observations are naturally matched pairs",
+              "Compute d = after - before for each pair, then test whether mean(d) = 0 using a one-sample t-test on the differences",
+              "Pairing removes subject-level variability and dramatically increases power when individual differences are large relative to the treatment effect"
+            ]
+          }
+        },
+        {
+          "id": "t44",
+          "slug": "two-sample-proportion-test",
+          "title": "Two-Sample Proportion Test",
+          "learn": {
+            "explanation": "The two-sample proportion test compares the proportions from two independent groups: is the conversion rate of Group A different from Group B? Is the defect rate of Supplier 1 higher than Supplier 2? The test statistic pools the two sample proportions under H₀ (assuming they are equal) to estimate the common variance: z = (p̂₁ - p̂₂) / √(p̂_pool × (1-p̂_pool) × (1/n₁ + 1/n₂)). This is the correct test for A/B testing of proportions (conversion rates, click-through rates, churn rates). The chi-square test of independence gives mathematically equivalent results and is also commonly used for two-proportion problems presented in a 2×2 table format.",
+            "example": "A/B test: landing page A gets 2,400 visits and 288 conversions (p̂₁ = 12%). Landing page B gets 2,600 visits and 364 conversions (p̂₂ = 14%). Pooled p̂ = 652/5000 = 0.1304. z = (0.14 - 0.12) / √(0.1304 × 0.8696 × (1/2600 + 1/2400)) = 0.02 / 0.00941 = 2.13, p = 0.033. Page B's 2-percentage-point higher conversion is statistically significant. With 5,000 daily visitors, this represents about 100 additional conversions per day — an economically meaningful result worth deploying.",
+            "keyPoints": [
+              "Two-sample proportion test compares p̂₁ and p̂₂ from independent groups using a pooled variance estimate under H₀",
+              "This is the standard test for A/B testing of binary outcomes: conversion, click, purchase, churn",
+              "Both groups need sufficient counts (n₁p̂ ≥ 10, n₁(1-p̂) ≥ 10, same for group 2) for the normal approximation to be valid"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u10",
+      "title": "Correlation and Simple Linear Regression",
+      "topics": [
+        {
+          "id": "t45",
+          "slug": "correlation-and-pearson-coefficient",
+          "title": "Correlation and the Pearson Coefficient",
+          "learn": {
+            "explanation": "The Pearson correlation coefficient (r) measures the strength and direction of the linear relationship between two numeric variables, ranging from -1 (perfect negative linear relationship) to +1 (perfect positive linear relationship), with 0 indicating no linear relationship. A positive r means both variables tend to move in the same direction; negative means they move in opposite directions. The magnitude tells you strength: |r| > 0.7 is strong, 0.4–0.7 is moderate, below 0.4 is weak — though what counts as 'strong' depends heavily on the domain. Critical caveat: correlation measures only linear relationships. Two variables can be strongly related in a curved pattern yet have r near zero. Always plot the scatter plot before relying on r.",
+            "example": "An analyst explores what drives weekly sales revenue. Correlation with advertising spend: r = 0.72 (strong positive — more ads, more sales). Correlation with average temperature: r = -0.41 (moderate negative — sales drop on hot weeks, perhaps because people are outdoors). Correlation with the CEO's Twitter followers: r = 0.08 (near zero — no linear relationship). The advertising correlation justifies further modeling; the others suggest weaker predictors but should still be visualized before dismissing.",
+            "keyPoints": [
+              "r ranges from -1 to +1; direction (sign) and strength (magnitude) are both meaningful; r = 0 means no linear relationship",
+              "Correlation does not imply causation — two variables can be strongly correlated because of a third confounding variable",
+              "Always plot the scatter plot before computing r — a strong curved relationship can produce r near zero, making correlation misleading"
+            ]
+          }
+        },
+        {
+          "id": "t46",
+          "slug": "simple-linear-regression-model",
+          "title": "The Simple Linear Regression Model",
+          "learn": {
+            "explanation": "Simple linear regression models the relationship between one predictor variable (x) and one outcome variable (y) as a straight line: ŷ = b₀ + b₁x, where b₀ is the intercept and b₁ is the slope. The model uses a sample to estimate this line, then uses the line to predict y for any value of x. The predicted value ŷ differs from the actual y — the difference is the residual (error). Regression goes beyond correlation by giving you an equation you can use for prediction and by quantifying exactly how much y changes for each unit change in x. In business, regression is the workhorse of forecasting: predicting sales from ad spend, pricing demand curves, estimating the effect of promotions.",
+            "example": "A retail analyst models weekly revenue (y, in $thousands) as a function of advertising spend (x, in $thousands). The estimated regression equation is ŷ = 120 + 8.3x. Interpretation: with zero advertising, expected revenue is $120K (the intercept). Each additional $1K of advertising is associated with $8.3K more revenue (the slope). Predicted revenue for a week with $15K of advertising: ŷ = 120 + 8.3(15) = $244.5K. The model gives a specific, actionable prediction — not just 'more ads = more sales.'",
+            "keyPoints": [
+              "Simple linear regression: ŷ = b₀ + b₁x; b₀ is the predicted y when x = 0; b₁ is the change in y for each one-unit increase in x",
+              "Residuals = actual y minus predicted ŷ — they represent everything the model does not explain",
+              "The model summarizes the average relationship; individual predictions will vary around the regression line, sometimes substantially"
+            ]
+          }
+        },
+        {
+          "id": "t47",
+          "slug": "least-squares-estimation",
+          "title": "Least Squares Estimation",
+          "learn": {
+            "explanation": "The least squares method finds the regression line that minimizes the sum of squared residuals — the total squared distance between each observed y and the predicted ŷ. Squaring the residuals penalizes large errors more heavily than small ones and produces a unique mathematical solution. The formulas are: b₁ = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)² and b₀ = ȳ - b₁x̄. Statistical software computes these instantly; understanding the logic is what matters: the slope is essentially a weighted average of how much y deviates from its mean whenever x deviates from its mean. Outlier observations can disproportionately influence the least squares solution because large residuals get squared — a single extreme point can shift the entire line.",
+            "example": "Five data points (x, y): (1,3), (2,5), (3,4), (4,7), (5,8). x̄ = 3, ȳ = 5.4. Computing the slope: b₁ = [(1-3)(3-5.4)+(2-3)(5-5.4)+(3-3)(4-5.4)+(4-3)(7-5.4)+(5-3)(8-5.4)] / [(1-3)²+(2-3)²+(3-3)²+(4-3)²+(5-3)²] = [4.8+0.4+0+1.6+5.2] / [4+1+0+1+4] = 12/10 = 1.2. b₀ = 5.4 - 1.2(3) = 1.8. Line: ŷ = 1.8 + 1.2x.",
+            "keyPoints": [
+              "Least squares minimizes the sum of squared residuals — it finds the unique line that is closest to all observed data points simultaneously",
+              "The regression line always passes through (x̄, ȳ) — the means of both variables",
+              "Outliers have outsized influence because squaring residuals magnifies extreme deviations — always check for influential points after fitting a model"
+            ]
+          }
+        },
+        {
+          "id": "t48",
+          "slug": "interpreting-slope-and-intercept",
+          "title": "Interpreting Slope and Intercept",
+          "learn": {
+            "explanation": "The slope b₁ is the most important number in a regression output: it is the estimated change in y for a one-unit increase in x, holding everything else constant (in simple regression, there is nothing else). Always interpret the slope with the units: 'for each additional $1,000 in advertising spend, weekly revenue increases by an estimated $8,300.' The intercept b₀ is the predicted y when x = 0. It is often not directly interpretable — a regression of salary on years of experience has an intercept representing predicted salary for zero years of experience, which may be reasonable; but a regression of revenue on temperature has an intercept representing revenue at 0° temperature, which is meaningless in context. Never extrapolate predictions far outside the range of the data used to build the model.",
+            "example": "Regression of house price (y, $thousands) on square footage (x): ŷ = 45 + 0.18x. Slope interpretation: each additional square foot of living space is associated with a $180 increase in price. Intercept: a house with zero square feet is predicted to cost $45,000 — mathematically the intercept but practically meaningless. For a 2,000 sq ft house: ŷ = 45 + 0.18(2000) = $405K. Extrapolating to 10,000 sq ft (far beyond the data range) gives ŷ = $1.845M — likely unreliable because the linear relationship probably does not hold at that scale.",
+            "keyPoints": [
+              "Slope b₁: estimated change in y per one-unit increase in x — always state this with the correct units of both variables",
+              "Intercept b₀: predicted y when x = 0 — only meaningful if x = 0 is within or near the observed data range",
+              "Never extrapolate predictions far beyond the range of x in your data — the linear relationship may not hold outside observed values"
+            ]
+          }
+        },
+        {
+          "id": "t49",
+          "slug": "r-squared-and-model-fit",
+          "title": "R-Squared and Model Fit",
+          "learn": {
+            "explanation": "R² (the coefficient of determination) measures the proportion of the total variation in y that is explained by the regression model. R² = 1 - (SSE/SST), where SSE is the sum of squared residuals and SST is the total sum of squares. R² ranges from 0 (the model explains nothing) to 1 (the model explains all variation). For simple regression, R² = r², the square of the correlation coefficient. An R² of 0.64 means 64% of the variation in y is explained by x — and 36% is unexplained, attributed to other factors or random variation. There is no universal threshold for 'good' R² — it depends heavily on the domain. Physical processes might achieve R² > 0.95; predicting individual human behavior might achieve R² of 0.20 and still be useful.",
+            "example": "A real estate firm's regression of home price on square footage yields R² = 0.58. This means 58% of the variation in prices is explained by size alone. The remaining 42% is driven by location, age, condition, school district, and other factors not in the model. For pricing decisions, knowing that size alone explains 58% of price variation is quite useful — adding location as a predictor in a multiple regression might push R² to 0.78 or higher.",
+            "keyPoints": [
+              "R² = proportion of variation in y explained by the model; ranges 0 to 1; higher is better but 'good' depends on the domain",
+              "R² = r² in simple regression — the squared correlation between x and y",
+              "Low R² does not mean the regression coefficient is wrong or useless — it means other factors also drive y and should be included in a more complete model"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u11",
+      "title": "Regression Inference and Prediction",
+      "topics": [
+        {
+          "id": "t50",
+          "slug": "testing-the-slope-coefficient",
+          "title": "Hypothesis Tests on Regression Coefficients",
+          "learn": {
+            "explanation": "Even if you estimate a non-zero slope from sample data, you need to test whether that slope is statistically distinguishable from zero — if b₁ could plausibly be zero, the relationship may just be sampling noise. The test statistic is t = b₁ / SE(b₁), where SE(b₁) is the standard error of the slope. This t is compared to the t-distribution with df = n-2. Most regression software reports this t-statistic and its p-value in the coefficient table. The F-test in the ANOVA table tests the overall model significance (in simple regression, this is equivalent to the t-test on the slope). A significant p-value for the slope means the linear relationship is real; an insignificant slope means you cannot rule out that x and y are unrelated.",
+            "example": "Output from a regression of advertising spend on weekly sales: Coefficient = 8.3, SE = 2.1, t = 8.3/2.1 = 3.95, p = 0.0008. The slope is statistically significant — strong evidence that advertising spend is linearly related to sales. 95% confidence interval for the slope: 8.3 ± 2.09×2.1 = (3.9, 12.7). Each $1K of advertising is associated with between $3,900 and $12,700 of additional revenue — a wide but informative range for planning purposes.",
+            "keyPoints": [
+              "t-test on slope: H₀: β₁ = 0 (no linear relationship); t = b₁/SE(b₁), with df = n-2",
+              "Significant p-value on slope → reject 'no relationship'; non-significant → cannot rule out that the true slope is zero",
+              "The confidence interval for the slope is often more useful than the p-value — it tells you both whether the effect is real and the plausible range of its magnitude"
+            ]
+          }
+        },
+        {
+          "id": "t51",
+          "slug": "confidence-intervals-regression-coefficients",
+          "title": "Confidence Intervals for Regression Coefficients",
+          "learn": {
+            "explanation": "A confidence interval for a regression coefficient quantifies uncertainty around the estimated slope or intercept: b₁ ± t* × SE(b₁), with t* from the t-distribution at df = n-2. This interval tells you the plausible range of the true population slope. In business, the slope's confidence interval often matters more than the p-value because it answers the question 'how large could the effect plausibly be?' — which determines whether it is worth acting on. A 95% CI of (0.5, 2.3) for an advertising multiplier means each $1 of ad spend returns between $0.50 and $2.30 in revenue — a range that might still drive a deployment decision even though it is wide.",
+            "example": "A chain restaurant regresses weekly foot traffic (customers) on local temperature (°F). Slope estimate b₁ = -12.4, SE = 4.8. 95% CI: -12.4 ± 2.032×4.8 = (-22.2, -2.6). Interpretation: each 1°F increase in weekly average temperature is associated with between 2.6 and 22.2 fewer customers per week. The wide interval reflects uncertainty, but the entire interval is negative — the direction of the effect (fewer customers in hot weather) is clear and actionable for staffing and inventory planning.",
+            "keyPoints": [
+              "CI for slope: b₁ ± t* × SE(b₁); if the interval does not contain zero, the slope is statistically significant",
+              "The width of the CI reflects sample size and variability — larger samples produce narrower, more precise intervals",
+              "Interpret the CI in business terms: 'the true effect is plausibly between X and Y' is more actionable than a p-value alone"
+            ]
+          }
+        },
+        {
+          "id": "t52",
+          "slug": "prediction-intervals-vs-confidence-intervals",
+          "title": "Point Predictions and Prediction Intervals",
+          "learn": {
+            "explanation": "Given a new x value, regression gives a point prediction ŷ = b₀ + b₁x. But there are two distinct types of intervals around this prediction. A confidence interval for the mean response estimates the average y for all observations with this x value — it is relatively narrow because it estimates a mean. A prediction interval estimates the range for a single new observation — it is always wider because individual observations vary around the mean. For business decisions, prediction intervals are usually more relevant: you do not care about the average revenue for all weeks with $10K of advertising; you care about the likely revenue range for next specific week. Confusion between these two intervals is a common source of overconfident forecasts.",
+            "example": "Regression: ŷ = 120 + 8.3x (weekly revenue in $K, x = advertising in $K). For x = 15: ŷ = $244.5K. 95% confidence interval for the mean response: ($238K, $251K) — narrow, estimates average revenue across all weeks with $15K advertising. 95% prediction interval for a single week: ($196K, $293K) — much wider, captures the likely range for one specific next week. The prediction interval is what the CFO should use for budgeting; using the narrow CI instead would dramatically underestimate actual revenue variability.",
+            "keyPoints": [
+              "Confidence interval for mean response: estimates the average y at a given x — narrow, appropriate for describing the relationship",
+              "Prediction interval for a new observation: estimates the range for one specific future y — always wider than the CI, appropriate for individual forecasts",
+              "Use prediction intervals for operational decisions (budgeting, inventory); use confidence intervals for understanding the relationship itself"
+            ]
+          }
+        },
+        {
+          "id": "t53",
+          "slug": "residual-analysis-and-assumptions",
+          "title": "Residual Analysis and Assumptions",
+          "learn": {
+            "explanation": "Regression assumptions must be checked after fitting the model, not just assumed. The key assumptions: (1) Linearity — the relationship between x and y is actually linear. (2) Independence — residuals are not correlated with each other (violated in time series data). (3) Homoscedasticity — the variance of residuals is constant across all values of x (violated when errors fan out). (4) Normality — residuals are approximately normally distributed (required for valid inference). The residual plot (residuals vs. fitted values) is the primary diagnostic: a random scatter around zero confirms assumptions; a curved pattern indicates nonlinearity; a funnel shape indicates heteroscedasticity. Violations do not always invalidate the model, but they change what you can validly conclude from it.",
+            "example": "A regression of delivery cost on package weight shows a curved residual plot — residuals are positive for low and high weights, negative for medium weights. This tells the analyst the true relationship is curved (perhaps cost per kg decreases at high volumes), not linear. Adding a squared weight term (x²) to the model removes the curvature from the residual plot and dramatically improves fit. Without checking the residual plot, the original model would have produced systematically wrong predictions for both light and heavy shipments.",
+            "keyPoints": [
+              "Four key assumptions: linearity, independence, homoscedasticity (constant variance), normality of residuals",
+              "The residual plot (residuals vs. fitted values) is the primary diagnostic — random scatter around zero confirms the model is appropriate",
+              "Curved residual patterns signal nonlinearity; funnel-shaped patterns signal heteroscedasticity — both require model corrections before trusting inference"
+            ]
+          }
+        },
+        {
+          "id": "t54",
+          "slug": "transformations-for-nonlinear-data",
+          "title": "Transformations for Non-Linear Relationships",
+          "learn": {
+            "explanation": "When the relationship between x and y is not linear, you can often apply a mathematical transformation to make it linear and then use standard regression. The log transformation is the most common: taking the natural log of y (log-linear model) models relationships where each unit increase in x results in a percentage change in y — common for revenue, prices, and growth rates. A log-log model (log both x and y) produces an elasticity interpretation: the coefficient represents the percentage change in y for a 1% change in x. Adding a squared term x² (quadratic model) captures U-shaped or inverted-U-shaped relationships. Always choose transformations based on theory and diagnostic plots, not by trying everything and picking the best-looking R².",
+            "example": "A company models price elasticity of demand. Linear regression of units sold (y) on price (x) has a poor fit with heteroscedastic residuals. Log-log regression: ln(units) = 8.2 - 1.7 × ln(price). The slope -1.7 is the price elasticity: a 1% increase in price is associated with a 1.7% decrease in units sold. This is a common economic relationship that linearizes neatly in log-log space. The residuals of the log-log model are well-behaved, confirming the transformation was appropriate.",
+            "keyPoints": [
+              "Log transformation of y: each unit increase in x is associated with a percentage change in y — appropriate for multiplicative business growth",
+              "Log-log model: slope = elasticity (% change in y per 1% change in x) — the standard model for demand curves and price sensitivity",
+              "Choose transformations based on theory and residual diagnostics, not by chasing R² — post-hoc transformation fishing leads to overfitting"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u12",
+      "title": "Multiple Regression",
+      "topics": [
+        {
+          "id": "t55",
+          "slug": "why-multiple-regression",
+          "title": "Why Multiple Regression",
+          "learn": {
+            "explanation": "Simple regression often produces misleading results because it ignores other variables that affect y. Multiple regression includes multiple predictors simultaneously: ŷ = b₀ + b₁x₁ + b₂x₂ + ... + bₖxₖ. By controlling for other variables, each coefficient gives the partial effect of one predictor while holding all others constant — far more informative than a simple bivariate relationship. Classic omitted variable bias example: ice cream sales and drowning deaths are positively correlated. A simple regression of drownings on ice cream sales would suggest ice cream is dangerous. But both are driven by a third variable: hot weather. Including temperature in a multiple regression eliminates the spurious ice cream-drowning relationship. Multiple regression is how business analysts isolate the effect of one factor when many others are simultaneously in play.",
+            "example": "A hotel chain wants to understand what drives RevPAR (revenue per available room). Simple regression on occupancy rate alone: R² = 0.42. Multiple regression adding average daily rate, local events indicator, and month of year: R² = 0.79. The coefficient on local events, controlling for occupancy and month, is +$28 — rooms earn $28 more per night when a major event is in town, holding all else equal. This isolated effect is the actionable insight for pricing strategy that the simple regression could not provide.",
+            "keyPoints": [
+              "Multiple regression controls for other predictors simultaneously, giving each coefficient a 'holding all else equal' interpretation",
+              "Omitted variable bias: leaving out a relevant variable biases all the coefficients — adding more predictors reduces bias but increases complexity",
+              "R² will always increase (or stay the same) when you add predictors — use adjusted R² or AIC to compare models of different sizes"
+            ]
+          }
+        },
+        {
+          "id": "t56",
+          "slug": "interpreting-multiple-regression-coefficients",
+          "title": "Interpreting Multiple Regression Coefficients",
+          "learn": {
+            "explanation": "In multiple regression, each coefficient bⱼ represents the estimated change in y associated with a one-unit increase in xⱼ, holding all other predictors constant. This 'holding all else equal' (ceteris paribus) interpretation is the key difference from simple regression and from raw correlations. A coefficient that is positive in simple regression can become negative in multiple regression once other variables are controlled for — this is a sign of confounding in the simple analysis. The standard errors, t-statistics, and p-values for each coefficient test the hypothesis that the specific predictor contributes meaningfully after controlling for all other predictors in the model. A predictor can be statistically significant on its own but insignificant in multiple regression if another variable already captures most of its information.",
+            "example": "Regression predicting customer churn (1 = churned): y = 0.40 - 0.003×monthly_logins - 0.012×support_tickets_resolved + 0.025×price_increase_flag. Interpretation: each additional monthly login reduces predicted churn probability by 0.3 percentage points, holding ticket resolution and price increase constant. Resolving each support ticket reduces churn by 1.2 pp. A price increase is associated with 2.5 pp higher churn. The product team can use these coefficients to prioritize: increasing logins has the smallest per-unit effect; resolving tickets faster has the largest manageable lever.",
+            "keyPoints": [
+              "Each coefficient: change in y per one-unit increase in xⱼ, holding all other predictors constant — the ceteris paribus effect",
+              "Signs can flip from simple to multiple regression when confounders are controlled — always use multiple regression for causal interpretation",
+              "A predictor may be individually significant but insignificant in multiple regression if its information is already captured by another predictor"
+            ]
+          }
+        },
+        {
+          "id": "t57",
+          "slug": "dummy-variables-for-categorical-predictors",
+          "title": "Dummy Variables for Categorical Predictors",
+          "learn": {
+            "explanation": "Categorical variables (region, product type, day of week, customer segment) cannot be entered directly into a regression as numbers unless the numbers represent a true order. Instead, you create dummy variables — binary (0/1) indicators for each category. For a categorical variable with k categories, you include k-1 dummies and omit one category as the reference group. The coefficient on each dummy represents the average difference in y between that category and the reference group, holding all other predictors constant. Choosing the reference group thoughtfully makes interpretation easier: use the most common or most natural baseline.",
+            "example": "A retailer has four regions: Northeast (baseline), Southeast, Midwest, West. Three dummies: SE = 1 if Southeast, 0 otherwise; MW = 1 if Midwest, 0 otherwise; W = 1 if West, 0 otherwise. Regression output: b_SE = +$12,400, b_MW = -$3,200, b_W = -$8,100. Interpretation: Southeast stores average $12,400 more revenue than Northeast stores; West stores average $8,100 less — after controlling for other variables in the model. The omitted Northeast region is the benchmark everything else is compared against.",
+            "keyPoints": [
+              "For k categories, create k-1 dummy variables — the omitted category is the reference group that all others are compared against",
+              "Each dummy's coefficient = average difference in y between that category and the reference group, holding all else equal",
+              "Never include all k dummies — the 'dummy variable trap' creates perfect multicollinearity and makes the model unestimable"
+            ]
+          }
+        },
+        {
+          "id": "t58",
+          "slug": "interaction-terms",
+          "title": "Interaction Terms",
+          "learn": {
+            "explanation": "An interaction term tests whether the effect of one predictor on y depends on the value of another predictor. You create an interaction by multiplying two predictors: x₁ × x₂ becomes a new variable in the model. If the interaction coefficient is significant, the slope of x₁ differs across levels of x₂. A common business example: the effect of advertising on sales might be stronger in some regions than others, or stronger for loyal customers than new ones. Including an interaction lets you estimate both the 'main effects' and how those effects vary across subgroups. The coefficient on the main effect x₁ in the presence of an interaction term must be interpreted carefully — it now represents the effect of x₁ when x₂ = 0.",
+            "example": "A subscription service tests whether the effect of a discount on conversion differs by customer segment (new vs. returning). Model: Conversion = b₀ + b₁×Discount + b₂×Returning + b₃×(Discount×Returning). Results: b₁ = 0.08 (8 pp lift from discount for new users), b₂ = 0.15 (returning users convert 15 pp more regardless), b₃ = -0.05 (the discount effect is 5 pp smaller for returning users). Total discount effect for returning users: 0.08 + (-0.05) = 3 pp. For new users: 0.08. The interaction reveals that discounts are most effective for new customer acquisition and should be targeted accordingly.",
+            "keyPoints": [
+              "Interaction term = x₁ × x₂; a significant interaction means the effect of x₁ on y depends on x₂",
+              "When an interaction is in the model, interpret main effect coefficients at the value where the other variable = 0 — they are no longer unconditional averages",
+              "Interactions are powerful but add complexity; only include them when theory or exploratory analysis suggests the effect genuinely varies across groups"
+            ]
+          }
+        },
+        {
+          "id": "t59",
+          "slug": "variable-selection-and-adjusted-r-squared",
+          "title": "Variable Selection and Adjusted R-Squared",
+          "learn": {
+            "explanation": "Adding predictors to a regression always increases R² — even if the predictors are random noise — because extra variables capture some of the residual variation by chance. Adjusted R² penalizes for model complexity: Adj R² = 1 - (1-R²) × (n-1)/(n-k-1), where k is the number of predictors. Adjusted R² decreases if a predictor adds less explanatory power than random noise. The Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) apply stronger penalties and are preferred for formal model comparison. In practice, variable selection is guided by three things: domain knowledge (does this variable theoretically matter?), statistical significance (is it significant in the model?), and model quality metrics (does adding it improve Adj R² or AIC?). Never add variables that make theoretical sense only in hindsight — that is overfitting.",
+            "example": "A sales forecasting model starts with 20 candidate predictors (advertising, season, local unemployment, competitor price, etc.). Full model: R² = 0.88, Adj R² = 0.81 — the 9-predictor gap signals substantial overfitting. Stepwise selection reduces to 7 predictors: Adj R² = 0.86, AIC drops from 312 to 287. The final model is both simpler and more generalizable — it will likely outperform the full model on new data even though the full model technically fits the training data better.",
+            "keyPoints": [
+              "R² always increases when you add predictors — use adjusted R² or AIC/BIC to penalize complexity when comparing models",
+              "Adjusted R² increases only if a new predictor improves fit more than random noise would — a decrease in Adj R² signals the predictor is not useful",
+              "Parsimony matters: a simpler model that generalizes is better than a complex model that memorizes — use domain knowledge, not just statistics, to guide variable selection"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u13",
+      "title": "Regression Problems and Model Quality",
+      "topics": [
+        {
+          "id": "t60",
+          "slug": "multicollinearity",
+          "title": "Multicollinearity",
+          "learn": {
+            "explanation": "Multicollinearity occurs when two or more predictors in a multiple regression are highly correlated with each other. When predictors are collinear, the model cannot reliably separate their individual effects — the standard errors of their coefficients inflate dramatically, making t-tests unreliable even though R² may be high. The Variance Inflation Factor (VIF) measures how much each predictor's coefficient variance is inflated by collinearity. VIF > 10 is a common threshold for concern. The solution depends on the goal: if prediction is the only goal, multicollinearity may not matter (predictions can still be good even when individual coefficients are unstable). If you need to interpret individual coefficients, consider dropping one of the collinear predictors, combining them, or using regularization methods.",
+            "example": "A compensation analysis regresses salary on years of education and years of experience. Correlation between education and experience: r = 0.87 (people with more education tend to have worked longer). VIF for both predictors: 4.2 (moderate concern). The coefficients flip signs in some model specifications — sometimes experience has a negative coefficient, which makes no practical sense. The multicollinearity is inflating standard errors and making both coefficients unreliable. Solution: replace both with a composite 'human capital' index, or analyze education and experience in separate models.",
+            "keyPoints": [
+              "Multicollinearity: high correlation among predictors inflates standard errors and makes individual coefficient estimates unreliable",
+              "VIF > 10 is a common threshold for problematic multicollinearity; VIF = 1 means no multicollinearity at all",
+              "Multicollinearity does not hurt prediction accuracy — only interpretation of individual coefficients; if prediction is the goal, it may not need to be fixed"
+            ]
+          }
+        },
+        {
+          "id": "t61",
+          "slug": "heteroscedasticity",
+          "title": "Heteroscedasticity",
+          "learn": {
+            "explanation": "Homoscedasticity means residuals have constant variance across all values of the predictors — the model's prediction errors are roughly equally sized throughout the data range. Heteroscedasticity means the variance of residuals changes systematically with the predictors — common when the outcome variable has a wide range (like revenue, where errors on $10M deals are naturally larger than errors on $1K deals). Heteroscedasticity makes standard errors wrong: OLS standard errors understate the true uncertainty for high-leverage observations, leading to overconfident t-statistics and p-values. Remedies include log-transforming y (often eliminates heteroscedasticity), using weighted least squares, or using heteroscedasticity-robust standard errors (the most common approach in practice).",
+            "example": "A regression of company annual revenue on number of employees shows a clear funnel pattern in the residual plot — small companies' revenues are predicted quite accurately (small residuals), while large companies have massive residuals. This is heteroscedasticity. Log-transforming revenue and employees produces a residual plot with no clear pattern — the log-log relationship is homoscedastic. The coefficients now represent elasticities and the inference is valid.",
+            "keyPoints": [
+              "Heteroscedasticity: residual variance is not constant — the spread of residuals changes across fitted values or predictor values",
+              "The funnel-shaped residual plot (spreading outward) is the classic signature of heteroscedasticity",
+              "Remedies: log transformation of y (most common), robust standard errors, or weighted least squares — the choice depends on the cause and context"
+            ]
+          }
+        },
+        {
+          "id": "t62",
+          "slug": "autocorrelation",
+          "title": "Autocorrelation",
+          "learn": {
+            "explanation": "Autocorrelation (or serial correlation) occurs when residuals are correlated with each other over time — a positive residual in one period predicts positive residuals in subsequent periods. This violates the independence assumption and is common in time series regression: last month's above-average sales are likely followed by this month's above-average sales, for reasons the model does not capture. The Durbin-Watson statistic tests for autocorrelation: values near 2 indicate no autocorrelation, values near 0 indicate positive autocorrelation (common), values near 4 indicate negative autocorrelation. Autocorrelation makes standard errors too small (underestimates uncertainty), leading to spuriously significant results. Remedies include adding lagged variables, using differencing, or switching to time-series-specific models like ARIMA.",
+            "example": "A retailer regresses monthly revenue on advertising spend using 36 months of data. Durbin-Watson = 0.87, indicating strong positive autocorrelation — consecutive months' residuals are highly correlated. The model finds advertising is highly significant (p = 0.001), but this may be because both revenue and advertising trend upward over the same 36 months — a spurious correlation driven by shared time trends. Adding a time trend variable and lagged revenue to the model increases Durbin-Watson to 1.94, and the advertising coefficient's p-value rises to 0.08 — the 'significance' was mostly capturing the shared trend.",
+            "keyPoints": [
+              "Autocorrelation: residuals from adjacent time periods are correlated — common in time series regression",
+              "Durbin-Watson near 2 = OK; near 0 = positive autocorrelation; near 4 = negative autocorrelation",
+              "Positive autocorrelation artificially reduces standard errors, making everything look more significant than it is — always check DW when using time series data"
+            ]
+          }
+        },
+        {
+          "id": "t63",
+          "slug": "outliers-and-influential-observations",
+          "title": "Outliers and Influential Observations",
+          "learn": {
+            "explanation": "An outlier in regression has a large residual — the model predicts poorly for that observation. An influential observation is one that, if removed, would substantially change the estimated regression coefficients. The two are different: an outlier near the mean of x is unusual in y but may not be influential; an outlier at the extreme of x (high leverage) is potentially very influential. Cook's Distance combines leverage and residual size into a single influence measure. Observations with Cook's Distance > 4/n are commonly flagged for investigation. Before removing any influential point, investigate why it is unusual — it may represent a data error (correct it), a genuinely different sub-population (model separately), or an important edge case (keep it and note the limitation).",
+            "example": "A regression of marketing spend on leads generated is being used to set budget. One observation stands out: a single viral campaign that spent $5K and generated 50,000 leads — 100× the typical ratio. Cook's Distance for this point: 2.8 (very high). With the point included, the slope b₁ = 12 leads/$1 spent. Without it: b₁ = 8.3. The entire ROI calculation depends on whether this one viral outlier is included. The analyst keeps both versions in the report and notes that typical campaigns return 8 leads per dollar, with the viral outlier as a best-case scenario.",
+            "keyPoints": [
+              "Outliers: large residuals (predicted far from actual); influential observations: removal substantially changes the coefficients — these are different things",
+              "High leverage = x value far from x̄; combined with a large residual, this creates an influential observation",
+              "Cook's Distance > 4/n flags potentially influential observations for investigation — never remove them without understanding why they are unusual"
+            ]
+          }
+        },
+        {
+          "id": "t64",
+          "slug": "overfitting-and-model-validation",
+          "title": "Overfitting and Model Validation",
+          "learn": {
+            "explanation": "An overfitted model learns the noise in the training data rather than the true underlying relationship — it performs well on the data used to build it but poorly on new data. The more predictors you add, the more you can overfit. The solution is validation: hold out a portion of the data (test set) before building the model, build the model on the remaining data (training set), then evaluate its performance on the held-out test set. The gap between training R² and test R² reveals the degree of overfitting. K-fold cross-validation systematically rotates which data is held out, giving a more reliable estimate of out-of-sample performance. For business models that will be used to make predictions on future data, out-of-sample validation is not optional — it is the only meaningful measure of model quality.",
+            "example": "A credit risk model is built on 5,000 loans from 2018–2022. The model has 25 predictors and achieves R² = 0.79 on training data. When tested on 1,000 held-out loans from 2023 (data the model never saw), test R² = 0.51. The 28-point gap reveals serious overfitting — the model learned specific patterns from the training years that did not generalize to 2023. Rebuilding with only 8 theoretically justified predictors gives training R² = 0.71 and test R² = 0.68 — the smaller gap signals a model that actually generalizes.",
+            "keyPoints": [
+              "Overfitting: the model fits noise in the training data and performs poorly on new data — always evaluate on held-out data the model did not see",
+              "Training R² overstates true model quality; test R² (out-of-sample) is the honest measure for forecasting models",
+              "Cross-validation (k-fold) gives a more reliable estimate of out-of-sample performance than a single train/test split, especially with smaller datasets"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u14",
+      "title": "ANOVA and Comparing Multiple Groups",
+      "topics": [
+        {
+          "id": "t65",
+          "slug": "the-multiple-comparison-problem",
+          "title": "The Multiple Comparison Problem",
+          "learn": {
+            "explanation": "Running multiple t-tests inflates the overall Type I error rate. If you set α = 0.05 and run 20 independent tests, you expect at least one false positive even if all null hypotheses are true — the chance of no false positive across 20 tests is 0.95²⁰ ≈ 36%, so there is a 64% chance of at least one spurious 'significant' result. This is the multiple comparison problem, and it is rampant in business A/B testing when teams run many simultaneous experiments without statistical correction. ANOVA (Analysis of Variance) avoids this by testing all groups simultaneously with a single test, controlling the overall error rate. The Bonferroni correction addresses it by dividing α by the number of tests, though this approach is conservative. Always pre-register your hypotheses and primary comparisons before looking at data.",
+            "example": "A product team runs a homepage test with 10 design variants simultaneously, comparing each pair of variants using t-tests — that is 45 pairwise comparisons. With α = 0.05, even if all variants perform identically, about 0.05 × 45 ≈ 2.25 comparisons will be falsely 'significant' by chance. Using ANOVA instead: one F-test determines whether any variant differs from the control, and only then are pairwise comparisons made with multiple-comparison corrections applied.",
+            "keyPoints": [
+              "Running k tests at α = 0.05 produces approximately k × 0.05 false positives even when nothing is real — familywise error rate inflates rapidly",
+              "ANOVA tests all groups in a single F-test, controlling the familywise error rate at α",
+              "Never run multiple pairwise t-tests across many groups — always use ANOVA first, then apply post-hoc corrections for specific comparisons"
+            ]
+          }
+        },
+        {
+          "id": "t66",
+          "slug": "one-way-anova",
+          "title": "One-Way ANOVA",
+          "learn": {
+            "explanation": "One-way ANOVA tests whether the means of three or more groups are all equal. H₀: μ₁ = μ₂ = ... = μₖ (all group means are equal). H₁: at least one group mean is different. It partitions the total variation in y into between-group variation (SSB — how much the group means differ from the overall mean) and within-group variation (SSW — how much individual observations vary around their group mean). The F-statistic is the ratio of average between-group variance to average within-group variance: F = (SSB/(k-1)) / (SSW/(n-k)). A large F means the groups differ more than random within-group variation would explain. Assumptions: independence, normality within each group, and equal variances across groups.",
+            "example": "A restaurant chain tests three pricing strategies at 5 locations each: standard pricing (control), premium pricing, and value pricing. Weekly revenue per location: Standard: mean $42K; Premium: mean $48K; Value: mean $37K. One-way ANOVA: F = 8.73, p = 0.003. Conclusion: reject H₀ — the pricing strategy has a statistically significant effect on revenue. Now which strategies differ? Post-hoc tests (next topic) are needed to find out.",
+            "keyPoints": [
+              "One-way ANOVA: tests H₀ that all group means are equal; H₁ that at least one differs — a single test that controls the familywise error rate",
+              "F = MSB/MSW = (between-group variance) / (within-group variance); large F → groups differ more than chance would explain",
+              "ANOVA requires independence, approximate normality within groups, and equal variances — the last assumption can be relaxed using Welch's ANOVA"
+            ]
+          }
+        },
+        {
+          "id": "t67",
+          "slug": "the-f-statistic-and-anova-table",
+          "title": "The F-Statistic and ANOVA Table",
+          "learn": {
+            "explanation": "The ANOVA table organizes the variance decomposition into a standard format: Source | SS | df | MS | F | p-value. The between-groups row has df = k-1 (number of groups minus 1). The within-groups (error) row has df = n-k. Mean squares (MS) are SS divided by their degrees of freedom. The F-statistic compares MSB to MSW. A high F with a small p-value tells you the group differences are unlikely to be due to chance. The same F-test appears at the bottom of regression output, testing whether the overall regression model explains a significant amount of variance. In both contexts, the F-test is a joint test of all the model's parameters — a significant F means at least one predictor or group difference is real, but does not tell you which one.",
+            "example": "ANOVA table for the pricing strategy example:\nSource       | SS    | df | MS    | F    | p\nBetween      | 385.2 | 2  | 192.6 | 8.73 | 0.003\nWithin       | 264.0 | 12 | 22.0  |      |\nTotal        | 649.2 | 14 |       |      |\nSST = SSB + SSW = 385.2 + 264.0 = 649.2. R² analog (eta-squared) = 385.2/649.2 = 0.593 — 59.3% of revenue variation is explained by pricing strategy.",
+            "keyPoints": [
+              "ANOVA table: SS (sum of squares), df, MS (mean square = SS/df), F = MSB/MSW, p-value",
+              "Between-group df = k-1; within-group df = n-k; total df = n-1",
+              "The F-test is equivalent to R² test in regression — both test whether the model as a whole explains significant variance"
+            ]
+          }
+        },
+        {
+          "id": "t68",
+          "slug": "post-hoc-tests",
+          "title": "Post-Hoc Tests: Tukey and Bonferroni",
+          "learn": {
+            "explanation": "When ANOVA rejects H₀ (at least one group mean differs), post-hoc tests identify which specific pairs of groups differ while controlling the familywise error rate. Tukey's Honestly Significant Difference (HSD) test is the standard choice when you want all pairwise comparisons — it controls the familywise error rate exactly at α across all comparisons. The Bonferroni correction divides α by the number of comparisons and is more conservative but simpler to apply; it is preferred when you have a small number of planned comparisons. Both methods produce confidence intervals for the difference between each pair of means. The output tells you not just whether groups differ but by how much — the effect size information needed to make a business decision.",
+            "example": "After ANOVA rejects H₀ for pricing strategies, Tukey's HSD at α = 0.05 yields: Standard vs. Premium: difference = $6K, 95% CI ($1.8K, $10.2K), p = 0.009 (significant). Standard vs. Value: difference = -$5K, 95% CI (-$9.1K, -$0.9K), p = 0.018 (significant). Premium vs. Value: difference = $11K, 95% CI ($6.8K, $15.2K), p = 0.0002 (significant). All three pairs differ significantly. The revenue ordering is Premium > Standard > Value, giving the executive team clear guidance to roll out premium pricing.",
+            "keyPoints": [
+              "Post-hoc tests (Tukey, Bonferroni) identify which specific group pairs differ after ANOVA rejects H₀",
+              "Tukey's HSD is preferred for all-pairwise comparisons; Bonferroni is preferred for a small number of planned comparisons",
+              "Post-hoc tests provide confidence intervals for the difference between each pair — both statistical significance and effect size in one output"
+            ]
+          }
+        },
+        {
+          "id": "t69",
+          "slug": "two-way-anova",
+          "title": "Two-Way ANOVA",
+          "learn": {
+            "explanation": "Two-way ANOVA extends the analysis to two categorical factors simultaneously, testing three things: the main effect of Factor A, the main effect of Factor B, and their interaction. The interaction effect asks: does the effect of Factor A on y depend on the level of Factor B? For example, does the effect of pricing strategy depend on whether the store is in an urban or suburban location? An interaction means the factors are not simply additive — you cannot interpret Factor A's effect without knowing Factor B's level. This is the ANOVA analog of interaction terms in regression. Two-way ANOVA is more statistically efficient than running two separate one-way analyses because it controls for the second factor while estimating the first.",
+            "example": "The retailer now tests pricing strategy (3 levels) across two store types (urban and suburban), with 3 locations in each of the 6 combinations (3×2 factorial design, n=18). Two-way ANOVA output: Pricing strategy: F = 7.2, p = 0.008 (main effect significant). Store type: F = 4.8, p = 0.045 (main effect significant). Interaction: F = 3.9, p = 0.041 (significant interaction). The interaction reveals that premium pricing works better in urban stores than suburban ones — the analysis guides region-specific pricing rollout rather than a one-size-fits-all decision.",
+            "keyPoints": [
+              "Two-way ANOVA tests main effect of Factor A, main effect of Factor B, and their interaction — all in a single analysis",
+              "A significant interaction means Factor A's effect on y depends on Factor B — you must interpret the effects together, not separately",
+              "Two-way ANOVA is more efficient than two separate one-way analyses because it controls for both factors simultaneously"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u15",
+      "title": "Computer-Based Analysis",
+      "topics": [
+        {
+          "id": "t70",
+          "slug": "interpreting-statistical-software-output",
+          "title": "Reading Statistical Software Output",
+          "learn": {
+            "explanation": "Statistical software (Excel, R, SPSS, Stata, Python) produces standardized output tables, but the critical skill is knowing which numbers to look at and what they mean. For regression output: the coefficient table (b values, SE, t, p-value, 95% CI), the model summary (R², adjusted R², F-statistic, p-value for F), and the ANOVA table (SSR, SSE, SST). For hypothesis tests: the test statistic, degrees of freedom, p-value, and confidence interval. Many analysts report R² and p-values without looking at residual plots, coefficient confidence intervals, or effect sizes — this produces technically correct but analytically shallow conclusions. Reading output fluently means knowing what each row and column represents and immediately translating numbers into business language.",
+            "example": "Excel regression output for revenue ~ advertising: R² = 0.64, Adj R² = 0.62. Coefficient table: Intercept = 120.3 (SE=18.2, t=6.6, p<0.001, 95% CI: 83.4 to 157.2). Advertising = 8.3 (SE=2.1, t=3.95, p=0.001, 95% CI: 4.0 to 12.6). Reading this: the model explains 62% of revenue variation; each $1K of advertising is associated with $8,300 more revenue (plausible range: $4K to $12.6K); the intercept of $120K is the baseline revenue with zero advertising. Both coefficients are highly significant.",
+            "keyPoints": [
+              "Regression output has three parts: model summary (R², F), coefficient table (b, SE, t, p, CI), and ANOVA table — read all three",
+              "Always report coefficients with their confidence intervals, not just p-values — CIs tell you the magnitude and uncertainty of each effect",
+              "Residual plots are not part of the standard output table but are essential — never trust regression results without checking them"
+            ]
+          }
+        },
+        {
+          "id": "t71",
+          "slug": "data-cleaning-and-preparation",
+          "title": "Data Cleaning and Preparation",
+          "learn": {
+            "explanation": "Data cleaning consumes 60–80% of a real analyst's time and is the least glamorous but most consequential step. Common issues: missing values (how to handle — impute, drop, or flag?), duplicate records, inconsistent coding (Male/male/M as the same category), outliers that are data entry errors vs. legitimate extreme values, date format inconsistencies, and units mismatches ($K vs. dollars vs. millions). The data cleaning decisions you make affect every downstream analysis. Documenting your cleaning decisions is essential for reproducibility and audit trails. For business reporting, cleaning errors create real risks: a duplicate transaction inflates revenue reports; a miscoded categorical variable produces incorrect group comparisons; a mishandled missing value biases estimates.",
+            "example": "A sales analyst receives a CRM export with 15,000 rows and finds: 320 duplicate deal records (same deal_id, different timestamps — keep most recent), 840 missing revenue values (12 were data entry errors correctable from email receipts; 828 were truly unknown — flagged as missing rather than assumed zero), revenue amounts in inconsistent units (800 records in thousands, rest in dollars — all converted to dollars), and one deal listed at $88 million that should be $88,000 (corrected after email confirmation). Each fix required judgment, and each was documented with a reason.",
+            "keyPoints": [
+              "Missing values: distinguish between truly missing (unknown) and zero — treating missing as zero is one of the most common data analysis errors",
+              "Always document every cleaning decision with a reason — undocumented changes cannot be audited or reproduced",
+              "Check basic sanity: row counts before and after each cleaning step, distribution of key variables, and cross-tabulations to catch coding inconsistencies"
+            ]
+          }
+        },
+        {
+          "id": "t72",
+          "slug": "automating-repeated-analysis",
+          "title": "Automating Repeated Analysis",
+          "learn": {
+            "explanation": "Any analysis you run more than twice should be automated. Automation reduces errors (manual re-running introduces copy-paste mistakes), saves time (a monthly report that takes 4 hours to compile manually can run in 2 minutes), and makes work auditable (the code is the documentation). In Excel, this means pivot tables, named ranges, and macros. In R or Python, it means scripts that pull data, clean, analyze, and produce output in one run. The principle of reproducibility requires that anyone with access to the code and data can reproduce the exact same results — this is the standard for serious analytical work. Automation also makes updating analysis when data changes nearly effortless.",
+            "example": "A finance team produces a monthly performance dashboard that previously took two analysts 6 hours to compile from 12 data sources. An R script is written that: connects to the database, pulls the latest data, cleans and reshapes it, runs the same set of analyses, and knits an R Markdown report as a PDF. Total runtime: 8 minutes. The first month required 16 hours to build the automation — but over 12 months, it saves 6×12 - 16 = 56 analyst-hours, and eliminates the manual errors that previously appeared in about 30% of monthly reports.",
+            "keyPoints": [
+              "Any analysis run more than twice should be scripted — the upfront investment in automation pays off quickly and reduces errors",
+              "Reproducible analysis: code + data → same results, every time, for anyone — this is the professional standard",
+              "Automate the full pipeline: data pull, cleaning, analysis, and output generation in one script — partial automation still requires manual intervention that introduces errors"
+            ]
+          }
+        },
+        {
+          "id": "t73",
+          "slug": "communicating-results-to-non-technical-audiences",
+          "title": "Communicating Statistical Results to Non-Technical Stakeholders",
+          "learn": {
+            "explanation": "The best analysis in the world fails if it cannot be understood by the decision-maker. The key translation principles: (1) Lead with the business conclusion, not the method — 'The new checkout increases revenue by $4,800 per day' not 'the two-sample t-test yields p = 0.016.' (2) Replace statistical jargon with plain English — 'we are 95% confident the true effect is between $2,100 and $7,500 per day' not 'the 95% CI is (2.1K, 7.5K).' (3) Visualize, do not tabulate — a bar chart comparing before/after is immediately understood; a table of means and p-values is not. (4) State the decision recommendation explicitly — the analyst's job is not to present data but to drive a decision. (5) Acknowledge uncertainty honestly — overstating confidence in results destroys credibility the first time the prediction misses.",
+            "example": "A data scientist's technical summary: 'OLS regression with heteroscedasticity-robust SEs yields β₁ = 8.3 (p = 0.001, 95% CI: 4.0–12.6), R² = 0.64, n = 52.' Translated for the CMO: 'Based on 52 weeks of data, our analysis shows that each additional $1,000 in advertising is associated with $8,300 in incremental weekly revenue. We are 95% confident the true return is between $4,000 and $12,600 per $1,000 spent. This justifies increasing the advertising budget — but the wide range reflects genuine uncertainty and we recommend a controlled pilot before a full rollout.'",
+            "keyPoints": [
+              "Lead with the business conclusion and decision recommendation — statistical methods belong in the appendix, not the executive summary",
+              "Translate every number into business units (dollars, percentages, customers) and plain-English uncertainty ('we are 95% confident' vs. '95% CI')",
+              "Honesty about uncertainty builds long-term credibility — a narrow claim that turns out wrong is worse than a honest wide estimate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u16",
+      "title": "R for Business Statistics",
+      "topics": [
+        {
+          "id": "t74",
+          "slug": "introduction-to-r-and-rstudio",
+          "title": "Introduction to R and RStudio",
+          "learn": {
+            "explanation": "R is a free, open-source programming language built for statistical computing and graphics. RStudio is the standard integrated development environment for R, providing a console, script editor, environment panel, and plot viewer in a single window. R's strength over Excel is reproducibility, automation, and the ability to handle large datasets and complex models. The basic workflow: write code in the script editor, run it line by line in the console, inspect results in the environment and viewer panels. R is case-sensitive and uses `<-` for assignment (though `=` also works). Key first commands: `install.packages('packagename')` installs a package once; `library(packagename)` loads it in each session; `?functionname` opens documentation. The learning curve is real but the payoff — reproducible, scalable statistical analysis — is worth it.",
+            "example": "First session in R:\n# Create a vector of weekly revenues\nrevenues <- c(142, 158, 135, 172, 161, 148, 155)\n# Basic descriptive stats\nmean(revenues)      # → 153\nmedian(revenues)    # → 155\nsd(revenues)        # → 12.5\nsummary(revenues)   # → min, Q1, median, mean, Q3, max\nhist(revenues)      # → histogram plot\nThis 7-line script produces descriptive statistics and a visualization — the same analysis would take 20+ clicks in Excel.",
+            "keyPoints": [
+              "R and RStudio are free and industry-standard for statistical analysis — install RStudio which automatically uses R as its backend",
+              "R is case-sensitive; use <- for assignment; install.packages() once, library() every session",
+              "The console runs commands immediately; the script editor saves your work for reproducibility — always write analysis in scripts, not the console"
+            ]
+          }
+        },
+        {
+          "id": "t75",
+          "slug": "data-manipulation-with-dplyr",
+          "title": "Data Manipulation with dplyr",
+          "learn": {
+            "explanation": "dplyr (part of the tidyverse) provides a grammar of data manipulation with five core verbs: `filter()` subsets rows by condition, `select()` subsets columns, `mutate()` creates new columns, `summarize()` collapses rows to summary statistics, and `group_by()` splits data for grouped operations. These verbs chain together using the pipe operator (`|>` or `%>%`) to form readable, step-by-step data transformations. The pipe passes the result of one operation directly to the next — like a logical 'then.' For a business analyst, dplyr replaces complex nested Excel formulas and multiple pivot tables with concise, readable code that can be inspected and modified at each step.",
+            "example": "# Analyze revenue by region and quarter\nlibrary(dplyr)\nsales_summary <- sales_data |>\n  filter(year == 2024) |>\n  mutate(revenue_k = revenue / 1000) |>\n  group_by(region, quarter) |>\n  summarize(\n    total_rev = sum(revenue_k),\n    avg_deal = mean(deal_size),\n    n_deals = n()\n  ) |>\n  arrange(desc(total_rev))\nThis produces a clean summary table sorted by revenue — equivalent to building 8 pivot tables in Excel but reproducible and modifiable in seconds.",
+            "keyPoints": [
+              "Five dplyr verbs: filter() (rows), select() (columns), mutate() (new columns), summarize() (aggregate), group_by() (split by group)",
+              "The pipe operator |> chains operations left to right: data |> filter() |> group_by() |> summarize() — read as 'then'",
+              "group_by() + summarize() is the R equivalent of a pivot table and the most commonly used dplyr pattern in business analysis"
+            ]
+          }
+        },
+        {
+          "id": "t76",
+          "slug": "data-visualization-with-ggplot2",
+          "title": "Data Visualization with ggplot2",
+          "learn": {
+            "explanation": "ggplot2 (part of the tidyverse) builds graphics using the 'grammar of graphics' — every chart is built from layers: data, aesthetic mappings (which variables map to x, y, color, size), and geometric objects (geoms: points, lines, bars, histograms). The core structure is: `ggplot(data, aes(x, y)) + geom_xxx()`. Additional layers add titles, axis labels, color scales, and themes. ggplot2 produces publication-quality charts with concise code; it handles faceting (small multiples) elegantly, making it easy to show the same chart broken out by a categorical variable. For business reporting, ggplot2 charts are far more customizable and reproducible than Excel charts.",
+            "example": "# Scatter plot with regression line by region\nlibrary(ggplot2)\nggplot(sales_data, aes(x = ad_spend, y = revenue, color = region)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = 'lm', se = TRUE) +\n  facet_wrap(~ quarter) +\n  labs(title = 'Revenue vs Ad Spend by Region and Quarter',\n       x = 'Advertising Spend ($K)', y = 'Weekly Revenue ($K)') +\n  theme_minimal()\nThis produces a faceted scatter plot with separate regression lines by region — a visualization that would require significant manual effort in Excel.",
+            "keyPoints": [
+              "ggplot2 structure: ggplot(data, aes(x, y)) + geom_xxx() + labs() + theme() — build charts layer by layer",
+              "geom_histogram() for distributions, geom_bar() for categories, geom_point() for scatter, geom_line() for time series, geom_smooth() for trend lines",
+              "facet_wrap(~ variable) creates small multiples — the same chart repeated for each level of a categorical variable, ideal for business segmentation analysis"
+            ]
+          }
+        },
+        {
+          "id": "t77",
+          "slug": "running-regression-in-r",
+          "title": "Running Regression in R",
+          "learn": {
+            "explanation": "The `lm()` function fits linear models in R. The formula syntax is `y ~ x1 + x2 + x3` for multiple regression, `y ~ x` for simple regression. `summary(model)` produces the full regression output table with coefficients, standard errors, t-statistics, p-values, R², and the F-test. `confint(model)` extracts confidence intervals for coefficients. `plot(model)` generates four residual diagnostic plots automatically. `predict(model, newdata)` generates predictions for new observations, and `predict(model, newdata, interval='prediction')` adds prediction intervals. The combination of `lm()`, `summary()`, and `plot()` covers the full regression workflow that would require multiple steps and add-ins in Excel.",
+            "example": "# Full regression workflow in R\nmodel <- lm(revenue ~ ad_spend + season + store_size, data = sales_data)\nsummary(model)    # coefficients, R², F-test\nconfint(model)    # 95% CIs for each coefficient\nplot(model)       # 4 residual diagnostic plots\n# Predict for a new scenario\nnew_data <- data.frame(ad_spend=15, season='Q4', store_size=2500)\npredict(model, newdata=new_data, interval='prediction', level=0.95)\n# → fit: 244.5, lwr: 196.2, upr: 292.8",
+            "keyPoints": [
+              "lm(y ~ x1 + x2, data) fits the model; summary() shows the full output table; plot() generates residual diagnostics",
+              "Formula shortcuts: y ~ . includes all columns; y ~ x1 * x2 includes x1, x2, and their interaction; y ~ I(x^2) adds a squared term",
+              "predict(model, newdata, interval='prediction') gives point forecasts with prediction intervals — use this for operational planning"
+            ]
+          }
+        },
+        {
+          "id": "t78",
+          "slug": "reproducible-reports-with-r-markdown",
+          "title": "Reproducible Reports with R Markdown",
+          "learn": {
+            "explanation": "R Markdown integrates narrative text, R code, and output (tables, charts, statistical results) into a single document that can be rendered to HTML, PDF, or Word. The document consists of markdown text interspersed with code chunks — blocks of R code that execute when the document is rendered. The rendered output includes all code outputs in-line, so the analysis and the report are one artifact. When the underlying data changes, re-rendering the R Markdown document automatically updates all numbers, tables, and charts — eliminating the manual copy-paste step that introduces errors in traditional report workflows. R Markdown is the standard tool for reproducible business reporting and academic statistical work.",
+            "example": "An R Markdown file for a monthly sales report:\n---\ntitle: 'Monthly Sales Report — June 2025'\noutput: pdf_document\n---\n```{r setup, include=FALSE}\nlibrary(dplyr); library(ggplot2)\nsales <- read_csv('sales_june.csv')\n```\n## Key Metrics\nTotal revenue this month: **$`r format(sum(sales$revenue), big.mark=',')`**\n```{r fig.width=8, fig.height=4}\nggplot(sales, aes(week, revenue)) + geom_line() + theme_minimal()\n```\nWhen the CSV updates, re-knitting the document produces an updated report with correct numbers and charts automatically.",
+            "keyPoints": [
+              "R Markdown = markdown text + R code chunks in one file; rendering produces a complete report with all analysis outputs embedded",
+              "When data changes, re-rendering automatically updates all numbers, tables, and charts — no manual copy-paste and no outdated figures",
+              "Output formats: HTML (interactive, shareable), PDF (formal reports), Word (stakeholders who need an editable document) — one source file, multiple formats"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u17",
+      "title": "Final Review and Portfolio Preparation",
+      "topics": [
+        {
+          "id": "t79",
+          "slug": "the-full-statistical-workflow",
+          "title": "The Full Statistical Workflow",
+          "learn": {
+            "explanation": "The complete statistical workflow connects every unit of this course into a repeatable process. (1) Business question: what decision needs to be made, and what evidence would change it? (2) Study design: how will data be collected? What sample size is needed? (3) Exploratory analysis: summarize with descriptive statistics, visualize distributions and relationships, identify outliers and data quality issues. (4) Formal inference: choose the right test or model, check assumptions, fit and interpret. (5) Communicate: translate statistical results into business language, with honest uncertainty quantification. Most real-world failures happen in step 1 (wrong question) or step 5 (results not communicated to drive a decision). The statistical machinery in steps 2–4 is where this course focuses, but steps 1 and 5 are where analyst value is actually delivered.",
+            "example": "A bank considers offering a new credit product. Workflow: (1) Question: what is the expected default rate, and at what rate is the product profitable? (2) Design: pilot to 5,000 randomly selected eligible customers. (3) EDA: distribution of applicant income, credit scores, debt-to-income ratios — flag data quality issues. (4) Inference: logistic regression models default probability; confidence intervals around default rate; breakeven analysis. (5) Communicate to credit committee: 'Expected default rate 4.2% (95% CI: 3.5%–4.9%). Product is profitable if default rate is below 5.8%. We recommend a 12-month pilot with monthly monitoring against the 5.8% threshold.'",
+            "keyPoints": [
+              "The workflow is: question → design → EDA → inference → communicate — failures usually happen at the beginning and end, not the middle",
+              "Statistical results that do not connect to a business decision have zero value — always end with an explicit recommendation",
+              "Real analysis is iterative: EDA often reveals problems with the study design or the original question, requiring a restart — this is normal, not a failure"
+            ]
+          }
+        },
+        {
+          "id": "t80",
+          "slug": "choosing-the-right-statistical-test",
+          "title": "Choosing the Right Statistical Test",
+          "learn": {
+            "explanation": "The right statistical test depends on: (1) What you are estimating — a mean, a proportion, a relationship, or a difference between groups. (2) How many groups — one, two, or more than two. (3) Whether groups are independent or paired. (4) Whether the outcome is continuous or binary. Key decision tree: one mean against a target → one-sample t-test. Two independent means → two-sample t-test. Two paired means → paired t-test. Three or more means → ANOVA. One proportion against a target → one-sample z-test for proportions. Two proportions → two-sample proportion test. Relationship between two continuous variables → correlation and regression. Relationship between continuous y and multiple predictors → multiple regression. Choosing the wrong test is as serious an error as computing the right test incorrectly — the result is technically correct but answers the wrong question.",
+            "example": "Test selection examples from one business context: Is average customer age different this year vs. last? → two-sample t-test (two independent groups, continuous outcome). Did average age change for the same customer cohort? → paired t-test (same customers, two time points). Is churn rate above 5%? → one-sample proportion test. Did churn rate change between segments A, B, and C? → ANOVA or chi-square test. What predicts churn? → logistic regression. What predicts revenue? → multiple linear regression. Each question demands a different tool — the analyst's job is matching question to method.",
+            "keyPoints": [
+              "Decision tree: continuous outcome → t-test family or ANOVA; binary outcome → proportion tests or chi-square; relationship between variables → correlation and regression",
+              "Independent vs. paired is the most commonly confused distinction — always ask 'are the two groups measuring the same subjects or different subjects?'",
+              "When in doubt, draw the scatter plot (for continuous) or a contingency table (for categorical) — the visualization usually makes the right test obvious"
+            ]
+          }
+        },
+        {
+          "id": "t81",
+          "slug": "building-a-data-analysis-portfolio",
+          "title": "Building a Statistical Analysis Portfolio",
+          "learn": {
+            "explanation": "A portfolio of statistical projects is the most effective way to demonstrate analytical skills to employers. Each project should show the full workflow: a clear business question, data collection or acquisition, cleaning decisions, exploratory visualizations, appropriate statistical methods, results communicated in plain English, and a recommendation. Projects are strongest when they use real datasets and answer questions you genuinely care about — authenticity comes through in interviews. Host projects as R Markdown or Jupyter notebooks on GitHub so they are publicly accessible and version-controlled. Quality matters far more than quantity: two rigorous, well-documented projects demonstrate more skill than ten shallow ones.",
+            "example": "Strong portfolio project: 'Predicting Customer Churn for a Telecom Dataset.' Contents: (1) Problem statement and business impact. (2) EDA with 8–10 visualizations showing churn rates by segment, feature distributions, and correlation patterns. (3) Logistic regression model with proper train/test split and cross-validation. (4) Model interpretation: which features most strongly predict churn? (5) Business recommendation: customers with feature patterns X, Y, Z have 60%+ churn probability — target them with a retention offer costing $20 when the value of retaining them is $400+. Hosted as an R Markdown report on GitHub with clean, documented code.",
+            "keyPoints": [
+              "Portfolio projects should show the full workflow from question to business recommendation — not just model output",
+              "Use real, publicly available datasets (Kaggle, data.gov, company case studies) and answer genuinely interesting business questions",
+              "Host on GitHub as reproducible R Markdown or Jupyter notebooks — employers want to see both your conclusions and your code"
+            ]
+          }
+        },
+        {
+          "id": "t82",
+          "slug": "business-analytics-careers",
+          "title": "Business Analytics Careers and Applications",
+          "learn": {
+            "explanation": "The skills from this course are directly applicable to a wide range of business roles. Business Analyst: uses descriptive statistics, A/B testing, and Excel/R to analyze business performance and drive operational decisions. Data Analyst: deeper technical work with SQL, Python, and R to extract insights from large datasets. Financial Analyst: regression models for forecasting, time series analysis for financial planning, Monte Carlo simulation for risk assessment. Marketing Analyst: A/B testing, attribution modeling, customer segmentation using clustering. Operations Analyst: process quality control (using control charts and hypothesis tests), demand forecasting (time series), supply chain optimization. The common thread across all these roles is the ability to turn data into defensible, quantified recommendations — exactly what this course trains you to do.",
+            "example": "Career paths with this skill set: (1) Analyst at a consulting firm: immediately use regression and hypothesis testing for client deliverables — median starting salary $65–85K. (2) Business Intelligence Analyst: SQL + R + visualization tools to build dashboards and ad-hoc analyses — median $70–90K. (3) Data Scientist (with additional machine learning coursework): predictive modeling, A/B testing infrastructure — median $100–130K. (4) Finance Analyst: financial modeling, forecasting, and scenario analysis using the quantitative toolkit — median $70–95K. Statistics is the foundation; SQL, business domain knowledge, and communication skills are the multipliers.",
+            "keyPoints": [
+              "Business analyst, data analyst, financial analyst, and marketing analyst roles all require the statistics foundation built in this course",
+              "SQL and Python/R are the technical complements to statistics — adding these skills dramatically increases your market value and range of roles",
+              "Communication is the highest-leverage skill: analysts who translate statistics into clear business recommendations are paid significantly more than those who only produce outputs"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
