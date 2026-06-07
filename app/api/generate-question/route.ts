@@ -1,6 +1,45 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest } from 'next/server'
 
+const QUESTION_TYPES = [
+  {
+    type: 'Definition',
+    instruction:
+      'Ask the student to identify or explain what a concept means. Test precise understanding of terminology.',
+  },
+  {
+    type: 'Calculation',
+    instruction:
+      'Give the student a set of specific numbers and ask them to compute or interpret a result. All numbers must be realistic and the math must be unambiguous.',
+  },
+  {
+    type: 'Application',
+    instruction:
+      'Present a realistic business scenario and ask what the student would do or conclude. The scenario should feel like a real decision a professional would face.',
+  },
+  {
+    type: 'Error-Finding',
+    instruction:
+      'State something that is wrong — a misconception, incorrect procedure, or flawed reasoning — and ask the student to identify the error or what is incorrect about it.',
+  },
+  {
+    type: 'Comparison',
+    instruction:
+      'Ask how two related concepts differ from each other. Both concepts should be plausibly confusable.',
+  },
+  {
+    type: 'Interpretation',
+    instruction:
+      'Give the student a specific result (a ratio, a number, a chart reading, a test statistic) and ask what it means for a business decision.',
+  },
+]
+
+const DIFFICULTIES = ['easy', 'medium', 'hard']
+
+function pick<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
 export async function POST(req: NextRequest) {
   if (!process.env.ANTHROPIC_API_KEY) {
     console.error('[generate-question] ANTHROPIC_API_KEY is not set in .env.local')
@@ -19,19 +58,37 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: 'Invalid request body' }, { status: 400 })
   }
 
+  const questionType = pick(QUESTION_TYPES)
+  const difficulty = pick(DIFFICULTIES)
+
+  console.log(`[generate-question] type: ${questionType.type}, difficulty: ${difficulty}`)
+
   try {
     const message = await client.messages.create({
       model: 'claude-haiku-4-5',
       max_tokens: 1024,
       temperature: 1,
-      system: `You are a professor for NC State ACC 210 (Introduction to Accounting).
-Generate a multiple-choice question specifically about "${topic}" for NC State ACC 210.
-Each question you generate should be different — vary the specific concept tested, the difficulty angle, and the phrasing so students see a wide range of questions on this topic.
+      system: `You are an expert business professor writing exam questions for university students.
+Your questions always use realistic business contexts with specific numbers — never abstract placeholders like "Company X" or "some amount." Use real company names, realistic dollar figures, specific percentages, and named industries.
 Always respond with valid JSON only — no markdown, no code fences, no explanation outside the JSON object.`,
       messages: [
         {
           role: 'user',
-          content: `Generate one introductory-level multiple-choice question specifically about "${topic}".
+          content: `Generate one multiple-choice question about "${topic}".
+
+Question type: ${questionType.type}
+Type instruction: ${questionType.instruction}
+Difficulty: ${difficulty}
+
+Difficulty guidance:
+- easy: tests direct recall or a single straightforward step
+- medium: requires applying the concept to a scenario or doing a two-step calculation
+- hard: involves a nuance, a common misconception, or a multi-step problem where a wrong turn leads to a plausible distractor
+
+Requirements:
+- Use a realistic business context with specific numbers (dollar amounts, percentages, ratios, time periods)
+- The three wrong options should be plausible — common mistakes or related but incorrect ideas
+- The explanation should say why the correct answer is right AND why the most tempting wrong answer is wrong
 
 Respond with this exact JSON shape and nothing else:
 {
