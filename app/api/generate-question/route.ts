@@ -49,8 +49,9 @@ export async function POST(req: NextRequest) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
   let topic: string
+  let body: { topic: string; difficulty?: string }
   try {
-    const body = await req.json()
+    body = await req.json()
     topic = body.topic
     console.log('[generate-question] request received, topic:', topic)
   } catch (err) {
@@ -59,7 +60,7 @@ export async function POST(req: NextRequest) {
   }
 
   const questionType = pick(QUESTION_TYPES)
-  const difficulty = pick(DIFFICULTIES)
+  const difficulty = DIFFICULTIES.includes(body.difficulty ?? '') ? body.difficulty! : 'medium'
 
   console.log(`[generate-question] type: ${questionType.type}, difficulty: ${difficulty}`)
 
@@ -81,9 +82,9 @@ Type instruction: ${questionType.instruction}
 Difficulty: ${difficulty}
 
 Difficulty guidance:
-- easy: tests direct recall or a single straightforward step
-- medium: requires applying the concept to a scenario or doing a two-step calculation
-- hard: involves a nuance, a common misconception, or a multi-step problem where a wrong turn leads to a plausible distractor
+- easy: tests direct recall or a single straightforward step; appropriate for a student seeing this concept for the first time
+- medium: requires applying the concept to a scenario or doing a two-step calculation; appropriate for a student who understands the basics
+- hard: involves a nuance, a common misconception, or a multi-step problem where a wrong turn leads to a plausible distractor; appropriate for exam preparation
 
 Requirements:
 - Use a realistic business context with specific numbers (dollar amounts, percentages, ratios, time periods)

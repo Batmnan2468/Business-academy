@@ -52,9 +52,16 @@ const INITIAL_SESSION: Session = {
   showMastery: false,
 }
 
+const DIFFICULTIES = [
+  { value: 'easy', label: 'Easy' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'hard', label: 'Hard' },
+]
+
 export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, nextTopic }: Props) {
   const [mode, setMode] = useState<'learn' | 'practice'>(learn ? 'learn' : 'practice')
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
+  const [difficulty, setDifficulty] = useState('medium')
 
   function handleAnswer(isCorrect: boolean) {
     setSession((prev) => {
@@ -112,8 +119,11 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           />
         )}
 
+        <DifficultySelector value={difficulty} onChange={setDifficulty} disabled={session.total > 0} />
+
         <PracticeQuestion
           topicTitle={topicTitle}
+          difficulty={difficulty}
           onAnswer={handleAnswer}
           nextLabel={session.masteryPending ? 'See results →' : undefined}
           onNext={session.masteryPending ? handleMasteryTransition : undefined}
@@ -147,12 +157,15 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
         </p>
       </div>
 
-      <button
-        onClick={() => setMode('practice')}
-        className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
-      >
-        Start Practicing →
-      </button>
+      <div className="flex items-center gap-4 flex-wrap">
+        <DifficultySelector value={difficulty} onChange={setDifficulty} />
+        <button
+          onClick={() => setMode('practice')}
+          className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+        >
+          Start Practicing →
+        </button>
+      </div>
     </div>
   )
 }
@@ -262,6 +275,43 @@ function MasteryScreen({
           Keep practicing this topic
         </button>
       </div>
+    </div>
+  )
+}
+
+function DifficultySelector({
+  value,
+  onChange,
+  disabled = false,
+}: {
+  value: string
+  onChange: (v: string) => void
+  disabled?: boolean
+}) {
+  return (
+    <div className="flex items-center gap-2 mb-6">
+      <span className="text-xs text-gray-400 shrink-0">Difficulty:</span>
+      <div className="flex gap-1">
+        {DIFFICULTIES.map((d) => (
+          <button
+            key={d.value}
+            onClick={() => !disabled && onChange(d.value)}
+            disabled={disabled}
+            className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              value === d.value
+                ? 'bg-blue-600 text-white'
+                : disabled
+                  ? 'text-gray-300 dark:text-gray-600 cursor-default'
+                  : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+            }`}
+          >
+            {d.label}
+          </button>
+        ))}
+      </div>
+      {disabled && (
+        <span className="text-xs text-gray-400 italic">locked during session</span>
+      )}
     </div>
   )
 }

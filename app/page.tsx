@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getCourses } from '@/lib/courses'
+import { getCourses, getAllTopics } from '@/lib/courses'
 import CourseCard from '@/components/course/CourseCard'
 
 export default function HomePage() {
@@ -22,7 +22,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.slug}`}>
-                <CourseCard course={course} />
+                <CourseCard
+                  courseSlug={course.slug}
+                  subject={course.subject}
+                  title={course.title}
+                  description={course.description}
+                  level={course.level}
+                  totalTopics={getAllTopics(course).length}
+                />
               </Link>
             ))}
           </div>
