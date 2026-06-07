@@ -6,6 +6,12 @@ export interface Topic {
   title: string
 }
 
+export interface Unit {
+  id: string
+  title: string
+  topics: Topic[]
+}
+
 export interface Course {
   id: string
   slug: string
@@ -13,7 +19,8 @@ export interface Course {
   description: string
   subject: string
   level: CourseLevel
-  topics: Topic[]
+  topics?: Topic[]
+  units?: Unit[]
 }
 
 export interface UserProgress {

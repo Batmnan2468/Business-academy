@@ -1,4 +1,5 @@
 import type { Course } from '@/types'
+import { getAllTopics } from '@/lib/courses'
 
 interface Props {
   course: Course
@@ -25,7 +26,7 @@ export default function CourseCard({ course }: Props) {
       </div>
       <h3 className="font-semibold text-base leading-snug mb-1">{course.title}</h3>
       <p className="text-sm text-gray-500 line-clamp-2 flex-1">{course.description}</p>
-      <p className="mt-4 text-xs text-gray-400">{course.topics.length} topics</p>
+      <p className="mt-4 text-xs text-gray-400">{getAllTopics(course).length} topics</p>
     </div>
   )
 }

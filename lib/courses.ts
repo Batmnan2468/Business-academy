@@ -1,6 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import type { Course } from '@/types'
+import type { Course, Topic } from '@/types'
+
+export function getAllTopics(course: Course): Topic[] {
+  if (course.units) return course.units.flatMap((u) => u.topics)
+  return course.topics ?? []
+}
 
 const contentDir = path.join(process.cwd(), 'content', 'courses')
 

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getCourse } from '@/lib/courses'
+import { getCourse, getAllTopics } from '@/lib/courses'
 import PracticeQuestion from '@/components/exercise/PracticeQuestion'
 
 interface Props {
@@ -12,7 +12,7 @@ export default async function PracticePage({ params }: Props) {
   const course = getCourse(courseSlug)
   if (!course) notFound()
 
-  const topic = course.topics.find((t) => t.slug === topicSlug)
+  const topic = getAllTopics(course).find((t) => t.slug === topicSlug)
   if (!topic) notFound()
 
   return (
