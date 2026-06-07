@@ -11,9 +11,12 @@ interface Question {
 
 interface Props {
   topicTitle: string
+  onAnswer?: (correct: boolean) => void
+  nextLabel?: string
+  onNext?: () => void
 }
 
-export default function PracticeQuestion({ topicTitle }: Props) {
+export default function PracticeQuestion({ topicTitle, onAnswer, nextLabel, onNext }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -126,7 +129,10 @@ export default function PracticeQuestion({ topicTitle }: Props) {
             <li key={i}>
               <button
                 disabled={answered}
-                onClick={() => setSelected(i)}
+                onClick={() => {
+                  setSelected(i)
+                  onAnswer?.(i === question.correctIndex)
+                }}
                 className={className}
               >
                 <span className="mr-3 text-xs opacity-60">{String.fromCharCode(65 + i)}.</span>
@@ -151,10 +157,10 @@ export default function PracticeQuestion({ topicTitle }: Props) {
           </div>
 
           <button
-            onClick={fetchQuestion}
+            onClick={onNext ?? fetchQuestion}
             className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
           >
-            Next question →
+            {nextLabel ?? 'Next question →'}
           </button>
         </>
       )}
