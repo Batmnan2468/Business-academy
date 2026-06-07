@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getCourse, getAllTopics } from '@/lib/courses'
-import PracticeQuestion from '@/components/exercise/PracticeQuestion'
+import LearnAndPractice from '@/components/exercise/LearnAndPractice'
 
 interface Props {
   params: Promise<{ courseSlug: string; topicSlug: string }>
@@ -30,7 +30,7 @@ export default async function PracticePage({ params }: Props) {
       <h1 className="text-2xl font-bold mb-1">{topic.title}</h1>
       <p className="text-sm text-gray-400 mb-10">Practice question</p>
 
-      <PracticeQuestion topicTitle={topic.title} />
+      <LearnAndPractice topicTitle={topic.title} learn={topic.learn} />
     </main>
   )
 }

@@ -1,9 +1,16 @@
 export type CourseLevel = 'beginner' | 'intermediate' | 'advanced'
 
+export interface LearnContent {
+  explanation: string
+  example: string
+  keyPoints: string[]
+}
+
 export interface Topic {
   id: string
   slug: string
   title: string
+  learn?: LearnContent
 }
 
 export interface Unit {
