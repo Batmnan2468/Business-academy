@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a multiple regression model predicting quarterly revenue at Tesla using advertising spend, R&D investment, and competitor price index, what does a regression coefficient of 2.5 on advertising spend (in millions) represent?",
+    "options": [
+      "For each additional $1 million spent on advertising, quarterly revenue increases by $2.5 million, holding R&D and competitor price constant",
+      "Advertising spend explains 2.5% of the variation in revenue",
+      "The correlation between advertising and revenue is 2.5",
+      "For each additional $1 million spent on advertising, revenue increases by 2.5%, regardless of other variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "A regression coefficient measures the change in the dependent variable for a one-unit increase in the independent variable, ceteris paribus. 2.5 means a $2.5 million change in revenue per $1 million advertising increase, holding other predictors constant. Option B confuses the coefficient with R-squared. Option C confuses it with correlation coefficient. Option D ignores the ceteris paribus condition and misinterprets the units.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model for Apple's iPhone sales, the intercept is 15,000 units and the coefficient on price (in $100 units) is −2,400. What does the intercept represent?",
+    "options": [
+      "The predicted number of iPhones sold when price equals zero (a theoretical value outside the data range)",
+      "The minimum number of iPhones Apple will sell",
+      "The number of iPhones sold at the mean price in the dataset",
+      "The standard error of the regression"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intercept is the predicted value of the dependent variable when all independent variables equal zero. It is often outside the realistic range of the data (phones at $0 price), making it a theoretical construct. Option B misinterprets it as a floor. Option C would be the prediction at the mean, not the intercept. Option D confuses it with a measure of model fit.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following correctly interprets a coefficient of −0.85 on 'unemployment rate' in a regression model predicting monthly retail sales at Target (in millions of dollars)?",
+    "options": [
+      "A one percentage point increase in the unemployment rate is associated with a $0.85 million decrease in Target's monthly retail sales, holding other variables constant",
+      "A one percentage point increase in the unemployment rate causes a $0.85 million decrease in retail sales",
+      "Unemployment rate explains 0.85% of the variation in retail sales",
+      "The relationship between unemployment and retail sales is negative and moderate in strength"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient −0.85 means each one-unit increase in unemployment (1 percentage point) corresponds to a 0.85 million dollar decrease in sales, ceteris paribus. Option B incorrectly claims causation (regression shows correlation). Option C confuses the coefficient with R-squared or percentage interpretation. Option D makes an unsupported claim about strength without knowing the scale of variation.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model predicting annual profit for Walmart stores, coefficient estimates are: Store Size (sq ft) = 0.0012, Annual Inventory Turnover = 8,500, and Labor Cost ($ thousands) = −15. What is the name of the property allowing these coefficients to be compared directly?",
+    "options": [
+      "They cannot be compared directly because variables are on different scales; we would need to standardize them (beta coefficients)",
+      "They can all be compared directly because they are all statistically significant",
+      "They can be compared directly because multiple regression always produces comparable coefficients",
+      "They should be compared using p-values instead of the magnitude of coefficients"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unstandardized coefficients on variables with different units (square feet vs. turnover ratio vs. thousands of dollars) cannot be directly compared for relative importance. Standardized coefficients (betas) solve this by using z-scores. Option B incorrectly assumes statistical significance enables comparison. Option C is false—different units require standardization. Option D confuses significance testing with relative effect size comparison.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a simple regression with total marketing budget predicting Nike's quarterly revenue, the coefficient is 3.2. If this same regression is expanded to include additional predictors (brand reputation score and competitor market share), what might happen to the coefficient on marketing budget?",
+    "options": [
+      "It will likely change (increase, decrease, or stay similar depending on correlations between marketing budget and the new variables), a phenomenon called omitted variable bias",
+      "It will remain exactly 3.2 because the data hasn't changed",
+      "It will definitely decrease because adding variables always reduces coefficients",
+      "It will increase because the model now accounts for more variance"
+    ],
+    "correctIndex": 0,
+    "explanation": "When variables are added to a regression, coefficients on existing variables can change due to omitted variable bias—the new variables may be correlated with both the existing predictor and the outcome. The direction and magnitude of change depend on these correlations, not the addition itself. Option B ignores how variable correlation affects coefficient estimates. Option C falsely claims coefficients always decrease. Option D confuses R-squared improvement with individual coefficient changes.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's operations team runs a regression predicting weekly warehouse labor hours using weekly package volume (thousands of packages) and average package weight (pounds). The coefficient on package volume is 3.5 and on weight is 0.75. In a particular week, volume increases by 10,000 packages (+10 in thousands) while weight decreases by 2 pounds. What is the predicted change in labor hours?",
+    "options": [
+      "35 hours (from volume only) minus 1.5 hours (from weight) = 33.5 hours net increase",
+      "45 hours (combining 35 + weight effect with wrong sign)",
+      "3.5 hours (only accounting for volume change)",
+      "35 hours (ignoring the weight change entirely)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted change = (3.5 × 10) + (0.75 × −2) = 35 − 1.5 = 33.5 hours. Option B incorrectly adds instead of subtracts the weight effect. Option C ignores the weight coefficient entirely. Option D ignores both the scale of volume change (10 units) and the weight change. This requires applying multiple coefficients to actual changes.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a regression predicting monthly car sales at Ford dealerships, the model includes: Annual dealership revenue ($ millions), Number of sales staff, and Average customer review rating (1–10 scale). The coefficient on revenue is 0.15, on staff is 45, and on review rating is 2,800. A manager wants to know which variable has the strongest effect. What critical information is missing?",
+    "options": [
+      "The standard deviations of each independent variable; unstandardized coefficients on different scales cannot reveal relative importance without standardization",
+      "The p-values of each coefficient to determine statistical significance",
+      "The correlation matrix between all predictors",
+      "The R-squared value of the overall model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unstandardized coefficients (0.15 vs. 45 vs. 2,800) reflect both the relationship strength and the scale of the independent variable. Revenue in millions, staff as counts, and ratings on a 10-point scale have very different scales. To compare relative importance, we need standard deviations to create standardized (beta) coefficients. Option B (p-values) indicates significance, not magnitude of effect. Option C is interesting but doesn't directly solve the comparison problem. Option D measures fit, not relative variable importance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Google's advertising analytics team estimates that each additional search engine optimization (SEO) keyword costs $500 and adds 2.3 clicks per day to a campaign. A junior analyst claims: 'The regression coefficient of 2.3 proves that spending money on SEO keywords causes more clicks.' What is the error in this reasoning?",
+    "options": [
+      "Regression coefficients show correlation or association, not causation; the relationship could be reverse (more clicks lead to higher keyword bids) or confounded by other factors",
+      "The coefficient is too small to prove causation; a coefficient above 5 would prove causation",
+      "The junior analyst is correct; regression coefficients always represent causal effects",
+      "The cost variable should have been included in the regression to properly test causation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression coefficients represent conditional associations, not causal effects. Causation requires experimental design, instrumental variables, or strong causal identification assumptions. The relationship between keywords and clicks could be bidirectional or influenced by unobserved confounders. Option B falsely claims a coefficient magnitude threshold for causation. Option C is incorrect—regression alone never proves causation. Option D misidentifies the issue; cost isn't necessary in the regression to detect the logical error.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A real estate regression predicting home prices in Austin includes Square footage, Number of bedrooms, and Age (years). The coefficient on bedrooms is $45,000 and on square footage is $225 per sq ft. If a home has 2 extra bedrooms (vs. another home) but is 400 square feet smaller, what is the predicted price difference?",
+    "options": [
+      "$90,000 − $90,000 = $0 (the two effects exactly offset)",
+      "$90,000 (from bedrooms only, ignoring square footage)",
+      "$90,000 (the bedroom effect dominates because it is a larger dollar amount)",
+      "$45,000 (averaging the two coefficients)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted difference = (45,000 × 2) + (225 × −400) = 90,000 − 90,000 = 0. Both effects must be calculated and combined. Option B ignores the square footage effect. Option C incorrectly assumes the larger-dollar coefficient dominates, ignoring that square footage is measured in different units with different scale. Option D is mathematically incorrect and misunderstands how to combine coefficient effects.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In Microsoft's employee satisfaction regression (outcome: annual salary in thousands), predictors are years of experience, number of certifications, and department. The coefficient on experience is 4.5 and on certifications is 2.8. An HR manager observes: 'Certifications have less impact than experience because the coefficient is smaller.' Is this conclusion valid, and why or why not?",
+    "options": [
+      "No; certifications are measured in counts (1, 2, 3...) while experience is measured in years, so the coefficient scales differ. One additional certification adds $2,800 to salary while one year of experience adds $4,500, making direct comparison invalid without standardization.",
+      "Yes; the coefficient on experience (4.5) is larger than on certifications (2.8), so experience clearly matters more",
+      "No; we would need to see the p-values to determine which variable has more impact",
+      "Yes; the ratio 4.5 to 2.8 directly tells us experience is 1.6 times more important"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coefficients of different variables on different scales (years vs. counts) cannot be directly compared in magnitude. The coefficient reflects both the relationship strength and the unit of measurement. One additional certification adds $2.8K to salary, while one additional year adds $4.5K, making experience appear stronger, but this could reverse if certifications were measured differently (e.g., certification level 1–5 scale vs. count). Standardized coefficients would properly compare. Option B makes the common mistake of assuming unstandardized coefficient magnitude reflects importance. Option C conflates significance with effect size. Option D incorrectly treats coefficients as comparable when they are on different scales.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank regression predicts monthly credit card defaults (number of defaults) using: median customer credit score (range 300–850), average account balance ($ thousands), and unemployment rate in the region (%). The coefficient on credit score is −0.0045. What does this coefficient reveal about the relationship between credit score and defaults?",
+    "options": [
+      "A one-point increase in credit score (e.g., 700 to 701) is associated with a 0.0045 decrease in predicted defaults, showing a negative relationship; a 100-point increase (e.g., 650 to 750) would yield a 0.45 default reduction",
+      "A one-point increase in credit score reduces defaults by 0.45%",
+      "Credit score has a weak or negligible effect because the coefficient is close to zero",
+      "A one-point increase in credit score causes a 0.0045 unit decrease in defaults with certainty"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient −0.0045 means each additional point in credit score is associated with 0.0045 fewer defaults, ceteris paribus. On a 1–100 scale change, this becomes 0.45 defaults. The small magnitude reflects the unit of measurement (score points), not weakness—even small changes per point compound over realistic ranges. Option B misinterprets the coefficient as a percentage. Option C incorrectly equates a small coefficient value with weak effect; size depends on variable scale. Option D claims causation, which regression alone cannot establish.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain regression predicting store-level profit ($ millions) includes: square footage, average hourly wage ($ per hour), and manager tenure (years). Coefficients are 0.0008 (sq ft), −0.15 (wage), and 0.18 (tenure). When interpreting the wage coefficient, a manager says: 'A $1 per hour wage increase reduces profit by $0.15 million, so we should cut wages.' What is the critical flaw in this reasoning?",
+    "options": [
+      "The coefficient shows association, not causation; higher wages may be associated with lower profit due to confounders like store size/location challenges, turnover costs, or productivity effects. Cutting wages could reduce morale, productivity, and profit without addressing root causes.",
+      "Wages are too small a cost to affect profit by $0.15 million",
+      "The manager is correct; reducing wages is the optimal way to improve profit",
+      "The negative coefficient is actually positive after accounting for the sign error in the regression output"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression coefficients reveal conditional associations, not causal mechanisms or optimal decisions. A negative wage coefficient might reflect that struggling stores pay more to attract talent, or that wage increases are confounded with expansion into competitive markets. Causation could run backward, or omitted variables (store location, competition, product mix) could drive both wages and profits. Cutting wages based solely on this coefficient ignores these confounds and may harm the business through reduced productivity or increased turnover. Option B misunderstands the scale impact. Option C assumes causal interpretation. Option D invokes a false sign error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a regression of Netflix subscriber growth (thousands of subscribers added per month) on content budget ($ millions), original series count, and marketing spend ($ millions), the coefficient on content budget is 12.5 and on series count is 45. A data analyst wants to determine whether increasing the budget by $5 million or adding 1 new series has a larger impact on subscriber growth. Why is this comparison problematic, and what would be needed to answer it?",
+    "options": [
+      "The variables are on different scales (dollars vs. count); to compare impact, the analyst needs the standard deviations of each variable to compute standardized coefficients (betas), which would show relative importance on a common scale",
+      "The analyst should simply compare 12.5 to 45; the series count coefficient is larger so adding a series has more impact",
+      "The comparison is impossible because one variable is continuous and the other is discrete",
+      "The analyst needs p-values to determine which variable matters more"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coefficients of 12.5 (per $1M budget) and 45 (per 1 series) are on different scales and cannot be compared directly. A $5M budget increase adds 12.5 × 5 = 62.5K subscribers; a 1-series increase adds 45K subscribers. But if the standard deviation of budget is $10M and series count is 0.5, the standardized effects would differ significantly from raw magnitudes. Standardized coefficients (betas) express both in standard deviations, enabling comparison of relative importance. Option B incorrectly assumes direct comparison of raw coefficients. Option C falsely claims discrete variables cannot be compared. Option D confuses significance with relative magnitude.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a model predicting quarterly sales for Costco warehouses, the full regression includes: warehouse square footage, average inventory turnover, and local population density. When the analyst removes population density from the model, the coefficient on square footage changes from 18.5 to 22.3. What does this coefficient change reveal about the relationship between population density and square footage?",
+    "options": [
+      "Population density and square footage are negatively correlated (larger warehouses tend to be in lower-density areas); population density was a suppressor variable that masked the true effect of square footage, a case of omitted variable bias",
+      "Population density has no effect on sales because removing it changed the other coefficient",
+      "The coefficient change proves the model is misspecified and neither model is reliable",
+      "Population density and square footage are positively correlated, strengthening the square footage effect"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a coefficient increases upon removing a variable (18.5 to 22.3), the removed variable was suppressing the effect—this typically occurs when the removed variable is negatively correlated with both the predictor and outcome. Larger warehouses (more sq ft) may be in low-population-density areas, while density itself may reduce sales (overcrowded markets). Removing density 'unmasks' the stronger effect of square footage. This is omitted variable bias. Option B wrongly assumes coefficient changes mean no effect. Option C overstates the issue; this is normal omitted variable bias, not fundamental misspecification. Option D incorrectly predicts positive correlation would increase the coefficient of square footage.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm runs a regression predicting annual credit portfolio loss ($ millions) using: unemployment rate (%), average customer credit score, and interest rate (%). Coefficients are 0.75 (unemployment), −0.08 (credit score), and −0.12 (interest rate). An economist interprets the unemployment coefficient as follows: 'A 1% increase in unemployment corresponds to $0.75 million more in credit losses, ceteris paribus.' Which of the following is the most accurate assessment of this interpretation?",
+    "options": [
+      "The interpretation is correct and properly qualifies the association with 'corresponds to' and 'ceteris paribus,' acknowledging association rather than causation while correctly identifying the magnitude and unit change",
+      "The interpretation is incorrect because causation cannot be inferred from a regression coefficient",
+      "The interpretation is incomplete because it should also mention the effect sizes of credit score and interest rate for context",
+      "The interpretation is wrong because unemployment is a percentage, so the coefficient should be divided by 100"
+    ],
+    "correctIndex": 0,
+    "explanation": "The economist's statement is correct. It uses 'corresponds to' (association, not causation) and 'ceteris paribus' (holding other variables constant), and correctly identifies a 1-percentage-point unemployment increase with $0.75M additional losses. This is a proper interpretation of an unstandardized regression coefficient. Option B is overly strict—acknowledging association and avoiding causal language (as the economist did) is the correct approach to interpreting regression coefficients. Option C is unnecessary; context from other variables is nice-to-have but not required for a correct interpretation of one coefficient. Option D misunderstands units—if unemployment is in percentage points in the data, the coefficient directly applies per percentage point; no division by 100 is needed.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

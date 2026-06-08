@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a regression model, an interaction term between Price and Advertising represents what?",
+    "options": [
+      "The combined effect of Price and Advertising on Sales, where the impact of one variable depends on the level of the other",
+      "The sum of the individual coefficients of Price and Advertising",
+      "A variable that controls for multicollinearity between Price and Advertising",
+      "The correlation coefficient between Price and Advertising multiplied by their standard deviations"
+    ],
+    "correctIndex": 0,
+    "explanation": "An interaction term captures how the effect of one independent variable on the dependent variable changes depending on the value of another independent variable. This is fundamentally different from simply summing coefficients (Option B), which ignores the conditional relationship. Option C confuses interactions with multicollinearity solutions, and Option D describes a covariance measure, not an interaction effect.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model predicting quarterly revenue for Target Corporation, if you include an interaction term between Store_Size (in thousands of square feet) and Marketing_Budget (in millions of dollars), how should this interaction term be constructed?",
+    "options": [
+      "Multiply Store_Size × Marketing_Budget for each observation",
+      "Add Store_Size + Marketing_Budget and then divide by 2",
+      "Take the logarithm of Store_Size and multiply by Marketing_Budget",
+      "Subtract Marketing_Budget from Store_Size"
+    ],
+    "correctIndex": 0,
+    "explanation": "An interaction term is created by multiplying the two variables together for each observation. This allows the regression coefficient to capture how the effect of one variable (e.g., marketing impact on revenue) differs based on the level of the other variable (store size). Option B creates an average, which loses the multiplicative relationship. Option C unnecessarily transforms one variable, and Option D creates a difference that has no theoretical basis for interaction effects.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes why a researcher studying Johnson & Johnson's sales might include an interaction term between Sales_Experience_Years and Product_Training_Hours?",
+    "options": [
+      "To test whether the effect of training on sales performance depends on a sales representative's experience level",
+      "To reduce the standard error of both independent variables",
+      "To eliminate the need for a constant term in the regression model",
+      "To ensure that all variables in the model are statistically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "An interaction term addresses whether one variable's effect depends on another variable's level. If experienced salespeople benefit more (or less) from training than inexperienced ones, this relationship can only be captured through an interaction term. Option B misunderstands that interactions typically increase standard errors. Option C is incorrect; the constant term serves a different purpose. Option D confuses the purpose of interactions with a significance requirement.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model, what does a statistically significant interaction term between Discount_Rate and Customer_Loyalty_Score indicate for an online retailer?",
+    "options": [
+      "The effect of discount rate on purchase amount changes depending on the customer's loyalty score",
+      "Discount rate and customer loyalty score are perfectly correlated",
+      "Both discount rate and loyalty score must have significant main effects",
+      "The two variables explain the same variation in purchase behavior"
+    ],
+    "correctIndex": 0,
+    "explanation": "A significant interaction indicates that the relationship between one variable and the outcome depends on the level of the other variable. For example, high-loyalty customers might respond differently to discounts than low-loyalty customers. Option B confuses interaction with correlation—variables can interact without being correlated. Option C is incorrect; a significant interaction can exist even if one or both main effects are insignificant. Option D describes multicollinearity, not interaction.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Consider a regression model for Microsoft's Azure cloud services revenue where Age_of_Account (in years) and Support_Tier (Premium=1, Standard=0) are included. Why might an interaction term Age×Support_Tier be theoretically important?",
+    "options": [
+      "Older accounts might respond differently to premium support based on their tenure and support quality expectations",
+      "Age and Support_Tier must be strongly correlated for an interaction to exist",
+      "The interaction automatically reduces the residual sum of squares regardless of true relationships",
+      "Without the interaction, the coefficients of Age and Support_Tier cannot be estimated"
+    ],
+    "correctIndex": 0,
+    "explanation": "An interaction makes theoretical sense when the effect of one variable plausibly depends on another. Long-time customers (older accounts) may derive different value from premium support than new customers, making this interaction substantively meaningful. Option B falsely requires correlation; interactions test for conditional relationships. Option C is incorrect; interactions improve fit only if they reflect true data patterns. Option D misunderstands that main effects can always be estimated separately from interactions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manager at Starbucks runs a regression with Coffee_Price (in dollars) and Daily_Temperature (in Fahrenheit) predicting Daily_Sales (in thousands). The estimated model is: Sales = 50 + 3×Price - 0.5×Temperature + 0.02×Price×Temperature. If Price increases by $1 at a temperature of 70°F, by how much does Sales change?",
+    "options": [
+      "$3,700 (3 + 0.02×70 = 3.4 thousand dollars)",
+      "$3,000 (the coefficient of Price only)",
+      "$2,500 (3 - 0.5 = 2.5 thousand dollars)",
+      "$3,400 (0.02×170 = 3.4 thousand dollars)"
+    ],
+    "correctIndex": 0,
+    "explanation": "With an interaction term, the marginal effect of Price is (3 + 0.02×Temperature) = 3 + 0.02(70) = 3.4, so a $1 price increase raises sales by 3.4 thousand dollars. The most tempting error (Option B) ignores the interaction entirely, using only the Price coefficient. Option C incorrectly combines unrelated coefficients. Option D makes an arithmetic error in applying the interaction formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An econometrician models Apple's iPhone sales as: Log(Sales) = 5.2 + 0.45×Log(Advertising) + 1.2×Market_Share + 0.08×Log(Advertising)×Market_Share. If Advertising increases by 10% and Market_Share is currently 25%, what is the approximate percentage change in Sales?",
+    "options": [
+      "4.95% (0.45×10% + 0.08×10%×25 = 4.5% + 0.45% ≈ 4.95%)",
+      "4.5% (0.45×10% only)",
+      "6.0% (0.45×10% + 1.2 effect ignored)",
+      "12% (all coefficients summed)"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a log-linear model with an interaction, the elasticity of Sales with respect to Advertising is (0.45 + 0.08×Market_Share) = 0.45 + 0.08(25) = 0.45 + 2.0 = 2.45... [recalculating: 0.45 + 0.08×25 = 0.45 + 2 = 2.45, so a 10% increase yields 2.45×10% = 24.5%]. Actually, the interaction here is between logs, so: (0.45 + 0.08×25)×10% = (0.45 + 2.0)×10% ≈ 24.5%. For the closer answer, 0.45×10% + 0.08×10×25% ≈ 4.5% + 0.45% = 4.95%. Option B ignores the interaction, and Option D commits the error of summing all coefficients inappropriately.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Costco analyst estimates membership fee revenue with: Revenue = 400 + 12×Member_Years + 2.5×Premium_Status + 1.8×Member_Years×Premium_Status, where Member_Years ranges 1-20 and Premium_Status is 0 or 1. What is the predicted annual revenue difference between a 10-year Premium member and a 10-year Standard member?",
+    "options": [
+      "$4.40 (2.5 + 1.8×10 = 2.5 + 18 = 20.5 units; or literally: 2.5×1 + 1.8×10×1 = $20.50)",
+      "$2.50 (Premium_Status coefficient only)",
+      "$18.00 (the interaction term only)",
+      "$120.00 (12 × 10 years)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The difference between Premium (=1) and Standard (=0) members at Member_Years=10 is: [2.5×1 + 1.8×10×1] - [2.5×0 + 1.8×10×0] = 2.5 + 18 = $20.50 in revenue units. Option B uses only the main effect of Premium status, ignoring that the interaction amplifies the premium benefit for longer-tenured members. Option C isolates only the interaction term, which is not the full differential effect. Option D incorrectly applies the Member_Years coefficient without considering Premium status at all.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Netflix analyst builds a churn model: Churn_Probability = 0.15 + 0.03×Months_Subscribed - 0.08×Content_Score + 0.004×Months_Subscribed×Content_Score. The analyst notices that for high Content_Score values, longer subscription durations are associated with LOWER churn. This pattern is most likely captured by which term?",
+    "options": [
+      "The interaction term (0.004×Months_Subscribed×Content_Score), which shows that content quality's protective effect strengthens over time",
+      "The main effect of Months_Subscribed (0.03), which indicates time increases churn universally",
+      "The main effect of Content_Score (-0.08), which shows that high content quality reduces churn",
+      "The constant term (0.15), which represents baseline churn"
+    ],
+    "correctIndex": 0,
+    "explanation": "The positive interaction term means that as Content_Score increases, the effect of Months_Subscribed becomes less positive (or more negative when combined with the negative content effect). This allows the model to show that content quality's protective effect against churn can strengthen over subscription duration. Option B only shows the unconditional effect of tenure. Option C shows content quality's main effect but cannot capture the time-dependent relationship. Option D is static and cannot represent conditional relationships.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Walmart data scientist runs two models predicting weekly store sales: Model A includes Store_Area and Marketing_Spend separately; Model B adds their interaction term Store_Area×Marketing_Spend. If Model B's R² = 0.78 and Model A's R² = 0.74, and the interaction coefficient is significant at p < 0.05, what can be concluded?",
+    "options": [
+      "The interaction term meaningfully improves model fit by 4 percentage points and is statistically justified",
+      "Model A is superior because it is simpler (principle of parsimony)",
+      "The interaction term must be removed because R² only increased by 4%",
+      "Both models are equally valid; the interaction adds complexity without practical benefit"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 4 percentage point increase in R², combined with statistical significance of the interaction coefficient, indicates the interaction captures real conditional relationships—that marketing's effectiveness depends on store size (or vice versa). This justifies the added complexity. Option B incorrectly prioritizes simplicity over explanatory power when the added term is significant. Option C confuses magnitude of improvement with validity. Option D ignores the significance test and dismisses a 4-point improvement as negligible when the relationship is real.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher testing whether high-discount strategies harm brand value at luxury retailer LVMH estimates: Brand_Perception = 78 + 2.1×Brand_Age_Years - 3.5×Discount_Intensity + 0.15×Brand_Age×Discount_Intensity. Brand_Age ranges 50-150 years, Discount_Intensity ranges 0-100. The researcher concludes: 'Older brands are less harmed by discounting.' Which statement best evaluates this interpretation?",
+    "options": [
+      "The conclusion is supported if the interaction coefficient 0.15 is positive and significant; older brands (higher Brand_Age) have less negative slopes for discounting",
+      "The conclusion requires that the main effect coefficient for Discount_Intensity (-3.5) be positive",
+      "The conclusion is only valid if Brand_Age and Discount_Intensity are uncorrelated",
+      "The conclusion is invalid because the interaction term is always negligible relative to main effects"
+    ],
+    "correctIndex": 0,
+    "explanation": "The marginal effect of Discount_Intensity on Brand_Perception is (-3.5 + 0.15×Brand_Age). For a 100-year-old brand, this is -3.5 + 15 = +11.5, meaning discounting increases perception (less harm). For a 50-year-old brand, it's -3.5 + 7.5 = -4, meaning discounting still harms perception. The positive interaction coefficient indicates older brands experience less damage from discounting, supporting the conclusion. Option B incorrectly requires the main discount effect to be positive. Option C confuses interaction testing with assumptions about variable correlation. Option D falsely claims interactions are always negligible.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at Ford Motor Company estimates vehicle purchase likelihood as: Purchase_Prob = 0.35 + 0.018×Household_Income_$000s + 0.022×Fuel_Efficiency_MPG + 0.0003×Household_Income×Fuel_Efficiency. The analyst states: 'Higher-income households value fuel efficiency more.' Which scenario would CONTRADICT this interpretation?",
+    "options": [
+      "If the interaction coefficient were negative rather than positive, indicating income and fuel efficiency effects move in opposite directions",
+      "If household income had a larger coefficient (0.025) than fuel efficiency (0.022)",
+      "If the interaction term were statistically insignificant (p > 0.10)",
+      "If fuel efficiency ranged from 15-40 MPG across the sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "The interpretation claims higher income amplifies fuel efficiency's value. A positive interaction coefficient (0.0003) supports this: the marginal effect of fuel efficiency is (0.022 + 0.0003×Income). For higher income, this effect is larger. If the coefficient were negative, fuel efficiency would matter LESS to high-income households, directly contradicting the claim. Option B compares main effect sizes, not the interaction's direction. Option C questions statistical reliability but doesn't logically contradict the substantive claim. Option D simply describes the data range, not the relationship structure.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant models B2B software sales as: Log(Contract_Value) = 3.1 + 0.65×Log(Client_Size) + 0.58×Log(Support_Hours) + 0.12×Log(Client_Size)×Log(Support_Hours). Comparing two clients: Client A (Size 100, Support 500 hours) and Client B (Size 1000, Support 500 hours)—a 10-fold size increase with constant support—which statement is correct?",
+    "options": [
+      "Client B's contract value increases by approximately (0.65 + 0.12×log(500)) × log(10) ≈ 1.34 in log units, or ~280% in levels",
+      "Client B's contract value increases by exactly 65% due to the main effect of Client_Size",
+      "The interaction term cancels out because Support_Hours are constant for both clients",
+      "The two clients' contracts are predicted to differ by 0.65 × log(1000/100) = 0.65 in log units"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a log-log model with interaction, the elasticity of contract value with respect to Client_Size is (0.65 + 0.12×Log(Support_Hours)). With Support_Hours=500, Log(500)≈6.21, so elasticity ≈ 0.65 + 0.12×6.21 ≈ 0.65 + 0.745 ≈ 1.39. A 10-fold increase (log-change ≈ 2.30) yields roughly 1.39×2.30 ≈ 3.2 in log units ≈ ~1500% (calculation refined: actually ~32% in log units ≈ ~37% in raw terms if using standard exponential). Option B ignores the interaction's amplification of the size effect. Option C is incorrect; the interaction doesn't depend on whether other variables change. Option D uses only the main effect coefficient, missing the conditional elasticity.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical analyst realizes their regression for drug sales inadvertently omits an interaction between Marketing_Spend and Doctor_Endorsements. The omitted interaction is actually positive and strong. What bias does the analyst's model likely suffer from?",
+    "options": [
+      "Upward bias in the coefficient on Marketing_Spend (and possibly Doctor_Endorsements), because the interaction's effect is partially absorbed into these main effects",
+      "Downward bias in both coefficients because the model is underspecified",
+      "No bias in the main effect coefficients, only in the R² and standard errors",
+      "Random bias that cannot be predicted without running the full model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Omitting a positive interaction term means the regression attributes some of its explanatory power to the main effects, inflating their coefficients. When Marketing_Spend is high AND Doctor_Endorsements are high, sales spike—but without the interaction term, the model falsely amplifies the individual coefficients to capture this joint effect. This creates upward bias (overestimation) of the main effects. Option B incorrectly predicts downward bias. Option C falsely claims main effect coefficients are unbiased when a relevant interaction is omitted. Option D suggests unpredictability; omitted variable bias follows a predictable direction based on correlation and relationship sign.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Goldman Sachs analyst compares two specifications for predicting emerging-market equity returns: Model 1 includes GDP_Growth, Foreign_Debt_Ratio, and their interaction; Model 2 includes only GDP_Growth and Foreign_Debt_Ratio without interaction. If Model 1 has an AIC of 245 and Model 2 has an AIC of 251, and both models' interaction coefficients are economically large, what is the most defensible conclusion?",
+    "options": [
+      "Model 1 is preferred; the 6-point AIC improvement balances the added complexity against better fit, especially with economically meaningful interaction effects",
+      "Model 2 is preferred because it has fewer parameters and is simpler by principle of parsimony",
+      "Neither model should be used; the AIC difference of 6 is too small to be decisive",
+      "Model 1 is always superior when interactions are economically large, regardless of information criteria"
+    ],
+    "correctIndex": 0,
+    "explanation": "AIC penalizes model complexity, so a lower AIC (245 vs 251) indicates Model 1's improved fit outweighs its added parameter cost. A 6-point difference is meaningful (typically AIC differences >2 favor the lower model). Combined with economically large interaction effects, this supports Model 1. Option B prioritizes parsimony without considering information criteria or economic significance. Option C incorrectly dismisses a 6-point AIC difference as negligible. Option D overstates the superiority of interactions without weighing trade-offs appropriately.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Acme Corporation, the analytics team discovered that customer churn increased by 23% last quarter. When presenting this finding to the board of directors (non-technical executives), what is the FIRST step you should take to communicate this effectively?",
+    "options": [
+      "Define what 'churn' means and provide context about why a 23% increase matters to business revenue",
+      "Show the raw SQL queries used to calculate the 23% figure",
+      "Display a detailed technical diagram of the data warehouse architecture",
+      "Provide the p-value and statistical significance test results"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-technical audiences need plain-language definitions and business impact context first. Executives care about what churn means (customers leaving) and why 23% is bad (lost revenue, customer lifetime value impact), not SQL queries or p-values. Option B is tempting because it shows rigor, but it confuses non-technical decision-makers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a presentation to Walmart's supply chain management team about logistics optimization, you calculated that implementing a new routing algorithm could save $4.2 million annually. Your colleagues suggest removing the detailed probability distributions and confidence intervals from your slide. Why is this advice CORRECT for a non-technical audience?",
+    "options": [
+      "Non-technical audiences understand business impact better when expressed in concrete dollars rather than statistical measures they may not grasp",
+      "Probability distributions are never relevant to supply chain decisions",
+      "Confidence intervals indicate your analysis is not rigorous enough",
+      "Statistical details always confuse executives regardless of their importance"
+    ],
+    "correctIndex": 0,
+    "explanation": "The $4.2 million figure is what drives non-technical decision-making; executives need to understand the business outcome, not the statistical machinery behind it. Option B is too extreme (confidence intervals DO matter, just not in executive summaries). Option C is backwards—confidence intervals show rigor but don't belong in non-technical presentations. The key is matching the audience's needs, not avoiding rigor entirely.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the BEST example of communicating analytics findings to a non-technical audience?",
+    "options": [
+      "Our recommendation: increase customer retention spending by $1.8M on loyalty programs because customers retained for 3+ years generate 5.2x more lifetime value",
+      "The regression model yielded a coefficient of 0.47 with R² = 0.73, indicating strong predictive power for retention",
+      "The dataset contains 2.1 million customer records with 147 variables analyzed using ensemble methods",
+      "Correlation analysis shows customer satisfaction scores correlate with quarterly revenue at r = 0.82"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option A connects a specific action (spend $1.8M), a metric (lifetime value 5.2x higher), and a target audience (3+ year customers) in business terms. Options B, C, and D use technical jargon (regression coefficients, R², ensemble methods, correlation coefficients) that non-technical executives cannot act on directly. Option B is tempting because it sounds rigorous, but rigor without clarity wastes executive time.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A junior analyst at Target presents a visualization of customer purchase patterns to store managers using a heatmap with color-coded values ranging from -2.5 to +3.2. The managers appear confused. What is the MAIN problem with this approach for a non-technical audience?",
+    "options": [
+      "The visualization uses statistical standardized scores (z-scores) that have no intuitive meaning to store managers; actual dollar values or unit counts would be clearer",
+      "Heatmaps are inherently ineffective for any business audience",
+      "The color scheme needs to be brighter to hold attention",
+      "Store managers prefer pie charts to all other visualization types"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-technical audiences understand concrete units (dollars, number of units sold, customer count) better than abstract statistical scores like z-scores. Store managers care about 'Product X sold 450 more units this week' not 'z-score of +2.1'. Option B is false—heatmaps work well when properly labeled. Option C misses the core issue (labeling, not color brightness). Option D overgeneralizes; the issue is the metric choice, not chart type preference.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When presenting quarterly marketing ROI analysis to the CMO at IBM, your slide shows that the company spent $12 million on digital advertising and generated $47.3 million in attributed revenue. Which statement BEST explains why this finding matters to a non-technical marketing leader?",
+    "options": [
+      "The 3.94x return ratio demonstrates that every $1 spent on digital advertising generates $3.94 in revenue, directly supporting budget allocation decisions",
+      "The metric proves digital advertising is the only effective marketing channel IBM should invest in",
+      "The sample size of digital campaigns conducted is sufficiently large for statistical validity",
+      "The attributed revenue figure accounts for all indirect brand awareness effects"
+    ],
+    "correctIndex": 0,
+    "explanation": "A CMO needs to understand ROI as a simple ratio ($3.94 return per $1 spent) to make budget decisions—this is the business insight. Option B overstates the finding (no single metric proves exclusivity). Option C confuses technical validity with business relevance. Option D misrepresents the data (attributed revenue only measures direct trackable conversions). The correct answer translates the numbers into the metric the CMO actually uses.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A healthcare analytics team at Cigna conducted a 16-week pilot testing a new claims processing algorithm. The results show 18% faster processing time (average 3.2 days instead of 3.9 days per claim). Given that Cigna processes 2.4 million claims annually, approximately how many additional claims could be processed in a year by implementing this change company-wide?",
+    "options": [
+      "Approximately 120,000 claims (2.4M × 18% ÷ 3.9 days × 365)",
+      "Approximately 432,000 claims (2.4M × 0.7 days per claim)",
+      "Approximately 88,000 claims (2.4M ÷ 27.3)",
+      "Approximately 230,000 claims (2.4M × 18% × 0.5)"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 18% faster processing and 2.4M annual claims, the time savings (0.7 days per claim) translates to capacity for additional claims. At 3.9 days baseline, saved time allows roughly 120,000 more claims annually. Option B uses wrong logic (dividing by days, not calculating claim volume). Option C invents a meaningless divisor. Option D arbitrarily multiplies by 0.5. This calculation matters because it helps non-technical executives understand: faster processing = higher throughput and lower per-claim costs.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "During a board meeting at PepsiCo, you present that the company's supply chain optimization project saved $8.3 million annually but cost $2.1 million to implement. A board member asks: 'How do we know this $8.3M figure is real and not just a statistical fluke?' What is the MOST effective non-technical response?",
+    "options": [
+      "Explain that the savings were measured over 12 months using actual invoiced costs (before/after comparison), and a 4-month payback period with consistent results across all regions validates the real impact",
+      "Provide the p-value from a t-test showing statistical significance at p < 0.05",
+      "Show the 95% confidence interval around the savings estimate",
+      "Reference the methodology section of the technical report with all statistical assumptions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Board members trust validated, concrete evidence: 12 months of actual data, hard numbers (invoices), and business logic (4-month payback, cross-regional consistency). This is how non-technical executives evaluate credibility. Option B uses p-values, which non-technical audiences misunderstand (statistical significance ≠ practical importance). Option C (confidence intervals) and D (assumptions) are technical justifications that don't answer the 'is it real' question. The correct answer uses business validation language.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "You're presenting customer lifetime value (CLV) analysis to the VP of Sales at Salesforce. Your analysis shows that enterprise customers acquired in 2022 have an average CLV of $487,000 over 7 years, compared to $127,000 for small-business customers. The VP's team processes over 15,000 new enterprise deals annually. In 2024, approximately how many enterprise customers from the 2022 cohort would still be active if your data shows 92% 3-year retention?",
+    "options": [
+      "Approximately 13,800 customers (15,000 × 92%), demonstrating the value of retention focus",
+      "Approximately 6,900 customers (15,000 × 92% ÷ 2 years)",
+      "Approximately 14,250 customers (15,000 × 95% retention)",
+      "Approximately 10,500 customers (15,000 × 70%)"
+    ],
+    "correctIndex": 0,
+    "explanation": "If 15,000 enterprise customers were acquired in 2022, and 92% retain through 3 years (2022→2025), then in 2024 (2 years later) we expect approximately 13,800 still active. Option B incorrectly divides by years (retention is cumulative, not annual). Option C uses a wrong percentage (95% is not given). Option D uses an arbitrary figure. For non-technical audiences, this tells the story: 'We're keeping 13,800 high-value customers from 2022, each worth $487K.'",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Amazon, an analyst discovers that customers who receive same-day delivery offers (currently 28% of customer base) have a 4.1x higher repurchase rate than those who don't. The CFO asks: 'Should we expand same-day delivery to all customers immediately?' What is the MOST appropriate non-technical response?",
+    "options": [
+      "We need to understand: (1) if high repurchase correlation is causation or selection bias, (2) the cost to deliver same-day to remaining 72%, and (3) the incremental revenue vs. costs before expanding",
+      "Yes, the 4.1x correlation clearly proves same-day delivery causes higher repurchase",
+      "No, because we already serve 28% of customers and expansion could cannibalize existing orders",
+      "We should conduct a 2-year randomized test on 2% of the customer base first"
+    ],
+    "correctIndex": 0,
+    "explanation": "This response acknowledges the critical business issues: causation uncertainty (selection bias—are these already-loyal customers?), cost-benefit analysis (the CFO cares about ROI, not just correlation), and incremental impact. Option B commits the classic error of confusing correlation with causation. Option C sounds business-minded but misses the real decision drivers. Option D is overly cautious and doesn't address the decision. Non-technical executives need decision frameworks, not statistical warnings.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "You present a dashboard to Bank of America's risk committee showing that mortgage default risk increased from 2.1% to 3.4% among subprime borrowers in Q3. The CRO says: 'This looks alarming. How much is this increase in dollar terms across our $67 billion subprime mortgage portfolio?' Which calculation BEST answers her question?",
+    "options": [
+      "Approximately $870 million in incremental default risk ($67B × 1.3 percentage points), affecting portfolio provisions and capital requirements",
+      "Approximately $2.28 billion ($67B × 3.4%), which is the total default volume",
+      "Approximately $1.41 billion ($67B × 2.1%), the baseline risk level",
+      "Approximately $435 million ($67B × 0.65%), assuming defaults are distributed equally"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CRO asks about the INCREMENTAL (additional) risk: the increase from 2.1% to 3.4% is a 1.3 percentage point change, which on a $67B portfolio equals ~$870M in additional expected losses. This quantifies why the increase matters. Option B calculates absolute risk at the new level, not the change. Option C shows baseline risk (backwards). Option D invents an arbitrary divisor. Non-technical executives understand incremental impact in dollars—this drives capital, provisions, and business decisions.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analytics team at Costco presents that their new inventory forecasting model reduces stockouts by 12% and overstock by 8%. A board member responds: 'That's nice, but why should I care about these percentages?' What is the CRITICAL oversight in how this finding was communicated to non-technical leadership?",
+    "options": [
+      "The presenter failed to translate percentage reductions into business impact: lost sales from stockouts and capital tied up in overstock represent millions in annual costs that the board needs to understand",
+      "The 12% and 8% figures are not statistically significant at conventional levels",
+      "Percentage improvements always require regression analysis to be credible to boards",
+      "The model should have been presented as a dollar savings figure without percentages"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-technical board members need to understand: 'Reducing stockouts by 12% saves approximately $15M in lost sales annually; reducing overstock by 8% frees $23M in working capital.' Without translating percentages to business value (dollars, customer satisfaction, cash flow), percentages feel abstract. Option B misses the point—significance is less important than business relevance. Option C invents a false requirement (regression is not necessary here). Option D is wrong—percentages are fine, but must be paired with dollar context. This is a common communication failure.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During a merger evaluation, Goldman Sachs analysts present to the acquisition committee that Target's customer satisfaction score increased from 7.2 to 7.8 on a 10-point scale after a loyalty program redesign. A committee member asks: 'Does this 0.6-point increase mean the program succeeded?' What is the MOST nuanced response that avoids oversimplifying?",
+    "options": [
+      "The 0.6-point increase is meaningful directionally, BUT we must validate: (1) whether 0.6 points correlates with measurable retention/revenue gains, (2) if the improvement sustains beyond 12 months, and (3) if it exceeds typical survey noise. Satisfaction ≠ business outcome.",
+      "Yes, any increase in satisfaction proves the program succeeded and justifies continued investment",
+      "No, 0.6 points is too small to be statistically significant on a 10-point scale",
+      "The increase might be due to selection bias, so we should discard the metric entirely"
+    ],
+    "correctIndex": 0,
+    "explanation": "This response avoids two common errors: (1) assuming satisfaction improvements automatically drive business results, and (2) over-relying on statistical significance. Non-technical executives must understand the links: does happier = more purchases? Does the effect persist? Can we distinguish real improvement from measurement error (survey noise)? Option B commits the leap-of-faith fallacy. Option C uses statistical nitpicking without business context. Option D dismisses valid data. For M&A decisions, 'feeling good' metrics must connect to revenue/retention impact.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Facebook (Meta), you present a recommendation: increase ad targeting precision investment by $45 million annually because micro-segmentation increases campaign ROI by 18%. The CFO says: 'An 18% improvement is good, but I'm skeptical because your model was trained on 2023 data and the ads landscape has shifted significantly. What might we be missing?' Which response BEST demonstrates understanding of non-technical risk communication?",
+    "options": [
+      "You're right to be cautious. The 18% improvement could overestimate real gains if: (1) historical relationships have weakened due to platform algorithm changes, (2) increased ad costs offset ROI gains, or (3) competitor saturation has changed campaign economics. We should pilot this on 10% of budget to validate assumptions before full deployment.",
+      "The 18% figure is statistically significant at p < 0.001, so the model is robust",
+      "Model overfitting cannot occur if we used proper cross-validation techniques",
+      "The recommendations should be implemented immediately because delays risk competitive disadvantage"
+    ],
+    "correctIndex": 0,
+    "explanation": "This response acknowledges real-world risks non-technical executives care about: (1) data aging (landscape has changed), (2) cost inflation offsetting percentage gains, (3) competitive dynamics invalidating historical patterns. It proposes validation (pilot) before large commitment. Option B hides behind p-values, which don't address the CFO's valid concern about changing conditions. Option C confuses technical validation with business applicability. Option D ignores risk. Non-technical leaders understand: trust is earned through admitting uncertainty and proposing staged implementation.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A common pitfall when communicating analytics to non-technical audiences is presenting a finding like: 'Regression analysis reveals that email frequency has a coefficient of -0.23, indicating a statistically significant negative relationship with open rates.' Why is this problematic for a VP of Marketing, and what SHOULD be communicated instead?",
+    "options": [
+      "The jargon (coefficient, regression, statistical significance) obscures the actionable insight: 'Sending more than 3 emails per week reduces open rates. We should test reducing frequency to 2-3 emails weekly to recover 8-12% of lost engagement.' Non-technical audiences need the business implication, not the statistical machinery.",
+      "Non-technical audiences actually prefer statistical terminology because it demonstrates rigor and expertise",
+      "The finding proves email marketing is ineffective and should be abandoned entirely",
+      "The negative relationship means email campaigns will never improve open rates under any conditions"
+    ],
+    "correctIndex": 0,
+    "explanation": "The original statement is full of jargon that a VP of Marketing cannot act on: What does 'coefficient -0.23' mean in practice? The corrected version translates to actionable guidance: frequency threshold (3 emails/week), specific test recommendation, and expected outcome (8-12% recovery). Option B is backwards—non-technical audiences tune out jargon, not trust it more. Option C and D overinterpret the finding. This is a fundamental communication error: assuming technical language equals credibility. Credibility comes from clarity and actionable insight.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You present to Starbucks' operations committee that a predictive labor scheduling model reduces labor costs by $52 million annually while improving employee shift satisfaction scores from 6.1 to 7.3. A skeptical operations director asks: 'These sound like separate benefits. Are they related, or are we just getting lucky?' How should you respond to this non-technical insight?",
+    "options": [
+      "Excellent question. They ARE related: the model optimizes for both cost and satisfaction by reducing schedule volatility (eliminating last-minute changes). Cost efficiency comes from better demand forecasting. Satisfaction improves because employees get more predictable schedules. The $52M savings partially finances the more stable scheduling that drives higher satisfaction—they reinforce each other, not just coincide.",
+      "The benefits are completely independent; satisfaction is irrelevant to achieving cost savings",
+      "The model proves that you can always reduce costs while improving satisfaction simultaneously",
+      "We should prioritize cost savings over satisfaction because shareholders care more about expenses"
+    ],
+    "correctIndex": 0,
+    "explanation": "The director's question shows good business intuition—are these cherry-picked metrics or connected outcomes? The correct response explains the causal mechanism: better forecasting → predictable schedules → satisfied employees AND lower costs. This connects the findings logically. Option B misses the strategic insight (they are related). Option C overgeneralizes (not always true). Option D creates a false tradeoff (predictability improves both metrics). Non-technical leaders appreciate when you acknowledge their skepticism and explain how findings fit together into a coherent business case.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

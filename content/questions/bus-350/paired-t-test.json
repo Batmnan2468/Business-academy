@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A paired t-test is used to compare the means of two groups when which of the following conditions is met?",
+    "options": [
+      "The observations in one group are dependent on or matched with observations in the other group",
+      "Both groups have sample sizes larger than 100",
+      "The two groups are independent random samples from different populations",
+      "The variances of the two groups are equal"
+    ],
+    "correctIndex": 0,
+    "explanation": "A paired t-test specifically tests dependent samples where each observation in one group is matched with a specific observation in the other (e.g., before/after measurements on the same person). Option 2 is incorrect because sample size alone doesn't determine whether to use paired vs. unpaired t-tests; the dependency structure does. Option 3 describes independent samples, which require an unpaired t-test instead.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the first step in conducting a paired t-test?",
+    "options": [
+      "Calculate the differences (d) between paired observations",
+      "Determine the degrees of freedom (n - 1)",
+      "Compare the test statistic to the critical value",
+      "Compute the standard error of the paired differences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before any calculations, you must compute d = X₁ - X₂ for each pair. Option 2 (degrees of freedom) cannot be calculated without knowing n. Option 3 comes after computing the test statistic. Option 4 requires the differences to be calculated first.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a paired t-test, what does the null hypothesis (H₀) typically state?",
+    "options": [
+      "The mean of the paired differences equals zero (μₐ = 0)",
+      "The means of the two groups are not equal",
+      "The standard deviation of the differences is equal to 1",
+      "The sample sizes of both groups must be identical"
+    ],
+    "correctIndex": 0,
+    "explanation": "H₀ for a paired t-test is μₐ = 0, meaning there is no difference between the paired observations on average. Option 2 is the form of a two-sample t-test, not paired. Option 3 incorrectly specifies standard deviation rather than comparing means. Option 4 confuses a requirement (equal n) with the null hypothesis itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A paired t-test assumes that the differences between paired observations are normally distributed. Which statement best describes why this assumption is important?",
+    "options": [
+      "It ensures the sampling distribution of the mean difference is approximately normal, allowing valid inference about the population mean difference",
+      "It guarantees that the sample size will be large enough to reduce Type I error",
+      "It eliminates the need to check whether variances are equal between groups",
+      "It ensures that outliers will have no effect on the t-statistic"
+    ],
+    "correctIndex": 0,
+    "explanation": "Normality of differences ensures the t-statistic follows a t-distribution, validating hypothesis tests and confidence intervals. Option 2 conflates normality with sample size. Option 3 is incorrect because equal variances are not a primary assumption of paired t-tests (since we work with differences, not separate variances). Option 4 is false; outliers still affect the t-statistic even with normality.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the t-statistic in a paired t-test?",
+    "options": [
+      "t = (d̄) / (sₐ / √n), where d̄ is the mean difference, sₐ is the standard deviation of differences, and n is the number of pairs",
+      "t = (X₁ - X₂) / √[(s₁² + s₂²) / n]",
+      "t = (d̄ - μₐ) / (σₐ / √n), where σₐ is the population standard deviation of differences",
+      "t = n × d̄ / sₐ"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct formula uses the sample standard deviation (sₐ) of the paired differences, not the population parameter. Option 2 is the formula for an independent (unpaired) t-test. Option 3 incorrectly uses population standard deviation σₐ instead of sample standard deviation sₐ. Option 4 incorrectly multiplies by n instead of dividing by √n.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing team at Adobe Inc. tested whether a new user interface increased time spent in their design software. They measured 25 users' average daily usage (in minutes) before and after the interface change. The mean difference was 12.5 minutes (after – before), with a standard deviation of differences of 8.0 minutes. What is the t-statistic for this paired t-test?",
+    "options": [
+      "7.81",
+      "3.91",
+      "2.45",
+      "1.56"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using t = d̄ / (sₐ / √n) = 12.5 / (8.0 / √25) = 12.5 / (8.0 / 5) = 12.5 / 1.6 = 7.81. Option 2 (3.91) results from dividing by √n instead of dividing sₐ by √n. Option 3 (2.45) occurs from using n instead of √n in the denominator. Option 4 (1.56) comes from incorrectly dividing the mean difference by the full standard deviation (not adjusted for sample size).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services firm compared employee productivity (transactions per hour) before and after implementing a new mobile trading platform. Data from 16 employees showed a mean difference of 4.2 transactions/hour with sₐ = 5.6. At α = 0.05 (two-tailed), the critical value is ±2.131. What is the correct conclusion?",
+    "options": [
+      "Do not reject H₀; the platform did not significantly increase productivity (t = 3.00, which is less than 2.131)",
+      "Reject H₀; the platform significantly increased productivity (t = 3.00, which is greater than 2.131)",
+      "Do not reject H₀; the effect size is too small to be meaningful",
+      "Reject H₀ because the mean difference is positive"
+    ],
+    "correctIndex": 1,
+    "explanation": "t = 4.2 / (5.6 / √16) = 4.2 / 1.4 = 3.00. Since |3.00| > 2.131, we reject H₀. Option 0 reverses the comparison logic (says 3.00 < 2.131). Option 2 confuses statistical significance with practical significance; a statistically significant result is still valid. Option 3 incorrectly bases the decision on sign rather than magnitude relative to the critical value.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare company measured patient satisfaction scores (0–100) before and after implementing a new appointment scheduling system. For 30 patients, the differences were nearly normally distributed with d̄ = 8.3 and sₐ = 11.2. The 95% confidence interval for the mean difference is approximately [3.9, 12.7]. What does this interval tell us?",
+    "options": [
+      "We are 95% confident the true mean difference in satisfaction lies between 3.9 and 12.7 points",
+      "95% of individual patient differences fall between 3.9 and 12.7 points",
+      "The probability that the true mean difference is in the interval is 95%",
+      "5% of samples would produce a mean difference outside this range"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval estimates the range for the population parameter (true mean difference), not individual observations. Option 1 correctly interprets this. Option 2 describes a prediction interval, not a confidence interval. Option 3 incorrectly states probability for a fixed parameter (Bayesian language); the interval is fixed, not the parameter. Option 4 misuses the long-run frequency interpretation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail chain tested whether staff training reduced customer complaint resolution time. They paired each trained employee with an untrained control employee by store location and experience level. After one month, trained employees averaged 2.1 days faster resolution (sₐ = 3.8, n = 32). The p-value = 0.062. Which interpretation is correct?",
+    "options": [
+      "At α = 0.05, we do not reject H₀; the evidence is not strong enough to conclude training reduced resolution time, though the result is marginally significant",
+      "At α = 0.05, we reject H₀ because p = 0.062 is close to 0.05",
+      "The training is ineffective because p > 0.05",
+      "There is a 6.2% chance the training had no effect"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = 0.062 > α = 0.05, so we do not reject H₀. Option 1 correctly states this conclusion while noting the result is marginally significant. Option 2 commits the error of treating p-values close to α as rejectable. Option 3 confuses 'not statistically significant' with 'ineffective'; we simply lack sufficient evidence. Option 4 misinterprets the p-value as P(H₀ is true); p-value = P(observed or more extreme result | H₀ true).",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A production manager at Tesla compared manufacturing defect rates (per 1,000 units) before and after a process improvement. With n = 20 pairs, d̄ = -3.5, and sₐ = 7.2, she computed t = -2.17 and obtained p-value = 0.043 (two-tailed). Which common error might she make?",
+    "options": [
+      "Concluding the process improvement reduced defects at α = 0.05 without first verifying the differences are approximately normally distributed",
+      "Reporting the result as significant because |t| = 2.17 is larger than 2",
+      "Deciding the improvement is practically important because p < 0.05",
+      "Assuming the paired t-test is invalid because sₐ = 7.2 is larger than d̄ = 3.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even with significant results, assumptions (especially normality of differences) must be verified a priori or checked post hoc. Option 0 correctly identifies that significance alone doesn't validate all assumptions. Option 1 is not necessarily an error; using a rough critical value check (|t| > 2) is common practice. Option 2 conflates statistical and practical significance, which is a concern but not specific to assumption violation. Option 3 is incorrect; a large sₐ relative to d̄ just means high variability, not invalidity of the test.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company conducted a paired t-test on claim processing time (days) for 40 claims, comparing a new AI system to traditional processing. The sample mean difference was d̄ = 1.8 days, sₐ = 6.4 days, with t = 1.77 and p-value = 0.088 (two-tailed, α = 0.05). A senior analyst states: 'Since the p-value is close to 0.05, the result is nearly significant, so we should implement the AI system.' Which flaw in reasoning does this statement contain?",
+    "options": [
+      "It treats p-value proximity to α as justification for rejecting H₀; hypothesis testing uses a fixed significance level, not a sliding scale based on closeness",
+      "It ignores that the sample size (n = 40) is too small for robust inference",
+      "It assumes that failing to reject H₀ proves the null hypothesis is true",
+      "It does not account for the fact that sₐ = 6.4 is larger than d̄ = 1.8"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 identifies the key error: hypothesis testing requires a predetermined α threshold; p = 0.088 > 0.05 means we do not reject H₀ at that level, regardless of how close 0.088 is to 0.05. This prevents 'goal-post moving.' Option 1 is weak; n = 40 is reasonable for a paired t-test. Option 2 is partially true but misses the specific flaw in the analyst's statement. Option 3 is not relevant here; high variability is just one factor, not the core logical error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm compared client satisfaction scores (1–10 scale) before and after a process redesign, using n = 12 matched pairs. They obtained d̄ = 1.3, sₐ = 2.8, yielding t = 1.60 (two-tailed, α = 0.05, critical value = ±2.201). They also computed a 95% CI: [−0.4, 3.0]. Which statement correctly interprets the relationship between the hypothesis test and confidence interval?",
+    "options": [
+      "Because the CI includes zero, we do not reject H₀, which is consistent with the test result (|t| = 1.60 < 2.201)",
+      "Because the CI includes zero, the effect is definitely zero in the population",
+      "The hypothesis test and CI lead to opposite conclusions, indicating an error in calculation",
+      "The CI contains the critical value, which is why the test is inconclusive"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a 95% CI includes the hypothesized parameter value (zero), it is consistent with not rejecting H₀ at α = 0.05. Option 0 correctly links both approaches. Option 1 incorrectly interprets CI; it estimates a range, not a definitive value. Option 2 confuses the results: the CI suggests the true difference might be zero or slightly positive. Option 3 is false; the hypothesis test and CI should be consistent, and they are here.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial advisor compared 18 client portfolios before and after implementing a passive index investment strategy. The mean return difference was d̄ = 2.1%, sₐ = 5.2%, with t = 1.72 and p-value = 0.104 (two-tailed). The advisor observes that for n = 18, even a small effect might be non-significant because of limited power. Which of the following correctly addresses this concern?",
+    "options": [
+      "True: with small samples and moderate variability, even a meaningful effect might not achieve statistical significance; a power analysis before the study helps design adequate sample sizes to detect practical effects",
+      "False: p-value and power are unrelated; if p > 0.05, then power was definitely too low",
+      "True: the sample size is too small, so the test is invalid regardless of the conclusion",
+      "False: significance always reflects the true effect size; non-significance means no real effect exists"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 correctly identifies Type II error and the role of power analysis. With smaller samples and/or higher variability, power decreases, requiring a larger true effect to achieve significance. Option 1 is incorrect; power and p-value are related but distinct concepts. Option 2 overstates; n = 18 is not inherently too small for paired t-tests, though power may be limited. Option 3 is false; absence of statistical significance does not prove absence of effect.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A tech company tested productivity (lines of code per day) for 20 developers before and after adopting a new IDE. They observed d̄ = 15 lines, sₐ = 45 lines, and computed a 90% CI: [−2, 32]. A junior analyst concludes: 'Since the CI includes negative values, the IDE might have reduced productivity, so we should reject it.' What is the primary flaw in this reasoning?",
+    "options": [
+      "The CI includes plausible values for the population mean difference, both negative and positive; the fact that zero and negative values fall within the CI means the evidence does not conclusively show improvement; this is consistent with not rejecting H₀, not a reason to reject the IDE based on one-sided concern",
+      "A 90% CI is too low for important business decisions",
+      "The sample size n = 20 is too small to compute a valid CI",
+      "The presence of negative values in the CI proves the IDE is harmful"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 correctly explains that a CI containing zero and negative values indicates weak evidence of improvement, not proof of harm. The analyst conflates uncertainty (wide CI) with evidence of a harmful effect. Option 1 is subjective; 90% is reasonable for exploratory decisions. Option 2 is incorrect; n = 20 is adequate for a paired t-test. Option 3 is false; a CI estimate never 'proves' a specific outcome; it reflects uncertainty.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two companies used paired t-tests to evaluate whether training improved employee performance. Company A: n = 50, t = 1.85, p = 0.069. Company B: n = 15, t = 2.20, p = 0.044. At α = 0.05, Company B rejects H₀ while Company A does not. Which statement best explains this outcome?",
+    "options": [
+      "The difference in conclusions reflects the trade-off between sample size and effect size; Company B's smaller sample detected a larger effect, while Company A's larger sample required a larger effect to reach significance, demonstrating why context matters when comparing studies",
+      "Company B's result is more reliable because it achieved significance",
+      "Company A's larger sample size guarantees a more accurate estimate of the true effect",
+      "The two studies contradict each other and cannot both be correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 explains that effect size and sample size jointly determine significance. Company B detected a larger effect (t = 2.20) with fewer subjects, while Company A's larger sample (n = 50) but smaller effect (t = 1.85) did not reach significance. Both conclusions are valid given their data. Option 1 incorrectly assumes statistical significance determines reliability. Option 2 is misleading; larger samples improve precision but don't guarantee significance if the true effect is small. Option 3 is false; different studies can have different results without contradiction.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A data visualization shows that Apple's iPhone sales increased from $50 billion to $60 billion over two years. What is the most common way this growth might be visually exaggerated to mislead viewers?",
+    "options": [
+      "Using a truncated y-axis that doesn't start at zero",
+      "Displaying the data in a pie chart instead of a bar chart",
+      "Showing the data in nominal dollars rather than adjusted for inflation",
+      "Including a trend line that extends beyond the data range"
+    ],
+    "correctIndex": 0,
+    "explanation": "A truncated y-axis (starting at, say, $45 billion instead of $0) makes the 20% increase appear much larger visually—a classic misleading technique. Option C (nominal vs. inflation-adjusted) is about comparing across time periods with different purchasing power, not visual exaggeration of the same data. Option B (pie vs. bar) is a format choice but not inherently misleading for this growth story.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the PRIMARY reason that correlation does not imply causation?",
+    "options": [
+      "Two variables can move together due to a third variable affecting both",
+      "The sample size is always too small to detect causation",
+      "Causation requires an infinitely large dataset",
+      "Correlation coefficients are always rounded, introducing error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation merely shows that two variables move together; a third variable (called a confounding variable) can be the true cause of both. For example, ice cream sales and drowning deaths are correlated, but summer temperature causes both. Option B confuses sample size with causation—large samples can still show spurious correlation. Option C is false; causation doesn't require infinite data.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "According to recent reports, 87% of surveyed executives at Fortune 500 companies said they use data to make decisions. What critical information is MISSING from this statistic?",
+    "options": [
+      "The sample size, response rate, and the exact wording of the survey question",
+      "The number of Fortune 500 companies that exist",
+      "The average salary of the executives surveyed",
+      "The software platform used to conduct the survey"
+    ],
+    "correctIndex": 0,
+    "explanation": "To evaluate the reliability of a survey statistic, we need to know how many people were surveyed, how many responded (response bias), and exactly what they were asked. A poorly worded question or low response rate (e.g., 30% response rate from 50 executives) severely undermines credibility. The sample size and response rate are essential; the number of total Fortune 500 companies is context but not a missing data quality indicator.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company reports that their new drug reduces headaches by 50% based on a study with 15 participants over 2 weeks. What makes this claim potentially misleading?",
+    "options": [
+      "The sample size is too small, there is no control group mentioned, and the time period is short",
+      "The effect size is too large to be real in any medical context",
+      "Pharmaceutical companies are required to show results over at least 5 years",
+      "A 50% reduction is statistically impossible without a placebo"
+    ],
+    "correctIndex": 0,
+    "explanation": "A sample of 15 with no mentioned control group and only 2 weeks of observation is scientifically weak; placebo effects and natural variation could easily explain the result. The claim lacks rigor. Option B is false—50% reductions can be real but need proper evidence. Option C is incorrect; FDA approval timelines vary. Option D is wrong; 50% reductions are statistically possible with or without placebos.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail company claims that 'customer satisfaction increased by 10 percentage points from 2022 to 2023.' This statement is ambiguous. Which interpretation could make this claim appear misleading?",
+    "options": [
+      "Satisfaction rose from 70% to 80% (10 percentage point increase) but the company implies it's a 10% relative increase (which would be 77%)",
+      "The sample of customers surveyed was different in 2023 than in 2022",
+      "The company used a different satisfaction scale in 2023",
+      "The company reported the result as '10% higher' instead of '10 percentage points higher'"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confusing percentage points with percentages is a classic misleading tactic. A 10 percentage point increase (70% to 80%) is very different from a 10% relative increase (70% to 77%). The most tempting wrong answer is D, which is related, but option A explicitly shows the ambiguity and potential for manipulation. Options B and C affect data quality but don't create the same mathematical confusion.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks reports that average customer transaction value increased from $8.50 in Q1 2023 to $9.20 in Q1 2024, a 8.2% increase. However, inflation in this period was 3.8%. What is the real (inflation-adjusted) increase in transaction value?",
+    "options": [
+      "Approximately 4.2%",
+      "8.2%",
+      "3.8%",
+      "11.1%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Real increase ≈ Nominal increase − Inflation rate = 8.2% − 3.8% = 4.2%. This represents actual purchasing power growth. Option B (8.2%) is the nominal increase, which ignores inflation and overstates real growth. Option C is just inflation. Option D incorrectly adds the rates. Ignoring inflation is a common way data can mislead about true business performance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing firm claims that their campaign increased website traffic by 150% for a mid-size e-commerce company. The baseline (before campaign) was 5,000 weekly visitors. However, the peak traffic was only 1 week of the 8-week campaign period. What is misleading about this statistic?",
+    "options": [
+      "Reporting peak performance as the overall campaign result, when average performance may be much lower; the true increase needs baseline and sustained improvement clarified",
+      "A 150% increase is mathematically impossible from a base of 5,000",
+      "Website traffic cannot be accurately measured over such a long period",
+      "The e-commerce company probably didn't retain all the new visitors"
+    ],
+    "correctIndex": 0,
+    "explanation": "If the baseline is 5,000, a 150% increase means an additional 7,500 visitors (total 12,500). This is mathematically possible, but the problem is cherry-picking the best week rather than reporting the campaign average. Option B is false. Option C is too vague; traffic measurement is reliable. Option D is plausible but doesn't address the statistical misrepresentation in how the data was selected and reported.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A news article states: 'According to a study, people who drink coffee live 5 years longer on average.' The study measured coffee consumption and lifespan across 10,000 people. Which confounding variable most likely explains this correlation, making the causal claim misleading?",
+    "options": [
+      "Income/socioeconomic status (wealthier people both buy more coffee and have access to better healthcare)",
+      "The color of the coffee cup used by participants",
+      "The brand of coffee the participants preferred",
+      "The number of days per week participants purchased coffee"
+    ],
+    "correctIndex": 0,
+    "explanation": "Socioeconomic status is a strong confounding variable: wealthier individuals drink more specialty coffee and also live longer due to better healthcare, nutrition, and living conditions. The correlation is real, but causation runs through wealth, not coffee. Option B (cup color) is absurd. Option C (brand preference) has no plausible pathway to lifespan. Option D is too similar to the exposure being measured and less of a confound.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla reports that Model 3 owners report 95% satisfaction in their annual survey. However, only 8% of all Model 3 owners completed the survey. What type of bias is this, and why is it problematic?",
+    "options": [
+      "Selection bias / response bias: satisfied customers are more likely to complete surveys, inflating the reported satisfaction rate",
+      "Sampling bias: Tesla didn't use a random number generator to select participants",
+      "Measurement bias: the satisfaction scale is miscalibrated",
+      "Temporal bias: the survey was conducted during a specific season when satisfaction is naturally higher"
+    ],
+    "correctIndex": 0,
+    "explanation": "With only 8% response rate, the survey respondents are self-selected and likely skew toward satisfied customers (selection/response bias). Dissatisfied owners are more likely to ignore the survey. This produces an inflated satisfaction estimate. Option B conflates selection bias with randomization; even random sampling can have response bias. Option C requires evidence of scale miscalibration. Option D requires seasonal evidence.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon reports that the median age of its workforce is 32 years and the mean age is 38 years. What does this discrepancy suggest, and why might the company use the median in marketing materials?",
+    "options": [
+      "The distribution is right-skewed with older workers; median (32) is lower and makes the workforce appear younger, which may be strategically selected for an employer brand narrative",
+      "The company miscalculated the mean; the mean should always be lower than the median",
+      "There are more workers over 38 than under 38, so the median must be higher",
+      "The median and mean should always be equal; one figure is definitely wrong"
+    ],
+    "correctIndex": 0,
+    "explanation": "When mean (38) > median (32), the distribution is right-skewed, indicating some very old workers pulling the average up. By citing the median, Amazon can claim a younger workforce than the mean suggests—a subtle but real form of data selection. Option B is false; mean > median indicates right skew, which is normal. Option C contradicts the data given. Option D is incorrect; mean and median differ in skewed distributions all the time.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A fitness app company claims that 'users who log their meals daily lose 15 pounds on average in 3 months.' The study tracked 500 users who downloaded the app. Sixty percent of users were never seen again after signing up. Of those who remained (200 users), 10% logged meals daily. What is the most critical flaw in interpreting this claim?",
+    "options": [
+      "Survivorship bias: only the most motivated (and successful) users are included in the result; the 300 users who quit are effectively excluded, likely diluting real-world effectiveness",
+      "The study needs a control group of non-app users to establish causation",
+      "Fifteen pounds is too small an amount to be statistically significant",
+      "Three months is too short a period to measure long-term health"
+    ],
+    "correctIndex": 0,
+    "explanation": "Only 20 out of 500 (4%) users logged meals daily consistently. The 300 users who quit had worse adherence and worse results but are invisible in the claim. The 15-pound result reflects only the most disciplined, motivated users, not typical users. This is survivorship bias. Option B (need for control group) is valid but secondary to the selection problem. Option C is subjective without context. Option D is opinion-based.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs publishes research stating that 'companies with female CEOs outperform the S&P 500 by 26% annually.' The study analyzed 30 companies with female CEOs over 10 years. Which statement best explains why this claim may be misleading despite being based on real data?",
+    "options": [
+      "Selection bias: the 30 companies studied are likely already high-performing, established firms; women were appointed CEO only at companies with strong momentum, conflating CEO gender with company quality and past success",
+      "There are not enough female CEOs in the S&P 500 to form a reliable comparison",
+      "Annual performance is too short a timeframe; long-term outperformance is impossible to measure",
+      "The 26% figure includes stock price appreciation, which is unrelated to CEO performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Companies that appoint female CEOs may already be high-performers; gender correlates with company strength, not causation. This is a form of selection bias. The comparison group (S&P 500 average) includes small, struggling companies; the female CEO group is skewed toward large, successful firms. The tempting wrong answer is B, but small sample size alone doesn't invalidate the comparison—selection bias does. Option C conflates timeframe with validity. Option D is incorrect; stock price reflects expected CEO performance.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company reports Phase 3 trial results: 'Drug X reduced severe symptoms in 60% of patients.' The trial included 500 participants, but the company had run 9 previous trials where the drug showed only 35% efficacy. The company is publishing only the trial with the best result. What bias is this, and why is it problematic for interpreting the true effect?",
+    "options": [
+      "Publication bias / p-hacking: selectively reporting the best result among multiple trials inflates the apparent efficacy, as a 60% result is likely an outlier rather than the true drug effect (closer to 35%)",
+      "Confirmation bias: the company believes the drug works, so they only report data that confirms this belief",
+      "Attrition bias: some patients dropped out of the trial, reducing the sample size",
+      "Regression to the mean: the best trial result will naturally be followed by worse results"
+    ],
+    "correctIndex": 0,
+    "explanation": "Running 10 trials and reporting only the best result is publication bias/p-hacking. If the true efficacy is ~35% and one trial randomly showed 60%, that outlier is misleading when reported without context. The true effect is likely closer to the average of all trials. Option B (confirmation bias) is a decision-making bias, not a statistical distortion of data. Option C (attrition) doesn't explain selective reporting. Option D is true but is a consequence of the bias, not the bias itself.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm claims that 'companies implementing our AI solution see a 40% increase in productivity.' They define productivity as 'tickets closed per employee per hour' and measured this for 8 weeks post-implementation at 12 client companies. Client feedback, however, revealed that employees worked longer hours post-implementation, and clients actually hired 3 additional staff due to system learning curves. How should this claim be interpreted?",
+    "options": [
+      "The metric captures throughput increase but conflates technology improvement with increased hours and labor; true productivity (output per unit of input) may be flat or negative when accounting for total labor cost and headcount",
+      "The consulting firm committed fraud and should be sued",
+      "A 40% increase in tickets closed is remarkable and confirms the AI solution works",
+      "The 8-week measurement period was too short to show real productivity gains"
+    ],
+    "correctIndex": 0,
+    "explanation": "The metric (tickets per hour) improved because employees worked longer, not because the tool was more efficient. True productivity accounts for total cost (labor hours × wage + hiring costs). The 40% throughput increase may represent zero or negative real productivity when labor and hiring costs are factored in. This is a definition/metric manipulation issue. Option B (fraud) is too extreme. Option C accepts the misleading metric uncritically. Option D is a valid concern but secondary to the metric definition problem.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A credit card company reports that 'the average cardholder carries a balance of $4,200.' However, 45% of cardholders pay off their balance in full each month (carrying $0), 35% carry balances between $500 and $3,000, and 20% carry balances over $8,000. What is misleading about using 'average' here, and what would be more informative?",
+    "options": [
+      "The mean ($4,200) is skewed by the 20% of high-balance cardholders; the median would be more representative of the typical cardholder, and reporting the distribution (45% pay in full, 35% carry $500–$3,000, etc.) would be more honest",
+      "The average must be wrong because 45% carry zero balance",
+      "Credit card balances are never normally distributed, so averages are always meaningless",
+      "The company should report the mode instead of the mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "The $4,200 mean is inflated by the 20% carrying $8,000+; the median would fall in the $500–$3,000 range and better represent the typical cardholder. The distribution itself reveals the story better than any single statistic. Option B is nonsensical; a mean can be higher than the mode. Option C is false; non-normal distributions still have meaningful averages, but contextual medians and distributions are more informative. Option D (mode) would be $0, which also misrepresents the broad middle.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

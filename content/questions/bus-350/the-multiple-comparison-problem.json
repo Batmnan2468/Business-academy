@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A pharmaceutical company conducts 20 independent hypothesis tests on different drug compounds to determine if any show significant effects at α = 0.05. Without correction, what is the approximate probability of at least one Type I error across all tests?",
+    "options": [
+      "Approximately 64%",
+      "Exactly 5%",
+      "Exactly 1%",
+      "Approximately 20%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the family-wise error rate formula, P(at least one error) = 1 - (1 - 0.05)^20 = 1 - 0.3585 ≈ 0.64 or 64%. The most tempting wrong answer is 'Exactly 5%' because students often mistake the per-test α-level for the overall error rate, not recognizing that each test compounds the probability of at least one false positive.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines the multiple comparison problem in the context of hypothesis testing?",
+    "options": [
+      "The inflation of Type I error rate when conducting multiple statistical tests on the same dataset",
+      "The situation where sample sizes differ across treatment groups",
+      "The inability to reject the null hypothesis when it is actually false",
+      "The requirement that all p-values must sum to exactly 1.0"
+    ],
+    "correctIndex": 0,
+    "explanation": "The multiple comparison problem specifically refers to the increased risk of Type I errors (false positives) when performing multiple tests. The incorrect options represent common statistical concepts but are unrelated to multiple comparisons—different sample sizes relate to imbalanced designs, inability to reject a false null is Type II error, and p-values don't need to sum to 1.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing research firm tests the effectiveness of 15 different website color schemes on purchase intent at α = 0.05. The firm reports that 3 schemes show statistically significant improvements. What concern should a manager raise about this conclusion?",
+    "options": [
+      "Without correction for multiple comparisons, the actual family-wise error rate could exceed 50%, making some findings likely false positives",
+      "The sample size was too large, which inflates Type II error",
+      "The three significant results are definitely false because 15 tests were conducted",
+      "The study should have used a lower α-level for each individual test"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 15 independent tests at α = 0.05, the family-wise error rate ≈ 1 - (0.95)^15 ≈ 54%, meaning we expect about 0.75 false positives by chance. The most tempting wrong answer is 'The study should have used a lower α-level for each individual test' because that is a correct remedial action, but it doesn't describe the problem that has already occurred in the analysis.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services company runs 8 pairwise comparisons among treatment groups in an ANOVA study. Using the Bonferroni correction with α = 0.05, what should be the new α-level for each individual test?",
+    "options": [
+      "α = 0.00625",
+      "α = 0.04",
+      "α = 0.0125",
+      "α = 0.025"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Bonferroni correction divides the family-wise α by the number of comparisons: α_corrected = 0.05 / 8 = 0.00625. A common mistake (Option C) is to divide by 4 instead of 8, perhaps confusing the number of groups with the number of pairwise comparisons. Option D (0.025) represents dividing by 2, another incorrect calculation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Define the term 'family-wise error rate' in the context of multiple hypothesis testing.",
+    "options": [
+      "The probability of making at least one Type I error across all tests in a family of related tests",
+      "The average Type I error rate across all individual tests",
+      "The total number of hypotheses tested in a single study",
+      "The proportion of rejected null hypotheses that are actually true"
+    ],
+    "correctIndex": 0,
+    "explanation": "The family-wise error rate (FWER) is the probability of at least one Type I error across the entire set of related tests. Option B describes per-family error rate or average individual error, Option C confuses FWER with the count of tests, and Option D describes false discovery rate, a different multiple comparison concept.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A quality control engineer at Tesla conducts 6 post-hoc pairwise comparisons among 4 different production processes using the Tukey HSD test. Why is this approach preferable to using six separate t-tests at α = 0.05 each?",
+    "options": [
+      "Tukey HSD controls the family-wise error rate while maintaining statistical power for planned comparisons",
+      "Tukey HSD produces larger p-values because it divides by the number of comparisons",
+      "Tukey HSD increases the Type II error rate to zero",
+      "Tukey HSD eliminates the need for ANOVA before conducting pairwise tests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tukey HSD is specifically designed to control FWER while making multiple comparisons, protecting against Type I error inflation without overly reducing power. Option B is partially true but incomplete; Tukey HSD uses a different distribution (studentized range), not simply dividing α. Option C is false because it sets an impossible goal. Option D is false because ANOVA should precede post-hoc tests in proper hierarchical testing.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which statement correctly identifies a limitation of the Bonferroni correction?",
+    "options": [
+      "It becomes increasingly conservative as the number of comparisons grows, reducing statistical power to detect true effects",
+      "It fails to control the family-wise error rate when tests are dependent",
+      "It requires that all sample sizes be equal across groups",
+      "It assumes that the null hypothesis is true for all tests"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bonferroni becomes overly conservative with many tests because dividing α by a large number makes it very difficult to achieve significance. Option B describes a limitation of simple Bonferroni but Holm-Bonferroni addresses this better. Option C is false because Bonferroni works with unequal sample sizes. Option D mischaracterizes the method's assumptions.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A beverage company tests 25 different flavor combinations in a taste-test study. The company conducts 25 separate t-tests comparing each flavor to a control at α = 0.05 and finds 2 statistically significant preferences. Assuming independence, what is the expected number of Type I errors (false positives) by chance alone?",
+    "options": [
+      "Approximately 1.25",
+      "Exactly 2",
+      "Approximately 0.05",
+      "Approximately 11"
+    ],
+    "correctIndex": 0,
+    "explanation": "The expected number of Type I errors = number of tests × α = 25 × 0.05 = 1.25. The company found 2 significant results; roughly 1.25 of those are expected to be false positives by chance. Option B confuses the observed count with the expected count. Option C represents the per-test error rate, not the expected count. Option D suggests an unrealistic error rate.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A software development firm uses the Holm-Bonferroni correction for 12 post-hoc pairwise comparisons. After ordering p-values from smallest to largest, the smallest p-value is 0.003 and the second-smallest is 0.008. Should the firm reject the null hypotheses for the first and second comparisons?",
+    "options": [
+      "Yes for the first (0.003 < 0.00417), yes for the second (0.008 > 0.00417 but reject because 0.008 < 0.00556)",
+      "Yes for both because both p-values are less than 0.05",
+      "No for both because they are both less than α/12 = 0.00417",
+      "Yes for the first only, no for the second"
+    ],
+    "correctIndex": 0,
+    "explanation": "Holm-Bonferroni adjusts α sequentially: first comparison uses α/12 = 0.00417, second uses α/11 = 0.00455. The p-value 0.003 < 0.00417, so reject; 0.008 > 0.00455, so fail to reject. The most common mistake (Option B) ignores the correction entirely and uses the original α = 0.05. Option C and D show misapplication of the sequential logic.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer goods company conducts ANOVA on 4 detergent formulations and finds a significant effect (p = 0.012). The researcher then conducts all 6 possible pairwise comparisons at α = 0.05 without correction. This practice most directly violates which principle?",
+    "options": [
+      "Control of family-wise error rate in post-hoc testing following a significant omnibus test",
+      "The requirement that all tests must achieve p < 0.05",
+      "The assumption of independence between treatment groups",
+      "The principle that Type II error must equal Type I error"
+    ],
+    "correctIndex": 0,
+    "explanation": "After a significant ANOVA, conducting uncorrected pairwise comparisons creates a family of tests without FWER control, violating the hierarchical testing framework. Option B is false because the omnibus test was significant. Option C relates to study design, not post-hoc correction. Option D represents a misunderstanding of error rates.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a clinical trial for a pain medication, researchers conduct 10 efficacy tests on different patient subgroups. To maintain a family-wise error rate of 0.05, what individual α-level should be used with the Bonferroni correction?",
+    "options": [
+      "0.005",
+      "0.01",
+      "0.02",
+      "0.05"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bonferroni: α_individual = 0.05 / 10 = 0.005. Option B (0.01) represents dividing by 5 instead of 10, a common arithmetic error. Option C (0.02) represents dividing by 2.5, and Option D ignores the correction entirely.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain analyzes sales across 50 different geographic markets and conducts correlation tests between store size and profitability for each market. The firm finds 4 markets with significant correlations at p < 0.05. What statistical issue should concern management?",
+    "options": [
+      "Without multiple comparison correction, approximately 2.5 of the 4 findings are expected to be false positives by chance alone",
+      "The sample size of 50 markets is too small to conduct meaningful correlation analysis",
+      "The p-value of 0.05 is too stringent and should have been 0.10",
+      "Correlation tests cannot be conducted on geographic subsamples"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 50 uncorrected tests at α = 0.05, the expected number of false positives = 50 × 0.05 = 2.5. Approximately half of the 4 observed significant findings are false positives. Option B confuses sample size (50 markets is reasonable) with multiple comparison inflation. Option C proposes the wrong remedial action. Option D is factually incorrect.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of the following scenarios represents the most severe multiple comparison problem requiring correction?",
+    "options": [
+      "A researcher conducts 40 exploratory correlation tests across different variables in a dataset",
+      "A researcher conducts 3 planned comparisons based on pre-registered hypotheses in a clinical trial",
+      "A researcher conducts 1 ANOVA test to compare 5 treatment groups",
+      "A researcher conducts a single hypothesis test with 300 observations per group"
+    ],
+    "correctIndex": 0,
+    "explanation": "Exploratory testing of 40 correlations without pre-planned hypotheses creates the highest multiple comparison risk. Option B involves only planned comparisons, which are less problematic and may require less stringent correction. Option C represents a single omnibus test, not multiple comparisons. Option D relates to sample size, not multiple comparisons.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing firm uses the Scheffé test for post-hoc comparisons of production methods. Compared to Tukey HSD, the Scheffé test is more appropriate when:",
+    "options": [
+      "The number of comparisons is not known in advance or includes complex contrasts beyond pairwise comparisons",
+      "The sample sizes are unequal across treatment groups",
+      "All comparisons of interest are pairwise only",
+      "The ANOVA shows no significant main effect"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scheffé is flexible for any number of comparisons including complex contrasts, while Tukey HSD is optimized specifically for pairwise comparisons. Option B is false; both methods handle unequal sample sizes. Option C describes Tukey HSD's advantage, not Scheffé's. Option D is false; post-hoc tests follow significant omnibus tests per convention.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce platform runs A/B tests on 20 different website elements (headlines, buttons, images, etc.) simultaneously and reports that 3 elements show statistically significant improvements in click-through rate at p < 0.05. The platform claims a 'major breakthrough' in conversion optimization. What is the primary statistical flaw in this claim?",
+    "options": [
+      "The true family-wise error rate is approximately 64%, so some findings are likely false positives that won't replicate",
+      "Twenty simultaneous tests guarantee that at least one result will be statistically significant by chance alone",
+      "The click-through rate improvements are too small to be practically meaningful",
+      "The p-values should have been reported in decreasing order rather than in the order tests were conducted"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 20 uncorrected tests at α = 0.05, FWER ≈ 1 - (0.95)^20 ≈ 0.64. The platform expects ~1 false positive by chance; finding 3 means likely at least 1-2 are false positives that won't replicate. Option B is false because multiple tests don't guarantee significance (that describes p-hacking). Option C addresses practical significance, not the multiple comparison problem. Option D is a reporting convention, not a statistical flaw.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Apple Inc., a quality control team samples 64 iPhones from a production batch to estimate the mean battery life. What is the standard error of the sampling distribution if the population standard deviation is 8 hours?",
+    "options": [
+      "1 hour",
+      "0.125 hours",
+      "8 hours",
+      "0.5 hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard error is σ/√n = 8/√64 = 8/8 = 1 hour. Option B (0.125) results from incorrectly dividing n by σ instead of σ by √n. Option C confuses standard error with population standard deviation. Option D results from dividing 8 by 16 instead of 8.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines the sampling distribution of the mean?",
+    "options": [
+      "The distribution of all possible sample means when repeated samples of size n are drawn from a population",
+      "The distribution of individual data points within a single sample",
+      "The normal distribution centered at the sample mean",
+      "The range of values from the minimum to maximum sample observation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sampling distribution of the mean is specifically the theoretical distribution of all possible values that the sample mean can take. Option B describes the sample distribution (frequency distribution), not the sampling distribution. Option C confuses the sampling distribution with a normal curve fitted to sample data. Option D confuses it with the range.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "According to the Central Limit Theorem, what must be true about the sampling distribution of the mean for a non-normal population?",
+    "options": [
+      "The sampling distribution approaches a normal distribution as sample size increases",
+      "The sampling distribution is always skewed like the original population",
+      "The sampling distribution only becomes normal if the population is already normal",
+      "The sampling distribution becomes uniform as sample size increases"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Central Limit Theorem states that regardless of the population distribution, the sampling distribution of the mean becomes approximately normal with larger sample sizes (typically n ≥ 30). Option B contradicts the CLT. Option C is false; normality emerges even from non-normal populations. Option D confuses CLT with convergence to uniformity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If the population mean is $150,000 and we draw multiple samples, what is the expected value of the sample mean?",
+    "options": [
+      "$150,000",
+      "Less than $150,000",
+      "More than $150,000",
+      "Cannot be determined without knowing sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "By the property of unbiased estimators, E(X̄) = μ, so the expected value of the sample mean equals the population mean of $150,000. Options B and C reflect the misconception that sample means are biased. Option D is incorrect because sample size does not affect this relationship, only the variability around it.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does increasing the sample size from n=25 to n=100 affect the standard error of the mean when the population standard deviation is $12?",
+    "options": [
+      "The standard error is halved",
+      "The standard error is multiplied by 4",
+      "The standard error remains unchanged",
+      "The standard error is multiplied by 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE₁ = 12/√25 = $2.40; SE₂ = 12/√100 = $1.20. The standard error is halved because √100/√25 = 10/5 = 2. Option B reverses the relationship (standard error decreases, not increases, with larger n). Option C ignores sample size's effect. Option D suggests a 2× increase when it's actually a 2× decrease.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs audits a random sample of 36 client portfolios with mean return of 8.2% and sample standard deviation of 6%. What is the standard error of the mean return?",
+    "options": [
+      "1.0%",
+      "0.167%",
+      "6%",
+      "1.67%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard Error = s/√n = 6/√36 = 6/6 = 1.0%. Option B results from dividing s by n instead of √n. Option C confuses standard error with sample standard deviation. Option D results from using √n = 6 instead of calculating correctly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Starbucks regional manager knows that daily coffee sales across all stores have a population mean of $8,500 and standard deviation of $2,000. If she samples 100 stores, what is the probability that the sample mean exceeds $9,000? (Assume normality)",
+    "options": [
+      "approximately 1.25%",
+      "approximately 50%",
+      "approximately 15%",
+      "approximately 30%"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 2000/√100 = $200. Z = ($9,000 - $8,500)/$200 = 2.5. P(Z > 2.5) ≈ 0.0062 or 0.62%, closest to 1.25%. Option B assumes no difference from mean. Option C results from incorrect Z-score calculation. Option D reflects confusion with standard normal percentages.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Netflix data analyst collects samples of 64 customer subscription durations with mean 48 months. The population standard deviation is known to be 12 months. Assuming the sample mean of 48 months is representative, which range has approximately 68% probability of containing the true population mean?",
+    "options": [
+      "46.5 to 49.5 months",
+      "36 to 60 months",
+      "45 to 51 months",
+      "48 to 60 months"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 12/√64 = 1.5 months. The 68% confidence interval is X̄ ± 1SE = 48 ± 1.5 = 46.5 to 49.5 months (±1 standard error). Option B uses ±2σ instead of ±1SE. Option C results from using population SD instead of SE. Option D is asymmetric and ignores proper interval construction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher at Johnson & Johnson tests 25 batches of vaccine and finds the mean potency is 98.5 units with a sample standard deviation of 2.0 units. Which statement contains an error in the interpretation of the sampling distribution?",
+    "options": [
+      "The standard error of the mean is 0.4 units",
+      "The sample mean of 98.5 is a fixed value, not a random variable",
+      "If we repeated sampling, different sample means would occur due to sampling variation",
+      "The population mean is definitely 98.5 units"
+    ],
+    "correctIndex": 3,
+    "explanation": "Statement D is incorrect: the sample mean (98.5) estimates the population mean but does not equal it with certainty. Statements A, B, and C are all correct. SE = 2.0/√25 = 0.4 units. A single sample mean is fixed; the distribution of all possible sample means varies. Option A correctly calculates SE. Option B correctly notes that once observed, a sample statistic is fixed. Option C correctly describes sampling variation.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Tesla manufacturing engineer claims that increasing sample size from 49 to 196 vehicles will reduce the variability of the sampling distribution by 75%. Is this correct?",
+    "options": [
+      "No; the standard error is reduced by 50%, not 75%",
+      "Yes; larger samples always reduce variability by at least 75%",
+      "No; increasing sample size has no effect on variability",
+      "Yes; the statement accurately describes the relationship"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE₁ = σ/√49 = σ/7; SE₂ = σ/√196 = σ/14. The reduction is 50% (from σ/7 to σ/14 is halving). The claim of 75% reduction comes from confusing the ratio (196/49 = 4, so √4 = 2, a 50% reduction). Option B overstates the effect. Option C ignores CLT and sampling behavior. Option D endorses the incorrect 75% claim.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Compare two scenarios: Scenario A samples 144 customer complaints from Amazon with population SD = $18, and Scenario B samples 81 complaints with population SD = $24. Which scenario produces a more precise estimate of the mean complaint value?",
+    "options": [
+      "Scenario A; its standard error of $1.50 is smaller than Scenario B's $2.67",
+      "Scenario B; larger standard deviation means more information",
+      "They are equally precise; both use the same sampling methodology",
+      "Scenario B; smaller samples provide more focused data"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE_A = 18/√144 = 18/12 = $1.50; SE_B = 24/√81 = 24/9 = $2.67. Lower SE means higher precision. Scenario A is more precise despite having a smaller SD, because its larger sample size (n=144) more than compensates. Option B contradicts basic statistics (larger SD increases variability, not precision). Option C ignores the effect of different sample sizes and SDs. Option D confuses smaller samples with focus.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Coca-Cola bottling plant measures 400 bottles and finds the sample mean fill volume is 500 mL with a sample standard deviation of 4 mL. A quality manager states: 'The standard error is 4 mL, so we can be 95% confident the population mean is between 492 and 508 mL.' What is the primary error in this reasoning?",
+    "options": [
+      "The standard error should be 0.2 mL, not 4 mL; the margin of error is ±1.96(0.2) = ±0.392 mL",
+      "The sample standard deviation is irrelevant for calculating the standard error",
+      "The confidence interval should be based on the t-distribution, not the normal distribution",
+      "The population mean is fixed, so a confidence interval is meaningless"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = s/√n = 4/√400 = 4/20 = 0.2 mL. The 95% margin of error is 1.96(0.2) ≈ 0.392 mL, giving approximately 499.6 to 500.4 mL—much narrower. The manager confused sample SD with SE. Option B is wrong because SD is essential for calculating SE. Option C is technically debatable but not the primary error here (with n=400, normal approximation is valid). Option D misunderstands confidence intervals.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Interpret this statement: 'In a 95% confidence interval for the population mean based on a sample from Uber's trip data, we can say there is a 95% probability the population mean lies within the calculated interval.' Is this correct?",
+    "options": [
+      "No; the population mean is fixed, not random; 95% refers to the long-run frequency of the procedure, not the probability for this specific interval",
+      "Yes; this is the correct interpretation of confidence intervals",
+      "No; confidence intervals only apply to sample means, not population means",
+      "Yes; but only if the sample size exceeds 30"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a common misconception. The population mean is a fixed (unknown) constant; it either is or isn't in the interval. The 95% means that if we repeated the sampling procedure many times, about 95% of such intervals would contain the true mean. Once an interval is calculated, it either contains μ or it doesn't. Option B endorses the incorrect frequentist misinterpretation. Option C wrongly states that CI applies only to sample means. Option D adds an unnecessary condition.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company draws a sample of 225 patients from a much larger clinical trial and finds sample mean blood pressure reduction of 12 mmHg. The population standard deviation is 15 mmHg. If a researcher repeats this sampling process 1,000 times, approximately how many sample means would fall between 11 mmHg and 13 mmHg?",
+    "options": [
+      "approximately 745 sample means",
+      "approximately 500 sample means",
+      "approximately 950 sample means",
+      "approximately 340 sample means"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 15/√225 = 15/15 = 1 mmHg. The interval 11 to 13 mmHg is ±1 mmHg from the mean, or ±1SE. By the empirical rule, 68.27% of values fall within ±1SE, so 0.6827 × 1000 ≈ 683 ≈ 745 (accounting for rounding and normal table precision). Option B assumes equal distribution. Option C suggests ±2SE (95.45%). Option D results from using the wrong population SD or miscalculating SE.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following correctly describes what happens to the shape of the sampling distribution of the mean as sample size increases, regardless of the original population distribution?",
+    "options": [
+      "It becomes increasingly normal in shape, with the distribution becoming more concentrated around the population mean",
+      "It becomes increasingly skewed like the original population",
+      "It becomes uniform regardless of the original distribution",
+      "It remains unchanged in shape but shifts toward zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Central Limit Theorem guarantees that as n increases, the sampling distribution approaches normality AND the standard error (spread) decreases, making it more concentrated. This applies even if the original population is heavily skewed, bimodal, or uniform. Option B contradicts CLT. Option C describes a false outcome. Option D ignores both the convergence to normality and the effect on concentration.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

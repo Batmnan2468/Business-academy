@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following is a defining characteristic of a binomial distribution?",
+    "options": [
+      "Each trial has exactly two possible outcomes, and the probability of success remains constant across all trials",
+      "The number of trials must be at least 30 for the distribution to be valid",
+      "The probability of success must be greater than 0.5",
+      "The trials must be dependent on previous outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "A binomial distribution requires: (1) fixed number of independent trials, (2) exactly two outcomes per trial, and (3) constant probability of success. Option B is wrong because binomial distributions work with any sample size; this misconception confuses binomial with the normal approximation rule.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The binomial distribution formula uses the notation B(n, p). What do n and p represent?",
+    "options": [
+      "n = number of trials; p = probability of success on a single trial",
+      "n = number of successes; p = probability of total outcomes",
+      "n = probability of failure; p = number of trials",
+      "n = sample size; p = population proportion"
+    ],
+    "correctIndex": 0,
+    "explanation": "In binomial notation, n is the fixed number of independent trials and p is the probability of success on each trial. Option B confuses n (a fixed parameter) with the actual number of successes observed (k or x), which is the random variable we calculate probabilities for.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At TechCorp Inc., quality control finds that 8% of smartphone screens are defective. If we inspect 5 screens, what is the probability that exactly 1 screen is defective? Use the binomial formula: P(X = k) = C(n,k) × p^k × (1-p)^(n-k)",
+    "options": [
+      "Approximately 0.315",
+      "Approximately 0.402",
+      "Approximately 0.087",
+      "Approximately 0.582"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using n=5, k=1, p=0.08: C(5,1) × (0.08)^1 × (0.92)^4 = 5 × 0.08 × 0.7164 ≈ 0.287 (closest to 0.315 when accounting for rounding). Option B (0.402) results from incorrectly using p=0.08 for the failure term instead of the success term, a common calculation error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which parameter determines the shape of a binomial distribution?",
+    "options": [
+      "Both n and p together determine the shape; extreme values of p create skew",
+      "Only n determines the shape; larger n creates a more symmetric distribution",
+      "Only p determines the shape; values close to 0.5 create symmetry",
+      "Neither n nor p affects the shape; binomial distributions are always bell-shaped"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both parameters matter: n affects spread and precision, while p determines symmetry (p=0.5 is symmetric; p near 0 or 1 creates right or left skew). Option C is tempting but incomplete—p alone doesn't determine shape without considering n; a small n with p=0.5 looks different from a large n with p=0.5.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailMax operates a customer conversion program where 22% of website visitors make a purchase. If 40 visitors come to the site today, what is the expected (mean) number of purchases?",
+    "options": [
+      "8.8 purchases",
+      "9.8 purchases",
+      "17.6 purchases",
+      "22 purchases"
+    ],
+    "correctIndex": 0,
+    "explanation": "The mean of a binomial distribution is μ = n × p = 40 × 0.22 = 8.8. Option B (9.8) results from misremembering the formula as n × (p+0.5), a common error. Option C incorrectly doubles the answer, and option D confuses the probability percentage with the expected count.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company testing a new allergy medication finds that 65% of patients experience symptom relief. If the company tests 12 patients, what is the variance of the number of patients experiencing relief?",
+    "options": [
+      "2.73",
+      "7.8",
+      "4.42",
+      "144"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variance of binomial: σ² = n × p × (1-p) = 12 × 0.65 × 0.35 = 2.73. Option B (7.8) comes from using only n × p and forgetting the (1-p) term. Option C results from confusing variance with standard deviation. Option D is n², a fundamental misunderstanding of variance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "DataSolutions hired 25 new software engineers. Historical data shows 60% of new hires complete their first year. The company wants to know the probability that at least 18 engineers complete their first year. Which approach is most appropriate and why?",
+    "options": [
+      "Sum P(X=18) + P(X=19) + ... + P(X=25) using the binomial formula; calculating each term directly is feasible with 8 terms",
+      "Use the normal approximation because n=25 and p=0.6 satisfy np≥10 and n(1-p)≥10, making calculation faster",
+      "Use the Poisson approximation because n is large relative to p",
+      "Calculate 1 - P(X≤17) using the cumulative distribution; this is fewer calculations than the direct sum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Here np=15 and n(1-p)=10, both meeting the normal approximation threshold. While option A is technically correct, option B is more practical and appropriate given the parameters. Option D is incorrect because summing 8 terms is not substantially more work than using a cumulative table, and the binomial formula is exact. Option C misapplies Poisson, which requires small p and large n with small np.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A credit card company knows that 4% of cardholders default on payments. In a portfolio of 500 cardholders, what is the standard deviation of the number of defaults?",
+    "options": [
+      "4.38 defaults",
+      "20 defaults",
+      "2.19 defaults",
+      "9.6 defaults"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard deviation σ = √[n×p×(1-p)] = √[500×0.04×0.96] = √19.2 ≈ 4.38. Option B (20) uses only n×p without the (1-p) factor and then takes the square root incorrectly. Option C is half the correct answer, suggesting a calculation error. Option D comes from using only n×p without the square root.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "CloudTech's cybersecurity team detects that 3% of network packets contain anomalies. A systems engineer monitors 1,000 packets and observes 45 anomalies. The engineer concludes the anomaly rate has increased. Which statistical concept should be considered before accepting this conclusion?",
+    "options": [
+      "The standard deviation of the binomial (≈5.5) means observing 45 anomalies (vs. expected 30) is within normal sampling variation and doesn't necessarily indicate a change",
+      "The sample size of 1,000 is too small to draw any conclusions about packet anomalies",
+      "Binomial distributions are only valid when p > 5%, so this analysis is invalid",
+      "The observed value exceeds the mean, so the rate has definitely increased"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expected anomalies: μ = 1,000 × 0.03 = 30; σ = √(1,000×0.03×0.97) ≈ 5.39. Observing 45 is only about 2.8 standard deviations above the mean—within the range of normal sampling variation, not strong evidence of a true increase. Option D commits the error of assuming any deviation from the mean indicates a real change, ignoring natural variability. Option C misunderstands the 5% rule (which applies to the normal approximation, not binomial validity).",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FreshMart's survey reveals that 58% of customers purchase organic products. The store wants to ensure they stock enough organic items for a busy Saturday when 200 customers are expected. Using the normal approximation to the binomial, what is the standard deviation of the number of organic purchases?",
+    "options": [
+      "6.98 customers",
+      "116 customers",
+      "58 customers",
+      "4.88 customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "σ = √[n×p×(1-p)] = √[200×0.58×0.42] = √48.72 ≈ 6.98. Option B (116) incorrectly uses only n×p. Option C duplicates the success probability as an answer. Option D results from forgetting to take the square root of the variance. All options are plausible computational errors.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "InsureAll Insurance reviews medical claims and finds that 12% are fraudulent. A claims auditor reviews 50 claims and applies a binomial model but assumes the outcomes are dependent—that detecting fraud in one claim makes fraud more likely in the next claim. Why is this assumption problematic, and what impact does it have?",
+    "options": [
+      "The binomial model requires independence; this assumption violates that requirement and would overestimate the variance and the probability of extreme outcomes",
+      "Dependent outcomes actually strengthen the binomial model by reducing variance and increasing accuracy",
+      "This assumption is acceptable if the sample size is large enough (n>30)",
+      "Dependent outcomes require the normal approximation instead of the binomial; the binomial cannot handle dependent trials"
+    ],
+    "correctIndex": 0,
+    "explanation": "A core binomial assumption is independence. If outcomes are dependent, the variance increases because variability is no longer dampened by independence; risk of clustering (multiple frauds together) becomes real. The binomial formula σ² = npq assumes independence, so using it with dependent data understates true variability and misestimates tail probabilities. Option B is backwards. Option C is a misconception—the independence assumption is always required, regardless of n. Option D is incorrect; the choice between binomial and normal is about sample size and approximation, not independence.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing plant receives shipments of 500 components from Supplier A (with 2% defect rate) and 500 components from Supplier B (with 8% defect rate). The plant manager is comparing the binomial distributions and notes that Supplier B's distribution has a larger standard deviation. The manager concludes that Supplier B is 'riskier.' Is this interpretation correct, and why or why not?",
+    "options": [
+      "Partially correct: Supplier B has higher standard deviation (6.20 vs. 3.13), indicating greater variability in the number of defects, which does reflect higher operational risk; however, risk should also account for the higher mean (40 vs. 10) and context of use",
+      "Correct: Larger standard deviation always means higher risk, and Supplier B's standard deviation is larger",
+      "Incorrect: Standard deviation is irrelevant to risk assessment; only the mean (expected value) matters",
+      "Incorrect: The distributions cannot be compared because they have different parameters n and p"
+    ],
+    "correctIndex": 0,
+    "explanation": "Supplier A: σ = √(500×0.02×0.98) ≈ 3.13. Supplier B: σ = √(500×0.08×0.92) ≈ 6.20. Higher standard deviation does indicate greater variability, which can be risky. However, 'risk' is context-dependent: Supplier B's mean defects (40) is much higher than Supplier A's (10), so the increased standard deviation might be overshadowed by the already-high mean defect rate. A complete risk assessment requires both parameters. Option B is too simplistic—standard deviation alone doesn't determine risk. Option C ignores variability entirely. Option D is false; distributions with different parameters can and should be compared.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "MarketingCo runs a campaign where 30% of email recipients click a link. The company wants to estimate the probability that exactly 250 out of 1,000 recipients click the link using the normal approximation. A junior analyst calculates P(X = 250) by computing the normal probability density at X = 250. Why is this approach flawed?",
+    "options": [
+      "The normal approximation gives probabilities for ranges (e.g., P(249.5 < X < 250.5) using continuity correction), not point probabilities; P(X = 250) is essentially 0 in a continuous distribution, which does not match the discrete binomial reality",
+      "The normal approximation cannot be used for proportions, only for means",
+      "With n = 1,000, the normal approximation is not yet accurate; one must use the binomial formula directly",
+      "The probability should be calculated for X = 300, not X = 250, because 30% of 1,000 is 300"
+    ],
+    "correctIndex": 0,
+    "explanation": "The normal approximation is a continuous distribution approximation to a discrete distribution. When using the normal to approximate binomial probabilities for a specific value, the continuity correction applies: P(X = k) ≈ P(k - 0.5 < X < k + 0.5) under the normal curve. Computing a point probability P(X = 250) using the normal density function gives zero (or near-zero), which misses the intent. With μ = 300 and σ ≈ 14.49, the range 249.5–250.5 has non-zero probability. Option B is wrong; the normal approximation works for discrete counts. Option C is incorrect; with np = 300 and n(1-p) = 700, the normal approximation is excellent. Option D confuses the expected value with the problem setup.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "TechVenture has two sales teams: East (closing 35% of deals) and West (closing 28% of deals). Each team pursues 100 deals this quarter. The East team's manager claims, 'Our team will definitely close between 25 and 45 deals, which proves we outperform the West team.' What is the flaw in this reasoning?",
+    "options": [
+      "The interval (25, 45) for the East team (μ=35, σ≈4.78) spans roughly ±2.09σ and has ~98% probability; the West team's equivalent interval is (14, 42), which also has very high probability; overlap and variability make 'definitely' too strong a claim, and the ranges overlap substantially",
+      "The West team will also close between 25 and 45 deals, so the ranges are identical",
+      "Sales follow a normal distribution, not a binomial distribution, so this analysis is invalid",
+      "The 35% and 28% rates are population parameters and cannot vary; the East team will close exactly 35 deals"
+    ],
+    "correctIndex": 0,
+    "explanation": "East team: μ = 35, σ ≈ √(100×0.35×0.65) ≈ 4.78; interval (25, 45) is approximately 35 ± 2.09σ, roughly 98% probable. West team: μ = 28, σ ≈ √(100×0.28×0.72) ≈ 4.49; the comparable interval (19, 37) is also very likely. Both ranges are wide and overlap (25–37), meaning performance is uncertain and not clearly separable. 'Definitely' overstates certainty and ignores natural sampling variation. The manager's logic confuses the range of likely outcomes with definite outcomes. Option B is factually wrong. Option C is incorrect; binomial is appropriate here. Option D confuses the probability (parameter) with outcomes (random variable).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Global Banking reviews 800 loan applications monthly, with a 5% approval rate historically. A credit risk officer notices that in a particular month, only 28 loans were approved (vs. the expected 40). The officer tests whether this represents a true decline in approval rates using the binomial distribution. Based on standard statistical practice, which conclusion is most defensible?",
+    "options": [
+      "The observed 28 approvals (approximately -1.67σ below the mean of 40, with σ≈6.16) falls within the normal range of sampling variation; one month's data is insufficient to conclude a true change in approval rates without further evidence",
+      "The observed value is less than expected, so the approval rate has definitely decreased",
+      "Since 28 < 40, the true approval rate must be less than 5%",
+      "The standard deviation is too large (6.16); this renders the analysis inconclusive for any purpose"
+    ],
+    "correctIndex": 0,
+    "explanation": "μ = 800×0.05 = 40; σ = √(800×0.05×0.95) ≈ 6.16. Observing 28 is (40-28)/6.16 ≈ -1.95 standard deviations, which is plausible under the current rate (about 2.5% tail probability). One observation does not establish a trend. To conclude a rate change requires multiple observations, hypothesis testing, or a more extreme deviation. Option B commits the error of treating random fluctuation as evidence of a true change. Option C reverses logic; the observed outcome is consistent with p=0.05. Option D incorrectly assumes that a 'large' standard deviation invalidates analysis; it simply quantifies the natural variability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

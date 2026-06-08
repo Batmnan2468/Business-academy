@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Netflix, a data analyst is preparing customer viewing behavior data for clustering analysis. The raw features include 'minutes watched per month' (ranging from 0 to 2,880) and 'number of titles rated' (ranging from 0 to 500). Why is standardization necessary before clustering?",
+    "options": [
+      "To ensure features with larger scales don't dominate the distance calculations in the clustering algorithm",
+      "To increase the number of clusters that will be discovered",
+      "To convert categorical variables into numerical ones",
+      "To remove outliers from the dataset entirely"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization prevents features with larger numerical ranges from disproportionately influencing distance-based clustering algorithms like K-means. Without it, 'minutes watched' (0–2,880) would overshadow 'titles rated' (0–500) despite both being equally important. Option B is wrong because standardization doesn't determine cluster count; that's decided by the analyst. Option C confuses standardization with encoding. Option D confuses standardization with outlier removal.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes Z-score standardization (also called standardization)?",
+    "options": [
+      "Subtracting the mean and dividing by the standard deviation to create a distribution with mean 0 and standard deviation 1",
+      "Dividing each value by the maximum value to scale all numbers between 0 and 1",
+      "Removing the median and replacing missing values with the mode",
+      "Multiplying each value by 100 to convert percentages into whole numbers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score standardization transforms data so that (value – mean) / standard deviation, resulting in a mean of 0 and standard deviation of 1. This is the standard mathematical definition. Option B describes min-max normalization, not standardization. Option C describes imputation. Option D is nonsensical transformation unrelated to standardization.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Amazon, a logistics team collected warehouse efficiency data: average processing time per order (mean = 2.5 hours, SD = 0.4 hours). An order took 3.3 hours to process. What is its Z-score?",
+    "options": [
+      "2.0",
+      "0.8",
+      "1.32",
+      "3.3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score = (3.3 – 2.5) / 0.4 = 0.8 / 0.4 = 2.0. This indicates the order is 2 standard deviations above the mean. Option B (0.8) is the raw difference without dividing by SD. Option C incorrectly divides the original value by the SD. Option D confuses the original value with the Z-score.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Before clustering Starbucks customer demographic data, which of the following is NOT a valid reason to standardize?",
+    "options": [
+      "To ensure that age (18–75 years) and annual spending ($500–$8,000) contribute equally to distance calculations",
+      "To make the clustering algorithm run faster by reducing computational complexity",
+      "To prevent features with larger ranges from biasing cluster assignment",
+      "To create comparable scales across features with different units"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standardization does not reduce computational complexity or make algorithms run faster; it merely rescales data. The computational time depends on the number of observations and features, not their ranges. Options A, C, and D are all valid reasons to standardize. This tests understanding of what standardization actually achieves.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Target is clustering stores by sales performance. One feature is 'monthly revenue' ($50,000–$2,000,000), and another is 'customer complaint count' (0–50 complaints). After standardization, which statement is true?",
+    "options": [
+      "Both features will have a mean of 0 and standard deviation of 1, making them directly comparable in clustering",
+      "Monthly revenue will have higher values than complaint count because it started with larger numbers",
+      "The actual dollar amounts and complaint counts will be preserved in the standardized data",
+      "Standardization will reduce the number of outliers in the complaint count feature"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization transforms both features to have mean = 0 and SD = 1, regardless of their original scales. This makes them equally weighted in distance calculations. Option B is incorrect because standardization removes the original scale advantage. Option C contradicts the definition of standardization. Option D confuses standardization with outlier removal.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial services firm is clustering credit card customers using three features: credit utilization ratio (0–100%), annual income ($20,000–$500,000), and payment history score (300–850). After applying standardization, the mean of each standardized feature should be:",
+    "options": [
+      "0 for all three features",
+      "1 for all three features",
+      "Different for each feature based on its original range",
+      "Equal to the original feature mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score standardization always results in a mean of 0 for each feature, regardless of the original scale or range. This is a mathematical property: the sum of (value – mean) equals zero, so the mean of deviations is zero. Option B confuses mean with standard deviation. Options C and D misunderstand the outcome of standardization.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Uber is clustering driver performance using delivery time (mean = 18 min, SD = 3 min) and customer rating (mean = 4.6 stars, SD = 0.3 stars). A driver has a delivery time Z-score of –1.0 and a rating Z-score of 2.0. What does this tell you about this driver?",
+    "options": [
+      "They deliver faster than average and have ratings above average, but the rating advantage is larger in relative terms",
+      "They deliver slower than average and have ratings below average",
+      "They deliver at the same speed as the average driver",
+      "Their rating and delivery time are unrelated to the cluster centers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score of –1.0 means 1 SD below mean (faster delivery). Z-score of 2.0 means 2 SDs above mean (higher rating). The driver excels in both, but the rating improvement (2 SDs) is larger than the delivery improvement (1 SD). Option B reverses the signs. Option C misinterprets –1.0. Option D is irrelevant to what Z-scores indicate.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail chain is preparing data for clustering stores: square footage (mean = 8,500 sq ft, SD = 2,100 sq ft) and annual foot traffic (mean = 125,000 visitors, SD = 35,000 visitors). Without standardization, which feature will dominate the distance calculations in K-means clustering?",
+    "options": [
+      "Foot traffic will dominate because the raw differences (in units of visitors) are much larger than differences in square footage",
+      "Square footage will dominate because it is measured in larger units",
+      "Both will contribute equally because they have equal standard deviations",
+      "Neither will dominate because K-means automatically weights features"
+    ],
+    "correctIndex": 0,
+    "explanation": "In K-means, Euclidean distance is sensitive to the scale of raw values. A 10,000-visitor difference contributes more to distance than a 500-sq-ft difference, even if both are meaningful relative to their SDs. Foot traffic's larger absolute range dominates. Option B incorrectly assumes unit size matters; what matters is the range of values. Option C wrongly treats SD as determining dominance. Option D is false; K-means doesn't auto-weight.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company is clustering clinical trial sites by patient enrollment (mean = 250, SD = 80) and dropout rate (mean = 0.15, SD = 0.05). A site has enrollment of 410 and dropout rate of 0.20. Calculate the Euclidean distance from the mean after standardization.",
+    "options": [
+      "2.24",
+      "160.05",
+      "2.0",
+      "1.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score for enrollment = (410 – 250) / 80 = 2.0. Z-score for dropout = (0.20 – 0.15) / 0.05 = 1.0. Euclidean distance = √(2.0² + 1.0²) = √(4 + 1) = √5 ≈ 2.24. Option B fails to standardize. Option C calculates only the enrollment Z-score. Option D calculates only the dropout Z-score.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hotel chain is clustering properties using occupancy rate (0–100%) and average daily rate (ADR: $50–$350). Before clustering, which preprocessing choice best preserves the business meaning of both features?",
+    "options": [
+      "Apply Z-score standardization to both features so they have equal influence regardless of their scales",
+      "Leave occupancy rate as-is because it's already on a 0–100% scale, but standardize ADR",
+      "Apply min-max normalization to both so they fall between 0 and 1",
+      "Use the original unscaled values so the clustering reflects true dollar and percentage differences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-score standardization is appropriate here because both features are continuous and we want them to contribute equally to clustering based on their statistical variation, not their original ranges. Option B is inconsistent; both features should be treated the same way. Option C (min-max normalization) is valid but Z-score is standard for K-means. Option D would allow ADR's larger range to dominate.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company standardized customer purchase data (order value, frequency, and recency). After clustering, they notice that one cluster contains customers with standardized order value Z-scores ranging from –2.5 to –0.5. What does this indicate?",
+    "options": [
+      "This cluster consists of low-spending customers, all below the overall average purchase value",
+      "This cluster has customers with highly variable spending patterns that should be split into subclusters",
+      "The standardization was applied incorrectly because all Z-scores should be positive",
+      "This cluster's order values are more extreme than the population standard deviation allows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z-scores ranging from –2.5 to –0.5 all fall below the mean (0), indicating this cluster represents low-spending customers relative to the population average. Negative Z-scores are perfectly valid and expected; they simply indicate below-average values. Option B incorrectly suggests variability within a cluster means the cluster is invalid. Option C misunderstands that Z-scores can be negative. Option D misinterprets what standard deviation constraints mean.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank is clustering loan applicants. Feature A (annual income) has a mean of $75,000 and SD of $25,000. Feature B (credit score) has a mean of 680 and SD of 60. An applicant has income $100,000 and credit score 800. The analyst notices that this applicant's standardized credit score (1.67) is lower than their standardized income (1.0), and concludes the applicant is relatively 'weaker' in credit quality. What is the flaw in this reasoning?",
+    "options": [
+      "Comparing Z-scores across features assumes both features are equally important to clustering, which may not be true; moreover, a lower Z-score doesn't mean weakness if the variable has a different underlying meaning",
+      "The Z-score calculations are incorrect and should be rechecked",
+      "Credit score Z-scores cannot be compared to income Z-scores because they are measured in different units",
+      "The applicant's credit score is actually weak because 800 is below the maximum possible score of 850"
+    ],
+    "correctIndex": 0,
+    "explanation": "The analyst commits a misconception: Z-scores are comparable after standardization (that's the point), but comparing them across features doesn't indicate which is 'better' or 'worse' unless the features are equally weighted in the business context. A lower Z-score just means smaller deviation from the population mean; it doesn't imply weakness. Option B: Verify: income = (100,000 – 75,000) / 25,000 = 1.0 ✓; credit = (800 – 680) / 60 = 1.67 ✓. Option C is wrong; that's exactly why we standardize—to compare across different units. Option D conflates raw values with standardized comparisons.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company is clustering delivery routes by distance (mean = 45 km, SD = 12 km) and number of stops (mean = 8, SD = 2). They standardized the data and ran K-means, then discovered that distance dominates cluster separation more than stops. What is the most likely explanation?",
+    "options": [
+      "The coefficient of variation for distance (CV = 12/45 ≈ 0.27) is larger than for stops (CV = 2/8 = 0.25), so distance has more intrinsic variability and naturally separates clusters better even after standardization",
+      "The standardization was applied incorrectly; distance should have a larger standard deviation than stops",
+      "The original distance values were not completely standardized because 45 km is a larger number than 8 stops",
+      "K-means does not properly standardize features with different units, so distance measurements naturally dominate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even after standardization, a feature with higher relative variability (coefficient of variation = SD/mean) will naturally create more spread in standardized space and separate clusters more. Distance has CV = 0.267, stops have CV = 0.25, so distance does have slightly higher relative variability. This is legitimate, not an error. Option B confuses standardization properties with variability. Option C misunderstands how standardization works. Option D is false; K-means respects standardization.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A telecommunications company is clustering customers using monthly data bill ($25–$180), contract length in months (12–60), and minutes used (100–15,000). They plan to apply standardization before K-means clustering. Which of the following is a valid concern about standardization in this context?",
+    "options": [
+      "After standardization, a customer with extremely high minutes used but average bill and contract length may not form a distinct cluster if minutes variability is low relative to other features",
+      "Standardization will cause the clustering algorithm to ignore the billing feature entirely because contract length has a wider absolute range",
+      "The three features are measured in incompatible units, so standardization cannot be applied simultaneously",
+      "Standardization requires that all features be normally distributed, which is unlikely for real customer data"
+    ],
+    "correctIndex": 0,
+    "explanation": "If 'minutes used' has low relative variability compared to its mean (small CV), then even an extreme value becomes a modest Z-score, and the feature contributes less to cluster separation. This is a legitimate concern: standardization equalizes scales but not inherent variability. Analysts might need to weight features differently. Option B is false; standardization handles this. Option C is false; that's why we standardize. Option D is false; standardization doesn't require normality; it's a preprocessing step independent of distributional assumptions.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A SaaS company is clustering users by login frequency (mean = 12 per month, SD = 4) and session duration (mean = 45 minutes, SD = 15 minutes). A data scientist applies standardization and then scales each standardized feature by a custom weight: frequency gets weight 1.5 and duration gets weight 1.0. Why might this weighted standardization approach be preferable to unweighted standardization?",
+    "options": [
+      "The company may believe login frequency is more predictive of customer retention than session duration, so weighting allows features to influence clustering proportionally to business importance",
+      "Weighting compensates for the fact that frequency has a lower standard deviation than duration",
+      "Custom weights guarantee that clusters will be more balanced in size",
+      "Weighting is necessary because the original units (logins vs. minutes) are incomparable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Weighted standardization allows features to contribute to clusters according to business priorities, not just statistical properties. If login frequency is known to drive retention decisions, higher weight is justified. Option B confuses weighting with standardization; standardization already handles SD differences. Option C: weights don't guarantee balanced clusters; that depends on the actual data distribution. Option D is false; standardization already makes units comparable.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

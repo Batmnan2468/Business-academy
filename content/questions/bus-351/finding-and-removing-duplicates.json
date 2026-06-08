@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In the context of data cleaning for business analytics, what does 'duplicate' mean?",
+    "options": [
+      "Two or more rows with identical values across all or key columns",
+      "Any row that appears more than once in a dataset",
+      "Records with the same customer ID regardless of other values",
+      "Entries that have been copied from an external source"
+    ],
+    "correctIndex": 0,
+    "explanation": "A duplicate is specifically defined as rows with identical values across all columns or key identifying columns. Option B is too broad—a row appearing once is not a duplicate. Option C is too narrow—customer ID alone doesn't define a duplicate if other data differs. Option D confuses data origin with duplication.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the most direct method to identify duplicate records in an Excel spreadsheet containing 5,000 customer transaction rows?",
+    "options": [
+      "Use conditional formatting with 'Highlight Duplicates' feature on key columns",
+      "Manually scroll through each row and compare values",
+      "Export to a text file and search for identical lines",
+      "Copy data to a new sheet and sort alphabetically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excel's conditional formatting feature with 'Highlight Duplicates' is designed specifically for this task and works efficiently on large datasets. Option B is impractical for 5,000 rows. Option C requires conversion that introduces error risk. Option D (sorting) helps organize data but doesn't directly identify duplicates.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When cleaning sales data for Acme Corporation's Q3 report, an analyst discovers 47 duplicate order records out of 12,500 total orders. What percentage of the dataset contains duplicates?",
+    "options": [
+      "0.376%",
+      "0.475%",
+      "3.76%",
+      "4.75%"
+    ],
+    "correctIndex": 0,
+    "explanation": "47 ÷ 12,500 = 0.00376 = 0.376%. This is the correct calculation. Option B results from 47 ÷ 9,894, a calculation error. Options C and D are off by a factor of 10, a common mistake when converting decimals to percentages.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In SQL, which command is used to remove duplicate rows while keeping one instance of each unique record?",
+    "options": [
+      "DELETE with a WHERE clause combined with ROW_NUMBER()",
+      "DROP DUPLICATE statement",
+      "REMOVE DUPLICATES function",
+      "FILTER UNIQUE operator"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct SQL approach uses DELETE combined with ROW_NUMBER() to identify and remove duplicates while preserving one instance. Option B does not exist as a standard SQL command. Option C is not a valid SQL function. Option D is not standard SQL syntax for this purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A business analyst at TechFlow Inc. is preparing a customer database with 23,000 records. Why is removing duplicates critical before conducting a customer segmentation analysis?",
+    "options": [
+      "Duplicates skew statistical metrics and inflate customer counts, leading to inaccurate segment sizes and targeting",
+      "Duplicates make the spreadsheet file size larger and slower to process",
+      "Duplicates violate data storage policies and legal compliance requirements",
+      "Duplicates prevent the use of advanced visualization tools in dashboards"
+    ],
+    "correctIndex": 0,
+    "explanation": "Duplicates directly compromise analytical accuracy by inflating customer counts and distorting metrics used for segmentation. This leads to incorrect business decisions. Option B is a performance concern but not analytically critical. Option C may be relevant for compliance but isn't the core reason for segmentation. Option D is false—visualization tools work with duplicate data but produce misleading results.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailMax processed 45,000 transactions in March but found 1,350 complete duplicates (identical transaction ID, amount, and date). After removing these, they also identified 180 near-duplicates (same amount and date, different transaction IDs within 5 minutes). What is the total number of suspicious records requiring review?",
+    "options": [
+      "1,530",
+      "1,350",
+      "180",
+      "1,215"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total suspicious records = 1,350 (complete duplicates) + 180 (near-duplicates) = 1,530. These require investigation or removal. Option B counts only complete duplicates, missing the near-duplicates that also need business review. Option C counts only near-duplicates. Option D incorrectly subtracts instead of adds.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "GlobalBank's customer database contains 156,000 records. A duplicate removal process identified that 2.5% of records were exact duplicates. If the bank removes these duplicates, how many records will remain?",
+    "options": [
+      "152,100",
+      "153,900",
+      "151,000",
+      "158,500"
+    ],
+    "correctIndex": 0,
+    "explanation": "2.5% of 156,000 = 3,900 duplicates. Remaining = 156,000 - 3,900 = 152,100. Option B incorrectly calculates 2.5% as 2,100. Option C miscalculates the percentage. Option D adds instead of subtracts.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst at EuroConsumer Ltd. is preparing email campaign data with 87,000 customer records. She identifies duplicates by checking for identical email addresses but finds 340 email duplicates. However, some records have the same person registered with slightly different names (e.g., 'John Smith' vs. 'J. Smith'). What is the most accurate next step?",
+    "options": [
+      "Investigate the 340 email duplicates, but also review name variations and create a more comprehensive matching rule before bulk deletion",
+      "Delete only the 340 email duplicates immediately since the tool identified them automatically",
+      "Delete all 340 email duplicates plus all records with name variations to ensure complete cleaning",
+      "Keep all records since name variations make each record unique and not truly a duplicate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct approach is to investigate systematically, understand the root cause (data entry variations, legitimate account creation), and apply comprehensive matching rules. This prevents both over-deletion and under-deletion. Option B risks deleting important data without business review. Option C over-corrects and deletes legitimate variations. Option D ignores the analytical problem—multiple accounts for the same person will distort analyses.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "During duplicate removal for SafeInsure Corp's claims database (112,000 claims), an analyst uses a pivot table to count claim IDs. She finds that 3 claims appear 5 times each, 8 claims appear 3 times each, and 14 claims appear 2 times each. How many duplicate instances need to be removed (keeping one of each)?",
+    "options": [
+      "54",
+      "70",
+      "25",
+      "84"
+    ],
+    "correctIndex": 0,
+    "explanation": "For 3 claims appearing 5 times: (5-1) × 3 = 12 duplicates to remove. For 8 claims appearing 3 times: (3-1) × 8 = 16 duplicates. For 14 claims appearing 2 times: (2-1) × 14 = 14 duplicates. Total: 12 + 16 + 14 + 12 = 54. Option B counts all instances instead of excess copies. Option C counts only the number of duplicated claims, not instances. Option D adds incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FreshFoods Inc. integrated data from three regional warehouses (North, South, West) into one master inventory database with 34,000 SKUs. They found that 180 SKUs appeared in both North and South regions with identical product codes but different warehouse locations. Are these duplicates?",
+    "options": [
+      "No—these are legitimate records for the same product in different locations; removing one would hide inventory",
+      "Yes—identical product codes mean they must be deleted",
+      "Maybe—it depends on whether the product names are exactly the same",
+      "Yes—all records from merged databases should be deduplicated"
+    ],
+    "correctIndex": 0,
+    "explanation": "These are NOT duplicates in the analytical sense; they represent the same product stocked in different warehouses. Deleting would create inventory loss visibility. This is a critical distinction: duplicate definition depends on business context. Option B incorrectly assumes identical codes mean duplication. Option C misses the key business logic. Option D over-applies deduplication rules without considering business meaning.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at DigitalAds Corp discovered 420 duplicate customer records in a 95,000-row database while preparing data for customer lifetime value (CLV) analysis. She removed 380 duplicates confidently but left 40 records flagged as 'uncertain.' What is the most appropriate next action?",
+    "options": [
+      "Conduct a manual business review of the 40 flagged records with domain experts before deletion, documenting the decision criteria",
+      "Delete all 40 remaining records to ensure data purity",
+      "Keep all 40 records since they weren't confirmed duplicates automatically",
+      "Split the 40 records randomly: delete half and keep half"
+    ],
+    "correctIndex": 0,
+    "explanation": "Uncertain cases require human judgment and business context. Manual review with documentation creates defensible, repeatable standards and prevents both false positives (wrongful deletion) and false negatives (keeping true duplicates that skew CLV). Option B is over-cautious without understanding the records. Option C ignores a known data quality issue. Option D is arbitrary and introduces random error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "PharmaTrack Ltd. uses an automated system to remove duplicates from its 680,000-record clinical trial database daily. Yesterday, the system removed 9,200 records. Today, it removed 8,950 records. What does this variation most likely indicate?",
+    "options": [
+      "Natural variation from incoming data; duplicates should be monitored as a control metric, but consistency is not guaranteed daily",
+      "The system is malfunctioning and should be rebuilt",
+      "Yesterday's removal was incorrect and today's is more accurate",
+      "The data quality improved overnight, so fewer duplicates formed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Duplicate frequency varies based on daily data entry volume, source system changes, and input patterns. Monitoring this metric helps detect underlying data quality trends, but expecting identical daily counts is unrealistic. Option B assumes malfunction without evidence. Option C cannot be determined from this comparison alone. Option D misunderstands causation—data quality doesn't improve overnight without action.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data analyst at SupplyChain Co. is comparing two deduplication methods for their 156,000-transaction dataset: Method A removed 2,340 records (1.5%), and Method B removed 3,120 records (2%). Which statement is most accurate?",
+    "options": [
+      "The methods used different matching criteria, and the analyst must compare results on shared sample records to determine which correctly identifies duplicates",
+      "Method A is superior because it removed fewer records and caused less data loss",
+      "Method B is superior because it identified and removed more duplicates, proving higher accuracy",
+      "Both methods are equally valid since they fall within standard deduplication ranges"
+    ],
+    "correctIndex": 0,
+    "explanation": "Different duplicate-detection approaches (column-based matching, fuzzy matching, ML-based) produce different results. Superiority depends on which truly represents duplicates in the business context, not on the count removed. Option B assumes fewer removals equals better, which is false. Option C assumes more removals equals better, which is equally false. Option D ignores the need for validation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "RetailHub's e-commerce platform processes 3.2 million orders annually across online, mobile, and in-store channels merged into one database. During duplicate removal, an analyst discovers that 0.8% are system duplicates (identical order ID, timestamp, customer), while 2.3% are potential business duplicates (same customer, amount, date, but different channel entry). What is the primary risk of removing all 3.1% without further analysis?",
+    "options": [
+      "Removing legitimate omnichannel orders where customers made the same purchase intentionally across different channels on the same day",
+      "Losing historical transaction records needed for financial audits",
+      "Violating customer privacy regulations by deleting personal data",
+      "Creating database performance issues from incomplete records"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critical distinction: system duplicates (0.8%) should be removed—they're genuine errors. Business duplicates (2.3%) may represent legitimate multichannel activity. A customer might order $150 of groceries both online and in-store on the same day. Bulk removal creates false negatives. Option B is a compliance concern but doesn't address this analysis risk. Option C applies to retention, not deduplication logic. Option D is not caused by deduplication itself.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In preparing quarterly financial data, an analyst at CapitalGroup found that after removing 1,240 duplicate transactions from 187,000 records, the total revenue changed from $47.3 million to $46.8 million. What is the most likely explanation?",
+    "options": [
+      "The 1,240 duplicate transactions represented $500,000 in overstated revenue that will now be accurately reported",
+      "The duplicate removal tool malfunctioned and incorrectly deleted non-duplicate transactions",
+      "The original revenue figure was calculated incorrectly before deduplication",
+      "Removing duplicates always reduces reported revenue because the data became more conservative"
+    ],
+    "correctIndex": 0,
+    "explanation": "The $500,000 reduction ($47.3M - $46.8M) corresponds to the duplicated transactions being counted multiple times in the original figure. Removing them eliminates the overstatement, yielding the true revenue. This is the expected and correct outcome of deduplication. Option B is unfounded without evidence of malfunction. Option C is incorrect logic—the tool revealed the error, not created it. Option D is false—revenue reduction is specific to this case, not a rule.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

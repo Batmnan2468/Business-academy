@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A quality control manager at Tesla needs to determine the probability that a defective battery came from Supplier A given that a defect was found. Which theorem should she use?",
+    "options": [
+      "Bayes' Theorem",
+      "The Law of Large Numbers",
+      "The Central Limit Theorem",
+      "Chebyshev's Inequality"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bayes' Theorem directly addresses the problem of finding the probability of a cause (Supplier A) given an observed effect (defect found). The Law of Large Numbers concerns sample convergence, not conditional probability reversal. The Central Limit Theorem addresses distribution shapes, not cause-effect probability relationships.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At JPMorgan Chase, 3% of loan applications contain fraudulent information. The fraud detection system correctly identifies 95% of fraudulent applications and incorrectly flags 2% of legitimate applications as fraudulent. What is the probability that a flagged application is actually fraudulent? Use Bayes' Theorem.",
+    "options": [
+      "Approximately 59%",
+      "Approximately 95%",
+      "Approximately 3%",
+      "Approximately 2%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using Bayes' Theorem: P(Fraud|Flagged) = P(Flagged|Fraud) × P(Fraud) / P(Flagged). P(Fraud) = 0.03, P(Flagged|Fraud) = 0.95, P(Flagged|Legitimate) = 0.02, P(Legitimate) = 0.97. P(Flagged) = (0.95)(0.03) + (0.02)(0.97) = 0.0285 + 0.0194 = 0.0479. P(Fraud|Flagged) = 0.0285 / 0.0479 ≈ 0.595 or 59.5%. The 95% answer is a common mistake—it's the true positive rate, not the posterior probability, which must account for the base rate of fraud.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In Bayes' Theorem, P(A|B) represents what concept in a business context?",
+    "options": [
+      "The posterior probability: the revised probability of event A after observing evidence B",
+      "The likelihood: the probability of observing evidence B if A is true",
+      "The prior probability: the initial belief about the probability of A before any evidence",
+      "The marginal probability: the overall probability of event B across all scenarios"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(A|B) is the posterior probability—the updated belief about A given that B has been observed. P(B|A) is the likelihood, P(A) is the prior, and P(B) is the marginal probability. Confusing these terms is a fundamental source of error in applying Bayes' Theorem correctly to business problems.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft conducts medical testing for employee health screenings. The test for a rare condition has a sensitivity of 98% and a specificity of 99%. If 0.5% of Microsoft's 200,000 employees have the condition, and the test correctly identifies a positive case, what is the probability an employee actually has the condition?",
+    "options": [
+      "Approximately 33%",
+      "Approximately 98%",
+      "Approximately 99%",
+      "Approximately 50%"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(Disease|Positive) = P(Positive|Disease) × P(Disease) / P(Positive). P(Disease) = 0.005, P(Positive|Disease) = 0.98, P(Positive|No Disease) = 0.01, P(No Disease) = 0.995. P(Positive) = (0.98)(0.005) + (0.01)(0.995) = 0.0049 + 0.009950 = 0.014850. P(Disease|Positive) = 0.0049 / 0.014850 ≈ 0.33 or 33%. The 98% answer incorrectly assumes the test sensitivity is the posterior probability, but base rate and false positives dramatically lower the actual probability of disease given a positive result.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks wants to predict customer default on their $500 loyalty card pre-orders. Historical data shows 8% of orders are canceled within 14 days. Their predictive model has a true positive rate of 85% and a false positive rate of 10%. If the model predicts cancellation for a customer, what is the posterior probability they actually will cancel?",
+    "options": [
+      "Approximately 44%",
+      "Approximately 85%",
+      "Approximately 8%",
+      "Approximately 37%"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(Cancel|Predicted) = P(Predicted|Cancel) × P(Cancel) / P(Predicted). P(Cancel) = 0.08, P(Predicted|Cancel) = 0.85, P(Predicted|No Cancel) = 0.10, P(No Cancel) = 0.92. P(Predicted) = (0.85)(0.08) + (0.10)(0.92) = 0.068 + 0.092 = 0.160. P(Cancel|Predicted) = 0.068 / 0.160 = 0.425 or approximately 44%. The 85% trap incorrectly uses only the true positive rate without incorporating base rate and false positive considerations.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing engineer at Boeing observes that a defective component passed through Quality Assurance. The QA test has a 92% detection rate for defects and a 3% false-positive rate. Defective components occur at a rate of 2% in production. Which calculation step is needed first to apply Bayes' Theorem correctly?",
+    "options": [
+      "Calculate P(Test Positive) using the law of total probability",
+      "Divide P(Test Positive | Defect) by P(Defect)",
+      "Multiply the detection rate by the false-positive rate",
+      "Find the complement of the 92% detection rate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The first essential step in Bayes' Theorem is to calculate the total probability of observing the evidence using the law of total probability: P(Test Positive) = P(Test Positive|Defect) × P(Defect) + P(Test Positive|No Defect) × P(No Defect). Only after this denominator is computed can the posterior probability be calculated. Dividing directly skips the critical step of accounting for both true positives and false positives.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst at Coca-Cola notices that Bayes' Theorem requires the prior probability P(A). In business, why is obtaining an accurate prior probability critical?",
+    "options": [
+      "Because the prior directly influences the posterior probability, and an incorrect prior can reverse the conclusion",
+      "Because the prior must always equal the likelihood for the theorem to work",
+      "Because the prior is independent of the data and therefore can be guessed",
+      "Because the theorem cannot be applied if the prior is below 10%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The prior probability is one of the three components that directly determine the posterior. If the prior is significantly misestimated, the posterior inference can be completely wrong, leading to poor business decisions. The prior and likelihood are distinct quantities that must be carefully estimated independently. The prior is not a guess—it reflects genuine background knowledge and must be determined objectively.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amgen is developing a screening protocol for a rare drug side effect affecting 4 in 10,000 patients. A diagnostic test has 96% sensitivity and 95% specificity. If a patient tests positive, the Amgen physician incorrectly concludes the patient has a 96% probability of having the side effect. What is the physician's error?",
+    "options": [
+      "Confusing sensitivity (the true positive rate) with the posterior probability (P(Disease|Positive))",
+      "Using the wrong formula for Bayes' Theorem entirely",
+      "Failing to account for the sample size of the trial",
+      "Ignoring the specificity rate in the calculation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sensitivity (96%) is P(Positive|Disease), not P(Disease|Positive). The posterior probability must account for the base rate (0.0004), the false positive rate (5%), and use Bayes' Theorem. Actual posterior ≈ (0.96 × 0.0004) / [(0.96 × 0.0004) + (0.05 × 0.9996)] ≈ 0.0076 or 0.76%, far lower than 96%. This base rate fallacy is the most common misapplication of diagnostic test results in healthcare and business.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs uses Bayes' Theorem for credit default prediction. They update their prior belief of default (initially 2%) using new quarterly financial data. If the updated posterior is 8%, what must be true about the likelihood ratio P(Data|Default) / P(Data|No Default)?",
+    "options": [
+      "It must be greater than 1, indicating the data is relatively more likely if default occurs",
+      "It must equal 4 because 8% ÷ 2% = 4",
+      "It must be less than 1 to increase the posterior probability",
+      "It must equal the ratio of 8% to 92%, or approximately 0.087"
+    ],
+    "correctIndex": 0,
+    "explanation": "When the posterior probability (8%) is higher than the prior (2%), the likelihood ratio must be greater than 1. A likelihood ratio > 1 means the observed data is relatively more consistent with default than non-default, supporting an upward belief revision. The ratio 8% ÷ 2% = 4 is the ratio of posteriors to priors, not the likelihood ratio—these are distinct concepts. A likelihood ratio < 1 would decrease the posterior, not increase it.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix's recommendation system uses Bayes' Theorem to estimate the probability a subscriber will cancel, given that they watched only 3 hours of content in the past month. Historically, 6% of subscribers cancel within the next quarter. The model reports P(Cancel | Low Usage) = 18%. Which statement about this result is correct?",
+    "options": [
+      "Low usage is strong evidence of cancellation because 18% is 3 times higher than the 6% base rate",
+      "Low usage guarantees cancellation at the 18% rate",
+      "The base rate of 6% should be ignored because new usage data overrides prior beliefs",
+      "18% is the sensitivity of the low-usage indicator for predicting cancellation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The posterior 18% is three times the prior 6%, indicating that low usage substantially increases cancellation risk compared to the average subscriber. This is a meaningful strength-of-evidence statement, not a guarantee. The base rate is essential to Bayes' Theorem—it is never ignored; it enters directly into the calculation. The 18% is the posterior probability, not sensitivity (which is P(Low Usage | Cancel)).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the mathematical formula for Bayes' Theorem?",
+    "options": [
+      "P(A|B) = P(B|A) × P(A) / P(B)",
+      "P(A|B) = P(A) × P(B)",
+      "P(A|B) = P(B|A) / P(A)",
+      "P(A|B) = P(A) / P(B|A)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct formula is P(A|B) = P(B|A) × P(A) / P(B), where P(B) is often expanded as P(B|A) × P(A) + P(B|¬A) × P(¬A). The second option neglects conditioning; the third and fourth omit or misplace critical terms.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank executive reviews two competing models for identifying money-laundering transactions. Model X has P(Alert|Suspicious) = 0.88 and P(Alert|Normal) = 0.05. Model Y has P(Alert|Suspicious) = 0.75 and P(Alert|Normal) = 0.01. Suspicious transactions occur in 1% of all transactions. Which model produces a higher posterior probability that a transaction is genuinely suspicious given an alert?",
+    "options": [
+      "Model Y, because its lower false-positive rate (0.01 vs 0.05) yields a higher posterior despite lower sensitivity",
+      "Model X, because it has higher sensitivity (0.88 vs 0.75)",
+      "Both models produce identical posteriors because sensitivity is what matters",
+      "Model X, because 88% is greater than 75%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model Y: P(Suspicious|Alert) = (0.75 × 0.01) / [(0.75 × 0.01) + (0.01 × 0.99)] ≈ 43.1%. Model X: P(Suspicious|Alert) = (0.88 × 0.01) / [(0.88 × 0.01) + (0.05 × 0.99)] ≈ 15.1%. Model Y's lower false-positive rate dramatically reduces false alarms, making the posterior much higher despite lower sensitivity. This illustrates the critical business insight that specificity is often more valuable than sensitivity when base rates are low. Higher sensitivity alone does not guarantee better posterior probability.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company testing a new drug finds that 12% of patients experience a particular side effect. In clinical trials, a diagnostic screen detects 89% of cases where the side effect occurs. What additional information is essential to apply Bayes' Theorem to estimate P(Side Effect | Positive Screen)?",
+    "options": [
+      "The false-positive rate: the probability the screen is positive when no side effect is present",
+      "The sample size used in the clinical trial",
+      "The cost per positive screen result",
+      "The age distribution of trial participants"
+    ],
+    "correctIndex": 0,
+    "explanation": "To calculate the posterior P(Side Effect | Positive Screen), we need P(Positive | Side Effect) = 0.89 and P(Side Effect) = 0.12, but we also require P(Positive | No Side Effect)—the false-positive rate—to compute the denominator using the law of total probability. Sample size affects confidence in estimates but is not required for the Bayes calculation itself. Cost and demographics are not inputs to the theorem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company updates its prior probability that a customer will make a repeat purchase from 35% to 52% after observing that the customer wrote a positive product review. This illustrates which Bayesian principle?",
+    "options": [
+      "Belief updating: evidence revises prior beliefs to produce posterior probabilities that guide future decisions",
+      "The law of large numbers ensuring predictions become more accurate with more customers",
+      "Conditional independence meaning the review and purchase are unrelated",
+      "The regression to the mean implying future purchases will trend toward 35%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bayes' Theorem is fundamentally a tool for rational belief updating: the prior (35%) was revised upward to the posterior (52%) based on evidence (positive review). This is the core business application—using new information to improve decisions. The law of large numbers addresses convergence over many trials, not individual updating. Conditional independence would suggest no relationship; the opposite is true here. Regression to the mean would predict reversion to 35%, not movement toward 52%.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An insurance company realizes that its claims adjuster has been applying Bayes' Theorem incorrectly when evaluating fraud claims. The adjuster observes that many confirmed fraud cases involve multiple claims within 90 days. However, the adjuster concludes that the presence of multiple claims is extremely strong evidence of fraud, assigning a posterior probability of 87%. What critical oversight has the adjuster made?",
+    "options": [
+      "Failing to account for the base rate of multiple claims among legitimate customers, who may also file multiple claims for valid reasons",
+      "Using sensitivity instead of specificity in the likelihood calculation",
+      "Confusing the order of conditionality and computing P(Multiple Claims | Fraud) backwards",
+      "Ignoring the total number of customers in the population"
+    ],
+    "correctIndex": 0,
+    "explanation": "The adjuster likely observed that most fraudulent cases involve multiple claims—a high sensitivity—but failed to consider that many legitimate customers also file multiple claims (low specificity). Without knowing the false-positive rate and base rate of multiple claims, the 87% posterior is unjustified. Many legitimate cases could explain multiple claims (damage events, seasonal variations, etc.), making the likelihood ratio much lower than the adjuster's reasoning suggests. This is the base rate fallacy in an insurance context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

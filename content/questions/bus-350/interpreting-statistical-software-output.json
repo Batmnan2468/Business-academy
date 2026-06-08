@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a regression output from SPSS for Target Corporation's quarterly sales data, the R² value is reported as 0.687. What does this value represent?",
+    "options": [
+      "68.7% of the variance in sales is explained by the independent variables in the model",
+      "The correlation coefficient between sales and the predictors is 0.687",
+      "There is a 68.7% probability that the regression model is statistically significant",
+      "The average error in predicting sales is 68.7%"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² (coefficient of determination) specifically measures the proportion of variance in the dependent variable explained by the independent variables. Option B confuses R² with the correlation coefficient r. Option C misinterprets significance with the explanatory power of the model. Option D mistakes R² for mean absolute percentage error (MAPE).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When reading a t-test output from Minitab comparing average weekly labor costs at two Amazon fulfillment centers ($4,200 vs $4,350), you see a p-value of 0.0312. At a 0.05 significance level, what conclusion is appropriate?",
+    "options": [
+      "Reject the null hypothesis; there is significant evidence the centers have different labor costs",
+      "Fail to reject the null hypothesis; the difference is due to sampling error",
+      "Accept the null hypothesis; the centers have identical labor costs",
+      "The p-value indicates there is only a 3.12% chance either center has lower costs"
+    ],
+    "correctIndex": 0,
+    "explanation": "A p-value of 0.0312 is less than the 0.05 significance level, so we reject the null hypothesis of equal means. Option B incorrectly fails to reject when p < α. Option C confuses failing to reject with accepting the null. Option D misinterprets p-value as a probability about population parameters rather than a probability of observing the data given the null is true.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A confidence interval for the average monthly revenue of a Starbucks location is reported as ($85,000, $92,000) with 95% confidence. Which statement correctly interprets this interval?",
+    "options": [
+      "We are 95% confident that the true population mean monthly revenue lies between $85,000 and $92,000",
+      "There is a 95% probability that the next month's revenue will fall between $85,000 and $92,000",
+      "95% of Starbucks locations have monthly revenues between $85,000 and $92,000",
+      "The sample mean monthly revenue is $88,500, and we are 95% certain this is correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval estimates where the population parameter lies; it does not give probabilities about future observations or populations. Option B confuses confidence intervals with prediction intervals. Option C describes a range for data rather than a parameter estimate. Option D incorrectly treats the sample mean as uncertain when it is fixed once calculated.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a correlation output from Excel for Walmart inventory turnover (8.5 times/year) and gross margin (23.4%), the correlation coefficient is reported as r = 0.542. What does this indicate?",
+    "options": [
+      "A moderate positive linear relationship between inventory turnover and gross margin",
+      "A strong causal relationship where inventory turnover causes gross margin to increase",
+      "For every 1 unit increase in turnover, gross margin increases by 0.542%",
+      "54.2% of the variation in gross margin is explained by inventory turnover"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0.542 indicates moderate positive association (not weak, not strong), but correlation does not imply causation. Option B incorrectly infers causation. Option C confuses correlation with regression slope. Option D mistakes correlation coefficient r (0.542) with R² (0.294).",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In SAS output for a one-way ANOVA comparing customer satisfaction scores across three Apple Store locations, the F-statistic is 6.47 with a p-value of 0.0089. What can you conclude?",
+    "options": [
+      "There is significant evidence that at least one Apple Store location has a different mean satisfaction score",
+      "All three locations have significantly different satisfaction scores from each other",
+      "The variation between locations is 6.47 times smaller than the variation within locations",
+      "Each location's satisfaction score will increase by 6.47 points on average"
+    ],
+    "correctIndex": 0,
+    "explanation": "ANOVA tests if at least one group mean differs; it does not identify which specific pairs differ. Option B overstates the conclusion—pairwise tests are needed to compare all pairs. Option C inverts the F-ratio interpretation (F is between-group variance divided by within-group variance). Option D misinterprets F as a coefficient rather than a test statistic.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Stata regression output for Netflix subscriber growth shows: coefficient = 2.8, standard error = 0.95, with a 95% confidence interval of (1.0, 4.6). A colleague claims this means subscribers increase by 2.8 million per quarter. What additional information is needed to verify this claim?",
+    "options": [
+      "The units of the dependent and independent variables (e.g., millions of subscribers, quarters)",
+      "The R² value to confirm the model explains enough variance",
+      "The p-value to determine if the coefficient is statistically significant",
+      "The sample size to calculate the degrees of freedom"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient's interpretation depends entirely on the units of measurement. Without knowing if the dependent variable is in millions, thousands, or units, we cannot claim subscribers increase by 2.8 million. Option B (R²) measures explanatory power, not the meaning of the coefficient. Option C (p-value) tests significance but doesn't clarify units. Option D (sample size) is relevant to inference but not to interpreting the coefficient magnitude.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A chi-square test comparing customer purchase categories (Electronics, Clothing, Home) across two Best Buy regions yields χ² = 7.23 with a p-value of 0.0267. If you reject the null hypothesis, what are you claiming?",
+    "options": [
+      "The distribution of purchase categories is significantly different between the two regions",
+      "Electronics purchases are significantly higher in one region than the other",
+      "The probability of being in any category is equal across both regions",
+      "74% of the variation in purchases is explained by region"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chi-square tests for independence between categorical variables; rejecting the null means the distributions differ across groups. Option B focuses on one category without testing it directly. Option C describes the null hypothesis itself, not the conclusion of rejecting it. Option D misapplies R² logic to a chi-square test, which does not produce an R² value.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a logistic regression output from Python (scikit-learn) predicting whether a Uber customer will return (1 = yes, 0 = no), the coefficient for 'Trip_Distance_Miles' is 0.082 with a standard error of 0.031. Calculate the 95% confidence interval for this coefficient.",
+    "options": [
+      "(0.021, 0.143)",
+      "(0.051, 0.113)",
+      "(0.013, 0.151)",
+      "(0.031, 0.082)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 95% CI is calculated as coefficient ± (1.96 × SE) = 0.082 ± (1.96 × 0.031) = 0.082 ± 0.061 = (0.021, 0.143). Option B uses an approximate z-value of 1.6 instead of 1.96. Option C uses 2.2 as the z-multiplier. Option D incorrectly sets the bounds as (SE, coefficient).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing team at Coca-Cola uses a regression to predict quarterly sales (in millions) using advertising spend (in thousands). The output shows: Y = 120 + 1.5X, with X = 8,000 (thousands) and a prediction interval of ($140M, $160M). Why might the actual sales be outside this interval?",
+    "options": [
+      "The prediction interval assumes the same relationship holds, but unmeasured variables or structural changes could affect sales",
+      "The regression assumptions (linearity, homoscedasticity, normality) were definitely violated",
+      "The sample size was too small to create a valid interval",
+      "The advertising spend was too high, making predictions unreliable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prediction intervals are based on the model assumptions and historical data; they do not account for structural changes, competitive factors, or variables not in the model. Option B overstates that violation is definite—the interval is constructed under these assumptions, but we don't know they're violated. Option C assumes sample size is insufficient without evidence. Option D confuses high predictor values with unreliable predictions; high X values don't necessarily invalidate predictions.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JetBlue's financial analyst outputs a two-sample t-test comparing fuel costs ($/gallon) in 2022 ($3.42 avg) vs. 2023 ($4.18 avg). The output shows: t = -4.56, df = 145, p-value < 0.0001, 95% CI = (-1.02, -0.52). Which interpretation is most accurate?",
+    "options": [
+      "Fuel costs were significantly higher in 2023, with a difference estimated between $0.52 and $1.02 per gallon",
+      "There is very strong evidence that 2023 fuel costs exceed 2022 costs by exactly $0.76 per gallon",
+      "The negative t-statistic proves 2023 had lower costs than 2022",
+      "We are 95% confident that the true difference is any value in the interval (-1.02, -0.52)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The negative CI values and negative t-statistic indicate 2023 costs are significantly higher (4.18 - 3.42 = 0.76). The interval (-1.02, -0.52) represents the 95% confidence interval for (2022 - 2023), so the true difference is between $0.52 and $1.02 higher in 2023. Option B treats the point estimate as a certain value rather than a range estimate. Option C confuses the sign of t with the direction (the negative t reflects the ordering used). Option D misinterprets confidence intervals—we are 95% confident the parameter lies in the interval, not that any single value in it is equally likely.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A multiple regression output for Zillow home price predictions includes three predictors: square footage, number of bedrooms, and age (years). The partial F-test for adding 'age' alone yields F = 2.34 with p-value = 0.1456. The analyst concludes: 'Age does not significantly help predict home price.' Which concern is most critical to verify?",
+    "options": [
+      "Whether the other predictors (square footage, bedrooms) are already capturing most of the information that age would add (multicollinearity or redundancy)",
+      "Whether the sample size is large enough to detect a true effect of age",
+      "Whether home prices follow a normal distribution",
+      "Whether the F-statistic should have been a t-statistic instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "A non-significant partial F-test for age could mean age truly doesn't help, or it could mean age is redundant given the other variables already in the model. This is a crucial distinction for interpretation. Option B (sample size) is relevant to power but doesn't change the interpretation that age doesn't add significant incremental information given other predictors. Option C (normality) affects inference validity but doesn't address redundancy. Option D is incorrect—the partial F-test is the appropriate test for adding a variable to an existing model.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a SurveyMonkey output analyzing Microsoft employee satisfaction (1-10 scale), the margin of error is reported as ±2.5 points with 95% confidence for n = 625 employees. A junior analyst states: 'If the sample mean is 7.2, then we are 95% sure the true population mean is between 4.7 and 9.7.' What is the error in this reasoning?",
+    "options": [
+      "The margin of error only applies to the specific sample taken; different samples would yield different confidence intervals, not a single guaranteed interval",
+      "The confidence level should be 98% for a margin of error of ±2.5 with n = 625",
+      "The population mean is fixed, not random; what varies is which interval we calculate from repeated sampling",
+      "The margin of error ±2.5 is too wide for a sample of 625 and should be recalculated"
+    ],
+    "correctIndex": 2,
+    "explanation": "The most fundamental error is treating the population mean as a random variable. The true mean is fixed (unknown); what varies across repeated samples is the confidence interval we calculate. We are 95% confident that our method captures the true mean, not that this specific interval is guaranteed to contain it. Option A, while true, is less precise about the logical error. Option B requires calculating the required sample size, which is not the stated issue. Option D questions whether the margin is appropriate but doesn't address the logical flaw in the statement.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant runs a Kruskal-Wallis test (non-parametric) on customer satisfaction across four Disney park locations. The test yields H = 12.67, p-value = 0.0052. However, the data inspection shows several outliers and non-normal distributions. Why is the Kruskal-Wallis choice particularly important here?",
+    "options": [
+      "Kruskal-Wallis uses ranks instead of raw values, making it robust to outliers and non-normality that would violate ANOVA assumptions",
+      "The p-value of 0.0052 automatically becomes unreliable because of the outliers",
+      "Kruskal-Wallis is more powerful than ANOVA, guaranteeing a smaller p-value",
+      "Kruskal-Wallis requires exactly equal group sizes, which is less likely with real data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Kruskal-Wallis test is non-parametric and works with ranks, making it much more robust to outliers and violations of normality. This is precisely why it was the right choice given the data characteristics. Option B incorrectly claims the test becomes unreliable despite being chosen to handle these issues. Option C reverses the claim—Kruskal-Wallis is generally less powerful than ANOVA when assumptions are met, but it is more reliable when they are violated. Option D is incorrect—Kruskal-Wallis does not require equal group sizes.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An A/B test output from Google Analytics shows: Variant A (Control): 4,200 users, 512 conversions (12.2% rate). Variant B (New): 4,150 users, 548 conversions (13.2% rate). A two-proportion z-test yields z = 1.64, p-value = 0.1008. The product manager says: 'The p-value of 0.1008 is very close to 0.05, so we should implement Variant B.' What is the primary issue with this decision?",
+    "options": [
+      "At a 0.05 significance level, a p-value of 0.1008 fails to provide sufficient evidence to reject the null hypothesis, so the difference is not statistically significant",
+      "The sample size is too small (about 8,000 users), so the p-value cannot be trusted",
+      "The p-value should have been multiplied by 2 for a two-tailed test, making it 0.2016",
+      "Variant B's 13.2% rate is clearly better than Variant A's 12.2%, so statistical significance is irrelevant"
+    ],
+    "correctIndex": 0,
+    "explanation": "With p = 0.1008 > 0.05, we fail to reject the null hypothesis of equal proportions. 'Close to 0.05' does not mean 'sufficient evidence.' The product manager is confusing near-significance with statistical significance. Option B is incorrect—8,000 users is a reasonable sample size. Option C may be an error if the test was one-tailed, but it doesn't address the real issue: the result is not significant at the chosen level. Option D confuses practical significance with statistical significance; we cannot rely on observed differences when they may be due to random sampling variation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a Cox proportional hazards model from R analyzing customer churn at Netflix, the hazard ratio for 'Account_Age_Years' is 0.94 (95% CI: 0.91–0.97, p = 0.0003). What does this output tell us?",
+    "options": [
+      "For each additional year of account age, the hazard (instantaneous risk) of churn decreases by 6%, and this effect is highly statistically significant",
+      "Customers with longer account age are 94% more likely to churn than new customers",
+      "The probability of churn is multiplied by 0.94 for each year, with 94% certainty",
+      "Account age explains 94% of the variance in churn"
+    ],
+    "correctIndex": 0,
+    "explanation": "A hazard ratio of 0.94 means the hazard is multiplied by 0.94 for each additional year, representing a 6% decrease in instantaneous churn risk per year. The narrow CI and tiny p-value indicate strong evidence. Option B incorrectly interprets the direction—HR < 1 means lower hazard, not higher. Option C confuses the HR with a probability and the p-value with certainty. Option D misapplies R² language to a survival model, which does not use R².",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

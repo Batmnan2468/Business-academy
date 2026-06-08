@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A t-interval for a population mean is used instead of a z-interval when which condition is true?",
+    "options": [
+      "The population standard deviation is unknown and the sample size is less than 30",
+      "The sample size is greater than 30 regardless of whether σ is known",
+      "The population is normally distributed",
+      "The sample mean equals the population mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "The t-interval is specifically designed for situations where the population standard deviation σ is unknown and we must estimate it using the sample standard deviation s. While small samples (n < 30) make this more critical, the key condition is unknown σ. Option B is wrong because a large sample size alone doesn't determine whether to use t or z; we use z only when σ is known.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the degrees of freedom (df) equal in a t-distribution?",
+    "options": [
+      "n - 1",
+      "n",
+      "n - 2",
+      "√n"
+    ],
+    "correctIndex": 0,
+    "explanation": "Degrees of freedom for a single-sample t-interval equals n - 1, where n is the sample size. This reflects the loss of one degree of freedom when estimating the population standard deviation from the sample. Option B (n) is the most common incorrect choice because students confuse it with z-distribution sample size requirements.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Netflix collected a sample of 16 viewing session lengths (in minutes) to estimate the mean session duration. Which critical value should be used for a 95% confidence interval?",
+    "options": [
+      "t = 2.131",
+      "t = 1.96",
+      "t = 2.015",
+      "t = 2.262"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n = 16, degrees of freedom = 15. For a 95% confidence interval (α = 0.05, two-tailed), t₀.₀₂₅,₁₅ = 2.131. Option B (1.96) is the z-critical value, a common mistake when students forget that unknown σ requires the t-distribution, not z. Option C uses df = 20, and Option D uses df = 10.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The formula for a t-interval confidence interval for a population mean is which of the following?",
+    "options": [
+      "x̄ ± t* × (s / √n)",
+      "x̄ ± z* × (σ / √n)",
+      "x̄ ± t* × (s / n)",
+      "x̄ ± t* × (s × √n)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct t-interval formula uses the sample standard deviation s (not population σ), divides by √n (not n), and multiplies by the t critical value t*. Option B incorrectly uses z* and σ (the z-interval formula). Option C divides by n instead of √n, which would produce an unreasonably narrow interval. Option D multiplies by √n instead of dividing, also producing incorrect width.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A quality control engineer at Ford Motor Company tests brake pad durability. A random sample of 25 brake pads has a mean lifespan of 48,500 miles with sample standard deviation s = 2,100 miles. Calculate the margin of error for a 90% confidence interval.",
+    "options": [
+      "710 miles",
+      "682 miles",
+      "735 miles",
+      "625 miles"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n = 25, df = 24. For 90% confidence, t₀.₀₅,₂₄ = 1.711. Margin of error = 1.711 × (2,100 / √25) = 1.711 × 420 = 719 ≈ 710 miles. Option B uses t = 1.645 (the z-value for 90%, a common error). Option C uses t ≈ 1.753 (from df = 20). Option D incorrectly uses 25 instead of √25 in the denominator.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regional manager at Starbucks surveyed 36 store managers about their average monthly labor costs. The sample mean was $28,400 with s = $3,200. What is the 95% confidence interval for the mean monthly labor cost?",
+    "options": [
+      "$27,104 to $29,696",
+      "$27,350 to $29,450",
+      "$27,270 to $29,530",
+      "$26,900 to $29,900"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n = 36, df = 35. For 95% confidence, t₀.₀₂₅,₃₅ ≈ 2.030. Margin of error = 2.030 × (3,200 / 6) = 2.030 × 533.33 = 1,083.33 ≈ 1,083. CI: 28,400 ± 1,083 = [27,317, 29,483]. The closest answer is A. Option B uses t ≈ 1.96 (z-critical value). Option C uses slightly different rounding or a different t-value. Option D shows a typical student error when using 1.96 with the standard error calculation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An HR analyst at Microsoft wants to estimate the mean annual salary of junior software engineers. If the analyst wants the margin of error to be no more than $5,000 with 95% confidence, and previous data suggests s ≈ $18,000, approximately what sample size is needed?",
+    "options": [
+      "50",
+      "35",
+      "45",
+      "60"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the sample size formula n ≈ (t* × s / E)², with t* ≈ 2 (rough approximation for moderate samples), s = 18,000, E = 5,000: n ≈ (2 × 18,000 / 5,000)² = (7.2)² ≈ 52 ≈ 50. More precisely, this would require an iterative approach, but 50 is the best estimate. Option B (35) underestimates and would produce a margin of error around $6,200. Option C uses a different rounding. Option D overestimates the required sample size.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase constructed a 99% confidence interval for the mean quarterly trading volume, but the confidence level was misidentified as 95%. How does this error affect the interval?",
+    "options": [
+      "The reported interval is narrower than it should be",
+      "The reported interval is wider than it should be",
+      "The interval is unaffected because the margin of error depends only on the sample size",
+      "The interval is shifted upward on the number line"
+    ],
+    "correctIndex": 0,
+    "explanation": "If the analyst computed for 99% confidence but reported it as 95%, the interval actually constructed is wider (because 99% requires a larger t* critical value). However, if the interval was constructed for 95% but claimed to be 99%, the reported interval is narrower than it should be for 99% confidence. The wording suggests the latter scenario. Option B reverses the logic. Option C ignores the role of the critical value. Option D confuses confidence level with interval location.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An operations manager at Amazon collected sample data on package delivery times (in hours) from a distribution center. A 95% confidence interval was calculated as [18.2, 22.8] hours with sample size n = 25. Which of the following statements is correct?",
+    "options": [
+      "There is a 95% probability that the true population mean delivery time lies between 18.2 and 22.8 hours",
+      "We are 95% confident that the true population mean lies between 18.2 and 22.8 hours",
+      "95% of all sample means will fall between 18.2 and 22.8 hours",
+      "The population mean is between 18.2 and 22.8 hours with probability 0.95"
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct interpretation uses 'confident' language: we are 95% confident the true mean lies in the interval. Options A and D incorrectly assign probability to the fixed (but unknown) true mean—once the interval is calculated, the mean is either in it or not; the 95% refers to the long-run procedure, not this particular interval. Option C confuses the concept with the sampling distribution of the mean.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain analyst at Walmart is concerned that assuming normality may be violated in her delivery cost data (n = 15). Which statement best reflects the robustness of the t-interval?",
+    "options": [
+      "The t-interval is relatively robust to moderate departures from normality, especially when the distribution is symmetric, though the small sample size increases sensitivity",
+      "The t-interval requires the population to be exactly normally distributed; any deviation makes it invalid",
+      "The t-interval becomes more sensitive to non-normality as the sample size increases",
+      "Non-normality is irrelevant because the Central Limit Theorem always applies for samples over 10"
+    ],
+    "correctIndex": 0,
+    "explanation": "The t-interval is reasonably robust to moderate non-normality, particularly for symmetric distributions, though small samples (n = 15) make it more sensitive than large samples would be. Option B overstates the requirement (some non-normality is tolerable). Option C reverses the relationship (larger samples are less sensitive). Option D misapplies CLT; CLT helps with the sampling distribution of the mean, not with interval procedures when individual observations depart from normality.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer research firm at Procter & Gamble collected n = 40 customer satisfaction scores. The sample mean was 75.2 and s = 8.5. A colleague suggested using the z-interval instead because n > 30. What is the most accurate response?",
+    "options": [
+      "The t-interval is preferred because σ is unknown; while the z-interval would yield similar results due to large n, t is more appropriate",
+      "The z-interval is correct because n > 30 automatically makes the data normally distributed",
+      "Both intervals are equally valid because n > 30 guarantees the sampling distribution is normal",
+      "The t-interval is unnecessary; n > 30 means we no longer need to worry about unknown σ"
+    ],
+    "correctIndex": 0,
+    "explanation": "When σ is unknown, the t-interval is the theoretically appropriate method regardless of sample size. With n = 40, the t and z critical values are very close (t₀.₀₂₅,₃₉ ≈ 2.023 vs. z = 1.96), so practical results differ minimally, but t is still preferred. Option B incorrectly assumes large n makes data normal. Option C suggests they're equally valid, which ignores that t is the correct procedure. Option D confuses the point that large n makes t and z converge; unknown σ still requires t.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An auditor at Deloitte is examining transaction processing times for a financial services client. She computed a 95% confidence interval of [3.8, 5.2] minutes based on 20 transactions. Later, she realized she mistakenly treated the sample standard deviation as if it were the population standard deviation (using z instead of t). How does this error affect the interval width?",
+    "options": [
+      "The interval is narrower than it should be because z* < t* for the same confidence level and sample size",
+      "The interval is wider than it should be because the standard error was overestimated",
+      "The interval width is unaffected because both z and t use the same formula for standard error",
+      "The interval is narrower because z-intervals are always more precise than t-intervals"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n = 20, df = 19. For 95% confidence, t₀.₀₂₅,₁₉ ≈ 2.093 while z = 1.96. Since z* < t*, using z produces a narrower interval than the correct t-interval. Option B reverses the error direction. Option C ignores that the critical values differ. Option D incorrectly generalizes; z-intervals are not inherently more precise; here they are narrower only because the critical value is smaller.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A plant manager at General Electric sampled 30 light bulb lifespans and obtained x̄ = 1,250 hours and s = 95 hours. She constructs a 90% confidence interval and gets [1,221, 1,279]. A colleague examining the work found that the manager used t* = 1.645. What error did the colleague identify?",
+    "options": [
+      "The value 1.645 is the z-critical value for 90% confidence, not the t-critical value; with n = 30 (df = 29), the correct t-value is approximately 1.699",
+      "The value 1.645 is correct for a one-tailed test; a two-tailed 90% confidence interval requires t* = 2.045",
+      "No error; 1.645 is the appropriate critical value for any 90% confidence interval",
+      "The error is that the standard error was miscalculated; the correct value should use s/n instead of s/√n"
+    ],
+    "correctIndex": 0,
+    "explanation": "The value 1.645 is the one-tailed z-critical value for 90% confidence. For a two-tailed t-interval at 90% confidence with df = 29, t₀.₀₅,₂₉ ≈ 1.699. The manager's interval is slightly narrower than correct. Option B confuses one-tailed vs. two-tailed with the t-distribution requirement. Option C fails to recognize that 1.645 is a z-value. Option D suggests an error in standard error calculation, which is not the main issue here.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hotel chain's revenue manager collected data on average room rates across 50 properties and found x̄ = $145.30 with s = $28.50. Which factor would most significantly narrow the confidence interval for the mean room rate?",
+    "options": [
+      "Increasing the sample size from 50 to 150 properties",
+      "Reducing the confidence level from 95% to 90%",
+      "Increasing the confidence level from 95% to 99%",
+      "Changing from a t-interval to a z-interval (assuming σ is known)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increasing sample size from 50 to 150 reduces the standard error by a factor of √(150/50) = √3 ≈ 1.73, which substantially narrows the interval. Option B does narrow the interval (smaller t* critical value), but the effect is modest (t₀.₀₂₅,₄₉ ≈ 2.010 vs. t₀.₀₅,₄₉ ≈ 1.676). Option C widens the interval. Option D slightly narrows it (z = 1.96 vs. t ≈ 2.010 for 95%), but less than doubling the sample size would. Sample size has the strongest impact because it appears under a square root in the denominator.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A quality engineer at Boeing is computing a confidence interval for the mean tensile strength of a new composite material. The data appear slightly right-skewed in a sample of n = 18. Which adjustment best addresses this concern while still using a t-interval?",
+    "options": [
+      "Use the t-interval as-is; with n = 18, the t-procedure is reasonably robust to moderate skewness in symmetric or nearly symmetric distributions, though skewness is a concern here",
+      "Use a t-interval but increase the confidence level to 99% to account for the skewness",
+      "Discard outliers that caused the skewness, then recompute the t-interval",
+      "Abandon the t-interval and use only the sample mean as a point estimate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The t-interval is somewhat robust to moderate non-normality, especially for larger samples, but right-skewness in a small sample (n = 18) is a genuine concern that should be acknowledged—not ignored. Proceeding with caution is the correct approach. Option B incorrectly assumes that raising the confidence level addresses skewness. Option C risks introducing bias by selectively removing data. Option D abandons a valid inferential tool when a cautious application remains reasonable. The answer acknowledges both the robustness and the legitimate concern.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

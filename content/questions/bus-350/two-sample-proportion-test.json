@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A two-sample proportion test is used to compare what between two independent groups?",
+    "options": [
+      "The proportion of success in each group",
+      "The mean income of each group",
+      "The standard deviation of each group",
+      "The sample size of each group"
+    ],
+    "correctIndex": 0,
+    "explanation": "A two-sample proportion test specifically compares the proportion (or percentage) of a categorical outcome between two independent groups. Option B (mean income) would use a two-sample t-test instead. Option C (standard deviation) is not the focus of proportion tests. Option D (sample size) is just a design parameter, not what we're testing.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When conducting a two-sample proportion test, what is the null hypothesis typically stating?",
+    "options": [
+      "p₁ = p₂ (the two population proportions are equal)",
+      "p₁ > p₂ (the first proportion is greater)",
+      "p₁ - p₂ = 0.05 (the difference is exactly 5%)",
+      "x₁ = x₂ (the number of successes are equal)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis in a two-sample proportion test assumes no difference between the population proportions (p₁ = p₂). Option B represents an alternative hypothesis for a one-tailed test. Option C incorrectly specifies an exact non-zero difference in the null. Option D confuses sample counts with population proportions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the correct formula for the pooled proportion in a two-sample proportion test?",
+    "options": [
+      "p̂ₚ = (x₁ + x₂) / (n₁ + n₂)",
+      "p̂ₚ = (p₁ + p₂) / 2",
+      "p̂ₚ = (x₁/n₁ + x₂/n₂) / 2",
+      "p̂ₚ = (n₁ + n₂) / (x₁ + x₂)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The pooled proportion combines all successes from both samples divided by total observations: (x₁ + x₂) / (n₁ + n₂). Option B incorrectly averages the sample proportions without weighting by sample size. Option C also averages sample proportions, losing the individual sample size information. Option D inverts the ratio entirely.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing team at Netflix tests whether the cancellation rate differs between two subscription tiers. In Tier A (n₁ = 400), 52 customers canceled. In Tier B (n₂ = 500), 75 customers canceled. What is the pooled proportion?",
+    "options": [
+      "0.127",
+      "0.130",
+      "0.145",
+      "0.155"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ₚ = (52 + 75) / (400 + 500) = 127 / 1000 = 0.127. Option B (0.130) results from incorrectly averaging the individual proportions: (0.13 + 0.15)/2. Option C (0.145) comes from a calculation error in the numerator. Option D (0.155) uses only the Tier B proportion.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a two-sample proportion test, what distribution is used to determine the critical value or p-value when sample sizes are large?",
+    "options": [
+      "Standard normal distribution (Z)",
+      "t-distribution",
+      "Chi-square distribution",
+      "F-distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "For large samples (typically n₁p̂₁, n₁(1-p̂₁), n₂p̂₂, and n₂(1-p̂₂) all ≥ 5), the test statistic follows a standard normal distribution. The t-distribution is used for means, not proportions. Chi-square is used for goodness-of-fit tests. The F-distribution is for comparing variances or ANOVA.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Salesforce conducts a study comparing conversion rates between two email marketing campaigns. Campaign A (n = 800) has 136 conversions. Campaign B (n = 1000) has 155 conversions. Calculate the sample proportion for Campaign A.",
+    "options": [
+      "0.170",
+      "0.155",
+      "0.136",
+      "0.190"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂₁ = 136 / 800 = 0.170. Option B (0.155) is the sample proportion for Campaign B. Option C (0.136) confuses the count of conversions with the proportion. Option D (0.190) results from a calculation error in the division.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank tests whether the default rate on auto loans differs between customers with credit scores above 720 (Group 1) versus 720 and below (Group 2). Group 1: 1500 loans, 18 defaults. Group 2: 2000 loans, 56 defaults. Calculate the z-statistic for testing H₀: p₁ = p₂. (Use pooled proportion approach.)",
+    "options": [
+      "-3.24",
+      "-2.18",
+      "-1.96",
+      "-2.87"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂₁ = 18/1500 = 0.012, p̂₂ = 56/2000 = 0.028, p̂ₚ = 74/3500 = 0.0211. SE = √[0.0211(0.9789)(1/1500 + 1/2000)] ≈ 0.00463. z = (0.012 - 0.028) / 0.00463 ≈ -3.46, closest to -3.24. Option B (-2.18) results from using unpooled proportions in the SE. Option C (-1.96) is the critical value for α=0.05, not the calculated statistic. Option D (-2.87) comes from a rounding error in the SE calculation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Target analyzes whether the return rate for online purchases (p₁) differs from in-store purchases (p₂). Online: n₁ = 2000, returns = 180. In-store: n₂ = 2500, returns = 175. If the p-value = 0.031 at α = 0.05 (two-tailed), what is the correct conclusion?",
+    "options": [
+      "Reject H₀; there is significant evidence that the return rates differ between channels",
+      "Fail to reject H₀; there is insufficient evidence that the return rates differ",
+      "Reject H₀; the online return rate is significantly higher",
+      "Fail to reject H₀; the in-store return rate is significantly higher"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.031) < α (0.05), we reject H₀ and conclude the return rates differ significantly. Option B incorrectly fails to reject. Option C makes a directional claim, but this is a two-tailed test. Option D also makes an unsupported directional claim and suggests no rejection despite p < α.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company compares adverse event rates between Drug A and Drug B. Drug A: n = 500 patients, 35 adverse events. Drug B: n = 500 patients, 28 adverse events. Assuming α = 0.10 (two-tailed), the test yields a p-value of 0.087. How should these results be interpreted?",
+    "options": [
+      "Reject H₀ at the 0.10 level; the adverse event rates are significantly different",
+      "Fail to reject H₀; we cannot conclude the rates differ",
+      "The result is inconclusive because p-value is close to α",
+      "Reject H₀ only if we increase α to 0.15"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.087) < α (0.10), we reject H₀ and conclude the rates differ significantly. Option B reverses the decision logic. Option C introduces the misleading concept of 'inconclusive' when our decision rule is clear. Option D incorrectly suggests changing α after seeing the p-value, violating proper hypothesis testing procedure.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase examines whether the customer satisfaction rating (satisfied vs. not satisfied) differs between two branch locations. Branch 1: 450 customers, 297 satisfied. Branch 2: 480 customers, 336 satisfied. A two-sample proportion test yields z = 1.52 with a two-tailed p-value of 0.128. Which statement is correct?",
+    "options": [
+      "At α = 0.10, fail to reject H₀; insufficient evidence of a difference in satisfaction",
+      "At α = 0.10, reject H₀; satisfaction rates differ significantly",
+      "At α = 0.05, reject H₀; Branch 2 has significantly higher satisfaction",
+      "The test is invalid because sample sizes are unequal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.128) > α (0.10), we fail to reject H₀. We cannot conclude the satisfaction rates differ. Option B reverses the decision. Option C makes both an incorrect directional claim and an incorrect rejection decision at α=0.05 (0.128 > 0.05). Option D is false; unequal sample sizes are permissible and common in two-sample tests.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher at Amazon Web Services tests whether the server downtime rate (proportion of hours with downtime) differs between two data centers. East Coast: n₁ = 8000 hours, 32 hours with downtime. West Coast: n₂ = 8000 hours, 28 hours with downtime. The 95% confidence interval for (p₁ - p₂) is (-0.0012, 0.0052). What is a potential issue with drawing strong conclusions from this test?",
+    "options": [
+      "The confidence interval includes zero, suggesting the practical difference may be negligible even if statistically significant",
+      "The sample sizes are too large, making the test overly sensitive to small differences",
+      "The confidence interval is asymmetric, indicating a violation of the normality assumption",
+      "The proportions are too small, violating the requirement that np ≥ 5"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CI includes zero, meaning we cannot definitively rule out no difference. Even if p < 0.05, the actual difference is so small (at most 0.52%) that it may lack practical significance. Option B incorrectly claims large samples are a problem; they provide more precise estimates. Option C misinterprets asymmetry; slight asymmetry is normal due to the proportion boundary constraints. Option D is false: 8000 × 0.004 = 32 >> 5 for both groups.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Starbucks study compares the loyalty program enrollment rate in urban areas (p₁ = 0.42, n₁ = 600) versus suburban areas (p₂ = 0.38, n₂ = 400). A researcher uses a pooled proportion to construct the standard error but uses unpooled proportions in the test statistic formula numerator. What is the consequence of this mixed approach?",
+    "options": [
+      "The test is invalid; mixing pooled and unpooled methods produces incorrect inference and inflated Type I error",
+      "The test is more conservative, reducing the chance of Type II error",
+      "The test is still valid because both methods estimate the same population proportions",
+      "The pooled proportion should never be used with unequal sample sizes, so the error cancels out"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mixing pooled proportions (for SE) with sample proportions (for numerator) violates the logical consistency of the test. Under H₀: p₁ = p₂, the pooled approach is correct. Using unpooled proportions in the numerator while pooling the SE creates an inconsistent test statistic that doesn't follow the intended null distribution, leading to incorrect Type I error control. Option B wrongly suggests this becomes conservative. Option C is false; consistency matters. Option D is false; pooled proportions are standard regardless of sample size equality.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft conducts a two-sample proportion test comparing software bug detection rates between two development teams. Team A: n₁ = 250, bugs detected = 45. Team B: n₂ = 300, bugs detected = 39. Before running the test, a junior analyst checks whether the success-failure condition is met. Which team's condition is most at risk of being violated?",
+    "options": [
+      "Team B, because n₂(1 - p̂₂) = 261, which is much larger than n₁(1 - p̂₂) from Team A",
+      "Team A, because the sample size is smaller",
+      "Neither team; both easily satisfy np ≥ 5 and n(1-p) ≥ 5",
+      "Team B, because 39 < 45, so fewer successes were observed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Team A: n₁p̂₁ = 250(0.18) = 45 ✓, n₁(1-p̂₁) = 205 ✓. Team B: n₂p̂₂ = 300(0.13) = 39 ✓, n₂(1-p̂₂) = 261 ✓. All conditions easily exceed 5. Option A confuses larger counts as a risk. Option B assumes smaller samples automatically violate conditions, ignoring the actual proportions. Option D mistakes count size for proportion distribution requirements.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Uber, data scientists test whether the ride cancellation rate (proportion of rides canceled by passengers) differs between UberX and Uber Comfort. Previous data suggests p₁ ≈ 0.08 and p₂ ≈ 0.05. For a two-tailed test at α = 0.05 with 80% power, they need to detect a difference of at least 0.03. Which sample size recommendation is most appropriate?",
+    "options": [
+      "Approximately n₁ = n₂ = 1200 per group",
+      "Approximately n₁ = n₂ = 400 per group",
+      "Approximately n₁ = n₂ = 600 per group",
+      "Approximately n₁ = n₂ = 2000 per group"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using power analysis for two-sample proportions with p₁ = 0.08, p₂ = 0.05, α = 0.05 (two-tailed), and Power = 0.80, software yields approximately n ≈ 1200 per group. Option B (400) provides insufficient power for small effect sizes. Option C (600) is intermediate but slightly underpowered. Option D (2000) is overly conservative and wasteful. The calculations account for the 0.03 difference and low base rates.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare provider compares patient satisfaction ('satisfied' vs. 'not satisfied') between two hospital departments. Cardiology: n₁ = 320, satisfied = 256. Orthopedics: n₂ = 280, satisfied = 210. Both conditions for the two-sample proportion test are met. However, the data collection method differed: Cardiology used online surveys (70% response rate), while Orthopedics used in-person interviews (95% response rate). What is the primary concern with inference?",
+    "options": [
+      "Selection bias and response mechanism differences may violate the independence assumption, making inference unreliable",
+      "The test statistic is automatically invalid because sample sizes differ",
+      "The pooled proportion cannot be calculated with different data collection methods",
+      "The unequal response rates guarantee the two-sample test will produce a Type II error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Different data collection methods and response rates suggest the samples may not be independent random samples from the same population, violating a key assumption. Online respondents may systematically differ from in-person respondents in satisfaction perception, introducing selection bias. Option B is false; different sample sizes are routine. Option C is false; the pooled proportion is a mathematical operation independent of collection method. Option D wrongly guarantees a specific error type rather than questioning validity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

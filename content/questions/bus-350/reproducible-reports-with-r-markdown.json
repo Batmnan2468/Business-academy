@@ -1,0 +1,197 @@
+[
+  {
+    "question": "When creating an R Markdown report for Goldman Sachs' quarterly earnings analysis, what file extension should you use to save the document?",
+    "options": [
+      ".Rmd",
+      ".R",
+      ".md",
+      ".Rtext"
+    ],
+    "correctIndex": 0,
+    "explanation": "R Markdown files use the .Rmd extension, which tells RStudio that the file contains both markdown text and R code chunks. The .R extension is for pure R scripts without markdown formatting, making it incorrect. Many students confuse these extensions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In an R Markdown document for JPMorgan Chase's risk analysis, which symbol pair indicates the start and end of an embedded R code chunk?",
+    "options": [
+      "<!-- --> and <!-- -->",
+      "```{r} and ```",
+      "[[R]] and [[/R]]",
+      "{{R}} and {{/R}}"
+    ],
+    "correctIndex": 1,
+    "explanation": "Code chunks in R Markdown are delimited by triple backticks followed by {r} at the start and triple backticks at the end. The HTML comment syntax (<!-- -->) is used for regular comments, not code chunks. This is a frequent point of confusion for beginners.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You are preparing a report on Apple Inc.'s market share trends from 2019 to 2024. What is the primary purpose of using R Markdown for this business analysis?",
+    "options": [
+      "To increase the file size and storage requirements",
+      "To integrate code, output, and narrative into a single reproducible document",
+      "To replace Excel spreadsheets entirely in financial institutions",
+      "To automatically publish reports directly to stock exchanges"
+    ],
+    "correctIndex": 1,
+    "explanation": "R Markdown's core purpose is reproducibility—combining code, results, and written explanation in one document so others can verify and rerun the analysis. It doesn't increase storage, doesn't replace Excel's core functions, and doesn't auto-publish to regulatory bodies. Reproducibility is the key benefit.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the correct YAML header format for an R Markdown report titled 'Microsoft Revenue Analysis 2024'?",
+    "options": [
+      "title: 'Microsoft Revenue Analysis 2024' author: 'John Smith' date: '2024-01-15'",
+      "---\\ntitle: 'Microsoft Revenue Analysis 2024'\\nauthor: 'John Smith'\\ndate: '2024-01-15'\\n---",
+      "title:: Microsoft Revenue Analysis 2024 | author:: John Smith | date:: 2024-01-15",
+      "TITLE(Microsoft Revenue Analysis 2024) AUTHOR(John Smith) DATE(2024-01-15)"
+    ],
+    "correctIndex": 1,
+    "explanation": "YAML headers must be enclosed between --- delimiters and use proper indentation with colons. The first option lacks the delimiters, the third uses incorrect syntax (double colons and pipes), and the fourth uses function-like notation that is not valid. Proper YAML formatting is critical for R Markdown to parse metadata.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a report for Coca-Cola's beverage sales analysis, you want to include a code chunk that should NOT display the R code itself in the final PDF, only the results. Which chunk option should you use?",
+    "options": [
+      "echo=TRUE",
+      "echo=FALSE",
+      "eval=FALSE",
+      "warning=FALSE"
+    ],
+    "correctIndex": 1,
+    "explanation": "The echo=FALSE option hides the code but displays the output. echo=TRUE (the default) shows code. eval=FALSE prevents execution but would show code. warning=FALSE suppresses warnings but doesn't hide code. For business reports, showing only results (not code) is often preferred.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You are creating an R Markdown report for Netflix that calculates monthly subscriber growth from 45.2 million in Q1 2023 to 52.8 million in Q1 2024. The R code chunk contains: growth_rate <- (52.8 - 45.2) / 45.2 * 100. What is the calculated growth rate, and should this code chunk be cached if the report is generated daily?",
+    "options": [
+      "16.81%, no caching needed because the data changes daily",
+      "16.81%, yes caching would be appropriate since the calculation is static",
+      "14.23%, yes caching is appropriate for quarterly reports",
+      "18.95%, no caching is needed for financial data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The calculation: (52.8 - 45.2) / 45.2 × 100 = 7.6 / 45.2 × 100 = 16.81%. Since this report is generated daily with new data, caching (cache=TRUE) would be inappropriate because cached results wouldn't update. Option 1 correctly identifies both the rate and the caching decision. Option 1 is correct because daily regeneration requires fresh calculations.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant is preparing a monthly R Markdown report for Morgan Stanley that includes three charts (each taking 2.3 minutes to render) and 8 code chunks for data processing. The total rendering time is currently 12 minutes. After implementing caching=TRUE for the two largest visualization chunks, approximately how much time would be saved on the second monthly run if data inputs remain unchanged?",
+    "options": [
+      "2.3 minutes (one chart)",
+      "4.6 minutes (two charts)",
+      "6.9 minutes (three charts)",
+      "12 minutes (entire document is re-rendered)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Caching saves 2 × 2.3 = 4.6 minutes on subsequent runs if the underlying data doesn't change. The data processing chunks still run, so you don't save their time. However, caching only works if inputs are identical—this is a key caveat that many users miss. Option 1 would save only one chart's time, which is incorrect.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "You are creating a quarterly earnings R Markdown report for Salesforce ($34.2B revenue in FY2024) that includes inline code: The company's revenue was `r round(34.2, 1)`B dollars. What will appear in the rendered HTML document?",
+    "options": [
+      "The company's revenue was `r round(34.2, 1)`B dollars.",
+      "The company's revenue was 34.2B dollars.",
+      "The company's revenue was 34B dollars.",
+      "The company's revenue was r round(34.2, 1) B dollars."
+    ],
+    "correctIndex": 1,
+    "explanation": "Inline code using backticks and r executes the R expression and inserts the result into the text. round(34.2, 1) returns 34.2. The backticks and r prefix are removed in output. Option 2 is correct. Option 3 would result if the rounding removed the decimal, but round(34.2, 1) preserves one decimal place. Many users mistakenly think the literal backticks appear in output.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "For a quarterly R Markdown report on Tesla's vehicle production data (Q1 2024: 1.81 million units), you include a code chunk with results='hide'. Later, you need to show only a summary table of the 1.81M figure. What adjustment should you make to display just the table while hiding other console output?",
+    "options": [
+      "Change results='hide' to results='asis' and add print(summary_table)",
+      "Change results='hide' to results='markup'",
+      "Use echo=FALSE instead of results='hide'",
+      "Add results='asis' in addition to results='hide' (both parameters together)"
+    ],
+    "correctIndex": 0,
+    "explanation": "results='hide' suppresses all output; to show specific output, you need results='asis' (which renders output as-is) and explicitly print() the object you want. results='markup' shows all console output. echo=FALSE hides code, not output. Using both parameters simultaneously is invalid syntax. The correct approach requires both changing the parameter AND explicitly printing the desired object.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst creates an R Markdown report on Amazon's AWS revenue ($22.8B in Q1 2024) with the following parameters in the YAML: output: pdf_document. Later, she needs HTML and Word versions. What is the correct way to generate all three formats from one .Rmd file without editing the header?",
+    "options": [
+      "Manually create three separate .Rmd files",
+      "Use rmarkdown::render() function with output_format parameter in the console",
+      "Change pdf_document to 'all_formats' in the YAML",
+      "Use knit_with_parameters() to select output at render time"
+    ],
+    "correctIndex": 1,
+    "explanation": "rmarkdown::render('file.Rmd', output_format='all') or specifying multiple formats generates all outputs. Creating three files is inefficient. 'all_formats' is not a valid parameter. knit_with_parameters() is for runtime parameters, not output formats. The render() function with output_format is the standard approach for multi-format generation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In an R Markdown financial report for Bank of America (assets: $3.45 trillion), a code chunk shows warnings about missing data in 847 rows. The analyst adds warning=FALSE to suppress these messages in the final report. Later, actual errors occur in the calculation, but they are not displayed. Why is this approach problematic, and what should be used instead?",
+    "options": [
+      "Warnings are important; use warning=FALSE only for expected warnings, not errors. Use message=FALSE for non-critical output.",
+      "Errors cannot be suppressed with warning=FALSE; you should use error=FALSE instead.",
+      "Warnings and errors are the same in R; suppress both with suppress_output=TRUE.",
+      "This is the correct approach; hiding all warnings and errors is standard in business reporting."
+    ],
+    "correctIndex": 0,
+    "explanation": "warning=FALSE only suppresses warnings, not errors. Errors still cause the document to fail rendering. A better practice is to investigate warnings, suppress only expected/expected ones, and use message=FALSE for informational messages. error=FALSE doesn't exist as a standard parameter. Hiding all diagnostic output is dangerous in financial reporting where accuracy is critical. Option 0 correctly identifies the distinction and best practice.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You are comparing two R Markdown reports on Intel's semiconductor production costs ($26.3B in annual R&D). Report A uses cache=TRUE for all 12 data processing chunks. Report B uses cache=TRUE only for 3 expensive visualization chunks. A team member updates the input data file mid-month. Which report will correctly regenerate with updated results, and why?",
+    "options": [
+      "Report A; caching applies to the entire document regardless of data changes.",
+      "Report B; only Report B's cache dependency tracking will detect the data file change and invalidate cache.",
+      "Both reports; cache invalidation is automatic in all R Markdown documents.",
+      "Neither; both reports will use stale cached results until cache is manually cleared."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cache dependency tracking detects when input files change and automatically invalidates affected caches. Report B, with selective caching, only caches expensive operations and allows data-dependent chunks to recompute. Report A would blindly reuse all cached results even if data changed—a serious error in financial reporting. Report B's approach is safer because processing chunks (which depend on raw data) are not cached, only final visualizations. Option 1 incorrectly assumes automatic recomputation; option 3 is too pessimistic.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An R Markdown report for Berkshire Hathaway's investment portfolio (total assets: $1.08 trillion) includes inline code calculating a percentage: \"Portfolio allocation: `r (450 / 1080) * 100`%\". The rendered output shows \"Portfolio allocation: 41.666666666666664%\". The audience finds this output unprofessional. What is the root cause, and what is the best solution?",
+    "options": [
+      "The inline code lacks rounding; use `r round((450 / 1080) * 100, 1)`% instead.",
+      "The division operator in R returns more decimals than needed; use integer division with %/% instead.",
+      "The percentage symbol is rendered as HTML; wrap the code in HTML entity notation like &#37;.",
+      "The YAML header is missing the 'digits' parameter; add digits: 2 to format all numeric output."
+    ],
+    "correctIndex": 0,
+    "explanation": "The inline code calculates correctly but displays excessive decimal places (41.67% is more professional than 41.666...%). The solution is to apply round() with the desired decimal places. Integer division (%/%) would give 41, losing the decimal entirely. HTML entity notation is unnecessary—the % symbol renders fine. The 'digits' YAML parameter controls some but not all numeric output and wouldn't apply to inline calculations. Option 0 is the targeted, most practical solution.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst creates an R Markdown report analyzing Toyota's quarterly profits ($6.8B in Q1 2024) with a parameterized chunk that reads: params <- list(company = 'Toyota', profit_q1 = 6.8). The analyst later tries to use rmarkdown::render() with params=list(company='Honda', profit_q1=5.2) but the output still shows Toyota. What is the most likely issue?",
+    "options": [
+      "The params list is hardcoded in the chunk instead of declared in the YAML; it will override any render() parameters.",
+      "R Markdown requires params to be defined only in the console, not passed via render().",
+      "The render() function syntax requires params_list instead of params as the argument name.",
+      "Cache is enabled; the old parameterized values are stored and must be manually cleared."
+    ],
+    "correctIndex": 0,
+    "explanation": "When params are hardcoded in a code chunk (params <- list(...)), they override YAML parameters and any values passed to render(). The correct approach is to declare params in the YAML header under 'params:' and reference them as params$company, params$profit_q1. The hardcoded assignment in the chunk will always take precedence. Option 1 is incorrect—render() does support params. Option 2 uses wrong syntax. Option 3 about cache is a red herring. Option 0 identifies the actual parameter precedence issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You are preparing an R Markdown quarterly report for Procter & Gamble (P&G) that integrates data from three sources: a CSV file updated monthly ($18.4B Q1 revenue), a real-time API call (daily competitor pricing), and a static lookup table (product categories). Which elements should be cached, and which should never be cached?",
+    "options": [
+      "Cache only the CSV read; never cache API or lookup operations.",
+      "Cache the CSV read and lookup table; never cache the API call due to real-time requirements.",
+      "Cache all three; use dependson parameter to refresh when external files change.",
+      "Never cache any data input; only cache final visualization rendering steps."
+    ],
+    "correctIndex": 1,
+    "explanation": "The CSV file is updated monthly, so caching between renders within a month is sensible and improves speed. The lookup table is static, so caching it is safe. The API call returns real-time data and must never be cached—doing so would show stale competitor prices. Option 0 is too conservative and misses the benefit of caching the static lookup. Option 2 incorrectly caches dynamic API data. Option 3 wastes time recalculating unchanged data. Option 1 correctly identifies the trade-off between performance and data freshness.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In logistic regression, what is the primary purpose of the logistic function (sigmoid curve)?",
+    "options": [
+      "To transform continuous predictions into probabilities between 0 and 1",
+      "To convert categorical variables into numeric values",
+      "To eliminate negative coefficients from the model",
+      "To ensure the error term follows a normal distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sigmoid function maps any real-valued input to a probability between 0 and 1, which is essential for binary classification. Option B is tempting because logistic regression does handle categorical variables, but that requires dummy encoding, not the logistic function itself. Option C misunderstands that the logistic function handles the output range, not input coefficients.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank uses logistic regression to classify loan applications as 'approved' (1) or 'rejected' (0). What does a predicted probability of 0.72 mean?",
+    "options": [
+      "The model estimates a 72% chance the loan will be approved",
+      "The applicant's loan will definitely be approved",
+      "72% of the training data had approved loans",
+      "The model is 72% accurate overall"
+    ],
+    "correctIndex": 0,
+    "explanation": "A predicted probability represents the model's estimated likelihood of the positive class (approval). Option B is incorrect because a probability is not a certainty—0.72 is a prediction, not a guarantee. Option C confuses base rate with prediction. Option D conflates the predicted probability for one case with overall model accuracy.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In classification tasks, what is the key difference between logistic regression and linear regression?",
+    "options": [
+      "Logistic regression predicts probabilities for categorical outcomes, while linear regression predicts continuous values",
+      "Logistic regression uses categorical predictors, while linear regression uses only numeric predictors",
+      "Logistic regression always has higher accuracy than linear regression",
+      "Logistic regression requires more data to build an effective model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logistic regression is designed for binary/categorical outcomes and outputs probabilities via the sigmoid function, while linear regression predicts continuous numeric values. Option B is false because both can use either categorical (after encoding) or numeric predictors. Option C is a generalization with no empirical basis. Option D confuses model complexity with data requirements.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An e-commerce company uses logistic regression to predict whether a customer will make a purchase (1) or not (0). The model has a coefficient of 0.45 for the 'email_open_count' variable. What does this coefficient indicate?",
+    "options": [
+      "Each additional email opened increases the log-odds of purchase by 0.45",
+      "Each additional email opened increases the probability of purchase by 0.45",
+      "The model's accuracy improves by 0.45 for each email opened",
+      "Opening 0.45 more emails guarantees a purchase"
+    ],
+    "correctIndex": 0,
+    "explanation": "In logistic regression, coefficients represent changes in the log-odds (not the probability directly). Option B is a common misconception—the relationship between coefficient and probability change is nonlinear and depends on the current probability level. Option C confuses coefficients with accuracy metrics. Option D misunderstands probability as certainty.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the purpose of a classification threshold (decision boundary) in logistic regression?",
+    "options": [
+      "To convert predicted probabilities into binary class predictions (0 or 1)",
+      "To determine which features are most important in the model",
+      "To ensure the model's predictions are always positive",
+      "To balance the number of observations in the training data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The threshold (typically 0.5) is used to convert continuous probabilities into discrete class labels. Predictions above the threshold are classified as 1, below as 0. Option B describes feature importance analysis, not the threshold's role. Option C misunderstands the sigmoid output range. Option D describes data preprocessing, not threshold logic.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Spotify uses logistic regression to predict whether a user will churn (cancel subscription) within 30 days. The model is trained on 50,000 historical users. If 8% of users actually churned, and the model correctly identifies 75% of churners and 92% of non-churners, what is the true positive rate (sensitivity)?",
+    "options": [
+      "75%",
+      "92%",
+      "83%",
+      "8%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The true positive rate (sensitivity) is the proportion of actual positive cases (churners) correctly identified by the model, which is given as 75%. Option B is the specificity (true negative rate). Option C is a weighted average, not the true positive rate. Option D is the base rate (prevalence) of churners in the data.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail bank builds a logistic regression model to classify credit card applicants as 'high risk' (1) or 'low risk' (0) using annual income and credit score. The model produces predicted probabilities, but the business team wants to use a threshold of 0.35 instead of the default 0.50. What is the most likely reason for lowering the threshold?",
+    "options": [
+      "To increase sensitivity—catch more high-risk applicants, even if it means more false positives",
+      "To reduce false negatives and improve overall accuracy on the training set",
+      "To ensure that high-income applicants are never classified as high risk",
+      "To guarantee that all predictions will be above 0.35"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lowering the threshold increases sensitivity (true positive rate) and catches more high-risk applicants, though it creates more false positives. The bank likely wants to minimize the cost of approving a risky loan. Option B is incorrect because lowering the threshold does not necessarily improve overall accuracy—it trades false negatives for false positives. Option C oversimplifies business logic. Option D misunderstands threshold mechanics.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company uses logistic regression to predict whether a clinical trial drug candidate will receive FDA approval (1) or not (0) based on 12 chemical compound features. The model produces an AUC (Area Under the Curve) score of 0.68. How should the team interpret this result?",
+    "options": [
+      "The model has a 68% probability of correctly ranking a random approved drug as more likely to be approved than a random rejected drug",
+      "The model's accuracy is 68%",
+      "68% of the drugs in the dataset were approved",
+      "The model explains 68% of the variance in approval outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "AUC measures the probability that the model ranks a random positive case higher than a random negative case—a threshold-independent performance metric. Option B confuses AUC with accuracy, which are different. Option C describes prevalence. Option D describes R-squared from linear regression, not AUC from logistic regression.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A credit card company wants to predict default risk using logistic regression with four predictors: annual income, credit score, total revolving debt, and number of late payments. They train the model on 100,000 cardholders from 2022. What assumption would NOT be appropriate for this logistic regression model?",
+    "options": [
+      "The relationship between each predictor and the log-odds of default is strictly quadratic",
+      "Observations are independent (each cardholder is a separate case)",
+      "There is no perfect multicollinearity among predictors",
+      "The outcome (default/no default) is binary"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logistic regression assumes a linear relationship between predictors and the log-odds of the outcome, not quadratic or polynomial. Option B is a valid assumption. Option C is a standard assumption (no perfect collinearity). Option D is a requirement for logistic regression. The quadratic relationship would violate the model's functional form.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An online retailer built a logistic regression model to predict whether a customer will use a discount code ('yes'=1, 'no'=0) in their next purchase. The model was trained on 80,000 transactions from 2023. A junior analyst notices that the feature 'has_amazon_prime' has a coefficient of 0.82, and concludes: 'Being an Amazon Prime member increases the probability of using a discount code by 0.82.' What is the primary error in this interpretation?",
+    "options": [
+      "The coefficient represents the change in log-odds, not the direct change in probability",
+      "The coefficient is positive, so it should decrease the probability, not increase it",
+      "The model has overfit the training data and cannot be trusted",
+      "The feature should be removed from the model because the effect is too large"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logistic regression coefficients represent changes in log-odds, not probability. The relationship between log-odds change and probability change is nonlinear and depends on the current probability. A coefficient of 0.82 does NOT mean probability increases by 0.82 (which would be impossible since probability ranges from 0 to 1). Option B is incorrect because positive coefficients increase the log-odds and probability. Option C conflates interpretation with overfitting. Option D confuses large coefficients with model problems.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare insurance company trains a logistic regression model to predict hospitalization within 12 months using 15 patient health variables. The model achieves 94% accuracy on the test set, but the analyst is concerned about class imbalance: only 6% of patients in the dataset were actually hospitalized. Why should the analyst be cautious about relying on accuracy as the primary performance metric?",
+    "options": [
+      "A naive model that predicts 'no hospitalization' for everyone would achieve 94% accuracy, making accuracy misleading when classes are imbalanced",
+      "Accuracy is always a bad metric and should never be used for classification models",
+      "The model has definitely overfit the training data if accuracy is above 90%",
+      "High accuracy indicates the model will perform poorly on future data with different class distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 94% of cases in the negative class, a model could achieve 94% accuracy by simply predicting 'no hospitalization' for everyone, making accuracy a poor diagnostic metric for imbalanced datasets. Precision, recall, F1-score, and AUC are more informative. Option B overgeneralizes—accuracy is useful in balanced datasets. Option C conflates high accuracy with overfitting; they are not causally related. Option D assumes future class distribution differs, which is speculation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A food delivery platform uses logistic regression to predict whether a restaurant will achieve a 4.5+ rating (1) or lower (0). The training data includes 25,000 restaurants with predictors: delivery time (minutes), number of reviews, cuisine type, and price category. The model's confusion matrix on the test set shows: True Positives = 1,200, False Positives = 150, True Negatives = 3,000, False Negatives = 650. What is the model's precision, and why might this metric matter more than recall for this business context?",
+    "options": [
+      "Precision = 88.9%; Precision matters because promoting low-quality restaurants (false positives) damages the platform's brand reputation",
+      "Precision = 64.9%; Precision matters because missing high-quality restaurants (false negatives) reduces user engagement",
+      "Precision = 88.9%; Precision matters because it equals overall accuracy and is therefore the most important metric",
+      "Precision = 64.9%; Precision matters because it represents how often the model makes correct predictions overall"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = TP / (TP + FP) = 1,200 / (1,200 + 150) = 1,200 / 1,350 = 0.889 or 88.9%. For a reputation-sensitive business, false positives (promoting poor restaurants) are costly; precision focuses on how trustworthy positive predictions are. Option B calculates recall (1,200 / 1,850 = 64.9%), which measures coverage, not precision. Option C is correct numerically but provides an incorrect justification (precision ≠ accuracy). Option D misdefines precision as accuracy.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech company develops a logistic regression model to detect fraudulent transactions using transaction amount, merchant category, time of day, and customer location change. The model achieves an AUC of 0.82 on the validation set. A stakeholder argues: 'Since AUC is 0.82, the model will correctly classify at least 82% of all transactions.' What is the flaw in this reasoning?",
+    "options": [
+      "AUC measures rank-ordering ability across thresholds, not the accuracy at any single classification threshold",
+      "AUC cannot exceed 0.50, so 0.82 is impossible and the model must have an error",
+      "AUC only applies to linear regression, not logistic regression",
+      "A high AUC guarantees that both precision and recall are above 82%"
+    ],
+    "correctIndex": 0,
+    "explanation": "AUC is threshold-independent and measures the probability of correctly ranking a fraud case above a legitimate case. It does NOT translate to a minimum accuracy percentage at any particular decision boundary. The actual accuracy depends on the chosen threshold and class distribution. Option B is factually wrong—AUC can be any value between 0 and 1. Option C is incorrect; AUC is a standard metric for binary logistic regression. Option D confuses AUC with precision-recall guarantees, which depend on threshold choice.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two logistic regression models are built to predict customer churn for a streaming service. Model A uses 8 features and achieves an AUC of 0.79 on the test set. Model B uses 18 features and achieves an AUC of 0.81 on the test set. A data scientist recommends Model B because it has higher AUC. Which concern about this recommendation is most important?",
+    "options": [
+      "The AUC improvement (0.81 vs 0.79) is only 0.02, which may be due to overfitting on the test set, and Model A's simpler design offers better generalization and interpretability",
+      "Model A is always superior because it uses fewer features and is therefore more accurate overall",
+      "The difference in AUC indicates that Model B is 2% more accurate than Model A on all future data",
+      "Model B's 18 features will be too expensive to implement in production"
+    ],
+    "correctIndex": 0,
+    "explanation": "A marginal AUC improvement (0.02) may not justify the added complexity, especially if the test set is small or there is overfitting. Simpler models generalize better and are easier to explain to stakeholders. The improvement might be noise. Option B incorrectly states that fewer features always mean higher accuracy. Option C misinterprets AUC as a guaranteed accuracy on future data (it doesn't account for distribution shift). Option D addresses implementation feasibility but not statistical quality.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A telecommunications company wants to predict whether a customer will upgrade their data plan ('yes'=1, 'no'=0) within the next quarter. The logistic regression model is built on 45,000 customers with features: monthly bill ($), contract length (months), customer age, and data usage (GB). The model's intercept is -0.35 and the coefficient for monthly bill is 0.018. If a customer has a monthly bill of $65, what are the predicted log-odds of upgrading, and what can we infer?",
+    "options": [
+      "Log-odds = -0.35 + 0.018(65) = 0.82; the log-odds are positive, suggesting the customer is more likely to upgrade than not",
+      "Log-odds = -0.35 + 0.018(65) = 0.82; the log-odds equal the probability of upgrading",
+      "Log-odds = 0.018(65) = 1.17; the intercept is ignored in prediction",
+      "Log-odds = -0.35 + 0.018(65) = 0.82; this customer will definitely upgrade"
+    ],
+    "correctIndex": 0,
+    "explanation": "Log-odds = intercept + coefficient × value = -0.35 + 0.018(65) = -0.35 + 1.17 = 0.82. A positive log-odds suggests odds > 1, meaning upgrading is more likely than not upgrading. To convert to probability, we'd apply the sigmoid function, but the log-odds interpretation is valid as stated. Option B confuses log-odds with probability. Option C omits the intercept, which is essential. Option D confuses log-odds with certainty.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

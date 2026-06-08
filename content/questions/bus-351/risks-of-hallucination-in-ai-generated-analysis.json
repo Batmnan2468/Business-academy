@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A financial analyst at Goldman Sachs uses an AI tool to forecast Q3 2024 revenue for Tesla. The tool generates a prediction of $42.3 billion, but upon manual verification, the analyst discovers the AI used outdated 2021 financial data instead of 2023 actuals. What term describes this error?",
+    "options": [
+      "AI hallucination",
+      "Seasonal adjustment bias",
+      "Autocorrelation error",
+      "Sampling variance"
+    ],
+    "correctIndex": 0,
+    "explanation": "AI hallucination occurs when the model generates plausible but incorrect information—here, confidently producing a revenue forecast based on false data inputs. Seasonal adjustment bias refers to errors in accounting for seasonal patterns, not to AI generating false data sources.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An AI analytics system at Walmart claims that placing bananas next to cereal increases cereal sales by 47% based on a correlation it 'discovered' in store transaction data. What is the primary risk here?",
+    "options": [
+      "The AI is hallucinating a causal relationship from correlation alone",
+      "The sample size of 1,200 transactions is too small",
+      "Cereal and bananas are not in the same product category",
+      "The 47% figure exceeds statistically acceptable confidence intervals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hallucination risk here is that the AI inferred causation from correlation without evidence of a causal mechanism. Just because two variables move together does not mean one causes the other. Sample size and product categorization are secondary concerns; the fundamental error is the false causal claim.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a hallucination risk when using AI to analyze customer churn at a telecom company?",
+    "options": [
+      "The AI inventing a customer segment that doesn't actually exist in the data",
+      "The AI accurately reporting churn rates of 8.3% across 47 geographic regions based on actual records",
+      "The AI claiming a causal link between call wait times and churn without statistical evidence",
+      "The AI generating false confidence intervals around its predictions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accurately reporting real data based on actual records is not a hallucination—it is correct output. Hallucinations involve inventing false segments, fabricating causal relationships, or generating fake statistical measures. The key distinction is between outputting real information versus generating plausible-sounding but false information.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A consulting firm uses AI to analyze McKinsey's past client projects and generate a report stating that 'companies implementing our recommendation framework see average revenue growth of 34% within 18 months.' No such framework exists in McKinsey's records. What is this an example of?",
+    "options": [
+      "AI hallucination",
+      "Overfitting to historical trends",
+      "Type II error in hypothesis testing",
+      "Confounding variable bias"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is hallucination because the AI fabricated both a non-existent framework and a specific metric (34% growth) with confident, realistic language. Overfitting refers to a model fitting noise rather than signal; this is inventing entirely false content. Type II error and confounding bias are statistical concepts unrelated to fabrication.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An AI model analyzing Netflix subscriber data reports: 'Subscribers who watch crime dramas have a 62% higher lifetime value.' The model actually has no data linking content genre to lifetime value. What is the best term for this error?",
+    "options": [
+      "Hallucination",
+      "Regression to the mean",
+      "Selection bias",
+      "Measurement error"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI hallucinated a statistical relationship (62% difference) that does not exist in the training data. Regression to the mean, selection bias, and measurement error are all real statistical phenomena but describe different problems—none of which involve inventing false correlations from thin air.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain uses an AI tool to predict store traffic for its 340 locations. The AI outputs: 'Store #156 in Denver will see 2,847 visitors on December 15, 2024, with a 91% confidence interval of [2,840 to 2,854].' The confidence interval is implausibly tight. Which risk does this most likely represent?",
+    "options": [
+      "The AI is hallucinating false precision and confidence",
+      "The sample size is insufficient for retail foot traffic data",
+      "The forecast method uses exponential smoothing incorrectly",
+      "Seasonal adjustment factors were not applied to holiday data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI hallucinated both unrealistic precision (exact visitor counts) and false confidence (a 14-person confidence interval for foot traffic is implausible). Real-world foot traffic has much wider variability. While sample size and seasonal adjustment are real concerns, they would not produce this specific pattern of false precision—hallucination does.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At JPMorgan Chase, an AI credit risk model analyzes 50,000 small business loan applications and generates this statement: 'Small businesses in the hospitality sector have a 3.2% default rate, driven primarily by the owners' astrological signs.' Assuming the model has no input data on astrological signs, what is the correct assessment?",
+    "options": [
+      "The model is hallucinating a causal factor; the 3.2% rate may be real but the explanation is fabricated",
+      "Both the 3.2% rate and the astrological explanation are hallucinations",
+      "The astrological explanation is a joke, not a hallucination",
+      "This is a type of overfitting, not hallucination"
+    ],
+    "correctIndex": 0,
+    "explanation": "The model likely computed a real default rate (3.2%) from actual data but hallucinated a false causal explanation (astrological signs). Hallucinations can mix fact and fiction. The astrological claim is clearly false, but calling it 'a joke' is not a technical assessment. Overfitting refers to model complexity, not to inventing causes.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An AI system analyzing Starbucks' product performance claims: 'The new Cold Brew Oat Milk Latte launched in 1,200 stores across the US and achieved a 18% market share in the cold coffee segment within 6 weeks.' A quick audit reveals the product was only launched in 340 stores. Which type of hallucination is this?",
+    "options": [
+      "Factual hallucination (inventing false details about real events)",
+      "Projection hallucination (extrapolating beyond data boundaries)",
+      "Causal hallucination (inventing false cause-effect relationships)",
+      "Quantitative hallucination (fabricating only numerical values)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI hallucinated a false detail (1,200 stores vs. actual 340) about a real product launch—this is factual hallucination. Projection hallucination means extrapolating beyond the data; causal hallucination means inventing causes; quantitative hallucination specifically means only inventing numbers. This involves inventing a false fact.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst at Coca-Cola uses AI to predict campaign ROI. The model processes 18 months of historical campaign data (52 campaigns total) and outputs: 'This campaign will generate $3.7M in incremental revenue with 97.4% confidence and a margin of error of ±$12,000.' The confidence interval seems unrealistically narrow. What is the most likely issue?",
+    "options": [
+      "The AI is hallucinating false precision to appear credible despite limited training data",
+      "The sample size of 52 campaigns is mathematically too small for this level of precision",
+      "The model is overweighted toward recent campaigns, introducing recency bias",
+      "Seasonal adjustment factors are being applied inconsistently"
+    ],
+    "correctIndex": 0,
+    "explanation": "With only 52 data points, no legitimate statistical method would produce a margin of error of ±$12,000 (0.3% of the point estimate). The AI is hallucinating false precision—a classic hallucination pattern where models generate confident, precise-seeming outputs that exceed what the data can support. Small samples produce wide intervals, not narrow ones.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An AI analytics tool at Amazon analyzes 3.2 million customer reviews and claims: 'Premium Prime members are 44% more likely to return products because they know return shipping is free.' The model has no explicit data linking Prime membership status to return behavior. How should an analyst interpret this output?",
+    "options": [
+      "This is likely a hallucination; the AI inferred a causal mechanism without evidence in the training data",
+      "This is a valid inference because 3.2 million data points ensure statistical validity",
+      "This is accurate because Amazon's Prime policy explicitly covers return shipping",
+      "This is overfitting because the model used too many features"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI hallucinated a causal mechanism (knowing about free returns → higher returns) without evidence in the data linking member status to return behavior. Large sample size ensures the 44% statistic is measured precisely, but does not validate a causal claim the model invented. The correct answer acknowledges the hallucination despite scale.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial risk model at Bank of America analyzes 15 years of mortgage default data (890,000 loans) and generates: 'In 2025, homeowners in California will experience a 6.8% default rate, primarily because of a 'credit sentiment score' that has not been defined in any training documentation.' An analyst must decide whether to use this forecast. Which action best mitigates hallucination risk?",
+    "options": [
+      "Reject the undefined 'credit sentiment score' explanation and validate the 6.8% forecast independently against recent mortgage performance data",
+      "Accept the entire forecast because the training dataset is large (890,000 loans)",
+      "Use the forecast but ignore the 'credit sentiment score' explanation",
+      "Request that the model re-run the analysis with more recent data (only 5 years instead of 15)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct response separates the potentially valid 6.8% forecast (based on real data) from the hallucinated causal factor ('credit sentiment score'). Validating the forecast independently is essential. Accepting it based on dataset size alone ignores the hallucination risk. Merely ignoring the bad explanation while using the forecast is insufficient vetting. Changing time windows doesn't address the hallucination.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An AI model analyzing supply chain data for Microsoft claims: 'Semiconductor supply constraints caused a 23% increase in laptop component costs from Q1 2023 to Q2 2023, with a 94% confidence level.' Upon investigation, component costs rose 23%, but the model cannot explain how it computed the 94% confidence—no methodology is documented. What is the best interpretation?",
+    "options": [
+      "The 23% figure may be accurate but the 94% confidence is hallucinated; confidence levels should be derived from documented statistical methods",
+      "Both the 23% figure and the 94% confidence are hallucinated",
+      "The 94% confidence is valid because it is a standard threshold in business analytics",
+      "This is not hallucination, only imprecise documentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The factual claim (23% cost increase) can be verified from real data, but the 94% confidence lacks any methodological basis—it is hallucinated to appear authoritative. Hallucination often mixes fact and fiction. 94% is not a 'standard threshold'—confidence levels must be computed from documented methods. Poor documentation is not the same as hallucination, but unexplained statistics are suspicious.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company uses AI to analyze clinical trial data for a new drug (1,200 patients, 18-month study). The model outputs: 'This drug reduces symptoms by 35% in hypertensive patients, with 99.2% confidence, driven by the drug's interaction with patients' genetic predispositions.' The clinical protocol tracked only blood pressure, not genetic factors. What hallucination risk is most critical here?",
+    "options": [
+      "The AI hallucinated a causal mechanism (genetic interaction) not measured in the trial; the 35% result may be real but the explanation is false",
+      "The 99.2% confidence is hallucinated because it exceeds the FDA's typical confidence threshold of 95%",
+      "The model hallucinated the entire 35% figure because the sample size (1,200 patients) is too small for pharmaceutical claims",
+      "This is not hallucination; it is a valid post-hoc analysis using inferred genetic data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI hallucinated a false causal explanation (genetic interaction) for a result that may be real (35% symptom reduction). Without genetic data in the protocol, this causal claim is fabricated. The 99.2% confidence is not intrinsically invalid (it depends on the statistical test), and 1,200 patients is typical for many trials. Post-hoc inference of unmeasured variables is hallucination in a regulatory context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An AI model at Procter & Gamble compares product performance across 47 markets. It claims: 'Gillette razors show a 19% higher market share in markets where the dominant language uses gender-neutral pronouns.' P&G's data includes market share (real) but not linguistic properties of languages (not measured). Why is this a critical hallucination risk in business?",
+    "options": [
+      "The AI inferred a relationship between two variables where only one was actually measured in the data; this false correlation could drive poor business decisions",
+      "The claim is too culturally sensitive to be true, making it automatically a hallucination",
+      "The market share figure of 19% is too high to be credible",
+      "This hallucination is harmless because linguistic factors are unlikely to affect razor sales"
+    ],
+    "correctIndex": 0,
+    "explanation": "The hallucination risk is severe: the AI fabricated a link between an unmeasured variable (linguistic properties) and market share (measured). This could lead to false strategic decisions (e.g., targeting markets based on language features). Sensitivity of the claim does not make it hallucination; 19% is not inherently implausible; and 'harmless' hallucinations are still hallucinations and erode decision quality.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An AI system analyzing Johnson & Johnson's pharmaceutical sales data (68,000 transactions, 12 months) generates two outputs: (1) 'Average sales per region: $8.3M ± $240K,' and (2) 'Regional sales are correlated with the regional CEO's tenure (r = 0.68, p < 0.05, explained by leadership experience effects).' The AI was trained on sales data and CEO tenure data. Which output carries higher hallucination risk and why?",
+    "options": [
+      "Output (2) carries higher hallucination risk because it infers a causal mechanism ('leadership experience effects') that was not measured in the data",
+      "Output (1) carries higher hallucination risk because confidence intervals are inherently unreliable in large datasets",
+      "Both outputs have equal hallucination risk because both involve statistical inference",
+      "Neither output has hallucination risk if the correlation coefficient is statistically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "Output (1) is a straightforward descriptive statistic (mean and margin of error) with low hallucination risk. Output (2) is high-risk because it fabricates a causal explanation ('leadership experience effects') for an observed correlation—tenure and sales are correlated, but the mechanism is invented. Statistical significance validates the correlation, not the causal interpretation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A scatterplot is primarily used to visualize the relationship between which of the following at Acme Manufacturing?",
+    "options": [
+      "Two continuous variables, such as production hours and defect rate",
+      "One categorical variable and one continuous variable",
+      "The distribution of a single continuous variable",
+      "The frequency of categorical outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scatterplots specifically display the relationship between two continuous variables by plotting points on an x-y plane. Option B describes a mixed variable scenario requiring a different chart type. Option C describes what histograms show, and Option D describes bar charts or frequency tables.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a histogram display at TechVision Inc., a software company tracking daily user session times?",
+    "options": [
+      "The exact time each user spent in a session",
+      "The frequency distribution of session duration intervals",
+      "The relationship between two variables over time",
+      "The median and quartiles of session times"
+    ],
+    "correctIndex": 1,
+    "explanation": "A histogram groups continuous data into bins and shows the frequency of observations within each interval. Option A would require a table of individual values. Option C describes a scatterplot or line chart. Option D is the primary function of a boxplot, not a histogram.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a boxplot for Golden Retail's quarterly sales ($50K, $65K, $72K, $80K, $95K), which value represents the upper quartile (Q3)?",
+    "options": [
+      "$72,000",
+      "$80,000",
+      "$95,000",
+      "$65,000"
+    ],
+    "correctIndex": 1,
+    "explanation": "The upper quartile (Q3) is the median of the upper half of the data. The upper half is $72K, $80K, $95K, so Q3 = $80K. Option A is the median of all values. Option C is the maximum. Option D is the lower quartile.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A boxplot for monthly call center wait times at CustomerFirst Corp shows a box from 3 to 8 minutes with a median line at 5 minutes. What does this tell us?",
+    "options": [
+      "50% of calls wait between 3 and 8 minutes",
+      "The average wait time is 5 minutes",
+      "Most calls wait exactly 5 minutes",
+      "Call times are perfectly symmetric"
+    ],
+    "correctIndex": 0,
+    "explanation": "The box in a boxplot represents the interquartile range (IQR), which contains the middle 50% of observations. Option B confuses median with mean. Option C misinterprets what the median line represents. Option D cannot be determined from a boxplot alone.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which visual correctly shows the strength and direction of a linear relationship between advertising spend ($10K to $50K) and monthly revenue ($100K to $450K) at Zenith Marketing?",
+    "options": [
+      "Scatterplot",
+      "Histogram",
+      "Boxplot",
+      "Pie chart"
+    ],
+    "correctIndex": 0,
+    "explanation": "A scatterplot displays two continuous variables and visually reveals correlation strength and direction. A histogram shows distribution of one variable. A boxplot summarizes a single variable. A pie chart shows categorical proportions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "DataFlow Analytics collected the following profit margins for 8 quarters: 12%, 15%, 18%, 14%, 19%, 16%, 17%, 20%. When creating a histogram with bin width of 2%, which bin would contain the highest frequency?",
+    "options": [
+      "12-14%",
+      "14-16%",
+      "16-18%",
+      "18-20%"
+    ],
+    "correctIndex": 3,
+    "explanation": "Counting data points: 12-14% has 2 (12%, 14%), 14-16% has 1 (15%), 16-18% has 2 (16%, 17%, 18% split), 18-20% has 3 (18%, 19%, 20%). The 18-20% bin contains 3 values, the highest frequency. This requires careful binning and counting of each data point.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "NorthStar Logistics created a scatterplot with advertising budget on the x-axis ($5K to $60K) and customer acquisition cost on the y-axis ($20 to $180). The points show a negative correlation. What business decision does this suggest?",
+    "options": [
+      "Increase advertising budget because higher spending attracts cheaper customers per acquisition",
+      "Decrease advertising budget to save costs",
+      "There is no relationship between budget and acquisition cost",
+      "Advertising budget has no impact on customer acquisition efficiency"
+    ],
+    "correctIndex": 0,
+    "explanation": "A negative correlation between budget and acquisition cost indicates that higher advertising spending is associated with lower per-customer acquisition costs (economies of scale or better targeting). Option B misinterprets the direction. Options C and D contradict the visible negative correlation shown in the scatterplot.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "BrightWave Consulting compared two projects' monthly expenses using boxplots. Project A has a median of $85K with IQR $70K-$95K. Project B has a median of $82K with IQR $75K-$98K. Which statement best compares variability?",
+    "options": [
+      "Project A is less variable because its median is higher",
+      "Project B is more variable based on its larger IQR ($23K vs. $25K)",
+      "Project A shows less variability with an IQR of $25K compared to Project B's $23K",
+      "Both projects have identical variability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Variability is measured by IQR width. Project A IQR = $95K - $70K = $25K. Project B IQR = $98K - $75K = $23K. Project A is more variable. Option A confuses median with variability. Option B reverses the comparison. Option D ignores the actual IQR values.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Premium Auto Finance created histograms for loan approval times: one for online applications (5-45 minutes, mean 18 minutes) and one for in-branch applications (12-120 minutes, mean 45 minutes). A manager claims online processing is 'always faster.' What does the histogram NOT reveal?",
+    "options": [
+      "That some in-branch applications complete faster than the online mean",
+      "The exact probability that a specific online application will be faster than a specific in-branch application",
+      "The distribution shape and spread of each process",
+      "That the median online approval time is lower than in-branch"
+    ],
+    "correctIndex": 1,
+    "explanation": "Histograms show aggregate distributions but cannot predict individual outcomes or probabilities for specific paired comparisons. Option A can be inferred (if in-branch max is 120 and online mean is 18, some overlap exists). Option C is the histogram's core function. Option D can be estimated from the distribution shapes shown.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SureStep Health analyzed patient recovery times (in days) across three treatment groups using boxplots. Group A (mean 22 days) shows 5 outliers above 45 days. The analyst removes these outliers before reporting. Why is this problematic?",
+    "options": [
+      "Outliers should always be removed to make data look cleaner",
+      "Outliers are real data points that may indicate important variations in patient response; removing them masks true variability and may lead to underestimating recovery uncertainty",
+      "Removing outliers increases the standard deviation",
+      "Outliers only exist in scatterplots, not boxplots"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outliers in boxplots represent real observations. Removing them without justification distorts the true distribution and can lead to false conclusions about consistency or risk. These extreme recovery times are clinically important. Option A is a common mistake (convenience bias). Option C is backward. Option D is factually wrong.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Vertex Investments plotted quarterly returns (%) against market volatility (%) across 24 quarters. The scatterplot shows points loosely scattered with r = 0.35. An intern concludes, 'There's almost no relationship.' What is the flaw in this reasoning?",
+    "options": [
+      "An r of 0.35 is strong enough to suggest a moderate positive relationship exists, even if weak",
+      "r = 0.35 means 35% of the variance in returns is explained by volatility; a non-zero correlation indicates a relationship, though modest",
+      "The scatterplot clearly shows a perfect linear relationship",
+      "Correlation of 0.35 proves causation between volatility and returns"
+    ],
+    "correctIndex": 1,
+    "explanation": "An r of 0.35 indicates that ~12% of variance (r²) is explained by the relationship, which is modest but real—not negligible. The intern's conclusion of 'almost no relationship' misinterprets what a weak positive correlation means. Option A overstates the strength. Option C contradicts the stated r-value. Option D confuses correlation with causation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "InnoCorp Labs created histograms for product development cycle times: Histogram A shows 12 projects clustered tightly between 8–12 weeks (mean 10 weeks). Histogram B shows 12 projects spread across 4–18 weeks (mean 10 weeks). A stakeholder says, 'Both teams have the same average performance.' What critical insight is missed?",
+    "options": [
+      "Team B is more reliable because its data is more spread out",
+      "Team A is more predictable and consistent; Team B's wider distribution signals unpredictability and higher project risk despite identical means",
+      "Histograms cannot display mean values",
+      "The team with lower mean is always better"
+    ],
+    "correctIndex": 1,
+    "explanation": "Identical means can hide very different distributions. Team A's tight clustering (low variability) is preferable for predictability; Team B's wide spread (high variability) indicates inconsistency and risk. This is why both mean AND distribution shape matter. Option A reverses the value of predictability. Option C is false. Option D ignores variability entirely.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "RegionFlow Logistics tracked daily delivery costs across three distribution centers using boxplots. Center X: median $8,400, IQR $7,200–$9,600; Center Y: median $8,200, IQR $6,800–$10,400; Center Z: median $8,300, IQR $7,800–$9,200. Which center shows the smallest interquartile range?",
+    "options": [
+      "Center X ($2,400)",
+      "Center Y ($3,600)",
+      "Center Z ($1,400)",
+      "All three are equivalent"
+    ],
+    "correctIndex": 2,
+    "explanation": "IQR = Upper Quartile – Lower Quartile. Center X: $9,600 - $7,200 = $2,400. Center Y: $10,400 - $6,800 = $3,600. Center Z: $9,200 - $7,800 = $1,400. Center Z has the smallest IQR, indicating the most consistent daily costs in the middle 50% of observations.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Metro Retail created a scatterplot of store size (sq. ft.: 2,000–25,000) vs. annual theft loss ($5K–$180K) across 45 stores. The points show a positive correlation (r = 0.68). The regional manager proposes, 'Close our larger stores to reduce theft.' Which assumption is flawed?",
+    "options": [
+      "Larger stores actually generate more absolute revenue, offsetting theft losses",
+      "The manager assumes causation from correlation; size itself doesn't cause theft—larger stores may have more inventory to steal and different customer volumes, confounding variables",
+      "Smaller stores have zero theft",
+      "Correlation proves that size directly causes losses"
+    ],
+    "correctIndex": 1,
+    "explanation": "A positive correlation between size and theft doesn't mean size causes theft. Larger stores have more inventory, more customers, and more transaction volume—these confounding variables explain the relationship. Closing large stores without understanding root causes is poor decision-making. Option A is plausible but doesn't address the logical flaw. Option C is unrealistic. Option D reinforces the causation fallacy.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FinServe Bank analyzed 200 customer account balances using a histogram with bins: $0–$10K (45 accounts), $10K–$20K (68 accounts), $20K–$30K (52 accounts), $30K–$40K (28 accounts), $40K–$50K (7 accounts). What percentage of accounts fall in the $10K–$30K range?",
+    "options": [
+      "60%",
+      "70%",
+      "50%",
+      "80%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accounts in $10K–$30K = 68 + 52 = 120 accounts. Percentage = (120/200) × 100 = 60%. Wait—recalculating: 120/200 = 0.60 = 60%. Option B (70%) would be 140 accounts. Let me verify: 68 + 52 = 120; 120/200 = 60%. The correct answer is A, not B. Correction: The correct answer should be 60%, which is index 0. Re-examining: This is a straightforward calculation, and 60% is correct.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  }
+]

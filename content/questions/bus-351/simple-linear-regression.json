@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a simple linear regression model, what does the term 'R-squared' (R²) measure?",
+    "options": [
+      "The proportion of variance in the dependent variable explained by the independent variable",
+      "The slope of the regression line",
+      "The correlation coefficient between two variables",
+      "The standard error of the estimate"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² specifically measures goodness-of-fit by showing what percentage of variation in Y is explained by X. Option B (slope) is wrong because the slope is β₁, not a measure of fit. Option C is tempting because correlation and R² are related, but correlation (r) is the strength of relationship, not the proportion of variance explained.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the correct formula for the least squares regression line?",
+    "options": [
+      "ŷ = β₀ + β₁x",
+      "ŷ = β₁ + β₀x",
+      "y = β₀ + β₁x + ε",
+      "x = β₀ + β₁y"
+    ],
+    "correctIndex": 0,
+    "explanation": "The least squares regression line is ŷ = β₀ + β₁x, where ŷ is the predicted value, β₀ is the intercept, and β₁ is the slope. Option C includes the error term ε, which is part of the theoretical model, not the fitted regression equation. Option B reverses the intercept and slope, which is a common notational error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression analysis for Starbucks, analysts found that coffee sales (in thousands of dollars) increase by $8,500 for each additional store location. What does this number represent?",
+    "options": [
+      "The slope (β₁) of the regression line",
+      "The intercept (β₀) of the regression line",
+      "The correlation coefficient",
+      "The coefficient of determination"
+    ],
+    "correctIndex": 0,
+    "explanation": "The rate of change in the dependent variable (sales) per unit increase in the independent variable (store locations) is the slope β₁. The intercept β₀ would be the sales value when zero stores exist, which is the tempting wrong answer because students often confuse 'increase by' language with where the line starts.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does it mean if a regression model has an R² of 0.72?",
+    "options": [
+      "72% of the variance in the dependent variable is explained by the independent variable",
+      "The slope of the line is 0.72",
+      "There is a 72% correlation between the variables",
+      "The model will be 72% accurate in predictions"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² = 0.72 means that 72% of the variation in Y is explained by X. Option C is a common misconception—correlation coefficient is different from R² (though R² = r² for simple linear regression). Option D is tempting because students often conflate R² with prediction accuracy, but R² is about explained variance, not prediction error.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the regression equation ŷ = 50,000 + 2,500x, where x represents years of experience and y represents annual salary at Google, what is the y-intercept?",
+    "options": [
+      "$50,000",
+      "$2,500",
+      "2,500 years",
+      "$52,500"
+    ],
+    "correctIndex": 0,
+    "explanation": "The y-intercept (β₀) is the constant term, which is 50,000. This represents the predicted salary when x = 0 (no experience). Option B is the slope, a common confusion. Option D is the sum of intercept and slope, which is wrong because it would only equal predicted salary when x = 1.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart conducted a regression analysis predicting weekly sales (in millions) based on advertising spend (in thousands). The regression equation is ŷ = 12 + 0.45x. If Walmart spends $200,000 on advertising in a week, what is the predicted weekly sales?",
+    "options": [
+      "$102 million",
+      "$12.9 million",
+      "$12.45 million",
+      "$212 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "Convert $200,000 to 200 in thousands. Then ŷ = 12 + 0.45(200) = 12 + 90 = 102 million. Option B forgets the intercept. Option C treats 200 as 0.2 (unit conversion error). Option D incorrectly adds the raw dollars to millions, a unit mismatch error that's tempting.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing manager at Nike collected data on TV advertising spend (X, in millions) and quarterly revenue (Y, in millions) for 20 quarters. The regression output shows: β₁ = 3.2, with a p-value of 0.031. At the 0.05 significance level, what conclusion should the manager draw?",
+    "options": [
+      "The relationship is statistically significant; each additional $1M in ad spend predicts an increase of $3.2M in revenue",
+      "The relationship is not statistically significant; we cannot reject the null hypothesis",
+      "The slope is 3.2%, meaning ads explain 3.2% of revenue variation",
+      "We can predict revenue with 96.9% accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.031) < 0.05, we reject the null hypothesis and conclude the relationship is statistically significant. The slope of 3.2 means a $1M increase in ads predicts a $3.2M increase in revenue. Option C confuses slope with R² percentage. Option D is tempting because 1 - 0.031 = 0.969, but p-value doesn't measure prediction accuracy.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Toyota analyzed the relationship between production capacity utilization (%) and manufacturing cost per unit ($). After collecting 50 months of data, they calculated r = -0.68. What is the approximate R² value?",
+    "options": [
+      "0.46",
+      "-0.46",
+      "0.68",
+      "0.32"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² = r² = (-0.68)² = 0.4624 ≈ 0.46. The negative sign is lost when squaring. Option B incorrectly keeps the negative sign. Option C confuses correlation with R². Option D subtracts from 1 (1 - 0.68), a common error where students try to calculate unexplained variance instead.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst at Amazon is building a regression model to predict customer lifetime value (Y) based on number of purchases in the first month (X). After regression, they find that the residual plot shows a clear curved pattern. What does this suggest?",
+    "options": [
+      "The linear regression model violates the linearity assumption and may not be appropriate",
+      "The model is perfect because residuals show a pattern",
+      "The sample size is too small",
+      "The relationship has R² > 0.85 and is therefore good"
+    ],
+    "correctIndex": 0,
+    "explanation": "A curved residual plot indicates that the relationship between X and Y is not linear, violating a key OLS assumption. A linear model is inappropriate when the true relationship is curved (e.g., quadratic). Option B is backwards—patterns in residuals indicate problems, not perfection. Option C confuses sample size with functional form. Option D is tempting because high R² seems good, but high R² with nonlinear patterns means a nonlinear model is needed.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A real estate analyst regressed home prices (Y, in thousands) on square footage (X) for 150 homes in Seattle. The regression output shows: ŷ = 50 + 0.35x, with R² = 0.81 and s_e = 45 (standard error in thousands). The analyst predicts a 3,000 sq ft home will sell for $1,100,000. Is this prediction reliable?",
+    "options": [
+      "Moderately reliable—R² is high, but the prediction is an extrapolation and subject to s_e uncertainty",
+      "Highly reliable—R² = 0.81 ensures accurate predictions",
+      "Not reliable—the standard error of 45 is too large",
+      "Moderately reliable—the slope is positive, indicating strong predictive power"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted value: ŷ = 50 + 0.35(3) = 50 + 1.05 = $1,050 thousand ($1.05M, not $1.1M—the analyst's estimate is already off). Even though R² = 0.81 is good, predictions have uncertainty (s_e = 45k margin). High R² doesn't guarantee accurate predictions for any single observation. Option B wrongly assumes R² ensures reliability for individual predictions. Option C misinterprets s_e. Option D confuses slope sign with prediction quality.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst regressed annual bonus (Y, in thousands) on employee performance rating (X, 1-10 scale) for 200 employees at JPMorgan Chase. The regression yielded: ŷ = -10 + 5x. A new employee has a performance rating of 1.5. What is the predicted bonus, and is this prediction appropriate?",
+    "options": [
+      "Predicted: $-2,500; This is inappropriate because negative bonuses are impossible and the prediction is beyond typical data range",
+      "Predicted: $2,500; This is reliable because the model has a large sample (n=200)",
+      "Predicted: $7,500; Linear regression always provides reliable predictions in the observed range",
+      "Predicted: $-2,500; This is a valid prediction because the math is correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "ŷ = -10 + 5(1.5) = -10 + 7.5 = -2.5 (or -$2,500). The math is correct, but a negative bonus is nonsensical in business reality. Additionally, if ratings in the data ranged 4-10, then 1.5 is extrapolation beyond the model's domain. Option D is tempting because mathematically correct, but inappropriate in context. Option B misses the extrapolation and impossible negative value. Option C wrongly claims all predictions in range are reliable regardless of logic.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two analysts at Microsoft compared two simple linear regression models predicting quarterly cloud revenue (Y, in millions) from server upgrades (X, in units): Model A has R² = 0.78 and residual standard error = $22M; Model B has R² = 0.74 and residual standard error = $18M. Which model is better for making revenue predictions?",
+    "options": [
+      "Model B is better—the lower residual standard error means more accurate predictions despite slightly lower R²",
+      "Model A is better—it has the highest R²",
+      "Neither model is better; they have similar R² values",
+      "Model A is better—it explains more variance (R² = 0.78 > 0.74)"
+    ],
+    "correctIndex": 0,
+    "explanation": "For prediction accuracy, residual standard error (s_e) is more important than R². Model B's s_e of $18M means typical prediction errors are smaller than Model A's $22M. While Model A explains more variance (R² = 0.78), R² doesn't directly measure prediction error. Option B chooses solely on R² without considering prediction precision. Option D repeats this error. Option C misses that s_e differs meaningfully, showing Model B makes tighter predictions.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression analysis at Procter & Gamble examined the relationship between product price (X, in dollars) and monthly units sold (Y, in thousands) for shampoo across 60 stores. The slope β₁ = -2.8 with p-value = 0.002. An executive claims: 'Since R² is not mentioned, the relationship is weak.' Which statement best evaluates this claim?",
+    "options": [
+      "The claim is incorrect; the p-value of 0.002 indicates a statistically significant relationship regardless of R², which measures practical strength, not statistical significance",
+      "The claim is correct; without R², we cannot judge the strength of the relationship",
+      "The claim is incorrect; a negative slope always indicates a weak relationship",
+      "The claim is correct; the slope of -2.8 indicates the relationship is not strong"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p-value) and practical strength (R²) are different concepts. A p-value of 0.002 < 0.05 proves the relationship is statistically significant (not due to chance), even without knowing R². The relationship could have R² = 0.90 (strong) or R² = 0.25 (weak) and still be significant. Option B confuses the two concepts. Option C wrongly assumes negative slope indicates weakness. Option D confuses slope magnitude with relationship strength; slope's absolute value depends on units, not relationship strength.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data analyst at Coca-Cola built a regression model to predict global quarterly sales (Y, in billions) from marketing spend (X, in millions). The equation is ŷ = 8.5 + 0.012x. The analyst observes that for every $1 billion increase in sales, marketing spend increases by about $83.3 million. What is the conceptual error in this statement?",
+    "options": [
+      "The analyst reversed causality; the regression predicts sales FROM marketing spend, not the other way around",
+      "The calculation is wrong; it should be 1 billion divided by 0.012",
+      "There is no error; the relationship is perfectly symmetrical",
+      "The slope should be reported as 1/0.012 = 83.3, not 0.012"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression ŷ = 8.5 + 0.012x predicts Y from X; the slope 0.012 means for each $1M increase in marketing (X), sales increase by $0.012B. The analyst incorrectly inverted the relationship, treating it as if sales predict marketing. Even if mathematically they calculate 1 ÷ 0.012 ≈ 83.3, that's not how regression works—we cannot simply invert the slope to reverse causality. Option B is the tempting wrong answer because students sometimes think we need to flip the calculation, but that misunderstands regression direction.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank analyst collected 48 months of data on personal loan defaults (Y, percentage of accounts in default) and unemployment rate (X, percentage unemployed). The regression ŷ = 1.2 + 0.35x has R² = 0.58. Management asks: 'Does unemployment cause loan defaults?' What is the most appropriate response?",
+    "options": [
+      "Regression shows association, not causation; while unemployment and defaults move together, we cannot conclude unemployment causes defaults without additional evidence (time ordering, confounders, mechanism)",
+      "Yes, the positive slope of 0.35 proves that unemployment causes defaults",
+      "No, because R² = 0.58 means 42% of defaults are unexplained by unemployment",
+      "Yes, because the regression model confirms the causal relationship with statistical significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression is correlational; it cannot prove causation. Even though variables move together (association), causality requires evidence of time ordering (X before Y), elimination of confounders (e.g., economic downturns affect both), and a plausible mechanism. Option B confuses association with causation—a common pitfall. Option C misinterprets R²; unexplained variance doesn't negate potential causality. Option D is tempting because significance seems strong, but significance only means the association is real, not causal.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

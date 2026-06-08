@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A pharmaceutical company is testing whether a new drug reduces cholesterol levels. The null hypothesis is that the drug has no effect. The company wants to detect whether the drug either increases OR decreases cholesterol. Which type of hypothesis test should they use?",
+    "options": [
+      "Two-tailed test",
+      "One-tailed test (left)",
+      "One-tailed test (right)",
+      "Paired t-test"
+    ],
+    "correctIndex": 0,
+    "explanation": "A two-tailed test is correct because the company wants to detect change in EITHER direction (increase or decrease). One-tailed tests detect change in only one direction. A paired t-test is a method choice, not a directional choice.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix claims its average subscriber watch time per day is 3.5 hours. An analyst suspects subscribers watch LESS than this. What type of test should be used?",
+    "options": [
+      "One-tailed test (left)",
+      "One-tailed test (right)",
+      "Two-tailed test",
+      "Chi-square test"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a one-tailed left test because we're testing whether the mean is LESS than 3.5 hours (directional hypothesis in one direction). A right-tailed test would check if watch time is GREATER. Two-tailed would check if it's different in either direction.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In hypothesis testing, the significance level α = 0.05 is split between two tails in a two-tailed test. What is the rejection region in each tail?",
+    "options": [
+      "0.025 in each tail",
+      "0.05 in each tail",
+      "0.10 in each tail",
+      "0.005 in each tail"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a two-tailed test with α = 0.05, the area is split equally: 0.05 ÷ 2 = 0.025 in each tail. A common error is thinking 0.05 applies to each tail, which would give total α = 0.10.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manufacturing firm tests whether their machines produce bolts with diameter exactly 25 mm on average. Historical data shows variation both above and below target. Should they use a one-tailed or two-tailed test?",
+    "options": [
+      "Two-tailed test",
+      "One-tailed test (right only)",
+      "One-tailed test (left only)",
+      "One-tailed test (either direction, doesn't matter)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two-tailed test is correct because deviations in EITHER direction (too large or too small) matter for quality control. Both oversized and undersized bolts are defects. One-tailed tests would ignore problems in one direction.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a hypothesis test about a population mean, what is the null hypothesis when conducting a one-tailed test?",
+    "options": [
+      "H₀: μ = some specific value",
+      "H₀: μ ≠ some specific value",
+      "H₀: μ > some specific value",
+      "H₀: μ < some specific value"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis is always an equality statement (μ = a value), regardless of whether it's a one-tailed or two-tailed test. The directionality (> or <) appears only in the alternative hypothesis for one-tailed tests.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon claims their Prime delivery time averages 2 days. A consumer advocate wants to test if delivery is actually SLOWER than claimed. With α = 0.05 and a one-tailed left test, what is the critical z-value? (Assume normal distribution.)",
+    "options": [
+      "z = -1.645",
+      "z = -1.96",
+      "z = 1.645",
+      "z = ±1.96"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a one-tailed left test with α = 0.05, the critical value is z = -1.645 (negative because we're testing the left tail). A common error is using -1.96 or ±1.96, which are for two-tailed tests with α = 0.05.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Toyota claims the average fuel efficiency of the Camry is exactly 30 mpg. A researcher suspects it differs from this claim. A sample of 36 cars yields a mean of 29.2 mpg with s = 4.8 mpg. The t-statistic is approximately -1.0. Using α = 0.05 and a two-tailed test, should the null hypothesis be rejected?",
+    "options": [
+      "No, because |t| = 1.0 < 2.030 (critical value)",
+      "Yes, because the sample mean is below 30",
+      "No, because the p-value > 0.05",
+      "Yes, because n = 36 is a large sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "With df = 35, the two-tailed critical value at α = 0.05 is approximately ±2.030. Since |t| = 1.0 < 2.030, we fail to reject H₀. A tempting error is rejecting because the sample is below the claimed value, but we need the test statistic to exceed the critical value.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Starbucks manager observes that daily sales have dropped from the historical mean of $8,500. She wants to test whether sales have DECREASED. With a sample of 40 days, mean = $7,900, and s = $1,200, which test is appropriate and why?",
+    "options": [
+      "One-tailed left test because she's testing specifically for a decrease",
+      "Two-tailed test because sales could increase or decrease",
+      "One-tailed right test because we're testing the mean",
+      "Chi-square test because we're dealing with dollar amounts"
+    ],
+    "correctIndex": 0,
+    "explanation": "A one-tailed left test is correct because the manager has a specific directional hypothesis: sales have DECREASED (μ < $8,500). A two-tailed test would be used if she only knew sales were different, not which direction. Chi-square tests categorical data, not means.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quality control analyst at Intel tests whether a new manufacturing process increases chip defect rates beyond the current 2.5%. With α = 0.05 for a one-tailed right test, the calculated p-value is 0.08. Should the analyst conclude the process increases defect rates?",
+    "options": [
+      "No, because p-value (0.08) > α (0.05)",
+      "Yes, because 0.08 is close to 0.05",
+      "Yes, because this is a one-tailed test",
+      "No, because p-value must equal exactly 0.05"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis is not rejected when p-value > α. Here 0.08 > 0.05, so insufficient evidence exists to conclude the process increases defects. A common error is rejecting because 0.08 is 'close to' 0.05, but the rule is strictly p-value < α for rejection.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank tests whether customer wait times at the drive-through differ from the competitor's stated 8 minutes. A sample of 50 transactions has mean = 8.7 minutes, s = 2.1 minutes. The t-statistic = 2.36 with two-tailed critical value ±2.010 at α = 0.05. What is the correct conclusion?",
+    "options": [
+      "Reject H₀; wait times differ significantly from 8 minutes",
+      "Fail to reject H₀; wait times equal exactly 8 minutes",
+      "Reject H₀; wait times are longer",
+      "Fail to reject H₀ because the sample size is small"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since |t| = 2.36 > 2.010, we reject H₀. The two-tailed test reveals wait times differ significantly. A tempting error is thinking 'fail to reject' because we're comparing to a competitor, but the statistical decision is based on whether the test statistic exceeds the critical value.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher at Coca-Cola tests whether the mean sugar content of a new diet formula is BELOW 0.5 grams per 12 oz. She performs a one-tailed left test with α = 0.05, obtaining a p-value of 0.04. However, she accidentally calculates a two-tailed test instead. Using the same data, what would the two-tailed p-value approximately be?",
+    "options": [
+      "0.08",
+      "0.04",
+      "0.02",
+      "0.10"
+    ],
+    "correctIndex": 0,
+    "explanation": "If a one-tailed p-value is 0.04, the two-tailed p-value is approximately double: 0.04 × 2 = 0.08. This is a common scenario where doubling the p-value matters: the researcher would fail to reject H₀ at α = 0.05 with the correct two-tailed test (0.08 > 0.05) but would incorrectly reject with one-tailed (0.04 < 0.05).",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A marketing firm tests whether a new advertisement increases brand awareness above the baseline of 45%. In a sample of 400 consumers, 198 show awareness of the new ad. The firm conducts a one-tailed right test with z = 2.45 and α = 0.05 (critical value z = 1.645). Which statement best describes a potential error in reasoning?",
+    "options": [
+      "Using one-tailed test when two-tailed was justified because awareness could decrease with poor messaging",
+      "The test statistic is too large to reject the null hypothesis",
+      "The one-tailed test is correct because the alternative is specifically μ > 45%",
+      "The firm should use a chi-square test because percentages are involved"
+    ],
+    "correctIndex": 0,
+    "explanation": "The key issue is whether a one-tailed right test is justified. If the firm only cares about increases, one-tailed is fine. But if poor messaging could decrease awareness, a two-tailed test is more appropriate and would be harder to reject (higher critical value). This represents a Type I error risk: cherry-picking directionality after observing the data.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company claims shipment delivery variance has been reduced to 1.2 days (σ = 1.2). A manager wants to test if variance has actually INCREASED, not decreased. The manager plans to use a one-tailed right test. Is this approach correct?",
+    "options": [
+      "No; testing variance requires an F-test or chi-square test, not a standard one-tailed t-test",
+      "Yes; one-tailed right test is correct for testing if variance increased",
+      "No; variance can never increase, so the test is illogical",
+      "Yes; the one-tailed approach is always correct for variance claims"
+    ],
+    "correctIndex": 0,
+    "explanation": "This question tests whether students recognize that different parameters require different tests. Variance is tested using chi-square or F-tests, not standard one vs. two-tailed t-tests. A common misconception is that 'one-tailed vs. two-tailed' applies universally, but the test type must first match the parameter being tested.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at Microsoft tests whether mean software development cycle time equals 120 days (H₀: μ = 120). She uses α = 0.05 and a two-tailed test, obtaining t = -2.15 with critical values ±2.048 for df = 60. Later, she realizes that faster development is always better and changes to a one-tailed left test. Using the same t-statistic and data, what would be the impact?",
+    "options": [
+      "The original two-tailed conclusion (reject H₀) remains the same, but one-tailed would be easier to reject (lower critical value)",
+      "The original conclusion flips; now she would fail to reject H₀",
+      "Both tests yield identical conclusions because the t-statistic doesn't change",
+      "The one-tailed test is invalid because the data was already analyzed"
+    ],
+    "correctIndex": 0,
+    "explanation": "With t = -2.15, in the two-tailed test: |t| = 2.15 > 2.048, so reject H₀. In one-tailed left test, critical value is -1.645, and t = -2.15 < -1.645, also reject H₀. However, the one-tailed test makes rejection easier. The tempting error is thinking the conclusion changes, but here both reject. This illustrates that choosing tail directionality after seeing data is p-hacking.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR department at Goldman Sachs tests whether the mean bonus ($150,000) differs from the industry standard of $140,000. A sample of 64 employees yields x̄ = $145,500 with s = $18,000. A two-tailed test gives t = 3.78 with critical value ±1.998 at α = 0.05. However, if only detecting INCREASES in bonuses matters to the firm, would a one-tailed right test change the conclusion?",
+    "options": [
+      "No; both tests reject H₀ because t = 3.78 > 1.645 (one-tailed critical) and t = 3.78 > 1.998 (two-tailed)",
+      "Yes; the one-tailed test would fail to reject because the critical value increases",
+      "No; one-tailed tests always give different conclusions than two-tailed tests",
+      "Yes; the sample mean is $145,500, which is too high for any test to accept"
+    ],
+    "correctIndex": 0,
+    "explanation": "With t = 3.78, both tests reject H₀: the two-tailed critical value is ±1.998, and the one-tailed right critical value is +1.645. Since 3.78 exceeds both, the conclusion is reject H₀ in both cases. A tempting error is thinking the one-tailed critical value increases; it actually decreases, making rejection easier in one-tailed tests (when in the correct direction).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

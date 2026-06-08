@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At TechCorp, a data analyst is tasked with using AI to generate initial hypotheses about why customer churn increased from 8% to 14% over the past quarter. What is the primary purpose of AI-driven hypothesis generation in this context?",
+    "options": [
+      "To rapidly propose multiple plausible explanations that can be tested with data",
+      "To definitively prove which factor caused the churn increase without further testing",
+      "To replace the analyst's need to understand the business domain",
+      "To eliminate the need for collecting additional data from customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "AI hypothesis generation creates candidate explanations that serve as starting points for rigorous testing—it does not prove causation. Option B is tempting because it sounds definitive, but AI generates hypotheses, not proven conclusions. Hypothesis generation requires domain knowledge (option C is wrong) and does not eliminate data collection (option D is wrong).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailMax, a grocery chain with 450 stores across North America, implemented an AI system to generate hypotheses about regional sales patterns. The AI identified that stores in regions with >35% population density growth correlated with higher sales. This is an example of which type of AI hypothesis?",
+    "options": [
+      "A correlation-based hypothesis generated from pattern recognition in historical data",
+      "A causal hypothesis proven by the AI without further testing",
+      "A deterministic rule that applies to all stores equally",
+      "A hypothesis that eliminates the need for statistical validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI identified a pattern (correlation) in the data, which becomes a testable hypothesis. Option B is incorrect because correlation does not prove causation—further analysis is needed. Option C is wrong because regional differences suggest variability, not a universal rule. Option D misunderstands hypothesis generation's role in the analytics workflow.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "FinanceFlow, an investment firm, uses AI to generate hypotheses about stock price movements. Which of the following best describes a limitation of purely AI-generated hypotheses without human business expertise?",
+    "options": [
+      "AI may identify statistical patterns that lack real-world business meaning or causal plausibility",
+      "AI cannot process large datasets as quickly as human analysts",
+      "AI always generates hypotheses that are too simple for real markets",
+      "AI is incapable of finding any useful patterns in financial data"
+    ],
+    "correctIndex": 0,
+    "explanation": "AI excels at finding patterns in data but may lack the business context to determine whether those patterns are meaningful in practice. Option B is false—AI processes data faster than humans. Option C is too broad and incorrect. Option D is false—AI is often very good at pattern detection in financial data.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At ManufactureCo, an AI system generated 847 hypotheses about why production defect rates increased from 2.3% to 5.1% last month. A manager then narrowed the list to the 12 most plausible hypotheses based on production logs and process knowledge. What is the primary value of this human-AI collaboration step?",
+    "options": [
+      "Filtering hypotheses through domain expertise ensures investigation focuses on explanations with actual causal relevance to the process",
+      "Reducing the number of hypotheses eliminates the need to test any of them statistically",
+      "It proves that the 12 remaining hypotheses are definitely the true causes",
+      "It allows the team to avoid collecting additional data during the investigation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Human domain expertise filters out spurious correlations and focuses testing on plausible mechanisms. Option B is wrong because all 12 still require statistical testing. Option C confuses filtering with proof—the hypotheses are narrowed but not yet validated. Option D misunderstands the investigation process; additional data is typically still needed.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "ConsumerBrand, a CPG company, defines AI-driven hypothesis generation as 'the automated discovery of potential relationships in data that warrant investigation.' Which core element does this definition emphasize?",
+    "options": [
+      "AI generates candidate explanations that require subsequent validation, not final answers",
+      "AI can conclusively determine root causes without further analysis",
+      "AI replaces the need for business domain knowledge in the investigation",
+      "AI eliminates uncertainty by providing definitive proof of causality"
+    ],
+    "correctIndex": 0,
+    "explanation": "The phrase 'warrant investigation' makes clear that hypotheses are candidates for testing, not confirmed conclusions. Option B directly contradicts the definition. Option C ignores the importance of domain expertise in filtering and interpreting results. Option D mischaracterizes the role of AI in causal inference.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "HealthTech Solutions observed that patient appointment no-show rates in their three clinics were: Urban clinic (12%), Suburban clinic (8%), and Rural clinic (19%). An AI system generated the hypothesis that 'Rural clinics have longer average patient drive times, leading to higher no-show rates.' To test this hypothesis, the company should collect data on which variable?",
+    "options": [
+      "Average patient distance from the clinic and average travel time per patient",
+      "The total number of patients scheduled at each clinic location",
+      "The price of gasoline in each region",
+      "The number of healthcare providers working at each clinic"
+    ],
+    "correctIndex": 0,
+    "explanation": "Testing the hypothesis about drive time requires direct measurement of patient distance and travel time. Option B (number of patients) is irrelevant to the causal mechanism proposed. Option C (gas price) is a confounding variable that could correlate but doesn't directly test the hypothesis. Option D (provider count) doesn't address the drive-time mechanism.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "LogisticsCorp analyzed 18 months of shipping data from 230 regional distribution centers. An AI system generated 156 hypotheses about why delivery times increased from an average of 2.8 days to 3.4 days. The team ranked hypotheses by statistical strength and plausibility, then selected the top 8 to investigate. If each hypothesis requires 40 analyst hours to test rigorously, how many total hours should the team budget for the full investigation of these 8 hypotheses?",
+    "options": [
+      "320 hours",
+      "256 hours",
+      "400 hours",
+      "480 hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "8 hypotheses × 40 hours per hypothesis = 320 hours. Option B (256) results from incorrect multiplication (6.4 × 40). Option C (400) appears if someone multiplies 10 × 40 by mistake. Option D (480) results from multiplying 12 × 40, suggesting confusion about the number of hypotheses to investigate.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SoftwareSolutions generated AI hypotheses about why monthly recurring revenue (MRR) from enterprise clients dropped 18% from $2.4M to $1.97M over Q3. One AI-generated hypothesis claimed: 'A competitor's product feature update caused client churn.' Another hypothesis claimed: 'The company's support ticket response time increased from 4 hours to 7 hours, correlating with churn.' Which hypothesis is more testable with readily available company data, and why?",
+    "options": [
+      "The support response time hypothesis is more testable because the company has internal ticket data; the competitor hypothesis requires external market intelligence that may be unavailable",
+      "The competitor hypothesis is more testable because it's simpler",
+      "Both are equally testable because they both involve human behavior",
+      "Neither can be tested without conducting customer interviews"
+    ],
+    "correctIndex": 0,
+    "explanation": "The company can directly measure its own support response times in internal systems, whereas tracking competitor features and attributing causation requires external data and inference. Option B is wrong because simplicity doesn't equate to testability. Option C incorrectly assumes equal testability. Option D is false—both can be tested with data analysis before (or instead of) interviews.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analytics team at BrandsCo generated 340 AI hypotheses about why email open rates declined from 22% to 18% across their customer base of 1.2M subscribers. The team will test hypotheses in batches of 15, with each batch requiring 2 weeks to complete. Approximately how many weeks will it take to test all hypotheses at this rate?",
+    "options": [
+      "Approximately 45 weeks",
+      "Approximately 27 weeks",
+      "Approximately 23 weeks",
+      "Approximately 34 weeks"
+    ],
+    "correctIndex": 0,
+    "explanation": "340 hypotheses ÷ 15 hypotheses per batch = 22.67 batches. 22.67 batches × 2 weeks per batch ≈ 45 weeks. Option B (27) results from dividing 340 by 15 without multiplying by 2. Option C (23) is roughly the number of batches. Option D (34) results from an incorrect arithmetic operation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "AutoRepair, a chain of 87 service centers, used AI to generate hypotheses about variation in average customer satisfaction scores (1–100 scale). Centers ranged from 62 to 91. An AI model identified that centers with higher technician tenure correlated with higher satisfaction. Before implementing a hypothesis that 'experience drives satisfaction,' what critical human oversight is most important?",
+    "options": [
+      "Verify that technician tenure is actually measured accurately and explore whether other factors (e.g., newer facilities, management quality) might be the true drivers",
+      "Immediately hire more experienced technicians at all low-performing centers",
+      "Conclude that the hypothesis is proven and stop further investigation",
+      "Delete all data from centers with low technician tenure"
+    ],
+    "correctIndex": 0,
+    "explanation": "Critical thinking requires checking data quality and investigating alternative explanations (confounding variables). Option B jumps to action without validation. Option C confuses correlation with causation and premature closure. Option D is illogical and wasteful. The correct answer reflects the role of human judgment in scrutinizing AI-generated hypotheses.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "EduTech, an online learning platform with 487K active users, used AI to generate hypotheses about why course completion rates dropped from 64% to 58% over two quarters. The AI identified 213 hypotheses, including: (H1) 'Increased course difficulty,' (H2) 'Platform outages increased from 1.2% to 3.1% monthly uptime loss,' and (H3) 'Changes in the user demographic shifted toward older learners who complete at 52% vs. younger learners at 68%.' Which hypothesis, if true, would represent a root cause most directly actionable by the product team?",
+    "options": [
+      "H2 (platform outages), because technical infrastructure is within product team control and can be remedied through engineering",
+      "H1 (course difficulty), because it is the broadest explanation",
+      "H3 (demographic shift), because it affects the largest number of users",
+      "All three are equally actionable regardless of root cause"
+    ],
+    "correctIndex": 0,
+    "explanation": "Root cause actionability depends on whether the product team can directly influence the factor. Platform outages are a technical issue the product/engineering team can fix. H1 requires content decisions that may involve instructors and may be harder to reverse. H3 (demographic shift) is largely outside product control. Option B (broadest) and Option C (most users) are irrelevant to actionability.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company generated AI hypotheses about why Phase III trial enrollment slowed from 12.5 patients per site per month to 8.3 patients per site per month across 34 research sites. The AI highlighted two hypotheses: (A) 'Stricter inclusion/exclusion criteria implemented 6 months ago reduced eligible patient pool by ~30%' and (B) 'Site staff turnover correlated with enrollment decline (r = 0.67).' A analyst concludes: 'Hypothesis B is stronger because correlation is higher.' What is the flaw in this reasoning?",
+    "options": [
+      "Correlation strength alone does not determine causal relevance; Hypothesis A is more mechanistically plausible and directly explains the enrollment decline",
+      "Hypothesis B must be true because r = 0.67 is statistically significant",
+      "Both hypotheses are equally valid because they both use quantitative data",
+      "The analyst should abandon Hypothesis A because it contradicts the AI model's preference"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hypothesis A provides a clear causal mechanism (stricter criteria → fewer eligible patients → fewer enrollments). Hypothesis B shows correlation but doesn't establish causation—staff turnover might be a symptom rather than a cause. Option B confuses statistical significance with causation. Option C ignores domain knowledge. Option D is wrong because human judgment should validate AI suggestions, not follow them blindly.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "RetailChain analyzed 156 weeks of sales data across 412 stores and generated 489 AI hypotheses about a 7.2% decline in average transaction value (from $54.30 to $50.45). The team created a prioritization matrix: axes are 'Testability' (high/low) and 'Business Impact if True' (high/low). A hypothesis ranks high on both dimensions. What should be the team's next step?",
+    "options": [
+      "Design a rigorous test to validate the hypothesis, including data collection and statistical analysis to confirm or refute it",
+      "Immediately implement changes based on the hypothesis without testing",
+      "Abandon the hypothesis because it is too obvious",
+      "Wait until all 489 hypotheses are ranked before testing any of them"
+    ],
+    "correctIndex": 0,
+    "explanation": "High testability and high impact makes a hypothesis an ideal candidate for immediate rigorous testing—this is the core workflow of hypothesis-driven analytics. Option B violates scientific rigor and risks wasting resources. Option C is illogical. Option D leads to analysis paralysis; prioritized hypotheses should be tested promptly.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FinanceBank reviewed AI-generated hypotheses explaining why loan default rates increased from 3.8% to 5.2% across their 890K customer portfolio. Two hypotheses emerged: (P1) 'Economic recession reduced borrower income, increasing default risk' and (P2) 'The bank's credit underwriting team hired 12 new analysts 18 months ago who may have approved riskier loans.' An executive suggests: 'P1 is the real cause because the recession is a macro force, while P2 is just internal details.' Why is this reasoning potentially flawed?",
+    "options": [
+      "Both hypotheses could be true simultaneously and reinforce each other; dismissing P2 as 'just internal details' ignores that underwriting quality is within the bank's control and directly testable",
+      "Macro factors always override internal factors in causation",
+      "P1 cannot be tested, so P2 must be the cause",
+      "The bank should test neither hypothesis and accept that default rates will always rise"
+    ],
+    "correctIndex": 0,
+    "explanation": "In reality, both hypotheses could be true, and they may interact (weak borrowers + weak underwriting = higher defaults). The executive's dismissal of P2 as 'just details' represents a common error: confusing magnitude with importance. From an operational standpoint, P2 is highly actionable because the bank can improve underwriting. Option B is overgeneralization. Option C is false—P1 is testable. Option D is defeatist and wrong.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm advised a telecom company that generated 612 AI hypotheses about why customer satisfaction fell from 7.8 to 6.9 (out of 10) in their 2.3M subscriber base. The consultant recommended: 'Test all 612 hypotheses simultaneously using machine learning regression to find the true drivers.' Why would this approach likely fail or be inefficient?",
+    "options": [
+      "Testing 612 hypotheses simultaneously creates severe overfitting, multiple-comparisons problems, and makes it impossible to isolate causal mechanisms; human prioritization and sequential testing of top hypotheses is more rigorous",
+      "Machine learning is incapable of handling more than 100 variables",
+      "The company should test only 1 hypothesis at a time to avoid wasting resources",
+      "All 612 hypotheses are equally likely to be true, so the order doesn't matter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Testing 612 hypotheses simultaneously leads to overfitting (spurious correlations appear significant), p-hacking, and uninterpretable results. Sequential testing of prioritized hypotheses is more scientifically sound and resource-efficient. Option B is false—ML handles many variables. Option C is overly restrictive; A/B testing and multivariate tests are valid. Option D is false—some hypotheses are more plausible than others based on domain knowledge.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

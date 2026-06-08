@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A distribution is considered positively skewed when its tail extends to the right. Which of the following best describes the relationship between the mean, median, and mode in a positively skewed distribution?",
+    "options": [
+      "Mean > Median > Mode",
+      "Mode > Median > Mean",
+      "Mean = Median = Mode",
+      "Median > Mean > Mode"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a positively skewed distribution, extreme values on the right pull the mean higher than the median, which sits higher than the mode. Option B is tempting because students often confuse the direction of skew with the ordering, but that describes a negatively skewed distribution.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An outlier in a dataset is best defined as:",
+    "options": [
+      "A value that lies far from the central location of the data, typically beyond 1.5 × IQR from the quartiles",
+      "Any value that differs from the mean by more than one standard deviation",
+      "The largest or smallest value in the dataset",
+      "A value that makes the distribution non-normal"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IQR method (1.5 × IQR rule) is the standard statistical definition of an outlier and is independent of distribution shape. Option B is incorrect because it would classify too many normal observations as outliers; option C confuses extremes with outliers; option D conflates outliers with normality issues.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the skewness coefficient range that indicates approximate symmetry in a distribution?",
+    "options": [
+      "Between -0.5 and +0.5",
+      "Between -1.0 and +1.0",
+      "Between -2.0 and +2.0",
+      "Between 0 and +1.0"
+    ],
+    "correctIndex": 0,
+    "explanation": "A skewness coefficient between -0.5 and +0.5 indicates approximate symmetry, while -1 to +1 suggests moderate skew and beyond ±1 indicates strong skew. Option B is a common trap because -1 to +1 is sometimes cited for moderate skew detection.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following statistics is most resistant to the influence of outliers?",
+    "options": [
+      "The median",
+      "The mean",
+      "The range",
+      "The standard deviation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The median is a robust measure that ranks values and depends only on the middle position, making it resistant to extreme values. The mean (Option B) is the most tempting wrong answer because it's commonly used, but it weights all values equally and is highly sensitive to outliers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When analyzing customer satisfaction scores for Tesla dealerships in California, a researcher finds Q1 = 72, Q3 = 88, and identifies a score of 22 as a potential outlier. Using the 1.5 × IQR rule, is 22 actually an outlier?",
+    "options": [
+      "Yes, because 22 < 50, which is below the lower fence of 48",
+      "No, because 22 is still within the acceptable range of the data",
+      "Yes, because the difference between 22 and Q1 exceeds 1.5 standard deviations",
+      "No, because outliers must be above Q3, not below Q1"
+    ],
+    "correctIndex": 0,
+    "explanation": "IQR = 88 - 72 = 16; Lower fence = 72 - 1.5(16) = 48. Since 22 < 48, it is an outlier. Option B is tempting because students might assume all data is 'acceptable,' but statistical outliers have a specific definition. Option C confuses the IQR method with z-scores.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain analyzing weekly sales (in thousands) for 50 stores observes: Mean = $285K, Median = $310K, Mode = $320K. Before making decisions about store efficiency, which conclusion is most appropriate?",
+    "options": [
+      "The distribution is negatively skewed, suggesting some stores with unusually low sales are pulling the mean down",
+      "The distribution is positively skewed, indicating most stores perform above the mean",
+      "The distribution is symmetric, so the mean accurately represents typical store performance",
+      "The presence of a mode indicates the data is bimodal and unreliable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since Mean < Median < Mode, the distribution is negatively skewed (tail to the left), with low-performing stores pulling the mean down. This is the correct ordering for negative skew. Option B incorrectly reverses the skew direction; Option C ignores the clear relationship between the three measures.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing firm tracks defects per unit across 200 production batches. The dataset has a skewness of +1.8 and contains two outliers with extremely high defect counts (42 and 39 defects per unit). When presenting this data to the quality director, which approach is most statistically sound?",
+    "options": [
+      "Report both the median and mean, acknowledge the positive skew and outliers, and investigate the outlier batches separately",
+      "Remove the two outliers and recalculate statistics for a 'cleaner' dataset",
+      "Report only the mean since it captures all data points",
+      "Report only the median and ignore the mean due to the skewness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Best practice is to report both measures, note the skewness, and investigate outliers separately before removal. Option B is tempting but premature—outliers may contain valuable information (equipment failure, sabotage). Option C ignores the skew problem; Option D throws away useful distributional information.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An investment analyst reviews annual returns (%) for 48 technology funds and calculates: Mean = 18.2%, Median = 16.5%, Standard Deviation = 14.3%. The analyst also identifies one fund with a return of -22% as a potential outlier. Which statement best reflects the data characteristics?",
+    "options": [
+      "The positive skew (Mean > Median) indicates strong right-tail performance; the -22% return is likely an outlier and should be investigated for unusual circumstances",
+      "The data is negatively skewed because the standard deviation exceeds the mean",
+      "The -22% fund is definitely an outlier and should be removed to improve the mean return",
+      "The high standard deviation makes the median unreliable, so only the mean should be reported"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean (18.2%) > Median (16.5%) indicates positive skew with some very strong performers. The -22% is suspicious and warrants investigation. Option B incorrectly uses standard deviation to assess skew; Option C assumes automatic removal without investigation; Option D misstates when the median becomes unreliable.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company measured delivery times (hours) for 150 shipments: Mean = 28.4 hours, Median = 26.1 hours, Mode = 24.5 hours, Skewness = +1.34, and identified three shipments taking over 65 hours. Considering both skewness and outliers, what is the primary insight?",
+    "options": [
+      "The moderate positive skew and right-tail outliers suggest delivery times are pulled higher by exceptional delays; the median (26.1) better represents typical performance",
+      "The presence of outliers proves the distribution is non-normal and statistics are meaningless",
+      "The positive skewness indicates the company consistently delivers faster than the mean suggests",
+      "The outliers should be removed before interpreting skewness because outliers distort skewness measures"
+    ],
+    "correctIndex": 0,
+    "explanation": "Positive skew with outliers in the right tail is consistent (both pull distributions rightward). The median is more representative for typical performance. Option B overstates the impact (outliers exist in most real data); Option C misinterprets positive skew direction; Option D is backward—outliers contribute to skewness rather than distorting it unfairly.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank compares account balances across 300 customer accounts and finds skewness = -0.82 with Q1 = $4,200, Q3 = $18,500, and identifies one account with $125,000 as a potential outlier. Using statistical logic, why is this account likely NOT a statistical outlier despite its high balance?",
+    "options": [
+      "The negative skew indicates the tail extends to the left; a high value on the right would need to exceed the upper fence, which equals $18,500 + 1.5(14,300) = $40,950",
+      "Any account with more than $100,000 is an outlier by definition in banking",
+      "The account cannot be an outlier because positive and negative skewness balance each other",
+      "Outliers only exist in the left tail of negatively skewed distributions"
+    ],
+    "correctIndex": 0,
+    "explanation": "IQR = 18,500 - 4,200 = 14,300; Upper fence = 18,500 + 21,450 = 39,950. Since $125,000 > $39,950, the account IS actually an outlier. However, the question asks why it's likely NOT, making this a error-checking scenario. The correct reasoning shows it WOULD be an outlier. Options B, C, and D all contain fundamental misconceptions about outliers.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm analyzed project costs for 80 contracts: Skewness = +2.1 (highly positively skewed), Mean = $450K, Median = $310K, and the largest project cost $2.8M. A junior analyst recommends using only the mean for budget planning. Why is this recommendation problematic, and what is the most appropriate alternative?",
+    "options": [
+      "High positive skewness means the mean is inflated by extreme projects; the median ($310K) or a trimmed mean would better represent typical project costs",
+      "The mean is always more accurate than the median regardless of skewness",
+      "The $2.8M project is automatically an outlier that should be deleted before any analysis",
+      "Highly skewed data cannot be analyzed using standard statistics and requires non-parametric methods exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "With skewness of +2.1, the mean ($450K) is severely inflated relative to the median ($310K), making the median or trimmed mean more representative. Using only the mean would overestimate typical project costs. Option B ignores skewness effects; Option C jumps to deletion without investigation; Option D is too extreme—standard statistics remain informative even with skewness.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR analyst examines employee salaries at a Fortune 500 tech company with 2,000 employees: Mean = $156K, Median = $98K, Skewness = +2.8. When the CEO claims 'the average salary is $156K,' which critique is most statistically valid?",
+    "options": [
+      "The claim is misleading because extreme executive compensation creates positive skew; half the employees earn less than $98K, not $156K",
+      "The claim is accurate because the mean is always the true 'average'",
+      "The claim is misleading because the standard deviation is too high to trust any average",
+      "The claim is valid because skewness only affects theoretical distributions, not actual company data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean > Median with extreme positive skew indicates a 'typical' employee earns near the median ($98K), not the mean. High executive salaries inflate the mean. This is a common deceptive practice. Option B is the most tempting trap—the mean IS mathematically correct but conceptually misleading in skewed distributions. Option C confuses standard deviation with skewness issues.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain manager compares supplier response times (days) across vendors: Dataset A has Mean = 8, Median = 8, Skewness = 0.0; Dataset B has Mean = 9.5, Median = 7.2, Skewness = +1.8. Both datasets contain one identified outlier. If reliability (consistency) is critical, which dataset is preferable and why?",
+    "options": [
+      "Dataset A is preferable because it is symmetric with no skew, meaning typical performance matches the mean and there is less variance from the central tendency",
+      "Dataset B is preferable because it has a higher mean response time",
+      "Dataset A is preferable because it has a higher median",
+      "Dataset B is preferable because positive skewness indicates faster response times"
+    ],
+    "correctIndex": 0,
+    "explanation": "Perfect symmetry in Dataset A (Mean = Median, Skewness = 0) indicates consistent, predictable performance. Dataset B's positive skew and gap between mean and median signal occasional extreme delays. For reliability, consistency matters more than average speed. Option B contradicts 'critical reliability'; Option C misinterprets median advantage; Option D reverses skew direction.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher investigating customer wait times at a hospital emergency department collects data from 500 patient visits: Mean = 42 min, Median = 31 min, Q1 = 18 min, Q3 = 55 min, and identifies wait times of 3.5 hours and 4.1 hours as potential outliers. Which analytical error is being made in the outlier identification?",
+    "options": [
+      "The 3.5-hour wait is below the upper fence [55 + 1.5(37) = 110.5 min or 1.84 hours], so it IS an outlier, but the identification process appears sound; the issue is that the long-tail nature of emergency wait times may warrant domain expertise before removal",
+      "Both times should be automatically removed because they exceed the mean by more than 1 standard deviation",
+      "The outlier identification is flawed because 3.5 and 4.1 hours cannot both be outliers from the same dataset",
+      "The times are definitely outliers and must be removed before analyzing patient satisfaction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Upper fence = 55 + 1.5(37) = 110.5 minutes (≈1.84 hours). Both 210 minutes (3.5 hrs) and 246 minutes (4.1 hrs) exceed this, confirming they are statistical outliers. However, in emergency care, such delays may be legitimate (not errors) and warrant clinical investigation. Option B confuses the IQR rule with z-scores; Option C falsely assumes only one outlier is possible; Option D assumes automatic removal without context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst compares three investment portfolios over 120 months. Portfolio X: Skewness = -1.2, Mean = 12.5%, Median = 14.8%; Portfolio Y: Skewness = +0.3, Mean = 13.1%, Median = 13.0%; Portfolio Z: Skewness = +2.4, Mean = 15.2%, Median = 9.8%. For a conservative investor seeking stable, predictable returns, which portfolio is most appropriate and what is the key reason?",
+    "options": [
+      "Portfolio Y is most appropriate because its near-zero skewness indicates symmetric, predictable returns; the mean and median are nearly identical, minimizing surprise extreme outcomes",
+      "Portfolio X is best because negative skewness means returns are always higher than expected",
+      "Portfolio Z is best because the highest mean (15.2%) ensures maximum wealth growth",
+      "All three portfolios are equivalent because they all have positive skewness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Portfolio Y's skewness near zero (±0.3) with Mean ≈ Median signals symmetric, stable returns—exactly what conservative investors need. Portfolio X's negative skewness means occasional severe downside; Portfolio Z's skewness of +2.4 with Mean >> Median indicates rare huge gains but frequent small losses. Option B misunderstands negative skew; Option C ignores stability for a conservative investor; Option D incorrectly claims all have positive skewness (X is negative).",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

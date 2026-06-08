@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Salesforce, a data dictionary entry for the field 'Annual_Revenue' specifies a data type of 'Currency' with a format of USD and values between $0 and $999,999,999. What is the primary purpose of documenting this information?",
+    "options": [
+      "To establish a standardized definition so all analysts interpret the field identically",
+      "To prevent the database from storing any values outside the specified range",
+      "To automatically convert all revenue figures to a single currency format",
+      "To reduce the file size of the dataset by compressing large numbers"
+    ],
+    "correctIndex": 0,
+    "explanation": "A data dictionary defines the meaning, format, and acceptable range of a field so users understand exactly what the data represents. Option B is tempting because it sounds technical, but validation rules (not the dictionary itself) enforce those constraints; the dictionary only documents them. Option C confuses the dictionary with ETL transformation tools, and Option D is unrelated to documentation's purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a cleaning log at Amazon Web Services, an analyst records that 347 records from a dataset of 52,000 customer transactions contained missing values in the 'Shipping_Date' field. What percentage of records required cleaning due to this issue?",
+    "options": [
+      "0.67%",
+      "1.49%",
+      "2.31%",
+      "6.70%"
+    ],
+    "correctIndex": 0,
+    "explanation": "347 ÷ 52,000 = 0.00667 or 0.67%. Option B (1.49%) results from incorrectly dividing 347 by 23,300 (half the dataset). Option C uses 347 ÷ 15,000, a common rounding error. Option D (6.70%) comes from confusing the calculation as 347 ÷ 5,200 (a power-of-10 mistake). The correct answer demonstrates precise percentage calculation for a cleaning log metric.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is a standard field that should always appear in a cleaning log at companies like IBM or Microsoft?",
+    "options": [
+      "A description of the data quality issue and the corrective action taken",
+      "The hourly wage of the analyst who performed the cleaning",
+      "The hardware specifications of the computer used to identify errors",
+      "The employee ID of the dataset's original creator"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cleaning logs must document what problems were found and how they were resolved so future users can trust the data and understand its history. Options B, C, and D contain irrelevant information that does not support data quality or reproducibility. Option B is tempting because it might seem to 'track' who did the work, but the cleaning log tracks the work itself, not personnel costs.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A data dictionary at Target specifies that the field 'Store_ID' is numeric, non-null, and ranges from 1 to 4,892. During cleaning, an analyst discovers 23 records with 'Store_ID' values of 0. What should the analyst document in the cleaning log?",
+    "options": [
+      "23 records with invalid Store_ID values (0 is outside the documented range 1–4,892); decision to remove or flag these records",
+      "The analyst made an error because the data dictionary is always correct and overrides actual data",
+      "Store_ID values of 0 are valid because they may represent a special headquarters location",
+      "The cleaning log should not record this issue because the data dictionary already defines the acceptable range"
+    ],
+    "correctIndex": 0,
+    "explanation": "The cleaning log must document deviations from the data dictionary and the action taken (removal, flagging, correction). Option B is incorrect because data dictionaries define expectations, not reality; discrepancies must be investigated. Option C makes an unsupported assumption; if headquarters were coded as 0, that would be documented in the data dictionary. Option D ignores the purpose of a cleaning log, which is precisely to track such violations and their resolution.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "During a data quality audit at Netflix, an analyst reviews the cleaning log and finds that 8,500 records were imputed for missing 'Subscriber_Country' values using the mode (most common country). The dataset contains 320,000 total subscriber records. If the analyst now reports that the data is '99% complete,' what is the issue with this interpretation?",
+    "options": [
+      "Imputation creates artificial data; the actual completeness is 97.34%, and imputed records may introduce bias regardless of the percentage",
+      "The calculation is correct (311,500 ÷ 320,000 = 97.34%), so there is no interpretive issue",
+      "Imputation increases completeness, so the dataset is actually more than 99% complete",
+      "The analyst should have removed the 8,500 records instead of imputing them to preserve data integrity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Imputation improves completeness numerically (320,000 − 8,500 = 311,500 missing; 311,500 ÷ 320,000 = 97.34% complete before imputation), but imputed data are synthetic and may distort analyses. Reporting '99% complete' misses the critical caveat that 2.66% of the data are imputed estimates, not observed values. Option B is tempting because the math works, but it ignores the semantic difference between observed and imputed data. Option C wrongly assumes imputation improves truth, not just statistics. Option D is prescriptive but ignores that imputation is often a valid strategy documented in the cleaning log.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data dictionary for an e-commerce platform at Shopify defines 'Discount_Percentage' as a decimal field between 0 and 100. A cleaning log entry notes: 'Found 156 records with Discount_Percentage values greater than 100; set all to 100.' What is the primary risk of this cleaning decision?",
+    "options": [
+      "The true discount amounts are lost; the correction masks a potential data entry error or system malfunction that should be investigated",
+      "The data will be biased toward lower discounts, making the dataset unusable",
+      "Capping values at 100 violates the data dictionary definition, so the records should be deleted instead",
+      "Discounts over 100% are mathematically impossible, so the correction is always appropriate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Silently correcting out-of-range values without investigating the root cause (data entry error, system bug, or fraud) destroys information and prevents future prevention. The correct answer acknowledges that 156 records with over-100% discounts warrant investigation, not automatic capping. Option B is too extreme; a single correction does not ruin the dataset. Option C is pedantic—capping is a valid correction strategy, but only if the root cause is understood and documented. Option D is the tempting misconception: discounts over 100% are logically suspicious, but that does not justify unthinking correction; they may signal legitimate deep promotions, system errors, or fraud that the analyst should investigate.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A cleaning log at Uber shows that 12,300 records out of 450,000 ride records had missing 'Pickup_Time' values. The analyst imputed these by assigning the mean time (2:45 PM). What is a key limitation of this approach that should be noted in the data dictionary?",
+    "options": [
+      "The imputed times are synthetic and may not reflect actual demand patterns at different hours; future time-series analyses could be distorted",
+      "Imputation always introduces bias, so the entire dataset should be discarded",
+      "The mean time is the only statistically valid imputation method for time data",
+      "Missing times should have been coded as 'Unknown' instead of filled in"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean imputation for time-of-day data flattens variation and could mislead analyses that depend on hourly demand patterns (e.g., surge pricing studies). This limitation should be flagged in both the data dictionary and cleaning log so users understand the data's limitations. Option B is too harsh; imputation is a legitimate strategy if properly documented and appropriate for the analysis. Option C is false; mode or median are often better for cyclical data. Option D ignores that imputation is often preferable to deletion. The correct answer recognizes that imputation trades completeness for potential bias—a trade-off that must be transparent.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Microsoft Excel Online, a data dictionary lists 'Login_Date' as 'MM/DD/YYYY format.' A cleaning log records that 340 records used 'DD/MM/YYYY format' instead and were converted to match the standard. Which best describes what went wrong?",
+    "options": [
+      "Records were ambiguous (e.g., 03/04/2023 could mean March 4 or April 3); the conversion may have produced incorrect dates and should have been flagged for manual review",
+      "The cleaning log correctly handled the issue by standardizing the format without further review",
+      "The data dictionary should have specified both acceptable formats to avoid this problem",
+      "Converting formats is a harmless operation that automatically preserves data accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Format conversion for dates is dangerous because ambiguous entries (any day ≤ 12 and month ≤ 12) can be misinterpreted. Converting 03/04/2023 from DD/MM to MM/DD incorrectly changes April 3 to March 4. Option B wrongly assumes the conversion was automatic and correct. Option C is beside the point; the real issue is the ambiguity in the data, not the dictionary definition. Option D is dangerously false; date format conversions require validation. The correct answer highlights that 340 records may contain systematic errors that a cleaning log must flag for manual verification, not silent correction.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a cleaning log for a healthcare analytics project at UnitedHealth Group, an analyst notes that 2,100 patient records had 'Date_of_Birth' values in the future. What is the first step the analyst should take?",
+    "options": [
+      "Investigate the root cause (data entry error, system malfunction, or fraudulent record) before deciding whether to delete, correct, or flag the records",
+      "Delete all 2,100 records immediately to ensure data quality",
+      "Assume the error is a typo and automatically subtract 100 years from all future dates",
+      "Leave the records as-is because the data dictionary does not explicitly forbid future dates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data anomalies must be investigated before correction because they may reveal system problems, data entry workflows, or fraud. Deleting 2,100 records (Option B) is premature and may lose valuable information. Option C assumes a specific error pattern without evidence. Option D ignores the data dictionary's implicit constraint that birth dates should be in the past. The correct answer embodies the principle that a cleaning log documents investigation and justification, not blind correction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relationship between a data dictionary and a cleaning log?",
+    "options": [
+      "The data dictionary defines expected data structure and quality standards; the cleaning log documents actual deviations and corrective actions",
+      "The data dictionary and cleaning log serve identical purposes and can be used interchangeably",
+      "The cleaning log is created first to guide the construction of a data dictionary",
+      "The data dictionary is a static document, while the cleaning log is created only at the end of a project"
+    ],
+    "correctIndex": 0,
+    "explanation": "A data dictionary is a prescriptive reference that defines how data should look; a cleaning log is a record of how data actually looked and what was done about it. Together, they enable reproducibility and transparency. Option B is incorrect because they serve complementary, not identical, purposes. Option C reverses the logical order. Option D is false because the cleaning log is created during data processing and should be updated iteratively; it is not a one-time end-of-project document.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A data analyst at Delta Air Lines discovers that a cleaning log entry is missing documentation for why 5,600 duplicate flight records were removed from a dataset of 1.2 million bookings. What is the most serious consequence of this omission?",
+    "options": [
+      "Future analysts cannot assess whether the deletion was justified or reproduce the analysis; the 5,600 records may represent legitimate duplicate bookings (e.g., multi-leg trips) that should have been retained",
+      "The dataset is now invalid and must be completely rebuilt",
+      "The analyst who wrote the log should be disciplined for poor documentation practices",
+      "The cleaning log is incomplete but the data is still usable because duplicates should always be removed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Without documentation of the deduplication logic, future analysts cannot verify whether the deletion was appropriate. Some 'duplicates' may be legitimate (e.g., booking confirmations sent twice, or multi-leg journeys represented as linked records). Option B is overstated; incomplete documentation does not invalidate the entire dataset. Option C confuses accountability with data quality (both matter, but data integrity is the priority here). Option D falsely assumes duplicates are always errors; in airline bookings, seeming duplicates often represent valid business entities.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At PepsiCo, a cleaning log documents that 890 records had 'Product_Price' values of $0.00. The analyst recoded these as the median price ($2.49) and noted 'imputation by median price.' If a product manager later queries the dataset to find products that were free samples or promotions, what issue will arise?",
+    "options": [
+      "The free products are now hidden; the cleaning log's decision to impute rather than flag has removed evidence of a potentially important business segment (promotions or samples)",
+      "The median imputation is correct because $0.00 prices are clearly data entry errors",
+      "The product manager should have asked the question before the data was cleaned",
+      "Recoding $0.00 as $2.49 improves data quality and removes suspicious values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Imputing $0.00 values without flagging them loses the signal that some products were distributed as free samples or deep promotions—important business information. The correct answer recognizes that 'cleaning' sometimes erases meaningful patterns. Option B assumes all $0.00 entries are errors, but they may represent real promotions. Option C shifts responsibility; the cleaning decision was made unilaterally without consulting stakeholders. Option D wrongly equates 'suspicious' with 'erroneous.' The cleaning log should have flagged these 890 records separately and consulted the product team before imputing.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Comparing a data dictionary at Google with a cleaning log for the same dataset, which statement is most accurate?",
+    "options": [
+      "The data dictionary is normative (prescribes what should be), while the cleaning log is descriptive (reports what was found and fixed)",
+      "Both documents are descriptive and serve to document actual data conditions",
+      "The data dictionary is descriptive, while the cleaning log is normative",
+      "The data dictionary is optional if a thorough cleaning log exists"
+    ],
+    "correctIndex": 0,
+    "explanation": "A data dictionary sets standards and expectations ('Revenue should be in USD, range $0–$999M'). A cleaning log reports reality and actions ('Found 347 records with negative revenue; imputed as $0'). Together, they provide a complete picture of intent and practice. Option B reverses the roles. Option C inverts them. Option D is false because both documents are essential and serve different purposes; one without the other is incomplete.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A cleaning log at Airbnb notes: 'Found 14,200 NULL values in the 'Host_Response_Time' field (4.7% of 302,000 listings); removed rows.' A data analyst later discovers that this decision has biased the dataset toward more responsive hosts. What should have been done differently?",
+    "options": [
+      "The cleaning log should have documented alternative approaches (imputation, flagging) and justified why deletion was chosen; removal of 4.7% of data systematically biases toward 'better-behaved' entities",
+      "The analyst should have known that removing NULL values is always the correct approach in data cleaning",
+      "The cleaning log correctly removed data with missing values, which is standard practice",
+      "Imputation would have introduced more bias than deletion, so deletion was the right choice"
+    ],
+    "correctIndex": 0,
+    "explanation": "Deleting rows with missing values can introduce bias if missingness is not random. Hosts with low response times may be less likely to fill in the field, making deletion overrepresent responsive hosts. The correct answer highlights that the cleaning log should have justified the choice and acknowledged its limitations. Option B is a false 'golden rule' of data cleaning. Option C ignores the bias problem. Option D is unsubstantiated; imputation's bias must be compared to deletion's bias, not assumed to be worse. The cleaning log's job is to make the choice and its consequences transparent.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During an audit of a cleaning log at Intel, a manager notices that 23,400 records (8.9% of a dataset of 262,500 semiconductor test results) were flagged for missing 'Temperature_Reading' but no corrective action is documented. What is the most likely problem?",
+    "options": [
+      "The cleaning log is incomplete; it identifies the problem but omits the decision and rationale (delete, impute, investigate further, retain as-is), leaving the dataset's status ambiguous",
+      "The missing data are not a serious problem because 8.9% is a small percentage",
+      "The analyst completed the identification step but did not yet complete the correction step",
+      "Missing temperature readings should always be deleted, so the absence of corrective action means the data is corrupt"
+    ],
+    "correctIndex": 0,
+    "explanation": "A complete cleaning log must document not only what problems were found but also what was decided and why. Option A correctly identifies that the log is incomplete and unusable as-is; downstream users do not know if the 23,400 records are still in the dataset or removed. Option B wrongly minimizes the problem; 8.9% is substantial and requires documented handling. Option C is too lenient; a cleaning log should be complete before the data is released. Option D is false; missing data can be handled multiple ways depending on context and must be explicitly documented.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  }
+]

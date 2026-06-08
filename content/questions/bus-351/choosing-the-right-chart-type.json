@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Acme Manufacturing, you need to display how revenue is divided among three product lines: Industrial Solutions ($4.2M), Consumer Goods ($2.8M), and Professional Services ($1.5M). Which chart type best shows the proportion each segment contributes to the total $8.5M?",
+    "options": [
+      "Pie chart",
+      "Line chart",
+      "Scatter plot",
+      "Histogram"
+    ],
+    "correctIndex": 0,
+    "explanation": "A pie chart is ideal for showing parts of a whole when you have a limited number of categories (typically 2–5) and want to emphasize relative proportions. Line charts track change over time, scatter plots show relationships between two variables, and histograms display frequency distributions—none fit this compositional need. The tempting wrong answer is line chart, which might seem useful but cannot effectively show that three segments sum to 100% of revenue.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary purpose of a scatter plot?",
+    "options": [
+      "To display the relationship and correlation between two continuous variables",
+      "To show how a single variable changes over time",
+      "To compare values across multiple categories",
+      "To illustrate the composition of a total"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scatter plots specifically plot two continuous variables on X and Y axes to reveal patterns, clusters, and correlations between them. Line charts show change over time, bar charts compare across categories, and pie charts show composition. The tempting wrong answer is 'to show how a single variable changes over time' because scatter plots do use axes, but they are not designed for temporal trend analysis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Deutsche Bank's equity research team tracks the closing stock price of Tesla daily for 252 trading days in 2023, ranging from $101.50 to $248.75. Which chart type should they use to visualize this trend?",
+    "options": [
+      "Line chart",
+      "Pie chart",
+      "Box plot",
+      "Heat map"
+    ],
+    "correctIndex": 0,
+    "explanation": "A line chart is the standard for displaying continuous data over time; it clearly shows the progression of Tesla's stock price across trading days and makes trends, peaks, and troughs obvious at a glance. A pie chart is for composition, a box plot summarizes distribution statistics rather than showing daily progression, and a heat map is for multivariate categorical or matrix data. The tempting wrong answer is box plot because it does show price range ($101.50–$248.75), but it loses the temporal sequence, which is critical here.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst at Target wants to compare average customer satisfaction scores (on a 1–10 scale) across five store locations in the Northeast region. The scores are: Boston 7.8, New York 8.2, Philadelphia 7.5, New Jersey 7.9, and Connecticut 8.0. Which chart is most appropriate?",
+    "options": [
+      "Bar chart",
+      "Stacked bar chart",
+      "Line chart",
+      "Scatter plot"
+    ],
+    "correctIndex": 0,
+    "explanation": "A bar chart (or column chart) is ideal for comparing discrete values across categories. Each store location is a category, and the height of the bar directly represents its satisfaction score, making comparison straightforward. A stacked bar chart is for showing composition within groups, a line chart implies continuity or time progression (stores are not sequential), and a scatter plot requires two continuous variables. The most tempting wrong answer is line chart because satisfaction scores could be plotted as points, but connecting them with a line falsely implies that moving from Boston to New York represents a continuous progression rather than separate locations.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When choosing a chart type, what does 'data-ink ratio' refer to?",
+    "options": [
+      "The proportion of a chart's ink (or pixels) devoted to displaying data rather than decorative elements",
+      "The number of data points divided by the number of axes",
+      "The ratio of x-axis length to y-axis length",
+      "The percentage of the chart area that contains text labels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data-ink ratio, coined by Edward Tufte, measures how much of a visualization's visual elements actually represent data; higher ratios indicate less chartjunk and clearer communication. It has nothing to do with axis ratios, point counts, or label percentages. These wrong answers conflate numerical proportions with design principle. The tempting wrong answer is 'the number of data points divided by the number of axes' because it sounds like a ratio, but data-ink ratio is a design concept, not a mathematical calculation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase needs to display the quarterly revenue breakdown for Q1–Q4 2023, where each quarter's revenue is divided among three business units: Investment Banking, Asset Management, and Commercial Banking. Which chart type best handles both the time progression and the compositional breakdown?",
+    "options": [
+      "Stacked bar chart",
+      "Grouped bar chart",
+      "Area chart with stacking",
+      "Bubble chart"
+    ],
+    "correctIndex": 0,
+    "explanation": "A stacked bar chart (or stacked column chart) efficiently shows both dimensions: the x-axis progresses through time (Q1–Q4), and within each bar, segments represent the three business units, making year-long trends and unit proportions simultaneously visible. A grouped bar chart shows categories side-by-side, making comparison harder for four quarters and three units (12 bars total). An area chart can work but is less precise for exact comparisons. A bubble chart requires three or more continuous variables, which doesn't fit. The tempting wrong answer is grouped bar chart because it does display all values clearly, but with 12 bars (4 quarters × 3 units), it becomes cluttered and obscures the overall quarterly trend; stacking is better for showing composition within a time series.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce analytics team at Amazon noticed that a scatter plot showing the relationship between product price ($19.99–$499.99) and units sold monthly reveals one outlier: a $249.99 item that sold 15,000 units while most items at that price sell 2,000–4,000 units. Why is the scatter plot the appropriate choice for identifying this anomaly?",
+    "options": [
+      "It displays each data point individually, making outliers visible as isolated points far from the trend",
+      "It automatically flags statistical anomalies with red symbols",
+      "It groups similar prices together, making the outlier stand out in isolation",
+      "It compares only two variables at a time, reducing complexity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scatter plots plot each observation as a distinct point on an X–Y plane, so unusual values appear visually distant from the overall cluster or trend line, making outliers easy to spot. The chart does not automatically flag anything; outliers are identified through visual inspection. Grouping by price contradicts how scatter plots work (they don't group; they plot individual points). While reducing complexity is a benefit, the key reason here is individual point visibility. The tempting wrong answer is 'it automatically flags statistical anomalies with red symbols' because a well-designed scatter plot *might* highlight outliers, but the *inherent* advantage is that each point is visible, allowing human detection.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Calculate the correct chart dimensions: A Coca-Cola marketing dashboard needs to display market share data for 12 competitors with percentages: Coca-Cola 42.3%, PepsiCo 28.7%, Keurig Dr Pepper 8.2%, Monster 6.5%, Red Bull 5.1%, and 7 others averaging 1.8% each. If you use a pie chart with slices labeled clockwise starting at 12 o'clock, what is the angle (in degrees) for Coca-Cola's slice?",
+    "options": [
+      "152.3 degrees",
+      "180 degrees",
+      "120 degrees",
+      "210 degrees"
+    ],
+    "correctIndex": 0,
+    "explanation": "A full circle is 360 degrees. Coca-Cola's share is 42.3%, so its slice angle = 0.423 × 360 = 152.28 ≈ 152.3 degrees. This is a direct calculation: percentage × 360. The answer 180 degrees would represent exactly 50%, 120 degrees would represent ~33%, and 210 degrees would represent ~58%—all incorrect. This is a straightforward calculation question that tests whether the student understands how percentages map to pie slices.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A supply chain manager at Nike is analyzing lead times (in days) for shipments from five suppliers: Vietnam 18 days, Indonesia 22 days, China 15 days, Cambodia 25 days, and India 20 days. Over the past 12 months, she has observed monthly variation (±3 days) but no clear long-term trend. If she wants to show both the average lead time and the range for each supplier, which chart best serves this purpose?",
+    "options": [
+      "Box plot",
+      "Line chart",
+      "Pie chart",
+      "Waterfall chart"
+    ],
+    "correctIndex": 0,
+    "explanation": "A box plot (or box-and-whisker plot) displays the distribution of a continuous variable, showing median, quartiles, and range—perfect for showing both central tendency and variability across suppliers. A line chart implies time progression (inappropriate here since suppliers are categories), a pie chart shows composition (not applicable), and a waterfall chart shows cumulative change (not relevant). The tempting wrong answer is line chart because lead times do vary over the 12 months, but since the manager wants to summarize each supplier's typical performance and range, a box plot is superior because it condenses 12 months of data per supplier into one interpretable visualization.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a common mistake when using a line chart to display categorical (non-sequential) data?",
+    "options": [
+      "It falsely implies a continuous relationship or progression between categories that are not ordered",
+      "It uses too many colors, making the chart hard to read",
+      "It fails to show the exact values at each point",
+      "It cannot display negative values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Line charts inherently suggest continuity and progression between points; connecting category A to category B to category C with lines implies an order or relationship that may not exist. For example, connecting bar sales for 'New York,' 'Los Angeles,' and 'Chicago' with a line falsely suggests that geographic progression matters. A bar or column chart would be more honest. While color choices and value labels are design considerations, they are not fundamental errors of the chart type itself. Line charts can display negative values. The tempting wrong answer is 'it fails to show exact values' because it's true that line charts sometimes obscure precise values, but that's a design flaw, not a categorical-vs.-line inherent problem; the real issue is the false implication of relationships.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Microsoft, an HR analyst is tracking the annual salary distribution for 500 software engineers. Salaries range from $95,000 to $280,000, with a mean of $165,000 and a standard deviation of $35,000. Which chart type best shows the frequency distribution and identifies salary clusters?",
+    "options": [
+      "Histogram",
+      "Bar chart",
+      "Scatter plot",
+      "Gantt chart"
+    ],
+    "correctIndex": 0,
+    "explanation": "A histogram groups continuous data into bins (e.g., $90k–$110k, $110k–$130k, etc.) and displays frequency (count of employees) in each range, revealing the shape of the distribution and any clusters or outliers. A bar chart compares discrete categories (not continuous salary bands), a scatter plot requires two variables, and a Gantt chart tracks project timelines. The tempting wrong answer is bar chart because you could theoretically create a bar for each salary level, but with 500 unique or near-unique values, this would be unreadable; histograms solve this by binning continuous data intelligently.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A common misconception about dual-axis charts is which of the following?",
+    "options": [
+      "They always distort visual comparison by allowing independent scaling of each axis, potentially making trends appear more dramatic than they are",
+      "They are the most effective way to display any two variables simultaneously",
+      "They cannot show correlations between variables",
+      "They require both axes to have the same units (dollars, days, etc.)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dual-axis charts can be misleading because the analyst can scale each axis independently; stretching the right axis can make a flat trend look steep, or vice versa, leading to spurious visual impressions of correlation or magnitude. Dual-axis charts are not always best; in fact, many data visualization experts recommend avoiding them when possible. They can show correlations (or lack thereof), and they can mix different units, which is actually one of their legitimate uses. The tempting wrong answer is 'they are the most effective way to display any two variables' because dual-axis charts do show two variables, but they are often overused and misused; a small-multiples approach or separate charts is often clearer.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An operations team at UPS is analyzing the relationship between package weight (in pounds) and delivery time (in hours) for 300 daily shipments. Weights range from 0.5 to 85 lbs, and delivery times range from 2 to 48 hours. There appears to be a positive correlation. If the team also wanted to show how many shipments fall into each delivery-time range, which combined visualization approach would be most effective?",
+    "options": [
+      "A scatter plot with a marginal histogram on the y-axis showing delivery-time frequency",
+      "A stacked bar chart with weight categories and delivery-time segments",
+      "Two separate line charts, one for weight and one for delivery time",
+      "A bubble chart where bubble size represents package quantity"
+    ],
+    "correctIndex": 0,
+    "explanation": "A scatter plot displays the weight–delivery-time relationship, while a marginal histogram on the y-axis simultaneously shows the frequency distribution of delivery times. This is a sophisticated but clear approach that serves both purposes without adding chart complexity. A stacked bar chart groups weight into categories (losing granularity) and would awkwardly force a continuous variable into segments. Two separate line charts fail to show the relationship. A bubble chart loses the individual-point visibility needed to assess correlation. The tempting wrong answer is bubble chart because it is visually appealing and can encode three variables, but it does not clearly show the frequency distribution of delivery times the way a marginal histogram does.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Spotify analytics team examining user engagement wants to show how streaming minutes have changed month-by-month for the past 18 months, with emphasis on the overall trend rather than exact monthly values. Which chart best suits this goal?",
+    "options": [
+      "Area chart with a trend line overlay",
+      "Table with monthly values",
+      "Column chart with data labels on every bar",
+      "Scatter plot with connecting lines"
+    ],
+    "correctIndex": 0,
+    "explanation": "An area chart emphasizes the overall trend and magnitude of change over time; the filled area under the line makes the cumulative or aggregate impression clear at a glance. Adding a trend line reinforces the direction of change. A table provides exact precision but obscures visual trends. A column chart with labels emphasizes point-by-point exactness rather than trend. A scatter plot with lines is awkward and does not convey the sense of continuous time and accumulation that an area chart naturally does. The tempting wrong answer is 'column chart with data labels' because it does show all values clearly, but when the goal is to emphasize trend over precision, it creates visual noise rather than insight.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Goldman Sachs, a portfolio manager displays the correlation matrix of returns for eight assets (stocks, bonds, commodities, etc.) with correlation coefficients ranging from –0.45 to +0.92. Each cell shows the correlation between one asset pair. Which chart type is purpose-built for this?",
+    "options": [
+      "Heat map",
+      "Correlation network diagram",
+      "Grouped bar chart",
+      "Parallel coordinates plot"
+    ],
+    "correctIndex": 0,
+    "explanation": "A heat map uses color intensity (typically a gradient from blue for negative correlation to red for positive) to represent numerical values in a matrix, making it the standard visualization for correlation matrices. Colors allow instant pattern recognition across the 8×8 grid. A network diagram could show relationships but is less precise for exact coefficient values. A grouped bar chart would require 28 separate bars (one for each unique pair), making comparison difficult. A parallel coordinates plot is designed for multivariate data on individual observations, not correlation coefficients. The tempting wrong answer is 'correlation network diagram' because it is designed for relationships and can show strong vs. weak correlations through line thickness, but a heat map is more precise, more compact, and more standard for viewing an entire correlation matrix at once.",
+    "type": "Application",
+    "difficulty": "easy"
+  }
+]

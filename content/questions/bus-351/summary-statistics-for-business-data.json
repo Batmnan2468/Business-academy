@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. reported quarterly revenue of $81.4 billion in Q1 2023. Which summary statistic describes this single data point?",
+    "options": [
+      "A parameter",
+      "A statistic",
+      "A sample mean",
+      "A confidence interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "A parameter is a fixed value describing an entire population; here, Apple's Q1 2023 revenue is a known, fixed value for that specific period. A statistic is calculated from sample data, but this is an actual observed value, not derived from a sample. The confusion arises because students often mistake any numerical summary for a 'statistic,' but the distinction is whether it describes the whole (parameter) or a sample (statistic).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which measure of central tendency is most resistant to extreme values when analyzing CEO compensation across 500 Fortune 500 companies?",
+    "options": [
+      "Mean",
+      "Median",
+      "Mode",
+      "Range"
+    ],
+    "correctIndex": 1,
+    "explanation": "The median is unaffected by outliers because it represents the middle value when data is ordered; even if one CEO earns $500 million while others earn $5–10 million, the median stays stable. The mean (most tempting wrong answer) is heavily pulled by extreme values—a few billionaire CEOs would artificially inflate the average, misrepresenting typical CEO pay.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a standard deviation of $12,500 represent in the context of annual employee bonuses at Google?",
+    "options": [
+      "The average bonus amount awarded",
+      "The spread or variability of bonuses around the mean",
+      "The maximum bonus minus the minimum bonus",
+      "The most common bonus amount"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard deviation measures how dispersed data points are from the mean; a $12,500 standard deviation tells us bonuses typically vary by that amount around the average. The range (option C, a tempting error) is max minus min and ignores the distribution pattern; standard deviation accounts for all values' distance from the mean.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla's stock price closed at $245, $251, $248, $256, and $249 over five consecutive trading days. What is the mean closing price?",
+    "options": [
+      "$249.80",
+      "$250.00",
+      "$249.00",
+      "$248.60"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean = (245 + 251 + 248 + 256 + 249) / 5 = 1249 / 5 = $249.80. Option B ($250) is tempting because it looks round and is close, and students often guess 'round' numbers; option C ($249) mistakes the median for the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain records monthly sales at 15 stores. The median sales figure is $487,000. What does this tell you about the distribution?",
+    "options": [
+      "Exactly half the stores sold more than $487,000 and half sold less",
+      "The average store sold $487,000",
+      "Seven or eight stores sold above $487,000 and seven or eight sold below",
+      "Half the total revenue came from stores above $487,000"
+    ],
+    "correctIndex": 2,
+    "explanation": "With 15 stores (odd number), the median is the 8th value when ordered; this means 7 stores are below and 7 above the median (the 8th is the median itself). Option A is a common misconception—with an odd number of data points, exactly half is impossible. Option B confuses median with mean, which are often different in real business data.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix reports that subscribers in its Premium tier have an average monthly viewing time of 118 hours, with a standard deviation of 32 hours. If viewing time is approximately normally distributed, what percentage of Premium subscribers watch between 86 and 150 hours per month?",
+    "options": [
+      "Approximately 68%",
+      "Approximately 95%",
+      "Approximately 99.7%",
+      "Approximately 50%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the empirical rule: 86 = 118 - 32 (one standard deviation below the mean) and 150 = 118 + 32 (one standard deviation above). One standard deviation from the mean contains approximately 68% of data in a normal distribution. Option B (95%) corresponds to ±2 standard deviations, which would be 54–182 hours—a common confusion when applying the empirical rule.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks analyzed daily transaction counts at a busy Manhattan location over 30 days: mean = 1,205 transactions, standard deviation = 187. On one day, 1,578 transactions were recorded. How many standard deviations above the mean is this day?",
+    "options": [
+      "2.0",
+      "1.99",
+      "2.01",
+      "1.87"
+    ],
+    "correctIndex": 1,
+    "explanation": "Z-score = (1578 - 1205) / 187 = 373 / 187 ≈ 1.99. Option A (2.0) is the tempting round answer that many students would guess without calculating precisely. This question tests whether students can compute and interpret standardized scores, which are crucial for identifying unusual business events.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst compares customer satisfaction (1–10 scale) across three regional offices. Office A: mean = 7.8, SD = 1.2; Office B: mean = 7.8, SD = 0.4; Office C: mean = 7.5, SD = 1.8. Which office has the most consistent satisfaction levels?",
+    "options": [
+      "Office A",
+      "Office B",
+      "Office C",
+      "Offices A and B are equally consistent"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistency is measured by standard deviation; Office B has SD = 0.4 (the smallest), meaning scores cluster tightly around the mean. Offices A and C have larger SDs (1.2 and 1.8), indicating more variability. Students often mistakenly choose the highest mean (Office A, tempting because 7.8 > 7.5), but mean and consistency are separate properties.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing plant's quality control team records defect rates (percentage) over 20 production runs: 2.1%, 1.9%, 2.3%, 2.0%, 1.8%, 2.5%, 1.7%, 2.2%, 2.4%, 2.1%, 1.9%, 2.0%, 2.3%, 1.8%, 2.6%, 2.1%, 2.0%, 1.9%, 2.2%, 2.1%. What is the median defect rate?",
+    "options": [
+      "2.05%",
+      "2.10%",
+      "2.00%",
+      "2.15%"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 20 values (even), the median is the average of the 10th and 11th values when ordered. Ordered: 1.7, 1.8, 1.8, 1.8, 1.9, 1.9, 1.9, 2.0, 2.0, 2.0 (10th), 2.1 (11th), 2.1, 2.1, 2.1, 2.2, 2.2, 2.3, 2.3, 2.4, 2.5, 2.6. Median = (2.0 + 2.1) / 2 = 2.05%. Option B (2.10%) is the tempting mode, and option C (2.00%) mistakes a high-frequency value for the median.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company tracks daily website traffic (in thousands of visitors). Over 365 days, the mean is 52.3 thousand and the median is 48.9 thousand. What does this gap suggest about the distribution?",
+    "options": [
+      "The data is normally distributed",
+      "There are outliers pulling the mean higher (right-skewed distribution)",
+      "The company had exactly 52.3 thousand visitors on most days",
+      "The data is bimodal"
+    ],
+    "correctIndex": 1,
+    "explanation": "When mean (52.3) > median (48.9), the distribution is right-skewed with high-traffic days pulling the mean upward; this indicates occasional viral days with very high traffic. Option A (normal distribution) assumes mean ≈ median, which is false here. Option C confuses the mean with the typical day, ignoring the skew entirely.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst reports that Company X's quarterly earnings have a mean of $14.2 million and a coefficient of variation (CV) of 18%, while Company Y has a mean of $8.7 million and a CV of 22%. Which company has MORE volatile earnings relative to its size?",
+    "options": [
+      "Company X, because it has higher absolute earnings",
+      "Company Y, because it has a higher coefficient of variation",
+      "Company X, because 18% < 22%",
+      "They are equally volatile because CV accounts for size differences"
+    ],
+    "correctIndex": 1,
+    "explanation": "CV = (SD / Mean) × 100% measures relative variability independent of scale; Company Y's higher CV (22% vs. 18%) indicates greater volatility per dollar earned. Option A (a tempting error) assumes larger earnings = more stability, ignoring the CV measure entirely. Option C reverses the logic, confusing lower CV with higher volatility.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant analyzes call center performance: mean call duration = 6.2 minutes, median = 5.8 minutes, mode = 5.1 minutes. A manager claims this shows 'most calls are around 6 minutes.' What is the error in the manager's reasoning?",
+    "options": [
+      "The manager should use the median instead of the mean",
+      "The mode (5.1 min) indicates most calls cluster below 6 minutes; the mean is inflated by lengthy calls",
+      "There is no error; the mean accurately represents typical call length",
+      "The manager should use the range to evaluate call duration"
+    ],
+    "correctIndex": 1,
+    "explanation": "The mode (5.1) and median (5.8) both indicate most calls are shorter than the mean (6.2), suggesting a right-skewed distribution with some long calls inflating the average. The manager incorrectly used the mean as the 'typical' value without noticing the mode is 1.1 minutes lower. Option A is tempting but incomplete—while median is more robust, it's the mode that directly shows clustering. Option C is the dangerous misconception the question targets.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Walmart's supplier quality data shows defect rates across 200 shipments: IQR = 1.8%, Q1 = 0.9%, Q3 = 2.7%. Using the 1.5×IQR rule for outliers, a shipment with a 5.4% defect rate is flagged as an outlier. Is this correct?",
+    "options": [
+      "Yes, because 5.4% > 3.6% (Q3 + 1.5×IQR)",
+      "No, because 5.4% is only 2 standard deviations above the mean",
+      "Yes, because 5.4% is greater than the median plus any IQR multiple",
+      "No, because the mean is likely around 1.8%, so 5.4% is not truly unusual"
+    ],
+    "correctIndex": 0,
+    "explanation": "Upper outlier threshold = Q3 + 1.5×IQR = 2.7 + 1.5(1.8) = 2.7 + 2.7 = 5.4%. The shipment at exactly 5.4% is technically at the boundary (some consider it included, some excluded). Option B (tempting) conflates the IQR method with standard deviation rules, which are different. Option D mistakenly assumes the mean equals the IQR, a common error when students confuse measures.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A biotech firm reports drug trial data: n = 150 patients, mean improvement = 24.5 points, SD = 8.2 points, standard error = 0.67 points. A board member says, 'Since the standard error is tiny (0.67), our sample mean is nearly perfect.' What misconception does this reveal?",
+    "options": [
+      "Standard error measures precision of the sample mean estimate, not accuracy of individual patient outcomes",
+      "The board member is correct; small SE means the sample is highly representative",
+      "The board member should focus on the standard deviation (8.2) instead because it's larger",
+      "Standard error only applies to samples smaller than 100"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error (SE = SD / √n = 8.2 / √150 ≈ 0.67) estimates uncertainty in the sample mean itself, NOT in individual values or the accuracy of the drug's effect. Small SE means we can estimate the true population mean precisely, but individual patients still vary widely (SD = 8.2). Option B is the dangerous misconception the question exposes. Option C is tempting but misses that SD and SE serve different purposes—high SD is compatible with low SE.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR director analyzes salary data for 300 employees: mean = $68,500, median = $64,200, mode = $61,000. The director plans to give a 5% raise to 'bring everyone closer to the average.' Why is this approach flawed?",
+    "options": [
+      "A 5% raise is too small; it should be 10% to be meaningful",
+      "Raising all salaries proportionally maintains the distribution shape and gaps; it increases absolute salary variation without addressing the skew causing the mean-median gap",
+      "The median and mode should be raised instead of the mean",
+      "Raises should only be given to employees below the median to reduce inequality"
+    ],
+    "correctIndex": 1,
+    "explanation": "A uniform 5% raise scales everyone equally, so the distribution shape, skew, and gaps remain unchanged; the mean-median gap persists (now $68,925 vs. $67,410). The director misunderstands what 'closeness to average' means. Option A is tempting but misses the structural issue. Option D, while equity-minded, is not what the director claimed to do. This tests understanding that summary statistics are scale-dependent and that distribution properties (skew, spread) survive proportional transformations.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

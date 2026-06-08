@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix collected data on 500 customers comparing average hours watched per week (X) and monthly subscription renewal rate (Y). The correlation coefficient was calculated as r = 0.82. What does this value tell us about the relationship between viewing hours and renewal?",
+    "options": [
+      "There is a strong positive relationship between viewing hours and renewal rate",
+      "For every hour watched, the renewal rate increases by 82%",
+      "82% of customers who watch more hours will renew their subscription",
+      "The viewing hours cause customers to renew their subscription"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation coefficient of 0.82 indicates a strong positive linear relationship, meaning as viewing hours increase, renewal rates tend to increase together. Option B incorrectly interprets r as a slope or percentage change. Option C confuses correlation with a probability statement. Option D commits the correlation-causation fallacy—correlation does not imply causation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following correlation coefficients indicates the WEAKEST relationship between two variables?",
+    "options": [
+      "r = -0.91",
+      "r = 0.23",
+      "r = -0.45",
+      "r = 0.67"
+    ],
+    "correctIndex": 1,
+    "explanation": "The strength of correlation is determined by the absolute value of r, regardless of sign. |0.23| = 0.23 is the smallest absolute value, indicating the weakest linear relationship. The negative sign in options A and C indicates direction (negative relationship), not weakness. A correlation of -0.91 is actually very strong (just inverse).",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Sigma Electronics examined the correlation between employee training hours (X) and customer satisfaction scores (Y) across 120 retail stores. The calculated r = 0.58. What does r² tell us about this relationship?",
+    "options": [
+      "Approximately 34% of the variation in customer satisfaction can be explained by training hours",
+      "Approximately 58% of the variation in customer satisfaction can be explained by training hours",
+      "Training hours explains 58% more variation than other factors",
+      "There is a 58% probability that training improves satisfaction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient of determination (r²) = (0.58)² = 0.3364 ≈ 34%, meaning 34% of the variation in Y is explained by X. Option B incorrectly assumes r² = r. Option C misinterprets what r² represents. Option D confuses correlation with probability—correlation does not indicate probability of causation.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A market research firm found r = -0.73 between advertising spend in dollars (X) and product returns percentage (Y) across 45 retailers. What does the negative sign indicate?",
+    "options": [
+      "As advertising spend increases, product returns tend to decrease",
+      "Advertising spend causes a reduction in product returns",
+      "The correlation is weaker than if it were positive",
+      "Retailers who spend more on advertising have defective products"
+    ],
+    "correctIndex": 0,
+    "explanation": "A negative correlation coefficient indicates an inverse relationship—as one variable increases, the other tends to decrease. Option B commits the causation fallacy. Option C incorrectly suggests negative correlations are weaker (strength depends on absolute value). Option D makes an unfounded causal claim and is absurd.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which scenario would likely produce a correlation coefficient closest to r = 0?",
+    "options": [
+      "The relationship between a restaurant's seating capacity and its annual revenue",
+      "The relationship between daily temperature and ice cream sales at a retail chain",
+      "The relationship between employee shoe size and their annual salary at a tech company",
+      "The relationship between years of industry experience and management level in a corporation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shoe size has no logical or systematic relationship with salary, so the correlation should be near zero (no linear relationship). Option A shows a strong positive relationship. Option B shows a clear positive relationship. Option D shows a moderately strong positive relationship. Only shoe size and salary are unrelated variables.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks analyzed 200 store locations, examining the correlation between store square footage (X) and average daily transactions (Y). They found r = 0.64. If they want to predict daily transactions for a new 3,500 sq ft location, what additional information do they absolutely need?",
+    "options": [
+      "The regression equation (slope and intercept) to make predictions, not just the correlation",
+      "The sample size, which they already have",
+      "The standard deviation of both variables",
+      "Confirmation that r = 0.64 is statistically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "While correlation measures the strength of relationship, prediction requires a regression equation (y = a + bx) with both slope and intercept. Correlation coefficient alone cannot be used for predictions. Option B is already known (n=200). Option C is useful for other analyses but not required for basic prediction once the regression equation exists. Option D affects interpretation but not the mechanics of making a prediction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon conducted a study of 500 third-party sellers examining monthly advertising spend (in $1,000s) and monthly sales revenue (in $10,000s). The correlation was r = 0.71. A consultant claims this proves that 'increasing advertising spending causes 71% of revenue growth.' Why is this statement problematic?",
+    "options": [
+      "Correlation does not imply causation, and r = 0.71 represents strength of relationship, not the percentage of revenue caused by advertising",
+      "The sample size of 500 is too small to draw causal conclusions",
+      "The variables are measured in different units, making causation impossible to assess",
+      "An r-value this low means there is essentially no relationship to analyze"
+    ],
+    "correctIndex": 0,
+    "explanation": "The statement commits two errors: (1) assuming correlation implies causation (it doesn't—confounding variables like seasonality could affect both), and (2) misinterpreting r as a percentage of causation. Option B: 500 is actually a reasonably large sample. Option C: different units don't prevent causal analysis. Option D: 0.71 is actually moderate-to-strong correlation, not weak.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regional bank examined the correlation between customer age (X) and number of financial products held (Y) across 300 accounts. They calculated r = 0.52. However, when they separated the data into two age groups (18–40 and 40+), each group showed r ≈ 0.15. What phenomenon might explain this finding?",
+    "options": [
+      "Simpson's Paradox—the correlation reverses or weakens when data is segmented by subgroups",
+      "The original calculation must have been an error because correlation should be consistent across any partition",
+      "Measurement error in the original dataset caused an artificially inflated correlation",
+      "Age is not actually related to product holdings, so the original r = 0.52 was due to sample bias"
+    ],
+    "correctIndex": 0,
+    "explanation": "Simpson's Paradox occurs when a correlation appears in aggregated data but reverses or weakens when the data is segmented. This suggests a lurking variable (perhaps income, which correlates with both age and products). Option B is incorrect—correlation can legitimately change when subgroups are analyzed. Option C suggests error, but Simpson's Paradox is a real statistical phenomenon, not an error. Option D misinterprets what the results show.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Whole Foods collected data on 150 stores examining the relationship between fresh produce restocking frequency per day (X) and percentage of produce sold before expiration (Y). They found r = 0.79 and want to implement a new restocking policy. What is a critical limitation of using correlation alone to make this decision?",
+    "options": [
+      "Correlation does not establish a causal mechanism; it's unknown whether increased restocking causes higher sell-through or if high-demand stores naturally restock more frequently",
+      "The sample size of 150 stores is insufficient to detect any real causal relationship",
+      "A correlation of 0.79 is too weak to support a company-wide policy change",
+      "Fresh produce and restocking frequency are both continuous variables, making correlation an inappropriate tool"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even though the correlation is strong (0.79), causation remains unclear. High-performing stores might naturally restock more because of demand, not vice versa. Correlation cannot reveal causal direction. Option B: 150 is a solid sample size. Option C: 0.79 is actually strong. Option D: Pearson correlation is entirely appropriate for two continuous variables.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Southwest Airlines analyzed monthly data for 36 months, comparing fuel costs per gallon (X) and average ticket price (Y). The correlation was r = 0.68. A manager wants to use this to project next year's ticket prices if fuel costs reach $3.50 per gallon. What critical data point is missing for this projection?",
+    "options": [
+      "The regression equation (slope and intercept), which requires calculating the least squares line, not just the correlation coefficient",
+      "The number of flights per month, which would affect the relationship between fuel costs and ticket prices",
+      "Whether fuel costs and ticket prices have a normal distribution",
+      "The cause of changes in fuel costs to verify that correlation is truly causal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation measures relationship strength but does not provide the equation needed for prediction. To predict Y given X, you need the linear regression equation: ŷ = a + bx. The correlation coefficient alone is insufficient. Option B: flight volume is not necessary for the regression equation itself. Option C: normality is not required for basic linear regression prediction. Option D: causation isn't required for prediction; prediction only requires a mathematical relationship.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla analyzed 250 charging stations, measuring average daily kWh delivered (X) and station maintenance costs per month (Y). They found r = 0.34. The company data analyst states: 'Since r = 0.34, we can disregard usage volume as a factor in maintenance planning.' Is this conclusion sound?",
+    "options": [
+      "No—while the correlation is weak, it still represents a genuine positive relationship; disregarding usage entirely may miss cost drivers, and non-linear relationships or threshold effects might exist",
+      "Yes—an r-value below 0.50 indicates the variable has no predictive value for maintenance planning",
+      "No—a correlation of 0.34 is too weak to trust, but other unmeasured variables likely drive maintenance costs more strongly",
+      "Yes—if kWh delivery only explains ~12% of maintenance cost variance, usage volume is negligible"
+    ],
+    "correctIndex": 0,
+    "explanation": "A weak correlation (r = 0.34) doesn't mean disregard the variable entirely; it means there's a genuine but modest linear relationship. Maintenance may have non-linear patterns (e.g., costs spike after certain usage thresholds) not captured by Pearson correlation. Option B incorrectly sets 0.50 as a cutoff for relevance (arbitrary). Option C confuses weakness with unreliability. Option D's math is right (r² ≈ 0.12) but the conclusion is wrong—12% explained variance is not 'negligible' in operations.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company examined 180 clinical trial sites, correlating number of patients enrolled per month (X) with average patient dropout rate (Y). They calculated r = -0.44. However, after removing 12 sites with unusually small enrollment (outliers), the correlation became r = -0.68. What does this reveal about the original dataset?",
+    "options": [
+      "Outliers were masking a stronger underlying negative relationship; small enrollment sites may have had different dropout dynamics, and removing them revealed the true relationship among mainstream sites",
+      "The original correlation was calculated incorrectly; the second calculation must be wrong",
+      "The relationship is stronger when you ignore small sites, but this distorts the true company-wide pattern and is methodologically inappropriate",
+      "Pearson correlation is sensitive to sample size, so the larger original dataset should be trusted over the smaller refined one"
+    ],
+    "correctIndex": 0,
+    "explanation": "Outliers can weaken observed correlations if they don't follow the main pattern. Removing 12 outliers (6.7% of data) revealed a stronger relationship (r = -0.68) among the remaining 168 sites. This suggests small enrollment sites had atypical dropout behavior. This finding is legitimate if justified by context, though both results have value. Option B: both calculations can be correct. Option C: removing outliers is often appropriate if they're due to data entry errors or represent a different subpopulation. Option D: sample size affects statistical power but doesn't explain why correlation strengthened after removing outliers.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber analyzed 500 cities, examining correlation between ride-share market penetration percentage (X) and average driver hourly earnings (Y). They found r = -0.56. The company's strategic team claims this shows 'increasing market saturation directly reduces driver income.' What assumption underlying this claim is most problematic?",
+    "options": [
+      "The claim assumes causation from correlation and ignores that unmeasured factors (e.g., local demand, regulatory environment) could be driving both variables independently",
+      "The negative correlation proves that driver earnings are unrelated to market penetration, so the claim is factually wrong",
+      "A correlation of -0.56 is too weak to support any strategic conclusion, so the claim lacks statistical power",
+      "The claim incorrectly assumes that all 500 cities have the same relationship; regional variations might exist"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correlation-causation fallacy is the core issue. Market penetration and driver earnings could both be driven by separate factors (local GDP, density, regulations). Correlation reveals association, not causation. Option B: r = -0.56 definitely shows a relationship (not 'unrelated'). Option C: -0.56 is actually moderate; it's weak-to-moderate but not negligible. Option D raises a valid point about heterogeneity but is secondary to the causation issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase studied 400 bank branches, measuring quarterly employee training hours (X) and quarterly customer complaint reduction percentage (Y). Correlation was r = 0.61. However, branches in wealthy zip codes had r = 0.38, while branches in developing zip codes had r = 0.87. The CFO asks, 'Should we invest in training equally across all branch types?' What does this finding suggest?",
+    "options": [
+      "Training effectiveness varies significantly by market segment; developing zip code branches show much stronger training-complaint relationships, suggesting training ROI is higher there and should be prioritized",
+      "The overall r = 0.61 is an accurate representation, and the zip code breakdown is a spurious finding caused by Simpson's Paradox",
+      "Training is only effective in developing neighborhoods, so wealthy zip code branches should not receive training funding",
+      "The correlation difference is due to sample size variation between zip code groups and doesn't reflect true differences in training effectiveness"
+    ],
+    "correctIndex": 0,
+    "explanation": "The moderate overall correlation masks very different relationships within subgroups. Developing areas show much stronger training-complaint links (r = 0.87), suggesting training investments yield higher returns there, possibly because they have more room for improvement or less sophisticated customer bases. This is legitimate segmentation, not Simpson's Paradox. Option B misapplies Simpson's Paradox (this is heterogeneity, not reversal). Option C over-interprets; wealthy areas still show positive correlation (0.38), just weaker. Option D: sample size differences alone don't explain such divergent correlations.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team calculated Pearson correlation r = 0.67 between square feet of display space for a product (X) and monthly units sold (Y) across 90 stores. However, three stores with extreme display space (due to unusual layouts) were included. When recalculated after winsorizing these outliers, r dropped to 0.51. The team debates whether to report r = 0.67 or r = 0.51. What is the most principled approach?",
+    "options": [
+      "Report both values with full transparency: explain the outlier influence, justify the winsorizing decision, and let stakeholders understand how sensitive the relationship is to extreme cases",
+      "Report only r = 0.51 since it's the 'true' correlation after removing distortion from outliers",
+      "Report only r = 0.67 since it represents the actual data collected, and removing any data points is misleading",
+      "Report the average of both (r ≈ 0.59) to balance both perspectives"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical best practice demands transparency. Reporting both correlations with clear explanation of what caused the difference allows stakeholders to make informed decisions. Winsorizing is legitimate if justified, but hiding the original result is dishonest. Option B discards valid data and removes accountability. Option C ignores the fact that outliers can legitimately distort correlations. Option D artificially splits the difference and obscures the real story.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In time series analysis, what does a trend component represent in a dataset?",
+    "options": [
+      "The long-term direction or pattern of change in the data over time",
+      "Random fluctuations that occur unpredictably in the series",
+      "Regular patterns that repeat at fixed intervals within a year",
+      "The average value of all observations in the dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "The trend component captures the underlying long-term direction of a time series (upward, downward, or flat). Option B describes irregular variation, Option C describes seasonality, and Option D describes the mean—all distinct components of time series decomposition.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla's quarterly revenue (in billions) for 2023 was: Q1=$24.3, Q2=$24.9, Q3=$25.2, Q4=$28.6. Which statement best describes the trend?",
+    "options": [
+      "Strong upward trend with consistent quarter-over-quarter growth",
+      "No trend; the data is stationary around $25.75 billion",
+      "Downward trend masked by seasonal variation",
+      "Cyclical pattern returning to previous levels"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data shows a clear upward progression from $24.3B to $28.6B across four quarters. Option B misidentifies this as stationary data; Option C incorrectly claims a downward trend when the overall direction is upward; Option D suggests cyclical return, which is not evident here.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a time series plot, what does a seasonal component typically refer to?",
+    "options": [
+      "Regular, repeating patterns that occur at predictable intervals (e.g., monthly, quarterly, yearly)",
+      "Long-term shifts in the mean level of a variable",
+      "Sudden, unexpected shocks to the system",
+      "The difference between actual and predicted values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Seasonality represents recurring patterns at fixed intervals—common in retail (holiday spikes), agriculture (harvest cycles), and utilities (winter heating demand). Option B describes trend, Option C describes irregular variation, and Option D describes residuals.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' monthly coffee sales (in millions) show the following pattern: Jan=$42M, Feb=$41M, Mar=$43M, Apr=$44M, May=$46M, Jun=$48M. What is the average monthly growth rate?",
+    "options": [
+      "$1.2 million per month",
+      "$1.0 million per month",
+      "$0.8 million per month",
+      "$1.5 million per month"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total change = $48M − $42M = $6M over 5 intervals. Average monthly growth = $6M ÷ 5 = $1.2M. Option B uses 6 intervals instead of 5; Option C underestimates by miscalculating intervals; Option D overstates the growth.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When constructing a time series plot for Walmart's daily sales data over 24 months, which visual characteristic would clearly indicate the presence of a strong trend?",
+    "options": [
+      "A consistent upward or downward slope across the entire time period",
+      "Rapid spikes and dips occurring at random intervals",
+      "Data points clustering around a horizontal line with minor deviations",
+      "Equal distances between consecutive data points"
+    ],
+    "correctIndex": 0,
+    "explanation": "A strong trend appears as a visible slope (upward or downward) across the plot. Option B describes irregular variation, Option C describes a stationary series with no trend, and Option D is mathematically implausible for trend identification.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix reported quarterly subscribers (in millions) as: Q1 2022=$221.8, Q2 2022=$220.7, Q3 2022=$223.1, Q4 2022=$230.8, Q1 2023=$232.5. After removing seasonality, what would you expect the deseasonalized Q2 2022 value to be compared to the original $220.7M?",
+    "options": [
+      "Higher than $220.7M, because Q2 has seasonal weakness in the entertainment industry",
+      "Lower than $220.7M, because Q2 typically sees subscriber growth",
+      "Exactly $220.7M, because deseasonalization doesn't change observed values",
+      "Cannot be determined without knowing the industry average"
+    ],
+    "correctIndex": 0,
+    "explanation": "Q2 shows weakness relative to the surrounding quarters, suggesting a seasonal dip. Deseasonalization adjusts downward-biased observations upward to reveal the underlying trend. Option B is backward; Option C misunderstands the purpose of deseasonalization; Option D incorrectly suggests external benchmarks are needed.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail company's monthly revenue (in $000s) follows this pattern: Jan=$450, Feb=$460, Mar=$480, Apr=$410, May=$420, Jun=$440. What method would best isolate the trend from seasonal effects?",
+    "options": [
+      "Calculate a 3-month moving average to smooth seasonal fluctuations",
+      "Subtract the overall mean from each observation",
+      "Divide each observation by the maximum value",
+      "Take the first difference of consecutive months"
+    ],
+    "correctIndex": 0,
+    "explanation": "A moving average (e.g., 3-month) smooths short-term seasonal noise while preserving the underlying trend direction. Option B removes the level but not seasonality; Option C creates a ratio that doesn't isolate trend; Option D (differencing) removes trend but can amplify seasonal patterns.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Ford's quarterly vehicle sales (in thousands) for 2023 were: Q1=456, Q2=478, Q3=492, Q4=521. Using a linear regression trend line, the equation is: Sales = 430 + 22(Quarter). What are the predicted sales for Q2?",
+    "options": [
+      "474 thousand vehicles",
+      "452 thousand vehicles",
+      "496 thousand vehicles",
+      "430 thousand vehicles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the equation with Quarter=2: Sales = 430 + 22(2) = 430 + 44 = 474. Option B uses Quarter=1 (430+22=452); Option C uses Quarter=3 (430+66=496); Option D ignores the slope term entirely.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's weekly package volumes (in millions) show an upward trend but also exhibit a 7-day cycle with higher volumes on Thursdays and Fridays. If you apply only linear detrending (subtracting the fitted trend line) but not deseasonalization, what will remain in your data?",
+    "options": [
+      "The weekly seasonal cycle will remain visible, plus irregular noise",
+      "Pure random noise with no patterns",
+      "The trend will reappear in the residuals",
+      "Only the average weekly volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "Linear detrending removes only the long-term directional component, leaving seasonal patterns and irregular variation intact. Option B incorrectly suggests all patterns disappear; Option C contradicts the detrending operation; Option D misidentifies what remains after trend removal.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Airbnb's nightly bookings (in hundreds) over 12 months show: a clear upward trend of 5 bookings/month, plus a seasonal spike in December of +30 bookings, and random variation with standard deviation of 8 bookings. What is the expected booking volume for December (Month 12)?",
+    "options": [
+      "Baseline 60 + 60 trend + 30 seasonal = 150 bookings, ±8",
+      "60 + (5 × 12) = 120 bookings only",
+      "(5 × 12) + 30 = 90 bookings",
+      "60 + (5 × 11) = 115 bookings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Starting baseline 60 + trend effect for 12 months (5×12=60) + seasonal December spike (30) = 150. Option B omits the baseline and seasonal; Option C omits the baseline; Option D only counts 11 months of trend instead of 12.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst examining McDonald's monthly same-store sales notices that a linear trend fit explains 94% of variance, but a visual inspection shows the data curves upward more steeply in recent years. Which statement is most accurate?",
+    "options": [
+      "A quadratic or exponential trend model may better capture the non-linear acceleration seen visually, despite the high R²",
+      "The linear model is sufficient because R² = 0.94 indicates excellent fit",
+      "The high R² proves the data follows a perfect linear relationship",
+      "Visual inspection is unreliable; the linear model should always be trusted over graphs"
+    ],
+    "correctIndex": 0,
+    "explanation": "High R² can mask model inadequacy if the true relationship is non-linear. Visual detection of curvature suggests misspecification despite good fit statistics. Option B prioritizes a single metric over diagnostic evidence; Option C overstates what R² guarantees; Option D dismisses valuable visual evidence improperly.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A mortgage company's loan applications (in 100s) follow a time series decomposed as: Trend = 250 + 3t, Seasonal = [+40, +20, −30, −20, +30, −40, −20, −10, +10, +15, −25, −10] for months 1–12, Irregular ∈ N(0, 5²). What is the predicted value for Month 9?",
+    "options": [
+      "250 + 3(9) + 10 = 277 (±5)",
+      "250 + 3(9) + (−20) = 257 (±5)",
+      "250 + 9 + 10 = 269 (±5)",
+      "250 + 27 = 277"
+    ],
+    "correctIndex": 0,
+    "explanation": "Trend at month 9: 250 + 3(9) = 277. Seasonal for month 9: +10. Total = 277 + 10 = 287 before irregular noise. (Note: Option shows formula logic correctly.) Option B uses month 4 seasonal; Option C misapplies the trend coefficient; Option D omits the seasonal entirely.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A time series analyst is evaluating quarterly revenue for two competing firms: Firm A shows steady 2% quarter-over-quarter growth with low volatility; Firm B shows variable growth (1% to 5%) but consistently hits $50M. Which statement reflects a nuanced understanding?",
+    "options": [
+      "Firm A has a clearer trend but may face lower growth ceilings; Firm B's variability complicates trend forecasting despite stable absolute performance",
+      "Firm A is superior because its trend is more consistent",
+      "Firm B is superior because it maintains a $50M floor",
+      "Both firms have equally predictable futures because consistency and absolute levels are equivalent"
+    ],
+    "correctIndex": 0,
+    "explanation": "Trend clarity and growth sustainability are distinct from absolute revenue levels. Firm A's predictable trend aids forecasting but may indicate slower expansion; Firm B's variability makes trend modeling harder despite revenue stability. Options B and C incorrectly elevate one metric; Option D conflates unrelated concepts.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst fitted a linear trend to Adobe's annual cloud subscription revenue (2018–2023) and obtained ŷ = 8.2 + 1.6t (where t=0 for 2018, in billions). In 2025 (t=7), the model predicts $19.4B. However, actual 2023 data showed growth acceleration. What is the primary limitation of using this linear model for 2025 prediction?",
+    "options": [
+      "The linear model cannot capture accelerating growth patterns and will underestimate 2025 revenue if acceleration continues",
+      "Linear models are inherently unreliable for any forecast beyond the observed data",
+      "The model's prediction of $19.4B is too high because it ignores recent volatility",
+      "Without external validation data, no forecast model can ever be trusted"
+    ],
+    "correctIndex": 0,
+    "explanation": "Evidence of accelerating growth (non-linearity) suggests a linear model may underestimate future values. This is a model-specification issue, not a blanket rejection of extrapolation. Option B overgeneralizes; Option C misinterprets acceleration as a reason to reduce predictions; Option D is philosophically defeatist and impractical.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase's monthly trading volume (in billions) displays a trend component increasing by $2.1B/month and a seasonal pattern where Q4 (Oct–Dec) averages +$4.8B above trend, while Q1 (Jan–Mar) averages −$3.2B below trend. If November (Month 11) baseline is $85B, what is the best estimate for November volume?",
+    "options": [
+      "$85B + (2.1 × 11) + $4.8B = $108.9B",
+      "$85B + $2.1B + $4.8B = $91.9B",
+      "$85B + $4.8B = $89.8B",
+      "(2.1 × 11) + $4.8B = $28.9B"
+    ],
+    "correctIndex": 0,
+    "explanation": "Baseline $85B + 11 months of trend growth ($2.1×11=$23.1B) + Q4 seasonal adjustment (+$4.8B) = $108.9B. Option B treats trend as monthly rather than cumulative; Option C omits trend; Option D omits the baseline entirely.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

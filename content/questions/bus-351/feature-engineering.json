@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Acme Manufacturing collects data on production speed (units/hour), machine age (years), and operator experience (years). Which of these is an example of a feature in the context of predictive analytics?",
+    "options": [
+      "Any of the three variables listed above",
+      "Only production speed, because it is measured in units",
+      "Only machine age, because it changes over time",
+      "None of these—features must be calculated, not observed"
+    ],
+    "correctIndex": 0,
+    "explanation": "A feature is any input variable used in a model, whether raw or engineered. Production speed, machine age, and operator experience are all valid features. The incorrect option 'only production speed' falsely assumes features must be numeric measurements in specific units. Option 'none of these' misconceives that features cannot be raw observed data.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailCorp tracks daily sales revenue ($45,000 on average) and daily customer count (800 customers on average) across 365 days. What is the engineered feature 'revenue per customer' for an average day?",
+    "options": [
+      "$56.25",
+      "$45,800",
+      "$44,200",
+      "$0.018"
+    ],
+    "correctIndex": 0,
+    "explanation": "$45,000 ÷ 800 = $56.25 per customer. This is a ratio feature created by dividing two raw features. The distractor $45,800 is the sum (a common mistake when not reading the question carefully). $44,200 results from subtracting instead of dividing. $0.018 is the inverted ratio, confusing which variable goes in the numerator.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechStart Inc. wants to predict employee turnover. Currently, they have: years at company, annual salary ($65,000–$120,000), department (Sales, Engineering, HR), and months since last promotion. Which variable requires encoding before use in most machine learning models?",
+    "options": [
+      "Department",
+      "Years at company",
+      "Annual salary",
+      "Months since last promotion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Department is categorical (text labels) and must be encoded (e.g., one-hot encoding: Sales=1,0,0; Engineering=0,1,0; HR=0,0,1) before most algorithms can use it. The other three are already numeric. A common mistake is to assume numeric variables need encoding, or to think all variables are ready to use as-is.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "GlobalBank has customer data: account balance, transaction count per month, and account age in months. What does normalization do to these features?",
+    "options": [
+      "Scales features to a common range (e.g., 0–1) so variables with larger units do not dominate the model",
+      "Removes features that are not normally distributed",
+      "Converts categorical variables into numeric codes",
+      "Reduces the total number of features by combining similar ones"
+    ],
+    "correctIndex": 0,
+    "explanation": "Normalization (or standardization) brings features to a comparable scale, preventing large-valued features from overwhelming the model in distance-based algorithms. Option 'removes non-normal features' confuses normalization with distribution checks. 'Converts categorical variables' describes encoding. 'Reduces the number of features' describes dimensionality reduction, a different technique.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A feature engineer at CloudServices calculates a new feature: 'customer lifetime value' by multiplying monthly revenue ($2,500) × expected customer lifetime (48 months). Is this engineered feature a good predictor of churn (customer leaving)?",
+    "options": [
+      "Yes, because high values indicate strong customer commitment",
+      "Not necessarily—the feature is derived from forward-looking estimates, not past behavior",
+      "No, because multiplication is not a valid feature engineering operation",
+      "No, because numeric features cannot predict categorical outcomes like churn"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifetime value is derived partly from estimates of future behavior, making it potentially circular or weak for predicting churn directly. Better features would be past engagement, support tickets, or payment delays. Option 'yes, high values indicate commitment' is intuitive but backward—low engagement actually predicts churn. 'Multiplication is invalid' is false; multiplication is a legitimate operation. 'Numeric features cannot predict categorical outcomes' is incorrect; regression and classification can both use numeric predictors.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "HealthInsurance Corp has 50,000 customer records with claim amounts ($100–$50,000). A data scientist applies min-max normalization: (value – min) / (max – min). For a claim of $25,050, what is the normalized value?",
+    "options": [
+      "0.50",
+      "0.25",
+      "25,050",
+      "1.00"
+    ],
+    "correctIndex": 0,
+    "explanation": "($25,050 – $100) / ($50,000 – $100) = $24,950 / $49,900 ≈ 0.50. Min-max normalization produces values between 0 and 1. Option 0.25 results from dividing only the claim by the max (incorrect formula). Option 25,050 is the un-normalized value. Option 1.00 would occur only at the maximum value of $50,000.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FoodDelivery Inc. tracks delivery_time (minutes) and distance (miles). An analyst creates the feature 'delivery speed' = distance / delivery_time (miles per minute). What is the business interpretation of this feature, and why might it be problematic?",
+    "options": [
+      "It measures efficiency; it is problematic because speed depends on traffic and weather, not just distance and time",
+      "It measures customer satisfaction; it is problematic because it is not directly observable",
+      "It measures driver performance; it is problematic because it ignores the number of deliveries",
+      "It measures route quality; it is problematic because miles and minutes are in different units"
+    ],
+    "correctIndex": 0,
+    "explanation": "Speed = distance/time is a valid calculation, but delivery efficiency depends on many unmeasured factors (traffic, weather, time of day). Using this feature alone may mislead the model. Option 'not directly observable' is false; speed is observable. 'Ignores number of deliveries' and 'different units' are weak or false objections; the units are compatible (miles/minute), and a single delivery is the relevant unit of analysis.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "EcommerceGiant has product data: base_price ($10–$500), category (Electronics, Apparel, Home), and review_count (0–10,000). A junior analyst creates a feature 'price_category_interaction' by multiplying base_price × review_count. Should this feature replace either of the original features?",
+    "options": [
+      "No—the interaction feature should augment the original features, not replace them",
+      "Yes, replace base_price because the interaction captures price information",
+      "Yes, replace review_count because interaction features are always superior",
+      "Yes, replace both because the interaction is a linear combination"
+    ],
+    "correctIndex": 0,
+    "explanation": "Feature engineering typically adds features; removing originals discards information the model could use independently. The model benefits from base_price alone, review_count alone, and their interaction. Option 'replace base_price' loses the main effect of price. 'Replace both because interaction is linear combination' is false—the interaction is a product, not a linear combination of originals, and removing originals damages model interpretability.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at InvestBank notices that her model predicts loan default better when she includes both 'debt_to_income_ratio' (engineered: total_debt / annual_income) and the raw features 'total_debt' and 'annual_income' separately. However, she suspects multicollinearity. What is the most likely issue, and how should she address it?",
+    "options": [
+      "The ratio is a linear function of debt and income; she should remove either the ratio or both raw features to reduce multicollinearity",
+      "The three features are unrelated; she should keep all three because they each provide unique information",
+      "The model is overfitting; she should remove the ratio because it is an engineered feature",
+      "Multicollinearity does not affect prediction accuracy, so she should keep all features"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity occurs when features are highly correlated. The ratio debt_to_income is mathematically dependent on debt and income, causing inflated variance in coefficients. She should retain either the ratio OR both components, not all three. Option 'three features are unrelated' is factually wrong; they are mathematically linked. 'Remove the ratio because it is engineered' is incorrect reasoning; engineered features are valid if independent. 'Multicollinearity does not affect prediction accuracy' is a dangerous misconception; it affects coefficient stability and interpretability.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "LogisticsCorp has driver performance data: days_employed (1–3,650), total_deliveries (5–50,000), and accident_count (0–15). A data scientist creates the feature 'accident_rate' = accident_count / total_deliveries. When building a model to predict safety incidents, why might including both 'accident_count' and 'accident_rate' as features be problematic?",
+    "options": [
+      "They are highly correlated and introduce multicollinearity; either use accident_count alone or use accident_rate, but not both",
+      "Accident_rate cannot be calculated when total_deliveries is zero",
+      "The model will overweight accident_count in predicting future incidents",
+      "Safety incidents are categorical, not continuous, so neither feature is appropriate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accident_rate is a deterministic function of accident_count (divided by deliveries), creating perfect or near-perfect correlation and multicollinearity. The model should use one or the other, not both. Option 'division by zero' is a technical edge case but not the core problem with including both. 'Overweight accident_count' misses the multicollinearity issue. 'Categorical outcome' is irrelevant; numeric features predict categorical targets routinely (logistic regression is the standard).",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "MediaCorp streams video content and wants to predict subscriber churn. A feature engineer creates: log(watch_hours_per_month + 1). Why add 1 before taking the logarithm, and what does this reveal about feature engineering thinking?",
+    "options": [
+      "To avoid log(0) being undefined; this shows the engineer is aware of domain constraints and edge cases",
+      "To ensure the feature is always positive; this is arbitrary and adds no value",
+      "To normalize the feature to a 0–1 range; this is the standard preprocessing step",
+      "To increase the feature's variance; this improves model performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "The natural log of zero is undefined; adding 1 (a small offset) ensures all values are positive. This reflects careful thinking about data handling and boundary conditions. Option 'arbitrary with no value' misses the mathematical necessity. 'Normalize to 0–1 range' is incorrect; log transformation does not guarantee this range. 'Increase variance' is not the primary reason; the goal is mathematical validity and often to compress skewed distributions.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain (ChainMart) with stores in 50 locations notices that store_revenue is highly predictable from store_size_sqft and local_population. A junior analyst proposes adding the feature 'revenue_per_capita' = store_revenue / local_population. A senior analyst warns this is 'leakage.' What is the concern?",
+    "options": [
+      "The new feature is derived from the target variable (revenue), making it impossible to use in a forward-looking model without knowing future revenue",
+      "The feature is too simple and will not improve model accuracy",
+      "Local population is a slow-changing variable, so the feature is unstable",
+      "The feature violates the principle that engineered features must be independent of raw features"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data leakage occurs when features contain information from the target variable. 'Revenue_per_capita' is computed from store_revenue itself, so at prediction time (before knowing future revenue), this feature cannot be calculated. The model would perform artificially well in training but fail in production. Option 'too simple' is a quality judgment, not leakage. 'Unstable due to slow-changing population' is a validity concern but not leakage. 'Violates independence principle' is false; engineered features can depend on raw features, just not on the target.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "InsuranceHub has customer data spanning 24 months: monthly_premium ($50–$200), claim_count_per_year (0–8), and customer_age (18–85). To predict policy retention, an analyst creates features for each of three 8-month quarters. What is the primary advantage of this time-based feature engineering approach?",
+    "options": [
+      "It captures temporal patterns and seasonality, allowing the model to detect changes in behavior over time",
+      "It increases the number of rows in the dataset, improving statistical power",
+      "It eliminates the need for normalization because quarterly data is naturally scaled",
+      "It removes the effect of customer age, which confounds the analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-based feature engineering (quarterly aggregates or rolling windows) reveals trends and seasonal patterns that a single annual average would hide. For example, a spike in claims in Q2 might predict churn. Option 'increases rows' is misleading; reshaping data from 24 months into 3 quarters reduces rows, not increases them. 'Eliminates need for normalization' is false; normalization is still necessary. 'Removes effect of customer age' is backwards; age is a separate variable and is not removed by quarterly binning.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "TechCorp has 100,000 employee records with features: salary ($40,000–$180,000), years_experience (0–40), and job_title (Software Engineer, Manager, Analyst, Director—40 unique titles). A data scientist applies one-hot encoding to job_title. How many new binary features result, and why not use all of them in the model?",
+    "options": [
+      "40 features result; using all 40 causes the dummy variable trap (perfect multicollinearity) because one title is redundant with the sum of others",
+      "40 features result; using all 40 is fine because one-hot encoding is designed to prevent multicollinearity",
+      "39 features result; one is always omitted by convention to avoid computational overhead",
+      "4 features result because there are only 4 job title categories mentioned"
+    ],
+    "correctIndex": 0,
+    "explanation": "One-hot encoding creates one binary column per unique value (40 titles = 40 columns). However, using all 40 causes the dummy variable trap: one column is a perfect linear combination of the others (if all other titles are 0, that person is definitely the remaining title). Dropping one column breaks the dependence. Option 'using all 40 is fine' is the classic multicollinearity misconception. 'Only 39' is partially correct in practice but misses the reason (the trap, not overhead). '4 features' misreads the problem; there are 40 unique titles, not 4.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

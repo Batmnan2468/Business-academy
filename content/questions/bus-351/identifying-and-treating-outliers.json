@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Acme Manufacturing has recorded daily production outputs (in units) for the past month. One day, the facility produced 2,847 units due to a temporary equipment malfunction, while the average daily output is 1,200 units with a standard deviation of 150 units. What is the z-score for this outlier day?",
+    "options": [
+      "10.98",
+      "13.65",
+      "12.47",
+      "15.32"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-score is calculated as (X - Mean) / StdDev = (2847 - 1200) / 150 = 1647 / 150 = 10.98. This indicates the day is 10.98 standard deviations above the mean. Option B (13.65) incorrectly uses 1500 units instead of 1200 as the mean. Option C (12.47) incorrectly divides by 132 instead of 150. Option D (15.32) uses an incorrect formula altogether.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In statistics, when should a data point be considered an outlier using the z-score method?",
+    "options": [
+      "When the z-score is greater than 3 or less than -3",
+      "When the z-score is greater than 1.5 or less than -1.5",
+      "When the z-score is greater than 2.5 or less than -2.5",
+      "When the z-score is greater than 1 or less than -1"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard convention in business analytics is to flag a data point as an outlier when its z-score exceeds 3 or is below -3, representing extreme deviations. Option B (1.5) is too lenient and would flag too many normal variations. Option C (2.5) is a compromise threshold but not the standard convention. Option D (1) is far too sensitive and would incorrectly classify normal data as outliers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "CloudTech Solutions recorded monthly cloud storage usage (in TB) from 45 enterprise clients. Forty-four clients used between 80 TB and 320 TB, but one client used 8,500 TB. Which method is most appropriate for initially detecting this outlier?",
+    "options": [
+      "The interquartile range (IQR) method",
+      "Linear regression residual analysis",
+      "Time-series decomposition",
+      "Principal component analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IQR method is best for detecting univariate outliers in a single continuous variable. It uses Q1, Q3, and the 1.5×IQR threshold—simple and interpretable for usage data. Option B (regression) is for detecting outliers in relationships between variables, not univariate detection. Option C (time-series) applies to temporal patterns, not cross-sectional client data. Option D (PCA) is for multivariate outliers across many dimensions, not appropriate here.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the IQR method define as the upper fence for identifying outliers?",
+    "options": [
+      "Q3 + 1.5 × IQR",
+      "Q3 + 2 × IQR",
+      "Mean + 1.5 × Standard Deviation",
+      "Q3 + 3 × IQR"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard IQR method upper fence is Q3 + 1.5 × IQR, where IQR = Q3 - Q1. Any value above this threshold is flagged as an outlier. Option B (2 × IQR) is a more conservative threshold sometimes used for extreme outliers. Option C uses standard deviation, which is the z-score method, not IQR. Option D (3 × IQR) is overly restrictive and rarely used in practice.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailCorp's weekly sales data (in thousands) shows: Q1 = $45k, Q3 = $125k. Using the IQR method, what is the upper fence for identifying outliers?",
+    "options": [
+      "$245k",
+      "$275k",
+      "190k",
+      "$295k"
+    ],
+    "correctIndex": 0,
+    "explanation": "IQR = Q3 - Q1 = $125k - $45k = $80k. Upper fence = Q3 + 1.5 × IQR = $125k + 1.5 × $80k = $125k + $120k = $245k. Option B ($275k) incorrectly adds 2 × IQR instead of 1.5 × IQR. Option C ($190k) forgets to add the 1.5 multiplier. Option D ($295k) incorrectly adds 2.5 × IQR.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "BankStream Financial analyzed customer account balances (in thousands) from 200 retail customers. The median is $12k, and one customer has a balance of $850k. Before removing this outlier, what should the analyst verify?",
+    "options": [
+      "Whether the outlier is a data entry error or a legitimate high-net-worth account",
+      "Whether the median would change if the outlier were removed",
+      "Whether the outlier follows a normal distribution",
+      "Whether the standard deviation is greater than the mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before treating or removing an outlier, you must verify whether it represents a genuine business observation (e.g., a legitimate wealthy customer) or a data quality issue (typo, duplicate, etc.). Option B is analytical but doesn't address the root cause. Option C confuses outlier detection with normality testing. Option D is a separate statistical property unrelated to outlier validation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "StockTrader Inc. models daily stock price returns for TechCorp Inc. Over 252 trading days, returns ranged from -8% to +12%, with a mean of 0.5% and standard deviation of 2%. One day showed a return of -18%. Which statement is most accurate?",
+    "options": [
+      "The -18% return is a statistical outlier that warrants investigation for market-moving events",
+      "The -18% return should be immediately deleted as a data entry error",
+      "The -18% return is within acceptable bounds for stock price movements",
+      "The -18% return indicates the data violates the normal distribution assumption"
+    ],
+    "correctIndex": 0,
+    "explanation": "A -18% return yields z = (-18 - 0.5) / 2 = -9.25, far beyond ±3 standard deviations. This is a legitimate statistical outlier that should trigger investigation (market crash, earnings shock, etc.), not automatic deletion. Option B is premature without verification. Option C ignores that -18% is 9+ standard deviations from mean. Option D confuses outlier detection with distributional assumptions.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A dataset of employee annual salaries (in dollars) at TechGiant Corp shows median = $95k, Q1 = $65k, Q3 = $155k. Using the IQR method, how many employees with a salary of $425k would be classified as outliers?",
+    "options": [
+      "All of them",
+      "None of them",
+      "Approximately half",
+      "The answer depends on the total number of employees"
+    ],
+    "correctIndex": 0,
+    "explanation": "IQR = $155k - $65k = $90k. Upper fence = $155k + 1.5 × $90k = $155k + $135k = $290k. Since $425k > $290k, any employee earning $425k is classified as an outlier. Option B incorrectly assumes the value is within bounds. Option C introduces unnecessary ambiguity. Option D is irrelevant—the IQR threshold is absolute, not dependent on sample size.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "InsurancePro analyzed claim amounts (in dollars) from 500 auto insurance customers. The distribution is right-skewed with mean = $3,200 and median = $1,800. When identifying outliers, why should the IQR method be preferred over the z-score method?",
+    "options": [
+      "The IQR method is robust to skewness and does not assume normality",
+      "The IQR method always identifies fewer outliers than z-scores",
+      "The IQR method is simpler to calculate by hand",
+      "The IQR method cannot be affected by extreme values"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IQR method is distribution-free and robust to skewness because it relies on quartiles, not the mean/standard deviation. The z-score method assumes normality, which is violated here. Option B is sometimes true but not the reason for preference. Option C (simplicity) is irrelevant in modern analytics. Option D is false—IQR is less affected but not immune to extreme values.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing firm records defect rates (%) across 30 production batches: mean = 2.1%, standard deviation = 0.8%. One batch shows 6.5% defects. An analyst applies the z-score method and flags this as an outlier (z = 5.5), then recommends deleting the batch from analysis. What is the critical error in this approach?",
+    "options": [
+      "The analyst failed to investigate the root cause before deletion, risking loss of valuable process improvement insights",
+      "The analyst should have used the IQR method instead of z-scores",
+      "The z-score of 5.5 is not high enough to warrant an outlier classification",
+      "The analyst should have averaged the outlier with neighboring values instead of deleting it"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identifying an outlier is only the first step; before removal, the analyst must investigate why the batch had 6.5% defects (equipment failure, operator error, material issue, etc.). Deleting without investigation wastes diagnostic information. Option B is methodological preference, not an error here. Option C misunderstands the threshold (5.5 > 3 is extreme). Option D (averaging) would corrupt the data without justification.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "LogisticsCo tracks delivery times (in hours) for 120 shipments to major retailers. The dataset has a few extreme late deliveries (48+ hours) due to weather and accidents. When building a predictive model for on-time delivery likelihood, should these outliers be removed or retained?",
+    "options": [
+      "Retain them because they represent legitimate business scenarios and help the model learn to predict rare but important failure cases",
+      "Remove them because they violate the normality assumption needed for logistic regression",
+      "Remove them because they reduce the R² value of the model",
+      "Retain them only if the sample size is larger than 200"
+    ],
+    "correctIndex": 0,
+    "explanation": "In predictive modeling for business outcomes, outliers often represent important real-world scenarios (weather delays, accidents) that the model must learn to predict. Removing them would harm model performance on rare-but-critical cases. Option B confuses outlier treatment with normality; logistic regression doesn't require normality. Option C prioritizes model fit over predictive validity. Option D applies an arbitrary threshold.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst is comparing quarterly revenue (in millions) for two similar companies over 12 quarters. Company A: mean = $85M, std dev = $4M. Company B: mean = $92M, std dev = $18M. In one quarter, Company A reported $102M (z = 4.25) and Company B reported $156M (z = 3.56). Which company's value is a more extreme outlier in its respective context?",
+    "options": [
+      "Company A's $102M is more extreme because its z-score of 4.25 exceeds Company B's 3.56, despite both being statistical outliers",
+      "Company B's $156M is more extreme because the absolute dollar difference from mean is larger ($64M vs. $17M)",
+      "Neither is an outlier because both z-scores are below 5",
+      "Company B's is more extreme because it has higher volatility (std dev = $18M)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-score standardizes the deviation by each company's volatility, making it the proper comparison metric. Company A's z = 4.25 is more extreme than Company B's z = 3.56. Option B conflates absolute size with statistical extremeness—Company B's higher variability naturally produces larger dollar swings. Option C misapplies the z > 5 threshold arbitrarily. Option D confuses volatility with extremeness.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A dataset of customer lifetime value (CLV) in dollars shows: mean = $8,500, median = $4,200, Q1 = $1,500, Q3 = $9,800. The distribution is heavily right-skewed with 5 customers having CLV > $250,000. An analyst wants to segment customers for targeted retention. Why would removing these high-CLV outliers be strategically problematic?",
+    "options": [
+      "These outliers represent the most valuable customers, and removing them would prevent targeted high-value retention strategies",
+      "Removing them would change the standard deviation of the remaining data",
+      "The median is already below the mean, so the data is already skewed without them",
+      "They violate the normality assumption and prevent use of parametric tests"
+    ],
+    "correctIndex": 0,
+    "explanation": "In CLV analysis, high-value outliers are precisely the customers most critical to retain. Removing them removes the most profitable segment from analysis and strategy. This is a business error, not just statistical. Option B is true but irrelevant to strategic segmentation. Option C is already evident from the statistics shown. Option D conflates statistical assumptions with business relevance.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain manager analyzes supplier delivery performance across 50 vendors using on-time percentage (0–100%). The data shows: Q1 = 82%, Q3 = 96%, with one vendor at 15% on-time. When communicating findings to executives, which interpretation is most accurate?",
+    "options": [
+      "The 15% vendor is a statistical outlier AND a business problem that requires immediate attention or vendor replacement",
+      "The 15% vendor is a statistical outlier but may have legitimate explanations (new vendor ramp-up, specialized difficult orders) that warrant investigation before action",
+      "The 15% vendor should be removed from analysis to improve the distribution",
+      "The 15% vendor proves the data is not normally distributed and analysis is invalid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Statistical outliers in business contexts often have legitimate explanations. A new vendor, specialty orders, or temporary issues might explain poor performance. The correct approach is investigation before action. Option A conflates statistical status with business judgment. Option C applies premature deletion. Option D confuses outlier detection with normality testing (which doesn't invalidate analysis).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's streaming revenue model was tested using a regression analysis of subscriber count (independent variable) versus quarterly revenue (dependent variable). If the R-squared value is 0.87, what does this mean?",
+    "options": [
+      "87% of the variance in quarterly revenue is explained by subscriber count",
+      "Subscriber count causes 87% of Netflix's revenue growth",
+      "The regression line fits 87 out of every 100 data points perfectly",
+      "There is an 87% probability that Netflix will increase revenue next quarter"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared measures the proportion of variance in the dependent variable explained by the independent variable(s). At 0.87, it means 87% of revenue variation is accounted for by subscriber count. Option B confuses correlation with causation. Option C misinterprets R-squared as a count of exact fits rather than a proportion of variance explained. Option D conflates R-squared with predictive probability.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a simple linear regression analysis of Apple's iPhone sales (in millions of units) versus advertising spend (in millions of dollars), the R-squared is 0.64. What is the coefficient of determination telling you?",
+    "options": [
+      "64% of iPhone sales variation can be explained by advertising spend alone",
+      "Apple can increase sales by exactly 64% if it doubles advertising spend",
+      "The correlation coefficient between sales and advertising is 0.64",
+      "36% of the variation is completely unexplained and random"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared (the coefficient of determination) directly states the proportion of dependent variable variance explained by the model. At 0.64, advertising spend explains 64% of sales variation. Option B incorrectly applies R-squared to predict the magnitude of change. Option C confuses R-squared with the correlation coefficient (which would be √0.64 = 0.8). Option D is partially true but misframes it—the 36% unexplained is due to other factors, not necessarily randomness.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression model predicting Starbucks' monthly store revenue from foot traffic has an R-squared of 0.91. Which statement best interprets this value?",
+    "options": [
+      "91% of the variation in store revenue is explained by foot traffic",
+      "The model will correctly predict revenue 91% of the time",
+      "Foot traffic is 91% correlated with revenue",
+      "91% of stores follow the regression line exactly"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared measures variance explained, not prediction accuracy or perfect fits. At 0.91, foot traffic explains 91% of revenue variation across stores. Option B confuses R-squared with out-of-sample accuracy. Option C misidentifies R-squared as a correlation coefficient. Option D misinterprets R-squared as the percentage of observations on the line.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does an R-squared of 0.00 indicate in a regression model?",
+    "options": [
+      "The independent variable(s) explain none of the variance in the dependent variable",
+      "The model is broken and cannot be used",
+      "The data contains no errors or outliers",
+      "Perfect negative correlation exists between variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared of 0.00 means 0% of the dependent variable's variance is explained by the independent variable(s)—there is no linear relationship. This doesn't mean the model is broken; it's a valid finding that this variable doesn't predict the outcome. Option B overstates the conclusion. Option C confuses R-squared with data quality. Option D confuses R-squared with correlation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model with R-squared = 1.00, what is true?",
+    "options": [
+      "All observations fall exactly on the regression line and 100% of variance is explained",
+      "The model predicts future values with 100% certainty",
+      "There is a perfect positive correlation between variables",
+      "The standard error equals zero and the model is definitely causal"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared = 1.00 means perfect fit: all residuals are zero and 100% of variance is explained. Option B incorrectly extends this to future predictions, which depend on whether patterns hold. Option C confuses this with correlation direction—R-squared of 1.00 exists regardless of positive or negative correlation. Option D adds an unfounded claim about causation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's logistics team built a regression model predicting weekly warehouse operating costs (in $10,000s) from the number of shipments processed (in 100s). The model has 15 observations and an R-squared of 0.78. What percentage of cost variation is NOT explained by shipment volume?",
+    "options": [
+      "22%",
+      "78%",
+      "0.78%",
+      "44%"
+    ],
+    "correctIndex": 0,
+    "explanation": "If R-squared = 0.78, then 78% of variance IS explained. The unexplained portion is 1 - 0.78 = 0.22 or 22%. Option B reverses the logic. Option C divides 0.78 by 100 incorrectly. Option D doubles the unexplained percentage without justification.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla analyzed the relationship between Supercharger station count and annual EV sales. A simple regression yielded R² = 0.71, and adding service center count as a second independent variable increased it to R² = 0.74. What does this tell you?",
+    "options": [
+      "Service center count adds only 3 percentage points of explanatory power, so the improvement is modest",
+      "Service center count is not statistically significant and should be removed",
+      "The model with two variables is 3% better at explaining sales variation",
+      "Supercharger stations were the wrong predictor all along"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding service centers improved R² from 0.71 to 0.74—a 3 percentage point gain—which is modest. This doesn't automatically mean it's insignificant (significance requires a hypothesis test). Option B incorrectly concludes statistical insignificance from a small R² change alone. Option C correctly identifies the 3 point improvement but calls it 3% improvement, which understates it relative to the 29 percentage points still unexplained. Option D contradicts the data; Superchargers clearly explain 71% of variation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's finance team built a model predicting quarterly operating margin (%) using four variables: R&D spending (%), sales growth (%), headcount change (%), and equipment investment ($M). The R-squared increased from 0.45 with two variables to 0.48 with all four. What is the adjusted R-squared concept most relevant for?",
+    "options": [
+      "Penalizing the addition of variables that provide little explanatory value relative to the cost of complexity",
+      "Ensuring the model never overfits regardless of sample size",
+      "Calculating the exact p-value for each regression coefficient",
+      "Determining whether R-squared will increase with more data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R-squared penalizes additional variables that don't meaningfully improve fit. With a small gain (0.45 to 0.48) from two extra variables, adjusted R² would likely decrease or barely change, warning against overcomplication. Option B overstates adjusted R-squared's purpose. Option C confuses it with hypothesis testing statistics. Option D conflates it with sample size effects.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's supply chain team regressed delivery time (hours) on package weight (pounds) and found R² = 0.55. The same data shows a correlation coefficient of -0.74 between these variables. Is this possible, and if so, what does it indicate?",
+    "options": [
+      "Yes, it's possible; the correlation of -0.74 squares to approximately 0.55, showing a strong negative relationship",
+      "No, this is impossible; R² should equal the absolute value of correlation",
+      "Yes, but it indicates an error because correlation and R² should always be equal",
+      "No, because R² cannot be less than the correlation coefficient's absolute value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation r = -0.74 squared gives (-0.74)² = 0.5476 ≈ 0.55 = R². This is mathematically consistent. The negative correlation shows heavier packages take longer; R² = 0.55 means weight explains 55% of delivery time variation. Option B misunderstands the relationship. Option C confuses identity with expectation. Option D gets the inequality backwards.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Adobe built two regression models to predict annual customer lifetime value (LTV) in dollars: Model A uses 3 predictors (initial purchase, engagement score, contract length) with R² = 0.82 on a sample of 500 customers. Model B uses 8 predictors (including those 3 plus product category, region, support tickets, churn risk, and seasonality) with R² = 0.84 on the same 500. Which model is likely more useful for real-world prediction?",
+    "options": [
+      "Model A, because the 0.02 gain in R² from 5 additional variables suggests overfitting, and adjusted R² would likely favor the simpler model",
+      "Model B, because R² = 0.84 is clearly higher than 0.82",
+      "Neither, because the difference is too small to be meaningful",
+      "Model A, because it has fewer variables and will always generalize better"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 2 percentage point gain (0.82 to 0.84) from adding 5 variables suggests diminishing returns; adjusted R² penalizes this complexity and would likely favor Model A. Overfitting is a risk with many variables and modest gains. Option B ignores the principle of parsimony. Option C misses that adjusted R² analysis is needed here. Option D absolutizes simplicity without considering that some variables may genuinely help.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JP Morgan built a regression model explaining stock returns using 12 macroeconomic variables. In-sample R² = 0.68, but when tested on new data (out-of-sample), R² dropped to 0.31. What is the most likely explanation?",
+    "options": [
+      "The model is overfit; it learned noise in the training data rather than true underlying patterns",
+      "The macroeconomic variables actually cause stock returns, but only in the original data period",
+      "R² always drops in out-of-sample testing; this is normal and expected",
+      "12 variables are too many and should be reduced to 6 regardless of other metrics"
+    ],
+    "correctIndex": 0,
+    "explanation": "A huge in-sample to out-of-sample R² drop (0.68 to 0.31) is a classic sign of overfitting—the model fit noise and idiosyncratic patterns in the training set that don't generalize. Option B invokes false causality. Option C normalizes this decline incorrectly; while some drop is expected, this magnitude signals a problem. Option D prescribes a solution without analysis.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Coca-Cola analyst fitted a regression model with R² = 0.60 predicting quarterly sales volume from advertising spend, temperature, and competitor pricing. The analyst then adds a random noise variable (completely unrelated to sales) as a fourth predictor. What will happen to R² and why is this problematic?",
+    "options": [
+      "R² will increase (even slightly) because the random variable will correlate with sales noise; this is problematic because it shows overfitting and inflates apparent model quality",
+      "R² will decrease because adding random variables weakens regression models",
+      "R² will stay at exactly 0.60 because random variables cannot affect it",
+      "R² will increase to 1.00 as more variables always improve fit perfectly"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² never decreases when adding variables (it's mathematically monotonic), so the random variable will slightly increase R² purely by chance—fitting noise. This is overfitting: apparent improvement masks real predictive weakness. Option B incorrectly assumes R² decreases. Option C is false; R² always increases or stays flat with added variables. Option D is absurd.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two consultants analyzed Airbnb listing prices in San Francisco. Consultant A built a model with R² = 0.73 using 6 variables (bedrooms, bathrooms, reviews, location, amenities, host rating). Consultant B built a model with R² = 0.71 using 3 variables (bedrooms, location, amenities). Assuming both models are properly validated on holdout data, which consultant's model is more likely to be preferred by Airbnb for deployment, and why?",
+    "options": [
+      "Consultant B's model, because the 2 percentage point loss in R² is outweighed by simplicity, lower computational cost, and better generalization to new listings with missing data",
+      "Consultant A's model, because R² = 0.73 is objectively higher and will make better predictions",
+      "Consultant A's model, because 6 variables provide more comprehensive information than 3",
+      "Neither, because the difference in R² (2 percentage points) is too small to matter in practice"
+    ],
+    "correctIndex": 0,
+    "explanation": "In deployment, simpler models often outperform complex ones when R² differences are modest. Consultant B's model is easier to maintain, faster to compute, more interpretable, and handles missing data better. Option B prioritizes R² maximization without considering real-world tradeoffs. Option C assumes more variables = better, ignoring parsimony. Option D dismisses the tradeoff without considering it strategically.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company regressed drug trial efficacy (% improvement) on dosage (mg). They observed R² = 0.59 with 120 patients. A statistician warns that R² = 0.59 might be 'inflated' relative to expected performance in future trials. Which scenario would justify this concern most strongly?",
+    "options": [
+      "The model was fit on the same 120 patients without cross-validation or a holdout test set, and the relationship may be influenced by that sample's idiosyncratic characteristics",
+      "R² = 0.59 is always too low and should be above 0.80 for any medical model",
+      "The dosage range in the trial (20–100 mg) was narrower than typical usage (10–150 mg), so R² will definitely drop",
+      "120 patients is a small sample, so R² is inherently biased upward regardless of model quality"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fitting on the same data used for evaluation risks overfitting. Without cross-validation or a held-out test set, R² reflects fit to that specific sample, not generalization to new patients. Option B sets arbitrary standards without context. Option C states a possible issue but doesn't explain R² inflation mechanism. Option D confuses sample size with overfitting—small samples increase overfitting risk, but the core issue is lack of validation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hedge fund manager built a model with R² = 0.88 predicting monthly returns on a portfolio of 50 stocks using 47 variables (price ratios, volatility measures, sector dummies, macroeconomic data, and interaction terms) on 60 months of historical data. However, when applied to the next 12 months (out-of-sample), the model's R² = 0.12. The manager argues that 'the market regime changed.' What is the most statistically grounded counterargument?",
+    "options": [
+      "The in-sample R² = 0.88 with 47 variables on 60 observations is suspicious and likely represents severe overfitting; with 47 degrees of freedom consumed relative to 60 data points, the model is essentially memorizing noise rather than learning generalizable patterns",
+      "R² should never drop below 0.50, so regime change is the only explanation",
+      "The manager should have used fewer variables, specifically exactly 6 or 10 variables regardless of performance",
+      "Out-of-sample R² is always lower, so 0.12 is an expected decline and the model is actually working well"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 47 variables and only 60 observations, the model is massively overfit—using most degrees of freedom to fit noise. The formula variables ≪ observations is severely violated. The catastrophic out-of-sample collapse (0.88 to 0.12) confirms memorization, not regime change. Option B sets false rules. Option C prescribes arbitrary variable counts. Option D normalizes an extreme drop that signals model failure.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

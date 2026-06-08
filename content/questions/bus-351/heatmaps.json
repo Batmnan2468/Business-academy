@@ -1,0 +1,210 @@
+[
+  {
+    "question": "A heatmap is a data visualization technique that uses color intensity to represent which of the following?",
+    "options": [
+      "The magnitude or frequency of values across a two-dimensional matrix",
+      "Only time-series trends in quarterly revenue",
+      "Customer satisfaction scores on a 1-10 scale exclusively",
+      "Geographic locations of retail stores"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heatmaps use color gradients (typically from cool to warm colors) to represent numerical values in a two-dimensional grid, allowing viewers to quickly identify patterns. Options B and C incorrectly limit heatmaps to specific data types; option D describes choropleth maps, not heatmaps.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a red cell typically represent in a standard business heatmap?",
+    "options": [
+      "The highest values or areas of concern in the dataset",
+      "Missing or null data points",
+      "A department that should be ignored",
+      "The starting point for data collection"
+    ],
+    "correctIndex": 0,
+    "explanation": "In conventional heatmap color schemes, red represents high values or problem areas (depending on context), while blue or green represents low values or positive areas. This warm-to-cool color gradient is the industry standard. Option B is incorrect because missing data is typically shown in gray or white, not red.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Acme Manufacturing has 5 production facilities and 8 products. To analyze defect rates across all combinations, how many cells would a heatmap require?",
+    "options": [
+      "40 cells",
+      "13 cells",
+      "48 cells",
+      "80 cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "A heatmap with 5 facilities (rows) and 8 products (columns) requires 5 × 8 = 40 cells. Option B adds the dimensions instead of multiplying. Option C and D use incorrect multiplication factors or add extra values unnecessarily.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a typical use case for heatmaps in business analytics?",
+    "options": [
+      "Displaying daily website traffic patterns by hour and day of the week",
+      "Predicting stock prices 12 months into the future based on historical volatility",
+      "Analyzing employee productivity across 10 departments and 5 time periods",
+      "Visualizing customer complaint frequency by product line and region"
+    ],
+    "correctIndex": 1,
+    "explanation": "Heatmaps display existing data patterns and relationships; they are visualization tools for multivariate analysis, not predictive forecasting models. Stock price prediction requires time-series forecasting algorithms, not a heatmap. Options A, C, and D are all standard heatmap applications showing patterns in two dimensions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailCo's heatmap shows customer spending across 4 store locations and 6 product categories. What type of data relationship does this heatmap best reveal?",
+    "options": [
+      "Correlations between two categorical variables displayed as a two-dimensional matrix",
+      "The cause-and-effect relationship between store location and profit margins",
+      "A time-series trend in overall company revenue",
+      "Individual customer preferences for specific brands"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heatmaps excel at showing patterns across two categorical dimensions simultaneously by using color intensity. They reveal correlations and patterns, not causation (option B). They are not designed for time-series analysis (option C) or individual-level transactions (option D).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechCorp analyzed email campaign open rates across 12 months and 5 customer segments. The heatmap showed a dark blue cell in January for the 'Enterprise' segment with a 4% open rate. What is the most likely interpretation?",
+    "options": [
+      "January had the lowest open rate for the Enterprise segment compared to other months",
+      "The Enterprise segment is the most valuable customer group",
+      "Email campaigns should be discontinued in January",
+      "The 4% rate is statistically significant and requires immediate action"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dark blue in a standard heatmap indicates low values. A 4% open rate is genuinely low for email campaigns, so the visual representation is accurate. Option B conflates open rate with customer value; option C makes an overgeneralization; option D requires statistical testing, not just visual inspection.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SalesForce Inc. created a heatmap of their sales team's monthly performance ($) across 8 salespeople (rows) and 12 months (columns). In March, salesperson Jenna's cell shows bright red ($385,000 in sales). The team's average for March was $220,000. What does this indicate?",
+    "options": [
+      "Jenna significantly outperformed her peers in March, making her the highest performer that month",
+      "Jenna will automatically receive a promotion",
+      "Jenna's sales will remain at this level indefinitely",
+      "The red color indicates an error in data entry that must be corrected"
+    ],
+    "correctIndex": 0,
+    "explanation": "Red (high-intensity color) combined with $385,000 being 75% above the $220,000 team average clearly indicates Jenna outperformed her peers in March. The heatmap visualizes actual data (option D is incorrect). Options B and C make unfounded assumptions about future outcomes from a single month's performance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "GreenBank's credit risk heatmap displays loan default rates (%) across 10 geographic regions (rows) and 5 income brackets (columns). A cell in the 'Southern Region' row and '$30K-$40K income' column is light orange (8% default rate). How should an analyst interpret this cell's color?",
+    "options": [
+      "The default rate is moderate—higher than ideal but not among the highest in the matrix",
+      "The Southern Region is a dangerous market and should be avoided entirely",
+      "8% is the benchmark all regions should target",
+      "The color indicates this income bracket is growing rapidly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Light orange typically represents a moderate or moderately-high value—above average but not at the extreme high end (which would be red). This 8% default rate should be contextualized against the full range of values in the heatmap. Option B overgeneralizes; option C misuses the term 'benchmark'; option D confuses color intensity with growth rates.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "MediaCorp's website analytics team built a heatmap of page views across 15 landing pages and 7 days of the week. On Tuesday, the 'Product Page A' cell shows 12,500 views (bright red), while the team average for Tuesday was 8,200 views. The analyst concludes Product Page A should be the template for all future landing pages. What is the flaw in this reasoning?",
+    "options": [
+      "A single high value from one day doesn't prove the page design causes traffic; other factors (promotions, external links, SEO) may explain the spike",
+      "Heatmaps cannot display data in 7-day time periods",
+      "The view count is too high and likely represents a data entry error",
+      "Red color in heatmaps always indicates a problem that needs fixing"
+    ],
+    "correctIndex": 0,
+    "explanation": "The heatmap shows correlation (high traffic on Product Page A on Tuesday) but not causation. The spike could result from external marketing, paid ads, or viral sharing, not the page design itself. Option B is false—heatmaps handle multiple time periods well. Option C requires validation but isn't a reasoning flaw. Option D misunderstands heatmap color meanings.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FinanceFlow Inc. compared performance metrics across 6 sales regions and 4 quarters (Q1-Q4). The CFO is comparing a heatmap of revenue ($M) with a heatmap of profit margin (%). The Northeast region shows bright red for revenue ($42M in Q2) but light blue for profit margin (6% in Q2). Which interpretation is most accurate?",
+    "options": [
+      "The Northeast region generated high revenue but faced cost pressures that reduced profitability in Q2",
+      "Profit margins and revenue should always be correlated—one of these heatmaps contains an error",
+      "The Northeast region should be shut down due to low profit margins",
+      "Red and blue colors contradict each other, making both heatmaps invalid"
+    ],
+    "correctIndex": 0,
+    "explanation": "High revenue and low profit margin can coexist—the region may have sold high volumes at low margins or faced elevated costs. These are independent metrics shown appropriately in separate heatmaps. Option B incorrectly assumes perfect correlation; option C overgeneralizes from a single metric; option D misunderstands that different heatmaps can show different patterns.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ConsumerX Analytics created a 10×10 heatmap of customer churn rates (%) across 10 regions and 10 product lines. The data analyst notices that the heatmap appears to show no clear patterns—colors are randomly scattered with no block of dark red or blue. What is the most likely business implication?",
+    "options": [
+      "Churn rates are relatively uniform across regions and product lines, suggesting churn drivers are not strongly linked to these two dimensions",
+      "The heatmap is incorrectly formatted and should be discarded immediately",
+      "The company has solved all churn problems since there are no hot spots",
+      "The analyst should add more columns and rows to reveal hidden patterns"
+    ],
+    "correctIndex": 0,
+    "explanation": "A uniform, scattered heatmap indicates that the two dimensions (region and product line) do not strongly correlate with churn variation. This is a valid finding suggesting churn drivers lie elsewhere (customer service, pricing, product quality, etc.). Option B is too extreme; option C misinterprets a pattern-free heatmap; option D wouldn't improve analysis if the underlying relationships don't exist.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "LogisticsPro built a heatmap of shipment delays (days) across 8 warehouses and 12 months. The company used a color scale of white (0 days) to deep red (14+ days). In April, Warehouse 3 shows white (0 delays). The analyst concludes Warehouse 3 is the most efficient facility overall. What is the critical flaw in this conclusion?",
+    "options": [
+      "A single cell showing excellent performance in one month does not establish overall facility efficiency; the heatmap should be examined across the full year for that warehouse",
+      "Heatmaps cannot measure efficiency, only individual metrics like delays",
+      "White color indicates missing data, not zero delays",
+      "Warehouse 3 must be the most expensive to operate if it has zero delays"
+    ],
+    "correctIndex": 0,
+    "explanation": "Evaluating facility efficiency requires examining performance trends across multiple periods (the full row for Warehouse 3), not a single month. One excellent month doesn't prove overall excellence—performance must be consistent. Option B is false; heatmaps measure any quantifiable metric. Option C requires checking the color scale definition. Option D conflates efficiency with cost.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "HealthTech analyzed patient appointment no-show rates (%) in a heatmap across 5 clinics and 4 appointment time slots (morning, afternoon, evening, night). Clinic B's evening slot shows 24% no-show rate (dark red), while Clinic B's morning slot shows 6% (light blue). An operations manager proposes eliminating all evening appointments at Clinic B. Which concern should the analyst raise?",
+    "options": [
+      "The heatmap shows correlation but not causation—evening slots may attract busier or less-reliable patients, or evening staffing may differ; eliminating slots requires understanding root causes",
+      "If evening no-shows are high, patients will simply move to other clinics, worsening overall performance",
+      "The heatmap data is too recent to guide policy decisions of this magnitude",
+      "No-show rates cannot be reliably measured and should not drive decisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "The heatmap identifies a pattern (high no-shows in evening slots at Clinic B) but doesn't explain why. The cause could be patient demographics, scheduling system issues, staffing differences, or external factors. Eliminating slots without understanding root causes is premature. Options B and C are speculative; option D dismisses valid metrics.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "RetailMart's e-commerce team created a 7×7 heatmap comparing conversion rates (%) across 7 product categories and 7 user device types (desktop, mobile, tablet, etc.). The heatmap reveals that 'Home & Garden' products show high conversion on desktop (8.5%, red) but very low conversion on mobile (1.2%, dark blue). The analyst concludes mobile users don't want Home & Garden products. Which is the most accurate alternative explanation?",
+    "options": [
+      "Home & Garden product pages may have complex layouts, high-resolution images, or comparison tools that function poorly on mobile screens, reducing mobile conversion independent of actual demand",
+      "Mobile users represent a smaller market segment and should be de-prioritized",
+      "The conversion rate difference proves mobile devices are inferior technology",
+      "This pattern is unique to RetailMart and indicates a competitive advantage in desktop optimization"
+    ],
+    "correctIndex": 0,
+    "explanation": "The heatmap shows a performance correlation but user behavior reflects both intent AND user experience. Complex product categories often suffer on mobile due to UX constraints, not lack of demand. Mobile users may want the products but abandon due to friction. Option B makes a false choice between segments. Option C confuses conversion rates with device capability. Option D overgeneralizes from internal data without competitive context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataViz Corp. is choosing between a heatmap and a line chart to display sales performance ($) across 8 salespeople over 24 months. Which criteria would most strongly favor using a heatmap instead of a line chart?",
+    "options": [
+      "The goal is to identify which salesperson-month combinations had exceptional or poor performance rather than tracking each salesperson's trend over time",
+      "The company wants to predict future sales for each salesperson",
+      "One or two salespeople clearly dominate the dataset and a line chart would be too crowded",
+      "The data contains many missing values that need to be visually obvious"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heatmaps excel at pattern-finding across two categorical dimensions simultaneously (finding 'hot spots'); line charts excel at showing trends over time for a single or few series. A heatmap's strength is identifying outliers and correlations, not temporal trends. Option B requires forecasting, not visualization. Option C is a weakness of line charts but doesn't favor heatmaps specifically. Option D applies to both visualization types equally.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "InvestmentGroup analyzed quarterly investment returns (%) using a heatmap across 9 asset classes and 8 years. A cell in the 'Tech Stocks' row and '2020' column shows bright red (47% return). The investment committee proposes allocating 50% of the fund to Tech Stocks based on historical returns. What is the primary analytical limitation of this heatmap-based conclusion?",
+    "options": [
+      "A single exceptional performance in one year cannot establish a reliable forward-looking investment strategy; past performance is not guaranteed to repeat, and the heatmap shows no trend direction or volatility context",
+      "Heatmaps are inappropriate for financial data and should never be used in investment decisions",
+      "The 47% return is statistically impossible and likely a data error",
+      "Asset allocation decisions require only the highest historical returns, which the heatmap correctly identifies"
+    ],
+    "correctIndex": 0,
+    "explanation": "A heatmap is a cross-sectional snapshot; it shows what happened but not patterns, volatility, or forward-looking reliability. Tech Stocks may have been highly volatile or benefited from a one-time event. The committee needs trend analysis, risk metrics, and correlation data—not just a single historical return. Option B dismisses heatmaps too broadly. Option C requires data validation but doesn't address the strategic flaw. Option D misunderstands investment principles.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

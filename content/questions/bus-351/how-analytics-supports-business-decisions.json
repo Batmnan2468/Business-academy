@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following best defines descriptive analytics in a business context?",
+    "options": [
+      "Using historical data to understand what happened and why it happened",
+      "Predicting future customer behavior based on machine learning models",
+      "Making automated decisions based on real-time data triggers",
+      "Optimizing inventory levels to minimize storage costs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Descriptive analytics examines past data to explain historical events. Option B describes predictive analytics, which forecasts future outcomes. Option C describes prescriptive analytics, which recommends actions. Option D is a specific application of optimization, not a definition of the analytics type itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon reported that its customer retention rate improved from 68% to 75% after implementing a personalized recommendation engine. What percentage point improvement did this represent?",
+    "options": [
+      "7 percentage points",
+      "10.3% improvement",
+      "68% to 75% improvement",
+      "7% improvement"
+    ],
+    "correctIndex": 0,
+    "explanation": "The improvement is 75% minus 68%, which equals 7 percentage points. Option B calculates the relative improvement (7/68 ≈ 10.3%), not the percentage point change. Option C repeats the original figures. Option D incorrectly treats the difference as a simple percentage rather than percentage points.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks uses analytics to forecast daily customer traffic at its 15,000+ locations. This is an example of which type of analytics?",
+    "options": [
+      "Predictive analytics",
+      "Prescriptive analytics",
+      "Diagnostic analytics",
+      "Descriptive analytics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Forecasting future customer traffic uses predictive analytics—estimating what will happen. Prescriptive analytics would recommend staffing levels based on forecasts. Diagnostic analytics explains why traffic patterns occur. Descriptive analytics merely describes historical traffic.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase discovers that 42% of customers who received email marketing in Q2 made a purchase within 30 days, compared to 28% of customers who didn't receive email. What is the lift from the email campaign?",
+    "options": [
+      "50%",
+      "14 percentage points",
+      "70%",
+      "1.5 times higher"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lift is calculated as (42% - 28%) / 28% = 14% / 28% = 0.5 or 50%. Option B confuses lift with absolute percentage point difference. Option C incorrectly divides 42% by 28%. Option D misinterprets the relative increase as a simple multiplier without the correct formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix uses analytics to decide which shows to produce and which regions to target. This decision-support capability is primarily which type of analytics?",
+    "options": [
+      "Prescriptive analytics",
+      "Descriptive analytics",
+      "Predictive analytics",
+      "Diagnostic analytics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prescriptive analytics recommends the best action to take—in this case, which shows to greenlight and where to invest. Predictive analytics would forecast viewership. Descriptive analytics would show historical viewing patterns. Diagnostic analytics would explain why past shows succeeded or failed.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart analyzed 3 years of sales data and found that stores with higher in-store temperature (72°F vs. 68°F) showed 8% higher clothing sales. Before rolling out a company-wide temperature increase, what critical question should the data team ask?",
+    "options": [
+      "Does correlation imply causation, or could a lurking variable like season or time of year explain the difference?",
+      "Is 8% improvement statistically significant at the 95% confidence level?",
+      "Were sample sizes large enough to detect an 8% difference?",
+      "Did the analysis control for store location and square footage?"
+    ],
+    "correctIndex": 0,
+    "explanation": "The most critical question is whether the observed relationship is causal or merely correlated. A lurking variable (e.g., summer stores naturally warmer, with higher clothing sales) could explain the finding. While Options B, C, and D are valid statistical questions, the fundamental error here is assuming correlation proves causation before investing in a company-wide change.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain wants to determine whether a 15% discount on organic produce will increase overall store traffic and profitability. What analytics approach would best support this decision?",
+    "options": [
+      "A/B test the discount in 20 stores and compare traffic, sales, and profit margins to 20 control stores",
+      "Survey 500 customers about whether they would visit if there were a 15% discount",
+      "Analyze historical sales data to find correlations between past discounts and store traffic",
+      "Calculate the break-even point assuming a 20% sales increase in organic produce"
+    ],
+    "correctIndex": 0,
+    "explanation": "An A/B test (randomized controlled experiment) is the gold standard for causal inference in business decisions. It isolates the effect of the discount by comparing treatment and control groups. Option B relies on stated preferences, not actual behavior. Option C cannot determine causation from historical correlation. Option D requires an assumption about sales lift rather than testing it.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare provider using predictive analytics found that a model trained on 5 years of historical patient data achieved 92% accuracy on that same historical data but only 78% accuracy on new patients from the past 3 months. What is the most likely explanation?",
+    "options": [
+      "The model is overfitted to the training data and does not generalize well to new, unseen patients",
+      "The 92% result includes a calculation error and should be recalculated",
+      "The new patient population is inherently more diverse and therefore harder to predict",
+      "The model's features became less predictive over time due to changes in medical treatments"
+    ],
+    "correctIndex": 0,
+    "explanation": "This classic pattern—high training accuracy, low test accuracy—is the hallmark of overfitting. The model memorized noise and specific patterns in the historical data rather than learning generalizable patterns. Option B assumes an error rather than investigating the real issue. Option C is plausible but doesn't explain why the historical data performed so well. Option D is possible but less likely to cause such a dramatic drop without other evidence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Target processes 50 million transactions per week. Its analytics team identifies that customers who buy diapers are 3.2 times more likely to buy beer on the same shopping trip. What type of analysis is this?",
+    "options": [
+      "Market basket analysis (association rules)",
+      "Regression analysis",
+      "Cohort analysis",
+      "Time series forecasting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Market basket analysis identifies co-occurrence patterns in customer purchases (association rules like 'diapers → beer'). Regression would model relationships between variables. Cohort analysis tracks groups over time. Time series forecasting predicts values over time periods.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Uber's analytics team reports that driver acceptance rate for ride requests is 67% in downtown areas and 42% in suburban areas. A manager concludes, 'We need to pay drivers more in suburban areas.' What is wrong with this conclusion?",
+    "options": [
+      "The difference in acceptance rates could be caused by factors other than compensation, such as longer ride distances or fewer available requests per hour",
+      "67% and 42% acceptance rates are too low and suggest the platform design is fundamentally flawed",
+      "The comparison should include data from nighttime hours to be valid",
+      "Acceptance rate is not a reliable metric because drivers may accept and then cancel"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic correlation-vs.-causation error. Suburban drivers may have lower acceptance rates due to longer wait times between requests, longer trip distances, or lower customer volume—not necessarily lower compensation. Option B misinterprets the metric. Option C introduces an unrelated variable. Option D raises a valid data quality concern but doesn't address the logical flaw in the conclusion.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Costco's supply chain analytics team wants to optimize delivery routes for 2,500 stores across North America. Which technique would most directly support this optimization?",
+    "options": [
+      "Prescriptive analytics using operations research and optimization algorithms",
+      "Descriptive analytics to visualize current delivery routes on a map",
+      "Predictive analytics to forecast demand at each store",
+      "Diagnostic analytics to explain historical delivery delays"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prescriptive analytics with optimization algorithms directly recommends the best routes. Descriptive analytics would show what currently exists. Predictive analytics would forecast demand but not optimize routes. Diagnostic analytics would explain past problems but not solve the optimization problem going forward.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's credit risk model was built on data from 2008–2015 and achieved 89% accuracy predicting loan defaults. The bank uses it to make lending decisions in 2023. What key assumption may be violated?",
+    "options": [
+      "The patterns and risk factors that existed in 2008–2015 may no longer apply in 2023 due to economic, regulatory, and market changes",
+      "The model's 89% accuracy is insufficient and should be retrained monthly",
+      "Loan applicants in 2023 are fundamentally different demographic groups than in 2015",
+      "Credit scores are no longer correlated with default risk in 2023"
+    ],
+    "correctIndex": 0,
+    "explanation": "An 8-year gap violates the critical assumption of model stationarity—that the underlying relationship between features and outcomes remains stable over time. Economic cycles, regulation changes (Dodd-Frank), and market conditions shift significantly. This is known as model drift or concept drift. Option B assumes accuracy alone determines obsolescence. Option C is possible but not the fundamental assumption issue. Option D is a claim without evidence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A marketing manager at Coca-Cola observes that in markets where Coca-Cola spent $5 million on advertising in 2022, sales increased by 12% on average. In markets where Coca-Cola spent $10 million, sales increased by 18%. Based on this data alone, what is the most appropriate business decision?",
+    "options": [
+      "Conduct controlled experiments or gather more data before concluding that doubling ad spend causes a 6-percentage-point sales increase",
+      "Immediately increase ad spend in all markets to $10 million to replicate the 18% growth",
+      "Calculate the ROI at each spending level and allocate budgets proportionally across all markets",
+      "Reduce ad spend in low-performing categories since $10 million correlates with higher sales"
+    ],
+    "correctIndex": 0,
+    "explanation": "This observational data cannot prove causation—markets with higher ad budgets may differ in many ways (size, competition, existing brand strength). A randomized experiment or matched-market analysis is needed. Option B assumes causation and ignores confounding variables. Option C requires assuming causation to calculate ROI. Option D misinterprets correlation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's customer analytics team built a churn prediction model that identifies which enterprise customers are likely to cancel their subscriptions within 90 days. The model achieves 94% accuracy overall but only 45% precision for the 'high churn risk' class. What does this precision metric tell us?",
+    "options": [
+      "Of the customers the model predicts will churn, only 45% actually churn; many are false positives",
+      "The model correctly identifies 45% of all customers who actually churned",
+      "The model has a 94% precision rate and 45% is an unrelated metric",
+      "45% of customers in the dataset churned, and the model achieved 94% overall accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision measures of true positives / (true positives + false positives)—i.e., when the model says 'high risk,' how often is it correct? A 45% precision means 55% of flagged customers are false alarms. This is critical for business decisions: reaching out to false positives wastes resources. Option B describes recall, not precision. Option C misinterprets the metrics. Option D confuses class distribution with precision.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A telecommunications company (Verizon) reports that a customer's lifetime value (CLV) is $2,400 if they stay for 4 years at $50/month with 20% churn annually. If improved customer service reduces annual churn to 12%, what is the approximate new CLV?",
+    "options": [
+      "$4,200",
+      "$3,000",
+      "$2,400",
+      "$1,800"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 20% annual churn, average tenure ≈ 5 years (1/0.2), yielding ~$3,000 CLV at $50/month. The original $2,400 assumes ~4.8 years. With 12% churn, average tenure ≈ 8.3 years (1/0.12), yielding ~$4,200 CLV. Option B underestimates the benefit. Option C doesn't reflect the improvement. Option D incorrectly reduces CLV.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  }
+]

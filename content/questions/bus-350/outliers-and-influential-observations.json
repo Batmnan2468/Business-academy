@@ -1,0 +1,184 @@
+[
+  {
+    "question": "At Netflix, customer churn analysis revealed that one subscriber had a subscription duration of 847 months—far exceeding the typical range of 2-60 months. This observation would be classified as which of the following?",
+    "options": [
+      "An outlier",
+      "A standard observation",
+      "A leverage point",
+      "A residual error"
+    ],
+    "correctIndex": 0,
+    "explanation": "An outlier is an observation that lies far from the main body of data, often extreme in value relative to others. The 847-month duration is extreme compared to typical subscriber data. While leverage and residuals are related to influential observations, they are not the primary classification for an extreme value; leverage describes the potential impact on regression, and residuals are differences between observed and predicted values.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a linear regression analysis of Amazon warehouse worker productivity (units per hour), what is the primary measure used to identify influential observations that can disproportionately affect the regression line?",
+    "options": [
+      "Cook's distance",
+      "Standard deviation",
+      "Correlation coefficient",
+      "Mean absolute error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cook's distance quantifies the influence of each observation on the fitted regression model, identifying points that heavily influence parameter estimates and the regression line. Standard deviation measures spread, correlation measures linear relationship strength, and MAE measures prediction error magnitude—none directly measure influence on the regression line itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the difference between an outlier and an influential observation in regression analysis?",
+    "options": [
+      "An outlier is extreme in value; an influential observation disproportionately affects the regression line",
+      "An outlier always affects the regression; an influential observation never does",
+      "An influential observation is always an outlier",
+      "They are the same concept with different names"
+    ],
+    "correctIndex": 0,
+    "explanation": "An outlier is simply an extreme value (unusual), but may not affect the regression line significantly. An influential observation changes the regression estimates noticeably—it has high leverage and/or a large residual. Not all outliers are influential (e.g., an extreme y-value far from the line but with low x-leverage); not all influential points are obvious outliers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a study of commercial real estate prices in downtown Chicago, a dataset of 120 properties shows a mean price of $4.2 million and a standard deviation of $0.8 million. A property listed at $9.5 million would typically be flagged as a potential outlier. Which rule-of-thumb detection method is being used here?",
+    "options": [
+      "The 3-sigma (3 standard deviation) rule",
+      "The interquartile range (IQR) method",
+      "Cook's distance threshold",
+      "Leverage analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 3-sigma rule flags values beyond 3 standard deviations from the mean: $4.2M ± 3($0.8M) = [$1.8M, $6.6M]. At $9.5M, the property is ($9.5 − $4.2)/$0.8 ≈ 6.6 sigma units away, well beyond the threshold. The IQR method uses quartiles, Cook's distance uses regression impact, and leverage uses x-space distance—none match this standard deviation-based approach.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A dataset of monthly marketing spend (in $1,000s) versus sales revenue (in $100,000s) for Coca-Cola regional distributors includes 45 observations. The dataset has Cook's distance values: most between 0.02 and 0.08, but one observation shows Cook's D = 0.34. What does this indicate?",
+    "options": [
+      "That observation is highly influential and warrants investigation",
+      "That observation is an outlier in the y-direction only",
+      "The regression model is invalid",
+      "That observation should be deleted immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Cook's distance of 0.34 is much higher than typical values (often > 0.10 or 1.0 indicates influence, depending on sample size). This signals the point substantially influences the regression estimates and should be investigated—possibly a data entry error, special case, or legitimate extreme. Outlier status doesn't automatically mean it's influential; deleting without investigation violates best practices; model validity requires full analysis, not automatic removal.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla conducted a regression analysis of Supercharger usage (hours per day) versus EV age (years) across 200 charging stations. Most stations cluster between 2–8 years old with 1.5–6.5 daily hours. One station is 18 years old with 2.1 daily hours. Using the IQR method with Q1 = 2.5 hours, Q3 = 5.8 hours, which statement is most accurate?",
+    "options": [
+      "The 18-year-old station is an outlier in the x-direction (age) with moderate leverage, requiring assessment of influence",
+      "The 18-year-old station is definitely an outlier by IQR rules and must be removed",
+      "The station's usage is an outlier; age is irrelevant to regression",
+      "Age and usage cannot both be assessed using IQR simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "The station's age (18 years) is extreme in the predictor space, giving it potential leverage on the regression line. Its usage (2.1) is within the IQR range [2.5 − 1.5(3.3), 5.8 + 1.5(3.3)] = [−2.45, 10.75], so not a y-outlier. High x-leverage is a prerequisite for influence but not automatic. Removal without Cook's distance analysis is premature; IQR applies separately to each variable.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company analyzed the relationship between R&D spending (millions) and drug approval success rate (%) across 60 companies. The regression equation is: Success Rate = 12 + 0.48(R&D Spend). One company (Pfizer-like) spent $320 million with an observed success rate of 89%. The predicted rate is 165.6%. What is the standardized residual, and what does it indicate about influence?",
+    "options": [
+      "Residual = −76.6%, indicating a large negative deviation; this is a potential influential point requiring Cook's distance confirmation",
+      "Residual = 76.6%, suggesting the model overestimates success",
+      "Standardized residual cannot be computed without knowing the residual standard error",
+      "The residual indicates the company should be deleted from the dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "Observed − Predicted = 89 − 165.6 = −76.6%, a very large negative residual. This indicates a huge gap between observed and predicted, marking it as a potential influential point (large residual + high x-leverage from extreme spend). Standardized residuals require dividing by SE, but the raw residual size alone signals concern. We need Cook's distance, not automatic deletion. The model underpredicts, not overpredicts (predicted > observed).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a regression analysis of Starbucks store profitability (annual profit in $100,000s) versus foot traffic (daily customers), a store in Manhattan shows foot traffic of 3,200 customers/day and profit of $8.2 (in $100,000s). The mean foot traffic is 1,100 and the mean profit is $2.1. When examining the scatter plot and regression diagnostics, this point appears far from the regression line with a large residual, and it is also at the extreme right of the x-axis. Which of the following is most likely?",
+    "options": [
+      "The Manhattan store is both an outlier and highly influential; both its x-position and large residual contribute to its impact on the regression slope",
+      "The Manhattan store is an outlier but likely has low influence because it has high x-leverage that dampens residual impact",
+      "The Manhattan store has zero influence because its residual, though large, is offset by its central y-location",
+      "The Manhattan store is influential but not an outlier because the regression line accommodates it"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Manhattan store is extreme in x (foot traffic) and far from the regression line (large residual). High leverage (extreme x) combined with a large residual creates strong influence—the regression line pivots to accommodate this point. High x-leverage alone reduces influence if the residual is small; a point on the line has zero influence. Outliers far from the line AND with high leverage are the most influential; central y-location does not reduce influence when x-leverage is high.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase analyzed credit card default rates (%) versus average account balance ($1,000s) across 150 customers. A regression model yields R² = 0.78. When one customer with an account balance of $500,000 (25 times the mean of $20,000) and a default rate of 45% (vs. predicted 2.3%) is identified as highly influential and removed, the new R² = 0.82 and the slope coefficient changes from −0.042 to −0.031. What can be inferred?",
+    "options": [
+      "The influential point had high leverage and pulled the regression line steeply downward; removing it reveals a weaker relationship and better model fit to the remaining data",
+      "The point was an outlier but not influential, so removing it should not improve R²",
+      "The regression line's slope increased in magnitude, proving the point was beneficial to the model",
+      "Removing the point shows the original model was severely flawed; the original R² was artificially inflated"
+    ],
+    "correctIndex": 0,
+    "explanation": "The customer had extreme x-value ($500k) and large positive residual (45% − 2.3%), both hallmarks of high influence. Its removal increases R² (0.78 → 0.82) and reduces slope magnitude (−0.042 → −0.031), indicating it was pulling the line down steeply. With it gone, the remaining data show a shallower, more accurate relationship. Slope decreased in magnitude, not increased. The original model wasn't flawed; the point's influence was simply very strong.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant performs regression analysis on Dell's quarterly revenue growth (%) versus IT sector market growth (%) using 40 quarters of data. After identifying and carefully documenting an influential observation (a pandemic-affected quarter with −18% growth), which step is most statistically defensible?",
+    "options": [
+      "Report both regressions (with and without the point), explain the influence, and justify retention or removal based on whether the point represents a legitimate operational or data entry issue",
+      "Remove the point to improve R² without reporting the deletion",
+      "Automatically remove all Cook's distance values above 0.10",
+      "Keep the point and assume the regression estimates are unbiased despite the influence"
+    ],
+    "correctIndex": 0,
+    "explanation": "Best practice is transparency: report both models, document the influential point's identity and reason for influence, and make a judgment call (keep if legitimate; remove only if error/fraud). Hiding deletions violates research integrity. Automatic rules (e.g., remove all D > 0.10) ignore context—some influential points are valid data. Assuming unbiasedness when high influence exists ignores the statistical reality of the impact on parameter estimates.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a regression model predicting Costco warehouse productivity (units/hour) from staffing level (employees), a warehouse with 450 employees (vs. mean 120 employees, SD = 85) and productivity of 2,100 units/hour (observed) has a predicted productivity of 1,850 units/hour. The model's residual standard error is 250. Calculate the standardized residual and interpret its influence potential.",
+    "options": [
+      "Standardized residual ≈ 1.0; moderate positive residual combined with high leverage suggests potential influence requiring Cook's distance verification",
+      "Standardized residual ≈ 0.25; this is a negligible outlier with no influence on the regression",
+      "Standardized residual ≈ 4.2; automatic removal is recommended",
+      "Standardized residual ≈ 10; the point is definitely an outlier and must be deleted"
+    ],
+    "correctIndex": 0,
+    "explanation": "Raw residual = 2,100 − 1,850 = 250; standardized residual = 250 / 250 = 1.0. A standardized residual of ±1 is moderate (not extreme; ±2 to ±3 are typical outlier thresholds). However, the warehouse has high x-leverage: (450 − 120) / 85 ≈ 3.88 z-scores from mean. Moderate residual + high leverage = potential influence. No automatic deletion rules exist at 1.0; Cook's distance should be calculated. Other options miscompute or misinterpret thresholds.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst builds a regression model of stock returns (%) versus analyst earnings revisions (%) for 90 tech firms. The leverage (hat value) for one firm is 0.45, and Cook's distance is 0.08. The analyst concludes: 'High leverage means high influence, so this point must be removed.' What is the flaw in this reasoning?",
+    "options": [
+      "Leverage alone does not determine influence; a point needs both high leverage AND a large residual to be influential; Cook's D of 0.08 suggests moderate influence, not extreme, and does not warrant automatic removal",
+      "Cook's distance is always more reliable than leverage, so the analyst should ignore leverage",
+      "A leverage of 0.45 automatically qualifies as high influence regardless of residuals",
+      "The point is definitely influential and should be removed immediately to improve model fit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Leverage (hat value) measures x-space distance from the center but does not measure actual influence on the regression line. Influence = leverage × residual impact. A Cook's D of 0.08 is moderate (threshold often ~0.10 or > 1.0 depending on n); it signals investigation, not automatic deletion. High leverage alone, without a large residual, may produce low Cook's D (point follows the regression line closely). Automatic removal ignores whether the point is legitimate or an error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a regression model of hedge fund annual returns (%) versus portfolio concentration (ratio 0–1), two observations stand out: Fund A has concentration 0.95 (extreme; mean = 0.42) with return 22% (predicted 15%, residual = +7%); Fund B has concentration 0.43 (near mean) with return 28% (predicted 24%, residual = +4%). Which fund is more likely to be influential, and why?",
+    "options": [
+      "Fund A is more influential because its extreme leverage (0.95 concentration) amplifies even a moderate residual (7%), whereas Fund B's near-mean x-value means low leverage despite a smaller residual",
+      "Fund B is more influential because its residual (4%) is smaller, indicating a tighter fit to the regression line",
+      "Both are equally influential because they have similar residual magnitudes",
+      "Fund A's residual is larger, so it is obviously more influential"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fund A's leverage is high (0.95 is far from mean 0.42), and its residual is moderate (7%); their product determines influence. Fund B is near the mean, so leverage is low; even a smaller residual (4%) contributes minimal influence because it's in a central x-region. Influence ≈ leverage × residual, not residual alone. A large residual at the mean (low leverage) is less influential than a moderate residual at the extreme (high leverage). Fund A will more heavily pull the regression slope.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant removes three influential observations from a regression dataset and reports the cleaned model, stating: 'These three points were statistical outliers that artificially inflated the original regression coefficients.' A colleague responds: 'But you removed points that were valid observations—a CEO's salary of $50M and two other high-earners. Removing valid data distorts the model.' Which perspective is statistically sounder, and what should the consultant have done instead?",
+    "options": [
+      "The colleague is correct; the consultant should have reported both models transparently, explained why those observations are influential, and justified their retention (as valid employees earning market rates) while using robust regression or acknowledged limitations if relying on standard OLS",
+      "The consultant is correct; influential observations are always errors and must be removed to obtain valid estimates",
+      "Both are equally valid; there is no objective way to decide whether to remove influential points",
+      "The colleague's concern is irrelevant; statistical influence is the only criterion for removal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Valid, legitimate observations (like a CEO's actual salary) should not be deleted just because they are influential. Deleting real data because they don't fit the model introduces bias toward a false picture. Best practice: report both models, explain influence, and retain valid data with transparent caveats, or use robust methods (e.g., robust regression, bootstrapping) less sensitive to outliers. Influential ≠ error. Influence is a statistical property; legitimacy is a domain property—both must be considered.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

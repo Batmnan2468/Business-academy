@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Amazon's data science team is analyzing customer purchase behavior using K-Means clustering. What does the 'K' in K-Means represent?",
+    "options": [
+      "The number of clusters the algorithm will create",
+      "The number of data points in the dataset",
+      "The number of features being analyzed",
+      "The number of iterations the algorithm runs"
+    ],
+    "correctIndex": 0,
+    "explanation": "K represents the predetermined number of clusters (groups) the algorithm will partition data into. This is a fundamental parameter set before running the algorithm. Option B is tempting because it relates to data size, but K is completely independent of dataset size.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In K-Means clustering, what is a centroid?",
+    "options": [
+      "The average point representing the center of a cluster",
+      "The data point closest to the center of a cluster",
+      "The maximum distance from a cluster's boundary",
+      "The variance within a cluster"
+    ],
+    "correctIndex": 0,
+    "explanation": "A centroid is the calculated mean (average) position of all points in a cluster, serving as the cluster's center point. Option B is the most tempting mistake—it confuses centroid with the medoid (the actual point closest to center), which is used in K-Medoids, not K-Means.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Target stores are using K-Means to segment their 5,000 customers into groups based on annual spending. What is the most direct purpose of K-Means clustering in this scenario?",
+    "options": [
+      "To partition customers into distinct groups with similar spending patterns",
+      "To predict future spending amounts for each customer",
+      "To identify which products caused the highest spending",
+      "To calculate the correlation between customer age and spending"
+    ],
+    "correctIndex": 0,
+    "explanation": "K-Means is an unsupervised learning algorithm designed to group similar data points together based on their features. It discovers natural groupings, not predict outcomes or identify causal relationships. Option B is a common misconception—that's regression or prediction, not clustering.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks plans to apply K-Means clustering to segment 8,000 stores by location (latitude, longitude) and average daily revenue. What is the primary difference between clustering and classification?",
+    "options": [
+      "Clustering groups unlabeled data; classification assigns labels to data using predetermined categories",
+      "Clustering is faster than classification for large datasets",
+      "Clustering uses more features than classification",
+      "Clustering requires less computational power than classification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Clustering is unsupervised (no predefined labels), while classification is supervised (uses known labels). Starbucks doesn't have predetermined store 'types'—clustering discovers them naturally. Option B is incorrect because speed depends on algorithm, not the distinction between clustering and classification.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Nike conducted a K-Means analysis on 12,000 customer transactions using purchase frequency and dollar amount. The analysis created 4 clusters. Which statement best describes what K=4 means in this context?",
+    "options": [
+      "The algorithm divided customers into exactly 4 distinct groups",
+      "The algorithm ran 4 separate analyses to find the best clustering",
+      "The algorithm made 4 adjustments to the centroids before stopping",
+      "The algorithm removed 4 outlier customers from the dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "K=4 means the algorithm partitioned the 12,000 customers into precisely 4 clusters. This is a direct specification set before running the algorithm. Option B is tempting because it relates to trying different K values, but the question specifies K=4 was already chosen, not that multiple values were tested.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart analyzed 50,000 transactions across 3 product categories (groceries, apparel, electronics) using K-Means with K=5. Each transaction was described by purchase amount ($) and time-of-day purchased. The algorithm produced 5 clusters with average silhouette scores ranging from 0.42 to 0.68. What does this metric suggest about the clustering quality?",
+    "options": [
+      "The clusters are reasonably well-separated but some overlap exists",
+      "The clusters are perfect and completely non-overlapping",
+      "The algorithm needs more iterations to converge properly",
+      "The K value was too small and should be increased to 8"
+    ],
+    "correctIndex": 0,
+    "explanation": "Silhouette scores range from -1 to 1, where 0.42–0.68 indicates moderate to good cluster quality with some overlap. This is typical for real business data. Option B is wrong because scores near 1 indicate perfect separation, not 0.4–0.7. Option D is tempting but score quality doesn't directly indicate whether K is optimal.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft used K-Means to segment 20,000 enterprise customers into K=3 clusters based on software license revenue ($) and support ticket frequency. After the analysis, they found Cluster A averaged $145,000 in revenue, Cluster B averaged $32,000, and Cluster C averaged $89,000. Based on this output, what is the most appropriate business decision?",
+    "options": [
+      "Develop premium support packages for Cluster A and growth strategies for Cluster C",
+      "Merge Clusters B and C because they are too small compared to Cluster A",
+      "Immediately increase pricing for all customers in Cluster A by 25%",
+      "Run the algorithm again with K=4 because the cluster sizes are unequal"
+    ],
+    "correctIndex": 0,
+    "explanation": "The cluster characteristics reveal clear segments: high-value (A), low-value (B), and mid-value (C). Tailored business strategies suit each segment. Option C is dangerously wrong—raising prices for high-value customers could drive them away. Option D is incorrect because unequal cluster sizes are normal and don't indicate poor K choice.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Bank of America ran K-Means on 100,000 customer accounts using 2 features: account balance ($) and monthly transaction count. The within-cluster sum of squares (WCSS) was 2,450,000. What does WCSS measure, and how should it be interpreted?",
+    "options": [
+      "The total squared distance from each point to its centroid; lower WCSS indicates tighter, more cohesive clusters",
+      "The percentage of variance explained by the clustering; lower WCSS means better predictive accuracy",
+      "The number of misclassified points; lower WCSS means fewer errors in assignment",
+      "The average distance between cluster centroids; lower WCSS means clusters are farther apart"
+    ],
+    "correctIndex": 0,
+    "explanation": "WCSS measures how compact clusters are by summing squared distances from each point to its centroid. Lower WCSS = tighter, more internally similar clusters. Option B is incorrect because WCSS doesn't measure explained variance (that's R²). Option D confuses WCSS with between-cluster distance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix applied K-Means clustering to 500,000 subscriber accounts using viewing hours per month and genres watched (encoded numerically). They tested K=3, K=5, K=7, and K=10, observing WCSS values of 18,500,000, 12,300,000, 8,900,000, and 8,750,000 respectively. Why might K=7 be preferable to K=10 despite having higher WCSS?",
+    "options": [
+      "The elbow method shows diminishing returns; K=10 offers minimal improvement (0.2% reduction) while adding complexity",
+      "Higher K values always produce worse clusters because centroids become unstable",
+      "WCSS is no longer a valid metric when K exceeds 7",
+      "K=10 requires more computational power than K=7, making it impractical"
+    ],
+    "correctIndex": 0,
+    "explanation": "K=10 reduces WCSS by only 8,750,000 - 8,900,000 = -150,000 (1.7% improvement) from K=7, showing diminishing returns. The elbow method suggests K=7 is the sweet spot balancing fit and simplicity. Option B is false—higher K always lowers WCSS but at diminishing rates. Option D confuses practical concerns with statistical reasoning.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla analyzed 75,000 vehicle service records using K-Means with K=4, clustering by repair cost ($) and days-to-repair. The resulting clusters had 18,500, 15,200, 14,800, and 26,500 data points respectively. A colleague suggested this proves the algorithm 'failed' because cluster sizes are unequal. How should this be evaluated?",
+    "options": [
+      "Unequal cluster sizes are normal and expected in K-Means; size doesn't indicate failure if clusters are internally cohesive",
+      "The colleague is correct; K-Means always produces equally-sized clusters when working properly",
+      "The algorithm should be re-run with a different random seed to force equal cluster sizes",
+      "Unequal sizes prove the data naturally contains outliers that should be removed before clustering"
+    ],
+    "correctIndex": 0,
+    "explanation": "K-Means partitions data based on feature similarity, not to achieve equal cluster sizes. Unequal sizes are normal and reflect natural grouping patterns in business data. Option B is a critical misconception—K-Means minimizes within-cluster variance, not cluster size. Option C shows misunderstanding of what random seed affects.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant ran K-Means clustering on 60,000 retail customer records using annual spending ($) and website visit frequency, with K=6. The analysis revealed one cluster (Cluster 4) contained only 340 customers while others had 8,000–12,000. The consultant reported: 'Cluster 4 is an error because it's too small.' What is the most likely explanation?",
+    "options": [
+      "Cluster 4 represents a genuine niche segment with unique characteristics; small clusters reflect natural patterns, not errors",
+      "The algorithm failed to converge and Cluster 4 is a computational artifact",
+      "The dataset contains measurement errors that K-Means incorrectly identified",
+      "K=6 was too large; reducing to K=4 would eliminate this problematic cluster"
+    ],
+    "correctIndex": 0,
+    "explanation": "Small clusters are valid outputs representing specialized customer segments (perhaps VIP or dormant accounts). This is business insight, not an error. Option B is wrong—K-Means convergence produces valid partitions regardless of size imbalance. Option D treats a symptom (size) as the cause, but the small cluster likely exists for good reason.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Coca-Cola used K-Means to cluster 150,000 distributors by annual purchase volume ($) and delivery frequency (orders/year). The 2 features had vastly different scales: volume ranged $5,000–$850,000 (mean $250,000) and frequency ranged 12–520 (mean 180). If no preprocessing was applied, which outcome is most likely?",
+    "options": [
+      "The larger-scale volume feature would dominate distance calculations, making frequency nearly irrelevant in clustering",
+      "K-Means automatically normalizes features, so scale differences have no impact on results",
+      "The algorithm would produce equally weighted clusters based on both features proportionally",
+      "Frequency would dominate because it's a count metric while volume is currency"
+    ],
+    "correctIndex": 0,
+    "explanation": "K-Means uses Euclidean distance, which treats all features by their original scale. Volume ranges over $845,000 while frequency ranges 508, so volume differences dwarf frequency in distance calculations. This is a critical preprocessing oversight. Option B is dangerously wrong—K-Means does NOT auto-normalize; that must be done explicitly (standardization/normalization).",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase performed K-Means clustering on 200,000 credit card accounts using transaction frequency, average transaction amount, and days-since-last-activity, creating K=5 clusters. A data scientist claims: 'We should minimize K-Means by choosing the K value that produces the lowest WCSS.' Why is this reasoning incomplete or problematic?",
+    "options": [
+      "WCSS always decreases with higher K; choosing the lowest WCSS (K approaching N) overcomplicates results and lacks interpretability",
+      "WCSS is unreliable for financial data and should never be used in banking applications",
+      "The statement is correct; minimizing WCSS always produces the best business insights",
+      "WCSS cannot be calculated when K exceeds the number of features"
+    ],
+    "correctIndex": 0,
+    "explanation": "This reflects a fundamental misunderstanding: WCSS monotonically decreases as K increases, approaching zero at K=N (each point is its own cluster). This is mathematically inevitable but practically useless. The goal is finding an optimal K via the elbow method, not minimum WCSS. Option C is the most tempting trap—it appeals to optimization intuition but ignores the overfitting problem.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company used K-Means to cluster 85,000 patient records by age (years), BMI (kg/m²), and cholesterol levels (mg/dL) into K=4 clusters for a clinical trial. Results showed one cluster had mean age 67.3, BMI 28.1, cholesterol 219; another had mean age 31.5, BMI 22.4, cholesterol 165. The researcher concluded: 'Cluster age differences (35.8 years) are more significant than cholesterol differences (54 mg/dL), so age dominates the clustering.' Is this reasoning sound?",
+    "options": [
+      "No; raw difference magnitudes are misleading without considering variance within each feature; standardization reveals true relative importance",
+      "Yes; a 35.8-year difference is objectively larger than a 54-unit difference in any context",
+      "No; clustering doesn't consider feature 'importance,' so the claim cannot be evaluated from output alone",
+      "Yes; because age is measured in larger numbers, it automatically contributes more to Euclidean distance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Raw differences are deceptive without considering each feature's variance. If cholesterol varies by 500 within clusters but age varies by 15, then age actually dominates despite smaller absolute differences. Standardization (z-scores) is essential for fair comparison. Option D sounds logical but is exactly why preprocessing is critical—features on different scales need normalization before clustering.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company clustered 110,000 customer sessions using K-Means with K=8 based on pages visited, session duration (minutes), and items added-to-cart. After clustering, 3 segments showed average purchase intent scores of 0.82, 0.79, and 0.81 (where 0.50 = low intent, 1.0 = high intent). One segment had 0.12 intent. The business leader proposed: 'The low-intent cluster is an error and should be removed; the algorithm failed to properly segment high-intent customers.' What is the most defensible counterargument?",
+    "options": [
+      "The low-intent cluster is valid: it represents genuine customers with different browsing behavior and valuable business insight (identify and re-engage dormant browsers)",
+      "The leader is correct; K-Means is designed to create homogeneous customer segments, so diverse intent means failure",
+      "The algorithm should be re-run with K=7 to eliminate the problematic low-intent cluster",
+      "The presence of a low-intent cluster proves the dataset contains significant noise that must be cleaned before clustering"
+    ],
+    "correctIndex": 0,
+    "explanation": "K-Means clusters based on the input features (pages, duration, cart adds), not purchase intent—intent is an external validation metric, not a clustering goal. A distinct low-intent segment is actionable insight (dormant browsers) deserving targeted re-engagement strategies. Option B confuses clustering objectives with external metrics. Option C treats an outlier segment as an error when it's actually strategic insight.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A dataset at Acme Manufacturing contains 450 product records, and 27 records are missing values for the 'Production Cost' field. What percentage of data is missing for this field?",
+    "options": [
+      "5.0%",
+      "6.0%",
+      "4.5%",
+      "7.2%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Missing percentage = (27/450) × 100 = 6.0%. Option A (5.0%) is incorrect because it would only represent 22.5 missing records. Option C (4.5%) confuses 27/600, and option D (7.2%) results from incorrect division.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines 'Missing Completely at Random (MCAR)' in business analytics?",
+    "options": [
+      "Missing values that depend on the value itself",
+      "Missing values that occur independently of any observed or unobserved data",
+      "Missing values that correlate with observed variables only",
+      "Missing values that follow a seasonal business pattern"
+    ],
+    "correctIndex": 1,
+    "explanation": "MCAR means missingness is unrelated to any variable in the dataset or any external factor. Option A describes Missing Not at Random (MNAR), which is the most problematic type. Option C describes Missing at Random (MAR), which depends on observed variables. Option D confuses MCAR with predictable patterns.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a customer survey at RetailCo with 5,000 responses, the 'Annual Income' field has 312 missing values. What imputation method would be LEAST appropriate if income missingness is related to education level (an observed variable)?",
+    "options": [
+      "Multiple imputation using education and age",
+      "Deletion of all 312 incomplete records",
+      "Mean imputation using all respondents",
+      "Predictive model with education as a predictor"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mean imputation ignores the relationship between missingness and education, violating the MAR assumption. Since missingness depends on an observed variable (education), methods that leverage education (options A and D) are superior. Option B (deletion) would lose 312/5000 = 6.24% of data and is inefficient here. Mean imputation assumes MCAR when evidence shows MAR, making it inappropriate.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank analyst discovers that 18% of loan applications have missing 'Employment Duration' values, and these missing values occur predominantly among applicants who listed 'Self-Employed' as their occupation. What type of missingness is this?",
+    "options": [
+      "Missing Completely at Random (MCAR)",
+      "Missing at Random (MAR)",
+      "Missing Not at Random (MNAR)",
+      "Randomly distributed missing data"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is MNAR because missingness depends on an unobserved or partially observed characteristic—self-employed individuals may work irregular schedules making employment duration ambiguous or difficult to report. The missingness is related to the missing variable itself (Employment Duration) through occupation context. Option B (MAR) would require missingness to depend only on fully observed variables, but self-employment status is creating the dependency through its relationship with employment duration itself.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which statement correctly describes the relationship between sample size and the decision to delete records with missing values?",
+    "options": [
+      "Deleting records is always the best practice regardless of sample size",
+      "Deleting 50 rows from a dataset of 50,000 is generally more acceptable than deleting 50 rows from a dataset of 200",
+      "Deleting missing values never affects statistical power",
+      "Sample size has no impact on missing data handling decisions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deleting 50 rows from 50,000 (0.1% loss) is usually acceptable, while deleting 50 from 200 (25% loss) severely compromises statistical power and introduces bias. Option A ignores context and sample size. Option C is false—deletion always reduces power. Option D ignores a critical factor in deciding whether deletion is viable versus requiring imputation.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechCorp's quarterly sales dataset has 240 transactions. The 'Customer Discount Applied' field has 36 missing values, and an analyst decides to use median imputation. What is the primary risk of this approach?",
+    "options": [
+      "It will artificially lower variance in the discount field",
+      "It will artificially increase the dataset size",
+      "It will create non-existent transaction patterns",
+      "It will violate data confidentiality"
+    ],
+    "correctIndex": 0,
+    "explanation": "Median imputation reduces variance because it replaces missing values with a single value, removing natural variability. The distribution becomes artificially concentrated. Option B is false—sample size doesn't change. Option C is possible but not the primary risk of median imputation itself. Option D is unrelated to the statistical consequences of imputation. Reduced variance leads to underestimated standard errors and inflated statistical significance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which missing data handling method is most appropriate when you have 8,200 customer records, 340 are missing the 'Website Visit Duration' variable, missingness appears random, and you want to maintain relationships between variables?",
+    "options": [
+      "Listwise deletion of all 340 incomplete records",
+      "Multiple imputation by chained equations (MICE)",
+      "Forward fill using previous customer's value",
+      "Replace with a constant value of '0 minutes'"
+    ],
+    "correctIndex": 1,
+    "explanation": "MICE is superior here because it preserves variable relationships while handling MCAR missingness appropriately, and only 4.1% of data is lost. Option A (listwise deletion) would discard 340 records unnecessarily when imputation works well. Option C (forward fill) is inappropriate for cross-sectional customer data and creates artificial correlations. Option D (zero replacement) is contextually wrong—a customer not visiting doesn't equal zero duration; it means missing. MICE maintains correlation structure.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst at InvestBank discovers that bonus values in the HR dataset are missing for 42 out of 1,200 employees, and further analysis shows missingness is strongly correlated with recent hire date (fewer than 90 days). The analyst plans to impute using the mean of all employees' bonuses. What error is being made?",
+    "options": [
+      "The analyst is correctly applying mean imputation to MCAR data",
+      "The analyst is ignoring that this is MAR data and mean imputation may introduce bias",
+      "The analyst is using the wrong variable type for imputation",
+      "The analyst is deleting too many records"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is MAR (Missing at Random), as missingness depends on an observed variable: hire date. Mean imputation assumes MCAR and will bias results by ignoring the relationship between hire date and bonus. New hires typically have lower bonuses, so using the overall mean overstates imputed values. Option A is incorrect because the data is MAR, not MCAR. Option C confuses data type with missingness type. Option D is irrelevant—the analyst is imputing, not deleting.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is mean imputation?",
+    "options": [
+      "Replacing missing values with the average of observed values in that column",
+      "Deleting rows with missing values",
+      "Predicting missing values using machine learning",
+      "Using the median instead of the mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean imputation is the straightforward practice of filling missing values with the column's average. Option B is deletion, not imputation. Option C is predictive/model-based imputation, which is more complex. Option D is median imputation, a related but distinct technique.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain with 15,000 customer records finds that 450 records are missing 'Last Purchase Date'. When analyzed, all missing values occur in the inactive account category. What percentage of data is missing, and what is the missingness type?",
+    "options": [
+      "3%, MCAR",
+      "3%, MNAR",
+      "4.5%, MAR",
+      "30%, MNAR"
+    ],
+    "correctIndex": 1,
+    "explanation": "Missing percentage = (450/15,000) × 100 = 3%. This is MNAR because missingness is related to the variable itself—inactive accounts don't have recent purchases, so the absence of a date reflects the actual status. Option A correctly calculates 3% but misclassifies the type. Option C (4.5%) is a calculation error (would be 675 records). Option D (30%) incorrectly divides 450 by 15,000 wrong. Option C's MAR classification is incorrect because the dependency is through account status, which relates directly to the missing variable.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of the following statements about listwise deletion is correct?",
+    "options": [
+      "It is always the best method because it ensures complete cases",
+      "It is appropriate when data is MCAR and the percentage of deletion is small (typically <5%)",
+      "It should never be used under any circumstances",
+      "It requires no assumptions about the missingness mechanism"
+    ],
+    "correctIndex": 1,
+    "explanation": "Listwise deletion is defensible only under specific conditions: MCAR mechanism and minimal data loss (<5%). Option A overgeneralizes—it's not always best. Option C is too absolute—there are legitimate contexts for deletion. Option D is false; deletion relies critically on the MCAR assumption. When these conditions hold (small percentage, MCAR), listwise deletion maintains unbiased estimates with minimal power loss.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at AutoSales Inc. has 6,000 vehicle purchase records. The 'Trade-In Value' column has 420 missing entries. The analyst imputes using the mean trade-in value ($8,200) across all vehicles. Later analysis shows vehicles missing trade-in values were predominantly high-end luxury models (median value $14,500). What is the likely consequence?",
+    "options": [
+      "Overestimation of luxury vehicle profitability metrics",
+      "Underestimation of luxury vehicle profitability metrics",
+      "No bias because mean imputation is unbiased",
+      "Increased statistical power in hypothesis testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mean imputation ($8,200) undershoots the true luxury vehicle trade-in values ($14,500), leading to underestimation of luxury vehicle-related metrics like total transaction value or profitability. This is a classic consequence of imputing with the global mean when missingness is MNAR or MAR related to vehicle type. Option A reverses the direction. Option C is incorrect; mean imputation is biased when data is not MCAR. Option D is false; imputation reduces variance, harming power.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a dataset of 3,500 employee records, the 'Years of Experience' field has 140 missing values uniformly scattered across all departments and tenure groups. What type of missingness is this most likely?",
+    "options": [
+      "Missing Not at Random (MNAR)",
+      "Missing at Random (MAR) dependent on department",
+      "Missing Completely at Random (MCAR)",
+      "Structural missing data"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data scattered uniformly across departments and groups with no pattern suggests MCAR—missingness is independent of observed variables. Option A (MNAR) would show systematic missingness related to experience levels themselves. Option B (MAR) would show missingness concentrated in specific departments. Option D (structural) refers to values that are impossible by design, not random missingness. The uniform distribution is the key indicator of MCAR.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst at InsureCorp is choosing between deletion and multiple imputation for 2,100 insurance claims where 63 records have missing 'Claim Amount' values. The analyst confirms missingness is MCAR. Which consideration should weigh most heavily in the decision?",
+    "options": [
+      "Multiple imputation is always superior regardless of missing percentage",
+      "With only 3% missing data under MCAR, either approach is statistically defensible, but deletion is simpler",
+      "Deletion will always bias the results",
+      "The analyst must use multiple imputation because MCAR requires it"
+    ],
+    "correctIndex": 1,
+    "explanation": "At 63/2,100 = 3% missing under MCAR, listwise deletion produces unbiased estimates with acceptable power loss (larger studies can tolerate 3-5% loss). Multiple imputation is also valid but adds complexity without proportional gain at this low percentage. Option A overstates multiple imputation's necessity. Option C is false; deletion is unbiased under MCAR. Option D incorrectly suggests MCAR mandates imputation—MCAR is the one scenario where deletion works well. Simplicity and interpretability favor deletion here.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which imputation method directly leverages relationships between variables to estimate missing values?",
+    "options": [
+      "Mean imputation",
+      "Median imputation",
+      "Multiple imputation by chained equations (MICE)",
+      "Mode imputation"
+    ],
+    "correctIndex": 2,
+    "explanation": "MICE iteratively imputes missing values using regression on other variables, explicitly preserving correlations between columns. Mean, median, and mode imputation use only univariate statistics from a single column, ignoring inter-variable relationships. This makes MICE superior for maintaining multivariate structure, especially in MAR scenarios where other observed variables explain missingness.",
+    "type": "Definition",
+    "difficulty": "easy"
+  }
+]

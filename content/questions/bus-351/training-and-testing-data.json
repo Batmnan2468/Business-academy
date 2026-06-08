@@ -1,0 +1,184 @@
+[
+  {
+    "question": "At Spotify, data scientists are building a model to predict user churn. They divide their dataset of 5 million user records into a training set and a testing set. What is the primary purpose of the testing set?",
+    "options": [
+      "To evaluate how well the model performs on unseen data and estimate real-world accuracy",
+      "To improve the model's parameters during the learning process",
+      "To collect more user behavior data from active subscribers",
+      "To validate that the training data was collected correctly"
+    ],
+    "correctIndex": 0,
+    "explanation": "The testing set is held back from training to provide an unbiased estimate of model performance on new, unseen data. Option B describes the training set's role. Option C confuses data collection with model evaluation. Option D is a data quality concern, not a testing set purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a typical machine learning workflow at Amazon, what percentage of data is commonly allocated to training versus testing?",
+    "options": [
+      "50% training, 50% testing",
+      "80% training, 20% testing",
+      "90% training, 10% testing",
+      "70% training, 30% testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 80/20 split is industry standard for most business analytics projects because it provides sufficient training data while maintaining a robust test set. 90/10 leaves too little data for reliable testing. 50/50 wastes valuable training data. 70/30 is less common and reduces training efficiency.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "FedEx is developing a model to predict package delivery delays using 120,000 historical shipment records. Which statement best describes the training data?",
+    "options": [
+      "Data used to teach the model patterns and adjust its internal parameters",
+      "Data used only to measure final model accuracy",
+      "Data that should be kept secret from the model during development",
+      "Data reserved exclusively for testing the model's generalization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Training data is the dataset used during model development to learn patterns and weights. Option B describes testing data's role. Option C misunderstands that training data must be used during learning. Option D reverses the purpose—that's what testing data does.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Apple is training a churn prediction model with 2.4 million customer records. The data science team accidentally uses 100% of their data for training and none for testing. What is this error called?",
+    "options": [
+      "Data leakage",
+      "Overfitting without proper validation",
+      "Cross-contamination",
+      "Sampling bias"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using 100% of data for training without a held-out test set prevents proper evaluation and typically causes overfitting because you cannot assess real-world performance. Data leakage (Option A) refers to information from test/future data bleeding into training. Cross-contamination is not standard terminology. Sampling bias relates to how data is collected, not train/test split.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix has 8 million user-rating pairs. They split the data 75% training and 25% testing. How many records will be in the training set?",
+    "options": [
+      "2,000,000",
+      "6,000,000",
+      "5,333,333",
+      "3,000,000"
+    ],
+    "correctIndex": 1,
+    "explanation": "8,000,000 × 0.75 = 6,000,000 training records. Option A (2,000,000) is the testing set size. Option C results from 2/3 split. Option D is 50% of total.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Target is building a customer segmentation model using 500,000 transaction records. They allocate 80% to training (400,000 records) and 20% to testing (100,000 records). During training, the model achieves 92% accuracy on the training set, but only 71% accuracy on the testing set. What does this gap suggest?",
+    "options": [
+      "The model is overfitting to training data and may not generalize well",
+      "The testing set contains lower-quality data that corrupts the model",
+      "The 80/20 split ratio is incorrect for this dataset",
+      "More features should be added to improve testing accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "A large gap between training (92%) and testing (71%) accuracy is a classic sign of overfitting—the model memorized training patterns rather than learning general relationships. Option B blames data quality without evidence. Option C confuses split ratio with accuracy gap. Option D would likely worsen overfitting.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft is training a fraud detection model on 3.6 million credit card transactions, allocating 80% to training and 20% to testing. A colleague suggests using a random 80/20 split because 'it's faster than stratified sampling.' What is the risk of a purely random split?",
+    "options": [
+      "Fraud cases (2% of total) might be unevenly distributed, leaving the test set with too few fraud examples to validate rare-event detection",
+      "Random splits always produce worse model accuracy than sequential splits",
+      "The training set will have fewer features than the testing set",
+      "Random allocation will require twice as much computational memory"
+    ],
+    "correctIndex": 0,
+    "explanation": "In imbalanced datasets (fraud detection: ~2% positive cases), random splits can accidentally create test sets with insufficient positive examples, making it impossible to reliably evaluate performance on rare events. Stratified sampling ensures balanced class distribution. Option B is false—randomness doesn't inherently harm accuracy. Option C confuses observations with features. Option D is incorrect about memory.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Uber is testing a driver demand prediction model. The training set (80% of 2.1 million trips) achieves a mean absolute error (MAE) of 3.2 minutes. The testing set (20%) achieves MAE of 3.1 minutes. A data scientist says, 'Testing is better than training—the model must be underfitting!' Why is this conclusion problematic?",
+    "options": [
+      "A marginal difference of 0.1 minutes could be due to chance; the nearly identical performance suggests the model is generalizing well, not underfitting",
+      "Testing sets are always smaller, so their metrics are automatically less reliable",
+      "Underfitting would show both metrics equally poor, not one better than the other",
+      "The model needs more features to show a larger gap between training and testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 0.1-minute difference is negligible and both metrics (~3.1–3.2 min) suggest good generalization—neither overfitting (large gap) nor underfitting (both poor). Option B incorrectly assumes smaller sets = less reliable metrics; comparable metrics actually signal stability. Option C is backwards. Option D misunderstands what underfitting looks like.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase builds a loan default prediction model using 4.8 million historical loan records over 10 years. A junior analyst proposes time-based splitting: use loans from years 1–8 (3.6M records) for training and loans from years 9–10 (1.2M records) for testing. Compared to random 75/25 splitting, what is a key advantage of this time-based approach?",
+    "options": [
+      "It simulates real-world deployment where the model predicts future defaults using only past information, avoiding look-ahead bias",
+      "It guarantees higher testing accuracy because recent data is always more relevant",
+      "It automatically balances the class distribution of defaults across sets",
+      "It reduces the total number of features needed in the model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time-based splitting respects temporal order and prevents the model from 'seeing the future'—a critical issue in financial forecasting. Random splitting could mix past and future, causing look-ahead bias and overstated performance. Option B is false; recent data ≠ automatically higher accuracy. Option C is unrelated to split methodology. Option D confuses split type with feature count.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart has 9 million purchase records. They use a 70/20/10 split: 70% training, 20% validation, 10% test. How many records are allocated to validation, and what is its primary role?",
+    "options": [
+      "1.8 million records; tuning hyperparameters and selecting the best model without using the test set",
+      "0.9 million records; ensuring the training data has no duplicates",
+      "1.8 million records; providing a second independent test of model performance",
+      "2.7 million records; generating additional training examples through data augmentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "9M × 0.20 = 1.8M validation records. Validation sets tune hyperparameters and select model versions while keeping test data pristine for final evaluation. Option B (0.9M) is the test set size. Option C confuses validation with a second test (validation actively influences model choice). Option D misunderstands data augmentation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data scientist at Google uses stratified k-fold cross-validation on 500,000 search-ranking training records (k=5), creating five 80% training / 20% validation splits while respecting query relevance classes. Why is stratified cross-validation superior to simple random cross-validation for imbalanced ranking data?",
+    "options": [
+      "Each fold maintains proportional representation of query relevance classes, ensuring validation estimates are stable across all folds and reflecting true model performance on minority classes",
+      "It uses less computational resources by randomizing folds instead of sorting",
+      "It guarantees the model will have higher accuracy on all folds",
+      "It eliminates the need for a separate test set after cross-validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stratified k-fold preserves class distribution in each fold, preventing one fold from being accidentally easier (e.g., all high-relevance queries) and ensuring robust, representative validation metrics. Option B reverses the complexity (stratification adds overhead). Option C makes an unwarranted accuracy claim. Option D is false; a held-out test set is still essential after cross-validation.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Bank of America trains a credit risk model on Q1–Q3 data (training set) and tests on Q4 data (testing set). In Q1–Q3, default rate is 1.8%; in Q4, it jumps to 3.2% due to a recession. The model achieves 88% accuracy on Q4 test data. Why might this single accuracy metric be misleading?",
+    "options": [
+      "Data distribution has shifted between training and testing (covariate shift); accuracy alone doesn't reveal if the model's precision/recall on defaults have degraded, and class imbalance means 88% accuracy could mask poor default detection",
+      "The test set is too small to produce reliable metrics",
+      "The model is definitely overfitting because accuracy is below 95%",
+      "Q4 data is inherently noisier than Q1–Q3 data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Distribution shift from 1.8% → 3.2% default rate is a classic data drift problem. When classes are imbalanced (defaults are rare), a naive classifier could achieve 98% accuracy by predicting 'no default' always. The 88% accuracy hides the critical question: does the model correctly identify the now-more-common defaults? Precision, recall, and AUC-ROC are essential. Option B doesn't address the real issue. Option C misdefines overfitting. Option D is speculation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "LinkedIn is training a job recommendation model using 7 million user-job click records. A team member proposes: 'Use 85% for training, 15% for testing, and apply dropout regularization during training to combat overfitting.' A colleague counters: 'We should instead use 60% training, 40% testing because more test data prevents overfitting.' Which statement is correct?",
+    "options": [
+      "The first colleague is correct; a larger test set doesn't prevent overfitting during training—only regularization, early stopping, and proper train/test separation do. The 85/15 split provides sufficient training while maintaining evaluation rigor.",
+      "The second colleague is correct; increasing the test set to 40% reduces overfitting by forcing the model to learn on less data",
+      "Both are equally valid; either split will produce identical overfitting behavior",
+      "The 60% training approach is better because it forces the model to be simpler"
+    ],
+    "correctIndex": 0,
+    "explanation": "A larger test set does not prevent overfitting during training; it only measures overfitting after training is complete. Overfitting is controlled by regularization, early stopping, and cross-validation—not by test set size. The 85/15 split maximizes training data while maintaining adequate evaluation power (modern standards often use 80/20 or 85/15). Option B confuses test-set size with generalization control. Option C is false. Option D misunderstands model complexity.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Airbnb develops a price prediction model using 2.5 million listing-night observations. They intentionally shuffle the data randomly before 80/20 splitting, rather than using date-order splitting. Six months later, they deploy the model, and price predictions are 12% less accurate than validation showed. Why might random shuffling be the root cause?",
+    "options": [
+      "Random shuffling mixes temporal patterns (seasonal, market trends) across train and test sets, creating inflated validation accuracy; deployment data exhibits future seasonality the model never saw as a cohesive test, revealing overfitting to non-generalizable temporal patterns",
+      "Shuffled data reduces the total number of records available for training",
+      "Random shuffling always produces worse model performance than sequential data",
+      "Deployment data must be fundamentally different in quality from validation data"
+    ],
+    "correctIndex": 0,
+    "explanation": "In time-series or temporal data (e.g., Airbnb seasonality, market trends), random shuffling breaks temporal coherence. Training might see May prices and December prices scattered throughout, while deployment tests the model on a new temporal sequence it hasn't learned holistically. This causes a gap between validation (boosted by temporal leakage) and deployment (true future prediction). Option B is false. Option C overgeneralizes. Option D assumes quality issues without evidence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

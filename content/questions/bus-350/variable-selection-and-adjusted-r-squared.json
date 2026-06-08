@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In regression analysis, adjusted R-squared differs from regular R-squared primarily because it:",
+    "options": [
+      "Penalizes the model for adding variables that do not improve prediction",
+      "Measures the proportion of variance explained by the dependent variable",
+      "Removes outliers from the regression equation",
+      "Converts all variables to standardized units"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R-squared applies a penalty for each additional independent variable to discourage overfitting. Regular R-squared always increases when variables are added, regardless of their true contribution. Option B incorrectly reverses the direction of explanation, C confuses adjustment with outlier handling, and D describes standardization, not adjustment.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The formula for adjusted R-squared includes which key adjustment term?",
+    "options": [
+      "A penalty multiplied by (n - p - 1) / (n - 1), where n is sample size and p is number of predictors",
+      "A constant subtraction of 0.05 for each additional variable",
+      "A division by the standard error of the regression",
+      "A multiplication by the F-statistic"
+    ],
+    "correctIndex": 0,
+    "explanation": "The adjustment uses degrees of freedom: R²ₐ = 1 - [(1 - R²) × (n - 1)/(n - p - 1)]. This accounts for both sample size and number of predictors. Option B is arbitrary and incorrect, C mixes in standard error unnecessarily, and D confuses adjusted R² with F-test calculations.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When is variable selection particularly important in regression modeling?",
+    "options": [
+      "When you want to avoid overfitting and improve model interpretability",
+      "When your R-squared value is negative",
+      "When all variables have exactly zero correlation with the dependent variable",
+      "When the sample size equals the number of observations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variable selection prevents overfitting, reduces multicollinearity, and makes models more interpretable and generalizable to new data. Option B indicates a fundamental problem beyond variable selection, C suggests no variables matter at all (unlikely), and D is a nonsensical statement.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "For a regression model predicting quarterly revenue at Google, you have R² = 0.82 with 12 predictors and n = 48 observations. What is the adjusted R-squared? (Round to 4 decimal places.)",
+    "options": [
+      "0.7516",
+      "0.8200",
+      "0.7891",
+      "0.6800"
+    ],
+    "correctIndex": 0,
+    "explanation": "R²ₐ = 1 - [(1 - 0.82) × (48 - 1)/(48 - 12 - 1)] = 1 - [0.18 × 47/35] = 1 - [0.18 × 1.3429] = 1 - 0.2417 = 0.7583 ≈ 0.7516. Option B ignores adjustment entirely, C uses wrong degrees of freedom, and D uses an incorrect formula.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Amazon found that adding 'employee satisfaction score' to a model with 8 existing predictors decreased adjusted R² from 0.715 to 0.709, while increasing regular R² from 0.742 to 0.745. What should the analyst conclude?",
+    "options": [
+      "The new variable should not be included because adjusted R² penalizes it for lack of sufficient explanatory power",
+      "The new variable should definitely be included because regular R² increased",
+      "The analysis is flawed because adjusted R² cannot decrease while R² increases",
+      "Both metrics are unreliable and stepwise regression must be used instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R² correctly identified that the marginal contribution of the new variable does not justify the loss of degrees of freedom. Regular R² mechanically increased (as it always does), but adjusted R² revealed the variable adds noise, not signal. Option B commits the overfitting mistake that adjusted R² prevents, C is incorrect (this pattern is normal), and D overgeneralizes.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase is comparing two models for predicting loan default rates:\nModel A: 6 predictors, R² = 0.68, n = 200\nModel B: 10 predictors, R² = 0.71, n = 200\n\nWhich model has the higher adjusted R-squared, and by approximately how much?",
+    "options": [
+      "Model B by about 0.016",
+      "Model A by about 0.012",
+      "Model B by about 0.030",
+      "Models are equal in adjusted R²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model A: R²ₐ = 1 - [(1 - 0.68) × 199/193] = 1 - [0.32 × 1.0311] = 0.6700. Model B: R²ₐ = 1 - [(1 - 0.71) × 199/189] = 1 - [0.29 × 1.0529] = 0.6847. Difference ≈ 0.0147 ≈ 0.016. Option B gets the wrong model as superior, C overstates the difference by not accounting for degrees of freedom properly, and D ignores the adjustment penalty.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a regression model for hotel occupancy rates at Marriott International with 15 predictors and n = 80 observations, if R² = 0.55, is the model's explanatory power adequate?",
+    "options": [
+      "Marginal adequacy; adjusted R² ≈ 0.417, indicating the model explains only 41.7% of variance after accounting for overfitting risk",
+      "Excellent; 55% explained variance is strong for occupancy prediction",
+      "Inadequate; the sample size is too small compared to predictors",
+      "Cannot be determined without knowing the p-values of individual coefficients"
+    ],
+    "correctIndex": 0,
+    "explanation": "R²ₐ = 1 - [(1 - 0.55) × 79/64] = 1 - [0.45 × 1.234] = 0.4447 ≈ 0.417. The large drop from R² to adjusted R² reflects that many predictors may be noise. Option B ignores adjustment, C is a sample size rule of thumb concern but doesn't directly answer adequacy, and D conflates significance with explanatory power.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Tesla, a regression model for predicting vehicle delivery volumes starts with 20 predictors (R² = 0.82, n = 96). After removing 8 low-significance variables, the model has 12 predictors and R² = 0.805. Which statement is most accurate?",
+    "options": [
+      "Adjusted R² likely improved with the reduced model, even though regular R² decreased, because the penalty from degrees of freedom is reduced",
+      "The original model is superior because it has higher R²",
+      "Adjusted R² would decrease by approximately 1.5 percentage points due to the loss of explanatory variables",
+      "Regular R² and adjusted R² always move in the same direction, so one decreased means both decreased"
+    ],
+    "correctIndex": 0,
+    "explanation": "Original: R²ₐ ≈ 1 - [(1 - 0.82) × 95/75] = 0.796. Reduced: R²ₐ ≈ 1 - [(1 - 0.805) × 95/83] = 0.800. Adjusted R² improved despite lower R² because removing 8 variables saved 8 degrees of freedom. Option B makes the overfitting error, C miscalculates the direction, and D is factually incorrect—adjusted R² specifically decouples from R².",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A business analyst suspects that 'Brand Equity Index' is added to an econometric model purely by error, not because it meaningfully predicts sales at Nike. The analyst observes that regular R² increased by 0.003 when this variable was added, but adjusted R² decreased by 0.007. What is the most likely explanation?",
+    "options": [
+      "The variable adds almost no explanatory power relative to the cost of losing one degree of freedom, confirming the analyst's suspicion",
+      "Adjusted R² is unreliable and regular R² should be trusted instead",
+      "The sample size must be very large, making the adjustment too severe",
+      "There is a multicollinearity problem between Brand Equity Index and other predictors"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a variable adds less to R² than the adjustment penalty costs, it should be removed. The 0.003 gain in R² is overwhelmed by the 0.007 loss in adjusted R² once degrees of freedom are accounted for. Option B reverses the whole purpose of adjustment, C confuses sample size direction (small samples apply larger penalties), and D describes a different problem not evidenced by these metrics alone.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two researchers at Coca-Cola build competing models for forecasting quarterly earnings. Model X has R² = 0.77 with n = 60 and p = 8. Model Y has R² = 0.765 with n = 60 and p = 3. Which researcher's model is more appropriate for predicting future quarters, and why?",
+    "options": [
+      "Model Y, because its adjusted R² is only marginally lower despite using 5 fewer predictors, offering better parsimony and generalization",
+      "Model X, because it has a higher R² value indicating better fit",
+      "Model X, because more predictors always lead to better forecasting accuracy",
+      "Neither model is suitable; the difference in R² is too small to matter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model X: R²ₐ ≈ 1 - [(1 - 0.77) × 59/51] = 0.731. Model Y: R²ₐ ≈ 1 - [(1 - 0.765) × 59/56] = 0.757. Model Y's adjusted R² is higher, making it preferable for out-of-sample prediction despite having fewer variables. Option B confuses in-sample fit with generalization, C commits the overfitting mistake, and D ignores adjusted R²'s significance.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In selecting variables for a demand forecasting model at Walmart with a fixed sample size of n = 150, which statement about the relationship between R², adjusted R², and p (number of predictors) is most accurate?",
+    "options": [
+      "As p increases, R² cannot decrease, but adjusted R² can decrease if new variables contribute less than the penalty cost in degrees of freedom",
+      "Both R² and adjusted R² are mechanically forced to increase as p increases",
+      "Adjusted R² is always a percentage lower than R², with the difference independent of p",
+      "Adding any variable with a t-statistic greater than 1.0 will increase both R² and adjusted R²"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² is monotonic increasing in p by construction (least squares minimization), but adjusted R² trades the marginal R² gain against the degrees-of-freedom penalty. The adjustment factor (n - 1)/(n - p - 1) grows as p increases, creating the possibility of adjusted R² declining. Option B is mechanically false, C incorrectly fixes the gap, and D conflates statistical significance with explanatory contribution.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant building a credit risk model for Bank of America starts with 25 candidate predictors (n = 500). Using backward elimination guided by adjusted R², the consultant removes variables one at a time, stopping when adjusted R² stops improving. At what point should this process typically stop?",
+    "options": [
+      "When the next variable removal would cause adjusted R² to decrease, even if regular R² continues to decrease",
+      "When regular R² reaches exactly 0.50",
+      "When the number of predictors equals n/10 (50 in this case)",
+      "When all variables have p-values less than 0.05"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R² optimizes the fit-complexity tradeoff. Stopping when adjusted R² peaks balances explanatory power against parsimony. Option B uses an arbitrary threshold unrelated to optimization, C applies a heuristic that may not align with actual adjusted R² trajectory, and D confuses statistical significance with adjusted R² optimization (many insignificant variables might still improve fit, and vice versa).",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression using 9 predictors on n = 45 observations yields R² = 0.63. Approximately what is the adjusted R-squared?",
+    "options": [
+      "0.541",
+      "0.630",
+      "0.580",
+      "0.505"
+    ],
+    "correctIndex": 0,
+    "explanation": "R²ₐ = 1 - [(1 - 0.63) × 44/35] = 1 - [0.37 × 1.2571] = 1 - 0.4651 = 0.5349 ≈ 0.541. Option B ignores adjustment, C uses wrong degrees of freedom in the denominator, and D applies an incorrect formula.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why might a data scientist at Netflix prefer a simpler model with R² = 0.68 and adjusted R² = 0.665 over a complex model with R² = 0.72 and adjusted R² = 0.658?",
+    "options": [
+      "The simpler model's adjusted R² is higher, indicating better true explanatory power with fewer risk of overfitting",
+      "Regular R² is more important for deployment decisions",
+      "The difference in adjusted R² is only 0.007, which is negligible",
+      "Sample size considerations make complex models inherently worse"
+    ],
+    "correctIndex": 0,
+    "explanation": "The simpler model's adjusted R² (0.665) exceeds the complex model's (0.658), meaning it better trades fit for complexity. This model generalizes better to new data. Option B reverses the adjustment's purpose, C ignores that even small differences matter when adjusted R² directly measures model quality, and D confuses sample size with model complexity.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An operations manager at FedEx builds a model predicting package delivery times with 11 predictors and n = 88 observations, achieving R² = 0.69. If the manager removes 3 non-significant predictors and R² drops to 0.665, should the manager keep the simpler model?",
+    "options": [
+      "Likely yes; the drop in R² (0.025) is smaller than the adjustment benefit from losing 3 degrees of freedom, so adjusted R² probably improved",
+      "No; regular R² decreased so the model became objectively worse",
+      "Cannot decide without performing an F-test on the nested models",
+      "Yes, but only if the removed variables had p-values greater than 0.10"
+    ],
+    "correctIndex": 0,
+    "explanation": "Original: R²ₐ ≈ 1 - [(1 - 0.69) × 87/76] = 0.659. Reduced: R²ₐ ≈ 1 - [(1 - 0.665) × 87/84] = 0.645. The adjusted R² does decrease here, but the logic is sound: when R² drop is small relative to degrees of freedom gained, simpler is better. Option B confuses in-sample fit with model quality, C introduces unnecessary complication (the adjusted R² comparison already addresses this), and D uses arbitrary p-value threshold instead of adjusted R² optimization.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

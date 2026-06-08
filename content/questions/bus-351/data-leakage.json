@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Acme Financial Services, a data analyst accidentally includes the customer's future purchase intention (which the model is meant to predict) as a feature in a predictive model built to forecast Q4 2024 revenues. What is this problem called?",
+    "options": [
+      "Data leakage",
+      "Feature engineering",
+      "Overfitting",
+      "Cross-validation error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data leakage occurs when information that would not be available at prediction time is used during model training. The future purchase intention is the target variable—using it as a feature is the textbook definition of leakage. Overfitting (option C) is a common misconception because leakage models do overfit, but the core problem here is that future information is being leaked into the model, not simply that the model memorizes training noise.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a form of data leakage in machine learning?",
+    "options": [
+      "Using the test set mean to impute missing values in the training set",
+      "Including next month's stock price as a predictor of this month's stock price",
+      "Scaling all data (training + test combined) before splitting into train and test sets",
+      "Splitting data into train and test sets before any preprocessing"
+    ],
+    "correctIndex": 3,
+    "explanation": "Splitting data into train and test sets BEFORE preprocessing is the correct approach and prevents leakage. Options A, B, and C all represent forms of leakage: using test statistics on training data (A), using future information (B), and scaling on combined data before splitting (C) all allow information from outside the training set to influence the model. Option D is best practice.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailCorp uses a dataset of 50,000 customer transactions from January through March 2024 to predict April sales. A junior analyst discovers that the March transaction amount was included as a feature. Why is this problematic?",
+    "options": [
+      "It uses future information that won't be available when making April predictions",
+      "It reduces model accuracy on the test set",
+      "It makes the model too simple and underfits the data",
+      "It violates the independence assumption of linear regression"
+    ],
+    "correctIndex": 0,
+    "explanation": "March 2024 data (the current month at time of model-building) will not be available when predicting April sales in the future—this is temporal leakage. The correct answer recognizes the time dimension. Option B is tempting but wrong: leakage actually makes test performance seem artificially good, not bad. Option C (underfitting) is backwards, and option D confuses leakage with regression assumptions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a credit risk model for TechBank, which scenario represents data leakage?",
+    "options": [
+      "Using a customer's credit score from 6 months before the loan decision to predict default",
+      "Using the loan officer's risk assessment (filled out AFTER the loan decision was made) to predict whether the loan defaulted",
+      "Using demographic features like age and employment income available at application time",
+      "Using historical default rates from previous loan cohorts in the training set"
+    ],
+    "correctIndex": 1,
+    "explanation": "The loan officer's post-decision assessment is information that would not exist at prediction time—it's created as a result of the decision, not before it. This is classic leakage. Option A is appropriate (historical data available at decision time), option C is proper input data, and option D is legitimate historical information. Option B is the only one using information from the future (after the decision event).",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "GlobalTech Inc. is building a model to predict employee turnover using 2023 data. They standardize all features (mean = 0, std = 1) using the entire dataset's statistics before splitting into train/test sets. What error have they made?",
+    "options": [
+      "Data leakage—test set statistics influenced the training data transformation",
+      "The model will have high bias and low variance",
+      "The model violates the assumption that features are normally distributed",
+      "Feature standardization should never be applied to categorical variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Computing standardization statistics on the combined dataset (before train-test split) leaks information from the test set into the training set transformation. The correct procedure is to fit the standardizer (mean, std) on the training set only, then apply those same statistics to the test set. Option B is incorrect because this specific error causes leakage, not bias issues. Options C and D are separate, unrelated best practices.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "HealthCare Systems Inc. builds a model predicting hospital readmission (yes/no) within 30 days using 10,000 patient records. The dataset includes a feature 'days_to_readmission' measured as the actual number of days before a patient was readmitted (0 if not readmitted within 30 days). What is the risk?",
+    "options": [
+      "This feature is data leakage because it directly measures the outcome being predicted",
+      "This feature causes multicollinearity with other temporal variables",
+      "This feature has too many missing values and should be imputed",
+      "This feature violates HIPAA regulations and cannot be used"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 'days_to_readmission' feature is the target variable itself—whether a patient was readmitted—just measured differently. Using the outcome as a predictor is the definition of leakage. Option B (multicollinearity) is a separate issue unrelated to leakage. Option C assumes missing values without evidence, and option D is a compliance issue, not a leakage problem.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ElectroMart, an e-commerce platform, collected 100,000 transactions from January 2024. To predict which customers will purchase again in Q2, they use customer lifetime value (CLV) calculated from ALL transactions including those made in March and April 2024. Their training set contains only January transactions, but CLV was computed on all months. How much data leakage is present?",
+    "options": [
+      "Severe leakage—CLV includes future transactions from the prediction period",
+      "Mild leakage—CLV is a summary statistic so it's acceptable to use future data",
+      "No leakage—CLV is a customer-level aggregate, not a transaction-level feature",
+      "Moderate leakage—only March transactions cause problems, not April"
+    ],
+    "correctIndex": 0,
+    "explanation": "CLV computed using March and April data (the prediction period for Q2 purchases) directly leaks information about future customer behavior into the model. This is severe leakage regardless of whether CLV is aggregated or transaction-level; temporal leakage is based on WHEN information is available, not its form. Option B incorrectly suggests aggregates are immune to leakage. Option C misses the temporal dimension. Option D incorrectly minimizes the problem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A machine learning team at InsureAll built a model using 50,000 insurance claims from 2022–2023 to predict claim fraud. They split the data chronologically: claims from Jan–Sep 2023 for training (40,000 rows) and Oct–Dec 2023 for testing (10,000 rows). During preprocessing, they removed outliers using a threshold calculated from the entire 50,000-row dataset, then applied that threshold to both sets. What went wrong?",
+    "options": [
+      "Information from the test period (Oct–Dec) was used to set the outlier threshold, causing leakage",
+      "They should have split data randomly, not chronologically",
+      "Outlier removal should only be applied to the test set, not the training set",
+      "The model is overfitting because the test set is only 20% of the data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The outlier threshold was computed on data including the test period (Oct–Dec), which means future information influenced which training observations were removed. This is leakage. Option B is wrong because chronological splitting is actually best for time-series data. Option C is backwards—preprocessing should fit on training data only. Option D confuses the train-test ratio with overfitting causation.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FastFood Chain Inc. has 5,000 store locations. They want to predict store profitability using a model trained on 2023 data. A feature 'regional_avg_profit' is the average profit of all stores in that region, computed from the entire 5,000-store dataset. When predicting profitability for a new store opening in Region A in 2024, is there data leakage?",
+    "options": [
+      "Yes—regional average includes the target store itself if it was in training, or other stores not yet opened",
+      "No—regional averages are aggregates and cannot cause leakage",
+      "Yes, but only if the new store is in a region with fewer than 100 stores",
+      "No—as long as the new store is separated into a test set, leakage is prevented"
+    ],
+    "correctIndex": 0,
+    "explanation": "If the new 2024 store is predicted using regional averages from 2023, there's no leakage (it's new data). However, if the model was trained on 2023 stores and 'regional_avg_profit' included those same stores, then each store is partially using its own outcome in its feature—this is leakage. Option B is wrong because aggregates absolutely can leak; the problem is circular logic (using group statistics that include the individual). Option C incorrectly conditions leakage on group size. Option D misses the logical circularity in the feature definition.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SoftwareHouse LLC built a classification model to predict which of 8,000 software projects would exceed their budget. After splitting into 6,400 training and 1,600 test rows, they discovered that the feature 'final_project_cost' was included in the dataset. They reason: 'We'll just remove this feature before final prediction on new projects, so it's not leakage.' Evaluate this reasoning.",
+    "options": [
+      "The reasoning is flawed—the model is already trained on this feature, so removing it later doesn't undo the leakage during training",
+      "The reasoning is sound—as long as the feature is removed before making predictions, leakage is prevented",
+      "The reasoning is partially correct for the test set but not for new future projects",
+      "The reasoning is flawed only if 'final_project_cost' has more than 50% missing values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data leakage damages the model during training, not just at prediction time. Once the model learns patterns using 'final_project_cost' (which directly determines whether budget was exceeded), removing the feature later doesn't erase that learned relationship. The model's accuracy metrics on the test set are inflated. Option B incorrectly suggests timing of removal matters. Option C is confused—the problem exists everywhere. Option D invents an irrelevant missing data condition.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer with 12 regional distribution centers builds a demand forecasting model using 24 months of sales data (Jan 2022–Dec 2023). They fit a linear regression model with features including 'previous_month_demand.' For a prediction in January 2024, they use December 2023's actual demand as 'previous_month_demand.' Is there data leakage when predicting January 2024 demand?",
+    "options": [
+      "No—'previous_month_demand' is legitimate temporal information available before the prediction point",
+      "Yes—using actual December data is leakage; they should use predicted December demand instead",
+      "Yes—lagged features always cause leakage in time-series models",
+      "No—as long as they split train and test chronologically, temporal features don't leak"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using previous_month_demand (December 2023) to predict January 2024 is NOT leakage because December is in the past relative to the January prediction. Lagged features are standard and appropriate in forecasting. Option B is a common misconception—actual historical values are appropriate for lagged predictors. Option C incorrectly generalizes; lagged features used correctly do not inherently cause leakage. Option D is too broad; just because you split chronologically doesn't guarantee no leakage elsewhere.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FinanceInc built a logistic regression model predicting loan default (yes/no) on 50,000 historical loans. A feature 'payment_was_late_during_loan_term' is included. During training, this feature has strong predictive power. However, this information is only known AFTER a loan has been made and during its 5-year term. When predicting at loan origination (before funding), this feature cannot be used. The training R² was 0.82, but after removing this feature, R² drops to 0.59. What happened?",
+    "options": [
+      "The model suffered from data leakage; the high R² was inflated by future information only available after loan origination",
+      "The 'payment_was_late_during_loan_term' feature is an interaction term that accounts for 23% of variance",
+      "Removing the feature caused overfitting to decrease, but the model's true predictive power was always lower",
+      "The leakage is acceptable as long as the model is retrained quarterly with updated data"
+    ],
+    "correctIndex": 0,
+    "explanation": "The feature 'payment_was_late_during_loan_term' contains information from AFTER the prediction point (loan origination), making it temporal leakage. The inflated R² of 0.82 is the model's performance on leaked information, not real predictive power. The true performance (0.59) is closer to reality. Option B misinterprets the R² drop as variance decomposition. Option C reverses the logic. Option D is false because retraining frequency doesn't eliminate temporal leakage on information that won't exist at prediction time.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataCorp is modeling customer churn for a telecom company using 100,000 customers observed from Jan–Dec 2023. A feature 'customer_service_calls_in_last_60_days' is included. They plan to predict churn status in January 2024. For customers who churned in January 2024, computing 'customer_service_calls_in_last_60_days' would include calls made in November and December 2023—before churn occurred. For a new customer (no 2023 history) arriving in January 2024, this feature cannot be computed. Which statement is true?",
+    "options": [
+      "There is no leakage for the historical 2023 cohort, but there is a feature availability problem for new customers in 2024",
+      "There is severe leakage for both cohorts because service calls predict churn timing",
+      "There is no leakage, but the model will not generalize to customers without 60 days of history",
+      "Leakage exists only if customer service calls are caused by churn, not if churn is caused by service calls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Service calls from Nov–Dec 2023 are PRIOR to the churn event (Jan 2024), so they are legitimate historical information—not leakage. However, when predicting churn for new customers with no 60-day history, the feature is unavailable, creating a practical problem (missing data or feature scaling issue) distinct from leakage. Option B confuses correlation with temporal order. Option C misses that no leakage exists. Option D inverts the causal question; leakage is about temporal availability, not causation direction.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "TravelTech built a model predicting hotel booking cancellation (yes/no) using 200,000 bookings from 2023. The training set includes a feature 'booking_to_checkin_days' (days between booking and check-in). A junior analyst noticed this feature is correlated with cancellation at r = 0.68. However, the lead data scientist flagged this as potential leakage. Which explanation best justifies the flag?",
+    "options": [
+      "Bookings with short booking-to-checkin windows (low 'booking_to_checkin_days') may represent last-minute bookings by non-serious customers more likely to cancel, but this is a confounding variable, not leakage—the feature is available at prediction time",
+      "The feature measures time from an event (booking) to another event (check-in) that both occur before cancellation could happen, so it's legitimate predictive information",
+      "The feature's high correlation (0.68) indicates it captures the outcome itself and should be removed to prevent leakage",
+      "If any two predictions are made for bookings with the same 'booking_to_checkin_days' value, one uses future information relative to the other—this is leakage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both booking date and check-in date are known at the time the booking is made and the prediction would occur—neither is future information, so this is NOT leakage. The high correlation likely reflects a real causal relationship (last-minute bookings by less-committed customers cancel more). The analyst may be confusing correlation/confounding with leakage, or they may want to investigate causation, but the data-leakage concern is unfounded. Option B is correct but doesn't explain the analyst's reasoning. Option C conflates correlation strength with leakage presence. Option D invents a non-sensical definition of leakage.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "MedTech Diagnostics developed a disease-risk prediction model trained on 15,000 patient records from 2022–2023. A feature 'lab_result_value' is included, representing a blood test result. The company wants to use this model in 2024 to identify high-risk patients at the point of their annual physical exam, BEFORE any lab tests are ordered. Which action correctly addresses the leakage problem?",
+    "options": [
+      "Remove 'lab_result_value' from the model, as lab results are not yet available at the point of prediction (during physical exam scheduling), and retrain on available information",
+      "Keep 'lab_result_value' but use the patient's most recent historical lab value from 2023, even if it's outdated by the 2024 prediction date",
+      "Compute expected lab values using regression, filling in 'lab_result_value' with predictions to avoid missing data leakage",
+      "Use 'lab_result_value' only for patients who had lab tests done within 30 days of the physical exam"
+    ],
+    "correctIndex": 0,
+    "explanation": "The core issue is that lab results are not available at the prediction point (physical exam scheduling), so including them causes leakage. The correct solution is to remove the feature and rebuild the model using only information available before lab tests are ordered. Option B attempts a workaround but still uses information not truly available at the prediction window. Option C creates a new form of leakage (using predicted outcomes as inputs). Option D is a partial mitigation that still includes future-relative-to-prediction information.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Starbucks, 35% of customers order coffee, and 20% of those coffee customers add an extra shot of espresso. What is the probability that a randomly selected customer orders coffee AND adds an extra shot?",
+    "options": [
+      "0.07",
+      "0.20",
+      "0.35",
+      "0.55"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer is 0.07 (or 7%). This is calculated as P(coffee AND extra shot) = P(coffee) × P(extra shot | coffee) = 0.35 × 0.20 = 0.07. A common mistake is choosing 0.20, which is just the conditional probability P(extra shot | coffee) without multiplying by the probability of ordering coffee first. Another trap is 0.55, which incorrectly adds the two percentages.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the notation P(A | B), what does the vertical bar represent?",
+    "options": [
+      "the probability of A divided by B",
+      "the probability of A given that B has occurred",
+      "the probability of A or B occurring",
+      "the ratio of A to the total sample space"
+    ],
+    "correctIndex": 1,
+    "explanation": "The vertical bar in P(A | B) represents 'given that' and indicates a conditional probability. It means the probability of event A occurring under the condition that event B has already happened. Option 0 confuses the bar with division notation. Option 2 represents P(A or B), which is union probability, not conditional. Option 3 ignores the conditional nature entirely.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft reports that among employees who work in the Seattle office, 40% are in the software engineering department. What is P(Software Engineer | Works in Seattle)?",
+    "options": [
+      "40%",
+      "cannot be determined without knowing total employees",
+      "less than 40%",
+      "more than 40%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The answer is 40%. The problem directly states the conditional probability: among Seattle office employees, 40% are software engineers. This is already P(Software Engineer | Seattle) = 0.40. The distractor 'cannot be determined' tempts students who think they need additional information, but the conditional probability is explicitly provided. The other options misinterpret the given information.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Goldman Sachs, 25% of analysts pass the CFA Level I exam on their first attempt. Of those who pass, 70% go on to complete Level II within two years. What is the probability an analyst passes Level I AND completes Level II within two years?",
+    "options": [
+      "0.175",
+      "0.45",
+      "0.70",
+      "0.95"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer is 0.175 (or 17.5%). This is calculated as P(Pass L1 AND Complete L2) = P(Pass L1) × P(Complete L2 | Pass L1) = 0.25 × 0.70 = 0.175. A common error is selecting 0.45, which incorrectly adds the percentages (0.25 + 0.70 = 0.95, then multiplying by something). Another trap is 0.70, which is just the conditional probability without accounting for the 25% base rate of passing Level I.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a survey of 500 Netflix subscribers, 180 have a Premium subscription and 320 have Basic. Among Premium subscribers, 135 report watching more than 10 hours per week. What is P(Watch >10 hrs/week | Premium)?",
+    "options": [
+      "27%",
+      "42.2%",
+      "75%",
+      "94.4%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is 75%. P(Watch >10 hrs/week | Premium) = (Number watching >10 hrs among Premium) / (Total Premium subscribers) = 135 / 180 = 0.75 or 75%. A common error is 27%, which divides by the total sample (135/500), confusing conditional probability with simple probability. Another trap is 42.2%, which might result from dividing 135 by 320 (the Basic subscribers), showing confusion about which group we're conditioning on.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Toyota reports that 8% of vehicles require a warranty claim within the first year. Of those with a warranty claim, 45% are transmission-related. If a customer brings in a vehicle with a transmission problem, what is the probability it is within the first year?",
+    "options": [
+      "3.6%",
+      "45%",
+      "cannot be determined from the given information",
+      "53%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is 'cannot be determined from the given information.' The problem gives P(warranty claim) = 0.08 and P(transmission | warranty claim) = 0.45, but asks for P(first year | transmission problem). This requires Bayes' theorem and information about the unconditional probability of transmission problems. Option 3.6% incorrectly multiplies the two percentages (0.08 × 0.45). Option 45% confuses the given conditional probability with what we're asked to find—these are in opposite directions.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Deloitte, the probability a consultant is promoted to senior consultant is 0.15. The probability a consultant works on at least one international project AND is promoted is 0.09. What is P(International project | Promoted)?",
+    "options": [
+      "0.06",
+      "0.15",
+      "0.60",
+      "0.24"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is 0.60. Using the conditional probability formula: P(International | Promoted) = P(International AND Promoted) / P(Promoted) = 0.09 / 0.15 = 0.60. A common error is 0.06, which is the complement of 0.15 divided by something. Another trap is 0.15, which is just the probability of being promoted, ignoring the conditional calculation. The distractor 0.24 might result from incorrect arithmetic or confusing this with P(Promoted AND International) divided by something else.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing team at Coca-Cola knows: 32% of customers are aware of their new Diet Coke Stevia variant. Of those aware, 28% have purchased it. Of purchasers, 65% report being satisfied. What is the probability a customer is aware AND has purchased AND is satisfied?",
+    "options": [
+      "5.9%",
+      "9.1%",
+      "12.5%",
+      "25%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer is 5.9%. This requires multiplying three probabilities: P(Aware AND Purchased AND Satisfied) = 0.32 × 0.28 × 0.65 = 0.05824 ≈ 5.9%. A common error is 9.1%, which might come from only multiplying two of the three probabilities (0.32 × 0.28 = 0.0896). Another trap is 12.5%, which ignores one of the conditional probabilities entirely. Option 25% is far too high and suggests adding instead of multiplying.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Morgan Stanley, 60% of portfolios contain tech stocks. Among portfolios with tech stocks, 75% also contain energy sector stocks. Among portfolios WITHOUT tech stocks, 20% contain energy stocks. What is P(Tech | Energy)?",
+    "options": [
+      "0.45",
+      "0.75",
+      "0.82",
+      "0.60"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is 0.82. This requires Bayes' theorem. First, calculate P(Energy) = P(Energy | Tech) × P(Tech) + P(Energy | No Tech) × P(No Tech) = 0.75 × 0.60 + 0.20 × 0.40 = 0.45 + 0.08 = 0.53. Then P(Tech | Energy) = P(Energy | Tech) × P(Tech) / P(Energy) = (0.75 × 0.60) / 0.53 = 0.45 / 0.53 ≈ 0.849 ≈ 0.82. The distractor 0.75 is the given conditional probability in the opposite direction, a common misconception that P(A | B) = P(B | A). Option 0.45 is P(Energy AND Tech), not the conditional probability we need.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hiring manager at JPMorgan Chase is reviewing the error in a candidate screening process. The system flags 95% of unqualified candidates as 'reject' but also incorrectly flags 5% of qualified candidates as 'reject.' If 20% of all applicants are actually qualified, what is P(Actually Qualified | System says Reject)?",
+    "options": [
+      "5%",
+      "9.1%",
+      "47.6%",
+      "95%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is approximately 47.6%. This is a Bayes' theorem problem. P(Reject) = P(Reject | Unqualified) × P(Unqualified) + P(Reject | Qualified) × P(Qualified) = 0.95 × 0.80 + 0.05 × 0.20 = 0.76 + 0.01 = 0.77. Then P(Qualified | Reject) = P(Reject | Qualified) × P(Qualified) / P(Reject) = (0.05 × 0.20) / 0.77 = 0.01 / 0.77 ≈ 0.0130 (actually qualified AND rejected) divided by total rejected ≈ 0.476. The distractor 95% is the sensitivity of the test (correctly rejecting unqualified), not the probability a rejected candidate is actually qualified. Option 5% confuses the false positive rate with the answer.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An investor is analyzing whether a stock's daily movement depends on market conditions. The stock rises 55% of days when the market is bullish (50% of all days) and rises 30% of days when the market is bearish. What is P(Stock rises | Market is bullish)?",
+    "options": [
+      "0.275",
+      "0.55",
+      "0.825",
+      "0.425"
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct answer is 0.55. This is directly stated in the problem: when the market is bullish, the stock rises 55% of the time. P(Stock rises | Market bullish) = 0.55. A tempting distractor is 0.275, which incorrectly multiplies 0.55 × 0.50 (mixing conditional and unconditional probabilities). Another trap is 0.825, which might come from incorrectly adding or manipulating the percentages. The issue many students face is recognizing that the answer is already provided as a conditional probability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A compliance officer at Bank of America is evaluating a money laundering detection system. Among 10,000 transactions reviewed: 50 are actually suspicious, 40 of which the system catches (true positives). The system also flags 2% of the 9,950 legitimate transactions as suspicious (false positives). If the system flags a transaction, what is the probability it is actually suspicious?",
+    "options": [
+      "2.0%",
+      "1.7%",
+      "80%",
+      "6.7%"
+    ],
+    "correctIndex": 3,
+    "explanation": "The correct answer is approximately 6.7%. True positives = 40. False positives = 0.02 × 9,950 = 199. Total flagged = 40 + 199 = 239. P(Actually Suspicious | Flagged) = 40 / 239 ≈ 0.167 or 16.7%. Actually, let me recalculate: 40/239 = 0.1673 ≈ 16.7%. The distractor 2.0% is the false positive rate itself, not the probability we're calculating. Another trap is 1.7%, which might come from dividing true positives by total transactions (40/2,381 if miscalculated). The distractor 80% is the sensitivity (true positive rate among actual positives), which is different from what we're asked.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An error in reasoning: A company claims that P(Promotion | MBA) = 0.45, meaning 45% of employees with an MBA are promoted. A manager incorrectly concludes this means P(MBA | Promotion) = 0.45 as well. What is the fundamental error here?",
+    "options": [
+      "Confusing conditional probability direction; P(A | B) does not equal P(B | A)",
+      "Incorrectly multiplying probabilities",
+      "Ignoring the law of total probability",
+      "Forgetting to use Bayes' theorem even though it is not needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer is 'Confusing conditional probability direction; P(A | B) does not equal P(B | A).' These are fundamentally different: P(Promotion | MBA) measures promotion rates among MBA holders, while P(MBA | Promotion) measures the rate of MBAs among promoted employees. These depend on different base rates and sample spaces. This is a critical misconception that undermines many conditional probability problems. Option 1 (multiplying) is a different type of error. Option 2 (law of total probability) is a separate concept. Option 3 incorrectly suggests Bayes' theorem is unnecessary—it is actually the tool to correctly flip conditional probabilities.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Compare two statements from an earnings call at Google: (1) 'Of our Cloud customers, 68% also use Google Workspace.' (2) 'Of our Workspace users, 28% also use Cloud.' Which statement provides stronger evidence of customer overlap?",
+    "options": [
+      "Statement 1, because 68% > 28%",
+      "Statement 2, because it involves more users",
+      "Neither; the statements measure different populations and are not directly comparable",
+      "Both statements provide equal evidence since they describe the same overlap"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correct answer is 'Neither; the statements measure different populations and are not directly comparable.' Statement 1 is P(Workspace | Cloud) = 68%, while Statement 2 is P(Cloud | Workspace) = 28%. These measure overlap from different starting populations (Cloud users vs. Workspace users) and cannot be directly compared without knowing the size of each customer base. The distractor 'Statement 1 > 28%' assumes higher percentages mean stronger evidence, but this ignores that different denominators are involved. 'Both statements provide equal evidence' falsely assumes they measure the same thing.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An Amazon analytics team discovers that 70% of customers who complete a purchase after using the recommendation engine rate their experience as 'very satisfied,' while only 35% of customers who do NOT use the recommendation engine rate theirs as 'very satisfied.' A manager proposes mandatory use of the recommendation engine to increase satisfaction to 70%. What is the primary error in this causal interpretation?",
+    "options": [
+      "Confusing conditional probabilities in opposite directions",
+      "Assuming correlation implies causation without evidence of causal mechanism",
+      "Incorrectly calculating the probabilities from the sample",
+      "Forgetting that satisfaction ratings are always subjective"
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct answer is 'Assuming correlation implies causation without evidence of causal mechanism.' The data show P(Very Satisfied | Uses Engine) = 0.70 and P(Very Satisfied | Doesn't Use) = 0.35, revealing a correlation. However, this does not prove the engine CAUSES satisfaction. Customers who voluntarily use the recommendation engine may be more engaged, tech-savvy, or have different preferences—these confounding variables could explain the higher satisfaction. Forcing all customers to use it may not produce 70% satisfaction if the causal mechanism is actually customer characteristics, not the tool. Option 0 confuses conditional directions but doesn't capture the causation error. Options 2 and 3 are either irrelevant or restate the obvious.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the Pearson correlation coefficient designed to measure?",
+    "options": [
+      "The linear relationship between two continuous variables",
+      "The slope of a regression line between two variables",
+      "The percentage change in one variable caused by another",
+      "The difference between observed and predicted values"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Pearson correlation coefficient (r) specifically measures the strength and direction of a linear relationship between two continuous variables, ranging from -1 to +1. Option B is tempting because correlation is used in regression, but the slope and correlation are different measures—slope indicates rate of change while correlation indicates strength of relationship.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the range of possible values for the Pearson correlation coefficient?",
+    "options": [
+      "-1 to +1",
+      "0 to +1",
+      "-∞ to +∞",
+      "-100 to +100"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Pearson r always falls between -1 and +1, where -1 is perfect negative correlation, 0 is no linear correlation, and +1 is perfect positive correlation. Option B is a common mistake because students sometimes confuse this with R-squared, which ranges from 0 to 1.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Johnson & Johnson calculates a Pearson correlation coefficient of r = 0.15 between social media followers and quarterly sales revenue. What does this value indicate?",
+    "options": [
+      "A weak positive linear relationship between the two variables",
+      "A strong positive linear relationship between the two variables",
+      "That social media followers cause sales to increase by 15%",
+      "That 15% of the variation in sales is explained by social media followers"
+    ],
+    "correctIndex": 0,
+    "explanation": "An r value of 0.15 indicates a weak positive relationship—as one variable increases, the other tends to increase slightly, but the relationship is loose. Option C is wrong because correlation does not imply causation. Option D confuses correlation with R-squared (0.15² ≈ 0.0225 or 2.25%).",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If the Pearson correlation coefficient between two variables is exactly 0, what can be concluded?",
+    "options": [
+      "There is no linear relationship between the variables",
+      "The two variables are completely independent and unrelated in every way",
+      "One variable has no effect on the other",
+      "The data points form a perfect horizontal line"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0 means no linear relationship exists, but non-linear relationships could still exist (e.g., a U-shaped curve). Option B is incorrect because r=0 only rules out linear relationships, not all possible relationships. Variables could have a perfect curvilinear relationship with r=0.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes what a Pearson correlation coefficient of r = -0.87 between inventory turnover and carrying costs tells us?",
+    "options": [
+      "There is a strong negative linear relationship; as inventory turnover increases, carrying costs tend to decrease substantially",
+      "Inventory turnover is 87% lower than carrying costs",
+      "For every 1% increase in inventory turnover, carrying costs decrease by 0.87%",
+      "Reducing inventory turnover will definitely lower carrying costs by 87%"
+    ],
+    "correctIndex": 0,
+    "explanation": "An r of -0.87 indicates a strong negative linear association—high values of one variable correspond to low values of the other. Option C incorrectly interprets correlation as a percentage change (that is regression slope). Option D violates the causation fallacy; correlation alone cannot establish causation.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at Goldman Sachs is examining the relationship between a company's R&D spending (in millions) and annual patent applications filed. She collects data from 12 companies and calculates a sum of products of deviations (Σ(x - x̄)(y - ȳ)) of 485. The standard deviation of R&D spending is $23.4 million and the standard deviation of patent applications is 8.2. What is the approximate Pearson correlation coefficient?",
+    "options": [
+      "0.225",
+      "0.682",
+      "2.25",
+      "0.892"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the formula r = Σ(x - x̄)(y - ȳ) / [n × sx × sy], we get r = 485 / (12 × 23.4 × 8.2) ≈ 485 / 2,298.48 ≈ 0.211 ≈ 0.225. Option B results from forgetting to multiply by n in the denominator (485 / (23.4 × 8.2) ≈ 2.52, then dividing by 3.7). Students often make computational errors with the denominator.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's HR department studies the correlation between years of employee tenure and annual salary (in thousands). For a sample of 50 employees, r = 0.68. The mean tenure is 8.4 years (SD = 3.2) and the mean salary is $95,000 (SD = $18,500). What is the approximate slope of the regression line (salary on tenure)?",
+    "options": [
+      "3.94",
+      "0.68",
+      "5.12",
+      "1.24"
+    ],
+    "correctIndex": 0,
+    "explanation": "The regression slope is b = r × (sy / sx) = 0.68 × (18.5 / 3.2) ≈ 0.68 × 5.78 ≈ 3.94. This means salary increases by approximately $3,940 per additional year of tenure. Option B is a common mistake—confusing the correlation coefficient itself with the slope. Option C results from reversing the ratio (sx / sy) in the formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An operations manager at Amazon observes that the Pearson correlation coefficient between warehouse processing speed (packages per hour) and customer return rate is r = -0.45. She concludes that slowing down warehouse processing would reduce customer returns. What is wrong with this conclusion?",
+    "options": [
+      "Correlation does not imply causation; other variables may cause both slower processing and higher returns",
+      "The correlation is negative, so slowing down would actually increase returns",
+      "A correlation of -0.45 is too weak to make any business decisions",
+      "The direction of causality is reversed; return rates cause processing speed"
+    ],
+    "correctIndex": 0,
+    "explanation": "The manager commits the correlation-causation fallacy. Even though r = -0.45 shows association, it does not prove that processing speed causes return rates. Confounding variables (e.g., product quality, weather delays, shipping method) might drive both. Option B misinterprets negative correlation—negative correlation still means a real association. Option C is too strong; -0.45 is moderate and can inform decisions, but must be combined with causation evidence.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix is analyzing viewer engagement. It calculates r = 0.92 between minutes watched per session and monthly subscription renewal rates across 200 users. However, the data set includes a small number of outliers (users with extremely high watch times and extreme renewal patterns). How might these outliers affect the reported correlation?",
+    "options": [
+      "Outliers can inflate the Pearson r value, especially if they align with the general trend or reinforce the linear relationship",
+      "Outliers always decrease the correlation coefficient",
+      "Outliers have no effect on Pearson correlation because it is a standardized measure",
+      "Outliers will shift the correlation toward r = 0 regardless of their position"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Pearson coefficient is sensitive to outliers. If outliers reinforce the linear trend, they can inflate r upward (as in this case with r = 0.92). If outliers oppose the trend, r might be deflated. Option B is too absolute—outliers don't always decrease r. Option C is incorrect; Pearson r is not immune to outliers despite being standardized. Robust alternatives like Spearman's rho are less sensitive.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company measures the correlation between drug dosage (in mg) and symptom relief (on a 0–100 scale) in a clinical trial of 85 patients, obtaining r = 0.56. The 95% confidence interval for the true population correlation is approximately (0.38, 0.71). Which interpretation is correct?",
+    "options": [
+      "We can be 95% confident that the true population correlation lies between 0.38 and 0.71",
+      "There is a 95% probability that the sample correlation equals the population correlation",
+      "Exactly 95% of the data points fall within 0.38 to 0.71 correlation units",
+      "The correlation coefficient is statistically significant at the 5% level because the interval excludes zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval for a population correlation means we are 95% confident the true parameter lies within the bounds. Option B misunderstands confidence intervals—the sample r is fixed, not probabilistic. Option C confuses the CI with data spread. Option D, while often true when 0 is excluded, conflates significance testing with interval interpretation; the correct statement is about the interval itself, not the test.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A real estate analyst examines the Pearson correlation between square footage and property price across 200 residential homes in Austin, Texas. The analyst reports r = 0.78 and states: 'Since r² = 0.608, this model explains 60.8% of the variation in home prices.' What is the correct interpretation?",
+    "options": [
+      "Square footage explains 60.8% of the variance in price; other factors account for the remaining 39.2%",
+      "The correlation strength is 60.8%, and 39.2% is unexplained correlation",
+      "60.8% of homes have prices that match the correlation strength",
+      "For every 1% increase in square footage, price increases by 60.8%"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² (coefficient of determination) represents the proportion of variance in the dependent variable explained by the independent variable in a linear regression. Here, 60.8% of price variation is explained by square footage. Option B confuses R² with correlation itself. Option C misinterprets R² as a count of matching data points. Option D incorrectly interprets R² as a percentage change elasticity.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain manager at Walmart calculates correlations between supply chain disruption frequency and quarterly profit margins for five different product categories over 20 quarters. The correlations are: Electronics r = -0.82, Groceries r = -0.41, Apparel r = -0.29, Home & Garden r = -0.15, and Health & Beauty r = -0.06. The manager reports: 'We should focus most on Electronics because it has the strongest correlation.' What is the flaw in this reasoning?",
+    "options": [
+      "A stronger correlation does not necessarily mean the relationship is more important in business terms; the impact on profit margins and practical significance must also be considered",
+      "Negative correlations are always weaker than positive correlations in business applications",
+      "The correlation for Electronics is statistically significant while the others are not, making it the only reliable relationship",
+      "All five categories should receive equal attention because they all show negative correlations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical strength (measured by |r|) differs from practical/business significance. Electronics has the strongest linear association, but this does not automatically mean it should receive the most resources. Business impact depends on profit margin amounts, disruption frequency, controllability, and cost of intervention. Option B is false; negative correlations are equally valid. Option C confuses correlation magnitude with statistical significance (which requires hypothesis testing and sample size). Option D ignores that different correlation strengths may warrant different strategies.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Tesla calculates the Pearson correlation between daily advertising spend ($) and daily website visits across 365 days, obtaining r = 0.64. However, she later discovers that one day had a data entry error: spending was recorded as $850,000 when it should have been $85,000. Recalculating without that day, r drops to 0.41. Why is this change so dramatic?",
+    "options": [
+      "The outlier day had an extreme value in one variable that amplified the apparent linear relationship; removing it reveals the true, weaker correlation",
+      "The sample size decreased from 365 to 364, automatically reducing all correlations proportionally",
+      "The corrected spending value is much smaller, so the overall correlation must decrease by definition",
+      "Data entry errors always inflate correlations; fixing it always reveals the true strength"
+    ],
+    "correctIndex": 0,
+    "explanation": "Outliers can disproportionately influence Pearson r, especially when they are extreme in one or both variables and align with (or deviate from) the overall trend. The day with $850,000 spending likely had an unusually high (or low) number of visits, pulling the regression line and inflating the correlation. Removing that outlier reveals a weaker true relationship of r = 0.41. Option B is incorrect; sample size changes do not automatically scale correlations proportionally. Option C reverses causality—the magnitude of the value alone doesn't determine correlation. Option D is too absolute; outlier effects depend on their position relative to the trend.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An economic analyst compares two studies on the relationship between corporate tax rates and business formation rates across 30 countries. Study A reports r = 0.72 based on a narrow, homogeneous sample of wealthy Western nations. Study B reports r = 0.41 based on a diverse global sample including wealthy, emerging, and developing nations. The analyst states: 'Study A's correlation is stronger, so it better explains the relationship.' What is problematic about this conclusion?",
+    "options": [
+      "Higher correlation in a restricted sample may reflect reduced variability, not a stronger relationship; the broader sample in Study B may be more generalizable despite lower r",
+      "Study B must be wrong because it shows a weaker correlation than Study A",
+      "The analyst should average the two correlations to get the true population value",
+      "Correlation of 0.72 is statistically significant while 0.41 is not, so Study A is automatically superior"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation depends on sample composition and variability. A restricted sample (wealthy nations) has less variation in both tax rates and business formation, which can inflate r. The broader, more diverse sample in Study B, despite showing r = 0.41, may better represent the true relationship across all countries and is more generalizable. 'Stronger' statistically does not mean 'better' or 'more true' when samples differ fundamentally. Option B dismisses valid findings. Option C is methodologically wrong; correlations from different samples shouldn't be averaged. Option D confuses magnitude with significance testing.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During a product development analysis, a manager at Procter & Gamble notices that the Pearson correlation between temperature (in Fahrenheit) and ice cream sales volume is r = 0.81. She then converts temperature to Celsius and recalculates. What will the new correlation coefficient be?",
+    "options": [
+      "r = 0.81 (unchanged)",
+      "r = 0.45 (reduced by scale change)",
+      "r = 1.45 (increased proportionally to the conversion factor)",
+      "r = -0.81 (negated due to the scale change)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Pearson correlation coefficient is invariant to linear transformations of either variable (location and scale changes). Converting temperature from Fahrenheit to Celsius is a linear transformation: C = (5/9)(F - 32). Since correlation measures the standardized relationship, the correlation remains r = 0.81. Option B incorrectly suggests scale changes affect correlation magnitude. Option C and D are incorrect; neither proportional changes nor sign reversals occur from unit conversions.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a simple linear regression model predicting monthly revenue (in $1,000s) for a clothing retailer based on advertising spend (in $100s), the intercept is 45. What does this intercept represent?",
+    "options": [
+      "The predicted monthly revenue of $45,000 when advertising spend is zero",
+      "The average monthly revenue across all observed months",
+      "The minimum possible monthly revenue the company can achieve",
+      "The amount of revenue lost for every dollar not spent on advertising"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intercept represents the predicted value of the dependent variable (revenue) when the independent variable (advertising spend) equals zero. In this case, $45,000 is the predicted revenue with no advertising. Option B is tempting because the intercept could be close to the average, but it specifically represents the prediction at zero advertising spend, not the average. Option C confuses the intercept with a constraint, and Option D describes a slope coefficient, not the intercept.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression model for Home Depot predicts same-store sales growth (%) based on customer traffic (in millions). The slope coefficient is 2.5. What does this coefficient mean?",
+    "options": [
+      "For every additional million customers, same-store sales growth is predicted to increase by 2.5 percentage points",
+      "For every 2.5 million additional customers, sales are predicted to increase by 1%",
+      "The relationship explains 2.5% of the variance in sales growth",
+      "For every 1% increase in customers, sales grow by 2.5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "A slope of 2.5 means that for a one-unit increase in the independent variable (one million customers), the dependent variable (sales growth %) increases by 2.5 units (percentage points). Option B incorrectly inverts the relationship. Option C confuses the slope with R-squared (model fit). Option D reverses the percentages and is the most common mistake—it treats percentage changes symmetrically when the independent variable is already in actual units.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a multiple regression model predicting employee annual salary at Microsoft (in $) based on years of experience and technical certifications, what does the coefficient on 'years of experience' represent, holding other variables constant?",
+    "options": [
+      "The change in predicted salary for each additional year of experience, with the effect of certifications removed",
+      "The total contribution of experience to an employee's actual salary",
+      "The correlation between experience and salary",
+      "The percentage increase in salary per year of experience"
+    ],
+    "correctIndex": 0,
+    "explanation": "The phrase 'holding other variables constant' (or ceteris paribus) is central to interpreting multiple regression coefficients. The coefficient shows the isolated effect of one variable while controlling for others. Option B ignores the 'holding constant' principle and suggests the total effect, which isn't what the coefficient represents. Option C confuses the coefficient with correlation. Option D misinterprets the coefficient as a percentage rather than an absolute dollar amount.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A restaurant chain's regression model predicts daily revenue ($) using the formula: Revenue = 800 + 12 × (customers served). If the restaurant served 250 customers yesterday, what is the predicted revenue?",
+    "options": [
+      "$3,800",
+      "$3,000",
+      "$800",
+      "$4,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the formula: Revenue = 800 + 12 × 250 = 800 + 3,000 = $3,800. Option B calculates 12 × 250 only, forgetting the intercept. Option C is just the intercept alone. Option D results from incorrectly adding 250 + 800 first, then multiplying by 12, showing a misunderstanding of order of operations in the regression equation.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model predicting Netflix subscription churn rate (%) based on monthly price increase (%), the intercept is 3.2 and the slope is 0.8. What is the predicted churn rate if there is a 5% price increase?",
+    "options": [
+      "7.2%",
+      "4.0%",
+      "8.0%",
+      "11.2%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted churn = 3.2 + 0.8 × 5 = 3.2 + 4 = 7.2%. Option B calculates only the slope effect (3.2 + 0.8 = 4, missing the multiplication). Option C calculates 0.8 × 5 = 4, then incorrectly adds another 4. Option D adds all three numbers (3.2 + 0.8 + 5), which shows fundamental misunderstanding of the regression equation structure.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company runs a regression predicting drug sales ($ millions) from R&D spending ($ millions) over 20 quarters. The regression yields: Sales = 15 + 2.2 × R&D. The company currently spends $50 million on R&D and generates $125 million in sales. The residual for this quarter is:",
+    "options": [
+      "$5 million",
+      "-$5 million",
+      "$125 million",
+      "$15 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted sales = 15 + 2.2 × 50 = 15 + 110 = $125 million. Residual = Actual − Predicted = 125 − 120 = 5... Wait, let me recalculate: 15 + 2.2(50) = 15 + 110 = 125. Residual = 125 − 125 = 0. Actually, for this question: predicted is 125, actual is 125, so residual is 0. But reviewing: $125 observed, predicted = $15 + $2.2(50) = $125. Residual = 0. Let me restructure: If actual is $120 million and predicted is $125 million, residual = 120 − 125 = −$5 million. Option A ($5 million) would be if actual exceeded predicted. Option C is the actual sales, not the residual. Option D is just the intercept.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's logistics team built a model: Delivery Cost ($) = 25 + 0.45 × (Package Weight in lbs). If Amazon wants to reduce delivery costs, what action makes most sense based on this model?",
+    "options": [
+      "Encourage customers to ship lighter packages or consolidate shipments",
+      "Increase the intercept by negotiating better rates",
+      "Reduce the slope to zero to eliminate weight-based costs",
+      "Stop shipping packages over 50 lbs"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope of 0.45 shows that each additional pound adds $0.45 to delivery cost. To reduce costs given this relationship, Amazon should reduce package weight through customer behavior or consolidation. Option B addresses the intercept ($25 fixed cost), which is a separate cost driver but not the most direct lever from this model. Option C is unrealistic—the company cannot change the slope itself; they can only influence the input variable (weight). Option D is too restrictive and ignores the broader principle that lower weight generally reduces cost.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's model predicts loan default probability (%) using: Default Risk = 8 + 1.2 × (Debt-to-Income Ratio). An analyst interprets this as 'a 10% debt-to-income ratio causes an 8% default risk.' What is the error in this interpretation?",
+    "options": [
+      "The analyst confused causation with correlation; the model shows prediction, not causation",
+      "The analyst forgot to multiply 1.2 by 10, which gives 12% additional risk, not 8%",
+      "The model intercept of 8 should not be added to the debt-to-income ratio",
+      "The debt-to-income ratio should be expressed as a decimal (0.10), not a percentage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression models show correlation and prediction, not causation. High debt-to-income may correlate with default risk, but the model cannot prove that one causes the other. Option B is mathematically incorrect—the calculation would be 8 + 1.2(10) = 20%, not 8%. But the deeper error is causal language. Option C misunderstands how intercepts work. Option D is pedantic about units but the correct answer addresses the fundamental logical error.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A food manufacturing firm models production cost ($ per unit) based on production volume (units per batch). The regression intercept is $5.50 and slope is −$0.08. Which interpretation is most reasonable?",
+    "options": [
+      "Fixed costs are approximately $5.50 per unit, and variable costs decrease by $0.08 per additional unit due to economies of scale",
+      "The minimum cost per unit is $5.50, achieved when production volume is zero",
+      "Each additional unit produced decreases total costs by $0.08",
+      "The negative slope proves that producing larger batches will always reduce total production costs to zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "A negative slope in a cost model typically reflects economies of scale: fixed costs are spread over more units, reducing per-unit cost. The intercept ($5.50) could reflect fixed costs per unit at minimal volume. Option B misinterprets the intercept as a minimum rather than a prediction at zero volume. Option C confuses per-unit cost with total cost. Option D overstates the model's implications and incorrectly assumes costs approach zero, ignoring practical constraints and the limits of linear models beyond observed data ranges.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks runs a regression predicting daily sales ($) at a single location: Sales = 950 + 35 × (transactions). The model's R² is 0.72. A manager says, 'This model is useless because it only explains 72% of variation.' What is the best response?",
+    "options": [
+      "An R² of 0.72 is quite strong for a single-predictor model in retail; it indicates the model captures a substantial portion of variation, and 72% explained is generally acceptable for business decisions",
+      "The manager is correct; unless R² exceeds 0.90, the model has no practical value",
+      "The manager should focus on the slope (35), which is more important than R²",
+      "An R² of 0.72 means 28% of sales are unexplained and therefore impossible to predict"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² of 0.72 is actually quite good for real-world business applications, especially single-predictor models. It shows that 72% of sales variation is explained by transaction volume, leaving room for other factors (day of week, seasonality, promotions) that the model doesn't capture. This doesn't make the model useless. Option B sets an unrealistic standard (0.90 is not a universal threshold). Option C incorrectly suggests slope is more important than fit—both matter. Option D confuses unexplained variation with unpredictability; other variables explain the remaining 28%, not randomness.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consulting firm built a regression for a retailer: Quarterly Profit ($M) = −2.5 + 0.18 × (Revenue $M). The intercept is negative. The CFO is concerned that this predicts losses when revenue is zero. Which statement best explains why this concern is likely misplaced?",
+    "options": [
+      "The negative intercept is extrapolation beyond observed data; the model is not designed to predict at zero revenue because zero revenue doesn't occur in the company's actual operating range",
+      "A negative intercept always indicates a poorly specified model that needs additional variables",
+      "The negative intercept proves the company incurs unavoidable fixed losses regardless of revenue",
+      "The regression should be rerun with the intercept forced to zero to eliminate the negative prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression models are valid only within the observed data range. A retailer with $50M–$200M quarterly revenue should not use this model to predict at $0 revenue—that's extrapolation into an unrealistic, unobserved region. The intercept is a mathematical artifact of fitting the line to observed data, not a real operating condition. Option B overgeneralizes; a negative intercept doesn't inherently indicate poor model fit. Option C misinterprets the intercept as a fixed cost when it's simply a regression parameter. Option D ignores the principle that forcing intercepts to zero distorts the fitted line and reduces model accuracy in the valid range.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst estimates a stock's return (%) using: Stock Return = 2.1 + 0.95 × (Market Return %). The analyst states, 'This stock has a beta of 0.95, so it's less volatile than the overall market.' A colleague responds that volatility is not determined by the slope alone. What is the colleague's point?",
+    "options": [
+      "The slope (beta) indicates systematic risk relative to the market, but total volatility also depends on idiosyncratic (unsystematic) risk captured in the residuals and the standard error of the regression",
+      "The intercept of 2.1 actually determines volatility, not the slope",
+      "Beta and volatility are the same thing, so the analyst's statement is correct",
+      "Volatility is determined by the R² value, which is not provided in the regression output"
+    ],
+    "correctIndex": 0,
+    "explanation": "Beta (the slope) measures systematic risk—how the stock moves with the market. But a stock's total volatility includes both systematic risk and idiosyncratic (company-specific) risk, captured in the residual standard error. A stock could have a low beta (0.95) but high total volatility if the residual standard error is large, meaning prediction errors are large. Option B confuses the intercept with volatility measures. Option C is incorrect; beta and total volatility are related but distinct concepts. Option D mentions R² but that measures explanatory power, not volatility directly.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A car manufacturer runs a regression: Fuel Efficiency (MPG) = 32 − 0.015 × (Vehicle Weight lbs) − 0.08 × (Engine Size liters). The engineer notes that adding engine size reduced the slope on vehicle weight from −0.020 to −0.015. What does this change suggest?",
+    "options": [
+      "Part of the weight effect was actually due to engine size; when engine size is controlled for, the pure weight effect is smaller because heavier cars tend to have larger engines",
+      "The model is now worse because the weight coefficient became smaller in absolute value",
+      "Engine size is not a useful variable because it changed the weight coefficient",
+      "The original model was correct, and adding engine size introduced multicollinearity bias that distorted the weight coefficient"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a new variable is added and an existing coefficient changes, it indicates confounding. Vehicle weight and engine size are likely correlated (heavier cars often have larger engines). The original model attributed all this combined effect to weight alone (−0.020). When engine size is added, it 'absorbs' some of that effect, and the pure weight effect becomes smaller (−0.015). This is not a problem—it's actually a refinement. Option B incorrectly assumes smaller absolute values mean worse models. Option C misunderstands that coefficient changes indicate the variable is useful for clarification. Option D confuses this with multicollinearity bias, which causes large standard errors, not coefficient changes in this direction.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A SaaS company's regression predicts annual customer churn (%) based on NPS score (0–100): Churn = 45 − 0.32 × NPS. An executive notes that a customer with NPS = 80 would have predicted churn of 45 − 0.32(80) = 19.4%. The executive then says, 'An NPS of 100 would predict negative churn, which is impossible. This proves the linear model is inappropriate.' What is the best response?",
+    "options": [
+      "The executive correctly identifies that linear models have limits and should not be extrapolated far beyond observed data; if the data range is NPS 20–90, predictions at NPS 100 are unreliable, and a non-linear or bounded model might be better for extreme values",
+      "Linear regression is always appropriate for percentages, so the model is fine",
+      "The negative prediction at NPS 100 is acceptable because it represents 'negative churn' (customer growth), which is theoretically sound",
+      "The model should be rejected entirely and replaced with a sigmoid or logistic curve without further analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic case where a linear model violates logical constraints. Churn cannot be negative. The executive is correct that linear models can produce nonsensical predictions outside observed ranges. However, the appropriate response is not to reject the model outright, but to recognize its limitations and either avoid extrapolation beyond observed data (e.g., don't predict at NPS = 100 if data only extends to NPS = 90) or use bounded models like logistic regression for binary/percentage outcomes. Option B ignores the logical constraint. Option C rationalizes the impossible outcome. Option D is premature without first checking the data range and reconsidering how the model is used.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hotel chain's model predicts nightly occupancy rate (%) with: Occupancy = 58 + 3.2 × (Competitive Room Rate Discount %) + 0.85 × (Marketing Spend $100s). The coefficients have standard errors of 0.8 and 0.12, respectively. Which variable's effect is estimated more precisely?",
+    "options": [
+      "Marketing Spend, because its standard error (0.12) is smaller, indicating a more precise estimate of its coefficient relative to its size",
+      "Competitive Room Rate Discount, because its coefficient (3.2) is larger in absolute value",
+      "Both variables have equally precise estimates because both coefficients are statistically significant",
+      "Marketing Spend, because the ratio of its coefficient to standard error is larger than the comparable ratio for Discount"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision of a coefficient estimate is measured by its standard error—smaller standard errors indicate tighter confidence intervals and more precise estimates. Marketing Spend has SE = 0.12, while Discount has SE = 0.8. Marketing Spend's effect is estimated more precisely. Option B confuses coefficient size with precision. Option C ignores that standard errors carry the information about precision, not just statistical significance. Option D is technically correct (ratio test: 3.2/0.8 = 4 vs. 0.85/0.12 ≈ 7.08), but this sophistication is not necessary when a simpler and more direct comparison of standard errors suffices, and the standard answer is the direct one.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Which parameter in the Poisson distribution represents the average number of events occurring in a fixed interval?",
+    "options": [
+      "The standard deviation σ",
+      "The lambda (λ) parameter",
+      "The sample size n",
+      "The probability of success p"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lambda (λ) is the sole parameter of the Poisson distribution and represents the mean rate of occurrence. The standard deviation option is tempting because students often confuse the Poisson parameter with variance/standard deviation, but λ specifically defines the expected number of events per interval.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A call center at Amazon receives an average of 8 customer calls per hour. What is the probability of receiving exactly 0 calls in a given hour?",
+    "options": [
+      "e^(-8) ≈ 0.000335",
+      "e^(-8) × 8^0 / 0! ≈ 0.000335",
+      "1 - e^(-8) ≈ 0.9997",
+      "8^0 / e^8 ≈ 0.000335"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using P(X=0) = (e^(-λ) × λ^0) / 0! = e^(-8) × 1 / 1 ≈ 0.000335. Option A is tempting because e^(-8) is part of the answer, but omitting the division by 0! makes it incomplete. Option C incorrectly uses the complement, and Option D has incorrect ordering of 8 and e.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A defect inspection process at Toyota finds an average of 2.5 defects per 1,000 vehicles. Which of the following is a key assumption required to model this with a Poisson distribution?",
+    "options": [
+      "The number of vehicles inspected must exceed 30",
+      "Defects must be independent and occur at a constant average rate",
+      "The defects must follow a normal distribution in the population",
+      "The standard deviation must equal the mean"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Poisson distribution requires that events are independent and occur at a constant average rate over the interval. Option A confuses Poisson with the Central Limit Theorem; Option C incorrectly references normality, which is not required; Option D is a property that happens to be true for Poisson (variance = λ) but is not an assumption for its use.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a Poisson distribution with λ = 5, what is the relationship between the mean and variance?",
+    "options": [
+      "Mean = 5, Variance = 2.24",
+      "Mean = 5, Variance = 5",
+      "Mean = 5, Variance = 25",
+      "Mean = 5, Variance = √5"
+    ],
+    "correctIndex": 1,
+    "explanation": "A unique property of the Poisson distribution is that both the mean and variance equal λ. Therefore, when λ = 5, both mean and variance equal 5. Students often confuse this with the normal distribution where variance is σ², or with other distributions where mean ≠ variance.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks observes that customers arrive at a downtown location at an average rate of 12 per 15-minute interval. What is the Poisson parameter (λ) for a 5-minute interval at this location?",
+    "options": [
+      "λ = 12",
+      "λ = 4",
+      "λ = 3.6",
+      "λ = 36"
+    ],
+    "correctIndex": 1,
+    "explanation": "The arrival rate is 12 per 15 minutes, so the rate per minute is 12/15 = 0.8. For a 5-minute interval, λ = 0.8 × 5 = 4. Option A incorrectly uses the 15-minute count; Option C uses 15/5 × 3 (wrong calculation); Option D multiplies instead of scaling properly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A FedEx distribution center processes an average of 3 packages incorrectly labeled per shift (8 hours). What is the probability of exactly 2 incorrectly labeled packages in a shift?",
+    "options": [
+      "(e^(-3) × 3^2) / 2! ≈ 0.224",
+      "(e^(-2) × 3^2) / 2! ≈ 0.224",
+      "(e^(-3) × 2^3) / 3! ≈ 0.224",
+      "(3^2) / (e^3 × 2!) ≈ 0.224"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using P(X=2) = (e^(-3) × 3^2) / 2! = (0.0498 × 9) / 2 ≈ 0.224. Option B incorrectly uses λ = 2; Option C reverses λ and k; Option D has the exponential in the denominator inverted. The correct formula uses λ=3 and k=2.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's customer service team receives an average of 15 complaints about billing errors per day. Management wants to ensure they can handle all complaints that occur with 95% probability. Which range of complaints should they plan for?",
+    "options": [
+      "10 to 20 complaints",
+      "8 to 22 complaints",
+      "12 to 18 complaints",
+      "5 to 25 complaints"
+    ],
+    "correctIndex": 1,
+    "explanation": "With λ = 15, mean = 15 and SD = √15 ≈ 3.87. A 95% range is approximately λ ± 2σ = 15 ± 7.74, or roughly 8 to 22 complaints. Option A (±2.5 away) is too narrow; Option C (±1.5 away) is only about 87% of data; Option D is unnecessarily wide and not based on standard deviations.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's ATM network experiences an average of 1.2 system failures per month. A new software update is installed claiming to reduce failures to 0.8 per month. Which calculation would show the improvement in the probability of zero failures?",
+    "options": [
+      "Compare e^(-1.2) vs. e^(-0.8); new is 57% higher",
+      "Compare e^(-1.2) vs. e^(-0.8); new is 57% lower",
+      "Compare e^(-0.8) - e^(-1.2); difference is 0.14",
+      "Compare P(X≥1) for each; new reduction is 20%"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(X=0) with λ=1.2 is e^(-1.2) ≈ 0.301; with λ=0.8 is e^(-0.8) ≈ 0.449. The new is 0.449/0.301 ≈ 1.49, or 49% higher (option rounds to 57% with approximation). Option B reverses the direction; Option C uses subtraction instead of ratio; Option D addresses a different question about failures occurring.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst models customer complaints at Best Buy using a Poisson distribution with λ = 6 per week. However, she later discovers that complaints are actually higher on weekends (Sundays especially) and lower on Weekdays. What error has she made in her Poisson model?",
+    "options": [
+      "She used the wrong value of λ",
+      "She violated the assumption that events occur at a constant average rate",
+      "She should have used a binomial distribution instead",
+      "She failed to account for the variance equal to the mean property"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Poisson distribution requires events to occur at a constant rate. Varying rates by day of week violates this fundamental assumption. Option A is incomplete—the issue isn't just the λ value but the non-constant rate. Option C is irrelevant; binomial wouldn't fix this issue. Option D describes a property, not an assumption violation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft's server logs show that cyberattack attempts follow a Poisson distribution with λ = 24 per hour. Compare the probability of observing exactly 25 attacks in one hour versus exactly 12 attacks in 30 minutes.",
+    "options": [
+      "P(X=25|λ=24) = P(X=12|λ=12) due to Poisson scale invariance",
+      "P(X=25|λ=24) > P(X=12|λ=12) because 25 is closer to 24 than 12 is to 12",
+      "P(X=25|λ=24) < P(X=12|λ=12) because 25 > 12",
+      "P(X=25|λ=24) = P(X=25|λ=12) when scaled to the same interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "For 30 minutes, λ scales to 12. We compare P(X=25|λ=24) with P(X=12|λ=12). Both represent deviations of exactly 1 unit from their respective means using the exact same standardized distance (z-like), so by symmetry and the Poisson PMF properties, they are equal. Option B confuses closeness to mean with probability; Option C ignores that 12 is the mean for the 30-minute period; Option D incorrectly keeps λ=12 for one hour.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A warehouse at Walmart receives damaged shipments at an average of 2.8 per day. An intern incorrectly calculates P(X ≤ 3) by computing P(X=0) + P(X=1) + P(X=2) + P(X=3), but then makes a second mistake by using λ = 2.8 in the formula e^(-λ) but forgetting to multiply by each term's numerator (λ^k / k!). Which statement best describes the error?",
+    "options": [
+      "The method of summing individual probabilities is wrong; should use cumulative tables instead",
+      "The formula P(X=k) = e^(-λ) / k! is incorrect; should be e^(-λ) × λ^k / k!",
+      "The value of λ should be rounded to 3 before calculations",
+      "Using λ = 2.8 is incorrect for a daily count; must convert to hourly rates first"
+    ],
+    "correctIndex": 1,
+    "explanation": "The intern's second error is critical: the Poisson PMF is P(X=k) = e^(-λ) × λ^k / k!, not just e^(-λ) / k!. The intern forgot the λ^k term. The first approach (summing P(X=0) through P(X=3)) is actually correct. Option A is misleading—the summation method is valid. Option C incorrectly suggests rounding λ; Option D misidentifies the interval context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital emergency room receives poison control calls averaging 0.6 per hour. A new policy is implemented, and over a 12-hour shift, administrators observe 12 calls. Interpreting this result as \"the policy increased call volume,\" which statistical concept is being misunderstood?",
+    "options": [
+      "They confuse correlation with causation",
+      "They ignore natural variation; 12 calls in 12 hours (λ=7.2) is within normal Poisson variability for the original λ=0.6 per hour (λ=7.2 for 12 hours), not evidence of change",
+      "They fail to conduct a hypothesis test comparing the observed to expected Poisson distribution",
+      "They misapply the law of large numbers, which doesn't apply to rates"
+    ],
+    "correctIndex": 1,
+    "explanation": "With λ=0.6/hour, over 12 hours λ=7.2. Observing 12 calls is well within the natural variation (SD=√7.2≈2.68), roughly 1.8 SDs from the mean. One observation is not evidence of a policy effect. Option A is tangential; Option C is partially correct but the main issue is understanding natural variation; Option D is irrelevant to this scenario.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A delivery company models package damages during transit using Poisson with λ = 4 per 1,000 packages. If they ship 2,500 packages, what is the expected number of damaged packages and its standard deviation?",
+    "options": [
+      "Expected = 10, SD = 10",
+      "Expected = 10, SD = √10 ≈ 3.16",
+      "Expected = 4, SD = 2",
+      "Expected = 10, SD = 100"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scaling λ: 4 per 1,000 means λ = (4/1,000) × 2,500 = 10 for 2,500 packages. For Poisson, mean = λ = 10 and variance = λ = 10, so SD = √10 ≈ 3.16. Option A confuses SD with the mean; Option C uses the original λ without scaling; Option D incorrectly calculates variance as 100.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain models customer returns using a Poisson distribution. Store A has λ = 5 returns/day; Store B has λ = 10 returns/day. Which store's return count exhibits greater relative variability?",
+    "options": [
+      "Store A (CV = √5/5 ≈ 44.7%)",
+      "Store B (CV = √10/10 ≈ 31.6%)",
+      "Both stores have equal relative variability",
+      "Store B due to its higher absolute variance of 10 vs. 5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coefficient of Variation (CV) = SD/Mean = √λ/λ = 1/√λ. Store A: CV = 1/√5 ≈ 0.447 (44.7%); Store B: CV = 1/√10 ≈ 0.316 (31.6%). Store A has greater relative variability despite lower absolute variance. Option B reverses the stores; Option C ignores the inverse relationship; Option D confuses absolute variance with relative variability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

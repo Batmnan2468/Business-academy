@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Tesla, analysts want to forecast Q3 2024 vehicle deliveries based on historical production data. This is primarily an example of which analytics goal?",
+    "options": [
+      "Prediction",
+      "Explanation",
+      "Causal inference",
+      "Hypothesis testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prediction focuses on estimating future outcomes (Q3 deliveries) using patterns in past data. Explanation would instead seek to understand *why* deliveries fluctuate—e.g., the causal effect of price changes or marketing spend. The tempting wrong answer 'Causal inference' is related to explanation, not prediction; causal inference requires special methods to isolate one variable's effect, whereas prediction just needs accuracy.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Coca-Cola builds a model that predicts customer churn with 92% accuracy but cannot explain which features drive the predictions. Which statement best describes this model's limitation?",
+    "options": [
+      "It excels at prediction but fails at explanation",
+      "It is not useful because accuracy does not guarantee business value",
+      "It proves that prediction and explanation are identical goals",
+      "It will never improve without causal methods"
+    ],
+    "correctIndex": 0,
+    "explanation": "The model achieves high prediction accuracy but offers no interpretability—a classic trade-off. 'It excels at prediction but fails at explanation' correctly identifies this. The tempting wrong answer 'It is not useful because accuracy does not guarantee business value' confuses utility with the prediction-explanation distinction; a 92% accurate churn predictor *is* useful for targeting retention campaigns, even if we don't know why.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the primary goal when a pharmaceutical company analyzes trial data to understand *how* a drug reduces blood pressure by 15 mmHg?",
+    "options": [
+      "Explanation",
+      "Prediction",
+      "Optimization",
+      "Validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Understanding the mechanism (how the drug works) is explanation. Prediction would focus on forecasting outcomes in new patients; explanation seeks causal understanding of the relationship between the drug and blood pressure reduction. 'Prediction' is the most tempting wrong answer because drug trials do involve predicting effects, but the question explicitly asks about understanding *how*—the hallmark of explanation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain uses past sales data to predict next month's revenue with a machine learning model. What is NOT a typical concern for this prediction model?",
+    "options": [
+      "Whether the model's predictions are interpretable to store managers",
+      "Whether the model's accuracy is high enough for inventory planning",
+      "Whether future market conditions differ from the training data",
+      "Whether the model can run in production systems quickly"
+    ],
+    "correctIndex": 0,
+    "explanation": "For prediction, interpretability is often secondary—if the model forecasts revenue accurately and runs fast, it serves its purpose. In contrast, explanatory models prioritize interpretability. The tempting wrong answer 'Whether the model's predictions are interpretable to store managers' seems relevant, but prediction models can be 'black boxes'; managers just need accurate forecasts, not feature explanations. The other three options are all legitimate prediction concerns.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An e-commerce company measures that a 10% discount increases next-week sales by 23%. This measurement is best described as:",
+    "options": [
+      "An explanatory inference, not a prediction",
+      "A prediction, not an explanation",
+      "Both a prediction and an explanation",
+      "Neither, because it only covers one week"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is an explanatory inference: the company quantifies the causal effect of discounts on sales (why sales change). It explains the relationship between two variables. It is not a prediction of future sales in the usual sense. 'A prediction, not an explanation' is tempting because the statement involves forecasting outcomes, but the emphasis is on understanding the *causal relationship*, which is explanation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "JPMorgan Chase builds a logistic regression model to predict loan defaults with coefficients showing that a 1% increase in debt-to-income ratio increases default probability by 2.1%. Which analytics goal is this model primarily serving?",
+    "options": [
+      "Both prediction and explanation equally",
+      "Prediction only; the coefficients are incidental",
+      "Explanation only; logistic regression cannot predict",
+      "Neither; coefficients are always correlation, not causation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logistic regression serves both goals: it predicts default risk *and* provides interpretable coefficients that explain the relationship between debt-to-income and default. This is a rare advantage of simple models. 'Prediction only' (option B) is tempting because the primary use is forecasting defaults, but the coefficients offer genuine explanatory insight. 'Explanation only' ignores the model's predictive capability.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A coffee chain observes that stores in neighborhoods with income >$85,000 have 34% higher average transactions. A manager concludes that high-income customers prefer the brand more. What is the flaw in this reasoning?",
+    "options": [
+      "Correlation between income and transactions does not prove causation; high-income areas may have more foot traffic or premium store locations",
+      "The sample size is too small to make a prediction",
+      "34% is not high enough to be statistically significant",
+      "Income is a categorical variable and should not be used in this analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic confusion between correlation and causation. The observed pattern (higher income → higher transactions) could be explained by confounding variables: high-income areas may have more pedestrian traffic, better locations, or higher pricing that inflates transaction value. The manager assumes a causal explanation (brand preference) without evidence. The other options are distractors that misidentify the real issue.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix uses past viewing data to forecast that a user will watch 6.2 hours of content in the next week. Separately, Netflix A/B tests a recommendation algorithm and finds it increases watch time by 1.8 hours per user. Which statement is most accurate?",
+    "options": [
+      "The first is prediction; the second is explanation of the algorithm's causal effect",
+      "Both are predictions because they involve future outcomes",
+      "Both are explanations because they both use historical data",
+      "The first is explanation; the second is prediction because it varies one variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 6.2-hour forecast is pure prediction—estimating an outcome without understanding drivers. The A/B test estimates a *causal effect*: how the algorithm changes behavior, which is explanation. 'Both are predictions' (option B) is tempting because both involve future outcomes, but the A/B test isolates causation through randomization, making it explanatory. The test does not merely forecast; it explains *why* watch time increases.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's credit risk team builds a random forest model that predicts loan defaults with 88% accuracy but cannot explain which factors most influence each prediction. The team wants to use it for loan approval decisions. What is the primary concern?",
+    "options": [
+      "The model may be defensible under fair lending laws, but the inability to explain individual predictions risks regulatory and reputational damage",
+      "The 88% accuracy is too low for any real-world use",
+      "Random forests are inherently worse than logistic regression for prediction",
+      "The model cannot be improved because it is already trained"
+    ],
+    "correctIndex": 0,
+    "explanation": "High accuracy does not solve the explanation problem in lending: regulators and applicants may legally demand explanations for denial decisions. Explainability is both a regulatory (Fair Lending Act) and ethical requirement. 'The 88% accuracy is too low' (option B) is tempting but misleading—88% is reasonable for defaults; the real issue is regulatory compliance, not accuracy. The other options confuse unrelated issues.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An insurance company uses a time-series model to forecast claim volumes for Q4 2024, predicting 47,500 claims. A separate study estimates that recent policy price increases of 8% *caused* a 3.2% reduction in claim volumes. To forecast Q4 claims accounting for the planned 5% price increase, the company should:",
+    "options": [
+      "Use the time-series prediction as the baseline and adjust downward by 2% (proportional to the 5% vs. 8% price ratio)",
+      "Ignore the price-effect study and rely on the time-series model alone",
+      "Multiply 47,500 by the causal elasticity (−3.2% / 8% = −0.4 per 1% price increase), then adjust for the 5% increase",
+      "Replace the time-series model entirely with the causal study because explanation is more accurate than prediction"
+    ],
+    "correctIndex": 2,
+    "explanation": "The elasticity approach (−0.4% per 1% price increase) translates the causal finding into a multiplicative adjustment: 47,500 × (1 − 0.004 × 5) ≈ 46,550. This combines prediction (baseline) with explanation (causal effect). Option A is tempting but assumes a linear proportional adjustment unsupported by the data; option B ignores useful causal information; option D wrongly suggests explanation replaces prediction.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A medical device company observes that hospital adoption of its device increased from 12% to 28% after it published a clinical trial showing a 15% improvement in patient outcomes. Which interpretation is most defensible?",
+    "options": [
+      "The trial explains the mechanism and offers evidence of causation; adoption may have risen due to the publication, but adoption is not the same as the causal effect measured in the trial",
+      "The 15% improvement proves the trial caused the adoption increase",
+      "Adoption is the best measure of whether the causal effect is real",
+      "The publication is a confounder and should be excluded from analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The trial is an explanatory study measuring a causal effect (device → outcomes). The adoption increase is a separate business outcome, possibly influenced by the publication but not identical to the measured effect. Option B conflates correlation (adoption rose after publication) with the trial's causal finding. Option C inverts logic: adoption is a business consequence, not validation of the clinical effect. Option D misuses 'confounder'—publication is not a confounder of the device's efficacy.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A ride-sharing company's data scientist builds Model A (prediction: 91% accuracy in forecasting demand) and Model B (explanation: identifies that surge pricing increases demand by 8.3% per 1% price rise). The company must choose one for real-time pricing. Which trade-off is most accurately described?",
+    "options": [
+      "Model A optimizes for accuracy but may miss dynamic relationships; Model B explains mechanism but may sacrifice raw prediction accuracy if the explanatory model is simpler",
+      "Model A is better because prediction always beats explanation",
+      "Model B is better because understanding causation guarantees better predictions",
+      "Both models serve identical purposes so the choice does not matter"
+    ],
+    "correctIndex": 0,
+    "explanation": "This describes a genuine trade-off: black-box models often achieve higher raw accuracy, while interpretable models sacrifice some accuracy for explainability. For pricing, either could work, but Model B provides strategic insight into customer behavior. 'Prediction always beats explanation' (option B) ignores that explainability enables better decision-making. 'Understanding causation guarantees better predictions' (option C) is false—causal models can be less accurate. They serve different but complementary roles.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retailer tests two store layouts (A and B) and finds that Layout B increases average transaction value by $18.47 (p < 0.01). The analyst then uses historical data to predict that next month's revenue will be $2.34 million. Which statement is correct?",
+    "options": [
+      "The layout test provides explanation (causal effect); the revenue forecast is prediction. Both are valuable but answer different questions.",
+      "Both are explanations because both use empirical data",
+      "The layout test is prediction; the revenue forecast is explanation because it uses more data",
+      "The layout test is invalid because explanation requires prediction first"
+    ],
+    "correctIndex": 0,
+    "explanation": "The A/B test measures causation (Layout B's effect on sales), which is explanation. The revenue forecast estimates a future aggregate, which is prediction. They serve different purposes: the test guides store design; the forecast guides inventory and staffing. Option B incorrectly treats all empirical analysis as explanatory. Option C reverses the categories. Option D falsely claims explanation depends on prediction.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An airline analyst notes that bookings dropped 22% after a competitor announced a $89 round-trip fare versus the airline's $156 fare. The analyst builds a model showing that a competitor's price decrease of $X causes a −0.18% change in the airline's bookings for every $1 decrease. If the competitor drops prices by an additional $22 next month, what should the airline expect?",
+    "options": [
+      "A 3.96% decline in bookings (−0.18% × 22)",
+      "A 22% decline, consistent with the historical observation",
+      "An unknown decline because the elasticity may change at different price levels",
+      "No change because elasticity is constant"
+    ],
+    "correctIndex": 0,
+    "explanation": "Applying the estimated elasticity: −0.18% × $22 = −3.96% decline. This is a direct causal calculation assuming the elasticity holds in the relevant range. Option B misapplies the historical 22% drop, which combined multiple factors (initial gap was $67). Option C introduces unnecessary doubt about elasticity stability. Option D is logically incoherent (constant elasticity does imply change).",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A SaaS company uses a predictive churn model (89% accuracy) and a separate causal study (churn decreases 2.1% per 1% increase in product feature adoption). The company wants to reduce churn from 8.3% to 5.0%. Which approach is most appropriate?",
+    "options": [
+      "Use the causal study to estimate required adoption increase (≈1.57%), then validate with the predictive model on new data",
+      "Rely on the predictive model alone because it has higher accuracy",
+      "Ignore both; causation and prediction cannot jointly inform strategy",
+      "Use only the causal study; predictive models are never reliable for strategy"
+    ],
+    "correctIndex": 0,
+    "explanation": "The causal study reveals the lever (adoption); inverse calculation: (8.3% − 5.0%) / 2.1% ≈ 1.57% adoption increase needed. Then validate with predictions to ensure feasibility. This combines explanation (which driver works) with prediction (will it succeed?). Option B ignores valuable causal insight. Options C and D falsely pit explanation and prediction as mutually exclusive.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

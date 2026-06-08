@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a spreadsheet containing customer data for Amazon, a column labeled 'Purchase_Amount_USD' represents what type of analytical concept?",
+    "options": [
+      "A variable that measures the monetary value of each transaction",
+      "A row that describes individual customers",
+      "A record that stores all customer information",
+      "A table that organizes customers by region"
+    ],
+    "correctIndex": 0,
+    "explanation": "A column represents a variable—a characteristic or attribute measured across observations. 'Purchase_Amount_USD' measures a specific attribute (dollar value) for each transaction. The most tempting wrong answer is 'row' because rows do contain individual records, but a single column is not itself a row; it's one variable across many rows.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a database table at McDonald's tracking 50,000 daily transactions, which of the following best describes what a single row represents?",
+    "options": [
+      "One complete transaction record with date, time, location, items purchased, and payment method",
+      "All transactions across all McDonald's locations on a single day",
+      "The column header names that define what data is stored",
+      "A summary statistic of average daily sales"
+    ],
+    "correctIndex": 0,
+    "explanation": "A row represents one observation or record—in this case, one individual transaction with all its associated attributes. The tempting wrong answer 'all transactions across all locations on a single day' confuses a row with an aggregated subset of rows; a single row captures only one transaction's details.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A database table at Microsoft contains 10,000 rows and 25 columns. How many individual data cells does this table contain?",
+    "options": [
+      "250,000",
+      "10,025",
+      "250",
+      "100,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "The total number of cells equals rows × columns: 10,000 × 25 = 250,000. The most tempting distractor is 100,000, which would result from multiplying 10,000 by only 10, a common error when misreading the column count.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a Netflix subscriber dataset with 200 million rows representing individual users, which of the following is a variable rather than a record?",
+    "options": [
+      "Subscription_Start_Date",
+      "A single Netflix user's complete profile including name, email, plan type, and join date",
+      "All data belonging to subscribers in California",
+      "A row number assigned sequentially from 1 to 200,000,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "'Subscription_Start_Date' is a variable—a single attribute or characteristic measured for each user. A record is the complete collection of all variables for one observation (option B). Option B confuses what a record is by describing it as a complete profile, which is actually a full record with multiple variables, not a single variable.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a table structure at Walmart containing 500,000 stores' weekly sales data, what does a column represent?",
+    "options": [
+      "A single variable or attribute measured consistently across all stores",
+      "The data for one specific Walmart store across all weeks",
+      "The sum of all sales figures in the dataset",
+      "A header row that names all the stores"
+    ],
+    "correctIndex": 0,
+    "explanation": "A column represents a variable—one consistent attribute (e.g., 'Weekly_Sales_USD') measured across all observations (stores). Option B incorrectly describes a row, and the most tempting wrong answer conflates rows with columns by suggesting a column contains data for one store.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Target, the database team has 350,000 customer purchase records. Each record contains 18 variables including Customer_ID, Purchase_Date, Total_Spent_USD, and Item_Category. An analyst notices that 2,500 records have missing values in the Loyalty_Program_Status variable. What is the percentage of incomplete records?",
+    "options": [
+      "Approximately 0.71%",
+      "Approximately 2.5%",
+      "Approximately 7.1%",
+      "Approximately 14.3%"
+    ],
+    "correctIndex": 0,
+    "explanation": "2,500 ÷ 350,000 = 0.00714 = 0.714%, which rounds to 0.71%. The most tempting wrong answer (2.5%) comes from misinterpreting the 2,500 as a percentage directly, rather than calculating the proportion correctly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Starbucks, you're working with a table containing 8 million daily transactions. Each row includes Timestamp, Store_Location, Item_Name, Price_USD, Payment_Method, and Customer_Loyalty_Member (yes/no). The company wants to calculate the average transaction value for loyal members only. To accomplish this task, which concept is most critical to understand?",
+    "options": [
+      "How to filter rows based on a specific variable value, then calculate the mean of another variable",
+      "How to count the total number of columns in the table",
+      "How to rename columns to improve readability",
+      "How to create a new row that sums all transaction prices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Filtering data based on variable values and then aggregating is a core analytical operation. You must select (filter) rows where 'Customer_Loyalty_Member' = 'yes', then compute the mean of the 'Price_USD' variable. The most tempting distractor (option B) seems like a foundational question but is less relevant to solving the analytical problem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Spotify, an analyst receives a table with 500,000 monthly user records. Columns include User_ID, Subscription_Tier, Monthly_Spend_USD, Total_Hours_Listened, and Country. The analyst needs to find the average monthly spend for users in Canada (Country = 'Canada') whose subscription tier is 'Premium'. Assuming 45,000 Canadian Premium users exist, what is the proper analytical approach?",
+    "options": [
+      "Filter for rows where Country = 'Canada' AND Subscription_Tier = 'Premium', then calculate the mean of Monthly_Spend_USD",
+      "Sum all Monthly_Spend_USD values in the entire table, then divide by 45,000",
+      "Create a new variable that multiplies Country by Subscription_Tier",
+      "Count the number of 'Premium' rows and subtract the count of 'Canada' rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct approach requires filtering on two conditions simultaneously (Country AND Subscription_Tier), then calculating the mean of the spending variable for that filtered subset. Option B is tempting because it uses the known count of 45,000 users, but without filtering first, the sum includes all users, not just Canadian Premium subscribers.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a Salesforce CRM table at IBM with 15,000 sales opportunities, one column is 'Probability_of_Win_Percent' (values range 0–100). An analyst incorrectly treats this as a variable that has been aggregated (summed) across all rows, then divides the total by 15,000 to get an 'average win probability.' Is this approach correct, and why or why not?",
+    "options": [
+      "Yes, this is correct; it calculates the mean probability across all opportunities",
+      "No, because probability percentages should never be averaged",
+      "No, because the column header contains the word 'Percent'",
+      "Yes, only if all 15,000 opportunities have non-zero values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Averaging individual probability estimates is a valid statistical operation. The mean of 15 probabilities (e.g., 30%, 50%, 70%) is indeed (30+50+70)/3 = 50%, a meaningful average probability. The most tempting wrong answer (option B) incorrectly suggests that probabilities cannot be averaged, which is a common misconception; probabilities can and should be averaged for aggregation.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At GE, a manufacturing database contains 2 million equipment maintenance records. Each record has columns for Equipment_ID, Maintenance_Date, Technician_Name, Cost_USD, and Hours_Spent. An analyst wants to compare average maintenance costs between two technicians: Sarah (12,000 records) and Mike (15,000 records). The analyst calculates: Sarah's total costs ÷ 12,000 and Mike's total costs ÷ 15,000. Is this a valid comparison?",
+    "options": [
+      "Yes, this directly compares the average cost per maintenance job for each technician",
+      "No, because the technicians have performed different numbers of maintenance jobs",
+      "No, because the dataset contains 2 million total records",
+      "Yes, only if Sarah's and Mike's total costs are exactly equal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Computing the mean for each group independently (total cost ÷ count for each technician) produces a valid, fair comparison even though the group sizes differ. The analyst is correctly normalizing by each technician's record count. The most tempting wrong answer (option B) incorrectly assumes unequal group sizes make the comparison invalid; in fact, dividing by the respective counts is exactly how to account for different sample sizes.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare company maintaining 8 million patient records in a database uses the following structure: PatientID (column 1), Age (column 2), Diagnosis (column 3), Treatment_Cost_USD (column 4), and Insurance_Provider (column 5). An analyst misidentifies the data structure by claiming that 'Insurance_Provider' is not a variable but rather a summary column used to group records. Why is this claim incorrect?",
+    "options": [
+      "Insurance_Provider is indeed a variable because it is a column that captures an attribute value for each patient record, regardless of whether grouping is done later",
+      "The claim is correct; summary columns cannot be variables",
+      "Insurance_Provider would only be a variable if it contained numerical values",
+      "The claim is incorrect only because there are 5 columns, not 4"
+    ],
+    "correctIndex": 0,
+    "explanation": "A variable is defined by its role in the table structure (a column capturing an attribute), not by whether it is later used for grouping or aggregation. 'Insurance_Provider' is a column, hence a variable. The most tempting wrong answer (option B) incorrectly conflates the eventual analytical use (grouping) with the fundamental definition of what constitutes a variable in the table structure.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Toyota, a production database tracks 50,000 vehicles manufactured last year. Each vehicle record includes Manufacturing_Date, Assembly_Line, Vehicle_ID, Engine_Type, and Defect_Count. An engineer claims: 'Engine_Type is a row, not a variable, because different engines (V6, V8, Electric) represent different categories of vehicles.' What is the logical flaw in this reasoning?",
+    "options": [
+      "Engine_Type is a column that stores attribute values for each vehicle, making it a variable; the fact that it has categories does not make it a row",
+      "The engineer is correct; categorical variables should not be stored as columns",
+      "Engine_Type cannot be both a variable and have multiple categories",
+      "The statement is false because Engine_Type should be split into multiple columns instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rows represent observations (vehicles); columns represent variables (attributes). 'Engine_Type' is a column capturing an attribute for each vehicle, thus a variable. Categorical variables with multiple categories (V6, V8, Electric) are still variables stored in single columns. The most tempting wrong answer (option B) incorrectly suggests categorical variables should not be in columns, a common misconception that confuses data structure with data type.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Amazon, an e-commerce database contains 120 million customer orders. Columns include Order_ID, Customer_ID, Order_Date, Product_Category, Quantity, and Revenue_USD. An analyst creates a summary table with the following structure: Summary_Date, Category_Name, Total_Revenue_USD, and Average_Order_Value_USD. How does this summary table's structure differ fundamentally from the original operational table, and what is lost in the transformation?",
+    "options": [
+      "The summary table aggregates multiple rows into single summary rows, losing row-level detail about individual orders but gaining easier trend analysis by date and category",
+      "The summary table is identical in structure; only the number of rows changes",
+      "The summary table replaces columns with rows, so individual variables can no longer be analyzed",
+      "The summary table loses all column information and can only show totals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aggregating data from 120 million order rows into a summary table reduces the number of rows dramatically (one row per date-category combination) by combining multiple records. This trade-off improves analytical clarity for trends but eliminates the ability to analyze individual customer orders. The most tempting wrong answer (option B) misses the critical point that aggregation fundamentally changes the granularity and loses detail.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Delta Airlines, a flight operations table contains 500,000 flight records with columns for FlightID, Departure_Time, Arrival_Time, Aircraft_Type, Fuel_Consumed_Gallons, and On_Time_Delivery (yes/no). A manager observes that the average Fuel_Consumed_Gallons varies significantly across Aircraft_Type. The manager concludes: 'The Aircraft_Type variable causes differences in fuel consumption.' What is problematic about this conclusion?",
+    "options": [
+      "Observing a correlation between two variables (Aircraft_Type and Fuel_Consumed) does not establish causation; fuel consumption is determined by engine design, distance, and load, not the variable name itself",
+      "The conclusion is valid because Aircraft_Type is shown in the table",
+      "The problem is that we cannot calculate averages on categorical variables",
+      "The conclusion would be correct only if all aircraft types had exactly equal fuel consumption"
+    ],
+    "correctIndex": 0,
+    "explanation": "Observing that different aircraft types have different average fuel consumption reflects the reality that different aircraft designs consume fuel differently—but the Aircraft_Type variable (column) does not 'cause' the variation; rather, the physical aircraft design does. The most tempting wrong answer (option B) confuses the presence of a variable in a table with its causal role, a fundamental error in data interpretation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At JPMorgan Chase, a credit card database contains 45 million customer accounts with columns for Account_ID, Card_Holder_Age, Credit_Limit_USD, Monthly_Balance_USD, Fraud_Flag (yes/no), and Days_Since_Last_Payment. An analyst filters the table to 2.8 million records where Fraud_Flag = 'yes' and calculates the average Monthly_Balance_USD = $3,247. The analyst then claims: 'On average, fraudulent accounts carry a balance of $3,247.' What is the risk of this interpretation?",
+    "options": [
+      "The average is correct for the filtered subset, but extrapolating to describe all fraudulent accounts risks selection bias if the 2.8 million records do not represent all account types or time periods equally",
+      "The interpretation is entirely valid because 2.8 million is a large sample size",
+      "The average is wrong because it should include non-fraudulent accounts",
+      "The risk is only that the dollar amount might be outdated by next month"
+    ],
+    "correctIndex": 0,
+    "explanation": "While the calculated mean ($3,247) is correct for the filtered 2.8 million records in the database, generalizing this statistic to describe 'fraudulent accounts' more broadly assumes these records are representative of all fraudulent activity. If the data set contains primarily recent or large-balance accounts, the sample may be biased. The most tempting wrong answer (option B) incorrectly assumes that large sample size alone guarantees representativeness.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

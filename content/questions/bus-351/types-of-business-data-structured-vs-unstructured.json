@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Acme Manufacturing, customer feedback from social media posts, email complaints, and video reviews are being collected. What type of data is this?",
+    "options": [
+      "Structured data",
+      "Unstructured data",
+      "Semi-structured data",
+      "Real-time data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Social media posts, emails, and videos are unstructured because they lack a predefined format or schema—they are free-form text and multimedia. Semi-structured data (option C) is tempting because some emails have headers, but the core content remains unstructured and not organized in rows/columns like a database.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Westfield Bank stores customer account balances, transaction dates, account numbers, and interest rates in a relational database with defined columns and rows. What type of data is this?",
+    "options": [
+      "Unstructured data",
+      "Structured data",
+      "Multimedia data",
+      "Web log data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data organized in predefined columns and rows within a relational database is the definition of structured data. Unstructured data (option A) is a common mistake because students sometimes confuse 'structured' with 'simple,' but structured refers to format and schema, not complexity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechCorp receives 250,000 customer survey responses per month with numerical ratings (1–5 stars) and open-ended text comments. Which statement is most accurate?",
+    "options": [
+      "All 250,000 responses are purely structured data",
+      "The numerical ratings are structured; the text comments are unstructured",
+      "All responses are unstructured because they come from surveys",
+      "The responses are semi-structured if stored in JSON format"
+    ],
+    "correctIndex": 1,
+    "explanation": "The numerical ratings fit a predefined schema (1–5 scale in defined columns), making them structured. The open-ended text comments lack predefined format and are unstructured. Option D is tempting but incorrect—JSON is a semi-structured format, but the content type (structured vs. unstructured) doesn't change based on file format alone.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailChain Inc. captures point-of-sale transaction data with product ID, quantity, price, timestamp, and store location. This represents which type of data?",
+    "options": [
+      "Unstructured data",
+      "Structured data",
+      "Qualitative data",
+      "Streaming data"
+    ],
+    "correctIndex": 1,
+    "explanation": "All fields (product ID, quantity, price, timestamp, store location) have predefined formats and fit neatly into a database schema, making this structured data. Streaming data (option D) is a tempting distractor because this data could be streamed in real-time, but the question focuses on data type (structure), not delivery method.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "GlobalLogistics processes shipping manifests, delivery notes with driver handwritten signatures, and GPS tracking coordinates. Which of these is structured data?",
+    "options": [
+      "Shipping manifests with driver notes",
+      "Handwritten delivery signatures",
+      "GPS tracking coordinates with timestamps",
+      "Photo images of package damage"
+    ],
+    "correctIndex": 2,
+    "explanation": "GPS coordinates and timestamps have a predefined, numeric format stored in defined fields (latitude, longitude, timestamp), making them structured. Handwritten signatures (option B) and photo images (option D) are unstructured. Option A seems structured but handwritten notes within manifests introduce unstructured elements that complicate parsing.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "FinanceFlow LLC processes 85,000 loan applications monthly. Each application includes borrower name, income (in dollars), credit score, and a 500-word essay explaining the loan purpose. If the company processes 75% of applications with automated rules based on credit score and income, how many applications rely on analyzing the unstructured essay?",
+    "options": [
+      "21,250 applications",
+      "63,750 applications",
+      "42,500 applications",
+      "36,875 applications"
+    ],
+    "correctIndex": 0,
+    "explanation": "If 75% use automated rules (85,000 × 0.75 = 63,750), then 25% require essay analysis: 85,000 × 0.25 = 21,250. Option B (63,750) is the most tempting distractor—it's the number using structured data, confusing students who calculate the opposite portion.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "MediaStream Inc. stores customer viewing history (show title, episode number, timestamp, duration watched) in a database alongside user-generated reviews (text comments, ratings 1–5). A junior analyst claims 'all the data is structured because it's in the same database.' Why is this incorrect?",
+    "options": [
+      "Databases cannot store unstructured data",
+      "Data type is determined by format and schema, not storage location",
+      "The reviews are semi-structured, not unstructured",
+      "Customer reviews should be stored separately in a different system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Storage location does not determine data type. Viewing history (predefined schema: show, episode, timestamp, duration) is structured; reviews (free-form text) are unstructured—regardless that both are in the same database. Option A is false because modern databases store both types. The analyst's error conflates 'same location' with 'same type.'",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SalesForce Corp analyzes 2.3 million customer interactions yearly. 1.8 million are transactional records (date, amount, product category). 0.5 million are support tickets (customer issue descriptions, chat logs, resolution notes). What percentage of their interaction data is unstructured?",
+    "options": [
+      "21.7%",
+      "78.3%",
+      "42.0%",
+      "18.2%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unstructured data: 0.5 million support tickets. Total: 2.3 million. Percentage: (0.5 ÷ 2.3) × 100 = 21.7%. Option B (78.3%) is the tempting error—it calculates the percentage of structured data instead, a common reversal mistake in two-part problems.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "HealthTech Solutions collects patient EHR data including vital signs (heart rate, blood pressure, temperature as numerical values) and clinical notes written by physicians in free-form text. A data engineer wants to build a machine learning model to predict readmission risk. Which statement is most accurate?",
+    "options": [
+      "Only the numerical vital signs can be used because they are structured",
+      "Only the physician notes can be used because they contain richer information",
+      "Both structured and unstructured data must be processed differently before training the model",
+      "The engineer should convert all data to unstructured format for consistency"
+    ],
+    "correctIndex": 2,
+    "explanation": "ML models require different preprocessing for structured (scaling, encoding) versus unstructured (tokenization, embedding) data. Both types contain valuable information but demand distinct pipelines. Option A ignores unstructured data's predictive value; option B ignores structured data's importance. Option D is nonsensical—converting structured to unstructured loses information.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "EcommercePro Inc. receives 12,500 customer support requests weekly. Historical data shows 8,200 (65.6%) are inquiries about order status (structured query), while 4,300 (34.4%) contain complaint descriptions requiring human judgment. If the company automates 95% of structured queries but only 20% of unstructured complaints, how many requests still require human review?",
+    "options": [
+      "1,804 requests",
+      "2,090 requests",
+      "3,064 requests",
+      "2,575 requests"
+    ],
+    "correctIndex": 2,
+    "explanation": "Structured automated: 8,200 × 0.95 = 7,790 (10 still need review). Unstructured human-reviewed: 4,300 × 0.80 = 3,440 (need review). Total requiring review: 410 + 3,440 = 3,064. Note: 4,300 × (1 − 0.20) = 3,440. Option B (2,090) assumes only 20% of structured needs review—a tempting reversal of the percentages.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data analyst at ConsultCorp claims that 'Twitter sentiment data about our brand is structured because we can measure sentiment as a numeric score (−1 to +1).' Which statement best explains the flaw in this reasoning?",
+    "options": [
+      "Twitter data is always unstructured regardless of analysis method",
+      "Converting unstructured data to numeric format does not change its original data type",
+      "Sentiment scores can only be assigned by machines, not humans",
+      "Numeric data cannot coexist with unstructured data in the same dataset"
+    ],
+    "correctIndex": 1,
+    "explanation": "The analyst confuses derived metrics (output of analysis) with original data type (source format). Raw tweets are unstructured text; assigning a numeric score transforms it for analysis but doesn't retroactively make the source data structured. Option A is too absolute; option C is false (humans assign sentiment); option D is false (they coexist regularly).",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "InsuranceCore processes three data streams: (1) policy premiums (numeric, 15 M records/year), (2) claim descriptions (text, 3.2 M records/year), (3) IoT sensor data from connected vehicles (structured JSON with timestamp, speed, location; 450 M records/year). An executive incorrectly states, 'We have 468.2 million records of data, so we manage big data.' What is the core misunderstanding?",
+    "options": [
+      "Record volume alone does not determine 'big data'—velocity and variety matter equally",
+      "Only unstructured data counts toward big data volume",
+      "Insurance companies cannot qualify as big data enterprises",
+      "The company should count only the largest stream (IoT at 450 M)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Big data's 3 Vs are Volume, Velocity, and Variety. This company has high volume (468.2 M) and variety (structured numeric, unstructured text, semi-structured JSON), but the executive ignores whether data arrives fast enough (velocity) to require distributed processing. Volume alone is insufficient. Option B is false; option C is false; option D ignores the multistream composition.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analytics team at RetailGiant compares two data pipelines: Pipeline A processes 500K structured transaction records daily with 99.2% schema compliance. Pipeline B processes 180K unstructured product reviews daily with 67% successfully parsed by NLP. A manager concludes, 'Pipeline A is better because it has higher compliance.' Which factor is this conclusion missing?",
+    "options": [
+      "Structured data is inherently more valuable than unstructured data",
+      "Different data types have different processing requirements and success metrics",
+      "Pipeline B is failing because NLP is an inferior technology",
+      "Both pipelines should measure success by record volume alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Comparing 'schema compliance' (99.2%) to 'parsing success' (67%) uses incompatible metrics. Structured and unstructured data require different evaluation frameworks. A 99% schema-compliant structured pipeline and a 70% NLP-parsed unstructured pipeline may both be performing well given their data types' challenges. Option A is false (value depends on use case); option C is false (NLP maturity varies by task).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataBank Ltd. discovers that 32% of its customer database contains duplicate records due to merging two legacy systems. System A (structured CRM data: name, ID, email) has 18,000 duplicates of 125,000 records. System B (unstructured customer notes: conversation history, preferences) has duplicates but the count is unclear because notes are free-form text. Which challenge is unique to System B?",
+    "options": [
+      "Duplicate detection is impossible in unstructured data",
+      "Identifying duplicates in unstructured text requires similarity matching, not exact-match algorithms",
+      "System B duplicates are less important because notes are less structured",
+      "Unstructured data should never be merged with structured data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured duplicates (System A) are found via exact-match algorithms on defined fields. Unstructured duplicates (System B) require similarity algorithms (fuzzy matching, cosine similarity, semantic analysis) because identical notes are rare but similar meanings indicate duplicates. Option A is too absolute; option C is false (notes are valuable); option D is false (common in practice).",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup, QuickAnalytics, promises clients they can 'convert all unstructured data to structured data automatically and achieve 100% accuracy.' Based on data type theory, why is this promise problematic?",
+    "options": [
+      "Unstructured data is by definition impossible to convert",
+      "Some information inherent to unstructured data cannot be losslessly represented in rigid schemas without losing nuance",
+      "Clients should never request structured output from unstructured input",
+      "Achieving 100% accuracy is possible if using artificial intelligence"
+    ],
+    "correctIndex": 1,
+    "explanation": "Converting free-form text to rigid schemas (e.g., reducing a detailed customer complaint to a 1–5 category) inevitably loses nuance and context. The conversion is possible but not without information loss or high error rates. Option A is false (conversion happens regularly); option C is too absolute; option D is false (100% accuracy is unrealistic in extraction tasks, especially with domain complexity).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

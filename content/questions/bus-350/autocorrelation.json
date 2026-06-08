@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. records daily stock returns over 250 trading days. A data analyst notices that the return on Day 15 is highly correlated with the return on Day 16. What statistical concept best describes this pattern?",
+    "options": [
+      "Autocorrelation",
+      "Heteroscedasticity",
+      "Multicollinearity",
+      "Homoscedasticity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Autocorrelation is the correlation of a variable with its own lagged values—exactly what occurs when Day 15's return predicts Day 16's return. Heteroscedasticity refers to non-constant variance, multicollinearity to correlation between independent variables, and homoscedasticity to constant variance; none describe within-series temporal correlation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Chevron Corporation's quarterly operating cash flow data shows that residuals from a time-series regression exhibit a pattern: when one quarter's residual is positive, the next quarter's residual tends also to be positive. Which lag-1 autocorrelation coefficient (ρ₁) is most consistent with this observation?",
+    "options": [
+      "ρ₁ = 0.72",
+      "ρ₁ = −0.68",
+      "ρ₁ = 0.02",
+      "ρ₁ = −0.85"
+    ],
+    "correctIndex": 0,
+    "explanation": "A strong positive autocorrelation (ρ₁ = 0.72) matches the described pattern where positive residuals follow positive residuals. ρ₁ = −0.68 would show alternating signs; ρ₁ = 0.02 would indicate almost no correlation; and ρ₁ = −0.85 would show strong negative correlation. The positive coefficient is correct.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a Durbin-Watson (DW) test, the test statistic ranges from 0 to 4. A DW value of 2.1 for Google's weekly revenue model suggests what about autocorrelation?",
+    "options": [
+      "Little to no autocorrelation is present",
+      "Strong positive autocorrelation exists",
+      "Strong negative autocorrelation exists",
+      "The data are non-stationary"
+    ],
+    "correctIndex": 0,
+    "explanation": "A DW statistic near 2 (here 2.1) indicates little to no autocorrelation; DW ≈ 2 is the null hypothesis. Values near 0 indicate strong positive autocorrelation, values near 4 indicate negative autocorrelation, and non-stationarity is a separate issue from autocorrelation.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla's monthly delivery forecast model has a lag-1 autocorrelation coefficient of −0.55 in the residuals. What does this negative value mean for the model's assumption of independent errors?",
+    "options": [
+      "The assumption is violated; errors alternate between positive and negative",
+      "The assumption holds; errors are randomly distributed",
+      "The assumption is strengthened by negative correlation",
+      "Autocorrelation does not affect OLS regression validity"
+    ],
+    "correctIndex": 0,
+    "explanation": "A negative autocorrelation of −0.55 violates the independence assumption; errors oscillate rather than occurring randomly. This is a violation that affects standard errors and confidence intervals. Options B and C misinterpret the violation, and option D falsely claims autocorrelation is harmless.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the primary reason autocorrelation is problematic in ordinary least squares (OLS) regression?",
+    "options": [
+      "It causes the OLS estimates of slope coefficients to become biased",
+      "It leads to underestimation of standard errors and inflated t-statistics",
+      "It violates the normality assumption of the error term",
+      "It creates multicollinearity among the regressors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Autocorrelation does not bias OLS coefficients themselves, but it does inflate t-statistics and underestimate standard errors because the standard error formula assumes independence. This is the core problem. Option A confuses it with omitted variable bias; option C conflates it with normality; option D is unrelated (multicollinearity is about regressor correlation).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Coca-Cola's weekly advertising spend (X) and unit sales revenue (Y) are modeled with Y = 12,000 + 8.5X + ε. An analyst computes the lag-1 autocorrelation of residuals as 0.64. What would most likely happen if she uses standard OLS confidence intervals without addressing autocorrelation?",
+    "options": [
+      "The confidence intervals would be too narrow, overstating precision",
+      "The confidence intervals would be too wide, understating precision",
+      "The R² value would become negative",
+      "The coefficient on X would double in magnitude"
+    ],
+    "correctIndex": 0,
+    "explanation": "With positive autocorrelation (ρ = 0.64), the true standard error exceeds the OLS estimate. Thus reported confidence intervals shrink, making the model appear more precise than it truly is. Option B reverses the effect; option C is unrelated; option D confuses autocorrelation with bias in the coefficient itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's quarterly operating margin is regressed on R&D spending with 36 quarterly observations (1990–2018). The Durbin-Watson statistic is 1.43. Using a two-tailed DW critical value table with α = 0.05, DW_L = 1.35 and DW_U = 1.66. What can be concluded about autocorrelation?",
+    "options": [
+      "Autocorrelation is inconclusive; the test statistic falls in the indecision zone",
+      "Positive autocorrelation is present at the 5% significance level",
+      "No autocorrelation is present at the 5% significance level",
+      "Negative autocorrelation is present at the 5% significance level"
+    ],
+    "correctIndex": 0,
+    "explanation": "DW = 1.43 falls between DW_L = 1.35 and DW_U = 1.66, which is the indecision (inconclusive) zone. The test cannot reject or accept the null hypothesis of no autocorrelation in this range. Options B, C, and D incorrectly make a definitive conclusion when the result is ambiguous.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's daily page load time (measured in milliseconds) is modeled as a function of concurrent users. Over 120 trading days, the autocorrelation function shows r₁ = 0.58, r₂ = 0.34, r₃ = 0.19, r₄ = 0.08. What pattern does this autocorrelation structure most suggest?",
+    "options": [
+      "First-order AR(1) process with positive autocorrelation that decays geometrically",
+      "Pure white noise with random fluctuations",
+      "Seasonal autocorrelation with a 4-day cycle",
+      "Unit root non-stationarity requiring differencing"
+    ],
+    "correctIndex": 0,
+    "explanation": "The autocorrelations decline geometrically (0.58 → 0.34 → 0.19 → 0.08 ≈ 0.58 × 0.59), characteristic of an AR(1) process. Option B is contradicted by high r₁; option C would show spikes at lag 4; option D would show autocorrelations that decay very slowly or not at all.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst models JPMorgan's daily stock returns (8 years, 2,000 observations) and observes a Durbin-Watson statistic of 2.08. She concludes that no autocorrelation is present and reports standard OLS confidence intervals. However, a peer notes that the sample size is very large. What concern should the peer raise?",
+    "options": [
+      "With large samples, even weak autocorrelation can be statistically significant and economically important, though DW ≈ 2",
+      "Large samples guarantee that standard errors are unbiased regardless of autocorrelation",
+      "The DW statistic becomes less reliable with more than 1,000 observations",
+      "Autocorrelation only matters when the coefficient estimates are statistically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "DW = 2.08 is close to 2 (no autocorrelation), but with 2,000 observations, even weak but statistically significant autocorrelation can inflate standard errors and distort inference. Large samples amplify small deviations. Option B is false (large samples do not cure violations); option C misrepresents DW properties; option D confuses significance testing with assumption checking.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Bank of America's monthly loan default rate exhibits autocorrelation ρ₁ = 0.48. A model is built predicting defaults from interest rates and credit scores. Standard OLS regression yields a 95% confidence interval for the interest rate coefficient of [0.034, 0.062]. Which adjustment is most appropriate?",
+    "options": [
+      "Widen the confidence interval using a correction factor accounting for positive autocorrelation",
+      "Narrow the confidence interval because autocorrelation reduces variance",
+      "Replace OLS with weighted least squares without other changes",
+      "Remove the interest rate variable from the model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Positive autocorrelation (ρ₁ = 0.48) causes standard errors to be underestimated; the reported CI is too narrow. A correction factor (e.g., Newey-West standard errors) widens it to reflect true precision. Option B reverses the direction; option C is incomplete without specification; option D inappropriately discards relevant information.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Suppose a manager at Walmart regresses weekly foot traffic on promotional spending and obtains a model with Durbin-Watson = 1.92 and normally distributed residuals. The manager concludes the model fully satisfies OLS assumptions. Is this conclusion correct?",
+    "options": [
+      "No; DW near 2 suggests autocorrelation may be weak but formal testing is needed; normality alone does not ensure independence",
+      "Yes; DW ≈ 2 confirms no autocorrelation and normal residuals satisfy all OLS assumptions",
+      "No; DW near 2 indicates strong positive autocorrelation that must be corrected immediately",
+      "Yes; any DW value between 1.5 and 2.5 guarantees the independence assumption holds"
+    ],
+    "correctIndex": 0,
+    "explanation": "DW = 1.92 suggests minimal autocorrelation but does not definitively prove its absence without formal hypothesis testing. More importantly, normally distributed residuals do not imply independence (autocorrelation can exist with normal errors). Option B over-interprets DW; option C misreads DW ≈ 2; option D sets an arbitrary but incorrect range.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Oracle Corporation models its stock return volatility using an ARCH(1) model: ε_t ∼ N(0, σ²_t) where σ²_t = 0.00008 + 0.15ε²_{t-1}. If ε²_{t-1} = 0.0004, what is σ²_t, and what does the 0.15 coefficient indicate about autocorrelation in squared residuals?",
+    "options": [
+      "σ²_t = 0.000146; the coefficient measures autoregressive heteroscedasticity, not linear autocorrelation in residuals",
+      "σ²_t = 0.000246; the coefficient measures positive autocorrelation in the error terms themselves",
+      "σ²_t = 0.000146; this is equivalent to first-order autocorrelation in the original residuals",
+      "σ²_t = 0.000089; ARCH models eliminate autocorrelation entirely"
+    ],
+    "correctIndex": 0,
+    "explanation": "σ²_t = 0.00008 + 0.15(0.0004) = 0.00008 + 0.00006 = 0.000146. The coefficient 0.15 captures autocorrelation in squared residuals (conditional heteroscedasticity), not in the residuals themselves—a subtlety students often miss. Option B confuses squared and linear terms; option C overstates equivalence; option D falsely claims ARCH eliminates autocorrelation.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher analyzing Netflix's quarterly subscriber growth adds a lagged dependent variable Y_{t-1} to the model: Y_t = β₀ + β₁X_t + β₂Y_{t-1} + ε_t. She observes residual autocorrelation ρ₁ = 0.23 and concludes this is acceptable because it is weak. What is the flaw in this reasoning?",
+    "options": [
+      "In models with lagged dependent variables, standard Durbin-Watson tests are biased toward 2, and autocorrelation can still bias coefficient estimates; the Durbin-h or Durbin-Watson is inappropriate here",
+      "Weak autocorrelation is never a problem, regardless of model specification",
+      "The presence of Y_{t-1} automatically eliminates all forms of autocorrelation",
+      "Autocorrelation only matters for the constant term, not for the slope coefficients"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a lagged dependent variable is included, OLS autocorrelation tests (especially DW) become biased and unreliable. Even weak residual autocorrelation can bias β₂ (the coefficient on the lagged Y) and invalidate inference. The Durbin-h test or simulation-based approaches are needed. Options B, C, and D misunderstand the consequences of including lagged dependents.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant uses Newey-West standard errors to address autocorrelation in a regression of Starbucks' quarterly sales on store count and operating expenses. The Newey-West 95% CI for the store count coefficient is [0.145, 0.203], and the standard OLS 95% CI is [0.163, 0.185]. What does the widening indicate, and is Newey-West appropriate here?",
+    "options": [
+      "OLS underestimated standard errors due to positive autocorrelation; Newey-West is appropriate for time-series data with autocorrelation of unknown lag structure",
+      "OLS overestimated standard errors; Newey-West should not be used because it narrows CIs",
+      "The data contain heteroscedasticity, not autocorrelation; Newey-West is the wrong tool",
+      "Newey-West is only valid for cross-sectional data, not time series"
+    ],
+    "correctIndex": 0,
+    "explanation": "Newey-West CIs are wider, confirming OLS underestimated SE due to positive autocorrelation. Newey-West is designed for time-series regressions with unknown autocorrelation order and is the standard robust correction. Option B reverses the logic; option C conflates issues (Newey-West handles both autocorrelation and heteroscedasticity); option D is false (Newey-West is for time series).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A model of Intel's daily chip shipment volume includes an AR(1) term: Y_t = 50,000 + 0.62Y_{t-1} + ε_t, where ε_t is white noise. If Y_{t-1} = 65,000 units, what is the forecast for Y_t, and does the AR(1) specification necessarily indicate that the original (non-differenced) residuals exhibit problematic autocorrelation?",
+    "options": [
+      "Forecast is 90,300 units; an explicit AR(1) model captures autocorrelation by design, so residuals should be white noise rather than showing problematic autocorrelation",
+      "Forecast is 50,000 units; AR(1) models always have autocorrelated residuals regardless of specification",
+      "Forecast is 90,300 units; AR(1) models generate autocorrelation that must be corrected with differencing",
+      "Forecast is 65,000 units; AR models are inappropriate for shipment volume data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Forecast = 50,000 + 0.62(65,000) = 50,000 + 40,300 = 90,300. By design, an explicit AR(1) model captures the autocorrelation in the data structure; the residuals ε_t should then be white noise (iid). This is the correct approach to handling autocorrelation. Option B misunderstands AR models; option C confuses them with differencing; option D is unfounded.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

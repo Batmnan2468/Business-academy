@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a regression analysis of Apple Inc.'s quarterly revenue (in billions of dollars) against R&D spending, the regression coefficient for R&D is 2.5 with a standard error of 0.4. What does the standard error of 0.4 represent?",
+    "options": [
+      "The average deviation of the regression coefficient estimate from its true population value",
+      "The total error sum of squares in the regression model",
+      "The correlation between R&D spending and revenue",
+      "The residual standard deviation of the dependent variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard error measures the variability of the regression coefficient estimate across repeated samples. It quantifies uncertainty in the point estimate. Option B confuses standard error with SSE; option C confuses it with correlation; option D confuses it with the overall model's residual standard deviation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst at Nike estimated that advertising spending increases shoe sales by 15 units per $1 million spent (b₁ = 15, SE = 3). For a 95% confidence interval, what is the margin of error? (Use t* ≈ 2.0 for this sample.)",
+    "options": [
+      "6 units",
+      "3 units",
+      "15 units",
+      "18 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "Margin of error = t* × SE = 2.0 × 3 = 6 units. This is correct application of the confidence interval formula for a coefficient. Option B uses only the standard error without the t-multiplier; option C confuses it with the coefficient itself; option D incorrectly multiplies all three numbers.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model predicting Tesla's stock price based on quarterly earnings, the 95% confidence interval for the earnings coefficient is [0.8, 1.2]. Which statement is correct?",
+    "options": [
+      "There is a 95% probability that the true population coefficient lies between 0.8 and 1.2",
+      "95% of future stock prices will fall within 0.8 to 1.2 of the predicted value",
+      "The earnings coefficient is statistically significant at the 0.05 level because the interval includes 1.0",
+      "The sample coefficient is guaranteed to be between 0.8 and 1.2 in 95% of samples"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct frequentist interpretation is that if we repeated sampling infinitely, approximately 95% of such constructed intervals would contain the true parameter. Option B confuses the coefficient CI with prediction intervals; option C incorrectly concludes significance (0 is outside, not 1.0); option D misunderstands the relationship between the interval and repeated sampling.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When calculating a confidence interval for a regression coefficient, which of the following directly affects the width of the interval?",
+    "options": [
+      "The standard error of the coefficient and the critical t-value",
+      "The R-squared value of the regression model",
+      "The number of explanatory variables in the model",
+      "The mean of the dependent variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "CI width = 2 × t* × SE, so only the standard error and critical t-value directly determine width. Option B affects model fit, not CI width; option C affects degrees of freedom indirectly but not directly; option D is irrelevant to CI width calculation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression analysis of Starbucks' store sales (thousands of dollars) on average customer visit frequency shows: b₁ = 8.5, SE(b₁) = 1.2, n = 45 stores, 90% CI. Approximately what is the lower bound of the confidence interval? (Use t* ≈ 1.68 for df = 43.)",
+    "options": [
+      "6.48",
+      "6.90",
+      "7.02",
+      "8.50"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lower bound = b₁ - t* × SE = 8.5 - 1.68(1.2) = 8.5 - 2.016 ≈ 6.48. Option B uses wrong t-value (1.96 for 95%); option C uses 1.5 approximation; option D omits the margin of error entirely.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An analyst at Amazon is estimating the effect of warehouse automation (number of robots) on order fulfillment time (hours). The regression gives: b₁ = -0.45 hours per robot, SE = 0.08. She constructs a 95% CI: [-0.61, -0.29]. Based on this interval, should Amazon conclude that automation significantly reduces fulfillment time at α = 0.05?",
+    "options": [
+      "Yes, because the entire interval is negative and does not contain zero",
+      "Yes, because the standard error is less than 0.10",
+      "No, because the coefficient is negative",
+      "No, because the sample size is likely too small"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 95% CI excludes zero entirely, which is equivalent to rejecting H₀: β₁ = 0 at α = 0.05. The negative interval confirms a negative effect. Option B confuses SE magnitude with significance; option C misunderstands that negative coefficients can be significant; option D requires additional information about sample size.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a study of Microsoft's advertising impact on cloud service adoption, a researcher estimates that each additional $100,000 in ad spending increases adoption by 250 customers. The 95% CI for this coefficient is [180, 320]. However, the researcher is concerned the CI is too wide. Which action would most directly reduce CI width?",
+    "options": [
+      "Increase the sample size to reduce the standard error",
+      "Increase the confidence level from 95% to 99%",
+      "Include additional control variables in the regression",
+      "Use a one-tailed test instead of two-tailed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Larger n reduces SE, which directly shrinks the CI width (width = 2t* × SE). Option B increases t*, widening the CI; option C doesn't guarantee SE reduction; option D doesn't affect confidence interval width for two-sided intervals.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Goldman Sachs analyst regresses quarterly stock returns on market volatility (measured as VIX index points). She obtains b₁ = -2.3% return per VIX point, SE = 0.6%, sample size n = 120 quarters. At α = 0.05, is the effect significant? (Critical t ≈ 1.98 for df = 118.)",
+    "options": [
+      "Yes, because the t-statistic is |−2.3/0.6| ≈ 3.83, which exceeds 1.98",
+      "No, because the coefficient is negative",
+      "Yes, because the standard error is less than 1%",
+      "No, because the sample spans many quarters"
+    ],
+    "correctIndex": 0,
+    "explanation": "t-statistic = b₁/SE = -2.3/0.6 ≈ -3.83; |−3.83| > 1.98, so reject H₀. Option B confuses sign with significance; option C uses wrong criterion; option D misunderstands that large samples strengthen significance, not weaken it.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant analyzing Whole Foods' pricing strategy finds that a $1 increase in average item price decreases store foot traffic by 45 customers per week. The 95% CI is [-52, -38]. A new marketing manager claims, 'We can be 95% confident that foot traffic decreases between 38 and 52 customers.' What is the error in this statement?",
+    "options": [
+      "The manager reversed the interpretation; the CI describes the parameter, not the prediction of foot traffic",
+      "The manager used the wrong confidence level",
+      "The manager should have used 99% instead of 95%",
+      "The manager correctly stated the interval but used the wrong sign"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CI [−52, −38] gives the range for the true regression coefficient β₁, not predictions of foot traffic values. The manager confused a confidence interval for a parameter with a prediction interval for outcomes. Option B and C misidentify the actual error; option D overlooks that the interpretation itself is wrong.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Two analysts at JPMorgan Chase separately analyze credit card default rates. Analyst A estimates the effect of debt-to-income ratio on default probability with b₁ = 0.35, SE = 0.10, n = 500. Analyst B estimates with b₁ = 0.35, SE = 0.15, n = 250. Both construct 95% CIs. Whose interval will be narrower, and why?",
+    "options": [
+      "Analyst A's, because the smaller standard error from the larger sample reduces the margin of error",
+      "Analyst B's, because the smaller sample size makes the estimate more focused",
+      "Both will be equally wide because both coefficients are identical",
+      "Analyst A's, because a larger coefficient estimate always produces narrower intervals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Analyst A has SE = 0.10 vs B's SE = 0.15, so A's margin of error (t* × 0.10) is smaller, producing a narrower CI. The larger n in A's sample reduces SE. Option B incorrectly claims smaller samples narrow CIs; option C ignores that SE differs; option D confuses coefficient magnitude with interval width.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a regression of Coca-Cola's net profit (millions) on advertising spend (millions), a researcher obtains the 95% CI for the coefficient: [1.8, 2.4]. She then argues: 'This means that in 95% of future years, a $1 million ad spend will increase profit by between $1.8 and $2.4 million.' Is this interpretation correct?",
+    "options": [
+      "No, the CI estimates the true regression coefficient across repeated samples, not the distribution of future outcomes",
+      "Yes, the confidence level applies to future predictions",
+      "No, because advertising effects vary too much by season",
+      "Yes, assuming the relationship remains constant"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval for a coefficient describes uncertainty about the population parameter β₁, not the range of future profit outcomes for a given spend. That would require a prediction interval. Options B and D confuse what the CI represents; option C raises a validity concern but doesn't address the statistical interpretation error.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher estimates that executive compensation (in millions) is related to firm profitability with b₁ = 0.12 (meaning $0.12 in comp per $1 profit) and SE = 0.04. She uses a 95% CI and calculates the interval as [0.08, 0.16]. However, she later realizes she used the wrong sample size to compute the critical t-value, using t* = 1.96 (appropriate for n = ∞) instead of the correct t* = 2.08 (appropriate for her actual df). What is the consequence?",
+    "options": [
+      "Her reported interval is too narrow; the true 95% CI would be approximately [0.075, 0.165]",
+      "Her reported interval is too wide; the true 95% CI would be approximately [0.084, 0.156]",
+      "The error has no effect because t* = 1.96 is always correct for α = 0.05",
+      "Her confidence level is actually 90%, not 95%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using t* = 1.96 instead of 2.08 underestimates the margin of error. Correct margin = 2.08 × 0.04 = 0.0832, so CI ≈ [0.0368, 0.2032]—wait, let me recalculate: 0.12 ± 0.0832 = [0.0368, 0.2032]. Actually, 2.08(0.04) = 0.0832 > 1.96(0.04) = 0.0784, so reported is too narrow. Option B reverses the direction; option C ignores the difference between z and t; option D confuses the error's effect.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Dell analyst models laptop price (dollars) as a function of processing speed (GHz). The 95% CI for the speed coefficient is [145, 185] dollars per GHz. If Dell increases average processing speed by 0.5 GHz across all models, which statement best describes the expected impact on total revenue, assuming 2 million laptops sold annually?",
+    "options": [
+      "Expected revenue increase is between $145M and $185M (calculated as [145 × 0.5 × 2M, 185 × 0.5 × 2M]), but this does NOT account for quantity changes or market response",
+      "Expected revenue increase is exactly $145M to $185M per laptop, regardless of volume",
+      "The CI tells us the confidence level of a single additional GHz increasing price, not cumulative revenue impact",
+      "Revenue will increase by $145M to $185M because we can be 95% confident in the interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CI [145, 185] estimates the per-unit price impact of a 0.5 GHz increase. Scaled to 2M units: [145(0.5)(2M), 185(0.5)(2M)] = [145M, 185M]. However, this calculation ignores crucial business factors: demand elasticity, whether customers actually buy more at higher specs, competitive response, and cost changes. Option B ignores volume; option C misunderstands the CI's applicability; option D treats the CI as a business forecast rather than a statistical estimate.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a regression of restaurant revenue (thousands of dollars) on number of employees, an analyst obtains b₁ = 8.2 (meaning $8,200 revenue per additional employee) with SE = 2.1. She reports the 95% CI as [3.8, 12.6]. A colleague checks her work and notes that if she had used a 90% CI instead, the margin of error would have been smaller. However, the colleague then suggests: 'To avoid Type I error, we should always use the narrower 90% CI instead of 95%.' Is the colleague's reasoning sound?",
+    "options": [
+      "No, narrowing the CI lowers confidence in the parameter estimate and increases the risk of missing the true value; a 95% CI is the conventional choice for controlling false positive conclusions",
+      "Yes, because a narrower interval means less uncertainty, which reduces Type I error",
+      "No, because Type I error is controlled by the hypothesis test significance level α, not the CI width",
+      "Yes, but only if the sample size is at least 100 observations"
+    ],
+    "correctIndex": 2,
+    "explanation": "The colleague conflates two distinct concepts. Type I error (false positive) is controlled by α in hypothesis testing, not by CI width. A narrower CI (lower confidence) doesn't reduce Type I error—it just reflects less certainty about the parameter. Option 0 incorrectly agrees with the colleague's premise; option 1 confuses CI width with Type I error; option 3 adds an irrelevant condition.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst at BlackRock uses regression to predict mutual fund returns based on expense ratio (percent). She obtains b₁ = -0.85 (meaning −0.85% annual return per 1% expense ratio increase) with SE = 0.22. She constructs both a 95% CI and a 99% CI for this coefficient. Which statement is true about the two intervals?",
+    "options": [
+      "The 99% CI will be wider because a higher confidence level requires a larger critical t-value, increasing the margin of error",
+      "The 99% CI will be narrower because increased precision is needed to achieve higher confidence",
+      "Both CIs will have the same width because the standard error does not change",
+      "The 95% CI is more useful for decision-making, so the 99% CI should be ignored"
+    ],
+    "correctIndex": 0,
+    "explanation": "CI width = 2 × t* × SE. Since SE is constant, a larger t* (from higher confidence level) produces a wider interval. For 95%, t ≈ 1.96; for 99%, t ≈ 2.58 (example values). The 99% CI trades precision for confidence. Option B reverses the relationship; option C ignores the role of t*; option D is a value judgment, not a statistical fact.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

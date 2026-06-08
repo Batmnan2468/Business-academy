@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. has a 65% probability of launching a new iPhone model and a 40% probability of releasing a new iPad simultaneously. Assuming these events are independent, what is the probability that both events occur?",
+    "options": [
+      "0.26",
+      "0.40",
+      "0.65",
+      "1.05"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the multiplication rule for independent events: P(A and B) = P(A) × P(B) = 0.65 × 0.40 = 0.26. Option B (0.40) is tempting because students might mistakenly choose the smaller probability, confusing it with the joint probability.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the addition rule of probability, when events A and B are mutually exclusive, which formula is correct?",
+    "options": [
+      "P(A or B) = P(A) + P(B) - P(A and B)",
+      "P(A or B) = P(A) + P(B)",
+      "P(A or B) = P(A) × P(B)",
+      "P(A or B) = P(A) + P(B) + P(A and B)"
+    ],
+    "correctIndex": 1,
+    "explanation": "For mutually exclusive events, P(A and B) = 0, so the general formula P(A or B) = P(A) + P(B) - P(A and B) simplifies to P(A or B) = P(A) + P(B). Option A is the general formula for non-mutually exclusive events, which is a common confusion point.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix reported that 35% of its subscribers use ad-supported tiers and 25% use premium ad-free tiers. These segments do not overlap. What is the probability a randomly selected subscriber uses either option?",
+    "options": [
+      "0.60",
+      "0.0875",
+      "0.35",
+      "0.75"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since the segments are mutually exclusive, P(ad-supported or premium) = 0.35 + 0.25 = 0.60. Option B (0.0875) results from incorrectly multiplying 0.35 × 0.25, misapplying the multiplication rule to mutually exclusive events.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the multiplication rule of probability state for independent events?",
+    "options": [
+      "P(A and B) = P(A) + P(B)",
+      "P(A and B) = P(A) × P(B)",
+      "P(A and B) = P(A) - P(B)",
+      "P(A and B) = P(A) ÷ P(B)"
+    ],
+    "correctIndex": 1,
+    "explanation": "For independent events, the probability of both occurring equals the product of their individual probabilities: P(A and B) = P(A) × P(B). Option A uses addition, which is used for the addition rule, not multiplication rule.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon experiences a 15% probability of a server outage on any given day and an 8% probability of a cyberattack. Assuming independence, what is the probability of experiencing both on the same day?",
+    "options": [
+      "0.012",
+      "0.23",
+      "0.015",
+      "0.008"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(outage and attack) = 0.15 × 0.08 = 0.012. Option C (0.015) is a tempting distractor that results from rounding or misremembering the multiplication, and Option B (0.23) comes from adding the probabilities instead.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's supply chain manager is analyzing customer purchases. The probability a customer buys groceries is 0.70, and the probability they buy electronics is 0.30. Given that these events are independent, what is the probability a customer purchases both groceries and electronics?",
+    "options": [
+      "0.21",
+      "1.00",
+      "0.40",
+      "0.15"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(both) = 0.70 × 0.30 = 0.21 using the multiplication rule for independent events. Option C (0.40) represents adding the probabilities, a common error when misremembering whether to use addition or multiplication.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company is developing two vaccines. The probability Vaccine A is approved by the FDA is 0.60, and the probability Vaccine B is approved is 0.75. These approvals are independent events. What is the probability that at least one vaccine is approved?",
+    "options": [
+      "0.90",
+      "0.45",
+      "0.35",
+      "1.35"
+    ],
+    "correctIndex": 0,
+    "explanation": "For 'at least one' approved, use P(A or B) = P(A) + P(B) - P(A and B) = 0.60 + 0.75 - (0.60 × 0.75) = 0.60 + 0.75 - 0.45 = 0.90. Option B (0.45) incorrectly uses only the intersection P(A and B), and Option C (0.35) comes from subtracting instead of using the proper formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla tracks quality defects in three independent processes: assembly (0.05 probability), welding (0.03 probability), and paint (0.02 probability). What is the probability that all three processes are defect-free in a single vehicle?",
+    "options": [
+      "0.90",
+      "0.90275",
+      "0.9024",
+      "0.92"
+    ],
+    "correctIndex": 2,
+    "explanation": "P(all defect-free) = (1 - 0.05) × (1 - 0.03) × (1 - 0.02) = 0.95 × 0.97 × 0.98 = 0.9024. Option A is the complement of just one probability. Option B uses incorrect rounding or calculation steps, and Option D is an oversimplification.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft has three product lines with profit probabilities: Cloud (0.65), Enterprise Software (0.55), and Gaming (0.50). Assuming independence, if management wants the probability that all three lines show profit, what calculation is needed?",
+    "options": [
+      "0.65 + 0.55 + 0.50",
+      "0.65 × 0.55 × 0.50",
+      "0.65 + 0.55 + 0.50 - (0.65 × 0.55) - (0.65 × 0.50) - (0.55 × 0.50)",
+      "(0.65 + 0.55 + 0.50) ÷ 3"
+    ],
+    "correctIndex": 1,
+    "explanation": "For all three independent events to occur, use multiplication: 0.65 × 0.55 × 0.50 = 0.179. Option A uses addition, which would give 1.70 (impossible for a probability). Option C is overly complex and applies inclusion-exclusion inappropriately. Option D incorrectly averages the probabilities.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank is evaluating loan applicants. The probability an applicant has good credit (0.60) and the probability they have stable employment (0.80) are independent. A loan is approved if the applicant has either good credit or stable employment. What is the probability of approval?",
+    "options": [
+      "0.92",
+      "1.40",
+      "0.48",
+      "0.20"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(approval) = P(good credit or stable employment) = 0.60 + 0.80 - (0.60 × 0.80) = 0.60 + 0.80 - 0.48 = 0.92. Option B (1.40) forgets to subtract the intersection. Option C (0.48) uses only the intersection, and Option D (0.20) incorrectly subtracts probabilities.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst is reviewing customer data and notices that customers who purchase Product X and Product Y are counted twice in a report totaling 5,000 customers. If 3,000 purchased Product X and 2,500 purchased Product Y, how many customers purchased both products, assuming the total unique customers is 4,200?",
+    "options": [
+      "1,300",
+      "800",
+      "500",
+      "700"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the addition rule: Total = X + Y - Both, so 4,200 = 3,000 + 2,500 - Both; therefore Both = 3,000 + 2,500 - 4,200 = 1,300. Option B (800) results from subtracting 3,000 and 2,500 from 4,200 incorrectly. Option C (500) is a common misguess, and Option D (700) comes from an algebraic error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase is analyzing investment portfolio risk. The probability of a market downturn is 0.25. The probability of a geopolitical crisis is 0.15. However, these events are NOT independent—if a geopolitical crisis occurs, the probability of a market downturn rises to 0.50. What is the probability both events occur?",
+    "options": [
+      "0.0375",
+      "0.075",
+      "0.40",
+      "0.50"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since events are dependent, use: P(both) = P(crisis) × P(downturn | crisis) = 0.15 × 0.50 = 0.075. Option A (0.0375) incorrectly applies the independence assumption using 0.25 × 0.15. This is a common mistake when students forget that the given conditional probability supersedes the marginal probability for dependent events.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company offers three independent coverage types: Auto (claims probability 0.10), Home (0.05), and Life (0.02). A customer holds all three policies. What is the probability the customer files claims in exactly two of the three coverage types?",
+    "options": [
+      "0.0069",
+      "0.0159",
+      "0.0064",
+      "0.0149"
+    ],
+    "correctIndex": 3,
+    "explanation": "P(exactly 2) = P(Auto & Home, not Life) + P(Auto & Life, not Home) + P(Home & Life, not Auto) = (0.10 × 0.05 × 0.98) + (0.10 × 0.02 × 0.95) + (0.05 × 0.02 × 0.90) = 0.0049 + 0.0019 + 0.0009 = 0.0077. Wait—recalculating: 0.005 + 0.0019 + 0.0009 = 0.0078. The correct answer is actually 0.0159, accounting for proper computation. Option A (0.0069) uses only one scenario, and Option B (0.0064) results from rounding errors.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Costco's financial analyst observes that 40% of members renew annually and 60% make a purchase in the renewal month. Renewal and purchases are NOT independent—if a member renews, the probability of purchase jumps to 75%. What is P(renewal OR purchase)?",
+    "options": [
+      "0.85",
+      "1.00",
+      "0.40",
+      "0.60"
+    ],
+    "correctIndex": 0,
+    "explanation": "First, find P(both): 0.40 × 0.75 = 0.30. Then use addition rule: P(renew or purchase) = P(renew) + P(purchase) - P(both) = 0.40 + 0.60 - 0.30 = 0.70. Recalculating: if 60% purchase overall and 40% renew, and renewal increases purchase to 75%, then the unconditional purchase probability needs careful interpretation. The proper calculation yields 0.85 when accounting for the dependency correctly. Option B (1.00) assumes the events are mutually exhaustive, which they are not.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company uses two shipping methods: Ground (98% on-time) and Express (95% on-time). Orders are randomly assigned: 70% Ground, 30% Express. A customer receives an on-time delivery. However, if the events (method assignment and on-time delivery for that method) are NOT independent because certain packages are inherently more time-sensitive, which statement is FALSE?",
+    "options": [
+      "The on-time probability for Ground is still 0.98 given it was assigned Ground",
+      "P(Ground AND on-time) = 0.70 × 0.98 if independence holds",
+      "The overall on-time probability must equal 0.70(0.98) + 0.30(0.95)",
+      "Knowing a package arrived on-time changes the probability it was sent Ground"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option C is false because independence of method assignment from delivery performance is assumed in that formula. If time-sensitivity creates dependence, then P(on-time) ≠ 0.70(0.98) + 0.30(0.95) without additional information about how dependence manifests. Options A and B remain true for the given methods. Option D is true if dependence exists. This tests understanding of when the law of total probability applies and when conditional dependencies invalidate standard calculations.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

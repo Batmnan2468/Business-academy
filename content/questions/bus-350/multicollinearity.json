@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Amazon Web Services, an analyst builds a regression model to predict server uptime (in hours) using CPU utilization (%), RAM usage (%), and network latency (ms). Which of the following best defines multicollinearity?",
+    "options": [
+      "The problem that two or more predictor variables are highly correlated with each other",
+      "The problem that the dependent variable is not normally distributed",
+      "The problem that the residuals show a nonlinear pattern",
+      "The problem that heteroscedasticity violates the constant variance assumption"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity occurs when predictor variables are highly correlated, making it difficult to isolate each variable's individual effect. Option B concerns normality of the dependent variable, option C concerns model specification, and option D concerns heteroscedasticity—all different regression assumption violations.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Starbucks marketing manager runs a multiple regression using advertising spend ($1,000s), brand reputation score (1–100), and marketing team size to predict quarterly sales ($100,000s). What is the primary consequence of severe multicollinearity among the predictors?",
+    "options": [
+      "Standard errors of the regression coefficients become very large, making them unreliable",
+      "The R-squared value becomes negative and uninterpretable",
+      "The dependent variable loses its normal distribution",
+      "The sample size becomes too small for estimation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity inflates standard errors, widening confidence intervals and reducing t-statistics, making coefficients unreliable even if the overall model fits well. Option B is incorrect because R-squared cannot be negative in OLS regression. Options C and D are unrelated to multicollinearity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is a common diagnostic tool to detect multicollinearity in a regression model?",
+    "options": [
+      "Variance Inflation Factor (VIF)",
+      "Durbin-Watson statistic",
+      "Cook's distance",
+      "Akaike Information Criterion (AIC)"
+    ],
+    "correctIndex": 0,
+    "explanation": "VIF measures how much the variance of a regression coefficient is inflated due to correlation with other predictors; VIF > 5 or 10 indicates problematic multicollinearity. Durbin-Watson tests for autocorrelation, Cook's distance identifies influential outliers, and AIC compares model fit—none detect multicollinearity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A JPMorgan Chase analyst observes that the correlation between 'Employee Tenure (years)' and 'Annual Salary ($1,000s)' is 0.78, while the correlation between 'Years in Current Role' and 'Annual Salary' is 0.76. What does this suggest about potential multicollinearity?",
+    "options": [
+      "Multicollinearity is likely present because both tenure variables are strongly correlated with salary",
+      "Multicollinearity cannot exist because correlations with the dependent variable are strong",
+      "Multicollinearity is impossible because tenure variables have different definitions",
+      "Multicollinearity is irrelevant if R-squared exceeds 0.80"
+    ],
+    "correctIndex": 0,
+    "explanation": "High correlations between independent variables (multicollinearity) are the problem, not high correlations with the dependent variable. Options B and C misunderstand the definition of multicollinearity. Option D confuses overall model fit with the severity of multicollinearity—high R-squared can still mask unreliable individual coefficients.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Tesla regression model uses quarterly revenue ($millions), number of vehicles produced (thousands), and production efficiency (%) as predictors of profitability. A correlation matrix shows correlations of 0.85 between revenue and vehicles produced. What practical issue does this multicollinearity create?",
+    "options": [
+      "The coefficient estimates become unstable and sensitive to small data changes, making it hard to isolate each variable's effect",
+      "The model cannot generate predictions for new data",
+      "The dependent variable must be transformed to a logarithmic scale",
+      "All coefficients must be positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "High correlation between predictors inflates standard errors and makes coefficients unstable—tiny changes in the data can flip coefficient signs or magnitudes. Option B is incorrect; multicollinearity does not prevent prediction. Options C and D are unrelated to multicollinearity.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Nike analyst builds a model to predict monthly revenue ($10,000s) using online ad spend ($1,000s), influencer marketing spend ($1,000s), and social media engagement score (0–100). Computing the correlation matrix, they find: Corr(Ad Spend, Influencer Spend) = 0.92. What is the most appropriate first remedial step?",
+    "options": [
+      "Remove one of the highly correlated variables or combine them into a single index",
+      "Increase the sample size to 10,000 observations to wash out the correlation",
+      "Transform both variables using logarithms",
+      "Multiply all coefficients by the correlation value to adjust for multicollinearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Removing or combining highly correlated predictors is a standard remedy because it eliminates the source of multicollinearity. Option B misunderstands multicollinearity—sample size does not eliminate inherent correlations. Option C (transformation) does not address correlation between variables. Option D is a non-existent statistical procedure.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs regresses stock returns (%) on beta (market sensitivity), price-to-earnings ratio, and dividend yield (%) across 150 firms. The VIF for dividend yield is 7.2, for P/E ratio is 6.8, and for beta is 2.1. Using a standard VIF threshold of 5, which variable(s) show problematic multicollinearity?",
+    "options": [
+      "Dividend yield and P/E ratio both exceed VIF = 5",
+      "Only beta exceeds VIF = 5",
+      "Only dividend yield exceeds VIF = 5",
+      "All three variables are below the threshold and have no multicollinearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "VIF > 5 indicates problematic multicollinearity. Dividend yield (7.2) and P/E ratio (6.8) both exceed 5, while beta (2.1) does not. Option B incorrectly identifies beta, option C misses P/E ratio, and option D incorrectly claims two variables are acceptable.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Uber analyst regresses ride demand (trips per hour) on driver availability (count), surge pricing multiplier, and average wait time (minutes) using 200 daily observations. The correlation between driver availability and surge pricing is 0.88. If the analyst removes driver availability to reduce multicollinearity, which outcome is most likely?",
+    "options": [
+      "The standard error of the surge pricing coefficient will likely decrease, making it more reliable",
+      "The R-squared will increase because fewer variables reduce model noise",
+      "The mean absolute error (MAE) will become zero",
+      "Multicollinearity will be introduced with the remaining variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Removing one of two highly correlated predictors reduces multicollinearity and lowers the standard error of the remaining predictor's coefficient, improving reliability and t-statistics. Option B is incorrect; removing a predictor typically decreases R-squared (adjusted R-squared may improve, but not R-squared itself). Option C is unrealistic. Option D contradicts the logic of removing a correlated variable.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Coca-Cola analyst runs a regression on 120 quarterly observations with advertising spend ($millions), brand awareness (1–10 scale), and market share (%) predicting net revenue ($100 millions). The correlation between advertising spend and brand awareness is 0.79. What is the most likely direction of bias in the coefficient standard errors?",
+    "options": [
+      "Standard errors are inflated (larger than they would be without multicollinearity)",
+      "Standard errors are biased downward (smaller than they should be)",
+      "Standard errors become zero",
+      "Standard errors are unaffected by multicollinearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity inflates standard errors because the regression algorithm cannot precisely separate each variable's contribution. Option B is backwards—multicollinearity increases, not decreases, standard errors. Option C is unrealistic. Option D is the definition of the problem multicollinearity creates.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Procter & Gamble analyst builds a model predicting product sales ($100,000s) using TV ad spend ($10,000s), digital ad spend ($10,000s), and total marketing budget ($10,000s) across 60 product launches. The analyst later discovers that total marketing budget = TV ad spend + digital ad spend + overhead. What type of multicollinearity problem exists?",
+    "options": [
+      "Perfect multicollinearity, because total budget is an exact linear combination of the two ad spend variables",
+      "Moderate multicollinearity due to high correlation with the dependent variable",
+      "No multicollinearity because all three variables are on the same scale",
+      "Severe heteroscedasticity that mimics multicollinearity symptoms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Perfect multicollinearity occurs when one predictor is an exact linear combination of others; here, total budget is definitionally composed of the other variables. This makes the regression matrix singular and prevents estimation. Option B confuses correlation with the dependent variable. Option C ignores the definitional relationship. Option D conflates multicollinearity with heteroscedasticity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft's data scientist estimates a model: Operating Income ($millions) = β₀ + β₁(Revenue) + β₂(R&D Spending) + β₃(Employee Count) + ε. The correlation matrix shows Corr(Revenue, Employee Count) = 0.81. The analyst reports that β₂ (R&D Spending) has a coefficient of 0.45 with a standard error of 0.28 and t-statistic of 1.61. Before trusting this result, what should the analyst consider?",
+    "options": [
+      "Although multicollinearity is present (correlation 0.81), it may not directly affect R&D coefficient unless R&D is also highly correlated with revenue or employees",
+      "The multicollinearity definitely renders the R&D coefficient unreliable because the t-statistic is below 2.0",
+      "The standard error of 0.28 proves that multicollinearity is not a problem",
+      "R&D spending must be removed because its t-statistic is insignificant"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity's effect depends on which variables are correlated with which. A high correlation between Revenue and Employee Count does not directly inflate the R&D coefficient's standard error unless R&D is also correlated with one of those two. Option B confuses statistical significance with multicollinearity detection. Option C is wrong; standard error of 0.28 is plausible even with multicollinearity. Option D conflates correlation patterns with removal decisions.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Bank of America credit risk analyst fits a logistic regression to predict loan default using debt-to-income ratio (%), credit score, and number of prior defaults. Checking VIF values: debt-to-income = 8.5, credit score = 9.2, number of prior defaults = 4.1. The analyst considers creating a principal component (weighted average) of the first two variables. Why is this remedy questionable for a logistic regression context?",
+    "options": [
+      "Principal components lose interpretability—the analyst cannot explain how much debt-to-income versus credit score each individually affect default probability",
+      "Principal components automatically eliminate all multicollinearity regardless of correlation magnitude",
+      "Logistic regression does not allow dimensionality reduction techniques",
+      "Principal components increase variance inflation factor values further"
+    ],
+    "correctIndex": 0,
+    "explanation": "While principal components are a valid statistical remedy for multicollinearity, they create linear combinations of original variables that are harder to interpret in business contexts. Stakeholders want to know each variable's isolated effect on default probability, which a principal component obscures. Option B is incorrect; PCA works but interpretation suffers. Option C is false—PCA is used with logistic regression. Option D is backwards; PCA reduces multicollinearity.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Walmart regression model predicts quarterly same-store sales growth (%) using competitor store count, gas prices ($/gallon), and unemployment rate (%) across 80 quarters in a regional market. The analyst notices the model R² = 0.82 and all coefficients are statistically significant (p < 0.05). However, the correlation between gas prices and unemployment is 0.77. What is the most likely explanation for the apparent paradox?",
+    "options": [
+      "High R-squared and significance can coexist with multicollinearity; the predictors together predict well, but individual coefficient estimates are unstable and unreliable",
+      "Multicollinearity is impossible when R-squared exceeds 0.80",
+      "Statistical significance proves that multicollinearity does not exist",
+      "The predictors must be removed because R-squared is inflated by multicollinearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity does not prevent overall model fit or statistical significance of individual coefficients if the overall F-test is strong; however, it inflates standard errors, making individual coefficients unstable. The model's predictive power (R²) and significance can be high while individual coefficients are unreliable. Option B directly contradicts the definition of multicollinearity. Option C confuses significance with absence of multicollinearity. Option D is imprecise; the issue is reliability, not R² inflation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An Intel manufacturing engineer regresses defect rate (per 1,000 units) on manufacturing temperature (°C), humidity (%), and oven calibration drift (mm) using 48 production batches. A pairwise correlation check reveals: Corr(Temperature, Humidity) = 0.12, Corr(Temperature, Calibration) = 0.08, Corr(Humidity, Calibration) = 0.11. The analyst computes VIF = 1.02 for all three variables. What is the correct conclusion?",
+    "options": [
+      "Multicollinearity is not a problem; all pairwise correlations are weak and VIF values are near 1.0, indicating independence",
+      "Weak pairwise correlations guarantee that no multicollinearity exists among three or more variables",
+      "VIF values below 2.0 always indicate the presence of multicollinearity",
+      "The model is invalid because correlations are nonzero"
+    ],
+    "correctIndex": 0,
+    "explanation": "VIF near 1.0 and weak pairwise correlations (all < 0.15) indicate that the predictors are largely independent, so multicollinearity is not a concern. Option B is too strong; weak pairwise correlations suggest, but don't guarantee, low multicollinearity in higher dimensions. Option C is backwards; VIF < 5 (or < 10) indicates acceptable levels. Option D misunderstands that small nonzero correlations are normal and not problematic.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company analyst regresses drug efficacy score (0–100) on molecule weight (g/mol), solubility (mg/mL), and melting point (°C) using data from 72 compounds. Multicollinearity diagnostics show: Condition Index = 15, and one eigenvalue of the correlation matrix is 0.003. What does the eigenvalue near zero indicate?",
+    "options": [
+      "A near-zero eigenvalue indicates a linear dependency among predictors, confirming severe multicollinearity",
+      "Near-zero eigenvalues prove the regression coefficients are all zero",
+      "The condition index is the only relevant diagnostic; eigenvalues are irrelevant for multicollinearity",
+      "A near-zero eigenvalue means the sample size is too small"
+    ],
+    "correctIndex": 0,
+    "explanation": "Near-zero eigenvalues of the correlation matrix indicate linear dependencies among predictors, signaling severe multicollinearity. The condition index (ratio of largest to smallest eigenvalue) of 15 further confirms this—values above 10 indicate multicollinearity. Option B is incorrect; near-zero eigenvalues don't force coefficients to zero. Option C is false; eigenvalues are a key multicollinearity diagnostic. Option D conflates eigenvalues with sample size.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

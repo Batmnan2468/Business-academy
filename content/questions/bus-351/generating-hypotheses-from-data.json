@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing analyst at Target observes that customers who purchase seasonal items in Q4 have an 68% higher repeat purchase rate in Q1 compared to those who don't. What term best describes this initial observation before statistical testing?",
+    "options": [
+      "A hypothesis",
+      "A proven causal relationship",
+      "A statistical model",
+      "A control variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "A hypothesis is an initial observation or proposed explanation based on limited data that requires testing. The analyst noticed a pattern (68% higher repeat rate) but hasn't yet tested whether this relationship is statistically significant or causal. Option B is tempting because 68% seems like a large number, but without hypothesis testing, we cannot claim causation. Option C confuses the observation with a formal model, and Option D is unrelated.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best illustrates the difference between a research question and a hypothesis in business analytics?",
+    "options": [
+      "A research question asks 'Does price elasticity affect demand?' while a hypothesis predicts 'Increasing price by 15% will decrease demand by 8-12% at Whole Foods.'",
+      "A research question must always be quantified, while a hypothesis can be qualitative",
+      "A research question is tested using statistics, while a hypothesis is tested using interviews",
+      "A research question requires a control group, while a hypothesis does not"
+    ],
+    "correctIndex": 0,
+    "explanation": "A research question is broad and exploratory, while a hypothesis is a specific, testable prediction with expected direction and magnitude. The example correctly shows that a hypothesis narrows the research question into a measurable prediction (8-12% decrease). Option B is backwards—hypotheses are more quantified. Options C and D confuse the testing methods with the definitions themselves.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Amazon, a data analyst notices that the average order value increased from $47.30 in 2022 to $54.80 in 2023. What is the first step the analyst should take before generating a hypothesis about the cause of this change?",
+    "options": [
+      "Examine whether this increase is statistically significant and consistent across customer segments",
+      "Immediately assume the increase was caused by improved product recommendations",
+      "Recommend a 10% price increase based on the pattern",
+      "Conduct focus groups to explain the observed change"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before generating causal hypotheses, an analyst must first verify that the observed change is real (statistically significant) and understand its scope (which segments drove it). The 15.8% increase might be driven by one segment or might be explained by inflation. Option B jumps to a conclusion without investigation. Option C premature implementation based on correlation. Option D skips the analytical phase of data examination.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A hypothesis stating 'Customer retention will improve if we reduce response time on support tickets' violates which principle of good hypothesis generation?",
+    "options": [
+      "It lacks specificity about the expected magnitude of improvement and the baseline response time",
+      "It includes too many variables",
+      "It is not based on historical data",
+      "It does not use a control group"
+    ],
+    "correctIndex": 0,
+    "explanation": "A testable hypothesis should specify measurable outcomes (e.g., 'reducing response time from 24 hours to 4 hours will increase retention by 5-8%'). The given hypothesis is vague about what 'improve' means and what the baseline is. Option B is incorrect because the hypothesis is actually quite focused on two variables. Option C confuses the source of the hypothesis with its quality. Option D misunderstands—hypotheses themselves don't require control groups; experiments do.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In hypothesis generation from data, what is the critical distinction between pattern recognition and overfitting?",
+    "options": [
+      "Pattern recognition identifies genuine relationships; overfitting finds coincidental patterns that won't generalize to new data",
+      "Pattern recognition uses quantitative methods; overfitting uses qualitative methods",
+      "Pattern recognition requires a hypothesis; overfitting does not",
+      "Pattern recognition is always causal; overfitting is correlational"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pattern recognition identifies real, reproducible relationships in data. Overfitting occurs when a model fits noise in the current dataset so closely that it fails on new data. For example, if a Starbucks analyst notices that sales spike on days when it rains AND the stock market drops AND the CEO tweets—overfitting would treat this as a real pattern when it's likely coincidence. Options B, C, and D confuse different analytical concepts with the overfitting problem.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Netflix analyst discovers that viewers who watch crime dramas have an average subscription length of 31 months versus 18 months for those who don't. If the analyst wants to test whether crime drama viewing causes longer retention, which confounding variable is most critical to investigate?",
+    "options": [
+      "Age or subscription tier level, since older customers and premium subscribers might watch crime dramas more AND have longer natural retention",
+      "The number of crime dramas available in the catalog",
+      "The production budget of the crime dramas",
+      "Whether the viewer has a smart TV or mobile device"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confounding variables are factors that correlate with both the independent variable (crime drama watching) and the outcome (retention). Age and subscription tier are classic confounders—premium tier customers tend to stay longer AND watch more content, and older customers may prefer crime dramas AND have higher commitment. This could entirely explain the 31-month difference without crime dramas causing retention. Options B and C are production-side factors that don't affect customer retention directly. Option D is a viewing device choice unlikely to correlate with genre preference or retention in this causal direction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Costco's data team observes that membership renewals are 22% higher in months when the company runs a 'member appreciation event' versus months without events. To properly test whether events cause higher renewals, the team should control for which factor first?",
+    "options": [
+      "Seasonality, since events might be scheduled in naturally high-renewal months (e.g., January New Year)",
+      "The number of products sold during events",
+      "Employee staffing levels at warehouses",
+      "The geographic location of warehouses"
+    ],
+    "correctIndex": 0,
+    "explanation": "Seasonality is a critical confounding variable. Costco might schedule events in January (New Year resolutions = higher renewals naturally) or other peak months, making it impossible to isolate the event's true effect. The 22% difference could be entirely seasonal. This must be controlled for by comparing event months to historical baseline renewals in those same months. Options B, C, and D are related to operations but don't directly confound the relationship between events and renewals in the same way.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce analyst at Shopify notices that cart abandonment rate is 68% for mobile users and 34% for desktop users. Before hypothesizing that 'mobile-first design improvements will reduce abandonment,' what analytical step is most critical?",
+    "options": [
+      "Check whether the data stratifies by product category, price point, and user experience level, since abandonment causes might differ",
+      "Calculate the percentage of total traffic from mobile versus desktop",
+      "Test the mobile app's loading speed metrics",
+      "Survey users about why they abandoned carts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before attributing the difference to the platform itself, the analyst must determine whether the pattern holds across all product types and user segments. For instance, high-value luxury items might have higher abandonment on mobile regardless of design (risk aversion), while cheap items might abandon at similar rates. Different user experience levels also affect behavior. Option B provides context but doesn't explain the difference. Option C tests a specific design element prematurely. Option D skips the data stratification needed to frame the right hypothesis.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services analyst at Charles Schwab calculates that high-net-worth clients (>$1M assets) have 3.8x higher trading frequency than mass-market clients. The analyst proposes the hypothesis: 'Offering premium support improves trading frequency.' What is the primary logical flaw in this hypothesis?",
+    "options": [
+      "It reverses causation—higher trading frequency likely attracts premium support, not the other way around; the observed difference is probably due to investment sophistication or risk tolerance, not support quality",
+      "It requires a larger sample size to test",
+      "It doesn't account for the definition of 'high net worth'",
+      "It assumes causation without establishing correlation first"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is reverse causation: Schwab already offers premium support to high-net-worth clients who trade frequently. The higher trading frequency is more likely caused by wealth level, investment knowledge, and risk appetite than by support quality. The hypothesis confuses which variable causes the other. Option B misses the logical problem. Option C is a definitional issue but doesn't address the causal flaw. Option D is incorrect because correlation is already established (3.8x difference); the problem is inferring causation in the wrong direction.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Zillow, the analytics team observes a correlation of r = 0.72 between property listing price and days-on-market (higher prices = longer to sell). A junior analyst proposes: 'Reducing prices will reduce days-on-market.' What is the most significant issue with this hypothesis?",
+    "options": [
+      "Correlation does not imply causation; underlying variables like market condition or property quality likely drive both price and selling time, making a price-cutting strategy potentially ineffective",
+      "The correlation coefficient is too strong to warrant hypothesis testing",
+      "Days-on-market and price are perfectly correlated, so no experiment is possible",
+      "The hypothesis should focus on causation between days-on-market and price instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 0.72 correlation might reflect that luxury properties (high price) naturally take longer to find the right buyer regardless of price cuts, or that properties in slow markets stay longer AND are priced lower to compensate. Simply cutting prices on slow-moving properties could harm profit without actually affecting the underlying cause. This is a classic confounding scenario. Option B is wrong because 0.72 is strong but not perfect (which would be 1.0), and strong correlations still need causal investigation. Option C is wrong—0.72 is not perfect correlation. Option D inverts the logic.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company's data team observes that patients in clinical trial regions with higher doctor-patient ratios show 34% better medication adherence. To convert this observation into a rigorous hypothesis, which element is still missing?",
+    "options": [
+      "A proposed mechanism explaining why doctor-patient ratio affects adherence, and a specification of expected effect size conditional on addressing confounders like patient education, income, and comorbidities",
+      "Statistical proof that the 34% difference is causally linked to doctor-patient ratio",
+      "Evidence that doctor-patient ratio is the most important variable affecting adherence",
+      "A decision about whether to implement the hypothesis without further testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "A strong hypothesis includes the mechanism (HOW and WHY), the expected magnitude under controlled conditions, and acknowledgment of confounders. The observation of 34% is just a correlation; a hypothesis must propose the causal pathway (e.g., more doctor contact → better counseling → higher adherence) and control for confounders (e.g., wealthy regions have both higher doctor-patient ratios AND better education). Option B confuses testing with hypothesis formation. Option C is about importance ranking, not hypothesis specificity. Option D skips hypothesis testing entirely.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team at Walmart discovers that stores in the top quartile of employee training hours (80+ hours/year) have 12% higher sales per square foot and 18% lower shrinkage compared to stores with minimal training (10 hours/year). A manager proposes: 'Doubling training from 40 to 80 hours will increase sales per square foot by 6% and shrinkage by 9%.' Why is this hypothesis problematic?",
+    "options": [
+      "It assumes a linear relationship when the true relationship might be non-linear (e.g., training effectiveness plateaus after 50 hours, or diminishes at very high levels due to employee burnout)",
+      "The difference between 80+ and 10 hours is too large to measure accurately",
+      "It doesn't account for the fact that training correlates with sales",
+      "It should propose equal increases in both metrics"
+    ],
+    "correctIndex": 0,
+    "explanation": "The manager observed a difference between 80+ and 10 hours (70-hour gap) and proportionally halved the expected effect. However, the relationship may not be linear: the jump from 10 to 50 hours might yield 8% sales gain, but 50 to 80 might yield only 2% more due to diminishing returns or ceiling effects. Additionally, the relationship might be non-monotonic—excessive training hours could cause employee fatigue or turnover, negating benefits. This is a classic overgeneralization from endpoint data. Option B confuses measurement precision with hypothesis validity. Option C mixes correlation and causation language. Option D imposes an arbitrary constraint on proportional effects.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company's data shows that customers who file 0 claims in year 1 have a 94% renewal rate, while those with 2+ claims have a 67% renewal rate. An analyst hypothesizes: 'High claim frequency causes customer attrition.' A colleague argues this hypothesis confuses selection effects with causal mechanisms. What does the colleague mean?",
+    "options": [
+      "Customers with high claims might be riskier or less satisfied inherently; the low renewal could reflect that high-claim customers were always more likely to leave, not that claims caused them to leave",
+      "The hypothesis should measure the effect on customers who have exactly 2 claims, not 2 or more",
+      "The data needs to be stratified by age and vehicle type before drawing conclusions",
+      "The colleague is incorrect; if claims correlate with non-renewal, causation is established"
+    ],
+    "correctIndex": 0,
+    "explanation": "Selection effects occur when the group receiving the 'treatment' (high claims) differs fundamentally from the control group before the treatment occurred. High-claim customers might be inherently less satisfied, have older vehicles, or be higher-risk drivers who were always planning to switch. The 94% vs. 67% difference may reflect pre-existing differences, not the causal impact of filing claims. A true causal hypothesis would require controlling for customer satisfaction, vehicle condition, and risk score before the claims period. Option B is a statistical precision issue, not a selection effect problem. Option C is relevant for confounding but doesn't capture the selection bias concern. Option D denies the distinction between correlation and causation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A SaaS company's analytics team observes that account expansion rate (% of customers increasing spend month-over-month) is 31% for accounts with dedicated account managers and 8% for self-service accounts. Before hypothesis testing, the team discovers that 89% of customers assigned account managers have annual spend >$50K, while only 12% of self-service customers do. What does this reveal about the original hypothesis?",
+    "options": [
+      "The apparent effect of account managers is likely confounded by customer spending level; high-spend customers are assigned managers because they have growth potential, and high-spend customers expand at higher rates regardless of manager assignment",
+      "The hypothesis is correct; the spending difference proves account managers are effective",
+      "The sample is too small to reach any conclusions",
+      "Account managers should be assigned to lower-spend customers to test effectiveness"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic case of non-random assignment creating confounding. Dedicated account managers are assigned to high-spend, high-potential accounts—these customers would likely expand at higher rates anyway (they have budget, growth plans, and company investment in them). The 31% vs. 8% gap is confounded by customer tier. To test the true effect of account managers, the team must either (1) compare same-spend customers with and without managers, or (2) randomize manager assignment. Option B mistakes the selection of managers with causal effect. Option C is an evasion. Option D proposes a test but doesn't diagnose the actual confounding problem.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An airline's data scientists hypothesize: 'Offering 15% discount on Tuesday flights will increase booking volume by 8-12%.' Which element of this hypothesis is least rigorous and should be challenged before testing?",
+    "options": [
+      "The predicted 8-12% increase lacks justification about why discounts produce elasticity in this specific range; it should reference historical elasticity estimates or competitor data",
+      "The hypothesis doesn't specify which routes to test on",
+      "The hypothesis assumes that only Tuesdays are affected by discounting",
+      "The hypothesis uses too wide a range (8-12% vs. a point estimate)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The team should ground the expected effect size in evidence: Is this based on historical price elasticity data from their own airline (-1.2% volume change per 1% price change, suggesting 15% discount yields 18% volume increase)? Do competitors' discounts show similar patterns? The 8-12% range appears arbitrary without this justification. Option B is a design detail resolvable during testing. Option C is reasonable since price sensitivity likely differs by day. Option D—ranges are actually more rigorous than point estimates because they acknowledge uncertainty.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

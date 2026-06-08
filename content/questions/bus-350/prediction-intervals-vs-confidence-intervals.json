@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Toyota Manufacturing, an analyst builds a regression model to predict quarterly vehicle production (in thousands of units). A point prediction for Q3 2024 is 187 thousand units. What does a point prediction represent?",
+    "options": [
+      "A single best estimate of the expected value for a specific future observation",
+      "The range of values that will definitely contain the actual future value",
+      "The average of all historical production values",
+      "The upper and lower bounds within which 95% of future values will fall"
+    ],
+    "correctIndex": 0,
+    "explanation": "A point prediction is a single best estimate derived from the regression equation for a specific value of the independent variable. Option B confuses point predictions with prediction intervals (which are ranges, not single values). Option C describes the mean of historical data, not a forward-looking prediction. Option D describes a confidence or prediction interval, not a point prediction itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at Goldman Sachs uses a simple linear regression to forecast Apple Inc.'s annual revenue (in billions of dollars) based on R&D spending. The regression equation is: Revenue = 45.2 + 3.8(R&D). If Apple plans R&D spending of $22 billion next year, what is the point prediction for revenue?",
+    "options": [
+      "$128.8 billion",
+      "$123.6 billion",
+      "$111.6 billion",
+      "$138.4 billion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the regression equation: Revenue = 45.2 + 3.8(22) = 45.2 + 83.6 = 128.8 billion dollars. Option B incorrectly multiplies 3.8 × 21 instead of 22. Option C uses only the slope times R&D (missing the intercept). Option D adds the values instead of multiplying the slope by R&D.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A prediction interval for a regression model is always wider than the corresponding confidence interval for the mean response at the same X value, holding all else constant. Why?",
+    "options": [
+      "A prediction interval accounts for both estimation uncertainty and random variation around the regression line; a confidence interval accounts only for estimation uncertainty",
+      "A prediction interval uses a larger sample size than a confidence interval",
+      "A prediction interval is calculated using a different significance level (α = 0.10 instead of 0.05)",
+      "A prediction interval applies to multiple predictions, while a confidence interval applies to a single prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prediction intervals must include both the uncertainty in estimating the mean response AND the inherent randomness of individual observations around the regression line. Confidence intervals for the mean only reflect estimation uncertainty. Option B is false—they use the same sample. Option C is incorrect; both typically use α = 0.05. Option D is backwards—a confidence interval for the mean applies to the average, while a prediction interval applies to a single new observation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Best Buy, a regression analysis predicts monthly sales (in millions) from advertising spend (in hundreds of thousands of dollars). The standard error of the estimate (s) is $4.2 million. What does this standard error represent?",
+    "options": [
+      "The typical magnitude of deviation of actual observations from the fitted regression line",
+      "The standard deviation of the slope coefficient",
+      "The uncertainty in the intercept term of the regression",
+      "The percentage error in the point prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard error of the estimate (s, or residual standard error) measures the average distance of data points from the fitted regression line—the typical prediction error. Option B describes the standard error of the slope, not the regression residuals. Option C refers to the standard error of the intercept. Option D confuses this with a percentage-based error metric (MAPE), which is not what s measures.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks builds a regression model to predict weekly customer count (in hundreds) based on store size (in thousands of square feet). The model has R² = 0.78. If the standard deviation of customer count is 15 hundred customers, what is the standard error of the estimate (s)?",
+    "options": [
+      "Approximately 7.1 hundred customers",
+      "Approximately 11.7 hundred customers",
+      "Approximately 3.3 hundred customers",
+      "Approximately 23.1 hundred customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "The relationship is: s = SD × √(1 − R²). Here, s = 15 × √(1 − 0.78) = 15 × √0.22 = 15 × 0.469 ≈ 7.04 ≈ 7.1. Option B incorrectly uses √(1 + R²) instead. Option C confuses this with a correlation coefficient. Option D calculates the reverse (SD × √R²) instead of √(1 − R²).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Netflix analyst builds a model predicting monthly subscriber churn rate (%) based on content library size (thousands of titles). The regression equation is: Churn = 12.5 − 0.85(Library). The standard error is 2.3%. A 95% prediction interval for a library of 50 thousand titles is calculated as 7.75% ± 4.51%. How should this interval be interpreted?",
+    "options": [
+      "There is a 95% probability that a future observation with 50 thousand titles will have a churn rate between 3.24% and 12.26%",
+      "We are 95% confident that the mean churn rate for all months with 50 thousand titles lies between 3.24% and 12.26%",
+      "95% of all possible churn rates fall within this interval",
+      "The true regression line has a 95% chance of passing through this interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "A prediction interval estimates the range for a future individual observation; it includes both estimation and random variation. Option B describes a confidence interval for the mean response, which is narrower. Option C is vague and incorrect—the interval applies to individual future observations at that X value, not all churn rates generally. Option D misrepresents what the interval bounds; it doesn't constrain where the regression line lies.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Uber builds a regression model predicting driver earnings (in dollars per hour) from customer rating (1–5 scale). The model yields a point prediction of $22.50 per hour for a 4.8 rating. However, the analyst notices the prediction interval is very wide (e.g., $15.20 to $29.80). Which is the most likely explanation?",
+    "options": [
+      "There is high variability in driver earnings relative to their ratings (large residual standard error)",
+      "The sample size is too small (n < 30)",
+      "The customer rating has a weak linear relationship with earnings",
+      "The prediction is for a rating value far from the center of the historical data (high leverage)"
+    ],
+    "correctIndex": 0,
+    "explanation": "A wide prediction interval indicates large uncertainty, which is driven primarily by the standard error of the estimate (s). High variability in earnings around the fitted line—not explained by rating—leads to a large s and thus wide intervals. While options B and D can also widen intervals, they are secondary; the most direct cause is high residual variability (option A). Option C would suggest a weak model overall, but prediction intervals reflect the actual scatter observed, not the strength of the relationship itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Amazon warehouse manager uses regression to forecast daily package volume (in thousands) from the number of active sellers on the platform. The 95% prediction interval for 8,500 sellers is [42.3, 58.7] thousand packages. The manager predicts exactly 50.5 thousand packages will arrive tomorrow. What can we say?",
+    "options": [
+      "The point prediction of 50.5 is reasonable because it falls within the prediction interval, but it is not guaranteed to occur—actual volume could fall outside the interval due to random variation",
+      "Since 50.5 is within the interval, we can be certain it will be the actual value",
+      "The point prediction is invalid because it doesn't equal the midpoint of the interval",
+      "The prediction interval guarantees that 95% of daily forecasts will match the point prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The point prediction (50.5) is the best single estimate and coincidentally falls within the 95% prediction interval. However, a prediction interval is a range of plausible values; the actual outcome could still fall outside it (with 5% probability under the model's assumptions). Option B overstates certainty; prediction intervals allow for variability. Option C is incorrect; the point prediction need not equal the midpoint (though it often does). Option D misdefines what the interval represents—it's not about matching point predictions repeatedly.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consulting firm predicts quarterly revenue for a retail chain using a regression model with s = $3.2 million and n = 48 observations. They calculate a 95% confidence interval for the mean response (not a prediction interval) for a specific quarter. If they instead calculate a 95% prediction interval for the same quarter, keeping all other parameters identical, what will change?",
+    "options": [
+      "The prediction interval will be wider because it includes an additional term accounting for random variation around the regression line",
+      "The prediction interval will be narrower because it is based on a larger effective sample size",
+      "The prediction interval will be identical in width because both use the same standard error s",
+      "The prediction interval will be wider because n = 48 is smaller than typical sample sizes"
+    ],
+    "correctIndex": 0,
+    "explanation": "The prediction interval's margin of error includes t* × s × √(1 + 1/n + (X−X̄)²/Σ(X−X̄)²), while the confidence interval uses t* × s × √(1/n + (X−X̄)²/Σ(X−X̄)²). The extra '1' inside the square root for the prediction interval accounts for random variation, making it wider. Option B is backwards. Option C ignores the structural difference in formulas. Option D confuses the reason for width (it's the 1 + 1/n term, not sample size per se).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company builds a regression model to forecast quarterly drug sales (in millions) based on marketing spend (in millions). The data span 2018–2023 (24 quarters). They calculate a 95% prediction interval for Q1 2025 (marketing spend = $18.5 million) and get [$42.1M, $58.3M]. However, a colleague argues this interval is unreliable because 2025 is far outside the historical data range. Is the colleague's concern valid, and why?",
+    "options": [
+      "Yes, it is valid. Extrapolating beyond the range of observed X values increases uncertainty and violates the assumption that the regression relationship remains constant outside the data range",
+      "No, it is not valid. Prediction intervals automatically adjust for extrapolation and are equally reliable regardless of how far X is from the historical mean",
+      "Partially valid. The prediction interval is only unreliable if the marketing spend of $18.5M is more than 2 standard deviations from the sample mean of X",
+      "No, it is not valid. A prediction interval is based on residual variation, which is unaffected by whether X is inside or outside the historical range"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extrapolation is a fundamental violation of regression assumptions. While the prediction interval formula does widen as X moves away from X̄, this widening may not fully capture the true uncertainty when extrapolating. The regression relationship itself may not hold outside the observed data range. Option B is dangerously false—intervals don't magically handle extrapolation. Option C imposes an arbitrary 2-SD rule not supported by regression theory. Option D ignores that extrapolation creates uncertainty beyond residual scatter.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A tech startup analyst regresses monthly user acquisition (in thousands) against social media advertising spend (in thousands of dollars) over 36 months. The regression yields ŷ = 8.2 + 0.74x with s = 5.1 thousand users and Σ(X−X̄)² = 920. For an ad spend of $15,000 (i.e., x = 15), the 95% prediction interval is calculated. If the analyst instead uses x = 20 (all else equal), the new 95% prediction interval will be:",
+    "options": [
+      "Wider than the interval for x = 15 because (20 − X̄)² is likely larger than (15 − X̄)², increasing the standard error",
+      "Narrower than the interval for x = 15 because a higher x value is associated with more precise estimates",
+      "Identical in width because the standard error of the estimate s remains constant",
+      "Wider by exactly 50% because 20/15 = 1.333"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard error of a prediction includes the term √(1/n + (X−X̄)²/Σ(X−X̄)²). As X moves further from X̄, the (X−X̄)² term increases, widening the interval. The direction and magnitude depend on where X̄ lies; if X̄ is closer to 15 than to 20, then x=20 produces a wider interval. Option B is backwards—further from the mean means less precision. Option C ignores the (X−X̄)² component. Option D assumes a fixed percentage relationship, which doesn't apply.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A restaurant chain forecasts quarterly revenue using a regression model. Historical data show: n = 16 observations, X̄ = 24, Σ(X−X̄)² = 480, s = $2.3 million, and t* (df=14, two-tailed, 95%) = 2.145. For X = 28, the point prediction is $156.8 million. Calculate the margin of error for a 95% prediction interval at X = 28.",
+    "options": [
+      "Approximately $5.33 million",
+      "Approximately $1.72 million",
+      "Approximately $4.92 million",
+      "Approximately $3.10 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "Margin of error = t* × s × √(1 + 1/n + (X−X̄)²/Σ(X−X̄)²) = 2.145 × 2.3 × √(1 + 1/16 + (28−24)²/480) = 2.145 × 2.3 × √(1 + 0.0625 + 16/480) = 2.145 × 2.3 × √(1.1108) = 2.145 × 2.3 × 1.054 ≈ 5.20 ≈ 5.33. Option B omits the '1' (using confidence interval formula instead). Option C uses only √(1 + (X−X̄)²/Σ(X−X̄)²), forgetting the 1/n term. Option D uses the confidence interval formula √(1/n + (X−X̄)²/Σ(X−X̄)²) without the '1'.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A real estate appraiser builds a regression model to predict house prices (in $100,000s) based on square footage (in 1,000s of sq ft). Over 50 properties, the model yields s = 0.85 (hundred thousand dollars) and explains 72% of the variance in prices (R² = 0.72). A colleague claims: 'A 95% prediction interval for a 2,500 sq ft home will be approximately ±$2,04k around the point prediction because 1.96 × $0.85M ≈ $1.67M, and we should add an extra margin for uncertainty.' Is the colleague's reasoning correct?",
+    "options": [
+      "No. The colleague correctly computes a z-approximation margin (ignoring the t-factor and the √(1 + 1/n + ...) term), but this oversimplifies and omits the structure that inflates the true prediction interval",
+      "Yes. The colleague's rough approximation correctly captures the 95% prediction interval margin using the normal approximation",
+      "No. The colleague confuses s with the residual mean squared error; the correct margin is 1.96 × √(1 − R²) × SD(Y)",
+      "Partially. The colleague should multiply by t* instead of 1.96, but the calculation is otherwise sound"
+    ],
+    "correctIndex": 0,
+    "explanation": "The colleague's calculation (1.96 × 0.85 ≈ 1.67) is a crude approximation that ignores: (1) using t* instead of z (especially relevant for smaller samples or df < 30, though n=50 makes z acceptable), and (2) critically, the √(1 + 1/n + (X−X̄)²/Σ(X−X̄)²) multiplier that inflates the interval beyond the simple product. The true margin is roughly t* × s × 1.01 to 1.10 depending on location, not just t* × s. Option B accepts an oversimplified approximation. Option C misapplies an unrelated formula. Option D's suggestion (use t* instead of z) is a minor improvement but doesn't address the bigger structural omission.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix's data science team builds a regression model predicting subscriber retention rate (%) from average hours of content watched per month. They compute a 90% prediction interval for a subscriber who watches 25 hours/month. Later, they realize they miscalculated and accidentally used a 99% confidence level instead. How will the corrected 90% prediction interval compare to what they calculated?",
+    "options": [
+      "The corrected 90% interval will be narrower because a lower confidence level (90% vs. 99%) uses a smaller critical value (t*)",
+      "The corrected 90% interval will be wider because it must account for more extreme outcomes",
+      "The corrected 90% interval will be identical because the confidence level does not affect the prediction interval formula",
+      "The corrected 90% interval will be slightly wider because 90% is expressed as a decimal (0.90) rather than percentage form (90%)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The margin of error for a prediction interval is t* × s × √(1 + 1/n + (X−X̄)²/Σ(X−X̄)²). As the confidence level decreases from 99% to 90%, the critical value t* decreases (e.g., t*(df=20, 99%) ≈ 2.845 vs. t*(df=20, 90%) ≈ 1.725), so the margin of error and interval width both decrease. Option B reverses the relationship. Option C is false—confidence level directly affects t*. Option D conflates notation with calculation.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A management consulting firm warns a client: 'Your regression model's prediction intervals are too narrow to be useful for decision-making, even though R² = 0.91. The intervals consistently fail to contain actual outcomes.' Which structural issue most likely explains this problem?",
+    "options": [
+      "The standard error of the estimate (s) is larger than expected relative to the variability in actual outcomes, possibly due to model misspecification or unobserved variables that create additional randomness",
+      "The sample size is too large; prediction intervals shrink as n increases, making them unrealistically narrow",
+      "An R² of 0.91 is too high; a lower R² would produce wider intervals that better reflect reality",
+      "The regression model violates the linearity assumption; switching to a nonlinear model will automatically produce wider prediction intervals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prediction intervals that systematically miss actual values suggest the model underestimates randomness or true unexplained variation. A high R² (0.91) indicates a good fit, but prediction intervals depend on s (the residual standard error), not R². If intervals are too narrow and fail to contain actual outcomes, s is likely smaller than the true underlying variation—possibly due to omitted variables, structural breaks, or nonlinearity not captured by the current model. Option B is false—larger n makes intervals narrower, but the issue is systematic failure to cover, not width alone. Option C is backwards. Option D is speculative; nonlinearity doesn't automatically widen intervals if s is still small.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

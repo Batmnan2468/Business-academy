@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. collected quarterly revenue data from 2022–2024 to forecast future sales. What is the first step in a full statistical workflow before conducting any analysis?",
+    "options": [
+      "Define the research question and objectives",
+      "Calculate the mean revenue across all quarters",
+      "Remove outliers from the dataset",
+      "Select a regression model"
+    ],
+    "correctIndex": 0,
+    "explanation": "The first step in any statistical workflow is to clearly define the research question, objectives, and success metrics. In Apple's case, this means specifying whether they want to forecast quarterly revenue, identify seasonal patterns, or compare growth rates. Calculating the mean (option B) is premature without understanding the goal. Removing outliers (option C) and selecting a model (option D) come later in the workflow after data exploration.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "During the data collection phase for Starbucks' customer satisfaction survey, a team gathers 4,500 responses with missing values in 12% of the 'purchase frequency' column. What is the primary concern at this stage?",
+    "options": [
+      "Data quality and completeness assessment",
+      "Determining the appropriate sample size for hypothesis testing",
+      "Calculating confidence intervals for the mean satisfaction score",
+      "Building a predictive regression model"
+    ],
+    "correctIndex": 0,
+    "explanation": "During the data collection and cleaning phase, assessing data quality—including missing values (12% here)—is the primary concern. This directly impacts downstream analysis validity. Option B is premature because sample size decisions occur before collection. Options C and D are analytical steps that come after cleaning, not during it.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's finance team is documenting their statistical analysis of cloud service adoption rates across 50 enterprise clients. Which phase of the full statistical workflow involves writing down methodology, assumptions, and reproducibility steps?",
+    "options": [
+      "Data documentation and workflow documentation",
+      "Exploratory data analysis",
+      "Hypothesis testing",
+      "Model validation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Documenting methodology, assumptions, and reproducibility is part of the data documentation and workflow documentation phase. This ensures that other analysts can follow the exact steps and verify results. Exploratory data analysis (option B) focuses on understanding patterns. Hypothesis testing (option C) and model validation (option D) are analytical steps, not documentation steps.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla collected monthly stock return data for 36 months with a mean return of 4.2% and a standard deviation of 8.7%. Before proceeding to statistical inference, what is the critical step?",
+    "options": [
+      "Perform exploratory data analysis to check for normality and outliers",
+      "Immediately conduct a t-test on the mean return",
+      "Calculate the 95% confidence interval",
+      "Build a multivariate regression model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before inference, exploratory data analysis (EDA) is critical to verify assumptions (normality, outliers, independence) that underpin inferential methods. Skipping to a t-test (option B) violates the workflow: you must understand your data first. Confidence intervals (option C) and regression (option D) are inference steps that assume your data is appropriate.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "During a statistical study of Amazon warehouse productivity, analysts discover that two measurements from a malfunction day have extremely high values. According to the full statistical workflow, what should be the first response?",
+    "options": [
+      "Investigate the cause and context before deciding whether to remove or keep them",
+      "Immediately delete both outliers to improve model fit",
+      "Transform the data using logarithmic scaling",
+      "Report both the analysis with and without these points"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct workflow approach is to investigate outliers before taking action. Understanding whether they are data entry errors, legitimate extreme events, or measurement failures informs the decision. Blindly deleting them (option B) is unethical and unscientific. Transforming (option C) and reporting both versions (option D) may follow investigation, but investigation comes first.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Goldman Sachs is analyzing quarterly trading volumes across 200 stocks. The dataset has 800 observations with a mean volume of 2.1 million shares and a standard deviation of 450,000 shares. Assuming normality, what is the standard error of the mean?",
+    "options": [
+      "15,909 shares",
+      "450,000 shares",
+      "2,100 shares",
+      "22,500 shares"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error = σ / √n = 450,000 / √800 = 450,000 / 28.28 ≈ 15,909. Option B confuses standard error with standard deviation. Option C confuses it with the mean. Option D is a calculation error from dividing by 20 instead of √800. The standard error correctly quantifies the precision of the sample mean estimate.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola's market research team surveyed 500 consumers about a new beverage launch, finding that 285 would purchase it. Calculate the 95% confidence interval for the proportion of potential buyers. (Use z = 1.96 for 95% confidence.)",
+    "options": [
+      "[0.533, 0.607]",
+      "[0.520, 0.620]",
+      "[0.500, 0.620]",
+      "[0.540, 0.600]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sample proportion p̂ = 285/500 = 0.57. Standard error = √[p̂(1-p̂)/n] = √[(0.57×0.43)/500] = √0.0004902 ≈ 0.0221. Margin of error = 1.96 × 0.0221 ≈ 0.0433. CI = 0.57 ± 0.0433 = [0.533, 0.607]. Option B uses incorrect standard error calculation. Option C includes the mean incorrectly. Option D rounds incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase collected monthly loan default rates for 60 months, with a mean of 2.8% and a standard deviation of 0.9%. A new policy was implemented in month 25. Which statistical approach would be appropriate to test whether the policy had an effect?",
+    "options": [
+      "Compare the mean default rate before month 25 to the mean after month 25 using a two-sample t-test",
+      "Calculate a simple linear regression of month number on default rate",
+      "Perform a one-sample t-test comparing the overall mean to the policy target",
+      "Use a chi-square test for independence"
+    ],
+    "correctIndex": 0,
+    "explanation": "A two-sample t-test directly compares the means of two groups (before and after the policy change), making it ideal for testing a policy's effect. Option B (regression) could work but doesn't directly test a structural break. Option C tests against a fixed target, not a comparison group. Option D is for categorical data independence, not appropriate here.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix analyzed subscriber retention across 12 regional markets over 24 quarters, finding a correlation of r = 0.68 between marketing spend and retention rate. Before concluding that marketing causes higher retention, what must be verified in the workflow?",
+    "options": [
+      "That the relationship is linear, time-series assumptions hold, and confounding variables are considered",
+      "That the sample size is greater than 30",
+      "That the correlation coefficient is statistically significant at p < 0.05",
+      "That the data is normally distributed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation does not imply causation. Before claiming marketing spend causes retention, you must check linearity (visual inspection), verify time-series assumptions (autocorrelation, stationarity), and rule out confounds like competitive pricing or content quality. Option B is a guideline for some tests but doesn't address causation. Option C establishes statistical significance but not causality. Option D is one assumption but insufficient alone.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Procter & Gamble conducted an experiment comparing detergent sales under three price points ($3.99, $4.99, $5.99) across 60 identical stores over 8 weeks. The analysis uses ANOVA with F = 12.45 and p-value = 0.0008. However, the team notices one store had a 40% markup error for week 3. What should happen next?",
+    "options": [
+      "Re-run the ANOVA after correcting or excluding the affected observations, then compare results",
+      "Report the original ANOVA result as valid because p < 0.05",
+      "Remove that store entirely from the analysis",
+      "Report both the original and corrected analyses without preference"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data integrity is paramount. A documented error (40% markup mistake) must be corrected or the affected data removed before re-analysis. This is part of the data cleaning phase. Option B ignores the error. Option C is too harsh; only the affected observations need attention. Option D fails to prioritize the corrected analysis as primary.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Bank of America examined customer income levels across 8,000 credit card applicants and found the distribution is heavily right-skewed (skewness = 2.3). Which statement about the mean and median is most accurate?",
+    "options": [
+      "The mean is substantially higher than the median due to high-income outliers pulling the mean right",
+      "The mean and median are approximately equal because of the Central Limit Theorem",
+      "The median is higher than the mean because it is more robust",
+      "Both are meaningless due to the non-normal distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Right skewness means a long tail on the right; high earners pull the mean higher than the median. This is a fundamental property of skewed distributions. Option B incorrectly invokes CLT (which applies to sampling distributions, not the shape of raw data). Option C gets the direction backwards. Option D is false; both statistics have meaning even in skewed data, though the median is often more representative.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber analyzed ride-hailing demand across 15 major cities, running a multiple regression with 6 predictors (population, GDP per capita, number of competitors, avg. ride price, marketing spend, season). The R² = 0.72 in the full model, but when they drop the 'season' variable, R² = 0.71. A junior analyst suggests removing 'season' to simplify the model. What is the statistical concern?",
+    "options": [
+      "Adjusted R² should be checked; the small R² decrease may reflect overfitting penalty, and 'season' may still be statistically significant and economically meaningful",
+      "R² always increases with more variables, so the decrease proves 'season' is harmful",
+      "Since R² only dropped 0.01, the predictor is definitely not significant",
+      "The model with fewer variables is always preferred by statistical convention"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R² penalizes adding variables, so if adjusted R² stays stable or increases when removing 'season,' it may indicate overfitting. However, a small R² decrease combined with statistical significance (t-test or p-value) and economic relevance (seasonality is real in ride-hailing) justifies keeping the variable. Option B is backwards (more variables mechanically increase unadjusted R²). Option C confuses effect size with significance. Option D ignores parsimony trade-offs.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Accenture conducted a survey of 1,200 IT managers about remote-work productivity, finding a 95% confidence interval for mean productivity score of [6.8, 7.4] on a 10-point scale. A board member claims, 'We can be 95% confident that the true mean productivity is between 6.8 and 7.4.' What is the precise statistical interpretation?",
+    "options": [
+      "If we repeated sampling and interval estimation 100 times, roughly 95 of those intervals would contain the true population mean",
+      "There is a 95% probability that the true population mean lies in this specific interval",
+      "95% of all IT managers have productivity scores between 6.8 and 7.4",
+      "The true mean is definitely within this interval with 95% certainty"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confidence intervals have a frequency interpretation: 95% confidence means that in repeated sampling, ~95% of constructed intervals capture the true parameter. The true mean is fixed (not random), so we cannot assign it a probability after sampling (option B is incorrect frequentist language). Option C conflates individual scores with the mean. Option D overstates certainty. The correct interpretation acknowledges that *we don't know* if this specific interval contains the true mean, but the method is reliable.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Target analyzed daily sales data from 40 stores over 365 days (14,600 observations). A regression model predicting sales from foot traffic yielded R² = 0.58, but residuals show a clear cyclical pattern repeating every 7 days (weekly seasonality). What does the residual pattern indicate, and what should be done?",
+    "options": [
+      "The model is missing a key predictor (day-of-week seasonality); include day-of-week dummies or a seasonal term and re-fit",
+      "The model is correctly specified; the residual pattern is just random noise",
+      "The R² = 0.58 is too low, so the model should be abandoned entirely",
+      "The residuals are serially correlated, so use robust standard errors and report the model as-is"
+    ],
+    "correctIndex": 0,
+    "explanation": "A systematic pattern in residuals (7-day cycle) violates the independence assumption and signals an omitted variable—here, day-of-week effects. Including day-of-week dummy variables will likely improve fit and validity. Option B ignores the clear non-random pattern. Option C is too harsh; the model captures 58% of variance, and improvement is possible. Option D (robust SE) addresses heteroscedasticity/autocorrelation but doesn't fix the fundamental specification issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A biotech startup conducted a clinical trial with 250 patients testing a new drug, comparing efficacy rates between treatment (n=125, efficacy=68%) and control (n=125, efficacy=54%). A colleague runs a two-proportion z-test and gets p-value = 0.032. However, the trial also measured 18 secondary outcomes, each with a hypothesis test. What is the main statistical risk of reporting all 18 tests at α = 0.05?",
+    "options": [
+      "Multiple comparisons problem: with 18 tests at α = 0.05, the family-wise error rate approaches 1 − (0.95)^18 ≈ 0.60, risking false positives",
+      "The p-value = 0.032 is no longer reliable because the sample is too small",
+      "The treatment effect size is too small to be clinically meaningful",
+      "The control group efficacy of 54% is not statistically different from 50%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The multiple comparisons problem occurs when conducting many hypothesis tests without correction. Even if all null hypotheses are true, the probability of at least one Type I error grows with the number of tests: 1 − (1 − 0.05)^18 ≈ 0.60. Methods like Bonferroni (α/18) or FDR control should be applied. Option B is incorrect; p=0.032 is still valid, but must be interpreted cautiously. Option C is about clinical significance, separate from statistical multiplicity. Option D is unsupported by the data.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

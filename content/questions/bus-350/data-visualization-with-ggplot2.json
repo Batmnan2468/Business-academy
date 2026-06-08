@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In ggplot2, which function is used to initialize a plot with a dataset and specify aesthetic mappings?",
+    "options": [
+      "ggplot()",
+      "geom_point()",
+      "theme()",
+      "facet_wrap()"
+    ],
+    "correctIndex": 0,
+    "explanation": "ggplot() is the foundational function that creates the base layer and binds data to aesthetics. geom_point() adds a layer but does not initialize the plot; theme() modifies appearance; facet_wrap() creates subplots. This is direct recall of the core ggplot2 function.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary purpose of the aes() function in ggplot2?",
+    "options": [
+      "To map variables to visual properties such as x, y, color, and size",
+      "To change the background color of the entire plot",
+      "To set the font family for all text labels",
+      "To remove outliers from the dataset before plotting"
+    ],
+    "correctIndex": 0,
+    "explanation": "aes() (aesthetics) explicitly maps data columns to visual channels like position, color, and shape. The other options describe different functions: theme() changes background, fonts are controlled via element_text(), and data filtering happens outside ggplot2 or via dplyr. This is foundational vocabulary.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which geom function would you use to create a scatter plot in ggplot2?",
+    "options": [
+      "geom_point()",
+      "geom_line()",
+      "geom_bar()",
+      "geom_histogram()"
+    ],
+    "correctIndex": 0,
+    "explanation": "geom_point() creates individual points for a scatter plot. geom_line() connects points; geom_bar() creates bar charts; geom_histogram() bins continuous data. This is direct recall of geom layer names.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In ggplot2, what does the '+' operator do?",
+    "options": [
+      "Adds layers or components to a ggplot object",
+      "Performs arithmetic on the data before plotting",
+      "Increases the plot size by a fixed amount",
+      "Combines multiple datasets into one"
+    ],
+    "correctIndex": 0,
+    "explanation": "The '+' operator is ggplot2's layering syntax, allowing you to add geoms, themes, scales, and other components to build a complete visualization. It does not perform data arithmetic, resize plots, or merge datasets—those are separate operations. This is fundamental syntax knowledge.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the labs() function do in ggplot2?",
+    "options": [
+      "Adds or modifies plot labels such as title, x-axis, and y-axis labels",
+      "Filters data to include only labeled observations",
+      "Automatically generates a legend for all aesthetic mappings",
+      "Rounds numerical values to a specified number of decimal places"
+    ],
+    "correctIndex": 0,
+    "explanation": "labs() is used to customize titles and axis labels. It does not filter data, auto-generate legends (that happens automatically via aesthetics), or modify numerical precision. This is direct recall of a common utility function.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Acme Corporation sells office supplies and tracked quarterly revenue (in millions) for 2023: Q1=$42.5, Q2=$51.3, Q3=$48.7, Q4=$56.2. If you create a line plot in ggplot2 with quarter on the x-axis and revenue on the y-axis, what aesthetic mapping is essential?",
+    "options": [
+      "aes(x = Quarter, y = Revenue)",
+      "aes(x = Revenue, y = Quarter)",
+      "aes(color = Quarter)",
+      "aes(size = Revenue)"
+    ],
+    "correctIndex": 0,
+    "explanation": "A line plot requires explicit x and y mappings; Quarter (categorical) goes on x-axis and Revenue (continuous) on y-axis. Swapping them (option B) would invert the plot inappropriately. Color and size are optional aesthetics that enhance but do not define the core mapping. This tests understanding of coordinate systems.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "TechFlow Inc. sells software licenses and wants to compare average annual subscription revenue across three regions: North ($2.8M), South ($1.9M), and West ($2.1M). Which ggplot2 approach is most appropriate?",
+    "options": [
+      "geom_bar() with region on x-axis and revenue on y-axis using stat='identity'",
+      "geom_point() to plot the three regions as individual points",
+      "geom_histogram() to bin the three regions by revenue range",
+      "geom_line() to connect the three regions chronologically"
+    ],
+    "correctIndex": 0,
+    "explanation": "geom_bar() with stat='identity' directly plots pre-computed values (the three revenue figures) by region. geom_point() would work visually but is unconventional for categorical comparisons; geom_histogram() bins continuous data (inappropriate here); geom_line() implies a time series. This tests selection of appropriate geom layers.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst at MegaMart creates a scatter plot showing store size (x-axis, in thousands of sq ft) versus monthly profit (y-axis, in thousands of dollars) for 50 stores. The analyst maps store size to x and profit to y, but the points are all crowded in a small area. What additional aesthetic mapping could reveal patterns?",
+    "options": [
+      "Map store region (North, South, East, West) to color to identify regional differences",
+      "Map date to the size of points to show temporal trends",
+      "Increase the plot width to 20 inches to physically spread out the points",
+      "Use geom_histogram() instead to aggregate the data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mapping an additional categorical variable (region) to color reveals whether clusters are driven by geography, uncovering hidden patterns without changing the core x–y relationship. Date (option B) is not in the dataset; physical resize (option C) does not reveal data structure; switching to histogram (option D) loses the individual store information. This tests aesthetic layering for exploratory analysis.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst at GlobalBank is plotting customer account balance (y-axis) against years as a customer (x-axis). The analyst writes: ggplot(bank_data, aes(x = Years, y = Balance)) + geom_point() + geom_smooth(). What does geom_smooth() add to this visualization?",
+    "options": [
+      "A smoothed trend line (or confidence interval) showing the relationship between years and balance",
+      "Automatic data filtering to remove extreme outliers",
+      "A second y-axis scaled for easier comparison",
+      "A legend explaining what each point represents"
+    ],
+    "correctIndex": 0,
+    "explanation": "geom_smooth() overlays a loess or linear trend line with a confidence band to reveal the overall pattern in the data. It does not filter outliers, add axes, or create legends. This tests understanding of layered visualization and how geom_smooth() aids interpretation of relationships.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ConsumerGoods Inc. has product sales data with columns: Product (A, B, C), Region (North, South, East, West), and Sales (in thousands). A visualization is needed to compare sales across all product–region combinations. Which approach combines geoms and faceting most effectively?",
+    "options": [
+      "geom_bar() + facet_wrap(~Product, nrow=3) with region on the x-axis and fill mapped to region",
+      "geom_point() + facet_grid(Product ~ Region) with sales on the y-axis",
+      "geom_histogram() with Product and Region combined into one column",
+      "geom_line() with separate plots for each product over time"
+    ],
+    "correctIndex": 0,
+    "explanation": "geom_bar() with facet_wrap() or facet_grid() is ideal for categorical comparisons; faceting by Product with region colors shows all combinations clearly. geom_point() (option B) requires a y-axis (missing here); histogram (option C) is for continuous distributions; line (option D) implies a time dimension not mentioned. This tests faceting and geom selection for multi-dimensional categorical data.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at InvestCorp creates a scatter plot of portfolio returns (y-axis, %) versus portfolio risk as measured by standard deviation (x-axis, %). The analyst notices that all points fall on a perfectly straight line with R² = 0.98. The analyst concludes that this proves risk and return are causally linked. What is the flaw in this reasoning?",
+    "options": [
+      "High correlation or linear fit in a visualization does not establish causality; confounding variables or reverse causality may explain the relationship",
+      "A scatter plot cannot display R² values, so the calculation is incorrect",
+      "The standard deviation should be on the y-axis and returns on the x-axis for proper causality testing",
+      "Causality can only be proven using time-series data with lags, not cross-sectional scatter plots"
+    ],
+    "correctIndex": 0,
+    "explanation": "A perfect correlation is still just association; causality requires causal reasoning, experiments, or causal inference methods. Option B is false—R² is a statistical metric independent of visualization; option C confuses axes with causality direction; option D overstates the limitation (causality can be inferred from well-designed studies). This addresses a common misconception about visual evidence.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataSoft Corp plots monthly user engagement (y-axis, 0–100 scale) over 24 months (x-axis). The raw data shows engagement at months 1–5: 20, 22, 19, 21, 23. The analyst applies a loess smooth curve via geom_smooth(method='loess', span=0.2). The smooth curve oscillates sharply between 15 and 27, while span=0.8 produces a nearly flat line at 21. Which span value better represents the underlying trend, and why?",
+    "options": [
+      "span=0.8 because a smaller span overfits to noise; a larger span produces a stable trend estimate that resists short-term fluctuations",
+      "span=0.2 because each data point deserves individual emphasis; the oscillations are real variability",
+      "Neither; a linear regression line should be used instead of loess",
+      "span=0.5 is always optimal regardless of the data pattern"
+    ],
+    "correctIndex": 0,
+    "explanation": "span controls smoothing bandwidth; span=0.2 (small window) overfits to noise, producing artificial oscillations; span=0.8 (larger window) balances signal and noise, revealing true trend. The data (20, 22, 19, 21, 23) clearly reflects small random variation, not genuine spikes. This tests understanding of the bias–variance tradeoff in visualization and a nuanced parameter choice.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A ggplot2 visualization compares profit margins (%) for three company sectors (Tech: 28%, Finance: 22%, Retail: 15%) using geom_col(). The analyst maps Sector to x-axis, Margin to y-axis, and also maps Margin to the fill color of the bars. A colleague argues this double-mapping is redundant. How would you respond?",
+    "options": [
+      "The colleague is correct; mapping the same variable to position (y) and color (fill) wastes a visual channel and reduces clarity; a single channel for Margin is sufficient",
+      "The colleague is incorrect; the dual mapping creates a visually striking gradient that helps readers estimate values more accurately",
+      "The double-mapping is appropriate only if the sectors are ordered by margin; otherwise it is redundant",
+      "Color fill should never be used with bar charts; it is only appropriate for scatter plots"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mapping the same variable to two aesthetics is redundant and violates data visualization best practices—each variable deserves one primary channel. The gradient (option B) does not aid estimation since color intensity is not as precise as axis position. Option C conflates ordering with redundancy. Option D is factually wrong (fill is common in bar charts). This tests design principle knowledge and common misconceptions.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FastShip Logistics tracked package delivery times (hours) and package weight (kg) for 200 orders. A scatter plot with geom_point() shows a clear upward trend, but many overlapping points obscure individual observations near the center (20–30 kg, 24–30 hours). Which strategy best addresses overplotting while preserving the trend?",
+    "options": [
+      "Use geom_point(alpha=0.3, size=2) to add transparency and reduce visual overlap, optionally combined with geom_smooth()",
+      "Remove all duplicate observations to reduce the number of points",
+      "Split the data into two separate plots, one for each half of the weight range",
+      "Increase the plot size to 15 inches wide so overlapping points naturally separate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transparency (alpha) and size adjustment make overlapping points visible; geom_smooth() simultaneously reveals the trend. Removing duplicates (option B) loses information; splitting arbitrarily (option C) fragments the analysis; physical size (option D) does not truly separate overlapping points. This tests a practical solution to a common ggplot2 challenge.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A marketing team at BrandXYZ visualizes customer acquisition cost (CAC, y-axis in dollars) by month for 2023 using geom_line() + geom_point(). The line jumps discontinuously from $45 in November to $72 in December. The analyst suspects a data entry error but sees no obvious outlier. Which approach using ggplot2 would best investigate whether December's spike is real or an error?",
+    "options": [
+      "Overlay the raw points with geom_point() and zoom into the November–December region using coord_cartesian(ylim=c(40,80)) to inspect actual values; cross-check with source data",
+      "Automatically remove the December observation and refit the trend line",
+      "Use geom_smooth() with a very small span to create a sharp curve fitting all points",
+      "Assume the spike is real because the visualization shows it; no further investigation is needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Visualization combined with zooming and data source verification is the proper investigative method. Option B prematurely removes data; option C overfits and masks problems; option D confuses visualization with validation. This tests critical thinking about data integrity and the role of ggplot2 as an exploratory tool, not a truth arbiter.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

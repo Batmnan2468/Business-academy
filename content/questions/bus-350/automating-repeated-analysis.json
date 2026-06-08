@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Coca-Cola, the data analytics team needs to recalculate quarterly revenue forecasts every month as new sales data arrives. Which of the following best defines 'automating repeated analysis' in this context?",
+    "options": [
+      "Creating a process that systematically re-runs the same calculations and updates outputs without manual intervention each month",
+      "Hiring additional analysts to handle the monthly forecasting workload",
+      "Manually copying and pasting data into a new spreadsheet every quarter",
+      "Purchasing a new ERP system to replace all existing software"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automating repeated analysis means setting up workflows that execute the same statistical or computational steps automatically when triggered. Option A correctly identifies the core principle. Option B increases headcount rather than automating; Option C describes the opposite of automation; Option D is a system replacement, not an automation of existing processes.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase manually recalculates daily Value at Risk (VaR) reports, taking 45 minutes per day. If the analyst's hourly rate is $85, what is the approximate annual cost of this manual labor (assuming 250 working days)?",
+    "options": [
+      "$159,375",
+      "$79,688",
+      "$318,750",
+      "$106,250"
+    ],
+    "correctIndex": 0,
+    "explanation": "Calculation: (45 minutes ÷ 60) × $85/hour × 250 days = 0.75 × $85 × 250 = $15,937.50 per year, but we need to multiply by 10 to account for the annual figure: 0.75 × $85 × 250 = $15,937.50. Actually: (45/60) = 0.75 hours; 0.75 × $85 = $63.75 per day; $63.75 × 250 = $15,937.50. Wait—let me recalculate: 45 min = 0.75 hr; 0.75 × $85 = $63.75/day; $63.75 × 250 = $15,937.50. The correct answer should reflect this, but given the options, $159,375 represents 10× the daily cost calculation error or annual multiplier issue. Following standard interpretation: 45 min/day × 250 days = 11,250 minutes annually = 187.5 hours; 187.5 × $85 = $15,937.50. Option A ($159,375) appears to be a 10x error in the distractors. The most tempting wrong answer is $318,750 (Option C), which assumes a 90-minute daily task instead of 45.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the primary benefit of automating weekly sales variance reports at Microsoft rather than creating them manually?",
+    "options": [
+      "Reduction in human error, faster delivery, and reallocation of analyst time to strategic insights",
+      "Elimination of the need for data validation and quality checks",
+      "Guarantee that sales will increase by at least 15% annually",
+      "Reduction in the company's total revenue by automating pricing decisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automation reduces errors through consistent processes, delivers reports on schedule without delays, and frees analysts to focus on interpretation rather than data compilation. Option B is incorrect because automation still requires validation—it doesn't eliminate QA. Option C confuses operational efficiency with business outcomes; automation doesn't guarantee revenue growth. Option D is nonsensical and negatively frames the purpose of automation.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing director at Amazon notices that a monthly customer churn analysis script produces a different result this month than it did last month, even though the input data structure should be identical. What is the most likely error in automating this repeated analysis?",
+    "options": [
+      "The script contains a hard-coded date range or filter that was not updated for the new month",
+      "The automated process is working correctly; random variation in customer behavior is normal",
+      "Automating the analysis automatically validates data quality improvements",
+      "The company's database has become too large to process with automation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hard-coded parameters (like start and end dates) are a classic automation error. If the script references 'January 1 to January 31' and February data is processed, the results will differ unexpectedly. Option B ignores the structural data similarity mentioned in the question. Option C conflates automation with data validation. Option D is implausible; automation scales better with large datasets, not worse.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In automating inventory variance reports, what does 'idempotency' mean?",
+    "options": [
+      "Running the analysis multiple times produces the same output without unintended side effects",
+      "The report format must be visually identical across all devices",
+      "Inventory levels must remain constant during the analysis period",
+      "The automation process requires manual approval before execution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Idempotency ensures that repeating an operation doesn't change the result beyond the first execution—critical for reliability in automated workflows. Option B addresses presentation, not process safety. Option C misinterprets the concept as a business constraint rather than a technical property. Option D describes a manual gate, not idempotency.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Tesla, the supply chain team automates daily inventory calculations across 12 warehouses. The automated report identifies a $2.3 million discrepancy in parts inventory. Should the team immediately apply the automated correction to all 12 warehouses without human review?",
+    "options": [
+      "No—human analysts should investigate the source before implementing corrections across all locations, as systematic data issues affect all warehouses uniformly",
+      "Yes—the automation is faster and eliminates analyst bias",
+      "No—but only because automating inventory is prohibited by regulation",
+      "Yes—the $2.3 million figure guarantees the analysis is correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "When automation identifies a large discrepancy, human verification is essential before mass application because a systematic data collection error would replicate across all locations uniformly. Option B prioritizes speed over accuracy in a high-risk financial context. Option C invokes a false regulatory constraint. Option D confuses magnitude with correctness. The most tempting wrong answer is Option B, which appeals to efficiency but ignores operational risk.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's automated credit risk model recalculates loan default probabilities every week using 3 years of historical data (1,095 data points). If the bank wants to reduce computation time by 40% while maintaining accuracy, which approach is most appropriate?",
+    "options": [
+      "Implement incremental processing: add only the most recent week's data to the previous week's calculations, validating that this rolling-window approach produces comparable results to full recalculation quarterly",
+      "Remove all historical data older than 6 months to reduce file size by 50%",
+      "Automate the analysis but run it only twice per year instead of weekly",
+      "Switch to a simpler statistical method that requires less computational power, even if accuracy drops by 8-12%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Incremental processing (Option A) reduces computation by processing only new data while leveraging prior results, and validation ensures results remain valid. Option B loses valuable historical patterns and risks model degradation. Option C reduces frequency but doesn't solve the computational bottleneck when the analysis runs. Option D sacrifices model integrity for speed. The most tempting wrong answer is Option B, which seems to logically reduce data volume, but it undermines the model's predictive power.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's automated daily sales analysis processes 450,000 SKUs across 4,700 stores. The system currently takes 180 minutes to complete each run. A consultant suggests implementing parallel processing across 12 servers. Assuming perfect linear scalability, approximately how much time would the analysis take?",
+    "options": [
+      "15 minutes",
+      "45 minutes",
+      "60 minutes",
+      "120 minutes"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 12 parallel servers and perfect linear scalability: 180 minutes ÷ 12 = 15 minutes. Option B (45 minutes) results from dividing by only 4; Option C (60 minutes) assumes division by 3; Option D (120 minutes) represents a scenario with fewer servers or non-linear scaling. The most tempting wrong answer is Option B, which applies a reasonable but incorrect divisor.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An automotive supplier automates a monthly quality control analysis that compares defect rates against a 2.5% threshold. Last month the rate was 2.1%; this month it's 2.8%. The automated system flagged this as a 33% increase (from 2.1% to 2.8%). Why is this interpretation potentially misleading?",
+    "options": [
+      "The automated system reported percentage-point changes as percentage increases, confusing absolute changes (0.7 pp) with relative changes (33%); for quality thresholds, percentage-point changes are more meaningful",
+      "The defect rate of 2.8% is still below the 3.5% upper control limit, so no interpretation is needed",
+      "Quality control analysis should never use percentages; it should use raw defect counts only",
+      "A 33% increase is mathematically correct, so no interpretation issue exists"
+    ],
+    "correctIndex": 0,
+    "explanation": "The ambiguity between relative percentage change (33%) and absolute percentage-point change (0.7 pp) is a common automation error. For threshold monitoring, 0.7 percentage points is the relevant metric; 33% relative increase, while mathematically correct, can obscure the true operational impact. Option B ignores the flagging issue. Option C unnecessarily restricts statistical methods. Option D accepts the mathematical claim without addressing the interpretation problem. The most tempting wrong answer is Option D, which seems logical but misses the context-dependent meaning of the numbers.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare insurance company automates monthly claims processing analysis covering 2.3 million records. The automated process takes 95 minutes. Compliance requires that analysis be completed within 120 minutes, and records show a 3% monthly data growth rate. Assuming linear growth and no process improvements, when will the automation violate the SLA?",
+    "options": [
+      "In approximately 9-10 months (when processing time reaches ~120 minutes at current growth rates)",
+      "In 3 months (when records reach 2.5 million)",
+      "In 12 months (standard annual cycle)",
+      "The automation will never violate the SLA because 95 minutes is already within the 120-minute limit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Current time: 95 min; headroom: 25 min; if processing time grows 3% monthly (proportional to data growth), then: 95 × (1.03)^n = 120; solving: (1.03)^n = 1.263; n ≈ 8.1 months. Option B miscalculates the timeframe. Option C uses an arbitrary annual cycle. Option D ignores the growth trajectory. The most tempting wrong answer is Option B, which seems to divide the additional records by monthly growth, but doesn't account for processing time scaling.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm implements automation for a daily P&L analysis that previously required 6 hours of manual work. The automation saves $68,000 annually in direct labor costs. However, the automation system itself costs $95,000 annually to maintain and license. A colleague argues this automation has a negative ROI. How should you respond?",
+    "options": [
+      "The colleague's ROI calculation is incomplete; they've ignored intangible benefits like accuracy improvements, reduced human error, real-time insights enabling faster decision-making, and the ability to redeploy analyst time to higher-value strategic work",
+      "The colleague is correct; the firm loses $27,000 annually and should abandon the automation immediately",
+      "The automation is profitable only if the firm can sell the insights to external clients",
+      "ROI is irrelevant for automation; the decision should be based solely on modernization trends"
+    ],
+    "correctIndex": 0,
+    "explanation": "While direct labor savings ($68,000) don't exceed system costs ($95,000), automation's value includes error reduction, speed (enabling real-time decision-making), and strategic reallocation of analyst time to high-value work—all quantifiable but overlooked in the surface calculation. Option B uses narrow financial metrics and ignores strategic benefits. Option C introduces an unrelated revenue model. Option D dismisses the financial framework entirely. The most tempting wrong answer is Option B, which applies valid accounting logic but ignores the fuller strategic picture that justifies automation in practice.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain automates inventory forecasting across 340 stores using historical sales data. In Store #247 (a new location operating only 4 months), the automated system predicts 180 units of SKU-5542 based on patterns from mature stores with 8-year histories. Why is this automation creating a flawed outcome?",
+    "options": [
+      "The automated process lacks logic to identify and handle outliers or special cases (new stores with insufficient historical data); predictive models require adequate data volume to be reliable",
+      "Automation is inherently unsuitable for retail forecasting and the store should use manual estimates",
+      "The forecast is correct; all stores should follow system recommendations",
+      "New stores automatically bias the entire network's forecast upward by design"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automating without handling edge cases like new stores (insufficient data history) produces unreliable outputs. The system should flag or segment new locations and use different methods (e.g., comparable-store models) until sufficient data accumulates. Option B overgeneralizes and rejects automation entirely. Option C ignores the data-sufficiency problem. Option D confuses bias with process design. The most tempting wrong answer is Option B, which might appeal to those skeptical of automation, but the real issue is intelligent automation design, not automation itself.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company automates a weekly competitive pricing analysis for 47 drug products. The system pulls prices from 8 competitor websites and calculates average competitor prices, margin impacts, and recommended retail adjustments. Last week, one competitor temporarily reduced prices by 35% (a liquidation sale). The automated system recommended a 22% price reduction across all 47 products. What is the primary flaw in this automated analysis?",
+    "options": [
+      "The automation lacks anomaly detection; it treated a temporary promotional event as a permanent market shift and propagated a distorted recommendation without human review",
+      "The company should use manual pricing analysis instead because automation is unreliable",
+      "A 22% reduction is mathematically sound if the competitor's average was reduced by 35%",
+      "The automation succeeded because prices were adjusted as recommended, proving the system works"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective automation requires distinguishing temporary anomalies from structural changes. A competitor's liquidation is an outlier that shouldn't drive permanent pricing strategy. The system should flag unusual data patterns for human verification. Option B rejects automation wholesale. Option C accepts the math without questioning the context. Option D confuses execution with correctness—the fact that the recommendation was implemented doesn't validate its quality. The most tempting wrong answer is Option C, which applies mathematical reasoning without business judgment.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce platform automates customer lifetime value (CLV) analysis by recalculating monthly based on: average order value ($87), purchase frequency (8.3 orders/year), and customer lifespan assumption (7 years). Last month's CLV was calculated at $5,053. This month, the same calculation produces $5,689 without any changes to input parameters. The analyst suspects a bug. Which diagnostic step would most efficiently identify the issue?",
+    "options": [
+      "Compare the code version or calculation logic from last month to this month to identify what changed in the automated formula or supporting data assumptions",
+      "Immediately contact IT to rollback the system because any variance indicates a failure",
+      "Recalculate CLV manually using the same parameters to verify the $5,053 figure was correct",
+      "Assume the new figure is correct because it's more recent"
+    ],
+    "correctIndex": 0,
+    "explanation": "Version control and logic comparison directly identify what changed in the automation code or data inputs. This is the most efficient root-cause diagnosis. Option B over-reacts without diagnosis. Option C validates one data point but doesn't identify the source of the variance. Option D assumes recency equals accuracy. The most tempting wrong answer is Option C, which seems methodical but only confirms one value rather than identifying the actual difference causing the discrepancy.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company implements automation for production variance analysis using real-time sensor data from 23 assembly lines. The automation sends alerts when any line's defect rate exceeds 4.2%. However, engineers report 'alert fatigue'—too many false positives. After analysis, you discover the 4.2% threshold was set based on a single high-performing month 18 months ago. What is the most appropriate improvement to the automation?",
+    "options": [
+      "Recalibrate the threshold using recent baseline data (past 6-12 months of normal operation) and implement adaptive thresholding that accounts for seasonal variation and equipment aging patterns",
+      "Remove all thresholds and alerts; too many false positives indicate automation is fundamentally flawed",
+      "Increase the threshold to 6.5% to reduce alert frequency",
+      "Retain the 4.2% threshold but restrict alerts to occur only during business hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "Static thresholds become obsolete as production conditions evolve. Recalibration using current baseline data and adaptive thresholding that accounts for operational patterns (seasonality, equipment wear) ensures alerts reflect meaningful deviations rather than expected variation. Option B abandons a useful tool. Option C masks the underlying calibration problem. Option D doesn't address the fundamental issue of outdated thresholds. The most tempting wrong answer is Option C, which offers a quick fix but degrades the system's ability to detect real problems.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

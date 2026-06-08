@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A researcher at Target reports that the average spending per customer visit is $47.50 with a 95% confidence interval of [$44.20, $50.80]. What does the confidence interval actually mean?",
+    "options": [
+      "We are 95% confident that the true population mean lies between $44.20 and $50.80",
+      "There is a 95% probability that the next customer will spend between $44.20 and $50.80",
+      "95% of all customers spend between $44.20 and $50.80",
+      "The true mean is definitely between $44.20 and $50.80"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval estimates the range where the true population parameter is likely to exist. The correct answer reflects the repeated sampling interpretation: if we repeated the sampling procedure 100 times, about 95 of those intervals would contain the true mean. Option B is tempting but wrong because the interval describes the mean of a population, not individual future observations. Option C confuses the interval with the actual distribution of individual values.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase calculates a 90% confidence interval for quarterly revenue growth. What does 90% confidence actually refer to?",
+    "options": [
+      "The long-run success rate of the method across repeated samples",
+      "The probability that this particular interval contains the true parameter",
+      "The certainty that the sample mean equals the population mean",
+      "The percentage of data points that fall within the interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confidence level refers to the long-run success rate of the interval construction method itself, not the probability for any single interval. Once an interval is calculated, it either contains the true parameter or it doesn't—there's no probability involved for that specific interval. Option B is a common misconception that treats a calculated interval as if it still has probability. Option C confuses confidence intervals with point estimates.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An HR manager at Microsoft surveys 400 employees about job satisfaction and finds a 95% confidence interval of [6.8, 7.4] on a 10-point scale. Which interpretation is correct?",
+    "options": [
+      "If we repeated the survey 100 times with 400 employees each, approximately 95 intervals would contain the true population mean",
+      "We are 95% certain that the true mean falls in this interval for this particular sample",
+      "95% of employees have satisfaction scores between 6.8 and 7.4",
+      "The next employee surveyed has a 95% chance of scoring between 6.8 and 7.4"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct interpretation involves the frequency interpretation of confidence—the method works 95% of the time across repeated sampling. Option B incorrectly assigns probability to a single calculated interval. Option C mistakes the confidence interval for a description of the actual distribution of individual responses. Option D confuses population inference with individual prediction.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Starbucks regional manager constructs a 98% confidence interval for mean daily sales across 50 stores. What is true about the relationship between confidence level and interval width?",
+    "options": [
+      "A 98% confidence interval will be wider than a 95% confidence interval using the same data",
+      "A 98% confidence interval will be narrower than a 95% confidence interval using the same data",
+      "The width is unrelated to the confidence level",
+      "A 98% confidence interval guarantees that 98% of stores fall within it"
+    ],
+    "correctIndex": 0,
+    "explanation": "Higher confidence levels require wider intervals to capture the true parameter with greater frequency across repeated samples. The critical value for 98% confidence (z ≈ 2.33) is larger than for 95% (z ≈ 1.96), which directly increases interval width. Option B is tempting because students sometimes reverse this relationship. Option D confuses the confidence level with a percentage of the data that must fall within the interval.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An operations manager at Amazon calculates a 99% confidence interval for average delivery time. Why would she prefer a 95% confidence interval instead?",
+    "options": [
+      "The 95% interval would be narrower, providing a more precise estimate of the true mean",
+      "The 95% interval would be wider, capturing more possible population means",
+      "The 95% interval would guarantee 95% of deliveries fall within the range",
+      "The 99% interval is always less reliable than the 95% interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 95% confidence interval is narrower than a 99% interval, which is often preferable for practical decision-making because it pinpoints the likely true value more precisely (trades reliability for precision). Option B reverses the width relationship. Option C incorrectly applies the confidence level to individual observations rather than the population mean. Option D is false—a 99% interval is actually more reliable, just less precise.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Nielsen researcher surveys 1,200 households about streaming service subscriptions. The sample mean is 2.3 subscriptions, and the 95% confidence interval is [2.15, 2.45]. If the sample size were increased to 3,000 households with the same sample mean and standard deviation, how would the confidence interval change?",
+    "options": [
+      "The interval would become narrower because the standard error decreases with larger sample size",
+      "The interval would remain the same because the sample mean hasn't changed",
+      "The interval would become wider because larger samples introduce more variation",
+      "The interval width depends only on the confidence level, not the sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error = σ/√n, so increasing n reduces the standard error, which directly narrows the confidence interval. The margin of error decreases as sample size increases, all else equal. Option B incorrectly assumes the sample mean alone determines interval width. Option C reverses the effect of sample size. Option D omits sample size from the margin of error formula entirely.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola conducts a taste test with 500 respondents and calculates a mean preference score of 7.2 with a standard error of 0.18. Using a 95% confidence level (z = 1.96), what is the approximate 95% confidence interval?",
+    "options": [
+      "[6.85, 7.55]",
+      "[7.02, 7.38]",
+      "[6.84, 7.56]",
+      "[7.01, 7.39]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Margin of error = 1.96 × 0.18 = 0.3528 ≈ 0.35. Confidence interval = 7.2 ± 0.35 = [6.85, 7.55]. Option B uses z ≈ 1.67, which corresponds to a different (approximately 90%) confidence level. Option C uses slightly different rounding that results in ±0.36. Option D miscalculates the margin of error entirely.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Uber analyst examines driver earnings across 400 drivers and finds a 95% confidence interval for mean hourly earnings of [$18.50, $22.30]. A colleague claims, 'This means we're 95% sure the true mean is in this interval.' What is the best correction?",
+    "options": [
+      "We should say the method we used will produce intervals containing the true mean 95% of the time if repeated",
+      "The colleague is correct; there's a 95% probability the true mean is in this specific interval",
+      "The interval is too wide to provide meaningful information about the true mean",
+      "We need to collect more data before any confident statement can be made"
+    ],
+    "correctIndex": 0,
+    "explanation": "Once the interval is calculated, probability no longer applies to it—it either contains the true parameter or doesn't. The 95% refers to the long-run performance of the method. Option B is the common misconception that needs correcting. Option C misinterprets width (which depends on sample variability and size, not on the quality of inference). Option D doesn't address the conceptual error about confidence interpretation.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Dell analyst constructs a 95% confidence interval for the average lifespan of laptop batteries. The lower bound is 4.2 years and the upper bound is 5.8 years. What is the margin of error?",
+    "options": [
+      "0.8 years",
+      "1.6 years",
+      "0.4 years",
+      "5.0 years"
+    ],
+    "correctIndex": 0,
+    "explanation": "Margin of error = (Upper bound − Lower bound) / 2 = (5.8 − 4.2) / 2 = 1.6 / 2 = 0.8 years. The interval is symmetric around the point estimate, so half the total width gives the margin of error. Option B incorrectly uses the full width. Option C divides by 4 instead of 2. Option D confuses the margin of error with the center point.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Salesforce researcher reports a 95% confidence interval of [32.5%, 37.5%] for customer retention rate among 2,500 firms. Which statement correctly interprets this interval?",
+    "options": [
+      "If we resampled from the population 100 times and constructed confidence intervals each time, approximately 95 of them would contain the true retention rate",
+      "We can be 95% certain that the sample retention rate equals the population retention rate",
+      "95% of the 2,500 firms have retention rates between 32.5% and 37.5%",
+      "The next firm sampled will have a 95% probability of a retention rate between 32.5% and 37.5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the correct repeated-sampling interpretation of confidence intervals. Option B confuses inference about the population with properties of the sample. Option C mistakes the confidence interval for a description of the actual distribution of individual firm retention rates. Option D applies the confidence level to prediction of a future individual observation, which is incorrect for a confidence interval.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Bank of America economist reports a 95% confidence interval for next quarter's unemployment rate as [3.8%, 4.4%] based on a survey of 5,000 households. A colleague says, 'This is too wide to be useful—we need to narrow it.' Which action would definitely narrow the interval without losing the 95% confidence level?",
+    "options": [
+      "Increase the sample size to 10,000 households",
+      "Lower the confidence level to 90%",
+      "Select only urban households instead of a representative sample",
+      "Report the interval as [3.9%, 4.3%] instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increasing sample size reduces standard error (SE = σ/√n), which directly narrows the margin of error while maintaining the 95% confidence level. Option B would narrow the interval but sacrifices confidence. Option C introduces bias and reduces validity. Option D merely arbitrarily shrinks the reported bounds without statistical justification.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Google executive presents a 95% confidence interval of [42.3, 47.1] for mean user engagement time based on a sample of 10,000 users. Which statement represents a correct understanding of what 'we are 95% confident' means in this context?",
+    "options": [
+      "If we repeated the sampling and interval-construction process many times, about 95% of the resulting intervals would contain the true population mean",
+      "There is a 0.95 probability that the true mean falls between 42.3 and 47.1",
+      "95% of the 10,000 sampled users have engagement times between 42.3 and 47.1 minutes",
+      "The sample mean is definitely in the interval [42.3, 47.1]"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the frequency interpretation: the method works correctly (capturing the true parameter) about 95% of the time across many repetitions. Option B assigns probability to a fixed interval, which is philosophically incorrect in the classical framework. Option C confuses the confidence interval with a frequency distribution of the actual data. Option D treats a statistical estimate as a certainty.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A McKinsey consultant calculates two confidence intervals for average consulting project duration: a 90% CI of [8.2, 9.8] weeks and a 99% CI of [7.9, 10.1] weeks, both from the same sample of 60 projects. A junior analyst claims, 'The 99% interval is better because it's more confident.' What is the correct critical thinking response?",
+    "options": [
+      "Both intervals are valid for different purposes; 90% offers precision while 99% offers greater assurance, and choice depends on the decision context",
+      "The 99% interval is objectively better because higher confidence is always preferable",
+      "The 90% interval is better because narrower intervals are always more useful",
+      "The two intervals are contradictory and cannot both be valid from the same sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "There's a precision-confidence tradeoff: higher confidence requires a wider interval. The 'best' interval depends on whether the decision-maker values precision or assurance more highly. Option B treats higher confidence as universally preferable, ignoring the practical loss of precision. Option C does the opposite. Option D is false—both intervals are mathematically valid; they're just constructed with different z-values.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An Expedia analyst reports a 95% confidence interval for mean hotel booking lead time of [18.4, 21.6] days based on 2,500 bookings. The standard error is 0.8 days. Assuming normality, which of the following is true?",
+    "options": [
+      "The point estimate is 20 days, and z* = 1.96 was used",
+      "The point estimate is 19 days, and the standard error calculation is incorrect",
+      "The margin of error is 3.2 days, indicating a very wide interval",
+      "The sample standard deviation is 40 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "Point estimate = (18.4 + 21.6) / 2 = 20 days. Margin of error = (21.6 − 18.4) / 2 = 1.6 days. Since 1.6 = z* × SE, we have 1.6 = z* × 0.8, so z* = 2.0—wait, this should verify to 1.96 for 95%. Recalculating: 1.96 × 0.8 = 1.568 ≈ 1.6, confirming z* ≈ 1.96. Option B incorrectly calculates the center. Option C confuses the full interval range with margin of error. Option D reverses the relationship between SD and standard error.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Netflix data scientist publishes: 'We are 95% confident that the true proportion of subscribers who binge-watch is between 0.52 and 0.58.' A statistics professor critiques this language. Which correction best addresses the logical flaw?",
+    "options": [
+      "Say 'If this study were repeated many times, approximately 95% of the resulting intervals would contain the true proportion' to avoid assigning probability to a fixed interval",
+      "Change to 'We are certain the proportion is between 0.52 and 0.58' to reflect the data we observed",
+      "Report only the point estimate of 0.55 because intervals are inherently uncertain",
+      "Acknowledge that no confidence statement about a proportion is logically valid without an infinite sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critique targets the phrase 'we are confident that'—which sounds like assigning probability to a fixed interval. The correct interpretation uses the frequency definition: the method produces correct intervals 95% of the time. Option B overcorrects by claiming certainty. Option C abandons useful uncertainty quantification. Option D is philosophically extreme and impractical.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

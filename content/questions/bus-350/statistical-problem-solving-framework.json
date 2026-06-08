@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Acme Manufacturing, a quality control engineer notices that 3.2% of widgets produced fail initial testing. Which step of the Statistical Problem-Solving Framework should come immediately after observing this defect rate?",
+    "options": [
+      "Define the problem and clarify what needs to be understood about the defect rate",
+      "Collect more data from competing manufacturers",
+      "Implement corrective action on the production line",
+      "Calculate the confidence interval for the defect rate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Statistical Problem-Solving Framework begins with clearly defining the problem—understanding whether 3.2% is acceptable, what's causing it, and what outcome is desired. Option B (collect competitor data) skips problem definition, Option C (implement action) occurs much later after analysis, and Option D (confidence interval) is premature without first clarifying objectives. Problem definition establishes the scope and purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the purpose of the 'Collect Data' phase in the Statistical Problem-Solving Framework?",
+    "options": [
+      "To gather relevant, reliable information that directly addresses the defined problem",
+      "To obtain as much data as possible from every available source regardless of relevance",
+      "To confirm that the problem definition was correct before proceeding",
+      "To eliminate outliers and inconsistencies before analysis begins"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data collection must be purposeful and targeted—gathering only information relevant to answering the specific problem defined in step one. Option B reflects data hoarding, which wastes resources and introduces noise. Option C reverses the sequence (definition precedes collection), and Option D (outlier elimination) is an analysis task, not the collection task itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Johnson & Johnson's pharmaceutical division, a statistician is working through the Statistical Problem-Solving Framework to investigate why clinical trial enrollment has dropped 18% year-over-year. In which phase should the team establish whether this decline is statistically significant or due to random variation?",
+    "options": [
+      "Analyze the data",
+      "Define the problem",
+      "Collect the data",
+      "Present the findings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance testing and hypothesis testing occur during the 'Analyze the Data' phase, where raw data is transformed into insights. Option B (Define) establishes what to measure, Option C (Collect) gathers numbers, and Option D (Present) communicates conclusions—none involve testing significance. The 18% figure requires statistical analysis to determine if it represents a true trend or random fluctuation.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "During the 'Interpret the Results' phase of the Statistical Problem-Solving Framework at Tesla, an analyst finds that charging station utilization increased from 62% to 71% after a pricing change. What is the critical consideration at this stage that many analysts overlook?",
+    "options": [
+      "Determining whether the results answer the original problem and what limitations or assumptions may affect the conclusions",
+      "Recalculating all statistics to verify the numerical accuracy of the 9 percentage point increase",
+      "Immediately publishing the findings in an academic journal",
+      "Collecting additional data to confirm the 9 percentage point increase"
+    ],
+    "correctIndex": 0,
+    "explanation": "Interpretation requires connecting results back to the original problem and acknowledging limitations (sample size, external factors, temporal scope). Option B (recalculating) assumes analysis was already complete—interpretation comes after. Option C (publishing immediately) skips the crucial interpretation step. Option D (more data) occurs in collection, not interpretation. Sound interpretation guards against overgeneralization.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Goldman Sachs' equity research team uses the Statistical Problem-Solving Framework to analyze stock returns. Which phase explicitly requires the team to state hypotheses and expected outcomes before examining actual market data?",
+    "options": [
+      "Define the problem",
+      "Analyze the data",
+      "Interpret results",
+      "Present findings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Problem definition includes specifying research questions and expected outcomes, which prevents confirmation bias and p-hacking during analysis. Option B (Analyze) processes data after hypotheses are set. Option C (Interpret) reflects on results post-analysis. Option D (Present) communicates findings. Stating expectations upfront ensures the analysis remains objective.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks collects daily sales data across 450 stores to solve a problem: 'Why are same-store sales declining in the Midwest region?' They now have 6 months of point-of-sale data including transaction volume, average ticket price, product mix, and weather conditions. Before beginning statistical analysis, what critical step in the framework must they complete?",
+    "options": [
+      "Check data quality, identify missing values, and verify that all data actually addresses the problem",
+      "Immediately calculate correlation coefficients between all variables",
+      "Run a multiple regression analysis on all 450 stores",
+      "Remove any store with fewer than 500 transactions in the 6-month period"
+    ],
+    "correctIndex": 0,
+    "explanation": "The transition from data collection to analysis requires data validation and cleaning—ensuring completeness, accuracy, and relevance to the defined problem. Option B (correlation) skips verification, Option C (regression) is premature without validated data, and Option D (removing stores) is selective deletion without justification. Clean, verified data prevents garbage-in-garbage-out analysis.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's Azure cloud division is investigating why customer churn increased from 4.2% to 6.8% annually. They define the problem, collect 18 months of historical data on 2,400 customer accounts, and run logistic regression analysis. The model shows that customer support response time (p-value = 0.031) is statistically significant, while contract flexibility (p-value = 0.087) is not. Before recommending action, what else must the team evaluate within the framework?",
+    "options": [
+      "Whether support response time has practical significance for decision-making and whether the relationship is causal or merely correlated",
+      "Whether the p-value thresholds should be adjusted to make contract flexibility statistically significant",
+      "The exact R-squared value to ensure it explains at least 95% of variance",
+      "How many total observations are needed to make any statistical finding valid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p < 0.05) differs from practical significance—a 2-minute improvement in response time might be statistically significant but cost $500K to implement. Correlation does not prove causation. Option B (adjusting p-values) violates statistical integrity. Option C (95% R²) is arbitrary—many valid models explain less variance. Option D misunderstands that 2,400 observations is already substantial. Interpretation must bridge statistics to business reality.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "CVS Health is using the Statistical Problem-Solving Framework to understand why prescription fill times have increased from an average of 8 minutes to 12 minutes over two years across 9,600 stores. The team collects data on pharmacy staffing levels, prescription volume, insurance verification delays, and store traffic patterns. After data collection, they discover that 340 stores have incomplete staffing records and 180 stores have no traffic pattern data. How should they proceed?",
+    "options": [
+      "Document the missing data, assess whether the 8,640 complete stores are representative of all 9,600, and adjust the analysis scope or imputation strategy accordingly",
+      "Exclude all 520 stores with incomplete data and analyze only the 9,080 remaining stores",
+      "Use statistical imputation to fill in all missing values and proceed with the full 9,600 stores",
+      "Collect additional data for all 9,600 stores to ensure perfect completeness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Missing data requires careful assessment—10% is significant enough to check whether missing data is random or systematic (e.g., smaller stores lack staffing records?). Option B creates selection bias. Option C imputation without understanding missingness patterns adds noise. Option D is resource-intensive and may be unnecessary if the 8,640 stores are representative. The correct approach acknowledges limitations while proceeding transparently.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola is analyzing why Sprite sales decreased 7.3% in the U.S. market last quarter. The team collects point-of-sale data from retailers, consumer survey data, and social media sentiment data. During the analysis phase, they calculate that social media mentions increased 12%, but sales fell 7.3%. They conclude: 'Increased social media engagement caused the sales decline.' What error has the team made in their application of the Statistical Problem-Solving Framework?",
+    "options": [
+      "Confusing correlation with causation and failing to consider alternative explanations such as competitor promotions, price increases, or seasonal patterns",
+      "Using too many data sources when point-of-sale data alone is sufficient",
+      "Analyzing data before clearly stating the research hypotheses in the problem definition phase",
+      "Failing to remove social media outliers that artificially inflated the engagement metric"
+    ],
+    "correctIndex": 0,
+    "explanation": "The framework requires moving from 'what changed together?' (correlation: social media up, sales down) to 'what caused what?' (causation). Maybe a competitor's sale drove both lower sales and social complaint posts. Option B (multiple sources) is actually good practice. Option C (hypotheses) is important but doesn't explain this specific error. Option D (outlier removal) is premature without domain understanding. Correlation findings require rigorous causal investigation.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Bank of America's fraud detection team defines this problem: 'Identify factors associated with fraudulent credit card transactions to reduce the current 0.32% fraud rate.' They collect 2.4 million transactions over 3 months, with 7,680 confirmed frauds. However, they skip the data validation step and run their analysis on the raw dataset. Two weeks later, they discover that 89 transactions were miscoded (marked as fraud when they were legitimate). This represents approximately how much error in their fraud label, and what framework phase would have likely prevented this?",
+    "options": [
+      "0.0037% error rate; the data cleaning/validation phase before analysis would have caught labeling errors through quality checks",
+      "3.7% error rate; the problem definition phase should have been more specific about fraud classification rules",
+      "0.32% error rate; the interpretation phase would have questioned results that seemed too good to be true",
+      "0.89% error rate; the data collection phase should have used a larger sample of transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "89 mislabeled transactions out of 2.4 million = 0.0037%, a small but detectable error. Data validation (quality checks, cross-verification) happens between collection and analysis. Option B confuses error rate calculation. Option C (interpretation) comes too late. Option D (larger sample) doesn't prevent mislabeling. This illustrates why the framework includes explicit validation: garbage in, garbage out. Even tiny error rates in large datasets affect model performance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Amazon Logistics, a team follows the Statistical Problem-Solving Framework to investigate package delivery delays. They define the problem as 'Why are same-day deliveries in urban areas declining?' They collect data on traffic patterns, driver utilization, package volume, and weather conditions. However, during interpretation, they discover their analysis only included data from October through December (holiday peak season) because that's when the problem was first noticed. What limitation are they now recognizing?",
+    "options": [
+      "Temporal bias—their findings may not generalize to non-peak seasons and should be labeled as season-specific rather than representing overall patterns",
+      "Sample size inadequacy—three months is too short a period for any valid statistical analysis",
+      "Survivorship bias—they only included packages that were actually delivered, not those that failed",
+      "Selection bias—they should have included all Amazon delivery types, not just same-day deliveries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Holiday season patterns (congestion, staffing, volume spikes) differ dramatically from February. Findings specific to Q4 should not drive year-round policy. Option B (sample size) is untrue—3 months with thousands of deliveries is adequate. Option C (survivorship) applies to looking only at successful outcomes, but the framework considers failed deliveries too. Option D (selection) applies to choosing delivery types, but focusing on same-day was the intentional problem scope. Recognizing temporal limitation requires explicit disclosure.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Pfizer's manufacturing team uses the Statistical Problem-Solving Framework to reduce vaccine production costs. During problem definition, they state: 'Reduce material waste from 4.2% to 3.5% by identifying cost drivers.' They collect detailed supplier data, process temperature data, and quality metrics. During analysis, they find that Supplier A (22% of materials) shows 6.1% waste while Supplier B (8% of materials) shows 3.2% waste. The team recommends immediately switching 50% of volume from Supplier A to Supplier B to reduce overall waste. What critical factor have they overlooked in the framework's 'Interpret & Recommend' phase?",
+    "options": [
+      "Whether Supplier B can actually scale to handle 50% increased volume without degrading quality or introducing new bottlenecks, and whether the unit cost difference justifies the switch",
+      "The exact standard deviation of waste rates to ensure the difference between 6.1% and 3.2% is truly significant",
+      "Whether they should perform a hypothesis test first before making a recommendation",
+      "The number of manufacturing batches analyzed to confirm these waste percentages are stable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical findings must translate to feasible recommendations. Supplier B might lack capacity, have longer lead times, charge 15% premiums, or be unavailable during peak demand—statistical superiority ≠ practical superiority. Option B (standard deviation) is already addressed by the 2.9 percentage point difference. Option C (hypothesis test) is done during analysis. Option D (batch numbers) is data quality, important but doesn't address implementation feasibility. Interpretation without considering operational constraints leads to unimplementable recommendations.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix is investigating why subscriber churn in Western Europe increased from 2.8% to 4.1% annually. The team follows the full Statistical Problem-Solving Framework and discovers three significant factors: (1) 23% price increase in the past 18 months, (2) 12% decline in exclusive original content releases, and (3) increased competitor offerings (Disney+, Apple TV+). However, a common misconception emerges during the 'Present Findings' phase. One executive states: 'Since we found three significant factors, we should address all three simultaneously.' What logical error does this statement represent?",
+    "options": [
+      "Failing to distinguish correlation from causation, and not prioritizing based on effect size or relative importance—not all significant factors have equal impact or feasibility to address",
+      "Ignoring that the framework requires factors to be mutually exclusive before making recommendations",
+      "Assuming that statistical significance automatically means the factors explain 100% of the churn",
+      "Concluding that external competitors cannot be addressed, so internal factors alone should be modified"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance means 'not due to chance,' but effect sizes differ—price increase might explain 65% of churn while content decline explains 20%. Budget constraints may require prioritizing the largest drivers first. Option B (mutual exclusivity) is unnecessary—factors can overlap. Option C (100% explanation) is unsupported, but is separate from the recommendation error. Option D (external factors) is defeatist—Netflix can counter with value messaging. The framework requires translating multiple findings into prioritized, actionable recommendations.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "General Motors is using the Statistical Problem-Solving Framework across a multi-year vehicle safety initiative. They define the problem in Year 1, collect data throughout Years 1-2, analyze in Year 2, and present findings in Year 3. However, by the time findings are presented, three new vehicle models have launched with different materials and supplier bases. What structural weakness does this reveal about applying the framework to long-cycle manufacturing?",
+    "options": [
+      "The multi-year lag between problem definition and implementation creates a risk that business conditions change, rendering findings partially obsolete or requiring validation before implementation",
+      "The framework is inherently incompatible with manufacturing environments and should only be used for short-term marketing problems",
+      "Statistical analysis loses validity after 12 months and must be completely redone annually regardless of timeline",
+      "Problem definition cannot be stated if conditions are likely to change, so it must be left vague"
+    ],
+    "correctIndex": 0,
+    "explanation": "Real-world constraints (production cycles, data collection time, analysis complexity) mean findings may face changed conditions upon implementation. Smart application acknowledges this—validating findings, assessing whether new models share root causes with old ones, or conducting rapid verification studies. Option B overgeneralizes—the framework works in manufacturing but requires adaptation. Option C (validity loss) is untrue. Option D (vague definition) defeats the purpose. The framework is robust but requires practitioners to account for implementation lag and external change.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Walmart's supply chain team recently completed a Statistical Problem-Solving Framework analysis showing that regional distribution centers with higher automation reduce order-to-delivery time by an average of 2.3 days. However, this finding comes from analyzing only centers that already invested in automation. When they attempt to build a business case for automating 180 lower-automation centers, what fundamental framework limitation should they explicitly acknowledge?",
+    "options": [
+      "The analysis reflects correlation from observational data, not causation from controlled conditions—automated centers may have been already efficient or well-staffed, confounding the 2.3-day benefit with unmeasured factors",
+      "The sample size of automated centers is too small to generalize to 180 new automation projects",
+      "They should have used experimental design (A/B testing) from the beginning rather than observational analysis",
+      "The 2.3-day improvement cannot be extrapolated because each center has different customer bases"
+    ],
+    "correctIndex": 0,
+    "explanation": "Observational data shows that automated centers deliver 2.3 days faster, but causation is unclear—perhaps automation was installed in already well-run centers, or better management, not automation, drives speed. This is confounding bias. A/B testing (Option C) is ideal but impractical for $100M+ capital investments; instead, acknowledge the observational limitation. Option B (sample size) depends on the actual count. Option D (different customer bases) doesn't invalidate findings. Rigorous interpretation means stating clearly: 'Our data shows correlation; causation requires additional validation.'",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

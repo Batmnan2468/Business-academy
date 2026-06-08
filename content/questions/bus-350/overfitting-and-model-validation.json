@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's data science team trains a model to predict subscriber churn using 200 features. The model achieves 98% accuracy on the training set but only 72% accuracy on the test set. What phenomenon is this an example of?",
+    "options": [
+      "Overfitting",
+      "Underfitting",
+      "Bias-variance tradeoff",
+      "Cross-validation error"
+    ],
+    "correctIndex": 0,
+    "explanation": "The large gap between training accuracy (98%) and test accuracy (72%) is the hallmark of overfitting—the model has memorized noise in the training data rather than learning generalizable patterns. Underfitting would show poor performance on both sets. While bias-variance tradeoff is related, overfitting specifically describes this scenario. Cross-validation error is a method, not a phenomenon.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the primary purpose of partitioning data into training and test sets in model validation?",
+    "options": [
+      "To estimate model performance on unseen data",
+      "To increase the size of the dataset",
+      "To reduce computational cost",
+      "To eliminate outliers from analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The training/test split allows you to evaluate whether a model generalizes beyond the data it learned from. This is the fundamental check against overfitting. Increasing dataset size and reducing computational cost are not the purpose of this partition. Outlier elimination is a separate preprocessing step.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A model with high bias and low variance typically shows which pattern when comparing training and test performance?",
+    "options": [
+      "Poor performance on both training and test data",
+      "Excellent training performance, poor test performance",
+      "Poor training performance, excellent test performance",
+      "Identical performance on both sets"
+    ],
+    "correctIndex": 0,
+    "explanation": "High bias means the model is too simple to capture the underlying pattern. This results in consistently poor predictions on both training and test sets. Low variance means the model is stable but rigid. High bias with low variance = underfitting (poor on both). The tempting wrong answer is overfitting (excellent training, poor test), which is the opposite scenario.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is k-fold cross-validation?",
+    "options": [
+      "Dividing data into k equal parts, training on k-1 parts and testing on the remaining part, repeated k times",
+      "Training a model k times with random subsets",
+      "Using k different models and averaging predictions",
+      "Validating a model k times with the same test set"
+    ],
+    "correctIndex": 0,
+    "explanation": "k-fold cross-validation systematically partitions data into k folds, trains k different models (each excluding one fold), and evaluates on that held-out fold. This provides k different performance estimates. Training on random subsets is not structured like k-fold. Using k different models misses the cross-validation aspect. Repeating on the same test set defeats the purpose of validation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A logistic regression model trained on 500 Amazon customer records to predict purchase likelihood has 15 features. In the context of overfitting risk, why might this scenario be concerning?",
+    "options": [
+      "The ratio of observations to features is relatively low (about 33:1), increasing overfitting risk",
+      "Logistic regression inherently cannot overfit",
+      "The model has too many features regardless of sample size",
+      "Amazon's dataset is always prone to overfitting"
+    ],
+    "correctIndex": 0,
+    "explanation": "With only 500 observations and 15 features, the ratio is 33:1, which is moderate but not ideal. The general rule suggests at least 10-20 observations per feature; this is on the border. Logistic regression can absolutely overfit with enough features relative to data. Feature count alone doesn't determine overfitting—the ratio matters. Amazon-specific data has no inherent overfitting property.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's supply chain team builds a neural network with 5 hidden layers (1,200 parameters total) to predict daily warehouse inventory demand using 3 years of historical data (1,095 observations). They perform a 70/30 train-test split. Calculate the train set size and determine if the parameters-to-training-samples ratio raises concern.",
+    "options": [
+      "Train set = 766 samples; ratio = 1 parameter per 0.64 samples (concerning)",
+      "Train set = 766 samples; ratio = 1 parameter per 0.64 samples (not concerning)",
+      "Train set = 329 samples; ratio = 1 parameter per 3.65 samples (concerning)",
+      "Train set = 766 samples; ratio = 1 parameter per 1.56 samples (not concerning)"
+    ],
+    "correctIndex": 0,
+    "explanation": "70% of 1,095 = 766.5 ≈ 766 training samples. Ratio = 1,200 parameters ÷ 766 = 1.57 parameters per sample, or inverted: 766 ÷ 1,200 = 0.64 samples per parameter. This is extremely concerning—typical guidance is at least 10 samples per parameter. Option B has the right calculation but wrong interpretation. Options C and D miscalculate the train set or ratio.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Goldman Sachs credit risk model achieves R² = 0.89 on training data (n=5,000) and R² = 0.84 on test data (n=1,000). Based on these metrics, which statement is most accurate?",
+    "options": [
+      "The model shows acceptable generalization with a minor 0.05 difference, suggesting mild overfitting but not severe",
+      "The model is severely overfit and should be discarded immediately",
+      "The model has perfect fit and requires no adjustment",
+      "The training and test R² are identical, indicating no overfitting"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 5-percentage-point drop in R² (0.89 to 0.84) is relatively modest and acceptable for many business applications. Both scores are strong and indicate good predictive power on unseen data. Severe overfitting would show a much larger gap (e.g., 0.95 to 0.60). The model is not perfect, and R² values are clearly different. This represents normal validation-induced degradation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analytics team at Coca-Cola tests three models predicting promotional campaign ROI: Model A (training RMSE = 2.1%, test RMSE = 9.8%), Model B (training RMSE = 5.3%, test RMSE = 6.1%), and Model C (training RMSE = 4.8%, test RMSE = 4.9%). Which model is most likely to generalize well to future campaigns?",
+    "options": [
+      "Model B",
+      "Model A",
+      "Model C",
+      "All three models generalize equally well"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model B shows a minimal gap between training and test RMSE (5.3% vs 6.1%, difference of 0.8 points), indicating good generalization with controlled bias and variance. Model A has a massive gap (2.1% vs 9.8%, difference of 7.7 points), indicating severe overfitting—it memorized training noise. Model C appears slightly better than Model B but the absolute test error is higher. Model B balances fit and generalization optimally.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A telecommunications company (Verizon) uses 10-fold cross-validation on 2,000 customer records to validate a churn prediction model. The 10 fold scores are: 0.81, 0.79, 0.82, 0.78, 0.83, 0.80, 0.81, 0.79, 0.82, 0.81. Calculate the mean CV score and identify what the standard deviation of these folds suggests about model stability.",
+    "options": [
+      "Mean = 0.806; SD ≈ 0.015, indicating the model performs consistently across different data subsets",
+      "Mean = 0.806; SD ≈ 0.15, indicating high variability between folds",
+      "Mean = 0.81; SD ≈ 0.03, indicating overfitting across folds",
+      "Mean = 0.798; SD ≈ 0.005, indicating the model is too rigid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sum of scores = 8.06; mean = 8.06/10 = 0.806. Standard deviation of these 10 values is approximately 0.015 (low variability). Low standard deviation across folds indicates the model's performance is stable and not highly sensitive to which particular subset is held out—a sign of robust generalization. Option B overstates the SD. Option C confuses low variability with overfitting. Option D miscalculates both mean and SD.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A decision tree model is trained on Airbnb listing data to predict nightly rental prices. The tree is initially grown to maximum depth with 45 leaf nodes, achieving MAE of $8.50 on training data and $42.30 on test data. After pruning to 12 leaf nodes, the training MAE increases to $15.60 and test MAE decreases to $28.70. What does this result illustrate?",
+    "options": [
+      "Pruning reduced overfitting by sacrificing some training accuracy to improve generalization",
+      "Pruning caused underfitting because training error increased",
+      "The original tree was optimal and pruning was harmful",
+      "Test error increased, so pruning was successful"
+    ],
+    "correctIndex": 0,
+    "explanation": "The original tree (45 leaves) shows severe overfitting: excellent training fit ($8.50) but poor test performance ($42.30). Pruning reduced overfitting by removing spurious branches, accepting higher training error ($15.60) in exchange for much better test performance ($28.70)—a $13.60 improvement. This is the classic overfitting-generalization tradeoff. Option B misinterprets the increased training error as a problem rather than an expected consequence of regularization. Option D is factually wrong (test error decreased).",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A machine learning engineer at Target builds a random forest with 50 trees to predict same-day delivery success (yes/no) using 8,000 customer order records. The model achieves 96.2% accuracy on the full dataset when evaluated without proper validation. Why is this evaluation approach problematic, and what validation strategy would be more appropriate?",
+    "options": [
+      "Evaluating on the entire dataset inflates accuracy estimates; 5-fold cross-validation or a holdout test set would provide realistic performance estimates",
+      "Random forests cannot overfit, so the approach is valid",
+      "96.2% accuracy is too high and indicates the model is broken",
+      "The evaluation is fine because 8,000 samples is a large dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "Evaluating on the entire training set provides no independent test of generalization—the model has 'seen' all the data. This inflates reported performance. Cross-validation or a holdout test set ensures evaluation on unseen data, revealing true generalization ability. Random forests can absolutely overfit despite being ensemble models. 96.2% is plausible, not an error. Large sample size doesn't eliminate the need for validation—overfitting can occur regardless of data size.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst at JP Morgan develops two models for predicting 30-day bond default risk: Model X (polynomial degree 6, 42 parameters) and Model Y (simple logistic regression, 5 parameters). Both are trained on 300 historical bond records. Which statement most accurately reflects the likely bias-variance characteristics given only this information?",
+    "options": [
+      "Model X likely has lower bias but higher variance; Model Y likely has higher bias but lower variance. The choice depends on the true complexity of the underlying relationship",
+      "Model X will definitely outperform Model Y because it has more parameters",
+      "Model Y will definitely outperform Model X because simpler models never overfit",
+      "Model X and Model Y will have identical generalization performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 300 samples and 42 parameters, Model X has high model complexity (7 samples per parameter), raising overfitting risk. The polynomial form can fit subtle patterns better (lower bias) but may capture noise (higher variance). Model Y is simpler, reducing variance risk but increasing bias risk. The true underlying complexity is unknown, so neither is definitively better—it depends on whether the true relationship is linear-ish (Y wins) or highly nonlinear (X might win). Options B and C are overgeneralizations. Option D ignores complexity differences.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail data scientist at Best Buy implements early stopping in a neural network model predicting customer lifetime value. Validation loss decreases until epoch 47 (validation loss = $134), then increases at epochs 48-55 (validation loss reaches $198). Training loss continues to decrease smoothly throughout. What does this pattern indicate, and what action should be taken?",
+    "options": [
+      "The model is overfitting; training should be stopped at epoch 47 and weights from that epoch should be restored",
+      "The model has underfit; training should continue beyond epoch 55",
+      "Both training and validation loss are decreasing, so training is progressing well",
+      "The validation loss increase is random noise and should be ignored"
+    ],
+    "correctIndex": 0,
+    "explanation": "When training loss decreases but validation loss increases, the model is overfitting—fitting to training noise rather than generalizable patterns. The divergence starting at epoch 48 signals this. Early stopping at epoch 47 (minimum validation loss) and restoring those weights prevents overfitting. Option B confuses this with underfitting (which shows poor performance on both sets). Option C ignores the validation loss divergence. Option D dismisses the signal that identifies overfitting.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech startup trains a gradient boosting model on 4,000 loan approval records using 35 features to predict default risk. After 5-fold cross-validation, mean CV accuracy is 87.3% (SD = 2.1%). When deployed on 500 new loans from a different geographic region, accuracy drops to 79.8%. The CV standard deviation is low, but deployment accuracy is much lower. What is the most likely explanation?",
+    "options": [
+      "The new data comes from a different distribution (geographic difference); this is distribution shift or data drift, not overfitting detected by CV",
+      "The model is severely overfit despite low CV standard deviation",
+      "The new data contains errors and should be discarded",
+      "5-fold cross-validation is insufficient; the model should use 10-fold instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "Low CV standard deviation indicates the model generalizes consistently within the original data distribution. The large gap between CV accuracy and deployment accuracy (87.3% vs 79.8%) with new geographic data suggests distribution shift—the deployment data is systematically different, not that the model overfitted. The model learned the original distribution well but cannot adapt to new conditions. This is a deployment/real-world problem, not a validation problem. Option B contradicts the low CV variability. Option C misdiagnoses the issue. Option D doesn't address the root cause (distribution drift).",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company's data team trains two models on product recommendation data: Model Alpha achieves MAE = $12.40 on training (n=6,000) and MAE = $13.20 on validation (n=2,000), while Model Beta achieves MAE = $11.80 on training and MAE = $19.60 on validation. The stakeholder prefers Model Alpha because training error is higher ('it won't memorize the data'). Why is this reasoning flawed, and which model is likely better?",
+    "options": [
+      "Higher training error doesn't prevent overfitting; Model Beta's validation-training gap ($7.80) is much larger than Alpha's ($0.80), indicating Beta is overfitting. Alpha generalizes better despite higher training error",
+      "Model Alpha is correct to prefer because lower training error always means better generalization",
+      "Model Beta is better because its training error is lower, suggesting better overall fit",
+      "Both models have identical generalization potential regardless of error differences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model Alpha shows excellent generalization: training and validation MAE are nearly identical ($12.40 vs $13.20, gap of $0.80). Model Beta has a huge validation-training gap ($19.60 vs $11.80, gap of $7.80), clear overfitting. Higher training error on Alpha doesn't indicate overfitting; it indicates Alpha found a simpler solution that generalizes better. The stakeholder confuses absolute training error (which can be high for a simple, correct model) with generalization ability (measured by the train-validation gap). Beta's lower training error came at the cost of worse generalization.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

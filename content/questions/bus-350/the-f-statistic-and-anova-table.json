@@ -1,0 +1,184 @@
+[
+  {
+    "question": "A pharmaceutical company tests three different drug formulations for reducing blood pressure. In an ANOVA analysis, the F-statistic is calculated as the ratio of which two values?",
+    "options": [
+      "Mean Square Between (MSB) divided by Mean Square Within (MSW)",
+      "Total Sum of Squares (SST) divided by Mean Square Within (MSW)",
+      "Sum of Squares Between (SSB) divided by Sum of Squares Within (SSW)",
+      "Mean Square Within (MSW) divided by Mean Square Between (MSB)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The F-statistic is defined as MSB/MSW, which compares the variance between groups to the variance within groups. Option 2 is tempting because SST is involved in ANOVA, but the F-statistic uses mean squares (averaged variance), not raw sums of squares.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In an ANOVA test, what does a larger F-statistic value indicate about the differences between group means?",
+    "options": [
+      "Larger differences between group means relative to within-group variation",
+      "Smaller differences between group means relative to within-group variation",
+      "More balanced sample sizes across all groups",
+      "A smaller p-value is guaranteed regardless of sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "A larger F-statistic means MSB is much larger than MSW, indicating group means differ more relative to the variation within groups. Option 1 is correct. Option 2 is the opposite of what F measures, and option 4 is incorrect because the p-value also depends on degrees of freedom.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's supply chain team compares average delivery times (in days) across four regional distribution centers: West, Midwest, South, and Northeast. What is the purpose of calculating the F-statistic in this one-way ANOVA?",
+    "options": [
+      "To test whether mean delivery times differ significantly across the four regions",
+      "To determine which specific region has the fastest delivery time",
+      "To calculate the confidence interval for each region's average delivery time",
+      "To measure the correlation between region location and delivery cost"
+    ],
+    "correctIndex": 0,
+    "explanation": "The F-statistic tests the null hypothesis that all group means are equal; it answers whether differences exist across groups. Option 1 is correct. Option 2 requires post-hoc tests like Tukey's HSD, not the F-statistic itself. Option 3 uses confidence intervals, not F-statistics.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In an ANOVA table for comparing quarterly revenue across three product lines at Tesla, the degrees of freedom between groups (dfB) would be calculated as which of the following?",
+    "options": [
+      "Number of groups minus 1 (k - 1)",
+      "Total sample size minus 1 (N - 1)",
+      "Total sample size minus number of groups (N - k)",
+      "Number of groups plus 1 (k + 1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Degrees of freedom between groups = k - 1, where k is the number of groups (three product lines = 3 - 1 = 2). Option 1 is correct. Option 2 calculates dfT (total), and option 3 calculates dfW (within).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An ANOVA table displays Mean Square Between (MSB) = $485,200 and Mean Square Within (MSW) = $97,040 for a company comparing average customer satisfaction scores across five customer service teams. What is the F-statistic?",
+    "options": [
+      "5.00",
+      "4.99",
+      "0.20",
+      "9.98"
+    ],
+    "correctIndex": 1,
+    "explanation": "F = MSB / MSW = $485,200 / $97,040 = 4.9948, which rounds to 4.99. Option 1 (5.00) is very close but slightly off—common if rounding MSB before division. Option 3 reverses the ratio (1/5), a tempting error.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Google's HR department conducts an ANOVA comparing average employee engagement scores across four office locations (Mountain View, NYC, London, Tokyo). The ANOVA table shows SSB = $144,000, SSW = $576,000, dfB = 3, and dfW = 196. Calculate MSB and MSW, then the F-statistic.",
+    "options": [
+      "F = 16.33",
+      "F = 3.25",
+      "F = 20.41",
+      "F = 48.00"
+    ],
+    "correctIndex": 0,
+    "explanation": "MSB = SSB / dfB = $144,000 / 3 = $48,000. MSW = SSW / dfW = $576,000 / 196 = $2,938.78. F = $48,000 / $2,938.78 = 16.33. Option 2 confuses dfB with MSB in calculation. Option 4 divides SSB by dfW incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A beverage manufacturer tests whether average sugar content (grams per 12 oz) differs across three formulations using ANOVA. The F-statistic = 2.15 with dfB = 2 and dfW = 57. Using a significance level of α = 0.05, the critical F-value from the F-table is approximately 3.16. What conclusion should be drawn?",
+    "options": [
+      "Fail to reject the null hypothesis; there is insufficient evidence that formulations differ in average sugar content",
+      "Reject the null hypothesis; formulations differ significantly in average sugar content",
+      "The test is inconclusive because the sample size is too small",
+      "Accept the alternative hypothesis; at least two formulations have identical sugar content"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since F-statistic (2.15) < critical value (3.16), we fail to reject H₀. Option 1 is correct—no significant difference is detected. Option 2 reverses the decision. Option 4 misinterprets the null hypothesis (which states all means are equal, not that some are identical).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing firm analyzing click-through rates (CTR %) for four banner ad designs finds SSB = 125.4 and SST = 498.6. What is the SSW value needed to complete the ANOVA table?",
+    "options": [
+      "373.2",
+      "624.0",
+      "125.4",
+      "373.2"
+    ],
+    "correctIndex": 0,
+    "explanation": "The fundamental ANOVA identity is SST = SSB + SSW. Therefore, SSW = SST - SSB = 498.6 - 125.4 = 373.2. Option 1 is correct. Options 2 and 3 represent common errors (adding instead of subtracting, or confusing SSB with SSW).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An ANOVA compares sales performance across three sales regions for a Fortune 500 retail company. The researcher reports: 'The F-statistic is 0.68, which is less than 1.0, so we definitely reject the null hypothesis and conclude the regions differ significantly.' Which statement best identifies the error in this conclusion?",
+    "options": [
+      "An F-statistic less than 1.0 typically indicates insufficient evidence to reject H₀, not strong evidence for differences",
+      "The p-value must always be reported instead of comparing to F-critical; F-statistics less than 1.0 are invalid",
+      "An F-statistic less than 1.0 proves the null hypothesis is true, so we accept it rather than reject it",
+      "The researcher should have used a t-test instead of ANOVA for comparing three groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "An F-statistic < 1.0 means MSB < MSW, indicating between-group variation is smaller than within-group variation—weak evidence for differences. The correct action is to fail to reject H₀. Option 0 is correct. Option 2 incorrectly claims F < 1.0 is invalid; it is valid but indicates no significant difference. Option 3 confuses failing to reject with accepting H₀.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix compares customer retention rates across five regional markets using ANOVA with n₁ = 120, n₂ = 115, n₃ = 130, n₄ = 125, n₅ = 110 (total N = 600). The researcher calculates MSB = 12,450 and MSW = 3,200. Before interpreting the F-statistic, which assumption should be explicitly verified to ensure the ANOVA results are valid?",
+    "options": [
+      "Homogeneity of variance (equal population variances across groups)",
+      "That the sample means are normally distributed",
+      "That there is a linear relationship between region and retention rate",
+      "That the sample sizes are proportional to regional population size"
+    ],
+    "correctIndex": 0,
+    "explanation": "ANOVA assumes homogeneity of variance—similar variance within each group. Option 0 is correct. Option 1 confuses assumptions; normality of the data (not sample means) is assumed, and with large N=600, this is less critical due to CLT. Option 3 is not a required ANOVA assumption.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company runs ANOVA on production defect rates across three assembly lines, yielding F = 8.92 with dfB = 2, dfW = 87. The critical F-value at α = 0.01 is 4.89. A colleague states: 'The F-statistic exceeds the critical value, so we can conclude with 99% confidence that all three assembly lines have different mean defect rates.' Which aspect of this interpretation is incorrect?",
+    "options": [
+      "ANOVA tests whether at least one mean differs; it does not identify which or how many means are different",
+      "The significance level should be 0.05, not 0.01, when comparing three groups",
+      "A rejection of H₀ means exactly one line differs from the other two, not that all three are different",
+      "The F-statistic being large means the within-group variation is much larger than between-group variation"
+    ],
+    "correctIndex": 0,
+    "explanation": "ANOVA tests H₀ (all means equal) vs. H₁ (at least one mean differs). Rejection means ≥1 mean differs, not that all three differ. Option 0 is correct. Option 1 wrongly specifies the α level. Option 2 misidentifies how many lines differ. Option 3 reverses the F-statistic interpretation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company compares average order values (AOV) across four traffic sources (Organic, Paid Search, Social Media, Email) with sample sizes n₁ = 250, n₂ = 280, n₃ = 200, n₄ = 270. The ANOVA yields F = 6.18, and a follow-up Tukey HSD test reveals that Organic ($145.30) and Email ($139.10) are not significantly different, but Paid Search ($128.50) is significantly lower than both. What does this tell us about the original ANOVA F-test result?",
+    "options": [
+      "The F-test correctly detected at least one significant difference, which the post-hoc test confirmed and pinpointed",
+      "The F-test was too liberal and incorrectly rejected H₀; the post-hoc test contradicted it",
+      "The results are contradictory; if F is significant, all pairwise comparisons must also be significant",
+      "The post-hoc test is unnecessary because the F-test already identified all significant pairwise differences"
+    ],
+    "correctIndex": 0,
+    "explanation": "The significant F-test (F = 6.18) correctly indicates at least one mean differs; the post-hoc Tukey test then identifies which pairs differ. Option 0 is correct. Option 1 falsely claims contradiction. Option 2 misunderstands post-hoc testing—not all pairs need differ for F to be significant. Option 3 overlooks that F tests overall difference, not specific pairs.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two researchers analyze the same dataset comparing call center productivity (calls per agent per day) across six call centers. Researcher A uses α = 0.05 and gets F = 3.74 (not significant). Researcher B uses α = 0.10 and gets F = 3.74 (significant). How is this possible, and what is the practical implication?",
+    "options": [
+      "Different significance levels yield different critical F-values; the same F-statistic can be significant at higher α, creating risk of Type I error at α = 0.10",
+      "Researcher B made a calculation error because the F-statistic cannot be significant at α = 0.10 if it is not significant at α = 0.05",
+      "The two researchers used different sample sizes, which is why their conclusions differ",
+      "Researcher A should have used a one-tailed test instead of two-tailed to detect significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "At α = 0.10, the critical F-value is lower than at α = 0.05. Thus, the same F = 3.74 can exceed the 0.10 critical value but not the 0.05 critical value. Option 0 is correct and notes the Type I error risk of higher α. Option 1 is false; F can be significant at higher α. Option 2 is irrelevant to the conclusion change. Option 3 misidentifies the test direction issue.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital compares patient wait times (minutes) across four emergency department shifts: Day, Evening, Night, and Overnight, using ANOVA. The summary statistics are: Day (n=50, mean=22.4), Evening (n=55, mean=28.6), Night (n=48, mean=31.2), Overnight (n=47, mean=25.8). If SSB = 3,840 and the overall grand mean is 27.0, what is the correct interpretation of SSB in this context?",
+    "options": [
+      "SSB = 3,840 represents the total squared deviations of each group's mean from the grand mean, weighted by group sample size",
+      "SSB = 3,840 represents the sum of squared deviations within each individual shift, summed across all shifts",
+      "SSB = 3,840 measures the variation in wait times explained by factors other than shift assignment",
+      "SSB = 3,840 is the average squared deviation for each observation from its group mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "SSB (Sum of Squares Between) = Σnᵢ(mean_i - grand mean)². It captures variation between group means. Option 0 is correct. Option 1 describes SSW (within-groups). Option 2 conflates SSB with unexplained variation (SSW). Option 3 describes mean square within (MSW), not SSB.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

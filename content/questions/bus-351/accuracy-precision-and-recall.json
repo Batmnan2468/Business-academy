@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Amazon's fulfillment center in Ohio, a machine learning model predicts whether a package will arrive on time. In quality assurance testing, the model correctly identified 950 on-time deliveries and correctly identified 480 late deliveries out of 1,500 total predictions. What is the accuracy of this model?",
+    "options": [
+      "95.3%",
+      "66.4%",
+      "95.0%",
+      "48.0%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy = (True Positives + True Negatives) / Total = (950 + 480) / 1,500 = 1,430 / 1,500 = 95.3%. Option B (66.4%) incorrectly divides correct predictions by one class only. Option C (95.0%) rounds incorrectly. Option D (48.0%) confuses accuracy with the negative class rate.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines precision in the context of a credit card fraud detection system at JPMorgan Chase?",
+    "options": [
+      "The proportion of predicted fraud cases that are actually fraudulent",
+      "The proportion of actual fraud cases that the model correctly identified",
+      "The overall percentage of correct predictions among all transactions",
+      "The ability of the model to identify fraud with zero false negatives"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = True Positives / (True Positives + False Positives) — it answers 'Of all the cases we flagged as fraud, how many were actually fraud?' Option B describes recall. Option C describes accuracy. Option D is an impossible standard and conflates precision with recall.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's recommendation algorithm is tested on 10,000 user-movie pairs. The model predicted 'would watch' for 2,500 pairs, of which 1,800 actually resulted in viewing. The algorithm found 2,200 actual watches in the full dataset. What is the recall of this model?",
+    "options": [
+      "81.8%",
+      "72.0%",
+      "88.0%",
+      "90.0%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recall = True Positives / (True Positives + False Negatives) = 1,800 / (1,800 + 400) = 1,800 / 2,200 = 81.8%. The 400 false negatives are actual watches that the model missed (2,200 − 1,800). Option B (72.0%) confuses recall with precision (1,800/2,500). Option C (88.0%) and D (90.0%) are incorrect arithmetic.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A cancer screening model at Mayo Clinic is evaluated on 5,000 patient scans. The results show: 320 true positives, 4,550 true negatives, 80 false positives, and 50 false negatives. Which metric would be most critical to prioritize in this medical diagnostic context?",
+    "options": [
+      "Recall — because missing a cancer case (false negative) is more costly than a false alarm",
+      "Precision — because it minimizes unnecessary patient anxiety from false alarms",
+      "Accuracy — because it reflects overall model quality equally across all outcomes",
+      "F1-score — because it eliminates the need to consider precision and recall separately"
+    ],
+    "correctIndex": 0,
+    "explanation": "In medical diagnosis, false negatives (missing a cancer case) are far more dangerous than false positives (false alarms). Recall prioritizes catching all true cases. Option B prioritizes precision, which would reduce alarms but dangerously miss real cancers. Option C (accuracy) treats false negatives and false positives equally, which is inappropriate here. Option D oversimplifies — F1-score is a balance tool, not a replacement for domain judgment.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a spam-filtering system at Gmail, what does a true positive represent?",
+    "options": [
+      "An email correctly identified as spam",
+      "An email incorrectly identified as spam",
+      "An email correctly identified as not spam",
+      "An email incorrectly identified as not spam"
+    ],
+    "correctIndex": 0,
+    "explanation": "A true positive is when the model predicts 'positive' (spam) and the actual label is 'positive' (spam). Option B is a false positive. Option C is a true negative. Option D is a false negative.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' churn prediction model identifies which customers are likely to stop visiting. In testing on 8,000 customers, the model predicted 1,200 would churn. Of those 1,200 predictions, 900 customers actually did churn. Additionally, 200 customers churned but were not flagged by the model. What is the F1-score of this model? (Round to two decimal places.)",
+    "options": [
+      "0.81",
+      "0.75",
+      "0.88",
+      "0.79"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = 900 / 1,200 = 0.75. Recall = 900 / (900 + 200) = 900 / 1,100 = 0.818. F1 = 2 × (Precision × Recall) / (Precision + Recall) = 2 × (0.75 × 0.818) / (0.75 + 0.818) = 1.227 / 1.568 = 0.782 ≈ 0.81. Option B (0.75) is precision alone. Option C (0.88) incorrectly averages precision and recall. Option D (0.79) is close but rounds the intermediate steps differently.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber's surge pricing fraud detection system classifies transactions as fraudulent or legitimate. The model has a precision of 92% and a recall of 78%. Which statement most accurately interprets these metrics?",
+    "options": [
+      "Of 100 transactions flagged as fraud, 92 are actually fraudulent; of 100 actual frauds, only 78 are caught",
+      "The model correctly classifies 92% of legitimate transactions and 78% of fraudulent transactions",
+      "The model has an overall accuracy of 85% (average of 92% and 78%)",
+      "The model catches 92% of fraudsters but misses 78% of legitimate transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision (92%) means: of every 100 we flag, 92 are actually fraudulent. Recall (78%) means: of every 100 actual frauds, we catch 78. Option B conflates precision/recall with class-wise accuracy. Option C incorrectly assumes accuracy is the average of precision and recall. Option D reverses the meanings and invents percentages not given.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A junior analyst at Coca-Cola reviews a predictive model for beverage demand forecasting with the following results: 88% accuracy on the test set. However, in production over 3 months, the model's predictions drift significantly and accuracy drops to 72%. Which of the following is the most likely explanation for this discrepancy?",
+    "options": [
+      "The test set does not represent the distribution of real-world data; the model has poor generalization due to data drift or overfitting",
+      "The accuracy metric is unreliable and should be replaced with precision or recall",
+      "The model's precision increased in production, offsetting the recall loss",
+      "The test set was too small (fewer than 1,000 samples), causing inflated accuracy estimates"
+    ],
+    "correctIndex": 0,
+    "explanation": "A large gap between test and production performance indicates data drift (real-world data distribution differs from training data) or overfitting (model learned noise instead of patterns). Option B incorrectly suggests accuracy is unreliable rather than recognizing a real performance problem. Option C invents a trade-off not evident in the scenario. Option D is plausible but less likely — the issue is distribution mismatch, not sample size.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does recall measure in LinkedIn's job recommendation engine?",
+    "options": [
+      "The percentage of relevant job recommendations that the system actually shows to a user",
+      "The percentage of shown recommendations that are relevant to the user",
+      "The overall percentage of correct recommendations across all users",
+      "The consistency of the recommendation model across different user profiles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recall = True Positives / (True Positives + False Negatives) — 'Of all relevant jobs, how many did we show?' Option B describes precision. Option C describes accuracy. Option D is unrelated to recall.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's employee retention model predicts who will leave within 12 months. The model has achieved 89% accuracy on a balanced internal test set of 2,400 employees. However, the company later learns that 95% of employees actually stay (only 5% leave). A baseline model that predicts 'everyone stays' would achieve what accuracy on this true distribution?",
+    "options": [
+      "95%",
+      "89%",
+      "50%",
+      "5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "If 95% of employees actually stay and a model always predicts 'stay,' it will be correct 95% of the time—earning 95% accuracy with zero predictive value. This reveals that the 89% accuracy achieved on the balanced test set is misleading; it doesn't account for class imbalance in the real population. Option B is the test-set accuracy, which is not representative. Options C and D are incorrect calculations.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In Target's online customer review classification system, what is a false negative?",
+    "options": [
+      "A negative review classified as positive",
+      "A negative review correctly classified as negative",
+      "A positive review classified as negative",
+      "A positive review correctly classified as positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "A false negative occurs when the true label is 'negative' but the model predicts 'positive' — the model fails to catch the negative review. Option B is a true negative. Option C is also a false negative (but reversed framing). Option D is a true positive.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial services firm uses a model to detect money laundering at 47 Bank. On a validation set of 50,000 transactions, the model flagged 2,400 transactions as suspicious. Investigation revealed 1,920 were truly suspicious and 480 were false alarms. Additionally, 80 truly suspicious transactions were missed. What is the precision of this model?",
+    "options": [
+      "80.0%",
+      "96.0%",
+      "95.8%",
+      "60.0%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = True Positives / (True Positives + False Positives) = 1,920 / (1,920 + 480) = 1,920 / 2,400 = 0.80 = 80.0%. Option B (96.0%) confuses precision with another metric. Option C (95.8%) incorrectly omits false positives from the denominator. Option D (60.0%) inverts the calculation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce platform (like Shopify) deploys a product quality classifier that flags items for manual review. The model achieves 93% recall on low-quality items but only 45% precision. In this operational context, which consequence is most problematic?",
+    "options": [
+      "High recall but low precision means many legitimate products are incorrectly flagged, burdening the manual review team and delaying seller storefronts",
+      "High recall but low precision means the model is missing low-quality items, allowing defective products to reach customers",
+      "The precision is too low to trust the model at all; accuracy should be prioritized instead",
+      "Recall should be reduced to match precision; they should always be equal in production systems"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recall of 93% means the model catches 93% of true low-quality items (good). But precision of 45% means only 45% of flagged items are actually low-quality; the other 55% are false positives (legitimate products incorrectly flagged). This floods the manual review team. Option B is backwards — high recall means we ARE catching low-quality items. Option C dismisses precision incorrectly. Option D is false; precision and recall need not be equal.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A venture capital firm uses a model to predict startup success (raising Series B funding within 3 years). The model's confusion matrix on 500 recent startups shows: True Positives = 120, True Negatives = 340, False Positives = 20, False Negatives = 20. What is the accuracy of this model?",
+    "options": [
+      "92.0%",
+      "85.7%",
+      "86.0%",
+      "94.4%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy = (TP + TN) / Total = (120 + 340) / 500 = 460 / 500 = 0.92 = 92.0%. Option B (85.7%) incorrectly divides by a wrong total. Option C (86.0%) uses incorrect subset of the confusion matrix. Option D (94.4%) adds percentages incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data scientist at Delta Airlines builds a model to predict no-show passengers (those who book but do not fly). The model has perfect recall (100%) on a test set: it flags every passenger who will actually no-show. However, it also flags 15,000 false positives out of 25,000 total flagged passengers, when only 10,000 passengers actually no-show. What conclusion should the analyst draw about deploying this model in production?",
+    "options": [
+      "The model is not suitable for deployment because the 40% precision means most flagged passengers are not no-shows; the overbooking recovery cost will exceed benefit",
+      "The model is excellent because 100% recall guarantees no revenue loss from no-shows",
+      "The model should be deployed immediately since any recall above 95% is industry-standard best practice",
+      "Precision is irrelevant in this context; only recall matters for risk management"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = 10,000 / 25,000 = 40%. While 100% recall prevents revenue loss from no-shows, the 40% false positive rate means Delta would offer costly incentives (rebooking, compensation) to 15,000 passengers who would have flown anyway, potentially exceeding savings. Business context matters: not all metrics are equally important. Option B ignores cost-benefit analysis. Option C invents false standards. Option D is incorrect; precision IS crucial here because each false positive has a direct cost.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

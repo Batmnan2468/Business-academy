@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing manager at Nestlé USA is reviewing sample size documentation. Which of the following best defines the minimum sample size in statistical sampling?",
+    "options": [
+      "The smallest number of observations needed to estimate a population parameter within a specified margin of error and confidence level",
+      "The number of observations that guarantees 100% accuracy in predicting population behavior",
+      "The total number of customers in the population being studied",
+      "The number of observations sufficient to eliminate all sampling bias"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer captures the essential definition: sample size is determined by desired precision (margin of error) and confidence level, not certainty. Option B is tempting because students often confuse larger samples with guaranteed accuracy, but no sample guarantees 100% accuracy. Option C confuses population size with sample size. Option D incorrectly assumes any sample size eliminates bias.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When determining sample size, what is the primary role of the z-score in the sample size formula n = (z² × σ²) / E²?",
+    "options": [
+      "It represents the confidence level desired (e.g., 95% confidence = z of 1.96)",
+      "It measures the standard deviation of the sample data",
+      "It calculates the margin of error directly",
+      "It adjusts for the finite population correction factor"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-score corresponds directly to the confidence level selected; 1.96 for 95% confidence, 2.576 for 99% confidence, etc. Option B incorrectly identifies z-score as the standard deviation (that role belongs to σ). Option C confuses z-score with margin of error (E is the margin of error). Option D misunderstands that finite population correction is a separate adjustment applied after calculating n.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manufacturing plant manager needs to estimate the mean weight of bearings produced by a machine with a standard deviation of 2.4 grams. If she wants a 95% confidence level and a margin of error of ±0.5 grams, what is the required sample size?",
+    "options": [
+      "89 bearings",
+      "68 bearings",
+      "123 bearings",
+      "45 bearings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using n = (z² × σ²) / E²: n = (1.96² × 2.4²) / 0.5² = (3.8416 × 5.76) / 0.25 = 88.5, rounded to 89. Option B (68) results from using z = 1.645 (90% confidence) instead of 1.96. Option C (123) results from incorrectly using σ² = 5.76 and E = 0.3 instead of 0.5. Option D (45) results from using 0.75 as the margin of error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An HR director at Apple Inc. is designing a survey to estimate the proportion of employees satisfied with remote work policies. Which formula component is most critical when the population proportion (p) is unknown?",
+    "options": [
+      "Use p = 0.5 because it maximizes the required sample size and provides the most conservative estimate",
+      "Use p = 0.3 because it is the most common proportion in business surveys",
+      "Estimate p from a previous internal survey of 50 employees",
+      "Use p = 0.9 because remote work is generally popular"
+    ],
+    "correctIndex": 0,
+    "explanation": "When p is unknown, using p = 0.5 is the standard practice because it produces the maximum sample size needed for any proportion—this is the most conservative approach ensuring adequate precision regardless of the true proportion. Option B guesses a specific value without justification. Option C uses a small preliminary sample that may not represent the true population. Option D assumes a particular proportion without evidence, which is not conservative.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase is reviewing sample size requirements for different studies. What is the relationship between confidence level and required sample size?",
+    "options": [
+      "They are directly proportional; increasing confidence level increases sample size",
+      "They are inversely proportional; increasing confidence level decreases sample size",
+      "There is no relationship between confidence level and sample size",
+      "The relationship depends only on the population standard deviation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Higher confidence levels require larger z-scores (1.645 for 90%, 1.96 for 95%, 2.576 for 99%), which directly increase the numerator in n = (z² × σ²) / E², thus increasing sample size. Option B reverses the relationship. Option C ignores the z² term in the formula. Option D overlooks that z-score is the key driver of this relationship.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A beverage company, The Coca-Cola Company, wants to estimate the mean daily consumption of their new product in Denver (population = 850,000 residents). They plan to survey 400 people. The statistician calculates the sample size using the standard formula without adjustment, then realizes the sample represents 0.047% of the population. Should a finite population correction factor be applied?",
+    "options": [
+      "No, because the sample is less than 5% of the population, so the correction factor is negligible",
+      "Yes, because the population size is larger than 100,000, so correction is always required",
+      "No, because finite population correction only applies to populations under 500,000",
+      "Yes, because the calculation should always include all available information about the population"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard rule is to apply finite population correction only when the sample exceeds 5% of the population. At 0.047%, this sample is well below the threshold, making the correction negligible. Option B incorrectly assumes large populations always require correction. Option C uses an arbitrary threshold unrelated to statistical practice. Option D, while seemingly rigorous, ignores the practical rule that correction becomes important only near 5% sampling.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics manager at FedEx wants to estimate the mean delivery time for packages in a specific region with 95% confidence and a margin of error of ±1.2 days. A pilot study of 25 deliveries showed a standard deviation of 3.6 days. What is the required sample size?",
+    "options": [
+      "35 deliveries",
+      "28 deliveries",
+      "42 deliveries",
+      "21 deliveries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using n = (z² × σ²) / E²: n = (1.96² × 3.6²) / 1.2² = (3.8416 × 12.96) / 1.44 = 34.6, rounded to 35. Option B (28) results from using E = 1.5 instead of 1.2. Option C (42) results from using z = 2.17 or miscalculating the numerator. Option D (21) results from dividing the correct answer by approximately 1.67, a common arithmetic error.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks is planning a survey to determine the proportion of customers who prefer oat milk to dairy milk, with 99% confidence and a margin of error of ±0.04. What is the required sample size using the conservative estimate for the population proportion?",
+    "options": [
+      "1,040 customers",
+      "664 customers",
+      "521 customers",
+      "1,265 customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using n = (z² × p(1-p)) / E² with p = 0.5 and z = 2.576 for 99% confidence: n = (2.576² × 0.5 × 0.5) / 0.04² = (6.636 × 0.25) / 0.0016 = 1,039.6, rounded to 1,040. Option B (664) uses z = 1.96 (95% confidence) instead of 2.576. Option C (521) uses E = 0.06 instead of 0.04. Option D (1,265) results from using 0.04 as the confidence level instead of margin of error, a common conceptual error.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A market research firm is helping BMW estimate customer satisfaction with their M-series vehicles. The firm proposes collecting data from 500 customers. A junior analyst questions whether this is sufficient, noting that BMW sold 2.4 million vehicles globally last year. Which statement best addresses the analyst's concern?",
+    "options": [
+      "The sample of 500 is likely sufficient if the margin of error and confidence level are acceptable; past sales volume does not directly determine required sample size for current satisfaction estimates",
+      "The sample is definitely too small because 500 is far less than 2.4 million",
+      "The sample of 500 is appropriate because it represents a standard industry benchmark regardless of population size",
+      "A sample of 500 is only valid if we use finite population correction because the population is very large"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sample size is determined by the desired margin of error, confidence level, and population variability—not by population size directly. A sample of 500 may be adequate for a study of current customer satisfaction (which targets a specific cohort, not all 2.4M vehicles ever sold). Option B commits the fundamental error of comparing sample to total sales rather than to the actual target population for the study. Option C ignores that different studies require different sample sizes. Option D confuses finite population correction rules; it applies only when sample exceeds 5% of the specific population studied.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quality control manager at Tesla is reviewing sample size calculations for inspection of battery cells. Two analysts propose different approaches: Analyst A wants n = 120 based on E = ±2%, confidence = 95%, p = 0.5. Analyst B proposes n = 85 based on the same parameters but using E = ±2.5% instead. Which analyst's approach aligns better with stricter quality standards, and why?",
+    "options": [
+      "Analyst A, because a smaller margin of error (±2%) requires a larger sample and provides more precision in detecting defects",
+      "Analyst B, because a margin of error of ±2.5% is more conservative in quality control applications",
+      "They are equally valid because both use 95% confidence level, which is the industry standard",
+      "Analyst A, because larger sample sizes are always required in manufacturing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Analyst A's ±2% margin of error is narrower than Analyst B's ±2.5%, requiring the larger sample of 120. In quality control, narrower margins of error allow detection of smaller defect rate changes, supporting stricter standards. The inverse relationship between margin of error and sample size (as E decreases, n increases) makes Analyst A's approach more stringent. Option B incorrectly assumes larger margin of error is more conservative. Option C ignores that margin of error, not just confidence level, drives sample size differences. Option D overgeneralizes without considering the specific parameters.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An auditor at Deloitte is calculating sample size for confirming account balances at a financial services client. The formula n = (z² × σ²) / E² yields n = 156.25. The auditor rounds down to 155 to stay within the audit budget. A colleague warns this may violate statistical principles. Which statement best explains the colleague's concern?",
+    "options": [
+      "Rounding down to 155 sacrifices the calculated precision; the actual margin of error will be slightly larger than planned, potentially missing material errors",
+      "Rounding down is acceptable in auditing because statistical rigor is less important than cost efficiency",
+      "Rounding down is problematic only if the population standard deviation is unknown",
+      "The concern is overstated because 155 vs. 156 represents only a 0.6% difference"
+    ],
+    "correctIndex": 0,
+    "explanation": "The calculated sample size of 156.25 rounds to 156 (up), not 155. Rounding down to 155 increases the actual margin of error beyond the planned level, potentially allowing material misstatements to pass undetected. This is an error-finding question exposing a common practice mistake in auditing. Option B prioritizes budget over statistical validity, which violates audit standards. Option C incorrectly limits the concern to unknown standard deviations. Option D downplays the cumulative effect on audit risk; even small reductions in sample size compound precision loss.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs is conducting a study to estimate the mean annual bonus for junior analysts across all investment banks (estimated population = 180,000). The firm calculates a required sample size of 8,900 using standard formulas with 95% confidence and E = ±$1,200. An intern suggests applying the finite population correction factor because the population is large. After correction, the sample size drops to 8,650. What is the primary flaw in the intern's reasoning?",
+    "options": [
+      "The intern misunderstood the 5% rule; a sample of 8,900 represents 4.94% of the population, so finite population correction should not be applied because the sample does not exceed 5%",
+      "Finite population correction is never appropriate when the population exceeds 100,000",
+      "The intern correctly applied the correction; larger populations always benefit from this adjustment",
+      "The intern should have used the correction only if the margin of error were larger than $2,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "At 8,900 out of 180,000, the sample represents 4.94% of the population—below the standard 5% threshold where finite population correction becomes material. The intern correctly calculated that correction would reduce the sample size, but misapplied the rule by not checking the 5% condition first. This is a nuanced error: correction is mathematically valid but practically negligible below 5%, and applying it violates the convention of only correcting when sampling rate is material. Option B incorrectly bans correction for large populations. Option C overlooks the 5% threshold rule. Option D unconnectedly ties correction to margin of error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft is planning two studies: Study 1 estimates mean monthly software spending per enterprise client (continuous variable, σ = $4,500, E = ±$800, 95% confidence). Study 2 estimates the proportion of enterprise clients using cloud services (binary variable, p = 0.6, E = ±0.05, 95% confidence). Which study requires the larger sample, and why?",
+    "options": [
+      "Study 1 requires n ≈ 122, while Study 2 requires n ≈ 369; Study 2 is larger because estimating proportions typically requires more observations than estimating means with equivalent relative precision levels",
+      "Study 2 requires the larger sample because proportions are inherently more variable than continuous data",
+      "Study 1 requires the larger sample because the standard deviation ($4,500) is greater than the proportion's variability (0.6)",
+      "Both studies require approximately equal sample sizes because they use the same 95% confidence level"
+    ],
+    "correctIndex": 0,
+    "explanation": "Study 1: n = (1.96² × 4500²) / 800² ≈ 122. Study 2: n = (1.96² × 0.6 × 0.4) / 0.05² ≈ 369. Study 2 requires substantially more observations despite p = 0.6 appearing less variable than σ = $4,500. This reflects a nuanced but common misconception: when margins of error are stated as percentages or proportions (0.05 vs. ±$800), proportion estimation often requires larger samples relative to the magnitude of variability. Option B oversimplifies the relationship. Option C confuses absolute variability magnitude with precision requirements. Option D ignores how margin of error magnitude interacts with the formulas.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company, Pfizer, is estimating sample size for a clinical trial measuring mean blood pressure reduction. Initial calculations yield n = 240 at 95% confidence with σ = 8 mmHg and E = ±1.1 mmHg. A clinician notes that prior studies showed high variability between male and female subjects (σ_male = 6 mmHg, σ_female = 10 mmHg, 50/50 split). The researcher uses the average σ = 8 mmHg and proceeds with n = 240. Why is this problematic?",
+    "options": [
+      "Using the average standard deviation masks subgroup heterogeneity; the true sample size should be at least 288 using σ = 10 mmHg from the more variable female subgroup to ensure adequate precision in both groups",
+      "Using an average is appropriate because it balances precision across subgroups and reduces overall sample size",
+      "The approach is valid because averaging standard deviations is a standard statistical practice in sample size planning",
+      "The problem is negligible because the difference between 240 and 288 is only 20%, which falls within acceptable error margins"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a nuanced misconception in stratified or mixed-group studies. Using average standard deviation (8 mmHg) yields n = 240, but the more variable female subgroup (σ = 10) requires n = 1.96² × 100 / 1.21 ≈ 322 for the same precision. Since both subgroups must achieve the target margin of error, the sample size should be based on the maximum subgroup variability (σ = 10), yielding n = (1.96² × 100) / 1.1² ≈ 314, or at least 288 using rounded approximation. Option B incorrectly treats averaging as valid when heterogeneity exists. Option C falsely claims averaging is standard practice. Option D downplays precision loss, which is material in clinical settings.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analyst at Walmart is comparing sample size requirements across three projects with different specifications. Project A: E = ±$3 margin of error on mean spending ($2,400 mean), Project B: E = ±4% on estimated proportion (p = 0.65), Project C: E = ±$6 on mean spending ($2,400 mean). The analyst calculates n_A ≈ 270, n_B ≈ 231, and n_C ≈ 68 (all at 95% confidence). The analyst concludes Project C is the easiest to study because it requires the smallest sample. Is this conclusion sound?",
+    "options": [
+      "No; Project C requires the smallest sample because its margin of error ($6) is twice that of Project A ($3), but $6 represents a much larger relative margin of error on a $2,400 mean (0.25%) versus Project A's margin of error (0.125%), making Project C less precise despite the smaller sample",
+      "Yes; the sample size calculation always reflects the true difficulty of a study, and smaller samples indicate easier projects",
+      "No; Project C is actually the hardest because it uses a dollar margin of error instead of a percentage",
+      "No; but only because Project B's proportion estimation is inherently more complex than mean estimation"
+    ],
+    "correctIndex": 0,
+    "explanation": "This tests understanding of relative vs. absolute margins of error—a critical misconception. Project A: E/$2,400 = $3/$2,400 = 0.125%. Project C: E/$2,400 = $6/$2,400 = 0.25%. Project C's relative margin of error is double Project A's, making it less precise and less 'easy' despite needing fewer observations. The smaller sample size reflects a looser precision requirement, not an easier or less important study. Option B conflates sample size with study difficulty. Option C incorrectly assumes the error statement format ($ vs. %) determines precision complexity. Option D introduces an unrelated distinction.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

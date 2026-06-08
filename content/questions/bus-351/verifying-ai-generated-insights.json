@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Salesforce, a business analyst generates an AI-powered sales forecast predicting Q4 revenue of $8.5 billion. What is the PRIMARY first step in verifying this AI-generated insight?",
+    "options": [
+      "Check the data sources, model assumptions, and whether historical accuracy metrics are provided",
+      "Accept the forecast because Salesforce uses enterprise-grade AI",
+      "Compare it only to last year's Q4 revenue",
+      "Immediately present it to the board of directors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Verification begins by auditing inputs, assumptions, and past performance—not trusting the brand or rushing to use it. Comparing to only one prior year (option C) skips validation of the model itself. Accepting without scrutiny (option B) violates core verification principles.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is a critical red flag when reviewing an AI-generated customer churn prediction for a telecom company like Verizon?",
+    "options": [
+      "The model was trained on 5 years of historical data from 2.3 million subscribers",
+      "The model provides feature importance but no confidence intervals around its predictions",
+      "The model uses customer age, contract length, and account tenure as inputs",
+      "The model correctly predicted 87% of churners in a recent validation test"
+    ],
+    "correctIndex": 1,
+    "explanation": "Confidence intervals are essential for verifying uncertainty; their absence means you don't know the margin of error on predictions. A 5-year, 2.3M-subscriber dataset (option A) is actually solid training data. Features like age and tenure (option C) are legitimate inputs. An 87% validation rate (option D) is reasonable but incomplete without confidence measures.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An AI model at Amazon predicts that Product SKU #4521 (wireless earbuds) will generate $2.8 million in Q1 revenue. What does verification of this insight require?",
+    "options": [
+      "Confirmation that the model was trained on at least 10 years of data",
+      "Review of the model's past prediction errors, the data it used, whether seasonality is accounted for, and validation on holdout test data",
+      "A manual recount of all inventory for SKU #4521",
+      "Approval from the CEO before any further analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Verification encompasses error analysis, data provenance, seasonality adjustments, and holdout validation—not arbitrary data-age requirements. Option A assumes older data is always better (false; relevance matters more). Option C confuses verification with inventory auditing. Option D delays verification rather than conducting it.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When an AI model from JPMorgan Chase predicts a 15% increase in mortgage default rates, what is the most important reason to verify this insight independently?",
+    "options": [
+      "AI models are never accurate in financial forecasting",
+      "The prediction could influence multi-billion-dollar lending decisions; verification protects against model bias, data drift, or erroneous assumptions",
+      "JPMorgan Chase is a bank, so it must have made an error",
+      "Financial predictions are always unverifiable"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-stakes decisions (lending, risk management) demand rigorous verification because downstream impact is enormous. Option A is false—AI can be accurate, but must be verified. Option C relies on unfounded prejudice. Option D is cynical and untrue; financial models can be validated using backtesting and holdout datasets.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Define 'model drift' in the context of verifying AI-generated insights.",
+    "options": [
+      "A decrease in the company's quarterly earnings",
+      "The gradual degradation of a model's predictive accuracy as real-world data patterns change over time",
+      "An error in the model's programming code",
+      "The time it takes for an AI model to process data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Model drift occurs when the underlying data distribution shifts, making past performance unreliable. Option A conflates business outcomes with model behavior. Option C describes a coding bug, not drift. Option D refers to computational speed, not accuracy degradation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Nike's AI system generates a recommendation to shift 40% of marketing spend from digital channels (currently $120 million annually) to in-store experiences. The model cites a 22% improvement in ROI. What two-step verification approach should you take?",
+    "options": [
+      "Accept it immediately because it increases ROI, and implement the $48 million shift",
+      "Verify the baseline ROI calculation for digital spend ($120M ÷ estimated revenue) and independently validate whether the 22% improvement estimate is based on actual pilot data or simulation only",
+      "Reject it because in-store spending is outdated",
+      "Ask the AI model to explain its logic in plain English and trust that explanation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Verification requires: (1) auditing how the baseline ROI was calculated, and (2) determining whether the 22% gain is evidence-based (pilot) or theoretical (simulation). Option A skips verification entirely. Option C dismisses in-store without evidence. Option D assumes verbal explanation validates mathematical accuracy, which it does not.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A McDonald's franchise manager receives an AI forecast: 'Expected customer traffic will rise 18% in June if we increase combo meal prices by 12% (from $12.99 to $14.55).' The model was trained on 2 years of transaction data from 1,200 U.S. locations. What is the main risk in accepting this insight without verification?",
+    "options": [
+      "The model may have learned an inverse correlation by coincidence (past price hikes happened to occur during naturally busy months), not causation",
+      "Two years of data is always insufficient",
+      "McDonald's corporate policy forbids price increases",
+      "AI models are inherently biased against fast food"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confusing correlation with causation is a critical verification risk: seasonal traffic spikes may have coincided with historical price hikes by accident. To verify, you'd need to isolate price sensitivity from seasonality. Option B wrongly assumes 2 years is always too short. Option C isn't a modeling issue. Option D is unfounded.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's data warehouse contains sales data for 15,000 enterprise customers. An AI model predicts that customers with annual spend >$500,000 AND contract renewal dates in Q2 have a 73% churn risk. There are 420 such customers. What verification step should you prioritize?",
+    "options": [
+      "Verify that the 73% prediction is well-calibrated by checking historical data: did 73% of similar customers actually churn in the past?",
+      "Assume 73% is correct because the sample size of 420 is large",
+      "Accept the prediction and immediately assign sales reps to all 420 customers",
+      "Reject the model because 73% sounds too high"
+    ],
+    "correctIndex": 0,
+    "explanation": "Calibration verification checks whether predicted probabilities match actual frequencies. A 73% prediction should hold true roughly 73% of the time in historical holdout data. Option B confuses sample size (420) with validation—size doesn't guarantee accuracy. Option C skips verification before action. Option D dismisses without evidence.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An AI model at Tesla predicts that a $15,000 price reduction on the Model 3 (from $42,990 to $27,990) will increase quarterly unit sales by 340% (from 250,000 to 1,100,000 units). The model was trained on 8 years of internal pricing experiments and competitor data. What is a key verification question?",
+    "options": [
+      "Has the model been tested on price changes of similar magnitude (340% demand increase), or is it extrapolating far beyond its training range?",
+      "Is $42,990 the correct original price?",
+      "Are there 1,100,000 customers interested in the Model 3?",
+      "Does Tesla have enough factory capacity to build 1,100,000 units per quarter?"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 35% price drop leading to 340% demand growth is extreme. Verification requires checking whether the model was trained on comparable elasticity scenarios or if it's dangerously extrapolating. Options B, C, and D are valid business questions, but they don't verify the model's statistical reliability—they address downstream feasibility.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An AI system at Goldman Sachs generates daily stock-picking recommendations. On Monday, it recommends buying Apple (AAPL) at $175 per share, predicting a 12% gain within 30 days (target: $196). By Wednesday, Apple has risen to $178 but the model still recommends holding. By Friday, Apple is at $181. What verification principle should you apply here?",
+    "options": [
+      "The model made money, so it needs no verification",
+      "Verify whether the model's risk-adjusted returns and consistency exceed a buy-and-hold benchmark, not just whether this single trade was profitable",
+      "AI stock pickers always outperform, so the model is verified",
+      "Reject the model because it underestimated the gain"
+    ],
+    "correctIndex": 1,
+    "explanation": "One profitable trade doesn't verify a model; you must check risk-adjusted performance, Sharpe ratio, consistency across many trades, and comparison to benchmarks. A single gain (option A) is selection bias. Option C overgeneralizes incorrectly. Option D confuses underestimation with error.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer uses an AI model to forecast that SKU #7834 (winter coats) will see a 45% surge in demand in November. The model was trained on 3 years of historical sales (2021–2023). It's now September 2024. What data quality issue could invalidate this insight?",
+    "options": [
+      "The training data doesn't include 2024 fashion trends, new competitor entries, or supply chain disruptions that occurred after 2023",
+      "Three years is too short a training period",
+      "Winter coats are seasonal, so the model can't forecast them",
+      "The model uses too many input variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data currency matters: training on 2021–2023 misses recent market shifts (e.g., new eco-friendly coat brands, inflation effects). This is model drift risk. Option B is wrong—3 years can be adequate for seasonal goods. Option C is false; seasonality is predictable. Option D lacks evidence that more variables caused problems.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank's AI model predicts that a customer with a 2.1% default risk should receive a $50,000 personal loan. The model was trained 80% on data from high-income zip codes and 20% on data from low-income zip codes. When you check the model's performance separately by zip code, you find it achieves 94% accuracy in high-income areas but only 61% accuracy in low-income areas. What is the critical verification failure here?",
+    "options": [
+      "The model is racist and should be deleted",
+      "The overall reported accuracy (80% + 20% = 50%) masks severe performance disparities; verification reveals the model is unreliable for low-income applicants despite strong aggregate accuracy",
+      "Personal loans shouldn't be offered at all",
+      "The model is 94% accurate, so it's verified"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is Simpson's Paradox in verification: aggregate accuracy (roughly 85% overall) hides the fact that the model fails 39% of the time on low-income customers. Fairness and reliability verification must examine subgroup performance. Option A conflates bias with intent. Option D ignores the 61% disaster. Option C avoids the issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber's AI system recommends a 22% surge pricing multiplier during Friday evening rush hour based on predicted demand. The model was trained on 4 years of Uber data (2020–2024). A product manager notes that April 2020 was a lockdown month with zero demand; the model still learned from it. What verification concern should you raise?",
+    "options": [
+      "The model included pandemic-era anomalies in training data, which may have distorted its understanding of 'normal' demand patterns and made surge pricing predictions unreliable",
+      "Surge pricing is always wrong",
+      "Four years of data is too much",
+      "The model should only use 2024 data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anomalous training data (lockdowns, supply shocks) can corrupt a model's learned patterns. Verification should flag whether the model distinguishes normal from anomalous periods. You might retrain on 2021+ only. Option B is a value judgment, not a verification issue. Option C is false. Option D ignores valuable historical signals.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An AI model at CVS Health predicts that a new pharmacy automation system will reduce staff costs by $12 million annually. The business case assumes no loss in customer service quality. The model was trained on data from 50 pilot stores where automation was tested for 6 months. When you verify by comparing customer satisfaction scores pre- vs. post-automation in those 50 stores, you find satisfaction dropped from 4.3/5.0 to 3.8/5.0. What should your verification report conclude?",
+    "options": [
+      "The cost savings are verified; customer satisfaction is a separate issue",
+      "The insight is partially correct on cost ($12M) but the model failed to account for quantifiable risks: lower satisfaction may increase future churn, complaints, and long-term revenue loss—these must be monetized and compared against the $12M savings",
+      "Customer satisfaction doesn't matter; cost savings are all that matter",
+      "The model is 100% wrong and should be rejected entirely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Verification must connect all measurable outcomes: cost savings are real, but satisfaction decline is a hidden cost. Verification means calculating the full impact—e.g., if 2% churn loss costs $8M in lifetime value, net benefit is only $4M. Option A ignores downstream risks. Option C dismisses customer impact. Option D overstates when partial verification is possible.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company's AI model recommends rerouting 35% of shipments from FedEx (at $8.50 per pound, $3.2M annual spend) to Amazon Logistics (at $6.10 per pound, estimated $1.8M annual spend). The model predicts $1.4M savings. You discover the model was trained on only 3 months of 2024 data, during which Amazon Logistics offered a 28% promotional discount. This discount expires in Q4 2024. What is your verification conclusion?",
+    "options": [
+      "The $1.4M savings are verified because the math is correct ($3.2M − $1.8M)",
+      "The insight is misleading: the savings are contingent on a temporary discount not reflected in baseline pricing. Verification shows that post-discount ($6.10 → $7.81 per pound), the real savings are only $0.22M, not $1.4M. The model failed to distinguish temporary from structural savings.",
+      "Amazon Logistics is always cheaper, so the recommendation is safe",
+      "Promotional discounts should never be considered in cost models"
+    ],
+    "correctIndex": 1,
+    "explanation": "Verification requires distinguishing temporary discounts from sustainable pricing. The model learned false relationships during a promotional window. When the 28% discount ends, cost-per-pound rises to ~$7.81, leaving only $0.22M savings (or possibly none if promotional pricing shifts). This is a critical verification failure. Option A does the math correctly but ignores the time-limited assumption. Option C is an unfounded assumption. Option D wrongly excludes promotions entirely.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

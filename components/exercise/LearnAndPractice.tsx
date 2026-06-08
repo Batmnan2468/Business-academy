@@ -123,6 +123,8 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
 
         <PracticeQuestion
           topicTitle={topicTitle}
+          topicSlug={topicSlug}
+          courseSlug={courseSlug}
           difficulty={difficulty}
           onAnswer={handleAnswer}
           nextLabel={session.masteryPending ? 'See results →' : undefined}

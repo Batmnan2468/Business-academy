@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. reported that the probability of a randomly selected iPhone 15 Pro having a manufacturing defect is 0.02. What is the complement of this probability?",
+    "options": [
+      "0.02",
+      "0.98",
+      "0.50",
+      "1.02"
+    ],
+    "correctIndex": 1,
+    "explanation": "The complement of an event is 1 minus the probability of the event. Since P(defect) = 0.02, then P(no defect) = 1 - 0.02 = 0.98. Option 0.02 is incorrect because it repeats the original probability; option 0.50 confuses the complement with a 50-50 split; option 1.02 is impossible since probabilities cannot exceed 1.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In probability notation, what does P(A ∩ B) represent?",
+    "options": [
+      "The probability of A or B occurring",
+      "The probability of A and B occurring together",
+      "The probability of A given that B has occurred",
+      "The probability that A and B are independent"
+    ],
+    "correctIndex": 1,
+    "explanation": "P(A ∩ B) denotes the intersection of events A and B, meaning both events occur simultaneously. Option 0 describes union (A ∪ B); option 2 describes conditional probability P(A|B); option 3 confuses the intersection symbol with a statement about independence rather than a probability measure.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A survey of 500 customers at Target found that 180 made purchases on a weekday and 220 made purchases on a weekend. If these are mutually exclusive events, what is the probability a randomly selected customer from this survey made a purchase on either weekday or weekend?",
+    "options": [
+      "0.36",
+      "0.44",
+      "0.80",
+      "1.00"
+    ],
+    "correctIndex": 2,
+    "explanation": "Since weekday and weekend purchases are mutually exclusive, P(weekday or weekend) = P(weekday) + P(weekend) = 180/500 + 220/500 = 400/500 = 0.80. Option 0.36 is just P(weekday); option 0.44 is just P(weekend); option 1.00 would only be correct if these categories were exhaustive and no customers made no purchases, but the data shows only 400 out of 500 customers.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Two events are independent if which of the following is true?",
+    "options": [
+      "They cannot both occur at the same time",
+      "The occurrence of one event does not affect the probability of the other",
+      "They are mutually exclusive",
+      "The sum of their probabilities equals 1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Independence means that knowing one event occurred does not change the probability of the other; mathematically, P(A|B) = P(A). Option 0 describes mutual exclusivity, not independence; option 2 is another name for mutual exclusivity; option 3 confuses independence with exhaustive complementary events.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart tracks inventory shrinkage (loss due to theft, damage, or error). If P(shrinkage in electronics) = 0.15 and P(shrinkage in apparel) = 0.08, and assuming these departments are independent, what is P(shrinkage in both departments)?",
+    "options": [
+      "0.23",
+      "0.15",
+      "0.012",
+      "0.08"
+    ],
+    "correctIndex": 2,
+    "explanation": "For independent events, P(A ∩ B) = P(A) × P(B) = 0.15 × 0.08 = 0.012. Option 0.23 incorrectly uses addition (P(A) + P(B)), which is for mutually exclusive events; option 0.15 repeats the larger probability; option 0.08 repeats the smaller probability.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company testing a new drug found that among 600 trial participants, 120 experienced a specific side effect. Using this data, what is the empirical probability that a patient will experience this side effect?",
+    "options": [
+      "0.20",
+      "0.08",
+      "0.50",
+      "0.12"
+    ],
+    "correctIndex": 0,
+    "explanation": "Empirical probability is calculated as (number of favorable outcomes) / (total number of trials) = 120/600 = 0.20. Option 0.08 incorrectly divides 120 by 1500; option 0.50 assumes a 50-50 outcome; option 0.12 confuses the fraction 120/1000 or makes a calculation error.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's cloud computing division Azure has 85% customer satisfaction. If a business manager randomly selects 3 customers for a focus group, assuming independence, what is the probability that all 3 customers are satisfied?",
+    "options": [
+      "0.85",
+      "0.614",
+      "0.255",
+      "0.283"
+    ],
+    "correctIndex": 1,
+    "explanation": "For independent events, P(all 3 satisfied) = 0.85 × 0.85 × 0.85 = 0.614. Option 0.85 is the single-event probability; option 0.255 results from multiplying only two probabilities (0.85 × 0.85 × 0.35); option 0.283 comes from an incorrect exponent or calculation method.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A delivery company tracks on-time performance. Among 1200 deliveries in Q3, 1020 were on time. In Q4, 95% of 800 deliveries were on time. Which quarter had a higher empirical probability of on-time delivery?",
+    "options": [
+      "Q3 with 0.85 probability",
+      "Q4 with 0.95 probability",
+      "They are equal at 0.90",
+      "Q3 with a higher absolute number of on-time deliveries"
+    ],
+    "correctIndex": 1,
+    "explanation": "Q3: 1020/1200 = 0.85; Q4: 0.95 × 800 = 760 out of 800, so 0.95. Q4 has the higher probability. Option 0 correctly calculates Q3 but declares it higher; option 2 averages the probabilities, which is methodologically incorrect; option 3 compares absolute counts (1020 > 760) rather than probabilities, a common mistake when misinterpreting \"higher.\"",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla reported that 3% of vehicles produced have a paint defect. If a quality inspector examines 50 randomly selected vehicles, what is the expected number of vehicles with a paint defect?",
+    "options": [
+      "1.5",
+      "3",
+      "2.5",
+      "0.06"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expected value = probability × number of trials = 0.03 × 50 = 1.5 vehicles. Option 1 is simply the percentage given; option 2.5 results from 0.05 × 50 or confuses the calculation; option 0.06 might come from doubling the probability incorrectly.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A restaurant chain tracks reservation cancellations. History shows P(cancellation) = 0.15. The manager states: 'Since 15% of reservations are cancelled, if we have 100 reservations, exactly 15 will be cancelled.' Which statement best evaluates this claim?",
+    "options": [
+      "The claim is correct; 0.15 × 100 always equals 15 cancellations",
+      "The claim is incorrect; 0.15 is the probability for one reservation, not a guarantee for 100",
+      "The claim is correct only if the restaurant has never had fewer than 15 cancellations",
+      "The claim is incorrect; the probability should be rounded to 0.2"
+    ],
+    "correctIndex": 1,
+    "explanation": "The probability of 0.15 is for an individual reservation, not a deterministic outcome for 100 trials. We expect approximately 15 cancellations on average, but the actual number will vary due to randomness. Option 0 confuses expected value with certainty; option 2 introduces irrelevant historical frequency; option 3 misapplies rounding rules—rounding doesn't affect the fundamental distinction between probability and guaranteed outcome.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs analysts estimate P(market downturn) = 0.30 and P(client withdraws funds | market downturn) = 0.60. They incorrectly state that P(market downturn AND client withdraws) = 0.30 + 0.60 = 0.90. What is the correct probability, and what is the conceptual error?",
+    "options": [
+      "0.18; they used addition instead of multiplication for joint probability",
+      "0.90; their calculation is correct for conditional probability",
+      "0.60; the second probability already contains the information about downturns",
+      "0.30; client withdrawals are independent of market conditions"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(A ∩ B) = P(A) × P(B|A) = 0.30 × 0.60 = 0.18. The error is using addition (which applies to mutually exclusive events) instead of multiplication (which applies to joint probability). Option 1 is correct for conditional probability only; option 2 contradicts basic probability rules; option 3 falsely assumes independence when the conditional probability explicitly shows dependence.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company operates three distribution centers (DCs). P(DC1 has stockout) = 0.10, P(DC2 has stockout) = 0.12, P(DC3 has stockout) = 0.08. If the company wants to find P(at least one DC has a stockout) and assumes independence, which approach is correct?",
+    "options": [
+      "Add all three probabilities: 0.10 + 0.12 + 0.08 = 0.30",
+      "Multiply all three probabilities: 0.10 × 0.12 × 0.08 = 0.000096",
+      "Use the complement rule: 1 - [(1-0.10)(1-0.12)(1-0.08)] = 1 - (0.90 × 0.88 × 0.92)",
+      "Use P(A) + P(B) + P(C) - P(A∩B) - P(B∩C) - P(A∩C), then separately calculate each intersection"
+    ],
+    "correctIndex": 2,
+    "explanation": "For 'at least one,' the complement rule is most efficient: P(at least one) = 1 - P(none). Calculate P(no stockout in all) = 0.90 × 0.88 × 0.92 ≈ 0.731, so P(at least one) ≈ 0.269. Option 0 incorrectly adds probabilities for independent events; option 1 calculates P(all three have stockouts), the opposite of what we need; option 3 requires calculating multiple intersections and is unnecessarily complex when the complement rule works elegantly.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company observes that among 5000 health insurance claims, 450 result in disputes. A manager claims: 'The probability of a dispute is 0.09, so in any sample of 50 claims, we will always have approximately 4.5 disputes.' What is problematic about this reasoning?",
+    "options": [
+      "The empirical probability should be 0.90, not 0.09, because most claims are not disputed",
+      "Expected value (4.5) is a long-run average, not a guarantee; actual disputes in a sample of 50 will vary around this mean",
+      "The probability calculation is wrong; 450/5000 = 0.092, not 0.09, so the manager's claim becomes valid",
+      "Using empirical probability for future predictions violates the law of large numbers"
+    ],
+    "correctIndex": 1,
+    "explanation": "The empirical probability is correctly 450/5000 = 0.09. However, the manager confuses expected value with certainty. In any single sample of 50 claims, the actual number of disputes will be a random variable that varies around the expected value of 0.09 × 50 = 4.5; it won't always be exactly 4.5 or even approximately 4.5. Option 0 confuses the complement; option 2 treats a minor rounding difference as salvaging an incorrect premise; option 3 misapplies the law of large numbers—it actually supports using empirical probability, not contradicts it.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a supply chain audit, 8% of shipments from Supplier A and 5% of shipments from Supplier B contain defects. If a manufacturing firm sources 60% from Supplier A and 40% from Supplier B, and a randomly selected shipment is found to have defects, which supplier is more likely to be the source?",
+    "options": [
+      "Supplier B, because 5% is less than 8%, indicating better overall defect control",
+      "Supplier A, using Bayes' theorem: P(A|defect) = (0.08 × 0.60) / [(0.08 × 0.60) + (0.05 × 0.40)]",
+      "Both suppliers are equally likely since the probability calculation should average 8% and 5%",
+      "Supplier B, because we source from them at 40%, which is the baseline probability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bayes' theorem finds P(A|defect) = P(defect|A) × P(A) / P(defect) = (0.08 × 0.60) / [(0.08 × 0.60) + (0.05 × 0.40)] = 0.048 / 0.068 ≈ 0.706. Since we source 60% from A and A has a higher defect rate (8%), Supplier A is more likely. Option 0 incorrectly reverses the logic—lower defect rate means less likely given we observed a defect; option 2 averages probabilities without accounting for sourcing volumes; option 3 confuses prior probability (source proportion) with conditional probability (likelihood given a defect was observed).",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech startup claims its fraud detection system has a 1% false positive rate. However, the fraud analyst notes: 'If I run this on 10,000 transactions where only 50 are actually fraudulent, I'll still get about 100 false positives.' Is this statement mathematically sound?",
+    "options": [
+      "No; 1% false positive rate means exactly 1 false positive per 100 transactions, so the claim should be 100 false positives",
+      "Yes; 1% of 10,000 = 100, and since fraud occurs in only 50 transactions, the system will correctly identify fraud with no false positives",
+      "Yes; if the system has a 1% false positive rate, it will flag 1% of the 10,000 transactions (non-fraudulent ones) as fraudulent, yielding about 100 false positives among the ~9,950 legitimate transactions",
+      "No; false positive rate is defined per fraudulent transaction, not per total transaction, so the calculation method is wrong"
+    ],
+    "correctIndex": 2,
+    "explanation": "A false positive occurs when a legitimate transaction is flagged as fraudulent. With 10,000 transactions and 50 truly fraudulent, there are ~9,950 legitimate transactions. A 1% false positive rate applied to legitimate transactions gives ~9,950 × 0.01 ≈ 99.5 ≈ 100 false positives. Option 0 misinterprets the rate; option 1 confuses false positives with true positives; option 3 incorrectly defines false positive as being conditional on actual fraud rather than on flagged alerts.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

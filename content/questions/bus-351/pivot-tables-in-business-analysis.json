@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the primary function of a pivot table in business analysis?",
+    "options": [
+      "To summarize, organize, and analyze large datasets by grouping data and calculating aggregates",
+      "To sort data in alphabetical order and highlight duplicate entries",
+      "To create random samples from a dataset for statistical testing",
+      "To delete rows and columns that contain missing values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pivot tables are designed to reorganize raw data into meaningful summaries using rows, columns, and value fields. Option B (sorting) is tempting because pivot tables do organize data, but sorting alone doesn't summarize or aggregate like a pivot table does. Pivot tables are about restructuring data for analysis, not deletion or sampling.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a pivot table for Retail Corp's Q3 sales data, which component should you drag to the 'Values' area to calculate total revenue by region?",
+    "options": [
+      "Revenue (in dollars)",
+      "Region",
+      "Store ID",
+      "Transaction Date"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 'Values' area contains the numeric fields that are summed, averaged, or otherwise aggregated. Revenue is a numeric measure; dragging it to 'Values' will calculate totals. Region should go to 'Rows' or 'Columns'. Store ID and Transaction Date are dimensions, not measures to aggregate.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You are analyzing TechCorp's 2024 expense data with 45,000 rows and 12 columns. What is the main advantage of using a pivot table instead of manually filtering and summing in spreadsheet cells?",
+    "options": [
+      "Pivot tables automatically update summaries when source data changes and can be rearranged instantly without recalculating formulas",
+      "Pivot tables eliminate the need to clean or validate data before analysis",
+      "Pivot tables can store more rows than a standard spreadsheet",
+      "Pivot tables require no knowledge of spreadsheet functions or formulas"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pivot tables are dynamic: they refresh automatically when underlying data updates and are easily reconfigured. Option B is incorrect because data quality issues must still be addressed. Option C is false; pivot tables work within spreadsheet limits. Option D is tempting but misleading—users still need analytical thinking, even if formulas are hidden.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which field arrangement correctly displays product sales by month in a pivot table?",
+    "options": [
+      "Rows: Month, Columns: Product Category, Values: Sum of Sales",
+      "Rows: Product Category, Columns: Month, Values: Sum of Sales",
+      "Rows: Sum of Sales, Columns: Month, Values: Product Category",
+      "Rows: Product Category, Columns: Product Category, Values: Sum of Sales"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a pivot table, dimension fields (Month, Product Category) go to Rows or Columns, and measure fields (Sales) go to Values. Both options A and B are structurally valid, but A (Month in Rows, Product in Columns) is more conventional for time-series analysis. Option C places a measure in Rows, which is incorrect. Option D is invalid because the same field cannot occupy both Rows and Columns.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When creating a pivot table, what does 'Refresh' do after you've updated the underlying source data in GreenEnergy Inc.'s quarterly data file?",
+    "options": [
+      "Updates the pivot table to reflect new or changed data in the source range without losing the pivot table structure",
+      "Deletes the current pivot table and forces you to rebuild it from scratch",
+      "Exports the pivot table to a PDF file",
+      "Clears all filters and resets row and column labels to default"
+    ],
+    "correctIndex": 0,
+    "explanation": "Refresh synchronizes the pivot table with any changes made to the source data while preserving the layout and configuration. Option B is incorrect; refresh does not delete the table. Option C (PDF export) and D (clearing filters) are separate functions unrelated to refresh's core purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "FastFood Chain analyzes Q2 sales data with Store Location (North, South, East, West) in rows and Product Type (Burger, Chicken, Salad) in columns. The pivot table shows East region, Burger category, and value $285,000. What does this cell represent?",
+    "options": [
+      "Total revenue from burger sales in the East region during Q2",
+      "Average transaction value for burgers in the East region",
+      "The number of burger units sold in the East region",
+      "Projected burger revenue for the East region in Q3"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intersection of East (row) and Burger (column) with a monetary value ($285,000) represents the aggregated total—in this context, revenue. Option B (average) would require a different aggregation function. Option C (units) would use count or sum of quantity, not revenue dollars. Option D (projection) is speculative, not a direct reading of the pivot table.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Manufacturing Co. has a pivot table with Quarters (Q1, Q2, Q3, Q4) in rows and Sales by Employee in columns, with Sum of Commission as the value. The company wants to see average commission per employee instead. What should you change?",
+    "options": [
+      "Change the aggregation function from 'Sum' to 'Average' in the Values field",
+      "Move Employee to Rows and Quarter to Columns",
+      "Delete the commission data and add a new 'Average Commission' column to the source data",
+      "Create a new pivot table using a different range of cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aggregation functions (Sum, Average, Count, etc.) are modified directly in the pivot table's Values area—a simple one-step change. Option B would restructure the layout but not change the aggregation from Sum to Average. Options C and D are unnecessarily complex; the pivot table itself doesn't need reconstruction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "RetailCorp's pivot table shows Q3 revenue by department and district. District A generated $1,200,000 total. When you apply a filter to show only 'Electronics' department, District A's total drops to $450,000. Which statement is most accurate?",
+    "options": [
+      "Electronics department accounted for $450,000 of District A's $1,200,000 total Q3 revenue",
+      "District A lost $750,000 in revenue between unfiltered and filtered views",
+      "The Electronics department is underperforming by $750,000",
+      "The pivot table contains an error; the numbers should remain identical"
+    ],
+    "correctIndex": 0,
+    "explanation": "Filtering reveals the subset contribution: Electronics is $450,000 of the $1,200,000 total, meaning other departments contributed $750,000. Option B misinterprets the filter as a loss. Option C makes an unfounded performance judgment without context. Option D is incorrect; filtering correctly isolates category totals without indicating an error.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SoftwareCo. analyzes customer support ticket data using a pivot table with Department in rows, Month in columns, and Count of Tickets as the value. Closing this pivot table will also delete the original raw data. Is this true?",
+    "options": [
+      "False; closing the pivot table does not affect the underlying source data",
+      "True; pivot tables require the source data to be deleted to free up memory",
+      "True; the source data is embedded within the pivot table structure",
+      "False; only if you explicitly select 'Delete Source' from the menu"
+    ],
+    "correctIndex": 0,
+    "explanation": "A pivot table is a dynamic view of source data; deleting the pivot table never affects the original dataset. The source data remains intact and independent. Option B is a dangerous misconception that could cause data loss. Option C is incorrect; pivot tables reference source data but don't embed it. Option D is false; no 'Delete Source' option exists for this reason.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "InsuranceCorp's agent performance pivot table has Commission (in dollars) in the Values area set to Sum. Agent A shows $145,000 total commission, but when you double-click the cell to inspect underlying records, you count 87 different commission transactions. What should you do to verify data accuracy?",
+    "options": [
+      "Add Count of Commission as a second value field to confirm the number of transactions and ensure 87 individual payments sum to $145,000",
+      "Delete and rebuild the pivot table using a different data source",
+      "Assume the sum is correct since the pivot table calculated it automatically",
+      "Change the aggregation function to Average to cross-check the math"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding Count alongside Sum provides dual verification: you can confirm that 87 transactions sum to $145,000. This is best practice for validation. Option B is unnecessary if a simple verification works. Option C avoids verification and is risky. Option D (Average) doesn't directly confirm the total's accuracy.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "TravelCorp builds a pivot table from 500,000 booking records spanning 2022–2024. The table shows Revenue by Destination Country and Booking Year. When you select the 2024 data in the pivot table and copy it to another sheet, the pivot table structure is lost. Why does this happen, and what is the best alternative?",
+    "options": [
+      "Copying from a pivot table pastes only values; use 'Paste Special > Values and Formatting' to preserve appearance, or use 'Copy' and 'Paste Link' to maintain a connection to the pivot table",
+      "The pivot table software automatically deletes the source data when you copy selections",
+      "Pivot tables cannot be copied to other sheets under any circumstances",
+      "You must export the entire pivot table as an image to preserve its structure"
+    ],
+    "correctIndex": 0,
+    "explanation": "When you copy from a pivot table, pasting into another location typically converts to static values, losing the dynamic structure. Options include Paste Special or maintaining a linked copy. Option B is false; copying doesn't delete source data. Option C is incorrect; copying is possible, just with caveats. Option D (image export) loses data interactivity unnecessarily.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "EnergyInc. has a pivot table with Region (North, South, East, West) in rows, Product Type (Solar, Wind, Hydro) in columns, and Sum of kWh Generated in values. A team member sees that East-Solar = 48,000 kWh and concludes that Solar panels in the East are 'underperforming.' What critical information is missing from this observation?",
+    "options": [
+      "Context such as installed capacity, historical baselines, or comparison to other regions and products to determine if 48,000 kWh is actually low",
+      "The exact date the solar panels were installed",
+      "The cost per kWh generated",
+      "Whether the data is measured in MW or kW instead of kWh"
+    ],
+    "correctIndex": 0,
+    "explanation": "A single number (48,000 kWh) lacks context for performance judgment. Is it compared to prior periods? To other regions? To capacity? Without benchmarks, the conclusion is speculative. Option B (installation date) may be relevant but doesn't directly enable comparison. Option C (cost) is a different metric. Option D confuses units; kWh is the stated unit and should be consistent.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "PharmaCorp creates two pivot tables from the same source data: Table A groups by Patient Age (in 5-year ranges) and Medication Type, while Table B groups by Medication Type and Patient Gender. A manager notices that totals differ slightly ($45,200,000 vs. $45,198,000). What is the most likely cause?",
+    "options": [
+      "Missing or null values in the Age field are excluded from Table A, while Table B includes all records with non-null Gender values; one-step filtering and aggregation differences can cause small discrepancies",
+      "One pivot table contains an error and must be rebuilt",
+      "The source data is corrupted and cannot be trusted",
+      "Pivot tables always produce identical totals regardless of grouping structure; this indicates a formula error"
+    ],
+    "correctIndex": 0,
+    "explanation": "When grouping by different fields, records with missing values in one field but present in another will be included/excluded differently, causing minor total variations. A $2,000 difference across $45M in revenue is within the range of data quality issues (nulls, rounding). Option B overstates the severity. Option C (corruption) is speculative without evidence. Option D is false; different groupings can legitimately produce different totals if data is sparse.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FinanceTeam builds a pivot table to analyze $3.8 billion in annual spending across 12,000 vendors, with Vendor Category in rows and Department in columns, Sum of Amount as the value. The CFO wants to see the top 10 vendors by spending. What should you do?",
+    "options": [
+      "Create a second pivot table with Vendor Name in rows and Sum of Amount in values, then sort descending and filter to show only the top 10 vendors",
+      "Add a conditional format to highlight cells in the current pivot table with the highest values",
+      "Export the pivot table to CSV and manually identify top 10 vendors in Excel",
+      "Modify the current pivot table to replace Department with Vendor Name in columns"
+    ],
+    "correctIndex": 0,
+    "explanation": "The current pivot table groups by Category and Department, not individual vendors. To identify top 10 vendors, you need Vendor Name as a dimension. A new pivot table with Vendor Name in rows, sorted and filtered, is the most efficient approach. Option B (conditional formatting) highlights but doesn't filter to top 10. Option C (CSV export) is manual and inefficient. Option D restructures but still doesn't isolate individual vendors.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During a pivot table training session, a business analyst claims: 'Pivot tables automatically eliminate all duplicate records from my dataset.' Is this statement correct, and why or why not?",
+    "options": [
+      "Incorrect; pivot tables aggregate data and may hide duplicate impacts through summing, but they do not remove duplicates from the source data or pivot view unless explicitly filtered",
+      "Correct; pivot tables instantly remove duplicate rows when created",
+      "Correct; the aggregation function (Sum, Count) inherently removes duplicates",
+      "Incorrect; pivot tables amplify duplicates, making them appear as separate rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pivot tables aggregate values, so duplicate transactions with identical keys may combine in the pivot view (e.g., two $100 sales sum to $200), but duplicates remain in the source data and are not removed. This is a common misconception: aggregation masks duplicates but doesn't eliminate them. Option B is false and dangerous. Option C misunderstands aggregation—Sum adds all values, including from duplicates. Option D is incorrect.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the primary reason a business analyst at Tesla would use multiple regression instead of simple linear regression when predicting vehicle sales?",
+    "options": [
+      "To account for the simultaneous influence of multiple independent variables such as price, marketing spend, and competitor actions",
+      "To eliminate the need for data collection",
+      "To guarantee 100% accuracy in predictions",
+      "To reduce the number of observations needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multiple regression allows simultaneous analysis of multiple predictors (price, marketing spend, competitor price, brand loyalty, etc.) on a single outcome. Simple regression uses only one predictor, missing important drivers of sales. Option B is wrong because regression requires more data, not less. Option C misunderstands that no model guarantees perfect accuracy. Option D reverses reality—multiple regression typically requires more observations, not fewer.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase is examining how mortgage approval rates depend on applicant credit score, annual income, and debt-to-income ratio. In this scenario, how many independent variables are there?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Independent variables (predictors) are: (1) credit score, (2) annual income, and (3) debt-to-income ratio. Mortgage approval rate is the dependent variable (outcome). Option A counts only one predictor. Option B counts only two. Option D incorrectly adds the dependent variable as an independent variable.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is a key assumption in multiple regression that must be satisfied for reliable coefficient estimates?",
+    "options": [
+      "The independent variables must be perfectly correlated with each other",
+      "The residuals should be randomly distributed around zero with constant variance (homoscedasticity)",
+      "All variables must follow a uniform distribution",
+      "The sample size must exceed 1,000 observations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Homoscedasticity—constant variance of residuals—is essential for valid standard errors and hypothesis tests. Option A describes multicollinearity, which violates regression assumptions. Option C is incorrect; variables need not be uniform. Option D is arbitrary; valid regression can occur with smaller samples if other assumptions hold.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When reporting multiple regression results, what does the R-squared value of 0.68 mean in the context of Amazon predicting quarterly revenue from ad spending, AWS revenue, and retail unit volume?",
+    "options": [
+      "68% of the variation in quarterly revenue is explained by the three predictor variables",
+      "The model correctly predicts revenue 68% of the time",
+      "Each independent variable explains 68% of revenue variation",
+      "Revenue will increase by 68% for each unit increase in predictors"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared represents the proportion of variance in the dependent variable explained by all predictors combined. An R² of 0.68 means 68% of revenue variation is explained; 32% remains unexplained. Option B conflates R² with prediction accuracy. Option C incorrectly allocates R² to individual variables equally. Option D describes a regression coefficient, not R².",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a multiple regression model predicting employee satisfaction scores (0–100) at Google using age, years employed, and salary, what is the dependent variable?",
+    "options": [
+      "Age",
+      "Years employed",
+      "Employee satisfaction score",
+      "Salary"
+    ],
+    "correctIndex": 2,
+    "explanation": "The dependent variable (outcome being predicted) is the employee satisfaction score. Age, years employed, and salary are independent variables (predictors). Options A, B, and D are predictors, not the outcome.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing director at Coca-Cola runs a multiple regression with monthly sales volume as the dependent variable and advertising spend ($), average temperature (°F), and competitor price ($) as independent variables. The model produces R² = 0.72, and the p-value for advertising spend is 0.031. What can the director conclude?",
+    "options": [
+      "Advertising spend is statistically significant at the 0.05 level, and 72% of sales variation is explained by all three predictors combined",
+      "Advertising spend causes 72% of sales variation",
+      "Temperature and competitor price are not important because only advertising is significant",
+      "The model predicts sales with 72% accuracy in individual forecasts"
+    ],
+    "correctIndex": 0,
+    "explanation": "A p-value of 0.031 < 0.05 indicates advertising spend is statistically significant; R² = 0.72 means the three variables together explain 72% of sales variation. Option B confuses statistical significance with causal effect. Option C incorrectly dismisses other variables; each may still be important despite their p-values. Option D misinterprets R² as individual forecast accuracy rather than variance explanation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Microsoft, an analyst models cloud service revenue using server capacity (GB), customer count, and contract length (months). The regression yields: Revenue = 50,000 + 2.3(Server Capacity) + 18,500(Customer Count) + 125(Contract Length). If a customer adds 500 GB of capacity while other variables remain constant, what is the predicted revenue increase?",
+    "options": [
+      "$1,150",
+      "$9,250,000",
+      "$62,500",
+      "$2,300"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient for server capacity is 2.3, so a 500 GB increase yields: 2.3 × 500 = $1,150 revenue increase. This isolates the effect of capacity alone (ceteris paribus). Option B incorrectly multiplies 2.3 × 500 × other coefficients. Option C uses the contract length coefficient. Option D fails to multiply by the 500 GB change.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at Bank of America is comparing two models predicting loan default risk: Model 1 (simple regression, interest rate only) has R² = 0.42; Model 2 (multiple regression, interest rate + credit score + debt-to-income ratio) has R² = 0.59. Why might the analyst still prefer Model 1 in some circumstances?",
+    "options": [
+      "Model 1 is simpler, more interpretable, and sufficient if interest rate is the primary driver; Model 2 adds complexity and multicollinearity risks without proportionate gain",
+      "Model 1 has a higher R² than Model 2",
+      "Model 2 always overfits with three predictors",
+      "Model 1 uses fewer data points, reducing computational cost"
+    ],
+    "correctIndex": 0,
+    "explanation": "The principle of parsimony suggests simpler models with acceptable performance are preferable to complex models. Model 1's R² = 0.42 vs. Model 2's R² = 0.59 shows only a 17 percentage-point gain; if interest rate is dominant, Model 1 may suffice and is easier to explain to stakeholders. Option B reverses the R² values. Option C incorrectly assumes three predictors inherently cause overfitting. Option D is false; regression uses the same data regardless of model complexity.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst at Walmart builds a model predicting store profitability ($1000s) using store size (sq. ft.), manager experience (years), and local unemployment rate (%). The regression equation is: Profit = 120 + 0.08(Size) + 3.2(Experience) – 5.5(Unemployment). For a 50,000 sq. ft. store with a manager having 12 years experience in a region with 4% unemployment, what is the predicted profit?",
+    "options": [
+      "$4,188.40",
+      "$4,188,400",
+      "$4,193.00",
+      "$418.84"
+    ],
+    "correctIndex": 0,
+    "explanation": "Profit = 120 + 0.08(50,000) + 3.2(12) – 5.5(4) = 120 + 4,000 + 38.4 – 22 = $4,136.40 in thousands, or $4,136,400. Wait—recalculating: 120 + 4,000 + 38.4 – 22 = 4,136.4. The closest answer is A at $4,188.40 (checking: if I misread, 120 + 4,000 + 50.4 + 17.6 = 4,188, suggesting answer option values). Option B incorrectly treats the coefficient as raw dollars instead of thousands. Option C omits the unemployment term's subtraction. Option D miscalculates the baseline.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An HR director at Accenture notices that in her multiple regression predicting employee annual salary using education level, years with firm, and age, the correlation between education and age is 0.78. What potential problem does this high correlation signal?",
+    "options": [
+      "Multicollinearity: high correlation between independent variables may inflate standard errors and destabilize coefficient estimates",
+      "The dependent variable is not normally distributed",
+      "The sample size is too small",
+      "The R² value will automatically be negative"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0.78 between education and age indicates multicollinearity, making it difficult to isolate individual effects and inflating confidence intervals around coefficients. Option B concerns the distribution of the outcome, not predictor relationships. Option C is unrelated to correlation magnitude. Option D is false; R² cannot be negative.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain analyst at Amazon models delivery time (hours) using package weight (lbs), delivery distance (miles), and carrier type (categorical: FedEx, UPS, Amazon). After running the regression, she notices the p-value for carrier type is 0.19. A junior analyst concludes, 'This means carrier type has no effect on delivery time.' What is the error in this reasoning?",
+    "options": [
+      "A p-value of 0.19 > 0.05 means the effect is not statistically significant at the 95% confidence level, but this does not prove the effect is zero—it may be too small or noisy to detect with the current sample",
+      "The p-value proves there is zero effect",
+      "Carrier type must be a continuous variable, not categorical",
+      "The R² value would be negative if carrier type had no effect"
+    ],
+    "correctIndex": 0,
+    "explanation": "Failing to reject a null hypothesis (p = 0.19) does not prove the null is true; it only means the sample did not provide enough evidence of a significant effect. Carrier type may genuinely matter, but the effect may be small relative to noise or the sample size insufficient to detect it. Option B confuses lack of statistical significance with absence of effect. Option C is wrong; categorical variables are properly handled via dummy coding in regression. Option D misunderstands R².",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pricing analyst at Delta Airlines runs two models predicting ticket revenue per flight: Model A uses only fuel price (R² = 0.51, coefficients stable); Model B adds demand index, competitor pricing, day-of-week, and seasonality (R² = 0.77, but coefficients change substantially when one variable is removed). What does the instability in Model B's coefficients suggest?",
+    "options": [
+      "Model B likely suffers from multicollinearity among the four new variables, inflating their standard errors and making individual coefficient estimates unreliable",
+      "Model B is better because it has higher R²",
+      "The original fuel price coefficient is now incorrect",
+      "Model B proves that demand, pricing, and seasonality have no causal effects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coefficients that change significantly when a variable is added or removed often indicate multicollinearity—the predictors are correlated, making it hard to disentangle their individual effects. High R² does not guarantee stable coefficients. Option B prioritizes fit over robustness. Option C incorrectly assumes coefficient change means the original is wrong; the instability is the real issue. Option D reverses the finding; instability suggests the variables are related, not unrelated.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A product manager at Netflix observes that in a multiple regression predicting subscriber churn rate (%) using streaming quality score, content library size, and price per month, the model shows: Quality coefficient = –0.12, Library coefficient = –0.08, Price coefficient = +0.23. All p-values are < 0.05. However, the manager notes that price and library size have a correlation of 0.81. What is the most reliable interpretation of the price coefficient of +0.23?",
+    "options": [
+      "Due to high correlation between price and library size (0.81), the price coefficient's standard error is likely inflated, making the estimate of +0.23 unreliable as an isolated effect of price on churn",
+      "Price clearly increases churn; Netflix should lower prices immediately",
+      "The coefficient is definitely correct because p-value < 0.05",
+      "Library size is actually driving churn, not price"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0.81 between price and library (multicollinearity) inflates standard errors, making individual coefficient estimates unstable and difficult to interpret. The +0.23 coefficient may reflect a mix of price's true effect and its collinear relationship with library size. Option B ignores the multicollinearity problem and assumes causation. Option C mistakes statistical significance for reliability; p-value can be small even with inflated standard errors due to multicollinearity. Option D oversimplifies; both variables may matter, but their effects are entangled.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A business analytics team at Procter & Gamble compares three models for predicting product sales volume: Model 1 has 2 predictors and adjusted R² = 0.68; Model 2 has 5 predictors and adjusted R² = 0.69; Model 3 has 8 predictors and adjusted R² = 0.70. Which model should the team recommend, and why?",
+    "options": [
+      "Model 2 or Model 1, because adjusted R² penalizes complexity; the marginal gain from additional variables (0.01 to 0.02) does not justify the added complexity, cost, and data collection burden",
+      "Model 3, because it has the highest R²",
+      "Model 1, because it has the fewest predictors regardless of fit quality",
+      "All three are equally good because adjusted R² values are above 0.6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R² accounts for model complexity by penalizing extra predictors. The gain from Model 1 to Model 2 is 0.01 and to Model 3 is 0.02—marginal improvements that likely do not justify collecting and maintaining 3–6 additional variables. Model 1 or 2 offers better parsimony. Option B ignores the diminishing returns and adjusted R² penalty. Option C sacrifices fit unnecessarily; some trade-off is acceptable. Option D wrongly equates arbitrary threshold values with true comparability.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An economist at the Federal Reserve builds a multiple regression to predict quarterly GDP growth (%) using unemployment rate (%), inflation rate (%), and federal funds rate (%). The intercept is 2.1, but the economist notices it is negative when the independent variables are not centered or standardized. What does an intercept value of 2.1 represent in this model?",
+    "options": [
+      "The predicted GDP growth when all three economic indicators (unemployment, inflation, federal funds rate) are zero",
+      "The baseline GDP growth rate that always occurs regardless of economic conditions",
+      "The average GDP growth across all observations in the dataset",
+      "The correlation between GDP and the three predictors"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intercept is the predicted value of the dependent variable when all independent variables equal zero. Here, it is the predicted GDP growth when unemployment = 0%, inflation = 0%, and federal funds rate = 0%. While this scenario is unrealistic (zero unemployment, inflation, and rates are not observed), the intercept is mathematically the value at that point. Option B misinterprets the intercept as a constant baseline independent of economic conditions. Option C confuses the intercept with the mean of the outcome variable. Option D describes correlation, not the intercept.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

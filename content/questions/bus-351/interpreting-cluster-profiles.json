@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Starbucks, management uses cluster analysis to segment its 15,000 US stores into groups based on foot traffic, average transaction value, and local income levels. What is the primary purpose of interpreting cluster profiles in this context?",
+    "options": [
+      "To understand the characteristics and similarities of stores within each cluster",
+      "To eliminate stores that don't fit the company's brand guidelines",
+      "To randomly assign stores to regional managers",
+      "To increase the number of clusters from 15,000 to 20,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster profile interpretation aims to describe the defining characteristics of each group so managers can tailor strategies to each cluster. Option B is tempting but wrong because interpreting profiles is descriptive, not prescriptive for elimination—clusters reveal opportunity, not failure. Option C confuses clustering with arbitrary assignment, and D misunderstands clustering as segmentation, not multiplication of groups.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A cluster profile at Nike shows that Cluster 3 has an average annual revenue per store of $2.8M, 18% market penetration in suburban areas, and 62% of customers aged 18–35. Which metric is a behavioral characteristic rather than a financial or demographic one?",
+    "options": [
+      "Average annual revenue per store of $2.8M",
+      "18% market penetration in suburban areas",
+      "62% of customers aged 18–35",
+      "None of the above; all are behavioral"
+    ],
+    "correctIndex": 1,
+    "explanation": "Market penetration (18%) is a behavioral/performance characteristic describing how stores capture their addressable market. Revenue ($2.8M) is financial, and age (62% aged 18–35) is demographic. Option C is tempting because percentages can seem behavioral, but customer age is a static demographic attribute, not a behavior. Option D is incorrect because not all three metrics are behavioral.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Target's analytics team identifies four customer clusters based on annual spending and purchase frequency. Cluster A (high spenders, high frequency) has 8,500 members; Cluster B (low spenders, low frequency) has 22,000 members. What does the size difference tell you about cluster importance?",
+    "options": [
+      "Cluster size alone does not determine strategic importance; profitability and growth potential matter more",
+      "Cluster B is more important because it contains more customers",
+      "Cluster A is more important because it represents elite customers",
+      "Cluster size determines the revenue contribution exactly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Larger clusters are not automatically more important; a small cluster of high-value customers (A) may drive more profit than a large cluster of low-value customers (B). Option B wrongly assumes volume equals importance. Option C overgeneralizes—'elite' status alone doesn't guarantee strategic priority without considering acquisition costs or churn risk. Option D incorrectly claims a deterministic relationship; profit depends on margin and retention, not size alone.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's logistics optimization team segments warehouses into clusters based on daily shipment volume (measured in units), average order processing time (hours), and staffing cost per unit ($). In a cluster profile, why is standardizing these variables before clustering essential?",
+    "options": [
+      "To ensure that high-magnitude variables (like daily volume in thousands) don't dominate the distance calculation and drown out smaller variables like processing time",
+      "To eliminate outliers completely",
+      "To reduce the number of clusters from k to k-1",
+      "To guarantee that all clusters will have equal size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization (z-scoring) puts all variables on the same scale so that volume (range: 0–10,000 units) doesn't overwhelm processing time (range: 1–8 hours) in distance metrics. Without it, clustering is driven by the largest-magnitude variable. Option B is tempting but wrong; standardization reduces outlier influence, not eliminates them entirely. Options C and D confuse standardization with cluster reduction and balancing—standardization affects neither.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's cloud services division segments enterprise clients into five clusters. Cluster 1 (Enterprise Giants) averages $12.5M annual spend, 94% contract renewal rate, and 4.2 years average customer lifetime. What does a 94% renewal rate in the cluster profile indicate?",
+    "options": [
+      "High customer satisfaction and loyalty; this cluster is strategically valuable for revenue stability",
+      "That the cluster has the highest annual spend among all clusters",
+      "That 94% of marketing campaigns succeed in this segment",
+      "That Microsoft should stop acquiring new customers in this cluster"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 94% renewal rate signals strong retention and satisfaction, making this cluster predictable and high-value for forecasting. It's a behavioral indicator of loyalty. Option B confuses renewal rate with spend level—the two are distinct metrics. Option C misinterprets renewal as marketing campaign success rate, which is unrelated. Option D wrongly prescribes acquisition strategy; high renewal doesn't eliminate growth opportunity.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart segments its 4,700 US stores into three clusters using sales per square foot, inventory turnover ratio, and profit margin %. Cluster 2 shows: 318 $/sq.ft., 7.2 inventory turns/year, 3.8% margin. If the company wants to improve Cluster 2 performance, which piece of cluster profile information is most actionable?",
+    "options": [
+      "The specific metrics and benchmarks within Cluster 2 that can be compared to higher-performing clusters",
+      "The list of all 4,700 stores so management can contact each one individually",
+      "The number of clusters (3) used in the segmentation",
+      "The geographic location of Walmart's headquarters"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster profiles enable comparative analysis: if Cluster 1 shows 385 $/sq.ft. and 8.1 turns, management can identify specific levers (e.g., merchandising, space utilization) to shift Cluster 2 upward. Option B is tempting but operationally impractical and misses the insight value of profiling. Option C is metadata, not actionable insight. Option D is irrelevant to store-level performance improvement.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase uses cluster analysis to segment 28 million credit card customers. After profiling, they find: Cluster A (Premium) averages $18,500 annual spend, 2.1% default rate, $780 annual fee acceptance; Cluster B (Standard) averages $4,200 annual spend, 4.7% default rate, $95 annual fee acceptance. What multi-step insight should the bank draw about cross-sell strategy?",
+    "options": [
+      "Cluster B presents higher credit risk but larger volume opportunity; tailor lower-cost retention products and credit management, while investing premium products in Cluster A",
+      "Cluster A is larger, so focus all resources on attracting more premium members",
+      "Default rate proves Cluster B customers are unprofitable, so discontinue this segment",
+      "Annual spend is the only metric that matters; ignore default rates and fee acceptance"
+    ],
+    "correctIndex": 0,
+    "explanation": "A holistic cluster profile interpretation weighs multiple metrics: Cluster B's higher default risk requires risk management, but its 28M × (100% − A %) volume is substantial. Different strategies per cluster maximize value. Option B ignores risk and the profitability question. Option C is incorrect—higher default risk doesn't justify elimination; mitigation (e.g., lower limits, better underwriting) is smarter. Option D dismisses risk profile, which is crucial for pricing and strategy.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks conducts k-means clustering on 8,000 customers using spending per visit ($), visit frequency (times/month), and tenure (months). Cluster 2 shows: $6.85 per visit, 8.2 visits/month, 36 months tenure. A regional manager claims this cluster is 'unprofitable' because $6.85 is below the company's $8.50 average transaction value. What is the flaw in this reasoning?",
+    "options": [
+      "The manager ignores that high frequency (8.2/month) and long tenure (36 months) generate substantial lifetime value despite lower per-visit spend",
+      "The manager is correct; any customer below average spend should be removed",
+      "The manager should only look at per-visit spend, not frequency or tenure",
+      "Cluster 2 customers are likely to upgrade to higher spend in the next month"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster profile interpretation requires holistic analysis, not single-metric judgment. Cluster 2's lifetime value = $6.85 × 8.2 × 36 = ~$2,018, which may exceed that of higher per-visit customers with low frequency. Option B is a common misconception—average metrics mask heterogeneous value. Option C artificially constrains analysis. Option D introduces unfounded prediction not supported by the profile.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix segments 230 million global subscribers into four clusters. Cluster 1 (Binge-Watchers) watches 14 hours/week, uses 3.2 devices, and churn risk is 8%. Cluster 3 (Casual) watches 3.5 hours/week, uses 1.1 devices, and churn risk is 31%. If Netflix wants to reduce churn, which insight is most directly supported by these cluster profiles?",
+    "options": [
+      "Higher engagement (viewing hours and device count) is associated with lower churn; tailor content recommendations and cross-device features to increase Casual users' engagement",
+      "Churn is random and unrelated to viewing behavior",
+      "Netflix should cancel all Casual subscriptions to eliminate churn risk",
+      "Device count is the only factor affecting churn; ignore viewing hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "The cluster profiles show a clear correlation: Binge-Watchers (high hours, multiple devices) have 8% churn vs. Casual (low hours, few devices) at 31%. This suggests engagement drives retention. Interventions like personalized recommendations and seamless multi-device UX can move Casual users toward Binge-Watcher behavior. Option B denies observable pattern. Option C is harmful business logic—high-churn segments can be converted. Option D ignores that viewing hours and devices are likely interdependent and both drive engagement.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare analytics firm segments 500,000 patients into three clusters based on annual healthcare spending, number of doctor visits/year, and chronic condition prevalence (%). Cluster A: $28,000 spend, 24 visits/year, 67% chronic; Cluster B: $3,200 spend, 2.1 visits/year, 8% chronic. If the firm wants to calculate the total addressable market for preventive care interventions, what information from the cluster profiles is still missing?",
+    "options": [
+      "The size (number of members) of each cluster, which is essential to project total spending and intervention reach",
+      "The company's annual revenue",
+      "The geographic distribution of all hospitals",
+      "The names of individual patients in each cluster"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster profiles describe characteristics but not magnitude; without cluster size, you cannot estimate total addressable market or ROI on interventions. If Cluster A has 50,000 members, addressable spend = $28,000 × 50,000; if 5,000 members, it's much smaller. Option B is irrelevant to market sizing. Option C is geographic metadata, not needed for addressable market calculation. Option D violates privacy and is unnecessary for market-level analysis.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Unilever segments 12 million US households into four clusters using laundry detergent spending, household size, and income. Profiles show: Cluster 1 (Premium): $420/year, 3.2 people, $95K income; Cluster 2 (Value): $160/year, 2.8 people, $42K income; Cluster 3 (Bulk): $580/year, 5.1 people, $78K income; Cluster 4 (Minimal): $45/year, 1.9 people, $55K income. A marketing director claims Cluster 3 is the 'best' because it has the highest annual spend. What critical oversight does this reveal?",
+    "options": [
+      "Spend per capita and spending growth potential matter more than absolute spend; Cluster 1's $420 per household may yield higher margin and premium brand loyalty despite lower total spend than Cluster 3's $580",
+      "Cluster 3 households are definitely the most profitable",
+      "Total spend is the only metric relevant to business strategy",
+      "Cluster 1 customers should be ignored because they spend less than Cluster 3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster 3's $580 is inflated by household size (5.1 vs. 1.9–3.2). Per-capita spending: C1 = $131, C3 = $114. Cluster 1 likely supports premium margins and brand value despite lower total spend. This illustrates a common misconception: size of metric ≠ strategic value. Option B assumes profitability without margin data. Option C ignores context (size effects). Option D prescribes elimination without analyzing margin and growth potential.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "PayPal clusters 25 million merchants into five groups. Cluster 2 (Growth SMBs): $320K annual GMV (gross merchandise volume), 6.2% transaction fees earned by PayPal, 18% year-over-year GMV growth, and 24-month average tenure. Cluster 5 (Mature Giants): $8.2M annual GMV, 1.8% transaction fees, 2% YoY growth, 84-month tenure. A finance analyst recommends shifting resources from Cluster 5 to Cluster 2 based solely on growth rate (18% vs. 2%). What is the flaw in this analysis?",
+    "options": [
+      "The analyst ignores revenue contribution and customer lifetime value; Cluster 5's $8.2M GMV at 1.8% fee ($147,600) may far exceed Cluster 2's revenue ($19,840), even at lower growth. Retention of high-value mature customers is often more profitable than growth acquisition.",
+      "Cluster 2 definitely generates more total revenue than Cluster 5",
+      "Growth rate is the only metric that determines resource allocation",
+      "Cluster 5 should be discontinued because its growth is below 10%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Growth rate is a critical metric, but mature, high-revenue clusters often fund the business and require less acquisition cost. Cluster 5: $8.2M × 1.8% = $147,600 in fees; Cluster 2: $320K × 6.2% = $19,840. Optimal strategy balances growth (Cluster 2 investment) with cash flow (Cluster 5 retention). Option B miscalculates revenue implications of GMV and fee rates. Option C ignores portfolio strategy and existing revenue. Option D prescribes discontinuation based on arbitrary growth threshold, ignoring profitability.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Amazon Web Services (AWS) uses cluster analysis to segment 18,000 enterprise customers by annual contract value (ACV), number of active services per customer, and contract renewal likelihood (%). After profiling five clusters, the VP of Sales observes: Cluster A has ACV of $2.1M but only 3.2 active services; Cluster B has ACV of $680K but 7.8 active services. The VP wants to optimize revenue per customer. Which interpretation is most strategically sound?",
+    "options": [
+      "Cluster A requires service expansion and cross-selling to increase wallet share and reduce single-product dependency risk, while Cluster B shows strong product adoption and may be optimized for upsell and account deepening",
+      "Cluster A is more valuable, so ignore Cluster B's optimization potential",
+      "Active services and ACV are unrelated; focus only on ACV",
+      "Cluster B customers are using too many services and should be encouraged to consolidate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The cluster profiles reveal distinct customer profiles and different optimization levers. Cluster A (high ACV, low service count) is concentrated risk—expansion of services can increase stickiness and growth. Cluster B (moderate ACV, high engagement) is sticky and ready for premium tier migration or advanced service upsells. This multi-cluster strategy maximizes total revenue. Option B ignores that different clusters need different approaches. Option C artificially decouples metrics—service count often correlates with stickiness and upsell potential. Option D reverses logic; high service adoption indicates product-market fit, not oversaturation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A major airline clusters 2.8 million frequent flyers into four segments based on annual miles flown, average ticket price, and loyalty program redemption rate (%). Initial profiles show: Cluster 1 (Elite): 127K miles/year, $680 avg ticket, 34% redemption; Cluster 2 (Core): 32K miles/year, $290 avg ticket, 12% redemption. The loyalty program director proposes eliminating low-redemption members (Cluster 2) to focus on high-redemption Elite members. What critical insight does the director miss from the cluster profiles?",
+    "options": [
+      "Cluster 2's lower redemption (12%) may reflect status (they book premium seats/upgrades instead of redeeming miles), not disengagement; eliminating 2.8M × 85% (assuming Cluster 2 is ~85% of base) removes vast volume and future Elite conversion. Cluster lifecycle analysis is essential.",
+      "Cluster 1 members are more profitable, so Cluster 2 should be discontinued",
+      "Redemption rate is unrelated to customer value or lifetime trajectory",
+      "Airline should focus exclusively on recruiting new Elite members rather than growing existing Cluster 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Low redemption in a high-mileage cluster can indicate high status (members prefer cash-like premium amenities) or early-stage loyalty, not churn risk. Cluster 2 is often the farm system for future Elite members. Eliminating the majority of the customer base to focus on a small elite segment is strategically unsound without understanding segment dynamics and migration. Option B assumes Cluster 2 is unprofitable without margin analysis. Option C dismisses an important engagement signal. Option D ignores the power of existing customer base and lifecycle progression.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Zoom segments 750,000 enterprise accounts into three clusters using annual contract value, number of concurrent users in contract, and support ticket volume per month. Cluster 1: $420K ACV, 5,200 users, 3.2 tickets/month; Cluster 2: $85K ACV, 1,100 users, 18.7 tickets/month. A customer success manager argues that Cluster 2 is 'at high risk' because of the 18.7 support tickets per month. What is the most nuanced interpretation of cluster profiles that this manager overlooks?",
+    "options": [
+      "High support volume in Cluster 2 may indicate either (a) product friction and dissatisfaction, or (b) high engagement and complex use cases; without sentiment analysis, churn prediction, or NPS in the profile, concluding 'at risk' is premature. Engagement often correlates with support volume.",
+      "Support tickets always indicate customer dissatisfaction",
+      "Cluster 1 has lower risk because it has fewer support tickets",
+      "Zoom should eliminate Cluster 2 because support costs will exceed revenue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster profiles show correlation, not causation. High support volume in SMB/mid-market (Cluster 2) often reflects active, engaged customers scaling usage—a positive signal. Without complementary data (churn rate, NPS, upsell velocity, cost analysis), the manager commits a common error: treating raw metrics as univocal risk indicators. Sophisticated interpretation requires multi-dimensional context. Option B is a false dichotomy. Option C is incorrect; Cluster 1's lower tickets may reflect lower engagement. Option D makes unfounded economic claims about support cost-to-revenue ratio.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

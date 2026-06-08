@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Amazon's recommendation engine that suggests products based on your browsing history is an example of what?",
+    "options": [
+      "Machine learning",
+      "Traditional rule-based programming",
+      "Manual data entry",
+      "Random number generation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Amazon's recommendation system learns patterns from millions of customer behaviors to predict preferences—this is machine learning. Traditional rule-based programming would require engineers to manually write every possible rule (if user browsed electronics, then show electronics), which doesn't scale. Machine learning automatically discovers these patterns.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of machine learning?",
+    "options": [
+      "The system improves its performance with more data",
+      "An engineer must manually code every decision rule in advance",
+      "The algorithm learns patterns from historical data",
+      "The system can make predictions on new, unseen data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Machine learning is defined by the ability to learn patterns automatically without manual hard-coding of rules. Traditional programming requires engineers to manually write decision rules. This is the fundamental distinction: ML learns from data, traditional programming requires explicit rule specification.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Spotify's algorithm that creates personalized playlists based on listening history uses machine learning to identify patterns. Which statement best describes what the algorithm is NOT doing?",
+    "options": [
+      "Finding correlations between songs a user plays and songs they skip",
+      "Manually assigning each song to playlists by human curators",
+      "Improving its recommendations as more users listen",
+      "Predicting which new songs you might enjoy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Machine learning automates the discovery of patterns; it doesn't rely on manual human curation at scale. While Spotify may use some human curators for playlists, the personalization algorithm uses ML to automatically learn preferences. Manual assignment would contradict the definition of machine learning.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank processes 500,000 loan applications per year. It uses machine learning to classify 95% of applications as 'approve' or 'deny' automatically, with human review for the remaining 5%. What is NOT true about this system?",
+    "options": [
+      "It learns patterns from historical loan data to make decisions",
+      "It requires no training data to function",
+      "It can process applications faster than humans alone",
+      "It improves as more historical loan outcomes are analyzed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Machine learning requires training data to learn patterns. A bank's system must be trained on historical loan data, including past applications and their outcomes. Saying 'requires no training data' contradicts the fundamental definition of ML, which learns from examples.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's system that predicts whether you will watch a show based on your viewing history, time of day, and device type is an example of:",
+    "options": [
+      "Machine learning",
+      "Data entry",
+      "A spreadsheet formula",
+      "Random prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Netflix's prediction system learns patterns from millions of users' viewing behaviors to forecast what users will watch next. This is machine learning because the system improves as it processes more data and learns correlations automatically.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart analyzes 2.5 billion point-of-sale transactions monthly to identify which products customers buy together. A manager asks: 'Is this machine learning?' The best answer is:",
+    "options": [
+      "Yes, because the system learns patterns from transaction data to identify associations without explicit programming of all rules",
+      "No, because finding associations is just statistics, not machine learning",
+      "Yes, only if the system automatically adjusts shelf layouts without human intervention",
+      "No, because machine learning requires artificial intelligence and consciousness"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pattern discovery from data that improves decision-making is core to machine learning. The distinction between 'statistics' and 'ML' is blurry in practice; ML uses statistical techniques but automates the learning process. Saying 'it's just statistics' is a common misconception. ML doesn't require autonomous action or consciousness—it requires learning patterns from data.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial firm uses a model trained on 10 years of historical stock data to predict tomorrow's stock prices with 72% accuracy on a test set. A junior analyst says, 'This is definitely machine learning in production.' What is the most critical flaw in this statement?",
+    "options": [
+      "The model may perform poorly on future data it has never seen, so accuracy on historical test data doesn't guarantee real-world success",
+      "72% accuracy is too low to be called machine learning",
+      "Machine learning cannot be used for stock prediction",
+      "The firm should use at least 20 years of data"
+    ],
+    "correctIndex": 0,
+    "explanation": "A common misconception: high test accuracy doesn't mean the model will work in production. Stock prices change due to new economic conditions the model never saw. This is 'overfitting'—performing well on historical data but failing on new data. Machine learning absolutely can predict stocks; the issue is that past patterns may not repeat.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "UPS uses a machine learning model to optimize delivery routes for 150,000 daily deliveries. The company trains the model on 3 years of historical route data and delivery times. After deployment, delivery times increase by 8% in the first month. What is the most likely explanation?",
+    "options": [
+      "New road construction and weather patterns the model has never seen, requiring retraining on current data",
+      "The model is not machine learning because it didn't improve performance",
+      "Machine learning is too slow for real-time applications",
+      "The training data was too large and the model became confused"
+    ],
+    "correctIndex": 0,
+    "explanation": "Machine learning models assume future data resembles training data. When the environment changes (new roads, weather, traffic patterns), the model's assumptions break down. This is normal and expected; the solution is to retrain. Saying 'it's not ML because it didn't improve' is incorrect—ML can fail when deployed to new conditions.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola has 200,000 retail customers. It builds a machine learning model using data from 150,000 customers to predict sales for all 200,000. The model performs well on the 150,000 training customers but poorly on the 50,000 unseen customers. What does this indicate?",
+    "options": [
+      "The model likely overfit to the training data and needs regularization or more training data",
+      "Machine learning cannot work with large datasets",
+      "The 50,000 unseen customers are fundamentally different and ML is not applicable",
+      "The model is actually working fine; poor performance on new customers is expected"
+    ],
+    "correctIndex": 0,
+    "explanation": "Large performance gap between training and test data is a classic sign of overfitting—the model memorized training patterns instead of learning generalizable patterns. This is a solvable problem (regularization, more data, simpler model). The issue is not that ML doesn't work on large datasets or that those customers are different—it's that the model didn't learn robustly.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare company develops a machine learning model to detect breast cancer from 50,000 X-ray images. It achieves 99.2% accuracy. However, when doctors use the model on a new batch of 10,000 images from a different hospital with different X-ray machines, accuracy drops to 76%. What is NOT a reasonable explanation?",
+    "options": [
+      "The model learned features specific to the original hospital's equipment that don't transfer to the new hospital",
+      "Machine learning is useless for medical diagnosis and should never be deployed",
+      "The new hospital's patient population has different disease characteristics",
+      "The model overfitted to the specific image resolution and calibration of the original data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Saying 'ML is useless' is an overreaction. The performance drop is a real problem (distribution shift), but it's solvable: retrain on new data, use domain adaptation, or validate more broadly during development. This is why testing on diverse data matters. But ML has proven highly effective for medical imaging when properly developed. Dismissing ML entirely is incorrect.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail company claims its inventory forecasting 'AI system' is machine learning because it uses 15 years of sales data and produces predictions. However, investigation reveals the system is actually a hand-coded formula: (previous year same week sales) × (1 + 3% growth trend). What is the most accurate assessment?",
+    "options": [
+      "This is NOT machine learning; it's traditional rule-based programming with no automated learning from data",
+      "This is machine learning because it uses historical data",
+      "This is machine learning because it produces forecasts",
+      "This is machine learning because it took 15 years to develop"
+    ],
+    "correctIndex": 0,
+    "explanation": "Machine learning requires automated learning of patterns from data. A hand-coded formula (even one that uses data) is traditional programming. The engineer pre-specified the logic (last year + 3%); the system doesn't learn or improve automatically. Using data and producing predictions doesn't make something ML—the key is whether the system learns relationships automatically.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs employs 600 people in equity research. It's considering a machine learning system that could automate 70% of routine analysis, potentially requiring only 180 researchers. A board member argues: 'This is just algorithm bias—the machine will discriminate against certain stocks.' What is the flaw in this reasoning?",
+    "options": [
+      "Bias and job displacement are different issues; bias is a legitimate concern but doesn't mean the technology fundamentally isn't machine learning",
+      "Machine learning never has bias problems",
+      "If job displacement occurs, it proves the system isn't really machine learning",
+      "Bias only applies to hiring decisions, not financial prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The board member conflated two distinct concerns: (1) whether the system is machine learning (yes, it learns from data to make predictions), and (2) whether it's fair/unbiased (a real but separate issue). ML models absolutely can have bias and discrimination problems. But acknowledging these risks doesn't change whether something is ML or not.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company trains a machine learning model on 5 years of production data where defect rate was 2.3%. After deployment, the actual defect rate rises to 4.8%. An engineer claims: 'This proves machine learning cannot work in manufacturing; we should switch to traditional statistical process control.' What is the logical error?",
+    "options": [
+      "A single deployment failure doesn't prove the technology is fundamentally unsuitable; ML can work in manufacturing with proper retraining and root cause analysis of the performance drop",
+      "Machine learning is always better than statistical methods",
+      "Defect rate increases only happen with machine learning, not with human decisions",
+      "Manufacturing data is too complex for any predictive system"
+    ],
+    "correctIndex": 0,
+    "explanation": "Overgeneralization from one failure. The model may have encountered new process conditions, equipment changes, or supply chain shifts not in training data. This requires investigation and retraining—not abandonment of ML. Many manufacturers successfully use ML for defect detection. One failure is evidence to debug, not evidence that ML doesn't work.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A credit card company trains a model on 10 million transactions to detect fraud. The model flags 0.5% of transactions as suspicious. Analysis shows: 8,000 flagged transactions were actually fraudulent (True Positives), 42,000 were legitimate purchases incorrectly flagged (False Positives), and 2,000 fraudulent transactions were missed (False Negatives). What is TRUE about this model's performance?",
+    "options": [
+      "The model has high false positives and would cause customer frustration; a critical business trade-off to evaluate",
+      "The model is perfect because it caught 8,000 frauds",
+      "Machine learning models never have false positives",
+      "The model is useless because it flagged 42,000 legitimate transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "This illustrates a crucial ML concept: all models make errors. Precision is 8,000/(8,000+42,000)=16%, meaning most flagged transactions are false alarms. The company must decide: is preventing fraud (true positive rate) worth customer frustration? This trade-off is inherent to ML, not a failure. Saying 'perfect because it caught frauds' ignores false positives; saying 'useless' ignores the real frauds prevented.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A bar chart displays the quarterly revenue for Salesforce in millions of dollars: Q1 $7,200, Q2 $8,100, Q3 $8,900, Q4 $9,500. Which characteristic best describes this visual representation?",
+    "options": [
+      "A categorical data visualization where categories are quarters and values are continuous revenue amounts",
+      "A time-series line graph showing temporal trends only",
+      "A pie chart illustrating proportional market share",
+      "A scatter plot measuring correlation between quarters and revenue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bar charts are the standard method for displaying categorical data (quarters are discrete categories) with numerical values (revenue in millions). Option B is incorrect because bar charts can show time-based categories, but they're not exclusively time-series graphs—they're fundamentally categorical visualizations. Line graphs are better for trend emphasis, but bar charts still properly display this data.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a bar chart comparing Amazon's operating expenses across three departments—AWS ($18.5B), Retail ($31.2B), and Advertising ($10.8B)—what is the correct order from smallest to largest?",
+    "options": [
+      "Advertising, AWS, Retail",
+      "AWS, Advertising, Retail",
+      "Retail, AWS, Advertising",
+      "Advertising, Retail, AWS"
+    ],
+    "correctIndex": 0,
+    "explanation": "From smallest to largest: Advertising ($10.8B) < AWS ($18.5B) < Retail ($31.2B). Option B is tempting because it groups the first two correctly but reverses the last, suggesting a casual reading error. A careful numerical comparison prevents this mistake.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is a key advantage of using a bar chart rather than a pie chart for displaying market share across five major smartphone manufacturers?",
+    "options": [
+      "Bar charts make it easier to compare exact values and rank categories when more than three categories exist",
+      "Pie charts are superior because they automatically show percentages",
+      "Bar charts eliminate the need for a legend entirely",
+      "Pie charts are always more visually appealing to business audiences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bar charts excel at comparing multiple categories because our eyes judge bar lengths more accurately than pie slice angles, especially with 5+ categories. Option B incorrectly suggests pie charts are inherently better—they become cluttered and hard to read with many categories. Option C is false; legends are often still needed in bar charts.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bar chart shows Costco's membership revenue by region: North America $28.4B, Europe $9.2B, Asia $7.8B, Other $2.1B. What percentage of total membership revenue comes from Asia, rounded to the nearest whole percent?",
+    "options": [
+      "14%",
+      "18%",
+      "12%",
+      "16%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Total = $28.4B + $9.2B + $7.8B + $2.1B = $47.5B. Asia = $7.8B ÷ $47.5B = 0.164 = 16.4% ≈ 16%. Option A (14%) results from using the wrong base or misplacing the decimal. Option C (12%) is a common rounding error when students divide 7.8 by 65 instead of 47.5.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's quarterly subscriber growth (millions) is displayed as: Q1 +2.3, Q2 +3.1, Q3 +1.8, Q4 +4.2. If you create a bar chart using these values, what interpretation would be incorrect?",
+    "options": [
+      "Q2 had stronger growth than Q3 by 1.3 million subscribers",
+      "Q4 showed the highest growth rate, making it the strongest quarter",
+      "The total growth across four quarters was 11.4 million subscribers",
+      "Growth was entirely stable and predictable across all quarters"
+    ],
+    "correctIndex": 3,
+    "explanation": "Option D is incorrect because the bar chart clearly shows variability (1.8M to 4.2M)—this is not stable or predictable growth at all. Options A, B, and C are all valid interpretations from the data. A common misconception is assuming quarterly patterns are uniform when a bar chart visibly demonstrates variance.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company presents a bar chart of drug sales by category: Oncology $42.3M, Cardiology $28.7M, Immunology $35.9M, Neurology $19.4M. A competitor analyst claims that 'Oncology generates more revenue than Immunology and Neurology combined.' Is this claim supported by the data?",
+    "options": [
+      "Yes, because $42.3M > $35.9M + $19.4M ($55.3M)",
+      "No, because $42.3M < $35.9M + $19.4M ($55.3M)",
+      "Yes, because Oncology is the largest single category",
+      "No, because the chart is missing 20% of data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Immunology + Neurology = $35.9M + $19.4M = $55.3M. Oncology ($42.3M) is less than $55.3M, so the claim is false. Option A reverses the inequality—a common algebraic error when analyzing bar chart comparisons. Option C confuses 'largest category' with 'larger than a sum,' which requires explicit arithmetic.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla's vehicle delivery data (in thousands) shows: Model S 12.4, Model 3 48.6, Model Y 64.2, Model X 9.8. If a bar chart displays these values and uses a vertical axis starting at zero and ending at 70,000, what is the approximate visual height ratio of Model X to Model Y?",
+    "options": [
+      "Approximately 1:6.5",
+      "Approximately 1:5.2",
+      "Approximately 1:7.3",
+      "Approximately 2:13"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model X is 9.8K and Model Y is 64.2K. Ratio = 9.8 ÷ 64.2 ≈ 0.153, which is approximately 1:6.5. Option B (1:5.2) results from confusing Model S and Model X. Option C assumes incorrect rounding. Option D incorrectly simplifies the ratio. This tests the understanding that bar heights reflect actual data proportions.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst creates a bar chart comparing annual revenue for three competing beverage companies: Coca-Cola $43.0B, PepsiCo $91.5B, Monster Energy $5.4B. The analyst titles the chart 'Equal Representation of Global Beverage Market Leaders.' What is the primary problem with this presentation?",
+    "options": [
+      "The three companies have vastly different revenue scales, making the 'equal representation' title misleading about their actual market influence",
+      "Monster Energy should not be included in the chart because it is privately held",
+      "The chart should use a logarithmic scale instead of revenue amounts",
+      "PepsiCo's revenue is clearly inflated due to a data entry error"
+    ],
+    "correctIndex": 0,
+    "explanation": "PepsiCo ($91.5B) is 17 times larger than Monster Energy ($5.4B). Calling this 'equal representation' is deceptive because the bar chart visually dominates PepsiCo, not equally representing the three. Option B is incorrect; private status doesn't disqualify data. Option C (logarithmic scale) could help compare proportionally but isn't required. The core issue is the misleading title given the data's actual disparity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank presents this Q2 deposit data by account type: Checking $156.2B, Savings $203.7B, Money Market $87.5B, CD $124.6B, IRA $94.3B. An executive notices the bar chart bars are not in descending order. The executive insists bars must always be sorted highest-to-lowest. Is this requirement always correct?",
+    "options": [
+      "No, because the logical ordering depends on context—chronological data (e.g., months) should preserve time order; categorical data without inherent order may be sorted, but organizational or temporal categories should not be rearranged",
+      "Yes, sorting highest-to-lowest is a universal best practice in all bar charts",
+      "No, because the sorting prevents identification of the largest category",
+      "Yes, but only for horizontal bar charts, not vertical ones"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sorting is optional for nominal (unordered) categories but inappropriate for ordinal (ranked) or temporal data. Here, account types are nominal and could be sorted either way. However, if data represented quarters or regions with inherent relationships, sorting would destroy that meaning. Option B is overly rigid. Option C incorrectly suggests sorting hides the maximum. This tests understanding of when sorting is contextually appropriate.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company displays claims data in a bar chart: Auto $127.8M, Home $89.4M, Health $206.3M, Life $54.2M, Umbrella $12.1M. A data analyst claims 'Health claims are roughly double Home claims.' Another analyst counters 'The exact ratio is 2.31:1, so saying double is imprecise.' Which analyst's statement reflects proper statistical communication for this context?",
+    "options": [
+      "The first analyst, because bar charts are meant for approximate visual comparisons, not precise calculations; describing Health as 'roughly double' ($206.3M ÷ $89.4M ≈ 2.31) is appropriate for this medium",
+      "The second analyst, because data should always be reported with exact precision regardless of the visualization method",
+      "Both are equally correct; precision and approximation are interchangeable",
+      "Neither, because the ratio should be expressed as a percentage difference instead"
+    ],
+    "correctIndex": 0,
+    "explanation": "The first analyst correctly uses 'roughly' to indicate appropriate imprecision for a visual medium; $206.3M ÷ $89.4M = 2.31, which is reasonably summarized as 'roughly double.' The second analyst misunderstands that bar charts communicate approximate relationships, not exact values—precision is the domain of data tables, not charts. Bar charts sacrifice exactness for clarity and pattern recognition.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain analyzes weekly frozen food sales across four stores: Store A $18,500, Store B $22,300, Store C $31,200, Store D $16,800. What is the range of frozen food sales across these stores?",
+    "options": [
+      "$14,400",
+      "$31,200",
+      "$22,300",
+      "$16,800"
+    ],
+    "correctIndex": 0,
+    "explanation": "Range = Maximum − Minimum = $31,200 − $16,800 = $14,400. Option B is the maximum value alone, not the range. Option C is the median. Option D is the minimum. This tests understanding that range requires both endpoints and subtraction, not just identifying the highest bar.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's cloud revenue (in billions) is shown in a bar chart: Azure $19.2, Office 365 $22.1, Dynamics 365 $3.8, LinkedIn $14.9. When presenting this to the board, the CFO states 'Azure and Office 365 together represent over 70% of cloud revenue.' Is this statement accurate?",
+    "options": [
+      "Yes, because ($19.2B + $22.1B) ÷ ($19.2B + $22.1B + $3.8B + $14.9B) = $41.3B ÷ $60.0B ≈ 68.8%, which rounds to approximately 70%",
+      "No, because the combined total is $41.3B, which exceeds 70% of total revenue",
+      "Yes, because Azure and Office 365 are clearly the two tallest bars",
+      "No, because the statement should specify exact percentages rather than approximations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total = $60.0B. Azure + Office 365 = $41.3B. Percentage = $41.3B ÷ $60.0B = 0.688 = 68.8% ≈ 70%. The statement is accurate; 68.8% legitimately rounds to 70%. Option B incorrectly reverses logic—68.8% is less than 70%, not exceeding it. This tests percentage calculation from bar chart data and appropriate rounding.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analyst creates a bar chart comparing promotional spending across five quarters: Q1 $3.2M, Q2 $5.8M, Q3 $4.1M, Q4 $9.3M, Q5 $2.9M. A junior analyst asks, 'Why is there a Q5 if most businesses use quarterly reporting?' What is the most appropriate response?",
+    "options": [
+      "Q5 likely represents data from the following year's first quarter (Q1 Year 2) mislabeled, or it indicates a non-standard reporting period; this labeling error should be clarified with the data source before analysis",
+      "Q5 is standard nomenclature used in academic settings; the junior analyst is unfamiliar with professional reporting",
+      "Q5 represents year-to-date totals and should remain in the chart",
+      "There is no issue; companies often use five-quarter reporting periods"
+    ],
+    "correctIndex": 0,
+    "explanation": "Quarters are defined as four 3-month periods. Q5 is nonstandard and represents a data labeling error or mislabeled data from the next fiscal year. This is a critical data quality issue that affects interpretation. Option B is false; Q5 is not standard. Option C incorrectly identifies Q5 as a YTD total. Option D normalizes an error. This tests the analyst's ability to spot categorical inconsistencies in bar chart data.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company compares customer acquisition costs (in dollars) by channel: Organic $12, Paid Search $47, Social Media $23, Email $8, Affiliate $15. If the company spent $2.4M on Paid Search acquisition, approximately how much did it spend on Email acquisition, assuming the same conversion efficiency?",
+    "options": [
+      "$409,600",
+      "$511,000",
+      "$ 14,100,000",
+      "$640,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "If Paid Search costs $47 per customer and $2.4M was spent: $2.4M ÷ $47 ≈ 51,064 customers acquired. Email costs $8 per customer: 51,064 × $8 ≈ $408,512 ≈ $409,600. Option B uses wrong divisor ($47 ÷ $8). Option C reverses the calculation (multiplication instead of proportional reasoning). Option D incorrectly assumes equal spend, not equal conversion. This requires multi-step reasoning from bar chart data.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company displays defect rates (%) in a bar chart across product lines: Automotive 2.3%, Electronics 0.8%, Industrial 1.9%, Consumer 3.1%, Medical 0.2%. Which statement misinterprets this categorical data?",
+    "options": [
+      "Medical has the lowest defect rate, suggesting superior quality control in that division",
+      "Consumer's defect rate is 15.5 times higher than Medical's, indicating a critical quality issue that demands immediate intervention",
+      "The average defect rate across all categories is 1.66%, making Automotive and Electronics below average",
+      "The defect rates reveal a linear or systematic quality trend across the five product lines"
+    ],
+    "correctIndex": 3,
+    "explanation": "Statement A is valid (0.2% is indeed lowest). Statement B is mathematically correct (3.1% ÷ 0.2% = 15.5), though alarming. Statement C is correct (sum = 8.3%, average = 1.66%). Statement D is false because categorical bar chart data has no inherent order or sequence—product lines are independent categories, not a progression. Bars don't follow a pattern that reveals a 'system.' This tests the understanding that categories lack temporal or functional relationships.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

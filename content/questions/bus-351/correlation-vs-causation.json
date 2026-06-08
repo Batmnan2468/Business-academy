@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple's iPhone sales increased 12% year-over-year in Q3 2023, and Apple's stock price rose 8% during the same quarter. Which of the following best describes the relationship between these two variables?",
+    "options": [
+      "Positive correlation",
+      "Negative correlation",
+      "Perfect causation",
+      "No relationship"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both variables move in the same direction (sales up, stock price up), which defines positive correlation. The correct answer recognizes that correlation exists without claiming iPhone sales caused the stock increase. Option 2 is wrong because the movements are in the same direction, not opposite directions. Option 3 is tempting but incorrect because correlation does not imply causation—many other factors affect Apple's stock price.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's advertising tier grew from 5 million subscribers in Q2 2023 to 15 million in Q4 2023. During this same period, Netflix's overall churn rate decreased from 2.3% to 1.8%. What type of statistical relationship is being described?",
+    "options": [
+      "Negative correlation",
+      "Positive correlation",
+      "Spurious correlation",
+      "No correlation"
+    ],
+    "correctIndex": 0,
+    "explanation": "As the ad tier grows (increases), churn decreases, which is a negative correlation—variables move in opposite directions. The correct answer recognizes the inverse relationship. Option 1 is correct. Option 2 would apply if both increased together. Option 3 (spurious correlation) is a tempting distractor but refers to a correlation that appears due to a hidden third variable, not just any negative relationship.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following statements best defines the concept of causation in business analytics?",
+    "options": [
+      "A change in one variable directly causes a predictable change in another variable due to a mechanism or intervention",
+      "Two variables increase or decrease together over time",
+      "Historical data shows one variable always follows another",
+      "A regression model shows a statistically significant coefficient for a predictor"
+    ],
+    "correctIndex": 0,
+    "explanation": "Causation requires a direct mechanism or intervention proving one variable directly influences another; mere co-movement is not sufficient. The correct answer emphasizes the necessity of a causal mechanism. Option 1 is correct. Option 2 describes correlation only. Option 3 is a tempting wrong answer because historical patterns can suggest causation but do not prove it without experimental evidence or a clear mechanism.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A business analyst at Starbucks observes that coffee sales increase by 3.2% for every 1°F decrease in outdoor temperature. What is the correlation coefficient most likely to be?",
+    "options": [
+      "Approximately -0.85",
+      "Approximately +0.85",
+      "Exactly -1.0",
+      "Approximately 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "As temperature decreases, sales increase—a clear negative relationship. A strong negative correlation would be around -0.85, not perfect (-1.0) because other factors also influence coffee sales. The correct answer recognizes strong negative correlation. Option 1 is correct. Option 2 would indicate temperature and sales move together (both increase), which is wrong. Option 3 assumes perfect causation, which rarely occurs in real data.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's in-store foot traffic has increased 7.5% year-over-year, and Walmart's online sales have increased 12% year-over-year. A manager claims that increased foot traffic caused online sales growth. Which statement best critiques this claim?",
+    "options": [
+      "The claim confuses correlation with causation; both variables may be driven by a third factor like increased marketing spend",
+      "Foot traffic and online sales are negatively correlated, so the claim is mathematically impossible",
+      "The claim is correct because both metrics increased at the same time",
+      "Online sales cannot be influenced by in-store traffic, so the claim is illogical"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both metrics increased, but this is correlation, not proof of causation. A hidden variable like holiday marketing could drive both. The correct answer identifies the correlation-causation confusion and proposes a plausible alternative explanation. Option 1 is correct. Option 2 is wrong because both metrics moved in the same direction (positive correlation). Option 3 is a tempting but incorrect claim that simultaneous increases prove causation.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla's advertising spend increased from $30 million in 2021 to $75 million in 2023. During the same period, Tesla's vehicle deliveries increased from 930,000 to 1.81 million units. If the correlation coefficient between these two variables is 0.78, what can you reasonably conclude?",
+    "options": [
+      "Increased advertising spend is correlated with higher deliveries, but the increase in deliveries may be due to multiple factors including product availability, industry demand, and brand reputation",
+      "The 0.78 correlation proves that advertising spend directly caused the doubling of deliveries",
+      "Since correlation is strong, advertising is the primary driver of sales and other factors are negligible",
+      "The correlation coefficient of 0.78 is too weak to suggest any relationship between advertising and deliveries"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0.78 indicates a strong positive relationship, but does not prove causation. Many confounding variables affect vehicle deliveries, including supply chain improvements, new model releases, and market expansion. The correct answer acknowledges the correlation while recognizing alternative explanations. Option 1 is correct. Option 2 is a tempting but incorrect claim that correlation equals causation. Option 3 overstates advertising's role without evidence of isolation from other factors.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company notices that hospitals using its new ERP system (Enterprise Resource Planning) show a 15% reduction in medication errors compared to hospitals using legacy systems. The company claims this proves the ERP system causes fewer errors. Which confounding variable is MOST likely to explain this correlation without causation?",
+    "options": [
+      "Hospitals that adopt new ERP systems tend to be larger, better-funded institutions with more training programs and quality oversight, regardless of the ERP system itself",
+      "The ERP system's color scheme makes nurses more alert",
+      "Medication errors decrease simply because time passes and technology improves on its own",
+      "Hospitals randomly assigned to the ERP system group by chance had fewer errors at baseline"
+    ],
+    "correctIndex": 0,
+    "explanation": "The most plausible confounding variable is that early adopters of advanced ERP systems are typically larger, well-resourced hospitals with existing quality programs, training infrastructure, and safety cultures—factors that independently reduce errors. The correct answer identifies a realistic alternative explanation. Option 1 is correct and represents selection bias. Option 2 is implausible (color scheme). Option 3 is a tempting but vague answer that doesn't explain the specific 15% difference observed.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "McDonald's franchise locations in urban areas with populations over 500,000 generate $2.8 million in annual revenue per location, while rural franchises generate $1.2 million. A franchisee concludes that opening in urban areas causes higher revenue. What is the most critical flaw in this reasoning?",
+    "options": [
+      "The analysis confuses correlation (location type and revenue co-occur) with causation; population size, competitor density, customer income levels, and store size may be the true drivers",
+      "The sample size of McDonald's locations is too small to draw any conclusions",
+      "Urban areas have higher revenue because McDonald's purposefully assigns better managers to urban locations",
+      "The correlation is too weak (only 2.3× difference) to indicate any relationship at all"
+    ],
+    "correctIndex": 0,
+    "explanation": "The observation shows correlation between location type and revenue, but multiple confounding variables drive the difference: population density increases customer foot traffic, higher urban incomes increase spending, and urban stores may be larger. The correct answer distinguishes correlation from causation by identifying plausible alternatives. Option 1 is correct. Option 2 is wrong because McDonald's has thousands of franchise locations. Option 3 is a tempting distractor but cannot be verified from the data and assumes McDonald's assignment policy.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A business school analyzed 120 Fortune 500 companies over 5 years. Data showed that companies spending $5+ million annually on employee wellness programs had 8.5% lower healthcare costs than those spending under $1 million. The school concluded that wellness programs cause lower healthcare costs. To test whether this conclusion reflects causation or correlation, which research design would be MOST appropriate?",
+    "options": [
+      "Randomized controlled trial: randomly assign half of similar companies to implement wellness programs while controlling the other half, then measure healthcare costs after 2 years",
+      "Increase the sample size to 500 companies and re-run the same observational analysis",
+      "Survey companies to ask why they chose their wellness spending level",
+      "Calculate the correlation coefficient and test for statistical significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "A randomized controlled trial isolates the causal effect by removing confounding variables through random assignment. Companies that spend more on wellness may already have lower healthcare costs due to higher employee income, better health at hire, or lower-risk industries—factors unrelated to the program itself. The correct answer identifies the gold standard for causal inference. Option 1 is correct. Option 2 increases statistical power but doesn't address confounding. Option 4 merely quantifies the existing correlation without determining causation.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst notices that over the past 10 years, both ice cream sales and drowning deaths increase during summer months (June, July, August) and decrease in winter. The analyst notes a correlation coefficient of 0.82 between these variables. Which of the following best explains why this strong correlation should NOT be interpreted as ice cream causing drowning?",
+    "options": [
+      "A third variable—warm weather—causes both ice cream sales and swimming activity (which increases drowning risk), so the correlation is spurious",
+      "Ice cream sales and drowning deaths are too different to be causally related",
+      "The 0.82 correlation is not strong enough to indicate causation",
+      "The analyst should have used a larger sample size spanning 20 years instead of 10"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic example of spurious correlation: a hidden common cause (warm weather) drives both observed variables independently. Ice cream sales increase because people buy ice cream in summer; drownings increase because people swim more in summer. The correct answer identifies the confounding variable as the explanation. Option 1 is correct. Option 2 is too vague and doesn't explain the mechanism. Option 3 is wrong because 0.82 is considered strong; the issue is not strength but the presence of a confounder.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google reports that click-through rates (CTR) on search ads average 3.8% when ad copy includes a specific discount percentage (e.g., '20% off') versus 2.1% without. A marketing manager attributes this 81% increase in CTR directly to the discount offer and recommends adding discounts to all ads. What critical business factor may this analysis overlook, creating a correlation-causation error?",
+    "options": [
+      "The ads with discount percentages may have been for lower-priced, higher-demand products (e.g., fast fashion) with naturally higher CTR, independent of the discount message",
+      "Google's algorithm prevents users from clicking on ads with discounts, so the high CTR is surprising",
+      "The sample size of ads tested was insufficient to draw conclusions",
+      "Discount-heavy ads always reduce profit margins more than higher CTR can offset"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correlation between discount messaging and CTR does not prove discount messaging causes higher CTR. Product category, base price, and existing customer demand are confounding variables. Discount-heavy ads may simply be run on naturally popular products. The correct answer identifies selection bias and product-level confounding. Option 1 is correct. Option 2 is factually incorrect about Google's algorithm. Option 4, while possibly true for profit, doesn't address the causation error being asked about.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company finds that customers who receive 8+ marketing emails per month have a 35% higher lifetime value ($1,680 vs. $1,245) than those receiving 1-2 emails per month. However, further analysis reveals that 78% of the high-email group are existing power users who purchased frequently before email frequency increased. What does this reveal about the original correlation?",
+    "options": [
+      "The correlation is spurious; high email frequency is correlated with high lifetime value because both are caused by pre-existing customer engagement level, not email frequency causing higher value",
+      "Email frequency definitely causes higher lifetime value because the correlation coefficient would be greater than 0.75",
+      "The company should immediately increase email frequency for all customers to match the high-email group",
+      "The 35% difference proves that email frequency is the primary driver of lifetime value regardless of prior behavior"
+    ],
+    "correctIndex": 0,
+    "explanation": "The analysis reveals reverse causality or confounding: engaged customers were already high-value, and the company increased email frequency for them (selection effect). High email frequency is a symptom of high engagement, not a cause. The correct answer identifies that the pre-existing characteristic (customer engagement) explains both variables. Option 1 is correct. Option 2 confuses correlation coefficient strength with causation. Option 3 could harm the business if applied to low-engagement customers without considering their different baseline.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two competing theories exist about Uber's surge pricing: Theory A claims that surge pricing reduces wait times by incentivizing drivers to log in (causal), while Theory B claims that surge pricing correlates with wait times because both are driven by underlying demand shocks (correlation only). Which data pattern would MOST strongly support Theory B over Theory A?",
+    "options": [
+      "Surge pricing appears 2-3 minutes before wait times increase, suggesting demand causes both rather than pricing directly reducing pre-existing wait times",
+      "Markets with higher surge pricing multipliers (2.5x or higher) show consistently lower wait times than markets with lower multipliers",
+      "Uber drivers report in surveys that surge pricing motivates them to work longer hours",
+      "The correlation between surge pricing and wait times is 0.91, indicating a very strong relationship"
+    ],
+    "correctIndex": 0,
+    "explanation": "If surge pricing precedes wait time increases only by 2-3 minutes, this suggests both are responses to an underlying demand surge (a common cause), not that pricing reduces wait times. This timing pattern supports the correlation-only explanation. The correct answer identifies temporal sequencing as evidence against direct causation. Option 1 is correct. Option 2 would support Theory A (pricing causes lower waits). Option 3 is anecdotal evidence that doesn't distinguish between theories. Option 4 merely quantifies correlation strength, not its cause.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team observes that stores with higher employee turnover rates (>40% annually) have lower customer satisfaction scores (4.2/5.0 vs. 4.6/5.0 for stores with <20% turnover). Management plans to implement a mandatory employee recognition program targeting all stores to reduce turnover and improve satisfaction. What is the primary flaw in this intervention strategy?",
+    "options": [
+      "The strategy assumes high turnover causes low satisfaction, but may be driven by factors like poor store management or challenging store locations that simultaneously cause high turnover and low satisfaction; fixing turnover without addressing root causes won't improve satisfaction",
+      "Employee recognition programs are statistically proven to reduce turnover in 100% of cases, so the strategy will definitely work",
+      "The correlation between turnover and satisfaction is too weak to justify any intervention",
+      "The strategy is flawed because improving customer satisfaction will not affect employee turnover"
+    ],
+    "correctIndex": 0,
+    "explanation": "High turnover and low satisfaction likely share a common cause: poor store management, difficult customer base, or challenging location. Addressing turnover symptoms without fixing root causes won't improve satisfaction. The correct answer identifies reverse causality and confounding. Option 1 is correct because it recognizes that correlation doesn't identify the causal mechanism. Option 2 is overconfident and unsupported. Option 3 is wrong because the difference (4.2 vs. 4.6) is meaningful. Option 4 is incorrect; satisfied employees tend to stay longer.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company analyzes 18 months of data from 85 distribution centers and finds that centers increasing automation (investment in automated sorting and conveyor systems) show a 22% reduction in labor costs ($45M to $35M average annually) and a 31% reduction in fulfillment errors. Which of the following represents the MOST rigorous interpretation of these results?",
+    "options": [
+      "Automation is correlated with both cost reduction and error reduction; causation is likely but requires ruling out confounding factors such as facility age, prior management quality, and initial error rates; a randomized study or matched controls would strengthen causal claims",
+      "The data proves that automation directly causes lower costs and errors, so all distribution centers should immediately automate",
+      "The 22% cost reduction definitively demonstrates that automation causes labor cost savings with no alternative explanation possible",
+      "Automation is correlated with improvements, but the improvements prove automation has no causal effect because correlation doesn't equal causation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer acknowledges strong correlation and a plausible causal mechanism while recognizing that confounding variables (newer facilities may already be better-run, facilities with high baseline errors may have more room to improve) could explain results. It proposes stronger research designs. Option 1 is correct because it balances evidence for causation with appropriate scientific skepticism. Option 2 overstates certainty. Option 3 ignores confounders. Option 4 is overly cynical—plausible causal mechanisms exist, just unproven.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

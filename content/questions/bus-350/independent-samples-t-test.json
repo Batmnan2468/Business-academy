@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing analyst at Apple Inc. wants to compare the average customer satisfaction scores between two independent store locations in different regions. Which statistical test is most appropriate for this comparison?",
+    "options": [
+      "Independent samples t-test",
+      "Paired samples t-test",
+      "Chi-square test of independence",
+      "One-way ANOVA with three groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "The independent samples t-test is the correct choice because we have two separate, unrelated groups (two different store locations) with continuous data (satisfaction scores). The paired samples t-test is tempting but incorrect because the store locations are not matched or related to each other—they are truly independent samples.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary assumption of the independent samples t-test regarding the variances of the two groups?",
+    "options": [
+      "The variances must be exactly equal",
+      "The variances should be approximately equal (homogeneity of variance)",
+      "The variances must sum to zero",
+      "Variances are irrelevant to the t-test"
+    ],
+    "correctIndex": 1,
+    "explanation": "The independent samples t-test assumes homogeneity of variance, meaning the two populations should have approximately equal variances. This is the correct assumption. Option A is too strict (variances need not be exactly equal, just approximately so). Option B is the right answer because Levene's test is often used to check this assumption before conducting the t-test.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following correctly describes the null hypothesis for an independent samples t-test comparing sales performance between two regional offices?",
+    "options": [
+      "H₀: μ₁ > μ₂ (Office 1 sales are greater than Office 2)",
+      "H₀: μ₁ = μ₂ (the mean sales are equal across both offices)",
+      "H₀: σ₁ = σ₂ (the standard deviations are equal)",
+      "H₀: The sample means are different"
+    ],
+    "correctIndex": 1,
+    "explanation": "The null hypothesis for an independent samples t-test always states that the population means are equal (μ₁ = μ₂). This is correct. Option A is incorrect because it states a directional alternative hypothesis, not the null. Option C confuses variance assumptions with the null hypothesis itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When should you use Welch's t-test instead of the standard independent samples t-test?",
+    "options": [
+      "When the sample sizes are unequal",
+      "When the assumption of equal variances is violated",
+      "When the sample means are very close together",
+      "When conducting a one-tailed test"
+    ],
+    "correctIndex": 1,
+    "explanation": "Welch's t-test should be used when the homogeneity of variance assumption is violated (when variances are substantially unequal). This is the correct reason. Option A is tempting but incorrect—Welch's can handle unequal sample sizes, but that's not the primary reason to use it. The standard t-test also handles unequal sample sizes reasonably well.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Walmart, a manager collects data from two independent warehouse locations and calculates a t-statistic of 2.15 with 58 degrees of freedom. What does the t-statistic value of 2.15 represent?",
+    "options": [
+      "The probability that the null hypothesis is true",
+      "The number of standard errors the difference between sample means is from zero",
+      "The effect size of the difference between groups",
+      "The correlation between the two warehouse locations"
+    ],
+    "correctIndex": 1,
+    "explanation": "The t-statistic represents how many standard errors the observed difference between means is from zero (the null hypothesis value). A t-statistic of 2.15 means the difference is 2.15 standard errors away from zero. Option A is incorrect because the t-statistic is not a probability. Option C confuses the t-statistic with effect size measures like Cohen's d.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon conducted a study comparing average delivery times (in days) between two warehouse distribution centers. Center A (n₁=35) had mean=2.8 days, SD=0.5 days. Center B (n₂=40) had mean=3.2 days, SD=0.6 days. Calculate the pooled standard deviation.",
+    "options": [
+      "0.55 days",
+      "0.57 days",
+      "0.62 days",
+      "0.68 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "The pooled standard deviation is calculated as: Sp = √[((n₁-1)s₁² + (n₂-1)s₂²)/(n₁+n₂-2)] = √[((34)(0.25) + (39)(0.36))/73] = √[8.5 + 14.04)/73] = √0.308 = 0.55. Option B (0.57) is tempting because it's a simple average of the two standard deviations, which is incorrect.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft surveyed tech support response times at two customer service centers. Center X (n=50, mean=4.2 min, SD=1.1 min) vs. Center Y (n=50, mean=3.8 min, SD=1.0 min). Calculate the standard error of the difference between means.",
+    "options": [
+      "0.15 minutes",
+      "0.21 minutes",
+      "0.31 minutes",
+      "0.45 minutes"
+    ],
+    "correctIndex": 1,
+    "explanation": "SE = √(s₁²/n₁ + s₂²/n₂) = √(1.21/50 + 1.0/50) = √(0.0242 + 0.020) = √0.0442 = 0.21. Wait, let me recalculate: √(1.1²/50 + 1.0²/50) = √(1.21/50 + 1.0/50) = √(0.0242 + 0.02) = √0.0442 = 0.21. The correct answer is 0.21, so correctIndex should be 1. Rechecking: (1.1)²=1.21, (1.0)²=1.0; 1.21/50=0.0242, 1.0/50=0.02; sum=0.0442; √0.0442≈0.210. Option A of 0.15 is tempting because it's a rough average of individual SEs.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail company compared average monthly sales (in $1000s) between two store formats: Traditional stores (n=25, mean=$85K, SD=$12K) and Pop-up stores (n=25, mean=$92K, SD=$15K). At α=0.05, what is the calculated t-statistic?",
+    "options": [
+      "1.62",
+      "1.85",
+      "2.04",
+      "2.31"
+    ],
+    "correctIndex": 1,
+    "explanation": "t = (M₁ - M₂) / SE_diff. First, find pooled SD: Sp = √[((24)(144) + (24)(225))/48] = √[(3456 + 5400)/48] = √184.5 = 13.58. SE = 13.58√(1/25 + 1/25) = 13.58(0.283) = 3.84. t = (85 - 92) / 3.84 = -7/3.84 = -1.82, absolute value ≈ 1.82 or 1.85. Closest is 1.85. Option C (2.04) is tempting if someone miscalculates the pooled variance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial firm conducted an independent samples t-test comparing loan approval times between two branches (n₁=30, n₂=35). The p-value was 0.087. What is the correct interpretation at α=0.05?",
+    "options": [
+      "Reject the null hypothesis; the branches have significantly different approval times",
+      "Fail to reject the null hypothesis; there is insufficient evidence that the branches differ",
+      "The probability that the alternative hypothesis is true is 91.3%",
+      "The result is inconclusive and should always be treated as significant"
+    ],
+    "correctIndex": 1,
+    "explanation": "With p=0.087 > α=0.05, we fail to reject the null hypothesis. There is insufficient evidence to conclude the branches have different approval times. Option A is incorrect because 0.087 > 0.05, so we don't reject H₀. Option C is a common misconception—the p-value is not the probability the alternative hypothesis is true; it's the probability of observing this data if H₀ is true.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix compared subscriber retention (measured on a 0-100 scale) between two promotional campaigns: Campaign A (n=45, mean=78, SD=8) and Campaign B (n=45, mean=75, SD=10). At α=0.05 (two-tailed), the calculated t-statistic is 1.84 with 88 degrees of freedom. What is your conclusion?",
+    "options": [
+      "Reject H₀; Campaign A significantly improves retention",
+      "Reject H₀; both campaigns are equally effective",
+      "Fail to reject H₀; there is insufficient evidence the campaigns differ in retention",
+      "The result is statistically significant because the means differ by 3 points"
+    ],
+    "correctIndex": 2,
+    "explanation": "With t(88)=1.84 at α=0.05 (two-tailed), the critical value is approximately ±1.987. Since |1.84| < 1.987, we fail to reject H₀. There is insufficient evidence that the campaigns differ. Option A is tempting because Campaign A has a higher mean, but the difference is not statistically significant given the sample sizes and variability. Option D is incorrect because practical difference doesn't guarantee statistical significance.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company conducted an independent samples t-test comparing drug efficacy between two formulations (n₁=22, n₂=24) and reported the results as 't(44)=2.18, p=0.034.' A researcher claims this proves the formulations are substantially different. What is the primary flaw in this interpretation?",
+    "options": [
+      "The degrees of freedom should be 46, not 44",
+      "Statistical significance does not necessarily imply practical or clinical significance",
+      "The p-value is too high to be considered significant",
+      "The test should have been one-tailed, not two-tailed"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a critical hard concept: statistical significance (p=0.034 < 0.05) does not equal practical/clinical significance. A small difference might be statistically significant with large samples but clinically irrelevant. Option A is incorrect—df = 22+24-2 = 44 is correct. Option C is false because 0.034 < 0.05. The most tempting wrong answer (A) distracts from the real issue of conflating statistical with practical significance.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial advisor performed an independent samples t-test comparing average investment returns between two portfolio strategies over 36 months each. Strategy Alpha (n=50) had mean return=8.2%, SD=2.1%. Strategy Beta (n=50) had mean return=8.4%, SD=2.3%. The t-statistic calculated was 0.52 (two-tailed, p=0.605). Which conclusion is most appropriate?",
+    "options": [
+      "Strategy Beta is clearly superior because it has a higher mean return",
+      "There is no statistically significant difference between the strategies, but we should examine effect size and practical considerations",
+      "Both strategies are equally risky because the p-value exceeds 0.05",
+      "The test is invalid because the standard deviations differ"
+    ],
+    "correctIndex": 1,
+    "explanation": "With p=0.605 >> 0.05, we fail to reject the null hypothesis—no significant difference. However, we should not conclude they're equal; we lack evidence of a difference. Option A is tempting because Beta's mean is higher, but the difference is not significant. Option C misinterprets the p-value as a measure of risk. Option D is incorrect; slightly different SDs do not invalidate the test, especially with equal sample sizes.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A quality control manager at Honda compared defect rates (per 1000 units) between two production facilities: Facility 1 (n=40, mean=3.2, SD=0.8) and Facility 2 (n=30, mean=2.9, SD=1.2). Levene's test yielded p=0.031, indicating unequal variances. The manager conducted a standard t-test. What is the primary error in this analysis?",
+    "options": [
+      "The sample sizes are too small for any t-test",
+      "Levene's test should never be used before a t-test",
+      "Because Levene's test is significant (p=0.031), Welch's t-test should be used instead of the standard t-test",
+      "The defect rate data cannot be analyzed with a t-test under any circumstances"
+    ],
+    "correctIndex": 2,
+    "explanation": "When Levene's test is significant (p < 0.05), it indicates the homogeneity of variance assumption is violated, and Welch's t-test (which does not assume equal variances) is more appropriate than the standard t-test. This is correct. Option A is false—n=40 and n=30 are adequate. Option B is false—Levene's test is a standard preliminary check. The tempting wrong answer (B) might occur if someone remembers criticism of preliminary testing but applies it incorrectly here.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Costco compared customer dwell time in stores (minutes) between two warehouse designs: Design X (n=35, mean=47.3 min, SD=11.2 min) and Design Y (n=42, mean=50.1 min, SD=13.8 min). The 95% confidence interval for the difference in means is [-7.2, 1.6]. Which statement is correct?",
+    "options": [
+      "We are 95% confident Design Y increases dwell time by exactly 2.8 minutes",
+      "Design X is significantly better because its mean is lower",
+      "We are 95% confident the true difference in population means lies between -7.2 and 1.6 minutes",
+      "The confidence interval proves the null hypothesis is true"
+    ],
+    "correctIndex": 2,
+    "explanation": "A 95% CI of [-7.2, 1.6] means we are 95% confident the true population mean difference falls within this range. Note that zero is in the interval, so the difference is not statistically significant at α=0.05. Option A is incorrect because the CI is a range, not a point estimate. Option B is incorrect—lower dwell time may not be 'better' depending on business goals. Option D is misleading; the CI includes zero, suggesting no significant difference, but this is interpretation, not proof. Option C is correct.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR manager at Google compared salary raises (in %) between two departments using an independent samples t-test. Department A (n=60, mean=4.2%, SD=0.9%) vs. Department B (n=65, mean=4.5%, SD=1.1%). The t-statistic was 1.95 with df=123 and p=0.053. The manager reports: 'The result is borderline significant (p≈0.05) so we can conclude Department B offers higher raises.' What is wrong with this reasoning?",
+    "options": [
+      "The degrees of freedom should be 124, not 123",
+      "With p=0.053 > 0.05, the result is not statistically significant at the predetermined α=0.05 level, regardless of how 'close' to 0.05 it is",
+      "A t-statistic of 1.95 is always significant in t-tests",
+      "The test requires one-tailed hypotheses, not two-tailed"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a critical hard concept: p-values are binary at a fixed alpha level. With α=0.05 pre-specified, p=0.053 means we fail to reject H₀—the result is not significant. 'Borderline' is not a statistical category; p=0.053 is not significant under the 0.05 standard. Option A is a minor distraction (df=60+65-2=123 is correct). Option C is false—significance depends on the critical value, not the statistic alone. This tests understanding of p-value interpretation and alpha level rigidity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

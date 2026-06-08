@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Netflix uses unsupervised learning to group its 230 million subscribers into distinct segments based on viewing behavior, genre preferences, and watch time. What is the primary goal of this customer segmentation?",
+    "options": [
+      "To identify natural groupings of customers without predefined labels",
+      "To predict which customers will cancel their subscription next month",
+      "To classify customers as 'high-value' or 'low-value' based on historical churn data",
+      "To supervised train a model on labeled customer outcomes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unsupervised learning discovers hidden patterns without predefined categories. The correct answer describes the essence of unsupervised segmentation. Option B describes prediction (supervised), Option C describes classification with labels (supervised), and Option D misunderstands the learning paradigm entirely.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the most common distance metric used in K-means clustering for customer segmentation at Starbucks?",
+    "options": [
+      "Euclidean distance",
+      "Classification accuracy",
+      "R-squared coefficient",
+      "Precision and recall"
+    ],
+    "correctIndex": 0,
+    "explanation": "Euclidean distance measures straight-line distance between points in feature space, fundamental to K-means. The other options are supervised learning metrics (accuracy, R-squared, precision/recall) not used for measuring distances in clustering.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon segments its e-commerce customers using hierarchical clustering. At what stage does the dendrogram show the complete merging history of customer clusters?",
+    "options": [
+      "After all clusters have been merged into a single cluster",
+      "Only when k=3 clusters remain",
+      "During the data preprocessing step",
+      "When the within-cluster sum of squares reaches zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "A dendrogram displays the full hierarchical merging process from individual points to one final cluster. Option B restricts to a specific k value (not how dendrograms work), Option C confuses preprocessing with clustering output, and Option D describes K-means optimization, not dendrogram construction.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In unsupervised learning for customer segmentation, what does the elbow method help determine?",
+    "options": [
+      "The optimal number of clusters by identifying where the inertia curve bends",
+      "The maximum accuracy score of the clustering model",
+      "Whether customers will make a repeat purchase",
+      "The linear regression slope of customer lifetime value"
+    ],
+    "correctIndex": 0,
+    "explanation": "The elbow method plots inertia against k values and finds the 'elbow point' where additional clusters add diminishing value. Option B confuses clustering (unsupervised) with classification accuracy (supervised). Options C and D describe supervised outcomes unrelated to cluster optimization.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Sephora collects data on 50,000 customers including annual spending ($150–$8,500), purchase frequency (2–52 times/year), and product category diversity (1–20 categories). Before applying K-means clustering, why is feature scaling essential?",
+    "options": [
+      "To prevent features with larger ranges from dominating distance calculations",
+      "To increase the number of clusters automatically",
+      "To convert unsupervised learning into supervised learning",
+      "To remove outliers from the dataset entirely"
+    ],
+    "correctIndex": 0,
+    "explanation": "K-means uses distance metrics where unscaled spending ($150–$8,500) would dominate over frequency (2–52). Scaling ensures all features contribute equally. Option B misunderstands the purpose of scaling, Option C confuses scaling with learning paradigms, and Option D overstates scaling's role in handling outliers.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Delta Air Lines segments 45 million frequent flyers using K-means clustering with k=4. After standardizing booking data, the within-cluster sum of squares (WCSS) is calculated as 8,750. If the total sum of squares (TSS) is 42,000, what percentage of variance is explained by this clustering?",
+    "options": [
+      "79.2%",
+      "20.8%",
+      "48.4%",
+      "108.3%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variance explained = (TSS – WCSS) / TSS = (42,000 – 8,750) / 42,000 = 33,250 / 42,000 = 0.792 or 79.2%. Option B inverts the calculation (WCSS/TSS). Option C incorrectly uses different denominators, and Option D exceeds 100%, which is mathematically impossible for variance explained.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Target uses DBSCAN clustering to identify customer spending patterns from 120,000 transaction records. The algorithm identifies 1,450 core points, 820 border points, and 4,730 noise points. How many distinct clusters can be formed from the core and border points?",
+    "options": [
+      "At least 1 cluster (cannot determine exact number without density parameters)",
+      "Exactly 2,270 clusters",
+      "Exactly 1,450 clusters",
+      "Exactly 6 clusters"
+    ],
+    "correctIndex": 0,
+    "explanation": "DBSCAN forms clusters by connecting core points within eps distance; border points assign to nearby core clusters. The exact number of clusters depends on density parameters (eps, min_points), not just point counts. Option B incorrectly sums all points, Option C assumes each core point is a cluster (impossible), and Option D guesses without justification.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart segments 2.3 million shoppers into 5 clusters. Cluster 1 has 780,000 budget-conscious customers (avg. basket: $35), Cluster 2 has 520,000 premium buyers (avg. basket: $185), Cluster 3 has 450,000 occasional visitors (avg. basket: $42), Cluster 4 has 380,000 bulk purchasers (avg. basket: $520), and Cluster 5 has 170,000 online-only customers (avg. basket: $95). If the company allocates a $23 million marketing budget proportionally to cluster size, how much should be allocated to Cluster 4?",
+    "options": [
+      "$3.01 million",
+      "$4.64 million",
+      "$5.29 million",
+      "$2.15 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cluster 4 represents 380,000 / 2,300,000 = 16.52% of customers. Budget allocation = $23M × 0.1652 = $3.01M. Option B (4.64M) represents 20.2% (misallocation to Cluster 2). Option C (5.29M) represents 23% (entire budget). Option D (2.15M) represents 9.3% (underallocation).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing manager at Uber applied K-means clustering to 85,000 ride-hail users and obtained silhouette scores of 0.68, 0.54, 0.41, and 0.22 for k=3, 4, 5, and 6 respectively. Which k value should be selected, and why might k=6 still be useful despite its low score?",
+    "options": [
+      "k=3 for best overall quality; k=6 may reveal business-relevant micro-segments despite statistical weakness",
+      "k=6 for maximum granularity, as more clusters always yield better insights",
+      "k=5 as a compromise, since k=3 overfits and k=6 underfits",
+      "k=4 because 0.54 is the median silhouette score across all options"
+    ],
+    "correctIndex": 0,
+    "explanation": "Higher silhouette scores indicate better separation (k=3 is optimal). However, lower-scoring solutions can reveal actionable business segments if domain experts validate them. Option B ignores statistical quality, Option C confuses overfitting (k=3 underfits), and Option D incorrectly uses median as selection criterion.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase segments 4.8 million retail customers using K-means with k=4, achieving within-cluster sum of squares of 95,000. If they re-cluster with k=5, the WCSS drops to 76,500. A junior analyst concludes that k=5 is 'strictly better' because WCSS is lower. What is the flaw in this reasoning?",
+    "options": [
+      "WCSS always decreases with more clusters regardless of true underlying structure; additional improvement must be justified by business value or statistical tests",
+      "WCSS should increase, not decrease, when k increases, so the data must be corrupted",
+      "The silhouette score will also decrease when k increases, contradicting the WCSS improvement",
+      "K-means is supervised learning and cannot be evaluated using WCSS alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mathematically, WCSS always decreases as k increases (each new cluster reduces within-cluster distance). This doesn't mean k=5 is better—marginal gains must justify added complexity. Option B is incorrect (WCSS does decrease); Option C confuses metrics (silhouette can rise or fall); Option D mischaracterizes K-means as supervised.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Airbnb clusters 180,000 host profiles using features: property_price_per_night ($25–$850), guest_ratings (1.0–5.0 stars), and response_time_hours (0.5–168). A data scientist applies K-means without standardization. Why is this a critical error, and what would be the most likely consequence?",
+    "options": [
+      "Price dominates distance calculations due to its larger range; clustering will reflect primarily price differences while ignoring rating and response time nuances",
+      "The algorithm will crash because non-standardized data violates K-means assumptions",
+      "Standardization increases the silhouette score but does not affect the actual clusters formed",
+      "Without standardization, the algorithm requires supervised labels to function correctly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Price ranges ($25–$850, span 825) far exceed rating (1.0–5.0, span 4.0) and response time (0.5–168, span 167.5). K-means Euclidean distance will be dominated by price. Clusters will separate primarily by price, not balanced features. Option B is false (algorithm runs but produces biased results), Option C is false (standardization affects clusters, not just scores), Option D confuses standardization with learning paradigms.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech company segments 320,000 mobile banking users with two clustering algorithms: K-means (silhouette score 0.58) and DBSCAN (silhouette score 0.42, but 1,200 users identified as noise/outliers). Business analysis reveals these 1,200 users are high-fraud-risk accounts worth investigating. Which algorithm should be preferred, and why?",
+    "options": [
+      "DBSCAN, because identifying outliers for fraud investigation has business value despite lower statistical quality metrics",
+      "K-means, because a higher silhouette score guarantees the clusters are correct",
+      "Neither, because both silhouette scores fall below 0.70, indicating poor clustering quality",
+      "K-means, because it never produces noise points, making clusters more stable"
+    ],
+    "correctIndex": 0,
+    "explanation": "DBSCAN's ability to flag 1,200 suspicious users provides actionable fraud detection value, outweighing its lower silhouette score. Statistical metrics serve business goals, not vice versa. Option B overstates the certainty of higher scores, Option C sets arbitrary thresholds (0.70 is not universal), and Option D mischaracterizes K-means (it assigns all points; DBSCAN's outlier detection is the advantage).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft clusters 12 million Office 365 users to optimize feature rollout. Using hierarchical clustering with complete linkage, they obtain 8 clusters. A product manager notices Cluster 6 and Cluster 7 have similar usage patterns and proposes merging them. However, the dendrogram shows Cluster 6 and Cluster 7 merged very late in the hierarchy, at a high distance threshold. What does this late merging suggest, and should they merge?",
+    "options": [
+      "Late merging indicates the clusters are truly dissimilar in the full feature space despite surface similarity; merging risks losing important distinctions and should only occur if business logic strongly supports it",
+      "Late merging means the clusters were formed using Euclidean distance, which can be corrected by switching to Manhattan distance",
+      "Late merging indicates the clusters are nested within each other and should definitely be merged to reduce redundancy",
+      "Late merging is a sign of overfitting that is automatically corrected by choosing fewer clusters"
+    ],
+    "correctIndex": 0,
+    "explanation": "Late merging in dendrograms indicates high dissimilarity between clusters; merging them contradicts the hierarchical structure. Surface similarity in one or two features may mask deeper differences. Option B incorrectly suggests distance metrics determine hierarchy structure (both produce hierarchies; choice affects which is preferred). Option C inverts nesting logic, and Option D confuses dendrogram interpretation with overfitting remedies.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team at Gap Inc. applies K-means clustering to 290,000 online shoppers using 12 features (browsing time, cart value, device type, geographic region, etc.). After standardization, they run K-means 10 times with different random initializations. The cluster assignments differ each time, with 85% of customers assigned to the same cluster across all runs, but 15% vary. What does this instability suggest, and what should the team do?",
+    "options": [
+      "The clusters are not well-separated (high-dimensional data may have many local optima); run K-means with multiple initializations, use k-means++ seeding, or investigate whether k is optimal for the data",
+      "Standardization failed because different runs produce different clusters; re-run without standardization to stabilize results",
+      "The silhouette score is definitely above 0.60 because 85% agreement indicates strong clustering quality",
+      "K-means is the wrong algorithm; switch to hierarchical clustering which produces deterministic results"
+    ],
+    "correctIndex": 0,
+    "explanation": "Instability in multiple runs (15% variation) indicates shallow cluster structure or suboptimal k. k-means++ initialization and multiple runs with best-fit selection are standard practices. Option B reverses causality (standardization stabilizes, not destabilizes). Option C overgeneralizes from 85% agreement (doesn't guarantee silhouette > 0.60). Option D is wrong; hierarchical clustering also depends on linkage and isn't necessarily 'deterministic' in the same way.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

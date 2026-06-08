@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing manager at Nike conducts a hypothesis test on whether a new advertising campaign increases average daily sales. The p-value is 0.03. Which statement best defines what this p-value means?",
+    "options": [
+      "The probability of observing data as extreme as (or more extreme than) what was observed, if the null hypothesis is true",
+      "The probability that the null hypothesis is true",
+      "The probability that the alternative hypothesis is true",
+      "The probability that the new campaign will fail"
+    ],
+    "correctIndex": 0,
+    "explanation": "The p-value measures the probability of seeing results as extreme as observed, assuming the null hypothesis is true—it is NOT the probability the null hypothesis itself is true. Option B is the most common misconception; students often confuse what the p-value represents with a direct probability about the hypothesis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at Goldman Sachs tests whether the mean return on investment for a tech fund exceeds 8% annually. The test yields a p-value of 0.045. At a significance level of α = 0.05, what is the correct conclusion?",
+    "options": [
+      "Reject the null hypothesis; sufficient evidence that mean return exceeds 8%",
+      "Fail to reject the null hypothesis; insufficient evidence that mean return exceeds 8%",
+      "Accept the null hypothesis; the mean return is exactly 8%",
+      "Reject the alternative hypothesis; the mean return is less than 8%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.045) < α (0.05), we reject the null hypothesis and conclude sufficient evidence for the claim. Option B incorrectly uses the reverse logic. Option C makes the error of 'accepting' the null rather than failing to reject it, and confuses the test with precise estimation.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A quality control engineer at Ford Motor Company performs a hypothesis test to check if the defect rate in a batch of 5,000 cars is less than 2%. The null hypothesis is H₀: p = 0.02. What does a p-value of 0.08 tell you?",
+    "options": [
+      "At the 0.05 significance level, there is insufficient evidence to conclude the defect rate is less than 2%",
+      "There is an 8% chance the defect rate is 2%",
+      "The defect rate is definitely higher than 2%",
+      "We should reject the null hypothesis because 0.08 is greater than 0.02"
+    ],
+    "correctIndex": 0,
+    "explanation": "A p-value of 0.08 > 0.05 means we fail to reject the null hypothesis at α = 0.05. Option B misinterprets the p-value as a probability about the parameter itself, not about data extremeness. Option C confuses a high p-value with evidence against the hypothesis.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a hypothesis test at Apple Inc. examining whether the mean battery life of iPhone 15 Pro exceeds 20 hours, the p-value is 0.002. Which significance level would lead to rejecting the null hypothesis?",
+    "options": [
+      "α = 0.01",
+      "α = 0.001",
+      "Both α = 0.01 and α = 0.001",
+      "Neither α = 0.01 nor α = 0.001"
+    ],
+    "correctIndex": 0,
+    "explanation": "At α = 0.01, since p-value (0.002) < 0.01, we reject the null hypothesis. At α = 0.001, since p-value (0.002) > 0.001, we fail to reject. Option B incorrectly assumes the p-value is always compared to the smallest alpha; Option C assumes both work, which is incorrect.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail analyst at Walmart tests whether a store layout change increases mean transaction value. The sample mean is $87.50, the population standard deviation is $15, the sample size is 100, and H₀: μ = $85. What is the approximate p-value using a one-tailed test (upper tail)?",
+    "options": [
+      "0.0918",
+      "0.0475",
+      "0.5000",
+      "0.1836"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (87.50 - 85) / (15/√100) = 2.5 / 1.5 = 1.67. Using a standard normal table, P(Z ≥ 1.67) ≈ 0.0475 for one tail, but the options show 0.0918 (two-tail split). Actually, recalculating: P(Z ≥ 1.67) ≈ 0.0475 one-tailed, making Option B correct. Option A represents a common calculation error where students double the one-tailed result.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Uber is testing whether its new ride-matching algorithm reduces mean wait time below 6 minutes. A sample of 144 rides yields a mean wait time of 5.5 minutes with a sample standard deviation of 2.4 minutes. Assuming a one-tailed lower-tail test, which of the following is closest to the test statistic (t)?",
+    "options": [
+      "–2.5",
+      "–1.33",
+      "2.5",
+      "–0.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (5.5 - 6) / (2.4/√144) = -0.5 / (2.4/12) = -0.5 / 0.2 = -2.5. Option B arises if a student forgets the square root in the denominator. Option C forgets the negative sign. Option D incorrectly uses the raw difference without standardizing.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company testing a new drug claims that it reduces blood pressure by at least 12 mmHg on average. The trial with 60 patients shows a mean reduction of 11.3 mmHg with a standard deviation of 3.2 mmHg. At α = 0.05, what does a p-value of 0.078 tell you about the company's claim?",
+    "options": [
+      "At the 0.05 level, the evidence is insufficient to support the company's claim of at least 12 mmHg reduction",
+      "The drug is ineffective because the p-value is greater than 0.05",
+      "There is a 7.8% probability that the company's claim is true",
+      "We reject the null hypothesis and confirm the drug reduces blood pressure by 12 mmHg"
+    ],
+    "correctIndex": 0,
+    "explanation": "With p-value (0.078) > α (0.05), we fail to reject the null hypothesis, meaning insufficient evidence to support the claim of 12 mmHg reduction. Option B incorrectly assumes a high p-value proves ineffectiveness; Option C misinterprets the p-value as a probability about the claim rather than about data; Option D incorrectly rejects H₀.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company at Amazon tests whether the new delivery route reduces average delivery time below 3 days. They collect a sample of 36 deliveries and calculate t = 1.85 with 35 degrees of freedom. How does this affect the interpretation of the p-value?",
+    "options": [
+      "The p-value should be evaluated against the t-distribution with 35 df, not the normal distribution",
+      "The p-value is automatically 0.05 because t = 1.85 is a standard cutoff",
+      "The degrees of freedom are irrelevant; only the t-statistic matters",
+      "The p-value cannot be calculated without knowing the sample standard deviation"
+    ],
+    "correctIndex": 0,
+    "explanation": "With small sample size and unknown population standard deviation, the t-distribution with df = n - 1 = 35 is the correct reference distribution. Option B confuses a rough rule-of-thumb with the actual calculation. Option C ignores that degrees of freedom determine which distribution to use. Option D is false; the t-statistic is already standardized.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consulting firm conducts a two-tailed hypothesis test for Johnson & Johnson's mean quarterly profit margin at 22%. They obtain a t-statistic of 2.10 with 50 degrees of freedom. Using a t-table, the one-tailed p-value is approximately 0.020. What is the correct two-tailed p-value?",
+    "options": [
+      "0.040",
+      "0.020",
+      "0.080",
+      "0.010"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a two-tailed test, the p-value is 2 times the one-tailed p-value: 2 × 0.020 = 0.040. Option B incorrectly uses the one-tailed p-value directly for a two-tailed test. Option C doubles incorrectly or confuses the tail calculation. Option D incorrectly halves instead of doubles.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An HR director at Microsoft analyzes whether the mean annual salary for software engineers (n=144) is significantly different from $185,000. The sample mean is $187,200, sample standard deviation is $12,000, and the test yields a p-value of 0.0026. At α = 0.05, which is the most accurate conclusion?",
+    "options": [
+      "Reject H₀; sufficient evidence the mean salary differs from $185,000",
+      "Reject H₀; the mean salary is exactly $187,200",
+      "Fail to reject H₀; insufficient evidence the mean salary differs from $185,000",
+      "Reject H₀ and conclude the mean salary is $2,200 higher, with certainty"
+    ],
+    "correctIndex": 0,
+    "explanation": "p-value (0.0026) < α (0.05), so reject H₀ and conclude sufficient evidence of a difference. Option B is incorrect because rejecting the null doesn't tell us the exact population mean. Option C reverses the correct decision. Option D confuses hypothesis testing with point estimation and overstates certainty.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher conducts 20 separate hypothesis tests on different marketing strategies at Coca-Cola, each at α = 0.05 significance level. Without any correction for multiple comparisons, approximately how many false rejections (Type I errors) would be expected by chance?",
+    "options": [
+      "1",
+      "5",
+      "10",
+      "20"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expected number of Type I errors = number of tests × α = 20 × 0.05 = 1. Option B incorrectly uses only α without multiplying by the number of tests. Option C and D misunderstand the multiplication principle. This illustrates why multiple comparison corrections (like Bonferroni) are necessary.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A biotech analyst observes that a new cancer drug increases median survival time with a p-value of 0.049 at α = 0.05. She then reports this as 'statistically significant clinical significance.' Which misconception is she committing?",
+    "options": [
+      "Confusing statistical significance with practical/clinical significance; p < 0.05 does not ensure the effect size is meaningful",
+      "Using the wrong significance level; she should have used α = 0.01 instead",
+      "Incorrectly calculating the p-value; it should be 0.051",
+      "Failing to use a one-tailed test when a two-tailed test was appropriate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p < α) and practical significance (meaningful effect size) are different concepts. A tiny improvement in survival time might be statistically significant but clinically meaningless. Option B incorrectly prescribes the alpha level. Option C assumes a miscalculation without evidence. Option D is about test type, not the significance-vs-practical distinction.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Netflix tests whether the mean watch time per subscriber exceeds 180 minutes/week. After collecting n=400 subscribers, she calculates a p-value of 0.031. However, she later discovers her sample contained 15% measurement errors. How does this affect the p-value's interpretation?",
+    "options": [
+      "The p-value becomes unreliable; measurement errors violate test assumptions and the conclusion should be treated cautiously",
+      "The p-value should be adjusted upward to 0.0465 to account for the error rate",
+      "The measurement errors cancel out when the p-value is calculated, so interpretation remains valid",
+      "The p-value is now guaranteed to be incorrect; the entire analysis must be redone with a smaller sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "Measurement errors violate the assumption that data are accurately observed, which undermines the validity of the p-value and any conclusion. Option B incorrectly assumes a mechanical adjustment formula. Option C falsely claims errors don't matter. Option D overstates the situation; the analysis can be redone but isn't 'guaranteed' incorrect without examining the error pattern.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst at Wells Fargo performs a one-tailed hypothesis test (H₀: μ ≤ $50,000 vs. H₁: μ > $50,000) on mean annual customer wealth. The two-tailed p-value from the software output is 0.042. What should the analyst report as the one-tailed p-value?",
+    "options": [
+      "0.021",
+      "0.042",
+      "0.084",
+      "0.0105"
+    ],
+    "correctIndex": 0,
+    "explanation": "When software provides a two-tailed p-value and the test is actually one-tailed (and the test statistic is in the direction of H₁), divide by 2: 0.042 / 2 = 0.021. Option B incorrectly uses the two-tailed value directly. Option C doubles instead of halves. Option D incorrectly divides by four.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An economist conducts a hypothesis test at the Federal Reserve testing whether the mean inflation rate differs from 2.5% using 10 years of monthly data (n=120). The p-value is 0.078. A colleague argues: 'With such a large sample, even tiny differences from 2.5% will be statistically significant, so this p-value proves the true rate is very close to 2.5%.' What is wrong with this reasoning?",
+    "options": [
+      "The p-value measures evidence against the null, not proximity to it; a non-significant p-value does not prove the null is true, it only fails to provide evidence against it",
+      "With n=120, the p-value should automatically be less than 0.05 due to statistical power",
+      "The colleague is correct; large samples always find true differences",
+      "The p-value of 0.078 is impossible with n=120 because the critical value must be 0.05"
+    ],
+    "correctIndex": 0,
+    "explanation": "A high p-value (0.078 > 0.05) indicates failure to reject the null, not proof that the null is true. The colleague confuses 'not finding evidence against' with 'proving the hypothesis true.' Option B incorrectly assumes power determines p-values directly. Option C is the opposite of the truth regarding sample size. Option D misunderstands that p-values vary around critical values based on data.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At a board meeting, the CFO of Acme Manufacturing presents a sales forecast with a 95% confidence interval of $8.2M to $9.8M. Which of the following best describes what this confidence interval means for non-technical stakeholders?",
+    "options": [
+      "If we repeated the forecasting process 100 times under the same conditions, approximately 95 times the true sales would fall within $8.2M to $9.8M",
+      "There is a 95% probability that next quarter's sales will be between $8.2M and $9.8M",
+      "We are 95% certain that the average of all possible sales outcomes is $9.0M",
+      "95% of historical sales data points fall between $8.2M and $9.8M"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval describes the long-run frequency of the interval containing the parameter if sampling were repeated—not the probability a single future value falls within it. Option 1 is correct because it describes the repeated sampling interpretation. Option 2 is the most tempting wrong answer because it sounds intuitive but conflates a confidence interval (a frequentist property of the procedure) with a prediction interval or Bayesian probability statement about a specific future outcome.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A data analyst at RetailCorp presents three scenarios for Q3 revenue: Base Case ($42M), Optimistic Case ($51M), and Pessimistic Case ($33M). What is the term for this approach to communicating uncertainty to executives?",
+    "options": [
+      "Scenario analysis",
+      "Confidence interval estimation",
+      "Monte Carlo simulation",
+      "Sensitivity analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scenario analysis presents discrete, named alternative outcomes (best, worst, base) to explore uncertainty. This is correct because it directly matches the three distinct cases described. Option 2 (confidence interval) is wrong because it produces a range with a statistical interpretation, not named scenarios. Option 3 (Monte Carlo) is a computational method generating thousands of random outcomes, not discrete named cases. Option 4 (sensitivity analysis) examines how outputs change with input variables, not alternative scenarios.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing director at TechVision Inc. asks the analytics team, 'If your model says customer churn will be 12% next quarter, why didn't you say 11.5% or 12.3%?' What is the most effective way to explain the source of this uncertainty to a non-technical executive?",
+    "options": [
+      "The model uses random sampling, so different runs produce slightly different numbers",
+      "Historical data on customer behavior is incomplete and variable; we built the model using patterns from past data, but future behavior won't be identical",
+      "The computer's processor rounds numbers differently each time it calculates",
+      "We don't have enough data to be more precise than 12%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it addresses the fundamental epistemic source: historical patterns contain variability, and real-world conditions may differ. This resonates with business experience. Option 2 is incorrect and the most tempting wrong answer because it mentions 'random sampling,' which sounds technical; however, the real issue is not randomness in computation but rather that historical patterns don't perfectly predict future behavior. Option 3 is wrong (rounding is deterministic). Option 4 is vague and doesn't explain what 'enough' means.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When presenting a demand forecast to the supply chain team at automotive supplier Drivetrain Co., which visualization would be most effective for communicating uncertainty to non-technical stakeholders?",
+    "options": [
+      "A single line showing the point forecast with a shaded band around it representing the confidence interval or prediction interval",
+      "A table of 500 Monte Carlo simulation results",
+      "A histogram showing the distribution of forecast errors from the model's training data",
+      "A scatter plot of actual vs. predicted values from the past year"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 is correct because it combines intuitive visual communication (the line for expected value) with a clear representation of the range of plausible outcomes (the shaded band). Non-technical stakeholders immediately understand 'we expect this, but it could be anywhere in this range.' Option 1 is a tempting wrong answer because it contains precise uncertainty information, but 500 rows of numbers overwhelm executives who need actionable insight. Option 2 and 3 show technical details (historical errors, model diagnostics) rather than forward-looking uncertainty in business terms.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Chief Financial Officer at Retail Chain ABC questions an analyst's revenue forecast: 'You say revenue will be $127M with a margin of error of ±$8M. Does that mean there's a 50% chance it's above $127M and a 50% chance it's below?' What is the correct response?",
+    "options": [
+      "Yes, exactly. $127M is the median, so by definition there's a 50% probability on each side",
+      "Approximately yes. $127M is our best estimate (the mean), so outcomes are roughly symmetric around it; roughly 50% should fall above and 50% below",
+      "No. We don't know the shape of the distribution. Our best estimate is $127M, but we cannot say the probability is exactly 50/50 without knowing whether the distribution is symmetric",
+      "No. The margin of error applies only to historical data, not to future predictions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option 2 is correct because it acknowledges that the point estimate is the mean/median and that without knowing the distribution's shape, we cannot assume 50/50 split. Many business distributions (e.g., revenue with long right tail due to outlier large orders) are skewed. Option 1 is the most tempting wrong answer because it sounds statistically confident: if $127M were truly the median, then yes, 50/50 would hold. However, analysts typically report the mean, not the median, and we rarely verify distributional symmetry. Option 3 incorrectly dismisses the margin of error as historical artifact. The CFO's intuition is reasonable but requires clarification about distributional assumptions.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "DataAI Solutions built a machine learning model to predict customer lifetime value (CLV) for SaaS company CloudServe. The model's 90% prediction interval for a new customer's CLV is $5,200 to $12,800. The product manager asks, 'Should we spend $8,000 to acquire this customer if the interval is that wide?' What is the most complete answer?",
+    "options": [
+      "No, the interval is too wide; you need a narrower forecast before making the decision",
+      "Yes, because the point estimate (midpoint $9,000) exceeds the acquisition cost of $8,000",
+      "You must consider the probability that CLV exceeds $8,000. If the model indicates high probability (e.g., 75%+) that CLV > $8,000, acquisition is justified despite the wide interval",
+      "The interval width is irrelevant; only the point estimate matters for the decision"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option 2 is correct because it recognizes that decision-making requires understanding the probability that the outcome exceeds the cost threshold, not just the interval bounds or midpoint. A wide interval with most probability mass above $8,000 is more useful than a narrow interval straddling the threshold. Option 1 is tempting but wrong: wide intervals provide real information—they reflect genuine uncertainty, and a good decision process works with that uncertainty rather than dismissing it as 'too wide.' Option 3 is wrong because it ignores uncertainty entirely. The interval width and distribution shape directly inform the decision quality.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "HomeBuilder Inc. receives a forecast showing new housing starts will be 145,000 ± 18,000 (representing one standard deviation). The CFO interprets this as 'starts will definitely be between 127,000 and 163,000.' What should the analytics team tell the CFO about this interpretation?",
+    "options": [
+      "That interpretation is correct; ±1 standard deviation is our guarantee range",
+      "That interpretation overstates certainty. ±1 standard deviation captures approximately 68% of outcomes in a normal distribution, so roughly 32% of outcomes fall outside this range",
+      "The interpretation is correct only if the distribution is symmetric",
+      "The range should be ±2 standard deviations for any meaningful forecast guarantee"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it explains the frequentist interpretation: ±1 SD bounds approximately 68% of a normal distribution, leaving ~32% tail probability. The CFO's use of 'definitely' and 'guarantee' inappropriately suggests 100% certainty. Option 0 is the most tempting wrong answer because it matches the CFO's intuition that a 'range' provides a boundary; in fact, ranges come with explicit probability. Option 2 is partially correct but too weak—the 68% rule holds reasonably well even for modestly skewed distributions. Option 3 is wrong because ±2 SD is arbitrary and would only improve certainty to ~95%, which still isn't 'guarantee.'",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A revenue analyst at FinTech startup PayFlow presents a forecast range of $8.3M to $11.7M for Q4 (representing a 90% prediction interval) alongside a point estimate of $10.0M. A board member asks, 'Why isn't the point estimate at the midpoint of the range?' What is the most likely explanation?",
+    "options": [
+      "The analyst made a calculation error",
+      "The underlying distribution is skewed; the mean ($10.0M) and the symmetric 90% prediction interval can have the point estimate off-center",
+      "Prediction intervals are always centered; the analyst should adjust the point estimate to $10.0M",
+      "The analyst used different data for the point estimate and the interval"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because many real-world business forecasts (e.g., revenue with occasional large deals) are right-skewed; the mean can be pulled higher than the median, placing it off-center within a symmetric prediction interval. This is common and correct. Option 0 is the most tempting wrong answer because misalignment feels like an error, but it's a feature of skewed distributions. Option 2 is wrong and dangles the 'fix' trap—the problem isn't the estimates but the executive's assumption that means must equal interval midpoints. Option 3 is wrong; both should use the same model and data.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ConsultCorp conducts a sensitivity analysis for a client's 5-year NPV forecast, showing that a 10% change in annual discount rate swings NPV by $12M, while a 10% change in revenue growth swings NPV by $3.8M. The CFO asks, 'So the discount rate is 3.16 times more important than revenue growth?' How should the analyst respond?",
+    "options": [
+      "Yes, that's exactly right. The discount rate has 3.16x greater impact, so we should focus all risk management on it",
+      "That comparison is incomplete. A 10% change is not equally plausible for both variables. You must consider which variable is more uncertain and more likely to move in practice",
+      "No. The sensitivity magnitudes show elasticity, not importance. Both factors are equally important strategically",
+      "Yes, but only for NPV. The discount rate's importance differs by metric (IRR, payback period, etc.)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it highlights a crucial flaw in naïve sensitivity comparison: sensitivity is about 'if X changes by this amount, what happens?' but importance also depends on 'how likely is X to change by this amount?' For example, discount rates rarely move 10%, while revenue growth might easily. True importance requires linking sensitivity to plausibility. Option 0 is the most tempting wrong answer because it mechanically compares the magnitudes without considering real-world probabilities—a classic error when explaining uncertainty to non-technical stakeholders. Option 2 conflates technical importance with strategic priority. Option 3 is correct in spirit but avoids the real issue.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ManufactureCorp's supply chain team receives a demand forecast: 'Base Case: 8,500 units, Optimistic (20% probability): 10,200 units, Pessimistic (20% probability): 6,800 units.' What is the expected value (mean) of demand, and how should it be used in procurement planning?",
+    "options": [
+      "$8,500 units; it is the single best point estimate for inventory purchasing",
+      "$8,500 × 0.6 + 10,200 × 0.2 + 6,800 × 0.2 = $8,660 units; it balances expected outcomes but does not guarantee avoiding stockouts or overstock",
+      "$8,500 units, weighted by the implied 60% probability of the base case",
+      "Expected demand is undefined because probabilities are subjective; use scenario planning instead"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it calculates the expected value (weighted average) and immediately clarifies its role: it's a useful central estimate for planning but does not eliminate the risk of stockout (if pessimistic occurs) or overstock (if optimistic occurs). Procurement must also consider the cost of those risks. Option 0 is the most tempting wrong answer because it treats the base case as the forecast, ignoring the assigned probabilities and the expected value calculation. Many executives default to base-case planning, which is why this misconception arises. Option 2 is arithmetically similar to 1 but fails to compute the actual expected value. Option 3 is unnecessarily defeatist; scenario probabilities can be elicited from experts and used sensibly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data scientist at InsureNow presents a model of insurance claim costs with the statement: 'The 95% prediction interval is $2,100 to $4,900 for a typical claim. Our 95% confidence interval for the mean claim cost across our entire portfolio is $2,850 to $2,950.' A skeptical underwriting manager asks, 'Why are these different?' Which explanation is most accurate for a non-technical audience?",
+    "options": [
+      "They're measuring different things. The prediction interval is for a single future claim (which is highly variable), while the confidence interval is for the average across all claims (which is much more stable)",
+      "The prediction interval is wrong; it should be narrower than the confidence interval",
+      "The confidence interval uses more historical data, so it's more precise",
+      "The analyst made an error; both intervals should be centered at the same point estimate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 is correct and addresses a deep source of confusion: prediction intervals quantify the spread of *individual future outcomes* (inherently variable), while confidence intervals quantify uncertainty in *the parameter estimate* (reduced by averaging). A single claim varies widely; the portfolio's true mean is estimated more precisely. Option 1 is the most tempting wrong answer because it invokes the intuition that 'more precise = narrower,' but this reverses the logic—confidence intervals *should* be much narrower than prediction intervals for the same confidence level. Option 2 sounds plausible but is wrong: both may use the same data. Option 3 misses the point entirely.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "ElectronicsRetail's marketing analytics team built a model forecasting weekly sales of a flagship product at $82,000 ± $6,500 (90% prediction interval). The operations manager plans inventory based on the worst-case scenario of $75,500 (lower bound) but worries: 'What if sales fall below $75,500?' How should the analyst respond about the residual risk?",
+    "options": [
+      "That risk is zero; the prediction interval is a guarantee",
+      "Approximately 5% of weeks will see sales below $75,500 (the lower tail outside the 90% interval), assuming the model's distributional assumptions hold",
+      "We should have used a 95% interval instead; 90% is too loose",
+      "That risk is immeasurable because the model has forecast error"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it quantifies the tail risk: a 90% prediction interval leaves ~5% in each tail. The manager is identifying a real business risk—stockouts when demand is in that 5% lower tail—and the analyst should frame it numerically: 'In about 1 out of 20 weeks.' Option 0 is the most tempting wrong answer because it treats the interval as a promise rather than a probabilistic statement. Option 2 sounds like a fix (tighter interval), but it would only reduce lower-tail risk to ~2.5%, not eliminate it, and increases carrying costs. Option 3 is defeatist; forecast error is precisely what prediction intervals quantify.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "PharmaDevCo's VP of R&D hears a forecast that 'the Phase III trial success rate is 68% with a 95% confidence interval of 62% to 74%.' She asks the biostatistician: 'Does this mean if we run 100 similar trials, 68 will succeed?' Which response best explains the nuance of this interpretation to a non-technical executive?",
+    "options": [
+      "Yes, exactly. 68 out of 100 will succeed on average",
+      "Not quite. 68% is our best estimate from *this* trial's data. If we ran 100 independent similar trials, we'd expect roughly 68 to succeed, but there's variability in that 68 (that's what the 62–74% range reflects)",
+      "No. The 68% refers only to this specific trial, not to a hypothetical 100 trials",
+      "The analogy doesn't work because success rates are binomial, not normal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it affirms the intuition ('68 out of 100 succeed') while adding critical nuance: 68% is an estimate with uncertainty, and 100 repetitions would yield a distribution centered around 68%, not a fixed 68. This bridges mathematical precision and business intuition. Option 0 is the most tempting wrong answer because it mirrors the VP's own intuition and sounds right, but it glosses over the fact that the true underlying rate is unknown—68% is our best guess, but it could be 62%, 74%, or anything in between. Option 2 is overly technical. Option 3 correct in spirit but unhelpful for a non-technical audience.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company LogisticsPro receives two competing forecasts for Q1 package volume: Model A says 1.2M packages with a 95% interval of 1.05M to 1.35M, and Model B says 1.24M packages with a 95% interval of 1.10M to 1.38M. The COO asks, 'Which model should we trust?' What is the most thoughtful response when explaining uncertainty?",
+    "options": [
+      "Model B; it has a higher point estimate, so it's more optimistic",
+      "Model A; it has a narrower interval, so it's more certain",
+      "Neither forecast is inherently better just because of its point estimate or interval width. The best choice depends on Model accuracy track record (which has better historical performance?), the source of their differences (different data, methods, or assumptions?), and the cost of forecast errors in both directions (stockout vs. overstock)",
+      "Both models should be averaged to get 1.22M as the final forecast"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option 2 is correct because it moves beyond superficial comparison (bigger isn't better, narrower isn't better) and directs the COO toward decision-relevant questions: *which model forecasts better?*, *why do they differ?*, and *what's the cost of being wrong?*. A wide interval that's calibrated (contains the truth 95% of the time) is more useful than a narrow, overconfident interval. Option 1 is the most tempting wrong answer because higher numbers feel bullish, and executives like optimism, but point estimates must be judged on accuracy, not preference. Option 0 is tempting for the opposite reason (precision feels trustworthy) but ignores potential overconfidence. Option 3 is mechanical and assumes equal quality.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "TechStartup's CEO receives a board presentation on user churn with the statement: 'Our model predicts 14% monthly churn, and sensitivity analysis shows that a 20% increase in support response time raises churn to 16.8%.' A board member comments, 'Great! So if we keep response time flat, we guarantee churn stays at 14%.' Why is this conclusion problematic, and how should the analyst clarify the distinction between sensitivity analysis and uncertainty quantification?",
+    "options": [
+      "The conclusion is correct; sensitivity analysis is a form of guarantee",
+      "The conclusion conflates sensitivity (how outputs respond to input changes) with uncertainty in other factors. Sensitivity shows 'if support time rises 20%, churn rises to 16.8%,' but many other factors (pricing, competitors, features) are uncertain. Holding support time constant does not eliminate overall churn uncertainty—the true churn could easily differ from 14% due to factors not shown in the sensitivity table",
+      "The analyst should have shown a confidence interval instead of sensitivity analysis",
+      "The conclusion is correct if support time is the only driver of churn"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 is correct because it identifies the key logical error: sensitivity analysis answers 'if X changes, what happens?', but it does not quantify the probability that X changes or account for variables not in the table. The board member conflates 'knowing the effect of support time' with 'controlling churn.' Option 0 is the most tempting wrong answer because it validates the board member's intuition and creates false confidence. Option 2 suggests a methodological fix (confidence interval), but the issue is conceptual: sensitivity analysis is not a source of uncertainty; it's a tool for understanding relationships. Option 3 is technically false—many factors drive churn in reality.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

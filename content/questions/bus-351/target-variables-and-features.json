@@ -1,0 +1,184 @@
+[
+  {
+    "question": "At Amazon, a data scientist wants to predict whether a customer will make a purchase in the next 30 days. In this context, what is the target variable?",
+    "options": [
+      "Customer purchase (yes/no)",
+      "Customer email address",
+      "Product price in dollars",
+      "Warehouse location"
+    ],
+    "correctIndex": 0,
+    "explanation": "The target variable is what we want to predict — in this case, whether a purchase occurs. Customer email is an identifier (not predictive), product price is a feature, and warehouse location is operational data. The target variable is always the outcome we're modeling.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In Walmart's inventory forecasting model, which of the following is a feature rather than a target variable?",
+    "options": [
+      "Historical daily sales volume",
+      "Predicted weekly inventory level",
+      "Actual end-of-month stockouts",
+      "Number of units sold tomorrow"
+    ],
+    "correctIndex": 0,
+    "explanation": "Features are inputs used to make predictions; the target is what we predict. Historical daily sales volume is used as input to predict future inventory. The predicted inventory level and tomorrow's unit sales would be targets (outcomes we model). Stockouts are observed outcomes, not predictive features.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's recommendation algorithm uses viewing history, genre preferences, and user ratings as features to predict whether a subscriber will watch a suggested show. What type of target variable is 'will watch suggested show'?",
+    "options": [
+      "Categorical (binary)",
+      "Continuous numerical",
+      "Ordinal",
+      "Text-based"
+    ],
+    "correctIndex": 0,
+    "explanation": "A yes/no outcome is a categorical variable with two classes (binary classification). Continuous numerical would be a rating score (1–10), ordinal would be ranking categories in order, and text-based would be free-form responses. 'Will watch' is a discrete, two-class categorical target.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Tesla data engineer building a price prediction model for used vehicles collects 50,000 car records with 35 attributes (age, mileage, color, trim level, accident history, etc.). How many target variables should this model have?",
+    "options": [
+      "1 (the vehicle price)",
+      "35 (one for each attribute)",
+      "50,000 (one per record)",
+      "Multiple targets depending on region"
+    ],
+    "correctIndex": 0,
+    "explanation": "A standard supervised learning model predicts one target variable. Here, that's vehicle price (a continuous outcome). The 35 attributes are features (predictors), not targets. Records are observations, not targets. While multi-target models exist, this scenario describes a single-target regression problem.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks wants to predict monthly revenue per store. In their dataset, which column represents the target variable?",
+    "options": [
+      "Monthly revenue in dollars",
+      "Number of customers per day",
+      "Average temperature in the city",
+      "Competitor coffee shop count within 1 mile"
+    ],
+    "correctIndex": 0,
+    "explanation": "The target is the outcome being predicted — monthly revenue in dollars. Number of customers and temperature are features (predictors). Competitor count is contextual information. The target variable is always what we're trying to forecast or explain, not the inputs used to make that forecast.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank uses customer age, credit score, annual income, and loan history to predict loan default (yes/no). If the credit score feature has values ranging from 300 to 850, and loan default has values of 0 or 1, what can you infer about data scaling?",
+    "options": [
+      "Features and target are on different scales; features may need normalization before modeling",
+      "The target variable must be scaled to match feature ranges",
+      "Both features and target should be converted to the 0–1 range",
+      "Data scaling only applies when features are categorical"
+    ],
+    "correctIndex": 0,
+    "explanation": "Credit score (300–850) and income (potentially $25,000–$500,000+) are on much larger scales than the binary target (0 or 1). Many algorithms perform better when features are normalized. The target doesn't need scaling for classification; only features benefit from normalization to prevent high-magnitude features from dominating the model.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft is building a churn prediction model for its Azure cloud customers. They have 12,000 customers, 45 features (usage metrics, support tickets, contract terms), and a binary target (churned in next 12 months: yes/no). If they allocate 70% for training and 30% for testing, how many observations are in the test set?",
+    "options": [
+      "3,600",
+      "8,400",
+      "5,400",
+      "12,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Test set = 12,000 × 0.30 = 3,600. A 70/30 split is common for train/test allocation. The training set would be 8,400. Some students miscalculate by multiplying incorrectly or confusing which portion is which. The test set must represent unseen data to validate model performance.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Uber is developing a model to predict ride cancellation (yes/no) using distance to pickup location, driver rating, time of day, and weather conditions. A data scientist notices that weather conditions are recorded as 'sunny,' 'rainy,' 'foggy,' and 'snowy.' What type of feature is this?",
+    "options": [
+      "Categorical",
+      "Continuous numerical",
+      "Time-series",
+      "Ordinal numerical"
+    ],
+    "correctIndex": 0,
+    "explanation": "Weather is categorical — distinct categories with no inherent order or numeric meaning. Continuous numerical would be distance or temperature. Time-series involves temporal sequences. Ordinal would be if weather had a ranking (e.g., 'poor' → 'fair' → 'good'). Weather categories are unordered and thus nominal categorical features.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Target store manager wants to predict weekly sales (in dollars) using staffing levels, promotional discount percentage, foot traffic count, and season. The manager collects 104 weeks of data. If the model uses three features, what is the ratio of observations to features?",
+    "options": [
+      "104:3 or approximately 34.7:1",
+      "3:104 or approximately 0.03:1",
+      "104:4 or approximately 26:1",
+      "3:1 or approximately 3:1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Observations (104 weeks) to features (3) = 104:3 ≈ 34.7:1. This is a healthy ratio; a rule of thumb is at least 10–20 observations per feature. Option B inverts the ratio. Option C incorrectly adds season as a separate feature (it's likely categorical, already counted). Option D misinterprets the relationship.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase is building a credit approval model. It uses 25 financial and behavioral features to predict loan approval (yes/no). A model developer discovers that including a feature 'applicant birthday' significantly improves prediction accuracy. Should this feature be included?",
+    "options": [
+      "No, because age should be used instead; including birthday directly may violate fair lending regulations and is ethically problematic",
+      "Yes, because it improves model accuracy, which is the primary objective",
+      "Maybe, only if accuracy improves by more than 5%",
+      "No, because it is a categorical variable and categorical variables reduce model performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "While birthday improves accuracy, it is a proxy for age and can enable age-based discrimination — violating regulations like the Fair Credit Reporting Act. Features must be both predictive AND ethically defensible. Accuracy alone is not sufficient; fairness and legal compliance are constraints. Option B ignores regulatory risk. Option C sets an arbitrary threshold. Option D is false; categorical variables are routinely used.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Coca-Cola's demand forecasting model uses 60 historical features (sales from past months, regional promotions, competitor prices, holiday calendars) to predict next month's volume sales (in units). A data analyst notices that when they remove a feature called 'last month's sales volume,' the model's R² drops from 0.82 to 0.71. However, they suspect this feature may cause overfitting or 'data leakage.' Why might removing it actually be the correct decision despite the accuracy drop?",
+    "options": [
+      "Last month's sales are not available at prediction time (future), so including it causes data leakage; the model learned an unrealistic relationship that won't generalize to production",
+      "R² decreased, so the feature should definitely remain to maximize accuracy",
+      "Last month's sales are correlated with promotions, so removing it reduces multicollinearity",
+      "The feature has too many missing values, so it was dragging down performance artificially"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data leakage occurs when information from the prediction target 'leaks' into training features. Last month's sales are known only after the month ends — not before forecasting next month. Including it creates a model that cheats: it achieves high accuracy in training but fails in production because the feature is unavailable when you actually need to predict. R² dropping is a signal that the feature was doing the heavy lifting illicitly. Multicollinearity and missing values don't explain why the feature shouldn't exist.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "LinkedIn is building a model to predict whether a user will become a Premium subscriber within 90 days. Features include profile completion percentage (0–100%), days since account creation (1–3,650), number of endorsements (0–500+), and connection count (0–30,000+). The target is binary (Premium: yes/no, coded as 1 or 0). Which of the following is a critical concern when training this model?",
+    "options": [
+      "Features are on vastly different scales (0–100 vs. 30,000+), which can cause algorithms like logistic regression or KNN to weight high-magnitude features unfairly; features should be normalized or standardized",
+      "The target variable is binary, so all features must also be binary",
+      "Features with ranges under 100 (completion %) are noise and should be removed",
+      "Since the target is 0 or 1, features must be scaled to the 0–1 range exactly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Feature scaling is critical. Profile completion (0–100) and connection count (0–30,000+) differ by orders of magnitude. Distance-based (KNN, logistic regression) and tree-based models can be skewed by large-magnitude features. Normalization (to 0–1) or standardization (mean 0, SD 1) solves this. Option B is false; features don't have to match target data type. Option C is unfounded; feature range doesn't determine quality. Option D is false; only some algorithms benefit from target scaling.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company (similar to Shopify) builds a churn prediction model using customer purchase history, support ticket count, and days since last purchase. After training, they test the model on data from the same time period and customer base used in training. The model achieves 94% accuracy. However, when deployed to predict churn for new customers acquired 6 months later, accuracy drops to 71%. What is the most likely explanation?",
+    "options": [
+      "The model was evaluated on training/test data from the same distribution as training data, but new customers have different purchase behaviors and patterns (concept drift); the model overfit or learned patterns that don't generalize to new cohorts",
+      "The new customers are inherently different, so no model can ever perform well on them",
+      "The model was not tuned correctly; a different hyperparameter would fix the accuracy drop",
+      "94% accuracy is too high, indicating the model was definitely overfit; a 50–60% accuracy model would be more realistic"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic case of temporal distribution shift (concept drift). The original test set came from the same time period and population as training data, so the model achieved high accuracy. New customers acquired 6 months later have different purchasing patterns, seasonal behaviors, and preferences — a different distribution. The model learned patterns specific to the original cohort. This is not overfitting in the classical sense; it's a failure to account for real-world change over time. Option B is defeatist; models can work with proper validation. Option C assumes hyperparameter tuning solves distribution shift (it doesn't). Option D is confused logic.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm (PayPal) is comparing two candidate features for predicting transaction fraud: (1) 'transaction amount in USD' (range $0.01–$50,000) and (2) 'user account age in days' (range 1–7,300 days). Both features show similar correlation with fraud (r ≈ 0.35). A model developer argues that since 'transaction amount' has a larger range, it must be more predictive and should be weighted higher in the model. What is the flaw in this reasoning?",
+    "options": [
+      "Feature range (scale) and predictive power are independent concepts; a feature's magnitude of variance does not determine its predictive ability. Both features have similar correlation and should be treated equivalently in standardized modeling",
+      "The developer is correct; larger-range features always contribute more information to predictions",
+      "Feature range determines feature importance; wider ranges mean stronger signals",
+      "Correlation of 0.35 is too low for either feature; both should be removed"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a common misconception. Feature range (scale) does NOT equal predictive power. Both features have r ≈ 0.35 — essentially the same correlation with fraud. When features are standardized/normalized before modeling, they compete on equal footing. The developer conflated 'large variance' with 'high predictive value.' A feature with range $0–$50,000 and one with range 1–7,300 days contribute equally if their correlation is equal. Many algorithms (tree-based) are scale-invariant anyway. Option B is false. Option C repeats the misconception. Option D is arbitrary; r = 0.35 is moderate and worth retaining.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

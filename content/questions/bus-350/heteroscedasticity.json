@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A regression analyst at Apple Inc. is examining the relationship between marketing spend (in millions) and quarterly revenue. She notices that the variance of residuals increases substantially at higher levels of marketing spend. What is this statistical problem called?",
+    "options": [
+      "Heteroscedasticity",
+      "Multicollinearity",
+      "Autocorrelation",
+      "Homogeneity of variance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heteroscedasticity is the violation of the constant variance assumption—residuals have unequal spread across different levels of the independent variable. This is exactly what the analyst observed. Multicollinearity refers to correlation between predictors, autocorrelation to serial correlation in residuals, and homogeneity of variance is the absence of heteroscedasticity, not the problem itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression model predicting house prices in Toronto, the residuals plot shows a clear funnel shape: smaller spread for low prices and increasing spread for high prices. Which assumption of OLS is violated?",
+    "options": [
+      "The assumption of constant variance (homoscedasticity)",
+      "The assumption of normality of errors",
+      "The assumption of independence of observations",
+      "The assumption of linearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "The funnel shape in a residuals plot is the visual hallmark of heteroscedasticity—the variance is not constant but changes with the level of the fitted values. Normality violations produce skewness or heavy tails, not funnels. Independence violations appear as patterns over time. Linearity violations show systematic curved patterns.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a consequence of heteroscedasticity in an OLS regression?",
+    "options": [
+      "The coefficient estimates remain unbiased, but standard errors are biased",
+      "Hypothesis tests become unreliable",
+      "Confidence intervals become too wide or too narrow",
+      "The regression line is no longer the best linear unbiased estimator (BLUE)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Even with heteroscedasticity, OLS coefficient estimates are still unbiased and the regression line still minimizes the sum of squared residuals. However, the BLUE property requires homoscedasticity, so the line is no longer BLUE in the Gauss-Markov sense. Standard errors are biased (often underestimated), making hypothesis tests and confidence intervals unreliable.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst studying retail stores notices that sales variance increases with store size. Specifically, she regresses quarterly sales (in $1000s) on store square footage and observes that variance jumps from σ² = 4 at 5,000 sq ft to σ² = 16 at 20,000 sq ft. What pattern does this represent?",
+    "options": [
+      "Heteroscedasticity where variance scales with the size of the predictor",
+      "Perfect homoscedasticity with a non-linear relationship",
+      "Multicollinearity between store size and sales",
+      "Autocorrelation in the residuals over time"
+    ],
+    "correctIndex": 0,
+    "explanation": "The variance quadruples as the predictor increases 4-fold, showing heteroscedasticity that varies with the predictor's magnitude—classic for business data where larger units have more variability. This is often seen in sales data. Homoscedasticity would mean variance stays constant. Multicollinearity involves predictor correlations, and autocorrelation involves time-ordering.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In an econometric model of airline ticket prices, an analyst estimates the regression equation ln(Price) = 2.5 + 0.08×Distance + 0.12×FuelCost + ε, where Distance is in miles and FuelCost is in $/gallon. The OLS standard error for the FuelCost coefficient is 0.04. If heteroscedasticity is present but ignored, what is most likely to happen to the reported 95% confidence interval?",
+    "options": [
+      "It may be too narrow or too wide, depending on where heteroscedasticity occurs",
+      "It will always be too wide",
+      "It will always be too narrow",
+      "It will remain valid but less efficient"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heteroscedasticity causes the standard errors to be biased—they can be either overestimated or underestimated depending on whether the variance is larger or smaller at that point in the data. If variance is high where we're estimating, SE is underestimated (CI too narrow); if variance is low, SE is overestimated (CI too wide). Options B and C assume a universal direction, which is incorrect.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at Tesla estimates a model predicting stock returns using trading volume. The model has R² = 0.32, and the White test yields a test statistic of 8.7 with a p-value of 0.013. At the 5% significance level, what should the analyst conclude about heteroscedasticity?",
+    "options": [
+      "Reject the null hypothesis of homoscedasticity; heteroscedasticity is present",
+      "Fail to reject the null hypothesis; no heteroscedasticity detected",
+      "The R² is too low, so heteroscedasticity testing is invalid",
+      "The result is inconclusive because 0.013 is less than 0.05 but the R² is low"
+    ],
+    "correctIndex": 0,
+    "explanation": "The White test (and similar tests like Breusch-Pagan) formally test H₀: homoscedasticity. A p-value of 0.013 < 0.05 leads to rejecting H₀, concluding heteroscedasticity is present. The model's low R² does not invalidate the heteroscedasticity test—they measure different aspects. Goodness-of-fit and variance stability are independent issues.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regression model of hotel occupancy rates predicts daily occupancy (%) using price ($) and number of online reviews. A residuals plot shows that variance increases with fitted values. Which transformation is most likely to reduce heteroscedasticity in this context?",
+    "options": [
+      "Use log(occupancy) or √occupancy as the dependent variable",
+      "Add a squared term for price to the model",
+      "Use robust standard errors without transforming the model",
+      "Increase the sample size to 500+ observations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variance-stabilizing transformations like log or square root of the dependent variable often reduce heteroscedasticity, especially when variance increases with the mean (common in occupancy/rate data). Adding squared terms (option B) may address non-linearity but not heteroscedasticity. Robust standard errors address inference but don't reduce the underlying heteroscedasticity. Larger samples don't eliminate the problem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher regresses employee salary (in $) on years of experience and education level for a tech company. Computing both OLS and White-robust standard errors, she finds: OLS SE for experience = 1,250, White SE for experience = 1,680. What does this comparison suggest about the pattern of heteroscedasticity?",
+    "options": [
+      "Variance tends to be larger at higher experience levels",
+      "Variance tends to be larger at lower experience levels",
+      "Heteroscedasticity is absent and the results are equivalent",
+      "The model is misspecified and needs interaction terms"
+    ],
+    "correctIndex": 0,
+    "explanation": "When White-robust SE > OLS SE, it indicates the OLS standard error was underestimated. This occurs when variance is higher in regions of the predictor space where we have more or higher-leverage observations. For salary-experience, higher experience levels often have greater salary dispersion (more room for variation), so OLS underestimated uncertainty there. Option B would show OLS SE > White SE.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consumer goods manufacturer regresses quarterly profit (in $millions) against advertising spend (in $millions). Over 20 quarters, the residuals show patterns where variance is roughly 4× larger in Q4 (holiday season) than in Q1-Q3. This violates which assumption, and is it problematic for estimation?",
+    "options": [
+      "Homoscedasticity is violated; coefficient estimates remain unbiased but standard errors are biased",
+      "Linearity is violated; both coefficients and standard errors are biased",
+      "Independence is violated; this creates spurious correlations",
+      "Normality is violated; all OLS properties are invalid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Seasonal heteroscedasticity (different variance in different seasons) is a homoscedasticity violation. Critically, heteroscedasticity does NOT bias the coefficient estimates themselves—only their standard errors and thus hypothesis tests. Linearity violations bias coefficients. Independence violations cause spurious relationships. Normality violations don't invalidate large-sample OLS properties.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a supply chain model, a manager estimates: DeliveryTime = 5.2 + 0.35×Distance + 0.12×NumStops + ε. She calculates the Breusch-Pagan test statistic as 6.4. Under H₀ (homoscedasticity), this statistic follows a chi-squared distribution. With 2 degrees of freedom, the critical value at α = 0.05 is 5.99. What is her decision and interpretation?",
+    "options": [
+      "Reject H₀; heteroscedasticity is present at the 5% level",
+      "Fail to reject H₀; insufficient evidence of heteroscedasticity",
+      "Accept H₀ with 95% confidence; homoscedasticity is proven",
+      "The test is inconclusive because 6.4 is very close to 5.99"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Breusch-Pagan test statistic (6.4) exceeds the critical value (5.99), so we reject H₀. This provides evidence of heteroscedasticity at the 5% significance level. Option B misinterprets the p-value direction. Option C confuses rejection with proof of homoscedasticity. Option D suggests false indecision—a test statistic above the critical value has a clear outcome.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A management consultant analyzes a firm's production efficiency, regressing output per worker (units) on capital investment per worker ($1000s) across 45 firms of varying sizes. She observes severe heteroscedasticity—large firms show 9× greater residual variance than small firms. She applies weighted least squares (WLS), using weights proportional to 1/firm_size². Compared to OLS, which statement is true about WLS?",
+    "options": [
+      "WLS produces more efficient (lower variance) coefficient estimates and corrects the standard error bias",
+      "WLS estimates are identical to OLS but with valid standard errors",
+      "WLS removes heteroscedasticity entirely and produces normally distributed residuals",
+      "WLS is only valid if heteroscedasticity is perfectly multiplicative in nature"
+    ],
+    "correctIndex": 0,
+    "explanation": "WLS re-weights observations inversely to their variance, reducing the influence of high-variance observations. This makes coefficient estimates more efficient (lower standard errors) and corrects the standard error bias caused by heteroscedasticity. WLS doesn't remove heteroscedasticity from the data—it accounts for it in estimation. Heteroscedasticity in real data is often multiplicative, making WLS particularly effective here.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A commercial real estate analyst fits a hedonic pricing model: ln(Price) = 8.1 + 0.015×SqFt + 0.08×YearBuilt + ε. Using OLS, she gets t-statistic = 2.8 for the SqFt coefficient with standard error 0.0053. After detecting heteroscedasticity via the White test and recalculating with robust standard errors, the new standard error becomes 0.0062. Which consequence does this change reveal, and what might she have incorrectly concluded before?",
+    "options": [
+      "She may have overstated confidence in the SqFt effect; the OLS standard error was underestimated",
+      "She may have understated confidence in the SqFt effect; the OLS standard error was overestimated",
+      "The heteroscedasticity does not affect the SqFt estimate itself, only its magnitude",
+      "The robust SE proves the OLS estimate is biased and must be discarded"
+    ],
+    "correctIndex": 0,
+    "explanation": "The robust SE (0.0062) > OLS SE (0.0053) indicates OLS underestimated the standard error. This means the OLS t-statistic of 2.8 was artificially inflated—the true t-stat would be 0.015/0.0062 ≈ 2.42, less significant. She may have falsely rejected H₀ or set too-narrow confidence intervals. The coefficient (0.015) itself remains unbiased; only inference is affected. Option D is wrong because biased SE ≠ biased estimate.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An economist studying healthcare costs regresses log(Annual_Cost) on log(Income) across 300 individuals. A diagnostic plot shows variance of residuals increasing with fitted values, suggesting heteroscedasticity even in the log-log model. What is the most likely explanation for why the log transformation failed to fully stabilize variance?",
+    "options": [
+      "Heteroscedasticity may be related to a variable not in the model, or the functional form may still be misspecified",
+      "Log transformations always eliminate heteroscedasticity; the test must be incorrect",
+      "The sample size is too small to detect variance stabilization",
+      "Heteroscedasticity in levels automatically disappears in log-log regressions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transformations reduce but don't guarantee elimination of heteroscedasticity. If variance depends on an omitted variable (e.g., health insurance type, regional cost differences) or if the model remains misspecified (missing interactions, non-linear effects), heteroscedasticity persists even after logs. Options B and D incorrectly suggest transformation is a panacea. Option C confuses sample size with the variance structure.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher estimates two competing models for predicting monthly subscription retention (0–100%): Model A uses ln(Price) and ln(CustomerAge); Model B uses Price and CustomerAge in levels. Model A shows lower heteroscedasticity (White test p = 0.31) while Model B shows significant heteroscedasticity (White test p = 0.002). However, Model A has R² = 0.44 while Model B has R² = 0.52. What should the analyst prioritize when choosing between these models?",
+    "options": [
+      "Model B for predictive power, but use robust standard errors; heteroscedasticity doesn't bias coefficients",
+      "Model A because lower heteroscedasticity always improves estimation",
+      "Model B and assume OLS standard errors are valid since R² is higher",
+      "Neither model until sample size is increased to eliminate both heteroscedasticity and low fit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heteroscedasticity does not bias OLS coefficients—it biases their standard errors. Model B offers better predictive fit (R² = 0.52 vs. 0.44) and can be used with robust standard errors for valid inference. Prioritizing Model A just for lower heteroscedasticity ignores predictive performance. Option C ignores the heteroscedasticity problem altogether. Option D falsely suggests we must eliminate heteroscedasticity before using a model.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at an e-commerce firm notices that in her regression of log(Revenue) on log(Marketing_Spend) and Customer_Engagement, the Breusch-Pagan test yields χ² = 3.2 (p = 0.20) indicating no heteroscedasticity, yet a White test yields χ² = 11.8 (p = 0.008) indicating heteroscedasticity. Why might these two tests disagree, and which is more trustworthy here?",
+    "options": [
+      "The White test is more general and detects heteroscedasticity related to nonlinear combinations or interaction effects that BP-test misses",
+      "The Breusch-Pagan test is more conservative and the White test is overly sensitive",
+      "One test uses R² while the other uses residuals, making them always contradictory",
+      "The disagreement proves the model is misspecified and no diagnostic conclusion is valid"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Breusch-Pagan test assumes homoscedasticity as a linear function of regressors, while the White test is more general—it includes squared and cross-product terms of all regressors. The White test can detect heteroscedasticity patterns the BP test misses, such as variance depending on nonlinear combinations or interaction effects. This makes White more trustworthy in practice. Options B–D mischaracterize the tests or suggest false conclusions.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

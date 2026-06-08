@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In dplyr, which function is used to filter rows in a dataset based on specific conditions?",
+    "options": [
+      "select()",
+      "filter()",
+      "mutate()",
+      "arrange()"
+    ],
+    "correctIndex": 1,
+    "explanation": "filter() is the dplyr function that keeps or removes rows based on logical conditions. select() chooses columns, mutate() creates new variables, and arrange() sorts rows—all different operations. Students often confuse filter() with select() when learning dplyr.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the pipe operator %>% do in dplyr?",
+    "options": [
+      "Creates a new variable",
+      "Passes the output of one function as input to the next",
+      "Combines multiple datasets",
+      "Filters rows with missing values"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pipe operator %>% chains operations together, passing the left-hand output directly into the first argument of the right-hand function. This improves code readability. Students sometimes think it creates new variables (mutate's role) or combines datasets (join's role).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which dplyr function would you use to create a new column called 'profit_margin' calculated as (revenue - cost) / revenue × 100?",
+    "options": [
+      "select()",
+      "mutate()",
+      "summarise()",
+      "group_by()"
+    ],
+    "correctIndex": 1,
+    "explanation": "mutate() creates or modifies columns within a dataset. select() only chooses existing columns, summarise() reduces data to summary statistics, and group_by() only sets grouping structure without creating new columns. mutate() is the correct choice for column creation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In dplyr, what is the purpose of the arrange() function?",
+    "options": [
+      "Remove duplicate rows",
+      "Sort rows by one or more columns",
+      "Group data by categories",
+      "Calculate summary statistics"
+    ],
+    "correctIndex": 1,
+    "explanation": "arrange() sorts rows in ascending or descending order based on specified columns. distinct() removes duplicates, group_by() creates groups, and summarise() calculates statistics. Many students confuse sorting with grouping.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which function in dplyr reduces a dataset to a single row of summary statistics?",
+    "options": [
+      "filter()",
+      "summarise()",
+      "mutate()",
+      "select()"
+    ],
+    "correctIndex": 1,
+    "explanation": "summarise() (or summarize()) collapses multiple rows into aggregate values like mean, sum, or count. mutate() keeps all rows and adds columns, filter() subsets rows without aggregation, and select() only chooses columns. Students confuse summarise() with mutate() because both create new information.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's marketing team has sales data with columns: region, product_category, q3_revenue, and q3_costs. They want to identify regions where gross margin [(revenue - cost) / revenue × 100] exceeds 35%. Which dplyr sequence accomplishes this?",
+    "options": [
+      "data %>% mutate(margin = (q3_revenue - q3_costs) / q3_revenue * 100) %>% filter(margin > 35)",
+      "data %>% filter(margin > 35) %>% mutate(margin = (q3_revenue - q3_costs) / q3_revenue * 100)",
+      "data %>% select(region, q3_revenue) %>% filter((q3_revenue - q3_costs) / q3_revenue * 100 > 35)",
+      "data %>% arrange(q3_revenue) %>% filter(q3_revenue > q3_costs)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct sequence creates the margin column first with mutate(), then filters for margin > 35. Option 1 is correct because you must calculate the margin before filtering on it. Option 2 reverses the order (filtering before the variable exists). Option 3 removes q3_costs before using it. Option 4 only checks if revenue exceeds costs, not the margin percentage.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at Walmart has transaction data from 12 stores with 150,000 rows. They want to calculate average daily sales ($) for each store and rank stores from highest to lowest average sales. Which sequence is correct?",
+    "options": [
+      "transactions %>% group_by(store_id) %>% summarise(avg_sales = mean(daily_sales)) %>% arrange(desc(avg_sales))",
+      "transactions %>% arrange(daily_sales) %>% group_by(store_id) %>% summarise(avg_sales = mean(daily_sales))",
+      "transactions %>% mutate(avg_sales = mean(daily_sales)) %>% filter(store_id) %>% arrange(avg_sales)",
+      "transactions %>% summarise(avg_sales = mean(daily_sales)) %>% group_by(store_id) %>% arrange(desc(avg_sales))"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 correctly groups by store_id first, then calculates the mean within each group, then arranges in descending order. Option 1 sorts before grouping (inefficient and wrong order). Option 2 uses mutate (which repeats the overall mean for every row) instead of calculating per-group means. Option 3 summarises before grouping, losing the store distinction. The grouping must precede the summarise() to calculate per-group statistics.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's data team analyzes subscriber churn with columns: subscriber_id, subscription_type, monthly_revenue, and churned (1 = yes, 0 = no). They want to calculate the churn rate (proportion churned) for each subscription_type. What is the correct dplyr code?",
+    "options": [
+      "df %>% filter(churned == 1) %>% group_by(subscription_type) %>% summarise(churn_rate = n())",
+      "df %>% group_by(subscription_type) %>% summarise(churn_rate = sum(churned) / n())",
+      "df %>% group_by(subscription_type) %>% summarise(churn_rate = sum(churned))",
+      "df %>% mutate(churn_rate = sum(churned) / n()) %>% group_by(subscription_type)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 (correct) divides total churned subscribers by total subscribers per type. Option 2 only counts churned (no denominator—gives counts, not rates). Option 3 counts churn but lacks division by group total. Option 4 reverses order (mutate before grouping applies globally, not per group). A churn rate must be a proportion (0–1), not a count.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst at Target filters quarterly revenue data to rows where q2_revenue > $5,000,000 and product_line == 'Electronics'. They then select only store_id, product_line, and q2_revenue. After this filtering and selection, they notice the resulting dataset has far fewer rows than expected. Which assumption might explain this discrepancy?",
+    "options": [
+      "The pipe operator failed to chain the functions",
+      "They expected AND logic but filter() applied OR logic",
+      "Some stores in Electronics had q2_revenue ≤ $5,000,000",
+      "The select() function removed important filtering columns"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option 2 (correct) is that filter() applies AND logic by default when multiple conditions are listed, so rows must satisfy both conditions—stores with Electronics AND revenue > $5M. The analyst may have expected more rows if they thought only the revenue threshold would apply. Option 0 is incorrect (pipes work correctly). Option 1 is false (filter() uses AND, not OR). Option 3 is a misconception (select() doesn't affect filtering; it only chooses columns).",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A PepsiCo analyst compares summarise() with mutate() when calculating year-over-year revenue growth (%) by region. Which statement is most accurate?",
+    "options": [
+      "mutate() is preferred because it keeps all original rows and adds growth as a new column",
+      "summarise() is better because it produces one summary row per region, showing only growth",
+      "Both functions produce identical results when grouped by region",
+      "summarise() returns the dataset unchanged; mutate() modifies column names"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 is correct: mutate() preserves all rows and adds a new column, so you keep all original data plus the calculated growth. summarise() collapses to one row per group (losing transaction-level detail). Option 1 is tempting but problematic if you need original rows. Option 2 is false (they produce different dimensions). Option 3 reverses their functions. Use mutate() when you want row-level calculations; use summarise() when you want group-level aggregates.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A McKinsey analyst uses dplyr to analyze manufacturing costs across 5 plants with 100,000 daily records. They run: df %>% group_by(plant_id) %>% summarise(avg_cost = mean(unit_cost), sd_cost = sd(unit_cost)) %>% filter(avg_cost > 150). They notice plant #3 is missing from results even though they saw records for plant #3 with unit_cost = $145–$165 in the raw data. Which explanation is most likely?",
+    "options": [
+      "The filter() function only works on original columns, not summarised ones",
+      "Plant #3's average unit cost is ≤ $150, so it was correctly filtered out",
+      "The group_by() function removed plant #3 during grouping",
+      "The summarise() function dropped rows with missing sd_cost values"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 (correct): Plant #3's average cost is likely ≤$150, so filter(avg_cost > 150) correctly excludes it—the analyst miscalculated the mean or expected different behavior. Option 2 is false (filter() works on summarised columns after summarise() creates them). Option 3 is false (group_by() preserves all groups). Option 4 is false (if sd_cost computes, the row stays). The analyst conflated individual record values ($145–$165 range) with the group mean (which may be $148).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Ford supply-chain analyst has supplier data with columns: supplier_id, part_type, lead_time_days, and defect_rate (%). They execute: df %>% filter(part_type == 'Engine') %>% group_by(supplier_id) %>% summarise(avg_lead = mean(lead_time_days), avg_defect = mean(defect_rate), n = n()) %>% filter(avg_lead < 14 & n >= 5). They interpret the result as: 'All suppliers with Engine parts, average lead time under 14 days, and at least 5 shipments.' What is the critical flaw in their interpretation?",
+    "options": [
+      "The code includes all part types, not just Engine",
+      "The code only returns suppliers meeting ALL three conditions, but their interpretation ignores this AND logic",
+      "The n() function counts rows, not shipments",
+      "The filter() operations were reversed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option 1 (correct): The analyst stated the interpretation correctly—it does filter for Engine parts AND avg_lead < 14 AND n >= 5. However, this highlights a common misconception: they may think one condition is optional or that the results represent 'any' of these criteria rather than all. Option 0 is false (the first filter ensures Engine-only data). Option 2 is incorrect (n() does count rows, which equals shipments here). Option 3 is false (order of filters doesn't affect AND logic). The flaw is that analysts sometimes forget that AND logic is strict—a supplier failing any one condition is excluded entirely.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at JPMorgan Chase uses: df %>% select(account_id, branch, q3_deposits, q3_withdrawals) %>% mutate(q3_net_flow = q3_deposits - q3_withdrawals) %>% group_by(branch) %>% summarise(total_flow = sum(q3_net_flow), avg_flow = mean(q3_net_flow)). Later, a colleague asks, 'Why didn't you include account_type in the results?' The analyst replies, 'Because I selected it out.' Is this reasoning correct? Why or why not?",
+    "options": [
+      "Yes, select() is a permanent operation that removes columns from the dataset",
+      "No; select() only affects the pipeline output, but group_by() re-includes excluded columns",
+      "No; select() removes account_type before summarise(), so it cannot be grouped or summarised by it",
+      "Yes, but only if account_type was not used in the filter() function"
+    ],
+    "correctIndex": 2,
+    "explanation": "Option 2 (correct): select() removes account_type from the pipeline, so when group_by(branch) is called, account_type is unavailable—you cannot group by or reference a column you've removed. Option 0 is misleading (select() removes it only within that pipeline, not permanently from the original df). Option 1 is false (select() doesn't 'reappear' later in the pipe; excluded columns stay excluded). Option 3 is false (filter() placement doesn't restore a selected-out column). The lesson: if you need a column later, don't select() it away. Use select() only to keep columns you'll actually use.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Costco analyst runs two workflows on the same sales data (500,000 rows, 50 stores):\nWorkflow A: data %>% group_by(store_id) %>% mutate(store_avg_revenue = mean(daily_revenue))\nWorkflow B: data %>% mutate(store_avg_revenue = mean(daily_revenue)) %>% group_by(store_id)\nBoth workflows complete without error. However, the store_avg_revenue values differ dramatically between them. Which statement explains why?",
+    "options": [
+      "Workflow A calculates per-store averages; Workflow B calculates the global average for all stores",
+      "Workflow B is incorrect syntax and should not run",
+      "Workflow A permanently groups the data; Workflow B does not",
+      "Both workflows produce identical results; the analyst misread the output"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 (correct): In Workflow A, group_by() is called before mutate(), so mean(daily_revenue) is computed within each store—yielding different store averages. In Workflow B, mutate() is called first without grouping, so mean(daily_revenue) computes globally across all 500,000 rows—yielding the same global average for every row. Option 1 is false (Workflow B runs fine; group_by() after mutate() doesn't cause an error). Option 2 is true but irrelevant (grouping order affects calculations, not downstream grouping). Option 3 is false (the values genuinely differ). The critical insight: group_by() must precede mutate() if you want group-level calculations.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Johnson & Johnson analyst combines dplyr operations: df %>% select(product_id, region, q2_revenue, q2_cost) %>% filter(region == 'North America') %>% mutate(margin = (q2_revenue - q2_cost) / q2_revenue) %>% group_by(product_id) %>% summarise(avg_margin = mean(margin), median_margin = median(margin), n_records = n()). They notice n_records varies widely (5 to 850) across products. A colleague suggests using distinct() before group_by() to count unique products instead. Why is this suggestion problematic?",
+    "options": [
+      "distinct() would remove the margin, cost, and revenue columns, breaking the subsequent summarise()",
+      "distinct() is unnecessary; n() already counts non-duplicate rows per group",
+      "Using distinct() would artificially inflate n_records because duplicates exist in the raw data",
+      "The suggestion is valid; distinct() should always precede group_by()"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option 0 (correct): distinct() without specifying columns removes all columns except those explicitly kept, eliminating margin (and other needed columns). Moreover, distinct() isn't needed here—n_records should count the actual records per product, which it does. Option 1 is partially correct but incomplete as an explanation. Option 2 is false (distinct() doesn't inflate; it reduces rows). Option 3 is false (distinct() is optional and context-dependent, not a universal rule). The analyst's original code is correct. The colleague misunderstands n_records' purpose: it counts observations per product in that group, not unique products.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Apple Inc., a decision tree is being used to classify customer purchase intent. Which of the following best defines a decision tree in the context of business analytics?",
+    "options": [
+      "A flowchart-like model that splits data recursively based on feature values to make predictions or classifications",
+      "A statistical tool that only works with continuous numerical variables and cannot handle categorical data",
+      "A method that randomly assigns customers to different market segments without using any input features",
+      "A visualization showing the historical stock price movements of a company over five years"
+    ],
+    "correctIndex": 0,
+    "explanation": "A decision tree is fundamentally a recursive partitioning model that creates branching rules based on feature thresholds or categories. Option B is incorrect because decision trees handle both continuous and categorical variables effectively. Option C misses the supervised learning aspect entirely, and Option D confuses decision trees with time-series charts.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix uses a decision tree to decide whether to greenlight a new series. At the root node, the tree splits on 'Budget > $8 million'. If a proposed show has a budget of $6.5 million, which branch would it follow?",
+    "options": [
+      "The right branch (Yes, Budget > $8 million)",
+      "The left branch (No, Budget ≤ $8 million)",
+      "Both branches simultaneously in a parallel evaluation",
+      "Neither branch; the data point is rejected as an outlier"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since $6.5 million is not greater than $8 million, the split condition 'Budget > $8 million' evaluates to false, so the observation follows the left (No) branch. Option A confuses the direction; a budget of $6.5M does not satisfy the > $8M condition. Options C and D misunderstand how decision trees process individual data points through a single deterministic path.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Amazon, decision trees are used to classify whether a product will be a fast-mover or slow-mover. What is the primary advantage of using a decision tree over a simple if-then rule written by a human expert?",
+    "options": [
+      "Decision trees automatically discover the optimal sequence and thresholds of splits from data, capturing complex patterns a human may miss",
+      "Decision trees always produce higher accuracy than human experts, regardless of data quality",
+      "Decision trees require no training data and work purely on business intuition",
+      "Decision trees eliminate the need for any human interpretation or business domain knowledge"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decision trees learn split rules and thresholds from historical data, allowing them to uncover non-obvious relationships. Option B overstates the guarantee of accuracy, which depends heavily on data quality and tree complexity. Option C is false because decision trees require substantial training data. Option D is misleading; while trees are data-driven, domain knowledge still informs feature selection and interpretation.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a decision tree built by Google to classify ad click-through rates, a leaf node contains 500 customers: 350 clicked (positive) and 150 did not click (negative). What is the predicted class label for this leaf node?",
+    "options": [
+      "Positive (clicked), because the majority class in the leaf is positive",
+      "Negative (did not click), because 150 is a substantial count",
+      "A probability of 0.70 (70% likely to click)",
+      "Undecided, because the split is not pure enough"
+    ],
+    "correctIndex": 0,
+    "explanation": "A decision tree leaf node predicts the majority class among its samples. With 350 positive and 150 negative cases, the majority is 'positive (clicked)'. Option B ignores the relative proportions and assumes minority class is better. Option C confuses prediction with probability (though some trees do output probabilities, the standard prediction is the class label). Option D misunderstands that leaf nodes predict based on what is most common, not on achieving perfect purity.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Walmart, a decision tree for loan approval uses the rule: 'If Income > $50,000 AND Credit Score > 650, approve the loan.' Which of the following is true about how a decision tree would represent this logic?",
+    "options": [
+      "As a single node with a compound condition (AND) that splits into approve/deny branches",
+      "As two sequential nodes, where the first splits on Income > $50,000, and the right child splits on Credit Score > 650",
+      "As a random combination of Income and Credit Score variables that changes with each prediction",
+      "As a single rule that bypasses the tree structure and makes a direct binary decision"
+    ],
+    "correctIndex": 1,
+    "explanation": "Decision trees build nested splits sequentially. A compound AND condition is represented as a series of intermediate nodes. First, we split on Income > $50k; only those meeting that condition reach the second split on Credit Score > 650. Option A incorrectly suggests a single node handles both conditions. Option C ignores the deterministic nature of trees. Option D incorrectly assumes trees bypass their hierarchical structure.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Ford Motor Company builds a decision tree to predict whether a vehicle will require warranty claims within the first year, using 2,000 training records. The tree grows to 47 leaves with an average of 42.6 samples per leaf. What risk does this tree structure present?",
+    "options": [
+      "Overfitting, because the tree has grown very deep and each leaf has few samples, risking poor generalization to new vehicles",
+      "Underfitting, because 2,000 training records are insufficient to build any reliable model",
+      "Class imbalance, because the warranty claims dataset is naturally skewed toward non-claim vehicles",
+      "Data redundancy, because Ford has too many vehicles of similar types in the dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 47 leaves from 2,000 samples, each leaf has ~42.6 samples, which is relatively small. Such a deep, finely-split tree captures training noise and may not generalize well to new data — classic overfitting. Option B incorrectly assumes 2,000 records are too few; that is actually a reasonable dataset size. Option C, while potentially true, is not directly indicated by the leaf count and average leaf size. Option D confuses variety in data (a good thing) with redundancy (a data quality issue).",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank uses a decision tree to approve or deny credit cards. The tree is trained on 5,000 historical applications: 4,200 approved (positive) and 800 denied (negative). If the tree classifies every single applicant as 'approved,' what is the accuracy rate?",
+    "options": [
+      "84% (4,200 / 5,000), but this is a misleading metric because the tree has learned nothing meaningful",
+      "16% (800 / 5,000), because it failed to capture the minority class",
+      "50%, because the tree is not making any differentiated decisions",
+      "0%, because a blanket 'approve' policy cannot be accurate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy is calculated as (correct predictions) / (total predictions). Predicting 'approved' for all 5,000 would match the 4,200 truly approved cases, yielding 4,200/5,000 = 84%. However, accuracy alone is misleading when classes are imbalanced; the tree is not making useful distinctions (it has learned the baseline rate, not patterns). Option B confuses accuracy with the minority class count. Options C and D misdefine accuracy mathematically.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft uses a decision tree to segment software customers as 'High Value' or 'Low Value' based on annual software spend and contract length. A node contains 300 customers: 180 High Value and 120 Low Value. If a split on 'Spend > $100k' perfectly separates all 180 High Value to the left and all 120 Low Value to the right, what is the Gini impurity of the left child?",
+    "options": [
+      "0.0 (zero), because the left child contains only High Value customers",
+      "0.5 (fifty percent), because High Value and Low Value are two classes",
+      "0.36, calculated as 1 − (0.6² + 0.4²), representing the initial parent node",
+      "0.4, representing the proportion of misclassified samples"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gini impurity measures node purity: Gini = 1 − Σ(p_i)². For a node with 100% High Value, Gini = 1 − (1² + 0²) = 0. A pure node (all one class) has zero impurity. Option B confuses the number of classes with impurity. Option C calculates the parent node's impurity, not the child. Option D conflates impurity with error rate.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer like Target builds a decision tree to predict whether a customer will spend over $200 on groceries in the next month, using features: age, frequency of store visits, and household income. The tree achieves 75% accuracy on the training set but only 68% accuracy on a held-out test set. What does this gap most likely indicate?",
+    "options": [
+      "The tree is overfitting to the training data; it has learned noise and specific patterns that do not generalize to new customers",
+      "The test set is smaller than the training set, which always reduces accuracy",
+      "The model needs more input features to improve performance on test data",
+      "The decision tree algorithm is fundamentally flawed and should be replaced with a different method"
+    ],
+    "correctIndex": 0,
+    "explanation": "A notable gap between training and test accuracy (75% vs. 68%) is a classic sign of overfitting. The tree has fit closely to training data quirks that do not appear in test data. Option B incorrectly assumes test set size determines accuracy; both sets can have good accuracy even if sizes differ. Option C assumes more features help, but the real issue is model complexity, not feature count. Option D is premature; overfitting is often manageable through pruning or regularization, not model replacement.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan Chase uses a decision tree for fraud detection with a training set of 10,000 transactions: 9,800 legitimate and 200 fraudulent. The tree achieves 98% accuracy. However, when examined more closely, the tree classifies all transactions as 'legitimate.' Why is accuracy misleading in this scenario?",
+    "options": [
+      "Because the model has learned the class baseline (98% legitimate rate) but caught zero fraudulent cases (0% recall for fraud), which is useless for fraud detection",
+      "Because decision trees cannot handle imbalanced data and accuracy is the wrong metric",
+      "Because 10,000 transactions are insufficient training data for any reliable model",
+      "Because the tree is overfitting to the training set and will never generalize"
+    ],
+    "correctIndex": 0,
+    "explanation": "The tree achieves 98% accuracy by trivially predicting 'legitimate' for all cases (9,800/10,000 = 98%). But it detects zero fraud, which defeats the purpose of fraud detection. Accuracy is a poor metric for imbalanced data; precision, recall, F1-score, or AUC are more informative. Option B overstates that trees 'cannot' handle imbalance; the issue is metric choice. Option C incorrectly dismisses 10,000 records. Option D misidentifies the core problem (not overfitting, but metric irrelevance).",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A car rental company like Hertz uses a decision tree with maximum depth = 3 and minimum samples per leaf = 50 to predict customer churn. A data scientist observes that a simpler tree (depth = 2, min_samples = 75) has lower test set accuracy than the original. Which interpretation is most correct?",
+    "options": [
+      "The depth = 2 tree may be too simple and underfitting; the extra constraint (min_samples = 75) forces fewer splits, removing useful predictive patterns",
+      "The depth = 3 tree is always superior because deeper trees are inherently more accurate",
+      "The depth = 2 tree is overfitting because it has fewer nodes and thus captures more noise",
+      "Both trees are equally valid; the choice between them is purely arbitrary"
+    ],
+    "correctIndex": 0,
+    "explanation": "A simpler tree (depth = 2 with larger min_samples) may be underfitting, lacking complexity to capture important patterns in the data. The depth = 3 tree with smaller min_samples can grow richer splits. Option B falsely assumes deeper is always better (ignoring overfitting risk). Option C inverts the logic: fewer nodes reduce, not increase, overfitting. Option D ignores that different hyperparameters produce objectively different performance metrics.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Starbucks builds a decision tree to predict whether a customer will purchase a premium beverage (> $6) using features: time of day, day of week, and loyalty program membership. The tree grows to a depth of 10 with 511 leaf nodes trained on 5,000 customer records. The CEO asks: 'Why not use the simpler depth-5 tree that has 95% of the same accuracy?' Which concern is most critical to address?",
+    "options": [
+      "The depth-10 tree risks severe overfitting with 511 leaves sharing 5,000 samples (~9.8 per leaf), and the tiny difference in accuracy (5%) may not generalize to new customers",
+      "Decision trees always require maximum depth to ensure training accuracy is as high as possible",
+      "The depth-5 tree is biased because it splits fewer times and thus ignores important feature interactions",
+      "The depth-10 tree will always be faster to train and deploy than the depth-5 tree"
+    ],
+    "correctIndex": 0,
+    "explanation": "A depth-10 tree with 511 leaves on 5,000 samples means ~9.8 samples per leaf — extreme overfitting risk. High training accuracy with small test/new-data accuracy difference is a red flag. The simpler tree's 95% accuracy may be more robust and generalizable. Option B confuses maximizing training accuracy with building a good model (generalization is the real goal). Option C misinterprets feature interaction; shallower trees can still capture important interactions with fewer splits. Option D is factually wrong; deeper trees are often slower to train and score.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company builds two decision trees for predicting claim severity (High, Medium, Low) from 8,000 claims. Tree A uses Gini impurity; Tree B uses Information Gain (entropy). Both trees achieve identical 82% accuracy on the test set. What is the most accurate statement about these two trees?",
+    "options": [
+      "The trees may have different internal structures and split sequences, but the splitting criteria (Gini vs. Information Gain) often lead to similar predictive performance in practice",
+      "Tree A is definitively better because Gini impurity is mathematically superior to Information Gain",
+      "Tree B is definitively better because Information Gain is specifically designed for multi-class problems like claim severity",
+      "Since accuracy is identical, the two trees are functionally equivalent and will make identical predictions on new claims"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gini and entropy-based splits are mathematically related and typically produce comparable trees with similar performance. They differ in split sequences and internal structure but often converge to similar accuracy. Option B falsely claims one criterion is universally 'superior'; both are valid. Option C oversells entropy; both handle multi-class equally well. Option D is incorrect: identical test accuracy does not guarantee identical predictions on new data — different tree structures can make different individual predictions while achieving the same overall accuracy.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare provider uses a decision tree to classify patients into risk categories for preventive care (High Risk, Medium Risk, Low Risk) using age, BMI, and blood pressure. The tree is trained on 6,000 patients. During validation, the tree shows high accuracy (88%) but has a precision of only 52% for the 'High Risk' category. The medical director says this is unacceptable because false positives waste resources. What does this pattern reveal, and what is the appropriate next step?",
+    "options": [
+      "The tree is misclassifying many patients as High Risk who are not; recall and precision trade-offs should be evaluated, and the decision threshold or class weights should be adjusted to prioritize precision",
+      "The tree is underfitting because accuracy is not 100% and should be rebuilt with more features",
+      "The tree is overfitting because precision is lower than accuracy, indicating the model is memorizing noise",
+      "High Risk patients are inherently difficult to classify, and decision trees are fundamentally unsuitable for medical diagnosis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Low precision (52%) for High Risk means the tree labels 48% of its 'High Risk' predictions as false positives—wasteful and clinically problematic. This is a class imbalance or threshold tuning issue, not underfitting or overfitting. The solution is to adjust class weights, confidence thresholds, or accept lower recall to improve precision. Option B confuses accuracy with model fit. Option C incorrectly attributes precision-accuracy gaps to overfitting; they reflect different optimization targets. Option D prematurely abandons the method; the issue is tuning, not methodology.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix engineers build a decision tree to classify new shows as 'Likely to be Renewed' or 'Likely to be Cancelled' using features like viewership, user ratings, and genre. The tree is built using a cost matrix that penalizes 'cancelled' misclassifications 5 times more heavily than 'renewed' misclassifications. How does this cost matrix change the tree's behavior?",
+    "options": [
+      "The tree will bias its splits to avoid classifying shows as 'Renewed' when there is doubt, accepting more false positives to reduce costly false negatives (misclassifying a true 'Cancelled' show as renewed)",
+      "The tree will ignore the 'Cancelled' class entirely and default to 'Renewed' for all shows",
+      "The cost matrix has no effect; decision trees use only data frequency, not penalty weights",
+      "The tree will randomly shuffle its splits to account for the unequal costs"
+    ],
+    "correctIndex": 0,
+    "explanation": "A cost matrix weighted 5:1 against misclassifying cancellations tells the tree: 'Avoid missing cancelled shows, even if it means more false alarms for renewals.' The tree adjusts its split thresholds to favor conservative (cancel-favoring) predictions. Option B falsely assumes the tree ignores the minority; it amplifies it. Option C is incorrect; most tree implementations support cost matrices or class weights to adjust penalties. Option D confuses weighting with randomness; costs are deterministic, not stochastic.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

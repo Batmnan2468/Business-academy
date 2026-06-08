@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following best defines sampling error in the context of market research?",
+    "options": [
+      "The difference between a sample statistic and the population parameter due to random variation in which items are selected",
+      "A mistake made by the survey administrator when recording responses",
+      "The intentional exclusion of certain demographic groups from the sample",
+      "The difference between the planned sample size and the actual number of responses collected"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sampling error is specifically the difference between sample statistics and true population parameters caused by random selection variability. Option B confuses sampling error with data entry error; Option C describes systematic bias, not sampling error; Option D refers to non-response issues, not sampling error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company tests a new drug on a sample of 500 patients from its database of 50,000 eligible patients. The sample mean blood pressure reduction is 12 mmHg, with a standard error of 1.2 mmHg. What is the 95% confidence interval for the population mean reduction?",
+    "options": [
+      "10.64 to 13.36 mmHg",
+      "11.8 to 12.2 mmHg",
+      "12 ± 2.4 mmHg",
+      "9.6 to 14.4 mmHg"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the 95% confidence interval formula: sample mean ± (1.96 × standard error) = 12 ± (1.96 × 1.2) = 12 ± 2.35 ≈ 10.64 to 13.36 mmHg. Option B uses only 1 standard error instead of 1.96, a common mistake in CI calculation. Option C incorrectly doubles the standard error. Option D uses 2 standard errors, which approximates 95% but is not precise.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain surveys customer satisfaction by randomly selecting 200 customers from each of its 15 stores. This sampling method is called:",
+    "options": [
+      "Stratified random sampling",
+      "Cluster sampling",
+      "Systematic sampling",
+      "Convenience sampling"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stratified random sampling divides the population into homogeneous groups (strata—in this case, individual stores) and randomly samples from each stratum. Cluster sampling would randomly select entire stores, not customers within stores. Systematic sampling uses a fixed interval. Convenience sampling is non-random selection.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a study of average salaries at Fortune 500 companies, increasing the sample size from 50 to 200 companies will have which effect on sampling error?",
+    "options": [
+      "Reduce sampling error by approximately 50%, since the sample size increased by 75%",
+      "Reduce sampling error by a factor of 2, since the sample size increased by a factor of 4",
+      "Eliminate sampling error entirely",
+      "Have no effect, since sampling error depends only on population variability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sampling error is inversely proportional to the square root of sample size (SE ∝ 1/√n). When n increases from 50 to 200 (a factor of 4), standard error decreases by √4 = 2. Option A incorrectly assumes linear reduction. Option C confuses larger samples with perfect accuracy—sampling error always exists. Option D ignores the inverse relationship between sample size and sampling error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is an example of measurement bias rather than sampling error?",
+    "options": [
+      "A survey question is worded in a way that leads respondents to favor one answer over another",
+      "A random sample of 100 customers happens to include more wealthy customers than the population average",
+      "The sample mean profit margin differs from the population mean by $0.75",
+      "Five percent of survey respondents fail to answer a particular question"
+    ],
+    "correctIndex": 0,
+    "explanation": "Measurement bias occurs when the instrument or method systematically distorts responses (leading questions, poorly designed scales). Option B is sampling error—a chance outcome of random selection. Option C describes sampling error numerically. Option D refers to non-response, not measurement bias.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An online retailer wants to estimate the average order value. They send a survey to 1,000 randomly selected customers from their email list of 500,000. The response rate is only 8%, yielding 80 responses with a mean order value of $145. What is the primary concern with this sampling method?",
+    "options": [
+      "Non-response bias, because the 80 respondents may differ systematically from the 920 non-respondents",
+      "Sampling error is too large because 80 is much smaller than 500,000",
+      "The standard error cannot be calculated without knowing the population standard deviation",
+      "Selection bias occurred because customers were chosen from an email list rather than randomly from all customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "A response rate of 8% creates serious non-response bias—those who respond to surveys may have systematically different spending patterns than those who don't (e.g., more engaged customers spend differently). Option B confuses sampling error with sample size inadequacy—80 is actually a reasonable sample if representative. Option C is incorrect; the standard error can be estimated from the sample. Option D mischaracterizes the selection method; random selection from an email list is still random.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing company performs quality control by inspecting every 50th item produced (systematic sampling of 1,200 items from a production run of 60,000). The inspection finds 24 defective items. If the systematic sampling coincides with a machine malfunction that occurs every 50 items, what type of problem has occurred?",
+    "options": [
+      "Bias due to the sampling interval aligning with the machine cycle, making the sample non-representative",
+      "Sampling error that is unavoidable and unbiased",
+      "Non-response bias affecting the quality estimates",
+      "Measurement bias in how defects are classified"
+    ],
+    "correctIndex": 0,
+    "explanation": "When the systematic sampling interval (every 50th item) coincides with a periodic pattern in production (machine malfunction every 50 items), the sample becomes systematically biased—it will either consistently over- or under-represent defective items. This is a classic systematic bias problem. Option B incorrectly labels this as unbiased sampling error. Option C doesn't apply to production line inspection. Option D concerns defect classification, not sampling structure.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank surveys 300 customers about satisfaction with online banking, achieving a 95% confidence level and a margin of error of ±4%. To reduce the margin of error to ±2%, approximately how many customers must be surveyed?",
+    "options": [
+      "600 customers",
+      "900 customers",
+      "1,200 customers",
+      "1,500 customers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Margin of error is inversely proportional to √n. To halve the margin of error (from ±4% to ±2%), you must multiply the sample size by 4 (since ME ∝ 1/√n, and 1/√4 = 0.5). Therefore, 300 × 4 = 1,200. Option A doubles the sample (reduces ME to ±2.83%). Option B triples the sample (reduces ME to ±2.31%). Option D quadruples the sample (reduces ME to ±2%)—but this over-corrects.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hotel chain analyzes guest satisfaction by surveying every customer who checks out during the week of March 1-7. This sampling method introduces what type of bias?",
+    "options": [
+      "Temporal bias, because guests checking out during this specific week may have different experiences than those during other weeks",
+      "Sampling error, which is unavoidable in all studies",
+      "Non-response bias, because some guests refuse to participate",
+      "Coverage bias, because the hotel does not survey guests who stayed during different weeks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sampling only during one specific week introduces temporal bias—weather, special events, staffing levels, and other factors vary by time of year. Guests in early March may differ from those in December or summer. Option B confuses bias with sampling error—this is systematic, not random variation. Option C relates to non-response within the survey, not the selection of the week. Option D describes undercoverage, but the real issue is the specific week chosen.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consumer research firm uses Twitter to collect opinions about a new soft drink launch. They randomly sample 500 tweets from 250,000 total tweets using a keyword filter. What is the most significant limitation of this sampling frame?",
+    "options": [
+      "Twitter users are not representative of the overall consumer population, creating coverage bias",
+      "The sample size of 500 is too small relative to 250,000",
+      "Sampling error increases exponentially with the number of tweets",
+      "The keyword filter violates the random selection principle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Twitter users are not representative of all consumers (age, income, literacy, engagement biases), so even a properly randomized sample from Twitter creates coverage bias. This is selection bias before random sampling occurs. Option B ignores that 500 is actually a reasonable sample for 250,000. Option C is incorrect—sampling error doesn't increase exponentially. Option D is incorrect; a keyword filter, if applied consistently before random selection, doesn't violate randomness.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company takes a random sample of 400 employees to estimate mean annual salary. The sample mean is $62,500 with a sample standard deviation of $8,000. They calculate a 95% confidence interval as [$62,500 - 1.96 × $8,000, $62,500 + 1.96 × $8,000] = [$46,820, $78,180]. What error has been made in this calculation?",
+    "options": [
+      "The standard deviation was used instead of the standard error; the correct interval is approximately [$61,716, $63,284]",
+      "The confidence level should be 90%, not 95%, for a sample of 400",
+      "The sample size is too small; the interval is invalid",
+      "Negative salaries in the lower bound indicate the method is inappropriate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critical error is using sample standard deviation ($8,000) instead of standard error (SD/√n = $8,000/20 = $400). The correct interval is $62,500 ± 1.96($400) ≈ $61,716 to $63,284. Option B incorrectly suggests changing the confidence level based on sample size. Option C ignores that 400 is adequate. Option D misinterprets confidence interval interpretation—the interval estimates population parameters, not individual values.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An airline asks seat-back screen survey questions to passengers on 40 flights selected from 500 annual flights at a busy hub. The sample includes all passengers on those flights (n=8,000). Which statement best describes the sampling design and its limitations?",
+    "options": [
+      "Cluster sampling was used; it introduces bias if selected flights differ systematically from non-selected flights (route, time of day, season)",
+      "Stratified sampling was used; it guarantees representative results from all flight types",
+      "Systematic sampling was used; the margin of error is 1/√8000 ≈ 1.1%",
+      "The design is unbiased because all passengers on selected flights are surveyed"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is cluster sampling—flights (clusters) are randomly selected, then all passengers within clusters are surveyed. Bias arises if selected flights differ from the population of all flights (e.g., if the 40 flights happen to be disproportionately evening flights with different passenger profiles). Option B confuses cluster with stratified sampling. Option C incorrectly names the design and misapplies the margin of error formula. Option D incorrectly assumes that surveying all passengers within clusters eliminates bias.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A market research firm collects data on households' streaming service subscriptions. They obtain a list of 50,000 households from a data broker, randomly select 800 households, and achieve a 70% response rate (560 responses). They report a 95% confidence level and margin of error of ±4%. A manager questions whether the ±4% accounts for non-response bias. What is the most accurate response?",
+    "options": [
+      "No; the margin of error accounts only for sampling error from the 560 respondents, not for bias from the 30% who did not respond",
+      "Yes; the margin of error automatically adjusts for non-response because it uses the confidence level",
+      "No; the margin of error is calculated from the original 800, so it accounts for all potential bias",
+      "Yes; as long as the confidence level is 95%, all sources of error are included"
+    ],
+    "correctIndex": 0,
+    "explanation": "Margin of error reflects sampling error only (random variation), not systematic bias like non-response. The 30% non-response creates potential bias if those 240 non-respondents differ from the 560 respondents. This bias is separate from and in addition to the ±4% margin of error. Options B, C, and D incorrectly assume that confidence intervals or margin of error account for all types of error, when they address only sampling variability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial advisory firm studies investment behavior by surveying online users of its website. They randomly select 1,500 visitors from 400,000 annual visitors and obtain 450 responses about portfolio allocation. The confidence interval for average stock allocation is 58% ± 3.5%. Which of the following is NOT a limitation of this study?",
+    "options": [
+      "The sample's standard error increases when the sample size is reduced from 1,500 to 450 due to non-response",
+      "Coverage bias may exist because website users may be wealthier and more financially literate than the general population",
+      "The margin of error of ±3.5% reflects sampling error; non-response bias is not quantified in this interval",
+      "The results can be generalized to all investment professionals regardless of where they obtain advice"
+    ],
+    "correctIndex": 3,
+    "explanation": "Option D is NOT a limitation—it is a false and inappropriate generalization. The results apply only to website users of this firm, not all investment professionals. Options A, B, and C are genuine limitations: A is true (lower response rate increases SE among responders), B describes coverage bias from using only website visitors, and C notes that margin of error doesn't capture non-response bias. The question asks which is NOT a limitation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical manufacturer estimates the average age of patients taking a new arthritis medication by sampling from three sources: (1) insurance claims database (n=2,000, mean age 67), (2) hospital records (n=800, mean age 62), and (3) direct surveys of clinic patients (n=400, mean age 59). Before combining these samples, what should be considered?",
+    "options": [
+      "The three sources likely represent different populations with different characteristics, introducing coverage bias and potential incomparability across sources",
+      "A simple overall mean of (67+62+59)/3 = 62.67 is the best estimate because it balances the three sources equally",
+      "The largest sample (n=2,000) should be weighted most heavily in the final estimate",
+      "Sampling error is eliminated by using three independent sources"
+    ],
+    "correctIndex": 0,
+    "explanation": "The three data sources represent different populations: insurance claimants, hospitalized patients, and clinic patients. These groups likely differ systematically (health severity, income, access to care), introducing coverage bias. Combining them without accounting for these differences produces a biased overall estimate. Option B naively averages sources unweighted. Option C ignores source differences. Option D confuses multiple sources with error reduction—sampling error remains in each source.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

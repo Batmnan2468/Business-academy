@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. tracks the daily stock price of its shares, which can take any value between $150.00 and $180.50. Which classification best describes the daily stock price?",
+    "options": [
+      "Continuous random variable",
+      "Discrete random variable",
+      "Qualitative variable",
+      "Deterministic variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stock prices are continuous because they can assume any value within a range (e.g., $157.342...). Option B (discrete) is tempting because students often think prices are discrete due to cent increments, but mathematically prices are measured on a continuous scale. Cent limitations do not make a variable truly discrete in statistical theory.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon warehouse fulfillment centers count the number of packages shipped per day. This number is always a whole number such as 42,000 or 43,500. Which best describes this variable?",
+    "options": [
+      "Discrete random variable",
+      "Continuous random variable",
+      "Qualitative ordinal variable",
+      "Dependent variable only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The number of packages is discrete because it takes on specific, countable values (whole numbers). Option B is incorrect because continuous variables can take infinite values between any two points; you cannot ship 42,000.5 packages. The variable is countable and finite in any given time period.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a survey of 500 employees at Microsoft, the annual salary in dollars is recorded. Why is annual salary considered a continuous random variable in statistical analysis?",
+    "options": [
+      "Because salary can theoretically take any value within a range, even if we only observe rounded figures",
+      "Because Microsoft pays salaries monthly rather than annually",
+      "Because the sample size is large (500 employees)",
+      "Because salary is always positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "Salary is continuous because it can assume any value within an interval (e.g., between $60,000 and $200,000), even though we typically round or observe it at specific points. Option B confuses payment frequency with variable type. Option C wrongly links sample size to variable classification. Option D confuses the domain restriction with continuity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manufacturing plant tracks defects found during quality inspection. In a batch of 1,000 units, the number of defective items is recorded as 12, 8, 15, etc. This is an example of which type of variable?",
+    "options": [
+      "Discrete random variable",
+      "Continuous random variable",
+      "Nominal categorical variable",
+      "Dependent continuous variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "The count of defects is discrete because you cannot have 12.7 defects—only whole number counts are possible. Option B is the most common incorrect choice; students may assume that because the numbers vary, they are continuous, but countable data (defects, people, items) are always discrete.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks measures the time (in minutes) a customer waits in line from arrival to receiving their order. This wait time can be 2.5 minutes, 3.75 minutes, or any decimal value. What type of random variable is wait time?",
+    "options": [
+      "Continuous random variable",
+      "Discrete random variable",
+      "Interval-scaled categorical variable",
+      "Stratified random variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wait time is continuous because time is measured on a continuum and can take any positive value, including decimals and fractions of minutes. Option B is tempting because students may misclassify any measured quantity, but discrete variables must be countable. Time always allows infinite divisions between any two points.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank records the number of customer transactions processed per hour at its main branch. Yesterday, 78 transactions were processed in the 10 a.m. hour, 95 in the 11 a.m. hour, and 82 in the noon hour. Calculate the probability that a randomly selected hour has more than 85 transactions if the distribution is approximately normal with mean μ = 80 and standard deviation σ = 8. Use Z = (X − μ) / σ.",
+    "options": [
+      "Approximately 0.266",
+      "Approximately 0.734",
+      "Approximately 0.500",
+      "Approximately 0.159"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z = (85 − 80) / 8 = 0.625. Using standard normal tables, P(Z > 0.625) ≈ 0.266. Option B is the complement (would apply if asking P(X < 85)), which is a common mistake. Option C assumes the mean (incorrect). Option D assumes different parameters. Even though transactions are technically discrete, the large count makes normal approximation valid.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Uber tracks ride duration in minutes for trips in downtown Los Angeles. A sample shows mean duration = 18.5 minutes and standard deviation = 4.2 minutes. A particular ride lasted 25.3 minutes. Using Z-score, determine how many standard deviations this ride is from the mean.",
+    "options": [
+      "Approximately 1.60 standard deviations above the mean",
+      "Approximately 1.71 standard deviations above the mean",
+      "Approximately 2.10 standard deviations below the mean",
+      "Approximately 0.95 standard deviations above the mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z = (25.3 − 18.5) / 4.2 = 6.8 / 4.2 ≈ 1.619, or approximately 1.60. Option B results from rounding errors or arithmetic mistakes (6.8/4=1.7). Option C confuses direction (above vs. below). Option D uses wrong calculation. Ride duration is continuous, allowing precise decimal measurements.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix is analyzing binge-watching behavior. The number of episodes watched in one sitting is discrete (values: 1, 2, 3, 4, 5, etc.). However, the total hours of continuous viewing per session is continuous. If a user watches 3 episodes, each lasting 42.7 minutes on average, what is the expected total viewing time, and what type of random variable does this represent?",
+    "options": [
+      "Approximately 128.1 minutes; this is a continuous random variable (product of discrete count and continuous duration)",
+      "Approximately 128 minutes; this is a discrete random variable (based on episode count)",
+      "Approximately 85.4 minutes; this is a continuous random variable (duration doubled)",
+      "Approximately 190.5 minutes; this is a discrete random variable (converted to whole minutes)"
+    ],
+    "correctIndex": 0,
+    "explanation": "3 × 42.7 = 128.1 minutes. The result is continuous because when you multiply a discrete count by a continuous duration, the product retains continuity (can take any value within a range). Option B incorrectly classifies the result as discrete because it started with episode count. Option D creates false discreteness by rounding. The type is determined by the mathematical nature of the outcome, not the input type.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital pharmacy tracks two variables: (1) the number of prescriptions filled per day (discrete), and (2) the total dollar amount of all prescriptions filled per day (continuous). A manager claims both variables have identical statistical properties because they describe the same underlying pharmacy activity. Which statement best critiques this claim?",
+    "options": [
+      "The claim is incorrect; discrete and continuous variables have fundamentally different probability distributions and statistical properties despite describing related phenomena",
+      "The claim is correct; any variables describing the same activity must have identical properties",
+      "The claim is partially correct; they differ only in rounding conventions",
+      "The claim cannot be evaluated without knowing the sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Discrete and continuous variables have different distributions, moments, and statistical properties even if they describe correlated phenomena. Option B is false—different variable types have different mathematical structures. Option C wrongly reduces the distinction to rounding. Option D incorrectly suggests sample size determines variable type. A discrete distribution (like Poisson) and continuous distribution (like normal) cannot be treated identically.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla tracks battery charge level (in percentage: 0–100%) for vehicles in use. Although technically continuous, a car's dashboard displays charge in 1% increments (0%, 1%, 2%, ..., 100%). A data analyst models this as discrete because the display shows 101 distinct values. Is this approach valid for statistical analysis?",
+    "options": [
+      "No; the underlying variable is continuous, and treating a continuous variable as discrete introduces measurement error and inappropriate analysis methods",
+      "Yes; if the data collection device only records 101 values, the analyst must treat it as discrete",
+      "Yes; any variable with fewer than 1,000 distinct values must be discrete",
+      "No; battery charge should always be treated as categorical, not discrete or continuous"
+    ],
+    "correctIndex": 0,
+    "explanation": "Battery charge is fundamentally continuous despite discrete observation. Forcing it into a discrete framework distorts analysis (e.g., using binomial instead of normal). Option B confuses measurement granularity with variable type. Option C invents a false threshold. Option D misclassifies the variable as categorical. The true nature of a variable is independent of how finely we measure it.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A luxury hotel chain records guest stay duration in days (discrete: 1, 2, 3, 4 nights) and room temperature preference in Fahrenheit (continuous: 68.5°F, 71.3°F, etc.). An analyst constructs a joint probability model treating both as continuous. Which consequence would most likely occur?",
+    "options": [
+      "The discrete variable (stay duration) would have probability zero at individual values, making the model mathematically incoherent for practical decision-making",
+      "The continuous variable (temperature) would be forced into discrete bins, losing precision",
+      "Both variables would be equally well-represented because joining them creates an average type",
+      "The model would automatically adjust classifications based on correlation between the variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a continuous joint distribution, discrete variables have zero probability at each individual point (probability density = 0 at discrete values). This makes the model unsuitable for a discrete variable. Option B reverses the error direction. Option C falsely suggests averaging resolves type mismatch. Option D attributes false adaptive properties. Proper modeling requires either separate marginal distributions or mixture models.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company uses two models: Model A assumes claim payout amount follows a normal distribution (continuous, mean = $5,000, σ = $800), and Model B assumes claim count per week follows a Poisson distribution (discrete, λ = 8 claims). The analyst states, 'Since both represent random financial quantities, we can apply identical variance formulas to both.' Why is this statement problematic?",
+    "options": [
+      "Variance calculations differ fundamentally between continuous and discrete distributions; Poisson variance equals its mean (λ), while normal variance is σ², making direct equivalence impossible",
+      "Normal distributions always have larger variance than Poisson distributions",
+      "The statement is correct; variance is always calculated as the sum of squared deviations regardless of distribution type",
+      "Variance applies only to continuous variables, so Poisson variance cannot be calculated"
+    ],
+    "correctIndex": 0,
+    "explanation": "Different distributions have different variance properties and formulas. Poisson's variance = λ = 8 is fundamentally tied to its discrete nature. Normal's variance = σ² = 640,000 follows continuous properties. Option B wrongly generalizes across all normal/Poisson pairs. Option C ignores that different distributions have different computational structures despite using squared deviations conceptually. Option D incorrectly restricts variance to continuous variables—discrete distributions certainly have variance.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A software company's analytics team observes that daily software downloads (discrete: 1,200, 1,450, 980, etc.) correlate perfectly with server processing time in milliseconds (continuous: 42.7 ms, 51.3 ms, 38.9 ms, etc.). A junior analyst proposes treating downloads as continuous by 'adding a small random jitter' (e.g., 1,200.37 downloads). She claims this preserves the underlying relationship while enabling more flexible statistical modeling. Why is this problematic?",
+    "options": [
+      "Adding artificial jitter distorts the actual phenomenon (you cannot download partial units), introducing fictitious variation and violating the principle that models should reflect reality",
+      "Jitter always reduces correlation strength, so the relationship will be destroyed",
+      "The approach is valid; jitter is a standard technique used in all discrete variable analyses",
+      "Jitter is only problematic if it changes the mean; if mean is preserved, the method is sound"
+    ],
+    "correctIndex": 0,
+    "explanation": "Jitter introduces false variation unrelated to actual data, misrepresenting the phenomenon. Downloads truly are discrete integers; adding decimal places violates this ground truth. Option B overgeneralizes jitter's effects. Option C falsely normalizes the technique as standard (jitter is an exploratory graphing aid, not an analytical technique). Option D wrongly suggests preserving mean justifies fabricating data. Honoring variable type ensures valid inference.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain models two scenarios: Scenario 1 assumes quarterly profit (continuous, normally distributed) affects quarterly store count (discrete, count-based). Scenario 2 reverses causation: store count affects profit. An analyst claims discrete and continuous variables cannot causally relate; they must be kept separate. Which best refutes or supports this claim?",
+    "options": [
+      "The claim is false; discrete and continuous variables can causally interact (discrete store count directly affects continuous profit), but analysis requires appropriate mixed-model methods that respect each variable's distributional nature",
+      "The claim is true; mixing variable types violates all statistical principles",
+      "The claim is partially true; causality exists, but analysts must convert one variable type to match the other",
+      "The claim is false; all causal relationships are identical regardless of variable type"
+    ],
+    "correctIndex": 0,
+    "explanation": "Discrete and continuous variables frequently interact causally in real systems; the key is using appropriate statistical methods (regression with count-based outcomes requires Poisson/negative binomial models, not OLS). Option B falsely prohibits mixed-type models. Option C wrongly mandates conversion, losing information. Option D wrongly suggests all causality is uniform. Real business systems routinely show discrete drivers (store openings) affecting continuous outcomes (revenue).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A transportation company tracks two metrics from a 500-vehicle fleet: (1) number of maintenance requests per month (discrete, recorded values: 18, 22, 19, etc.) and (2) fuel consumption in gallons per month (continuous, recorded values: 2,847.3, 2,915.8, etc.). During model selection for prediction, the analyst correctly identifies (1) as discrete and (2) as continuous. However, they apply a single ordinary least squares (OLS) regression with maintenance requests as the predictor and fuel consumption as the outcome. Which consequence is most likely?",
+    "options": [
+      "While OLS produces valid point estimates for fuel consumption conditional on discrete maintenance counts, it may underestimate prediction intervals and standard errors because OLS assumes continuous predictors; proper interpretation requires caution about the discrete nature of the predictor",
+      "OLS will fail completely and produce no results because discrete predictors are forbidden in regression",
+      "OLS will automatically adjust for the discrete predictor type and produce perfectly valid results identical to specialized methods",
+      "The discrete predictor will cause OLS to overestimate the outcome's variance by a factor equal to the count values"
+    ],
+    "correctIndex": 0,
+    "explanation": "OLS is robust to discrete predictors but does not account for their specific distributional properties; it produces usable estimates and predictions, yet assumes continuous predictor variation. The analyst should recognize grouping by discrete maintenance levels and consider confidence interval adjustments. Option B is false—OLS handles discrete predictors routinely (though specialized methods like Poisson regression exist for discrete outcomes). Option C falsely claims equivalence to specialized methods. Option D invents a false variance relationship. The key insight: valid estimates, but requires thoughtful interpretation.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

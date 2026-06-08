@@ -1,0 +1,184 @@
+[
+  {
+    "question": "When merging two datasets in analytics, what does a LEFT JOIN preserve that an INNER JOIN does not?",
+    "options": [
+      "All rows from the left table, even if there's no match in the right table",
+      "All rows from both tables regardless of matching keys",
+      "Only rows where both tables have matching keys",
+      "Duplicate rows from the left table"
+    ],
+    "correctIndex": 0,
+    "explanation": "A LEFT JOIN preserves all rows from the left table and adds matching data from the right table, filling with nulls where no match exists. An INNER JOIN only keeps rows where both tables have matching keys, which is why someone might confuse it—but INNER JOIN is more restrictive, not preserving unmatched left rows.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a dataset join, what is a 'join key'?",
+    "options": [
+      "The column(s) used to match rows between two tables",
+      "The primary key of the first table being joined",
+      "A uniqueness constraint applied during the merge",
+      "The sorting order applied after joining"
+    ],
+    "correctIndex": 0,
+    "explanation": "A join key is the column or columns used to match and align rows from two different tables. The primary key is not necessarily the join key—you can join on any column, and the join key may not be unique. Someone might confuse this with primary key or sorting, but those are different concepts.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When appending two datasets with the same structure (same column names and types), what operation are you performing?",
+    "options": [
+      "A vertical stack or UNION of the two datasets",
+      "A horizontal merge using a join key",
+      "A cross join creating a Cartesian product",
+      "A pivot transformation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Appending datasets with identical structure means stacking them vertically—this is a UNION or vertical concatenation operation. A join is horizontal (adding columns), a cross join creates many rows, and a pivot transforms data shape—none of these describe appending rows.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a common cause of duplicate rows appearing after a merge operation?",
+    "options": [
+      "The join key is not unique in one or both tables",
+      "Using a LEFT JOIN instead of an INNER JOIN",
+      "The column data types do not match exactly",
+      "The datasets are too large to merge correctly"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a join key is not unique, each matching occurrence in the left table matches multiple rows in the right table, creating a Cartesian product at that match level. A LEFT JOIN preserves more rows but doesn't create duplicates by itself; data type mismatches prevent matches rather than create them; and dataset size is not a direct cause of duplicates.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Merging datasets is also known as what in SQL?",
+    "options": [
+      "A JOIN operation",
+      "A GROUP BY operation",
+      "A FILTER operation",
+      "A SORT operation"
+    ],
+    "correctIndex": 0,
+    "explanation": "In SQL, merging is performed using JOIN operations (INNER, LEFT, RIGHT, FULL). GROUP BY is for aggregation, FILTER is for subsetting, and SORT is for ordering—none of these describe combining datasets horizontally.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechVenture Inc. has a sales table with 15,000 rows and a customer demographics table with 8,500 rows. If you perform an INNER JOIN on customer_id and 12,000 sales records have matching customer IDs, how many rows will the result contain?",
+    "options": [
+      "12,000 rows",
+      "8,500 rows",
+      "15,000 rows",
+      "23,500 rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "An INNER JOIN returns only rows where the join key matches in both tables. Since 12,000 sales records have matching customer IDs, the result contains 12,000 rows. Someone might choose 8,500 (thinking of the smaller table) or 15,000 (the original sales table size), but INNER JOIN is constrained by matching records, not table size.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "RetailCorp merged quarterly sales data (Q1: 45,000 rows, Q2: 52,000 rows, Q3: 48,500 rows, Q4: 61,200 rows) into a single annual dataset by appending them vertically. Assuming no overlaps, what is the total row count?",
+    "options": [
+      "206,700 rows",
+      "52,000 rows",
+      "61,200 rows",
+      "45,000 rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "Appending quarterly data vertically sums all rows: 45,000 + 52,000 + 48,500 + 61,200 = 206,700 rows. A common mistake is selecting only one quarter's count or the largest quarter's count, but vertical concatenation adds all rows together.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at WealthBank wants to join a customer account table (150,000 accounts) with a transaction history table (2,800,000 transactions) using account_id as the join key. Each account has an average of 18.67 transactions. Using an INNER JOIN, approximately how many rows should the analyst expect?",
+    "options": [
+      "Approximately 2,800,000 rows",
+      "Approximately 150,000 rows",
+      "Approximately 2,950,000 rows",
+      "Approximately 8,000,000 rows"
+    ],
+    "correctIndex": 0,
+    "explanation": "An INNER JOIN returns one row for each matching pair. Since the transaction table has 2,800,000 rows and each transaction has a matching account_id (assuming all transactions are valid), the result has approximately 2,800,000 rows. Someone might think of the smaller table (150,000) or add the two together, but INNER JOIN cardinality is determined by the number of matching records, not the smaller or larger table.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "CloudServices Inc. has two customer databases: Database A (from the legacy system) with 32,000 customers and Database B (from the new system) with 28,500 customers. A full outer join reveals that 25,000 customers appear in both databases. How many unique customers exist across both systems?",
+    "options": [
+      "35,500 customers",
+      "32,000 customers",
+      "60,500 customers",
+      "25,000 customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unique customers = Database A only + Database B only + Both = (32,000 - 25,000) + (28,500 - 25,000) + 25,000 = 7,000 + 3,500 + 25,000 = 35,500. A common error is adding both table sizes (60,500) without accounting for overlap, or assuming only matching customers are relevant (25,000).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce analyst at ShopHub merged order data (using order_id as the key) with customer data. After the merge, they notice the average order value increased from $287 to $312, even though no new orders were added. What most likely occurred?",
+    "options": [
+      "The merge excluded orders without matching customer records, biasing the average upward",
+      "The customer data contained inflated price values",
+      "A FULL OUTER JOIN was used instead of an INNER JOIN",
+      "The dates of the orders were recalculated during the merge"
+    ],
+    "correctIndex": 0,
+    "explanation": "An INNER JOIN (the default for most merges) excludes unmatched records. If low-value orders had no matching customer records, they are dropped, raising the average of remaining orders. This is selection bias caused by the merge operation itself. The other options would either add data to the calculation or wouldn't affect the specific records selected in a meaningful way.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataPro Analytics performed a LEFT JOIN merging product_id from an inventory table (45,000 products) with a sales table (890,000 sales transactions). The result had 890,000 rows. What does this tell us?",
+    "options": [
+      "Every sale transaction had a matching product in the inventory table",
+      "Some products were never sold",
+      "The join key was not unique in the sales table",
+      "Some inventory items have no matching sales"
+    ],
+    "correctIndex": 0,
+    "explanation": "A LEFT JOIN preserves all rows from the left table (inventory). Since the result has 890,000 rows (matching the sales table size), every sales transaction found a match in inventory. This means data quality is good. Options B, C, and D might be true but aren't proven by having 890,000 result rows; someone might confuse what the row count reveals.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "When joining financial data from two sources, why is it critical to verify that the join key columns have the same data type before executing the merge?",
+    "options": [
+      "Mismatched data types may cause silent join failures where some rows don't match even though the values logically should",
+      "Mismatched data types will always produce an error message",
+      "Data type conversion automatically happens during any join operation",
+      "Data type mismatches only affect performance, not accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mismatched data types (e.g., one column is string '12345' and the other is integer 12345) may not match even though they represent the same value, silently reducing the join results without an error. This is a common hidden problem in data merges. Options B and C are incorrect because conversion is not automatic; option D underestimates the problem's severity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare network merged patient records (1.2 million rows) from three hospitals using patient_id. Hospital A contributed 420,000 records, Hospital B contributed 510,000 records, and Hospital C contributed 270,000 records. After appending vertically, the merged dataset has 1,185,000 rows instead of 1.2 million. What is the most likely explanation?",
+    "options": [
+      "1,200,000 total expected; 420,000 + 510,000 + 270,000 = 1,200,000, but 15,000 duplicate patient_ids existed across hospitals",
+      "Hospital C's data was corrupted during transfer",
+      "A filter was accidentally applied during the merge",
+      "An INNER JOIN was used instead of UNION"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expected rows: 420,000 + 510,000 + 270,000 = 1,200,000. Actual: 1,185,000. Difference: 15,000 rows. If duplicate patient_ids existed across hospitals and the merge removed them (deduplication), the result matches. A simple vertical append wouldn't remove duplicates automatically, but a data cleansing step might have. The other options don't explain the specific 15,000-row difference mathematically.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why might a RIGHT JOIN produce unexpected results when merging a master product catalog (right table) with recent sales transactions (left table) on product_id?",
+    "options": [
+      "Products in the catalog without any sales will appear in the result with NULL values in sales columns, potentially inflating product counts",
+      "A RIGHT JOIN is identical to an INNER JOIN and produces no unexpected behavior",
+      "The right table is always smaller, so fewer rows will result",
+      "RIGHT JOINs automatically remove NULL values"
+    ],
+    "correctIndex": 0,
+    "explanation": "A RIGHT JOIN preserves all rows from the right table (the catalog). This means products that were never sold appear in the result with NULL sales values. An analyst expecting only sold products would get inflated counts. A RIGHT JOIN is not identical to INNER JOIN; table size doesn't determine output; and RIGHT JOINs don't automatically remove NULLs—they preserve the right table regardless of matches.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

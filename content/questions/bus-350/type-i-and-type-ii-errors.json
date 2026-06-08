@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A pharmaceutical company tests a new COVID-19 vaccine. A Type I error would occur if the company concludes that the vaccine is effective when it actually is not. What is the formal name for this type of error?",
+    "options": [
+      "False positive",
+      "False negative",
+      "Power error",
+      "Beta error"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Type I error is a false positive—rejecting a true null hypothesis (claiming effectiveness when there is none). A false negative is a Type II error. Beta error refers to the probability of Type II error, not the error itself. Power error is not a standard statistical term.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In hypothesis testing, which Greek letter represents the probability of committing a Type II error?",
+    "options": [
+      "Alpha (α)",
+      "Beta (β)",
+      "Gamma (γ)",
+      "Delta (δ)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Beta (β) is the probability of Type II error (failing to reject a false null hypothesis). Alpha (α) is the significance level and represents the probability of Type I error. Gamma and delta are not standard symbols in hypothesis testing.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Acme Manufacturing conducts a quality control test where H₀: the production line is operating correctly. If they reject H₀ when it is actually true, what error has occurred?",
+    "options": [
+      "Type I error",
+      "Type II error",
+      "Standard error",
+      "Sampling error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rejecting a true null hypothesis is the definition of a Type I error. A Type II error occurs when we fail to reject a false null hypothesis. Standard error and sampling error are different statistical concepts.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the correct definition of a Type II error in the context of hypothesis testing?",
+    "options": [
+      "Rejecting the null hypothesis when it is true",
+      "Failing to reject the null hypothesis when it is false",
+      "Accepting the alternative hypothesis when the null is true",
+      "Correctly rejecting the null hypothesis when it is false"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Type II error occurs when we fail to reject a false null hypothesis (missing a real effect). Rejecting a true null hypothesis is a Type I error. Options C and D describe either a Type I error or a correct decision, not a Type II error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank tests H₀: customer default rate = 3%. The significance level is set to 5%. What is the maximum probability of committing a Type I error?",
+    "options": [
+      "0.03",
+      "0.05",
+      "0.95",
+      "0.97"
+    ],
+    "correctIndex": 1,
+    "explanation": "The significance level (α) directly equals the probability of Type I error, which is 5% or 0.05. The null hypothesis probability (3%) is not related to error probability. Options C and D represent confidence or power levels, not Type I error probability.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla conducts a hypothesis test on whether their new battery lasts longer than 500,000 miles (H₀: μ ≤ 500,000). The test statistic is t = 2.15 and the critical value is 1.96 at α = 0.05. If they reject H₀ but the battery actually does not last longer, what type of error occurred and what is α?",
+    "options": [
+      "Type I error; α = 0.05",
+      "Type II error; α = 0.05",
+      "Type I error; α = 0.15",
+      "Type II error; α = 2.15"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rejecting H₀ when it is true is a Type I error. The significance level α = 0.05 is given in the problem and equals the maximum probability of Type I error. Option B describes Type II error. Options C and D incorrectly assign α to wrong values.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail chain tests H₀: average transaction value = $45 versus H₁: average transaction value ≠ $45. If the true average is $46.50 but the test fails to reject H₀ at α = 0.10, which error occurred? What is the relationship between α and this error?",
+    "options": [
+      "Type I error; α controls the probability of this error",
+      "Type II error; α controls the probability of this error",
+      "Type II error; β controls the probability of this error",
+      "Type I error; β controls the probability of this error"
+    ],
+    "correctIndex": 2,
+    "explanation": "Failing to reject a false H₀ is a Type II error; β (not α) controls the maximum probability of Type II error. Alpha controls only Type I error probability. Options A and D confuse which error is occurring and which parameter controls it.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A food manufacturer tests whether their product packaging reduces spoilage below 8% (H₀: spoilage rate ≥ 8%). At α = 0.05, the test fails to reject H₀. Management should be concerned about which error if the true spoilage rate is actually 5%?",
+    "options": [
+      "Type I error—they incorrectly concluded the packaging works",
+      "Type II error—they incorrectly concluded the packaging does not work",
+      "Type I error—they incorrectly concluded the packaging does not work",
+      "Type II error—they incorrectly concluded the packaging works"
+    ],
+    "correctIndex": 1,
+    "explanation": "Failing to reject H₀ when the true spoilage is 5% (meaning packaging actually does work) is a Type II error—missing a real effect. Type I error would be rejecting H₀ when it is true. Option A reverses the logic of what conclusion was drawn.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An insurance company sets α = 0.01 for a fraud detection test (H₀: claim is legitimate). What does this significance level tell you about Type I and Type II errors?",
+    "options": [
+      "The probability of Type I error is 1%; nothing is directly specified about Type II error probability",
+      "The probability of Type II error is 1%; nothing is directly specified about Type I error probability",
+      "Both Type I and Type II error probabilities are fixed at 1%",
+      "The power of the test is 99%, which controls both types of error equally"
+    ],
+    "correctIndex": 0,
+    "explanation": "Setting α = 0.01 controls only the Type I error probability at 1%; Type II error (β) is not directly constrained by α. Options B and C confuse which error α controls. Option D misdefines power and assumes both errors are equally controlled, which is incorrect.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs performs a two-tailed test on mean daily trading volume: H₀: μ = 2,500,000 shares at α = 0.05. The calculated test statistic is z = 1.75. The critical values are ±1.96. Which statement is correct?",
+    "options": [
+      "H₀ is rejected, and if μ actually equals 2,500,000, a Type I error occurred",
+      "H₀ is not rejected, and if μ actually equals 2,500,001, a Type II error occurred",
+      "H₀ is rejected, and if μ actually equals 2,500,001, a Type II error occurred",
+      "H₀ is not rejected, and if μ actually equals 2,500,000, a Type I error occurred"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since |1.75| < 1.96, H₀ is not rejected. If the true mean is 2,500,001 (H₀ is false) but we failed to reject it, that is a Type II error. Option A incorrectly states H₀ is rejected. Option C has the wrong error type. Option D incorrectly assigns Type I error to a correct decision.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital implements a diagnostic test for a disease. The null hypothesis is H₀: patient does not have disease. Medical ethics often demand a very low Type I error rate. Why?",
+    "options": [
+      "Because a Type I error means treating a healthy patient, causing unnecessary harm",
+      "Because a Type I error means missing a diseased patient, leading to lack of treatment",
+      "Because Type I errors are more common than Type II errors in medical settings",
+      "Because lowering α automatically lowers both Type I and Type II errors equally"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Type I error (rejecting H₀ when true) means diagnosing disease when the patient is healthy—leading to unnecessary, potentially harmful treatment. A Type II error means missing disease. Option B describes Type II error. Option C is false; error frequency varies. Option D misrepresents the inverse relationship between error types.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A quality control engineer at Boeing tests whether a structural component meets specification (H₀: component meets spec). She increases α from 0.05 to 0.10. What is the combined effect on Type I and Type II error probabilities?",
+    "options": [
+      "Type I error probability increases; Type II error probability decreases",
+      "Type I error probability decreases; Type II error probability increases",
+      "Both Type I and Type II error probabilities increase",
+      "Both Type I and Type II error probabilities decrease"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increasing α directly increases Type I error probability. By the inverse relationship between error types, increasing the rejection region (higher α) decreases the non-rejection region, reducing Type II error probability (β decreases). Option B reverses the effects. Options C and D misunderstand the inverse relationship.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A marketing firm tests whether a new campaign increases average customer spending above $125 (H₀: μ ≤ $125). After data collection, they report: 'We failed to reject H₀ at α = 0.05.' A manager claims this proves the campaign does not work. Which error in reasoning occurred?",
+    "options": [
+      "The manager confuses failing to reject H₀ with accepting H₀; Type II error is still possible",
+      "The manager correctly interprets the result; H₀ cannot be true if the campaign works",
+      "The manager commits a Type I error by doubting the statistical test",
+      "The manager's statement is correct because α = 0.05 guarantees no Type II error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Failing to reject H₀ does not mean H₀ is true or that the campaign definitely does not work—a Type II error (missing a real effect) is possible. The manager incorrectly interprets a non-rejection as proof of no effect. Option B misunderstands hypothesis testing logic. Options C and D assign error types or guarantees incorrectly.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase conducts a test: H₀: fraud rate = 2% versus H₁: fraud rate > 2%. The test has α = 0.05 and β = 0.12. If the bank wants to reduce the false-positive rate without changing sample size, what trade-off must they accept?",
+    "options": [
+      "Lower α to 0.03, which will increase β to approximately 0.20",
+      "Lower α to 0.03, which will decrease β to approximately 0.05",
+      "Increase α to 0.08, which will decrease β to approximately 0.05",
+      "Keep α and β constant because they are independent at fixed n"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lowering α (Type I error) to reduce false positives necessarily increases β (Type II error) at fixed sample size—they are inversely related. Option B incorrectly suggests α and β can both decrease. Option C raises α, which increases Type I error. Option D incorrectly claims independence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A software company tests whether mean bug-detection time is less than 48 hours (H₀: μ ≥ 48). A data analyst sets α = 0.01 and β = 0.15, then increases sample size from n = 100 to n = 400. What is the most likely outcome for both error probabilities?",
+    "options": [
+      "Both α and β decrease",
+      "α remains approximately 0.01; β decreases substantially below 0.15",
+      "α increases to 0.04; β decreases to 0.08",
+      "Both α and β increase because larger samples produce more variability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increasing sample size improves test precision: α remains fixed by the researcher's choice (0.01), while β decreases (improving power). Larger samples do not increase error rates or variability per unit. Option A incorrectly suggests α decreases. Option C invents changes to α. Option D reverses the effect of sample size.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

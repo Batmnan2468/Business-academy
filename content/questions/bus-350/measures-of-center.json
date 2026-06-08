@@ -1,0 +1,184 @@
+[
+  {
+    "question": "At Apple Inc., the quarterly revenue figures for the last four quarters were $89.5 billion, $83.0 billion, $97.3 billion, and $94.7 billion. What is the mean quarterly revenue?",
+    "options": [
+      "$91.375 billion",
+      "$89.9 billion",
+      "$90.25 billion",
+      "$88.6 billion"
+    ],
+    "correctIndex": 0,
+    "explanation": "The mean is calculated by summing all values (89.5 + 83.0 + 97.3 + 94.7 = 364.5) and dividing by the number of values (364.5 ÷ 4 = 91.375). Option B incorrectly excludes the highest value; Option C uses only three quarters; Option D uses an arbitrary average.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which measure of center is defined as the middle value when data is arranged in order from smallest to largest?",
+    "options": [
+      "Mean",
+      "Median",
+      "Mode",
+      "Range"
+    ],
+    "correctIndex": 1,
+    "explanation": "The median is by definition the middle value in an ordered dataset. The mean is the arithmetic average (Option A), the mode is the most frequent value (Option C), and range is not a measure of center but of spread (Option D).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The daily sales at a Target store for one week were: $12,400, $15,600, $14,200, $18,900, $16,100, $13,800, and $19,200. What is the median daily sales?",
+    "options": [
+      "$15,600",
+      "$16,100",
+      "$15,200",
+      "$14,900"
+    ],
+    "correctIndex": 0,
+    "explanation": "Arranging in order: $12,400, $13,800, $14,200, $15,600, $16,100, $18,900, $19,200. The median is the 4th value (middle of 7). Option B is incorrect because $16,100 is the 5th value; Option C calculates an incorrect average; Option D attempts a different middle calculation.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At a Toyota dealership, the number of vehicles sold on each of the last 8 days was: 3, 5, 4, 8, 5, 6, 5, and 7. What is the mode number of vehicles sold?",
+    "options": [
+      "5 vehicles",
+      "5.875 vehicles",
+      "6 vehicles",
+      "7 vehicles"
+    ],
+    "correctIndex": 0,
+    "explanation": "The mode is the value that appears most frequently. The value 5 appears three times, more than any other value. Option B is the mean (not the mode); Option C appears twice (not the most frequent); Option D appears only once.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a key advantage of using the median instead of the mean when analyzing employee salaries at a company with extreme outliers?",
+    "options": [
+      "The median is always larger than the mean",
+      "The median is not affected by extremely high or low values",
+      "The median is easier to calculate by hand",
+      "The median represents the average earning better"
+    ],
+    "correctIndex": 1,
+    "explanation": "The median is resistant to outliers because it depends only on position, not value. Extreme salaries don't pull it left or right. Option A is false; Option C is true but not the primary advantage over mean; Option D is misleading because mean also aims to represent averages but is distorted by outliers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's cloud division reported monthly cloud service subscriptions (in thousands) of 240, 255, 268, 275, and 290 over five months. Which measure of center would best represent a typical month and would be easiest to interpret for forecasting purposes?",
+    "options": [
+      "Median, because it's unaffected by the growth trend",
+      "Mean, because it accounts for all values including the high growth",
+      "Mode, because it shows the most frequent subscription level",
+      "Mean, because the data has no extreme outliers"
+    ],
+    "correctIndex": 1,
+    "explanation": "When data lacks extreme outliers and shows a legitimate growth trend (as here), the mean ($265.6k) captures all information and is appropriate for forecasting. Option A uses median to ignore legitimate trend information; Option C is incorrect because there is no repeated mode; Option D is correct in reasoning but incomplete—the lack of outliers is secondary to capturing the growth trend.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JP Morgan Chase is reviewing monthly account closures: 42, 38, 45, 41, 39, 44, 40, 43. The intern calculated the mean as 41.5. Which step did the intern make an error on?",
+    "options": [
+      "Counting only 7 values instead of 8",
+      "Summing the values as 331 instead of 332",
+      "Dividing 332 by 8 correctly to get 41.5",
+      "Using the correct formula for the mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct sum is 332, and 332 ÷ 8 = 41.5, so the mean is correct. However, if the intern had counted only 7 values, they would have calculated 332 ÷ 7 = 47.4 or similar. Option B is mathematically incorrect (the sum IS 332); Options C and D are true statements about correct work.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's customer retention dataset shows engagement hours per subscriber: 12.5, 15.3, 14.8, 13.2, 16.1, 14.9, 15.4, and 13.7. Calculate the mean and determine if the median would differ significantly.",
+    "options": [
+      "Mean is 14.61 hours; median is 14.85 hours, a difference of 0.24 hours",
+      "Mean is 14.61 hours; median is 14.60 hours, essentially the same",
+      "Mean is 15.12 hours; median is 14.85 hours, a significant difference",
+      "Mean is 14.61 hours; median is 13.7 hours, a major difference"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sum = 116.9 ÷ 8 = 14.6125 ≈ 14.61. For median of 8 values: ordered data is 12.5, 13.2, 13.7, 14.8, 14.9, 15.3, 15.4, 16.1. Median = (14.8 + 14.9) ÷ 2 = 14.85. The difference of 0.24 shows slight skew. Option B is incorrect because they're not essentially the same; Option C miscalculates the mean; Option D uses an endpoint incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A distribution of quarterly bonuses at Goldman Sachs shows: $5,000 (12 employees), $8,000 (18 employees), $12,000 (15 employees), $25,000 (3 employees), and $50,000 (2 employees). Which measure of center should the HR department avoid when communicating 'typical' bonus to new hires?",
+    "options": [
+      "Median, because bonuses don't repeat equally",
+      "Mode, because it reflects the most common bonus amount",
+      "Mean, because the high executive bonuses distort the typical experience",
+      "Range, because it's not a measure of center"
+    ],
+    "correctIndex": 2,
+    "explanation": "The mean would be heavily skewed upward by the $25,000 and $50,000 bonuses, misrepresenting what a typical new hire should expect. The median ($8,000) or mode ($8,000 with 18 employees) better represent typical experience. Option A is incorrect because median is appropriate here; Option B correctly identifies the mode as useful; Option D correctly notes range isn't a measure of center but isn't the best answer.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Costco's warehouse customer count data reveals that the mean monthly visits is 4.2 million but the median is 3.8 million. What does this tell us about the distribution of visits?",
+    "options": [
+      "The data is skewed to the right with some months having unusually high visits",
+      "The data is perfectly symmetric and normally distributed",
+      "The data is skewed to the left with some months having unusually low visits",
+      "There is no relationship between mean and median values"
+    ],
+    "correctIndex": 0,
+    "explanation": "When mean (4.2M) > median (3.8M), the distribution is right-skewed, indicating some unusually high values pulling the mean upward. Option B is false because symmetric distributions have mean ≈ median; Option C would show mean < median; Option D is false because the relationship between mean and median reveals distributional shape.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An Amazon warehouse manager reports that the mode for daily package processing is 8,500 packages, but last month the median was 9,200 packages and mean was 9,150 packages. Which statement correctly interprets this situation?",
+    "options": [
+      "The mode value (8,500) occurs most frequently but the typical day processed more than 8,500 packages",
+      "The mean is always more reliable than the mode, so the mode figure should be ignored",
+      "The median and mean being nearly equal indicates no outliers despite the mode being lower",
+      "All three measures disagreeing proves there is an error in the data collection"
+    ],
+    "correctIndex": 0,
+    "explanation": "The mode (most frequent value) can differ significantly from the median and mean, which represent the center of the overall distribution. Here, 8,500 packages happened most often, but the overall typical (median/mean) processing was higher. Option B is false—each measure serves different purposes; Option C incorrectly assumes identical mean/median eliminates outliers; Option D is false—measures disagreeing is normal and informative, not evidence of error.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Starbucks analyzes daily transactions at a flagship store. For 10 days: 1,245; 1,389; 1,567; 1,450; 1,334; 1,412; 1,523; 1,298; 1,441; and 1,376 transactions. If a manager mistakenly calculates the mean as $14,110 instead of 1,403.5 transactions, what conceptual error did they likely commit?",
+    "options": [
+      "They added only 9 values instead of 10",
+      "They calculated 14,035 ÷ 10 = 1,403.5 but misplaced the decimal point as 14,110",
+      "They summed correctly but divided by 9 instead of 10",
+      "They converted transactions to dollars, creating a unit mismatch error"
+    ],
+    "correctIndex": 1,
+    "explanation": "The actual sum is 14,035, and 14,035 ÷ 10 = 1,403.5. The figure 14,110 suggests they added or divided incorrectly but then shifted the decimal (14,110 could come from misplacing decimals in calculation). Option A would give a different wrong answer; Option C would give 1,559.4; Option D describes a unit error but doesn't explain the specific number 14,110.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Bank of America's loan approval times (in days) show a mean of 8.2 days, median of 7.5 days, and no mode. Three data points are identified as potential outliers: 45, 48, and 52 days. If these outliers are removed, which measure would change the most?",
+    "options": [
+      "Median, because it's sensitive to extreme values",
+      "Mean, because it incorporates all values including outliers",
+      "Mode, because it would then exist in the remaining data",
+      "All three would remain unchanged in direction"
+    ],
+    "correctIndex": 1,
+    "explanation": "The mean incorporates every value, so removing three high outliers (45, 48, 52 days) will substantially lower it. The median, based on position, might shift slightly but far less dramatically. Option A is incorrect—median is resistant to outliers; Option C addresses mode creation, not which measure changes most; Option D is false because mean will definitely decrease.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Walmart store manager examining checkout wait times (seconds) across 15 transactions finds: mean = 67 seconds, median = 58 seconds, and mode = 52 seconds (appearing 3 times). Which correctly ranks these by value and explains why?",
+    "options": [
+      "Mode < Median < Mean; the distribution is right-skewed with some long wait times pulling the mean higher",
+      "Median < Mode < Mean; the longest waits skew the data left",
+      "Mean < Median < Mode; the data is normally distributed with no outliers",
+      "Mode = Median = Mean; the distribution is perfectly symmetric"
+    ],
+    "correctIndex": 0,
+    "explanation": "The values rank as 52 < 58 < 67, and because mean > median > mode, this indicates right skew (positive skew) where some unusually long wait times pull the mean upward. Option B incorrectly orders and describes left skew (which would show mean < median); Option C is false because the ranked order contradicts normal distribution; Option D would require all three equal.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At TechCorp Inc., the analytics team is designing a dashboard for executives. What is the primary purpose of establishing a clear visual hierarchy in dashboard design?",
+    "options": [
+      "To ensure the most important metrics are perceived and understood first",
+      "To make all data points equally visible on the screen",
+      "To minimize the number of colors used in the dashboard",
+      "To reduce the file size of the dashboard application"
+    ],
+    "correctIndex": 0,
+    "explanation": "Visual hierarchy guides the viewer's attention to critical information first—in TechCorp's case, key performance indicators like revenue or customer churn should dominate the visual space. Option B is tempting but wrong because equal visibility defeats the purpose of a dashboard; not all metrics are equally important. A dashboard must prioritize what matters most.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a Nordstrom retail analytics dashboard, which of the following is the BEST example of a visual hierarchy principle?",
+    "options": [
+      "Placing same-sized text labels for all 45 product categories",
+      "Using a large, bold font and prominent position for daily sales ($2.3M) while positioning inventory status in smaller text below",
+      "Displaying all metrics in a uniform grid layout with identical spacing",
+      "Arranging all charts alphabetically by department name"
+    ],
+    "correctIndex": 1,
+    "explanation": "Visual hierarchy uses size, color, and position to emphasize importance. Daily sales ($2.3M) is critical for decision-making at Nordstrom, so it deserves dominant visual treatment. Option A fails because equal emphasis on 45 categories creates cognitive overload. Option C treats all data equally, violating hierarchy principles entirely.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which design principle best explains why a dashboard showing Amazon's AWS customer churn rate (8.2%) should use a larger font size than the total number of support tickets (1,247)?",
+    "options": [
+      "The churn rate number contains a decimal, requiring larger text",
+      "Churn rate is a strategic business metric that drives decision-making, while ticket volume is operational detail",
+      "Larger numbers always deserve smaller fonts to conserve space",
+      "Font size should be random to avoid viewer predictability"
+    ],
+    "correctIndex": 1,
+    "explanation": "In business analytics, strategic metrics (churn at 8.2%) that influence executive decisions should visually dominate operational metrics (ticket count). This reflects the importance-based visual hierarchy. Option A is a common misconception—decimal points don't determine visual prominence. Option C reverses the principle entirely.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Microsoft Excel dashboard displays quarterly revenue ($147M), monthly expenses ($31M), and departmental cost breakdowns. According to dashboard design best practices, what should be the visual hierarchy order?",
+    "options": [
+      "Departmental costs first, then quarterly revenue, then monthly expenses",
+      "All three metrics in identical size and position",
+      "Quarterly revenue largest, then monthly expenses, then departmental costs",
+      "Monthly expenses largest because they affect profitability more directly"
+    ],
+    "correctIndex": 2,
+    "explanation": "Revenue ($147M) is the top-line business driver and should dominate visually, followed by expenses ($31M) for profitability context, then detailed departmental breakdowns for supporting analysis. This follows a funnel of importance for financial dashboards. Option D is tempting but wrong—profitability importance doesn't override revenue's primacy in hierarchical order.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Walmart, an inventory dashboard displays: (1) out-of-stock percentage (3.2%), (2) stock level by 850 SKUs, and (3) regional warehouse capacity utilization (76.4%). If visual hierarchy should reflect decision-making priority, which element should receive the LEAST visual emphasis?",
+    "options": [
+      "Out-of-stock percentage (3.2%)",
+      "Regional warehouse capacity (76.4%)",
+      "Stock level by individual SKUs",
+      "All three should have equal emphasis"
+    ],
+    "correctIndex": 2,
+    "explanation": "Individual SKU details (850 data points) are granular, operational information best accessed through drill-down, not dashboard prominence. Out-of-stock % (3.2%) and capacity (76.4%) are summary metrics driving decisions. Option D ignores hierarchy principles entirely. Option A is tempting because it's a small percentage, but small percentages can signal critical business issues.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Starbucks sales dashboard showing daily revenue across 15,000 locations uses color saturation to highlight underperforming stores (red = below $8,500, yellow = $8,500–$12,000, green = above $12,000). What visual hierarchy principle is being applied?",
+    "options": [
+      "Color is being used to create emphasis and guide attention to problem areas",
+      "Saturation has no effect on visual hierarchy; only size matters",
+      "All stores should be the same color to maintain equality",
+      "Color should only be used for decorative purposes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Color saturation and hue are powerful visual hierarchy tools. Red draws immediate attention to underperforming stores, helping managers prioritize corrective action. This is strategic use of visual weight. Option B is factually wrong—color is a primary hierarchy driver. Option C contradicts the purpose of a management dashboard.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a Netflix subscriber metrics dashboard, designers place quarterly churn rate (4.1%) in a large, central position with red highlighting, while total subscriber count (247M) appears in smaller text in a corner. Is this an effective use of visual hierarchy? Why or why not?",
+    "options": [
+      "Yes, because churn rate is easier to remember",
+      "No; total subscriber count (247M) is the primary business metric and should dominate; churn (4.1%) is important but secondary",
+      "Yes, because red color automatically makes anything important",
+      "No, because 247M is a larger number and larger numbers always deserve more visual space"
+    ],
+    "correctIndex": 1,
+    "explanation": "While churn is important, subscriber count is Netflix's primary success metric. However, churn rate (4.1%) showing concerning trend might warrant prominent placement in certain contexts. The question tests whether students confuse size (247M) with strategic importance. Option B acknowledges the nuance: churn deserves visibility but shouldn't eclipse the headline metric. Option D is a common misconception—numerical magnitude ≠ business importance.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Goldman Sachs trading dashboard displays: (1) S&P 500 index position value ($4.2B), (2) implied volatility of 340 specific derivatives (ranging 18%–62%), and (3) daily P&L ($127M gain). A designer proposes devoting 60% of screen space to derivative volatility metrics and 20% each to position value and P&L. What is the primary flaw in this design?",
+    "options": [
+      "S&P 500 value ($4.2B) should occupy 60% because it's the largest number",
+      "Volatility data (340 data points) should be summarized or tucked into drill-down; headline metrics (position, P&L) should dominate",
+      "All three categories should have equal 33% allocation",
+      "Derivative volatility is more important because it has more varied percentages"
+    ],
+    "correctIndex": 1,
+    "explanation": "Visual hierarchy should reflect decision-making frequency and impact. P&L ($127M) and position value ($4.2B) are headline metrics traders watch constantly. Derivative volatility, while critical for risk, is typically a supporting detail accessed via drill-down. Cramming 340 volatility figures into 60% of space creates clutter. Option A confuses magnitude with importance. Option D is a misconception—data variability doesn't determine hierarchy priority.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A dashboard for Procter & Gamble's supply chain displays delivery time performance (94.2% on-time) and supplier quality scores. If the design uses the same visual weight for both metrics, what assumption is being violated?",
+    "options": [
+      "The assumption that all metrics must appear in color",
+      "The principle that different business impacts merit different visual prominence",
+      "The requirement that dashboards contain exactly three metrics",
+      "The rule that percentages cannot share space with numerical scores"
+    ],
+    "correctIndex": 1,
+    "explanation": "Equal visual weight ignores that on-time delivery (94.2%) impacts customer satisfaction and revenue directly, while supplier scores are important but more operational. Assigning them equal prominence wastes attention budget. Option A is unrelated to hierarchy. Option C is arbitrary. Option D contradicts dashboard design practice.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At JPMorgan Chase, a risk dashboard shows: credit portfolio exposure ($847B), daily VaR (Value at Risk: $18.3M), and regulatory capital ratio (12.4%). Using the F-pattern eye-tracking principle, where should the $18.3M VaR metric be positioned for optimal visual hierarchy?",
+    "options": [
+      "Bottom right corner (least-viewed area)",
+      "Top left, then moving right, then down the left side—VaR should appear in the top-left or along the top-right path",
+      "Center of screen (neutral position)",
+      "Scattered randomly across the dashboard"
+    ],
+    "correctIndex": 1,
+    "explanation": "The F-pattern (or Z-pattern) describes how viewers naturally scan: top-left to top-right, then down the left side, finally right. Critical risk metrics like VaR ($18.3M) should be positioned along these natural eye paths. Option A places VaR in the least-viewed zone, defeating dashboard purpose. Option C wastes prime real estate. Option D ignores visual hierarchy entirely.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Coca-Cola sales analytics dashboard has white background, black text for secondary metrics (inventory: 2.1M units), and red bold text for primary metrics (daily sales: $34.7M). What principle is being correctly applied here?",
+    "options": [
+      "Color contrast to establish visual hierarchy and guide attention",
+      "Equal text styling ensures fairness to all metrics",
+      "Red text is appropriate only for error messages, not KPIs",
+      "Black text is always clearer than colored text"
+    ],
+    "correctIndex": 0,
+    "explanation": "Contrast (red/bold vs. black/standard on white background) creates visual hierarchy. Primary metrics like sales ($34.7M) demand attention, so red and bold text draws eyes immediately. Secondary metrics (inventory) use subdued styling. Option B ignores hierarchy principles. Option C is a misconception—red is powerful for emphasis when used strategically. Option D contradicts visual psychology.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Target quarterly performance dashboard displays 47 different KPIs in a 3-column grid layout, all in 11-point font, all in black text on white background. What is the primary design flaw regarding visual hierarchy?",
+    "options": [
+      "Using a grid layout is inherently wrong for dashboards",
+      "All 47 metrics cannot be equally important; uniform styling creates cognitive overload and fails to guide attention to critical metrics",
+      "Font size should never be consistent across a dashboard",
+      "Black text cannot be used for KPI display"
+    ],
+    "correctIndex": 1,
+    "explanation": "With 47 KPIs in uniform styling, nothing is visually prominent—no hierarchy exists. Viewers face analysis paralysis. Effective dashboards show top 5–7 metrics prominently and allow drill-down for details. Option A is wrong; grids are acceptable when paired with hierarchy. Option C overstates—some consistency is good, but variation is essential. Option D contradicts standard practice.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company's claims dashboard shows average claims processing time (12.3 days) in large font and claim volume (8,947 pending) in small font. An analyst argues this hierarchy is backwards because 8,947 is a 'bigger number' than 12.3. What is the flaw in this reasoning?",
+    "options": [
+      "The analyst is correct; larger numbers always deserve larger fonts",
+      "Numerical magnitude is irrelevant; business impact matters. 12.3-day processing time drives customer satisfaction and efficiency metrics, while 8,947 is a volume descriptor",
+      "Both metrics should be identical size",
+      "Font size is determined by decimal places, not significance"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a critical misconception students often make. Processing time (12.3 days) is a performance metric affecting SLAs and customer experience; it drives decisions. Volume (8,947) describes scale but is less actionable as a headline metric. Confusing numerical magnitude with business importance is a common dashboard design error. Option A formalizes the misconception. Options C and D are irrelevant to the underlying principle.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital's emergency department dashboard displays patient wait time (45 minutes), available beds (12 of 28), and daily admissions (287). Using contrast and size principles, which metric should be visually minimized if all three are important?",
+    "options": [
+      "Patient wait time (45 minutes) should be minimized—it's a single number",
+      "Available beds (12 of 28) should be minimized—it's already expressed as a ratio",
+      "Daily admissions (287) should be minimized because it's the largest number and thus self-evident",
+      "None should be minimized; all are equally critical to ED operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "While all three are important, available beds (12 of 28) conveys status through proportion and can be visualized as a progress bar or gauge, requiring less text prominence. Wait time (45 minutes) directly affects patient care decisions and should be prominent. Admissions (287) is a metric doctors monitor. Option C is backwards—size shouldn't be minimized for large numbers. Option D ignores that even critical metrics can have different visual treatments based on format.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When designing a dashboard for a retail company with revenue of $2.8B annually, you must prioritize five metrics from a list of fifteen. Assuming visual hierarchy principles, which set of five metrics should receive primary emphasis?",
+    "options": [
+      "Product category SKU counts, supplier names, warehouse locations, distribution channels, and payment methods processed",
+      "Daily revenue ($7.67M average), gross margin percentage (38%), inventory turnover ratio (5.2x), customer churn rate (2.1%), and same-store sales growth (3.4%)",
+      "Historical financial records from the past 10 years, competitor pricing data, employee shift schedules, and social media mentions",
+      "All fifteen metrics displayed simultaneously without prioritization"
+    ],
+    "correctIndex": 1,
+    "explanation": "Option B contains strategic KPIs directly tied to business performance and decision-making: revenue (financial health), margin (profitability), turnover (efficiency), churn (retention), and growth (trajectory). Option A includes operational metadata without actionable insight. Option C mixes historical and external data inappropriate for headline dashboards. Option D violates visual hierarchy. For a $2.8B retailer, primary metrics drive quarterly decisions and bonus structures.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

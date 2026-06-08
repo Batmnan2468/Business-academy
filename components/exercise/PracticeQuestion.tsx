@@ -24,13 +24,15 @@ function shuffleOptions(q: Question): Question {
 
 interface Props {
   topicTitle: string
+  topicSlug: string
+  courseSlug: string
   difficulty: string
   onAnswer?: (correct: boolean) => void
   nextLabel?: string
   onNext?: () => void
 }
 
-export default function PracticeQuestion({ topicTitle, difficulty, onAnswer, nextLabel, onNext }: Props) {
+export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, difficulty, onAnswer, nextLabel, onNext }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -45,7 +47,7 @@ export default function PracticeQuestion({ topicTitle, difficulty, onAnswer, nex
       const res = await fetch('/api/generate-question', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topicTitle, difficulty }),
+        body: JSON.stringify({ topic: topicTitle, topicSlug, courseSlug, difficulty }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -57,7 +59,7 @@ export default function PracticeQuestion({ topicTitle, difficulty, onAnswer, nex
     } finally {
       setLoading(false)
     }
-  }, [topicTitle, difficulty])
+  }, [topicTitle, topicSlug, courseSlug, difficulty])
 
   useEffect(() => {
     fetchQuestion()

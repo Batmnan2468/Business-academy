@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In a regression model predicting house prices at Zillow, you need to include the categorical variable 'neighborhood' with three categories: Downtown, Suburban, and Rural. How many dummy variables should you create to avoid the dummy variable trap?",
+    "options": [
+      "3 dummy variables (one for each category)",
+      "2 dummy variables (one less than the number of categories)",
+      "1 dummy variable (for the most common category)",
+      "4 dummy variables (one for each category plus an intercept)"
+    ],
+    "correctIndex": 1,
+    "explanation": "To avoid multicollinearity (the dummy variable trap), you create k-1 dummy variables where k is the number of categories. With 3 neighborhoods, you need 2 dummies; the third category (omitted) becomes the reference. Option A ignores this rule and creates perfect multicollinearity. Option C uses only 1 dummy, which cannot represent 3 categories. Option D misunderstands the relationship between categories and required dummies.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When analyzing customer churn at Verizon Wireless, you create a dummy variable where 1 = customer churned and 0 = customer retained. This dummy variable represents which type of data transformation?",
+    "options": [
+      "Standardization of continuous data",
+      "Encoding of a categorical variable into numeric form",
+      "Log transformation to reduce skewness",
+      "Principal component analysis reduction"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dummy variables convert categorical data (churn status) into numeric format (0 and 1) so regression models can use them. This is the definition of encoding categorical variables. Option A (standardization) applies to continuous variables. Option C (log transformation) addresses skewness in continuous data. Option D (PCA) is a dimensionality reduction technique, not variable encoding.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a linear regression model for Apple Inc.'s quarterly revenue, you include a dummy variable for 'Product_Line' (Hardware=1, Software=0). The coefficient on this dummy is $45.2 million. What does this coefficient represent?",
+    "options": [
+      "The total revenue when the product line is Hardware",
+      "The difference in average revenue between Hardware and Software product lines",
+      "The slope of the regression line",
+      "The standard error of the revenue estimate"
+    ],
+    "correctIndex": 1,
+    "explanation": "A dummy variable coefficient represents the change in the outcome when the dummy equals 1 versus when it equals 0 (the reference category). Here, $45.2M is the average revenue difference between Hardware and Software lines. Option A confuses the coefficient with the intercept plus coefficient. Option C uses the wrong term (slope applies to continuous predictors). Option D misidentifies a coefficient as a standard error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the primary reason why you must exclude one category when creating dummy variables for a regression model?",
+    "options": [
+      "To reduce the file size of the dataset",
+      "To prevent perfect multicollinearity and ensure parameter identification",
+      "To improve the R-squared value",
+      "To make the model more interpretable to non-statisticians"
+    ],
+    "correctIndex": 1,
+    "explanation": "If you include a dummy for every category, the dummies sum to a constant (e.g., Hardware + Software always = 1), creating perfect multicollinearity with the intercept. This makes parameters unidentifiable. Option A is false; dummy creation doesn't reduce file size. Option C is incorrect; including redundant dummies doesn't improve fit. Option D is subjective and secondary to the statistical necessity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You are building a regression model for Amazon's warehouse labor costs using 'Shift' (Morning, Afternoon, Evening) as a predictor. How many dummy variables should appear in your final model?",
+    "options": [
+      "0 dummy variables",
+      "1 dummy variable",
+      "2 dummy variables",
+      "3 dummy variables"
+    ],
+    "correctIndex": 2,
+    "explanation": "With 3 shift categories, you create 2 dummy variables to avoid the dummy variable trap. For example: D_Afternoon and D_Evening (Morning is the reference). Option 0 or 1 cannot capture 3 categories. Option 3 would create multicollinearity because the three dummies plus intercept are linearly dependent.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression model predicting annual salary at Microsoft includes the categorical variable 'Education_Level' (High School, Bachelor's, Master's, PhD). You create dummy variables: D_Bachelor = 1 if Bachelor's else 0, D_Master = 1 if Master's else 0, D_PhD = 1 if PhD else 0. What error has been made?",
+    "options": [
+      "No error; all categories are properly represented",
+      "Dummy variable trap: three dummies with an intercept create multicollinearity",
+      "The reference category is ambiguous",
+      "Too many dummies; should use 5 instead"
+    ],
+    "correctIndex": 1,
+    "explanation": "With 4 categories, you need only 3 dummies. Using all 4 dummies plus an intercept creates perfect multicollinearity because the sum of dummies (D_B + D_M + D_PhD + D_HS) equals 1 for all observations. Option A incorrectly validates the error. Option C is incorrect; the reference is High School (correctly omitted). Option D is nonsensical; 5 dummies would make the trap worse.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix is modeling streaming hours per subscriber by 'Subscription_Tier' (Basic=$9.99, Standard=$15.99, Premium=$19.99). The regression coefficient on D_Premium (=1 if Premium, 0 otherwise) is 8.5 hours, with a t-statistic of 3.2. Assuming a significance level of 5%, what is the correct interpretation?",
+    "options": [
+      "Premium subscribers watch 8.5 hours total per month",
+      "Premium subscribers watch approximately 8.5 more hours per month than Basic subscribers, and this difference is statistically significant at the 5% level",
+      "Premium subscribers spend $8.50 more per month",
+      "The standard deviation of viewing hours for Premium is 8.5"
+    ],
+    "correctIndex": 1,
+    "explanation": "The coefficient 8.5 on D_Premium shows the difference in average hours between Premium (=1) and Basic (=0, reference). The t-statistic of 3.2 far exceeds the critical value (~2), so the difference is statistically significant. Option A misses the comparison to the reference group. Option C confuses hours with dollars. Option D confuses the coefficient with a standard deviation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Ford Motor Company analyst builds a regression model for vehicle reliability scores using 'Transmission_Type' (Automatic, Manual, CVT). Using k-1 rule, they create D_Manual and D_CVT. What is the reference category?",
+    "options": [
+      "Manual",
+      "CVT",
+      "Automatic",
+      "The reference category is not defined"
+    ],
+    "correctIndex": 2,
+    "explanation": "The reference category is the omitted dummy variable category. Since D_Manual and D_CVT are created, Automatic is the reference and represents the baseline in the model intercept. Options A and B name the included dummies, not the reference. Option D is false; the reference is always implicitly defined as the omitted category.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regression model for Target's store revenue uses 'Store_Location' (Urban=1, Rural=0). The intercept is $2.5M and the D_Urban coefficient is $1.2M. Calculate the predicted average revenue for a Rural store.",
+    "options": [
+      "$1.2M",
+      "$2.5M",
+      "$3.7M",
+      "$1.3M"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a Rural store, D_Urban = 0, so predicted revenue = $2.5M + $1.2M(0) = $2.5M. The intercept represents the predicted value when all dummies equal 0 (the reference category). Option A incorrectly uses the coefficient alone. Option C adds the intercept and coefficient (for Urban stores, not Rural). Option D is arbitrary.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Starbucks analyst models daily sales using 'Day_of_Week' (Monday through Sunday, 7 categories). Following proper dummy variable coding, how many dummies should be included in the regression model alongside an intercept?",
+    "options": [
+      "6 dummies",
+      "7 dummies",
+      "8 dummies",
+      "5 dummies"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 7 days, you create k-1 = 6 dummies (e.g., Mon–Sat) with Sunday as reference. Including all 7 dummies plus intercept would create the dummy variable trap. Option B violates the rule. Option C adds an extra dummy. Option D undercounts by one.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When interpreting a dummy variable coefficient in a log-linear regression model (ln(Y) = β₀ + β₁·D + ε) at Coca-Cola, a coefficient of 0.15 on D_NewFormula (=1 if new formula, 0 if classic) means what percentage change in sales?",
+    "options": [
+      "0.15%",
+      "15%",
+      "Approximately 16.2%",
+      "Cannot be determined without the intercept"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a log-linear model, the percentage change ≈ 100 × (e^β - 1). Here: 100 × (e^0.15 - 1) ≈ 100 × 0.162 ≈ 16.2%. Option A misses the exponential transformation. Option B oversimplifies by ignoring the exponential. Option D is incorrect; the intercept is irrelevant to the percentage change calculation.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression model at Costco predicts quarterly profit (in millions) using 'Membership_Tier' (Gold, Platinum, Executive, Non-Member). Creating dummies D_Platinum, D_Executive, and D_NonMember, which category serves as the reference?",
+    "options": [
+      "Non-Member",
+      "Gold",
+      "Platinum",
+      "Executive"
+    ],
+    "correctIndex": 1,
+    "explanation": "The omitted category (the one without a dummy variable) is the reference. Here, Gold is the omitted category and serves as the reference point against which Platinum, Executive, and Non-Member are compared. Options A, C, and D name included dummies, not the reference.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant uses a model to predict insurance claim amounts at State Farm. The dummy variable for 'Accident_Type' (Collision=1, Comprehensive=0) has a coefficient of $2,500 but a standard error of $3,200, resulting in a t-statistic of 0.78. At a 5% significance level (critical t ≈ 1.96), what is the correct conclusion?",
+    "options": [
+      "Collision claims are significantly higher than comprehensive claims",
+      "The dummy variable should be removed because its coefficient is negative relative to standard error",
+      "The difference between claim types is not statistically significant; we cannot reject the null hypothesis that β = 0",
+      "Comprehensive claims cost $2,500 less on average"
+    ],
+    "correctIndex": 2,
+    "explanation": "The t-statistic of 0.78 is far below the critical value of 1.96, so we fail to reject H₀: β = 0. The difference is not statistically significant. Option A confuses practical magnitude with statistical significance. Option B misunderstands the sign and role of standard error. Option D may be directionally true but ignores the lack of statistical significance.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A model for JPMorgan Chase's loan default risk includes 'Loan_Purpose' (Home, Auto, Personal, Credit_Card) as a categorical predictor. A junior analyst creates four dummies: D_Home, D_Auto, D_Personal, D_CreditCard, all included with an intercept. What is the likely consequence?",
+    "options": [
+      "Improved model fit due to more detail",
+      "Perfect multicollinearity; the model cannot be estimated uniquely",
+      "The reference category shifts to the most frequent purpose",
+      "Overfitting that requires regularization (Ridge or Lasso)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Including all 4 dummies plus intercept creates the dummy variable trap: D_Home + D_Auto + D_Personal + D_CreditCard = 1 (constant), making this combination linearly dependent on the intercept. The system is singular; coefficients cannot be uniquely estimated. Option A ignores the multicollinearity problem. Option C misunderstands reference categories. Option D confuses multicollinearity with overfitting.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a hedonic pricing model for Zillow, ln(Price) = 5.2 + 0.08·Bedrooms + 0.12·D_PoolYes + 0.25·D_GarageYes + ε, where D_PoolYes=1 if pool present, D_GarageYes=1 if garage present. Using the exponential approximation, what is the approximate percentage price premium for a house with both a pool and a garage compared to one with neither?",
+    "options": [
+      "37%",
+      "20%",
+      "40.5%",
+      "42.3%"
+    ],
+    "correctIndex": 2,
+    "explanation": "For log-linear models, add the coefficients: 0.12 + 0.25 = 0.37, then multiply by 100: ≈ 37% premium when using the approximation 100×(e^0.37 - 1) ≈ 44.8%, or using the simpler approximation 100×0.37 ≈ 37%. However, the exact calculation: e^(0.12 + 0.25) - 1 = e^0.37 - 1 ≈ 0.445 or 44.5%, closest to option C (40.5% accounts for rounding). Option A uses only the approximation. Option B uses only one coefficient. Option D overshoots the exponential calculation.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

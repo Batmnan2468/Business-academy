@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Apple Inc. reports quarterly iPhone sales with the following distribution: Q1: $71.6B, Q2: $41.4B, Q3: $42.6B, Q4: $89.5B. What term describes the tendency of Q4 sales to be noticeably higher than other quarters?",
+    "options": [
+      "Positive skewness",
+      "Negative skewness",
+      "Kurtosis",
+      "Uniform distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data shows a tail extending toward higher values (Q4 at $89.5B), which is positive skewness. Negative skewness would have the tail on the left (lower values). Kurtosis measures tail heaviness, not direction. Uniform distribution would show equal values.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A normal distribution is often called a bell curve because of its symmetric, peaked shape. Which company's distribution of daily trading volumes would most likely approximate a normal distribution?",
+    "options": [
+      "Microsoft's stock trading volumes over 252 trading days",
+      "A startup's monthly revenue for its first 12 months",
+      "Netflix's subscribers in countries where it just launched",
+      "Tesla's stock price during a major earnings announcement week"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microsoft's trading volumes, aggregated over many days under stable market conditions, would average around a center with symmetric variation—a hallmark of normal distributions. Startup revenue and new market subscriptions are right-skewed (low early, ramping up). Tesla during earnings shows bimodal or non-normal behavior due to market-moving events.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of a normal distribution?",
+    "options": [
+      "Mean and median are equal",
+      "Approximately 68% of data falls within one standard deviation of the mean",
+      "It must be symmetric with zero skewness",
+      "It is always bimodal with two distinct peaks"
+    ],
+    "correctIndex": 3,
+    "explanation": "A normal distribution is unimodal (one peak), not bimodal. The first three options are all true characteristics of a normal distribution. Bimodality would indicate two separate modes, which is not a property of the standard normal curve.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' daily customer count across 500 U.S. locations follows a normal distribution with mean 850 and standard deviation 120. Approximately how many customers would you expect at one location per day?",
+    "options": [
+      "Between 730 and 970 customers (68% confidence)",
+      "Between 610 and 1,090 customers (68% confidence)",
+      "Between 850 and 970 customers (50% confidence)",
+      "Exactly 850 customers every day"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the 68-95-99.7 rule, 68% of data falls within ±1 standard deviation: 850 ± 120 = [730, 970]. Option B incorrectly uses ±2 standard deviations (95%). Option C confuses the interval with a one-sided range. Option D ignores variability entirely.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A consultant analyzing Costco's warehouse membership renewal rates across 50 locations finds a mean of 87% and a median of 92%. What does this tell you about the distribution?",
+    "options": [
+      "The distribution is negatively skewed (left tail)",
+      "The distribution is positively skewed (right tail)",
+      "The distribution is perfectly symmetric",
+      "The data contains no outliers"
+    ],
+    "correctIndex": 0,
+    "explanation": "When mean (87%) < median (92%), the distribution has a left tail pulling the mean down—negative skewness. Positive skewness has mean > median. Perfect symmetry would have mean = median. Skewness exists regardless of outliers.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "JPMorgan Chase analyzes loan approval times (in days) for 1,000 small-business applicants. The data shows mean = 14 days, median = 12 days, mode = 10 days, and standard deviation = 8 days. What shape distribution does this suggest?",
+    "options": [
+      "Positively skewed, with a long right tail of delayed approvals",
+      "Negatively skewed, with some applications approved very quickly",
+      "Bimodal, with two distinct approval pathways",
+      "Platykurtic, with low peakedness at 10 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mode (10) < Median (12) < Mean (14) is the signature of positive skewness—the right tail pulls the mean higher. The increasing order of central tendency measures always indicates rightward skew. Option B describes negative skew (opposite order). Bimodal and kurtosis are not indicated by this ordering alone.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's daily website traffic (in millions of visitors) across 365 days has mean = 185M, standard deviation = 42M, skewness = 0.18, and kurtosis = 2.8. Based on these statistics, which statement is most accurate?",
+    "options": [
+      "The distribution is slightly right-skewed and approximately normal in tailedness",
+      "The distribution is heavily left-skewed with extreme outliers",
+      "The distribution is symmetric with thin tails",
+      "The distribution is bimodal with peak traffic on weekends"
+    ],
+    "correctIndex": 0,
+    "explanation": "Skewness of +0.18 indicates slight positive (right) skew. Kurtosis of 2.8 is close to mesokurtic (normal, ≈3), so normal tailedness applies. Skewness near zero means not heavily skewed. Kurtosis alone doesn't indicate bimodality. Option B misidentifies skewness direction and magnitude.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's inventory turnover ratios for 42 product categories are normally distributed with mean 5.8 times/year and standard deviation 1.2 times/year. If the company wants to identify categories in the slowest-moving 2.5%, what turnover threshold should they use?",
+    "options": [
+      "Approximately 3.4 times/year (mean − 2σ)",
+      "Approximately 7.0 times/year (mean + σ)",
+      "Approximately 8.2 times/year (mean + 2σ)",
+      "Approximately 2.2 times/year (mean − 3σ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slowest-moving 2.5% is in the left tail beyond −2 standard deviations (which excludes the lower 2.5%). Calculate: 5.8 − 2(1.2) = 3.4. Option B is +1σ (wrong tail and threshold). Option C is +2σ (wrong tail). Option D is −3σ (too extreme; roughly 0.15%).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst at Target examines customer spending per visit across 10,000 transactions. The histogram shows a single peak at $65, with a long right tail extending to $280. The mean is $78 and the median is $70. Which of the following interpretations is correct?",
+    "options": [
+      "The distribution is positively skewed; some high-value purchases pull the mean above the median",
+      "The distribution is negatively skewed; outliers on the left pull the median down",
+      "The mode of $65 suggests the distribution is normally distributed",
+      "The right tail indicates all customers spend between $65 and $280"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean ($78) > Median ($70) with a visible right tail is textbook positive skewness. High purchases stretch the mean rightward. Option B reverses skewness direction. Option C confuses mode with normality—mode alone doesn't confirm normal distribution. Option D ignores that only some customers use the right tail.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing manager at Tesla reviews defect rates (%) across 200 production days: mean = 2.1%, median = 1.8%, mode = 1.5%. She claims the process is 'nearly perfect' because the mode is low. What is the flaw in her reasoning?",
+    "options": [
+      "The increasing order of measures (mode < median < mean) indicates positive skewness from occasional bad days; the process is not as stable as the mode suggests",
+      "The mode is not affected by outliers, so it accurately represents the process",
+      "The mean is always more reliable than the mode, regardless of context",
+      "A mode of 1.5% guarantees that at least 50% of days have defects below 1.5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mode < Median < Mean signals positive skewness—occasional very bad days pull the mean and median upward, even though the typical day (mode) is good. Relying only on mode ignores the tail risk. Option B incorrectly claims mode immunity to skew effects. Option C overgeneralizes—mode can be the best measure in skewed data. Option D confuses mode with percentile.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs compares two investment portfolios: Portfolio A has mean return 12%, standard deviation 18%, skewness = −0.9. Portfolio B has mean return 11.5%, standard deviation 8%, skewness = +0.2. A risk-averse investor notes that Portfolio B has a lower standard deviation, so it is 'clearly safer.' What is the critical oversight?",
+    "options": [
+      "Portfolio A's negative skewness means extreme losses (left tail) are more likely than extreme gains; the skewness adds downside risk beyond standard deviation alone",
+      "Standard deviation fully captures all risk; skewness is irrelevant for investment decisions",
+      "Portfolio B's positive skewness is worse because it means gains are limited",
+      "Both portfolios have identical risk because their means differ by less than 1%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Negative skewness indicates a left tail of severe losses, compounding the risk picture beyond just volatility (std dev). For risk-averse investors, this tail risk matters hugely. Option B ignores tail risk. Option C misinterprets positive skewness (it favors gains over losses). Option D confuses mean return with risk magnitude.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Netflix models viewer session lengths (minutes) across 50 million sessions. The histogram shows a sharp peak at 35 minutes, with a heavy right tail extending to 240+ minutes. The Jarque-Bera test p-value is 0.0001. What is the most accurate conclusion?",
+    "options": [
+      "The distribution is significantly non-normal; it exhibits positive skewness and possibly high kurtosis, violating normality assumptions needed for standard parametric tests",
+      "A p-value of 0.0001 proves the data is perfectly normally distributed with extreme precision",
+      "The right tail indicates that most users watch for 240+ minutes",
+      "High kurtosis alone (without skewness) is sufficient to reject normality"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Jarque-Bera p-value of 0.0001 << 0.05 rejects the null hypothesis of normality. The right tail (positive skewness) and likely heavy tails (high kurtosis) explain the rejection. Option B inverts the p-value interpretation (low p-value rejects normality). Option C confuses tail presence with central tendency. Option D ignores that both skewness and kurtosis together drive the JB statistic.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Comparing two retail chains' daily revenue distributions: Chain A (μ = $2.5M, σ = $150K, skewness = 0.05), Chain B (μ = $2.4M, σ = $220K, skewness = −0.7). A CFO states, 'Chain B is more profitable because its mean is only slightly lower ($100K difference).' What is the critical error?",
+    "options": [
+      "The CFO ignores Chain B's larger volatility and severe negative skewness (left tail of catastrophically low days), which create material downside risk that offsets the small mean advantage",
+      "Skewness is only relevant for aesthetic distribution shapes, not financial risk",
+      "Chain A's near-zero skewness makes it riskier because it offers no upside potential",
+      "Comparing means is always sufficient for profitability analysis regardless of volatility or shape"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chain B has 47% higher std dev ($220K vs $150K) and severe negative skewness (−0.7), meaning occasional days with much lower revenue. These combine to create substantial downside risk that a $100K mean advantage doesn't compensate. Option B underestimates skewness' financial impact. Option C misinterprets symmetry as limiting. Option D ignores risk entirely.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An auditor examines expense reimbursement requests ($) at Accenture: 8,000 requests with mean = $487, median = $420, mode = $380. A histogram reveals a sharp peak near $380 with a long right tail to $3,200. The skewness is +1.3 (strongly positive). Which statement most accurately explains this pattern?",
+    "options": [
+      "The distribution is highly right-skewed; most employees claim $380–$420 (the mode and median), but a minority submit large reimbursements that pull the mean to $487, suggesting possible high-value travel or project expenses for some",
+      "The mean should always be higher than the median in any valid dataset",
+      "Skewness of +1.3 guarantees that the mode > median > mean",
+      "The long right tail means that the majority of requests exceed $3,200"
+    ],
+    "correctIndex": 0,
+    "explanation": "Strong positive skewness (+1.3) with mode < median < mean is consistent with a dominant cluster of smaller claims plus a tail of legitimate larger ones. This is realistic for reimbursements (most routine, some major). Option B is false (median can exceed mean in negative skew). Option C has the inequality reversed. Option D confuses tail presence with frequency—the tail is extreme but sparse.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

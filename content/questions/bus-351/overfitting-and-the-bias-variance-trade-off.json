@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's machine learning team built a model to predict customer churn using 50 features. The model achieved 98% accuracy on training data but only 72% accuracy on test data. What term best describes this situation?",
+    "options": [
+      "Overfitting",
+      "Underfitting",
+      "High bias",
+      "Low variance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Overfitting occurs when a model learns noise and specific patterns in training data, performing excellently on training data (98%) but poorly on unseen test data (72%). This large gap is the hallmark of overfitting. Underfitting would show poor performance on both training and test data. High bias and low variance describe underfitting, not the pattern shown here.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the bias-variance trade-off framework, what does 'variance' refer to?",
+    "options": [
+      "The model's sensitivity to fluctuations in the training dataset",
+      "The average error the model makes across all possible datasets",
+      "The difference between predicted and actual values",
+      "The computational cost of training the model"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variance measures how much a model's predictions change when trained on different datasets—its sensitivity to training data variability. High variance models (like complex decision trees) overfit. The average error across datasets describes bias, not variance. The difference between predicted and actual values is residual error, not variance. Computational cost is unrelated to the bias-variance concept.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's demand forecasting team is choosing between two regression models for predicting quarterly sales for their AWS division. Model A uses 15 features and achieves 8% RMSE on both training and test data. Model B uses 200 features and achieves 2% RMSE on training data but 18% RMSE on test data. Which model demonstrates the overfitting problem?",
+    "options": [
+      "Model B",
+      "Model A",
+      "Both models equally",
+      "Neither model shows overfitting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model B shows severe overfitting with a massive gap between training RMSE (2%) and test RMSE (18%), indicating the model learned noise from 200 features. Model A demonstrates good generalization with consistent performance (8% on both datasets), suggesting appropriate complexity. Consistent performance across train and test data is a hallmark of a well-balanced model.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary consequence of a model with high bias in the context of JPMorgan Chase predicting loan default rates?",
+    "options": [
+      "The model makes oversimplified assumptions and consistently underpredicts default rates across all market conditions",
+      "The model predictions vary wildly based on small changes to training data",
+      "The model perfectly fits historical data but fails on future data",
+      "The model requires extensive computational resources to train"
+    ],
+    "correctIndex": 0,
+    "explanation": "High bias means the model makes overly simplistic assumptions, resulting in systematic errors (underprediction in this case) that persist across different contexts. This describes underfitting. High variance causes wild prediction swings with training data changes—that's overfitting, not high bias. Perfect fit on historical data but failure on future data describes overfitting specifically, not high bias. Computational requirements are unrelated to bias.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' pricing analytics team is building a model to predict daily store revenue using historical data. They notice that adding more historical features (day-of-week dummy variables, competitor proximity, weather, social media sentiment, customer count) reduces training error but increases test error. What should they do?",
+    "options": [
+      "Apply regularization (L1 or L2) or reduce the number of features to balance the bias-variance trade-off",
+      "Collect more training data to improve accuracy",
+      "Increase model complexity further to reduce training error more",
+      "Switch to an entirely different model type"
+    ],
+    "correctIndex": 0,
+    "explanation": "The diverging train/test error pattern indicates overfitting. Regularization or feature reduction directly addresses this by constraining model complexity. While collecting more data can sometimes help, it doesn't directly solve the overfitting-from-too-many-features problem. Increasing complexity worsens overfitting. Switching models without addressing the root cause (too many features for the data) likely won't help.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla's pricing algorithm uses a polynomial model with degree 8 to predict used car prices based on mileage, age, and battery health. The model achieved R² = 0.99 on the 500 training examples but R² = 0.52 on the 200 test examples. Calculate the overfitting penalty (the difference in R²) and interpret it.",
+    "options": [
+      "0.47; this is severe overfitting indicating the model learned noise rather than true relationships",
+      "0.47; this is normal variation and the model is performing adequately",
+      "1.90; the training performance is 1.9 times better than test performance",
+      "0.52; the test R² represents the true model performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "The overfitting penalty is 0.99 - 0.52 = 0.47, a substantial drop. An R² difference exceeding 0.20 typically signals severe overfitting. A degree-8 polynomial is likely too complex for this dataset. A drop of 0.47 is far from 'normal variation.' The ratio 1.90 uses incorrect math (0.99/0.52 ≠ overfitting penalty). Test R² = 0.52 is low and indicates poor generalization, exactly the overfitting problem.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Facebook's ad conversion model is trained on 100,000 user interactions from March 2024. The training accuracy is 94% and the validation accuracy is 93%. Next month, the same model is deployed and achieves only 76% accuracy on April data. What is the most likely explanation?",
+    "options": [
+      "The model was not overfit in March (train/val gap was small) but encountered a distribution shift in April (user behavior changed)",
+      "The model was overfit in March and the validation set was not representative",
+      "The model architecture was too simple and needs more features",
+      "The validation set was too small compared to the training set"
+    ],
+    "correctIndex": 0,
+    "explanation": "The small train-validation gap (94% vs 93%) in March shows good generalization, ruling out overfitting. The April drop to 76% on genuinely new data indicates the underlying user behavior or data distribution changed between months—a common real-world problem separate from overfitting. If the model were overfit, the validation performance would have already been poor in March. Model simplicity (high bias) wouldn't suddenly manifest in April. Validation set size doesn't explain a drop from 93% to 76%.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs' equity research team developed two models to predict stock returns: Model X (linear regression with 5 features) and Model Y (random forest with 300 trees, max_depth=50). Historically, Model X has training RMSE = $3.20 and test RMSE = $3.18. Model Y has training RMSE = $0.85 and test RMSE = $4.52. Which model is more suitable for production trading, and why?",
+    "options": [
+      "Model X; it shows low variance and minimal overfitting, while Model Y severely overfits with a large train-test gap",
+      "Model Y; it achieves lower training error which is most predictive of real-world performance",
+      "Model X; it is simpler and therefore always superior to complex models",
+      "Model Y; random forests always outperform linear regression in finance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model X demonstrates excellent bias-variance balance with near-identical train and test RMSE ($3.20 vs $3.18), indicating robust generalization. Model Y shows extreme overfitting: training RMSE of $0.85 is unrealistically optimistic while test RMSE of $4.52 reveals poor real-world performance. In production, generalization matters more than training fit. Low training error without matching test performance is a red flag in finance. Simplicity alone doesn't determine quality, but low variance does indicate reliability.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's churn prediction model for Azure customers uses regularization with a penalty parameter λ = 0.001. When λ is increased to 0.1, training accuracy decreases from 89% to 86%, but test accuracy increases from 81% to 84%. What does this change in λ accomplish?",
+    "options": [
+      "It reduces overfitting by shrinking feature coefficients, closing the train-test accuracy gap from 8% to 2%",
+      "It improves the model's ability to learn patterns from training data",
+      "It increases model complexity to better fit new customer behaviors",
+      "It has no meaningful effect since the total accuracy change is small"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increasing λ adds regularization penalties that shrink feature coefficients, reducing overfitting. The train-test gap narrowed from 8 percentage points (89%-81%) to 2 percentage points (86%-84%), demonstrating improved generalization despite lower training accuracy. Higher λ constrains model complexity (reduces overfitting), not enhances learning. Regularization never increases complexity; it controls it. The accuracy gap narrowing is highly meaningful for generalization quality.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analytics consultant is advising Best Buy on inventory forecasting. The existing decision tree model achieves 92% training accuracy on 2 years of historical data but only 64% test accuracy. The consultant recommends reducing tree depth from 25 to 6 and removing 30 of 45 input features. Assuming these changes are implemented correctly, which trade-off is being made?",
+    "options": [
+      "Accepting higher bias (simpler model) to reduce variance and overfitting",
+      "Increasing variance while maintaining the same bias level",
+      "Eliminating bias while introducing variance",
+      "Improving accuracy on the training set while sacrificing test set performance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reducing tree depth and removing features creates a simpler model with higher bias (less flexible) but lower variance (more stable across datasets). The 28-percentage-point train-test gap (92% vs 64%) indicates the current model has high variance/overfitting. The proposed changes trade some training accuracy for better generalization—a classic bias-variance optimization. Increasing variance would worsen overfitting, not fix it. Eliminating bias entirely is impossible. Sacrificing test performance is exactly what they're trying to fix.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Uber built a demand prediction model for surge pricing using polynomial features (degree 4) on 50,000 ride requests. After hyperparameter tuning, they achieve: training MAE = $1.20, validation MAE = $1.85, test MAE = $2.10. Which statement correctly interprets this error progression?",
+    "options": [
+      "Mild overfitting is present (validation-to-test error increase) but the model generalizes reasonably well; consider lighter regularization or more data",
+      "The model shows severe overfitting and should be abandoned for a simpler approach",
+      "The consistent error increase proves the model is underfitted and needs more features",
+      "Validation and test errors should always be identical; this discrepancy indicates a data leak"
+    ],
+    "correctIndex": 0,
+    "explanation": "The error progression ($1.20 → $1.85 → $2.10) shows modest overfitting: a $0.65 jump from training to validation is notable but the additional $0.25 jump to test suggests the validation-test split was slightly different, not fundamental overfitting. The model is usable with modest regularization increases or more training data. Errors can differ across validation and test sets due to natural data variation—this is not data leakage. A $0.90 total gap is reasonable for real-world deployment, not severe overfitting. Underfitting would show high error everywhere without overfitting symptoms.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "General Electric's predictive maintenance model for wind turbines uses 200 sensor features to predict failure within 30 days (binary classification). During development on 50,000 historical turbine-months of data, the model achieved 99.2% training accuracy and 78.5% test accuracy. A colleague argues: 'This 20.7% accuracy gap proves we need a more complex model with more features.' Why is this reasoning flawed?",
+    "options": [
+      "The gap indicates overfitting caused by excessive complexity, not underfitting; adding more features would worsen the problem",
+      "The colleague is correct; more features and model complexity will close this gap",
+      "The accuracy gap is actually small enough that the model is ready for production",
+      "The discrepancy proves the test set contains errors and should be replaced"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 20.7-percentage-point gap from 99.2% training to 78.5% test accuracy is a classic severe overfitting signature, not a signal to add complexity. The colleague's reasoning reverses causality: overfitting means the model already learned noise from (possibly too many) features; adding more features would amplify this problem. Increasing complexity increases variance. The gap is very large (not small), making the model unsuitable for production. The test set is not invalid; it's revealing the true generalization failure caused by current complexity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Costco's supply chain team is choosing between a k-nearest neighbors model (k=3) and a k-nearest neighbors model (k=101) for predicting warehouse demand. For identical data: Model A (k=3) shows training RMSE = $500 and test RMSE = $12,000. Model B (k=101) shows training RMSE = $8,500 and test RMSE = $8,800. What is the bias-variance implication of moving from Model A to Model B?",
+    "options": [
+      "Moving to k=101 increases bias but dramatically reduces variance, trading poor training fit for robust generalization",
+      "Moving to k=101 reduces both bias and variance equally",
+      "Moving to k=101 demonstrates that higher k values always produce better predictions",
+      "Model A is superior because it achieves lower training error"
+    ],
+    "correctIndex": 0,
+    "explanation": "k=3 is highly flexible (low bias, high variance), fitting training data perfectly but failing on test data ($500 vs $12,000 RMSE gap). k=101 averages over more neighbors, reducing sensitivity to individual training points (lower variance) at the cost of oversimplifying local patterns (higher bias). The 93% test RMSE improvement ($12,000 to $8,800) validates this trade-off. While training RMSE worsens ($500 to $8,500), this reflects appropriate bias, not failure. Equal bias-variance reduction is impossible here; they move in opposite directions. Higher k isn't universally better—k=101 works here, but optimal k depends on data.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at Pfizer is building a model to predict clinical trial dropout rates using 150 patient features and 2,000 trial observations. After cross-validation, they report: fold 1 RMSE = 0.089, fold 2 RMSE = 0.083, fold 3 RMSE = 0.085, fold 4 RMSE = 0.091, fold 5 RMSE = 0.088. Mean = 0.087, Std Dev = 0.003. What does the low standard deviation indicate about model bias and variance?",
+    "options": [
+      "Low variance across folds (std dev = 0.003) indicates stable predictions; the model generalizes consistently",
+      "Low standard deviation proves there is no overfitting problem",
+      "The model has high bias because all folds perform similarly",
+      "Standard deviation measures only variance, not bias, so bias cannot be assessed here"
+    ],
+    "correctIndex": 0,
+    "explanation": "A low standard deviation (0.003) across cross-validation folds means the model produces stable, consistent predictions regardless of which fold is held out—evidence of low variance and robust generalization. This is a positive sign. However, low std dev does NOT prove absence of overfitting (the model could consistently overfit) or indicate bias level (bias relates to systematic error, not fold-to-fold consistency). Standard deviation across folds specifically measures variance, not bias. High consistency does not automatically mean high bias; it means stable variance. Additional metrics (mean test error vs. mean training error) would reveal bias.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Target's customer lifetime value (CLV) prediction model is being evaluated across two scenarios. Scenario 1: 5,000 customers, training RMSE = $180, test RMSE = $195 (3% gap). Scenario 2: 50,000 customers (same feature set), training RMSE = $180, test RMSE = $182 (1% gap). Why does larger data improve the test-training gap even though feature count is identical?",
+    "options": [
+      "Larger datasets provide better sampling of true underlying patterns, reducing the model's ability to overfit to noise",
+      "Larger datasets automatically reduce bias in the model",
+      "More data increases model variance by exposing more training variability",
+      "The feature set size determines overfitting severity, not the number of observations"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 50,000 observations, the model encounters more diverse examples of the true CLV relationship, making it harder for individual noisy observations to exert undue influence. Overfitting requires the model to 'memorize' training noise; large datasets make memorization less rewarding since noise patterns don't repeat consistently. The 1% gap in Scenario 2 versus 3% in Scenario 1 (same features, same model complexity) directly demonstrates this. More data doesn't reduce bias (the model structure determines bias). More data reduces variance because outliers and noise become less influential statistically. Feature count is one overfitting factor, but sample size is equally critical.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

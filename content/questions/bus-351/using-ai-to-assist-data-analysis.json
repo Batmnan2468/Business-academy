@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Salesforce, data analysts use AI to automatically detect patterns in customer churn. What is this AI capability primarily called?",
+    "options": [
+      "Predictive analytics",
+      "Descriptive analytics",
+      "Prescriptive analytics",
+      "Diagnostic analytics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predictive analytics uses AI to forecast future outcomes (like churn) based on historical patterns. Descriptive analytics only summarizes past data; it does not predict future churn, which is why it's a tempting but incorrect choice—many students confuse summarizing data with predicting it.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's AI system analyzes 450 million user interactions per day to recommend content. Which data analysis task best describes this?",
+    "options": [
+      "Classification and clustering",
+      "Time series forecasting only",
+      "Hypothesis testing exclusively",
+      "Manual rule-based filtering"
+    ],
+    "correctIndex": 0,
+    "explanation": "Netflix's recommendation engine groups users (clustering) and matches them to content types (classification). Time series forecasting alone does not capture the personalization required; this is a common misconception that overlooks the multi-faceted nature of recommendation systems.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft Excel's AI-powered Insights feature analyzes a dataset of 5,000 retail transactions and flags that Tuesday sales are 23% higher than Monday sales. What type of insight is this?",
+    "options": [
+      "Descriptive",
+      "Predictive",
+      "Prescriptive",
+      "Exploratory sampling"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is descriptive analytics—it summarizes a pattern already present in the data. Predictive would forecast future Tuesday sales; this misconception is tempting because students often conflate 'finding a pattern' with 'predicting the future.'",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tableau's AI assistant, Ask Data, enables business users to query 2.3 million rows of supply chain data using natural language. What is this capability called?",
+    "options": [
+      "Natural language processing (NLP)",
+      "Artificial general intelligence",
+      "Computer vision",
+      "Reinforcement learning"
+    ],
+    "correctIndex": 0,
+    "explanation": "Natural language processing (NLP) converts human language into queries and insights. Computer vision processes images; this is a common wrong answer because students sometimes conflate different AI subfields without understanding their specific applications.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "IBM Watson for Analytics processes historical data from 40,000 customer records to calculate that a 15% discount increases conversion by 8.2%. This is an example of:",
+    "options": [
+      "Machine learning model training",
+      "Statistical correlation analysis",
+      "Unstructured data mining",
+      "Real-time streaming analytics"
+    ],
+    "correctIndex": 1,
+    "explanation": "This describes correlation analysis—testing the relationship between discount level and conversion. Machine learning model training would create a predictive model; while related, it's a broader and less specific answer than identifying a simple correlation.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Acme Manufacturing uses an AI system to analyze 15,000 production records. The AI identifies that equipment failure risk increases 12% for every 5°C rise in temperature. An analyst is asked to determine how often the equipment should be serviced. Should the AI's pattern alone be sufficient to make this decision?",
+    "options": [
+      "No—the correlation is useful but does not account for service cost, downtime risk, or maintenance scheduling constraints",
+      "Yes—the AI has identified the root cause and should dictate the service schedule",
+      "No—the data sample of 15,000 is too small to be reliable",
+      "Yes—statistical correlations are always actionable without further analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI finding is descriptive but incomplete; actionable decisions require cost-benefit analysis and operational constraints. Answer B is tempting because students often assume a strong correlation equals a complete decision framework, overlooking the business context.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's AI model reviews 2,400 loan applications and achieves 94% accuracy in predicting default risk. However, the model flags 18% of all applications as high-risk. A loan officer questions whether this is reasonable. What should the analyst investigate?",
+    "options": [
+      "Whether the model's 94% accuracy rate is distributed evenly across high-risk and low-risk groups, and whether a 18% flagging rate aligns with actual default rates in the data",
+      "Whether the model used at least 10,000 records, since 2,400 is insufficient",
+      "Whether the bank should hire more loan officers to handle the 18% flagged applications",
+      "Whether 94% accuracy is the same as 94% precision for high-risk predictions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy alone does not reveal if the model fairly distributes performance across groups or if the 18% flagging matches reality (precision/recall). Answer D is tempting because students may conflate different metrics, but accuracy ≠ precision—yet the core issue is checking distributional fairness and calibration.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's AI analyzes 8.5 million customer purchase records over 24 months. It predicts that customers who view a product for >45 seconds have a 73% probability of purchase. A marketing manager wants to use this to retarget slow browsers. What is a critical assumption that must be verified?",
+    "options": [
+      "That the 45-second threshold and 73% probability relationship will hold in future, different customer cohorts and time periods",
+      "That the dataset is larger than 1 million records, which ensures accuracy",
+      "That the AI model used logistic regression rather than decision trees",
+      "That all customers who view products for 45 seconds are equally wealthy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predictive patterns from historical data may not generalize to new contexts (future drift, different customer segments). Answer B is tempting because larger datasets seem safer, but large size does not guarantee future applicability if the underlying conditions change.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Google Analytics uses AI to analyze 145 million page visits and finds that visitors from mobile devices have a 31% bounce rate, while desktop visitors have a 19% bounce rate. The analytics tool recommends \"prioritize mobile optimization.\" Is this recommendation complete?",
+    "options": [
+      "No—the recommendation ignores whether the difference is statistically significant, whether mobile visitors have different intent, and whether optimization ROI exceeds cost",
+      "Yes—a 12% difference in bounce rates is substantial and clearly justifies the recommendation",
+      "No—the dataset should include at least 500 million visits to make a valid recommendation",
+      "Yes—AI recommendations are always trustworthy and should be implemented immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "The AI identified a pattern but the recommendation conflates correlation with causation and omits business context (cost, effort, impact on other metrics). Answer B is tempting because the 12% difference seems large, but business decisions require cost-benefit and significance testing.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Adobe's AI-powered analytics system processes 22,000 monthly marketing campaigns and predicts that increasing email subject line length from 40 to 60 characters increases open rate by 4.3%. An analyst plans to implement this across all 1.2 million subscribers. What key step is missing?",
+    "options": [
+      "A/B test the recommendation on a sample before full rollout, and monitor for segment-specific effects or diminishing returns",
+      "Increase the dataset to at least 50,000 campaigns to improve confidence",
+      "Ensure the AI used the same email platform for all historical data",
+      "Calculate the statistical p-value to verify the 4.3% improvement"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validation through A/B testing and segmentation analysis is essential before mass implementation. Answer D is tempting because p-values measure significance, but statistical significance does not guarantee the effect will replicate or generalize across all 1.2 million users without testing.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services firm's AI model is trained on 5 years of transaction data from 3.2 million customer accounts. The model achieves 89% accuracy but performs poorly for customers over age 75 (only 71% accuracy). The firm plans to use this model to approve credit automatically. What is the primary concern?",
+    "options": [
+      "The model exhibits disparate performance by age group, which may violate fair lending regulations and disadvantage older applicants",
+      "The dataset is too old and should be retrained with data from the last 2 years only",
+      "A 71% accuracy for any subgroup is acceptable as long as the overall accuracy is above 85%",
+      "The firm should use a simpler model that does not rely on AI, which is inherently biased"
+    ],
+    "correctIndex": 0,
+    "explanation": "Disparate impact by protected characteristic (age) raises legal and ethical red flags, especially in lending. Answer C is tempting because students may assume overall accuracy is sufficient, but regulators and ethics require fairness across demographic groups.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber's AI analyzes 12 million rides per week across 70 cities and predicts surge pricing 15 minutes in advance with 82% accuracy. However, predictions are 91% accurate in dense urban areas and only 63% accurate in suburban areas. What is a reasonable interpretation?",
+    "options": [
+      "The model's features (traffic, events, driver supply) are more predictive in denser, higher-data-density areas; suburban predictions may require local-specific features or manual oversight",
+      "The model is failing and should be scrapped in favor of rule-based pricing",
+      "The 82% overall accuracy proves the model is equally reliable across all regions",
+      "Suburban areas have fewer rides, so lower accuracy is inevitable and acceptable"
+    ],
+    "correctIndex": 0,
+    "explanation": "AI models often perform better in data-rich environments; suburban underperformance suggests missing features or data sparsity, not model failure. Answer D is tempting but incorrect—lower accuracy in a segment is not 'acceptable' for a pricing algorithm without investigation and mitigation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain uses AI to forecast demand for 18,000 SKUs using 3 years of historical sales data. The model was trained in January 2023 and achieves 88% accuracy on historical backtests. In real deployment (June 2024), accuracy drops to 72%. What is the most likely explanation?",
+    "options": [
+      "Data drift—consumer behavior, competitive landscape, or supply disruptions have changed since training, making historical patterns invalid",
+      "The model is overfitted and needs more training data",
+      "The historical data was insufficient; the model should have used 5 years of data",
+      "The forecast accuracy metric is inappropriate; the firm should use MAE instead of accuracy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data drift occurs when real-world conditions diverge from training conditions; this is the most common cause of model performance degradation in production. Answer B is tempting because overfitting is a well-known problem, but overfitting causes poor validation performance at training time, not sudden real-world drops months later.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare provider trains an AI diagnostic model on 45,000 patient records (collected 2015–2019) to predict hospital readmission risk. The model achieves 86% accuracy. In 2024, with new clinical protocols, medications, and patient demographics, accuracy drops to 68%. The provider's CTO argues that model retraining every 6 months is too costly. How should the analyst respond?",
+    "options": [
+      "Retraining is essential to maintain model validity; the cost of poor readmission predictions (patient harm, financial liability) likely exceeds retraining cost. Alternatively, implement monitoring dashboards to detect drift and retrain only when needed",
+      "The CTO is correct; 68% accuracy is acceptable for a predictive model in healthcare",
+      "Increase the original training dataset to 100,000 records instead of retraining",
+      "Switch to a simpler rule-based system that does not require updates"
+    ],
+    "correctIndex": 0,
+    "explanation": "In healthcare, accuracy degradation from 86% to 68% poses patient safety and compliance risks that outweigh retraining costs. Answer B is dangerously tempting but incorrect—68% for readmission risk in a clinical setting is unacceptable. Monitoring and selective retraining balances cost and safety.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company compares two AI models for delivery route optimization: Model A achieves 91% on-time delivery prediction accuracy (trained on 8.2 million deliveries), and Model B achieves 88% accuracy (trained on 2.1 million deliveries). The company decides to deploy Model A. A data scientist cautions that Model A was trained primarily on urban routes (67% of training data) while the company serves 40% rural areas. Why is this concern valid?",
+    "options": [
+      "Model A may have higher overall accuracy but poor generalization to rural routes due to class imbalance in training data; rural performance should be tested before deployment",
+      "Model B is better because it used less data and is therefore simpler and more explainable",
+      "The concern is invalid; 91% accuracy guarantees Model A will perform well on all routes",
+      "Model A should be used for urban routes and Model B for rural, which doubles operational complexity unnecessarily"
+    ],
+    "correctIndex": 0,
+    "explanation": "Class imbalance (67% urban vs. 40% rural reality) is a critical flaw; overall accuracy masks poor minority-class performance. Answer C is tempting because 91% seems robust, but high aggregate accuracy does not guarantee fairness or applicability to underrepresented segments.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

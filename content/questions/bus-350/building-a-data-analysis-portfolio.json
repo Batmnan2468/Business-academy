@@ -1,0 +1,184 @@
+[
+  {
+    "question": "When building a statistical analysis portfolio for your role as a junior analyst at Goldman Sachs, what is the primary purpose of including a correlation analysis between stock price and trading volume?",
+    "options": [
+      "To measure the strength and direction of the linear relationship between two variables",
+      "To determine the causal effect of volume on price movements",
+      "To predict future stock prices with 100% accuracy",
+      "To eliminate all outliers from the dataset"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation measures the strength and direction of a linear relationship between variables, which is exactly what a correlation analysis shows. Option B is tempting because students often confuse correlation with causation, but correlation does not imply causation. Option C is incorrect because no statistical method predicts with 100% accuracy, and Option D misses the purpose entirely.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Morgan Stanley, you're analyzing quarterly revenue for 2023. Q1 revenue was $8.2 billion, Q2 was $8.5 billion, Q3 was $8.9 billion, and Q4 was $9.1 billion. What is the mean quarterly revenue for 2023?",
+    "options": [
+      "$8.675 billion",
+      "$8.7 billion",
+      "$8.5 billion",
+      "$34.7 billion"
+    ],
+    "correctIndex": 0,
+    "explanation": "The mean is calculated as (8.2 + 8.5 + 8.9 + 9.1) ÷ 4 = 34.7 ÷ 4 = $8.675 billion. Option B rounds incorrectly and loses precision. Option C is the median (middle value between Q2 and Q3), which is a common mistake when students confuse measures of central tendency. Option D is the sum, not the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In your portfolio at Deloitte, you document that a dataset from a pharmaceutical company has a standard deviation of $2.3 million for annual R&D spending across 50 business units. What does this tell you?",
+    "options": [
+      "On average, the R&D spending varies by about $2.3 million from the mean",
+      "The total R&D budget is $2.3 million × 50 = $115 million",
+      "There are exactly 50 observations that are $2.3 million away from the mean",
+      "The median R&D spending is $2.3 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard deviation measures how spread out data points are from the mean on average. Option B multiplies standard deviation incorrectly to estimate total budget, which is a misconception. Option C misinterprets standard deviation as an exact distance for each point. Option D confuses standard deviation with median. The correct answer interprets standard deviation as a measure of dispersion.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You're building a statistical portfolio entry on data quality for JPMorgan Chase. Which of the following is the correct definition of a 'confidence interval' at the 95% level?",
+    "options": [
+      "A range of values that likely contains the true population parameter, with 95% probability that the interval captures it",
+      "A guarantee that 95% of individual data points fall within the calculated range",
+      "The margin of error multiplied by 1.96 for all datasets",
+      "A value that shows the population mean with 95% certainty"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 95% confidence interval is a range constructed such that, if we repeated the sampling process many times, approximately 95% of the intervals would contain the true parameter. Option B is a common misconception—confidence intervals describe the long-run behavior of the interval, not the percentage of individual data points. Option C is too mechanical and ignores context. Option D is vague and doesn't properly define what a confidence interval is.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In your portfolio case study on retail analytics at Target Corporation, you're analyzing customer satisfaction scores (1–10 scale) across 200 stores. Your dataset shows a mode of 8, median of 7.5, and mean of 6.8. Which measure of central tendency would you present to investors?",
+    "options": [
+      "The mean, because it uses all data points and provides the complete picture of central tendency",
+      "The mode, because it represents the most frequently occurring score",
+      "The median, because it is always the best measure regardless of context",
+      "All three, noting that the mean being lower suggests some low outlier scores pulling it down"
+    ],
+    "correctIndex": 3,
+    "explanation": "When the mean (6.8) is notably lower than the median (7.5), this indicates left-skewed data with low outliers. Presenting all three measures and explaining the discrepancy gives investors the most complete picture. Option A ignores the insight that outliers are present. Option B alone is incomplete. Option C is too absolute—the best measure depends on the distribution and context. The correct answer shows statistical maturity by interpreting the relationship between measures.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Coca-Cola, you're analyzing a regression model predicting beverage sales (in millions) based on advertising spend (in millions) across 40 markets. Your regression equation is: Sales = 12.5 + 3.2 × Advertising. If Coca-Cola increases advertising spend by $5 million in a new market, what is the predicted increase in sales?",
+    "options": [
+      "$16 million",
+      "$28.5 million",
+      "$3.2 million",
+      "$48.5 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope (3.2) tells us that for each additional $1 million in advertising, sales increase by $3.2 million. A $5 million increase in advertising yields 5 × 3.2 = $16 million predicted increase in sales. Option B adds the intercept incorrectly. Option C uses only the slope without multiplying by 5. Option D incorrectly multiplies the intercept by the coefficient. The correct answer isolates the marginal effect of the independent variable.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "You're building a portfolio analysis for Netflix showing that streaming hours watched (X) and monthly churn rate (Y) have a Pearson correlation of –0.78. A colleague interprets this as 'Netflix must increase user engagement hours because correlation is negative.' What is the flaw in this reasoning?",
+    "options": [
+      "Correlation does not imply causation; the negative correlation means as hours watched increase, churn decreases, so the colleague's policy recommendation is backward",
+      "A correlation of –0.78 is too weak to draw any conclusions about causation",
+      "The correlation coefficient should be reported as 0.78 because correlations are always positive",
+      "The colleague is correct that Netflix must increase engagement, but the correlation should be positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "The negative correlation (–0.78) actually indicates that higher viewing hours are associated with lower churn—the opposite of what the colleague suggested. However, correlation does not prove causation; both might be driven by content quality. This is the fundamental flaw in the colleague's reasoning. Option B is incorrect because –0.78 is actually a strong correlation. Option C misunderstands how negative correlations work. Option D contradicts the data. The correct answer shows understanding of both correlation direction and the correlation-causation distinction.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "You're comparing two statistical models in your Accenture portfolio: Model A has an R² of 0.72 for predicting client project costs, and Model B has an R² of 0.68. However, Model B has significantly fewer input variables (5 vs. 18). Which model would you recommend for your portfolio, and why?",
+    "options": [
+      "Model A, because a higher R² always indicates a better model regardless of complexity",
+      "Model B, because despite slightly lower R², it may generalize better to new data and is simpler to implement and maintain",
+      "Neither model is acceptable because both R² values are below 0.80",
+      "Model A, because it uses more variables and therefore captures more information"
+    ],
+    "correctIndex": 1,
+    "explanation": "Model B demonstrates better statistical practice despite a marginally lower R². Simpler models with fewer variables often generalize better to new data and are less prone to overfitting. The 4% difference in R² may not justify adding 13 extra variables. Option A commits the error of chasing R² without considering model complexity and generalization. Option C sets an arbitrary threshold not justified in the context. Option D assumes more variables always improve models, ignoring overfitting risk. The correct answer balances performance with parsimony.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In your statistical portfolio at Microsoft, you've calculated a 95% confidence interval for average cloud services adoption time across enterprise clients: [18.2 days, 22.8 days]. A manager says, 'This means 95% of all enterprise clients will adopt cloud services between 18.2 and 22.8 days.' What is the error in this interpretation?",
+    "options": [
+      "The confidence interval estimates the range for the population mean, not the range where 95% of individual observations fall",
+      "The confidence interval is too wide and should be narrowed to increase certainty",
+      "95% confidence means we're 95% confident in our point estimate of 20.5 days",
+      "The manager's interpretation is correct, and the confidence interval bounds individual observations"
+    ],
+    "correctIndex": 0,
+    "explanation": "A confidence interval describes uncertainty about the population parameter (the true mean), not the distribution of individual data points. The manager's error is a very common misconception in business statistics. Option B addresses width but not the fundamental misinterpretation. Option C confuses confidence interval with confidence in the point estimate. Option D perpetuates the incorrect interpretation. The correct answer clarifies the distinction between parameter estimation and individual observation prediction.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're presenting a statistical portfolio analysis at Goldman Sachs on equity fund performance. You've run a multiple regression with 8 independent variables predicting fund returns. Your results show that Variable 3 has a t-statistic of 1.45 with a p-value of 0.062, while Variable 7 has a t-statistic of 2.18 with a p-value of 0.019. What should you conclude?",
+    "options": [
+      "Variable 7 is statistically significant at the 0.05 level and should be retained; Variable 3 is not significant and could be removed",
+      "Both variables should be removed because neither is statistically significant at the 0.01 level",
+      "Variable 3 should be retained because its t-statistic is positive, and Variable 7 should be removed because 0.019 is close to 0.05",
+      "Both variables should be retained because both have p-values below 0.10, which is a reasonable threshold"
+    ],
+    "correctIndex": 0,
+    "explanation": "At the conventional 0.05 significance level, Variable 7 (p = 0.019) is significant because 0.019 < 0.05, while Variable 3 (p = 0.062) is not because 0.062 > 0.05. Option B incorrectly applies a 0.01 threshold not stated in the context. Option C confuses t-statistic sign with significance and reverses the correct conclusion. Option D is too lenient; 0.10 is sometimes used but not the standard in most business contexts. The correct answer applies the standard 0.05 significance level properly.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In your portfolio, you're analyzing Amazon's same-day delivery performance across 150 U.S. cities. The coefficient of variation for delivery time is 0.18, while for delivery cost per package it is 0.42. Which variable is more consistent across cities, and why is this analysis important for your portfolio?",
+    "options": [
+      "Delivery time is more consistent (CV = 0.18 vs. 0.42), showing that Amazon's operational delivery timing is more standardized across cities than their cost structure",
+      "Delivery cost is more consistent because 0.42 is a larger number",
+      "Coefficient of variation cannot be compared between variables measured in different units",
+      "Neither variable is consistent because both coefficients are below 1.0"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient of variation (CV = standard deviation ÷ mean) allows fair comparison of variability across variables with different units. A lower CV indicates greater consistency relative to the mean. Delivery time's CV of 0.18 means it varies less (as a percentage) than delivery cost's CV of 0.42. This is a key insight for operations analysis. Option B reverses the logic. Option C is incorrect; CV is specifically designed to enable such comparisons. Option D misunderstands what CV values mean. The correct answer demonstrates advanced statistical thinking about relative variability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're documenting a statistical analysis for your Wells Fargo portfolio on loan default prediction. Your model achieves 94% accuracy on training data but only 71% accuracy on hold-out test data. What does this pattern primarily suggest?",
+    "options": [
+      "The model is severely overfitting to training data and will not generalize well to new loan applications",
+      "The training dataset is too small and needs to be expanded to improve test performance",
+      "The model is biased and needs additional variables to improve accuracy",
+      "The hold-out test data contains more difficult cases than the training data"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 23-percentage-point gap between training and test accuracy is a classic sign of overfitting—the model has learned specific patterns in training data that don't generalize. This is a critical red flag in portfolio documentation. Option B might help but doesn't address the core problem of model complexity. Option C confuses bias with overfitting. Option D is speculation and doesn't explain the mechanism. The correct answer identifies overfitting, a crucial concept in building reliable statistical models for business deployment.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Procter & Gamble, you're analyzing consumer preference data across three product versions using a chi-square test. Your test statistic is 8.72 with a p-value of 0.013 and 2 degrees of freedom. The contingency table shows Version A preferred by 120 consumers, Version B by 95, and Version C by 85 (total n=300). What should you conclude for your portfolio?",
+    "options": [
+      "There is statistically significant evidence (p = 0.013 < 0.05) that consumer preference differs among the three product versions",
+      "Version A is the best product because it has the most preferences (120)",
+      "The chi-square test is inappropriate because the sample sizes are unequal across categories",
+      "The results are inconclusive because the p-value is greater than 0.01"
+    ],
+    "correctIndex": 0,
+    "explanation": "The p-value of 0.013 is less than the standard significance level of 0.05, providing statistical evidence that preferences are not equally distributed among versions. This is the correct interpretation of the chi-square test for independence. Option B confuses descriptive preference with statistical significance of differences. Option C is incorrect; chi-square handles unequal cell counts appropriately. Option D applies an unnecessarily strict 0.01 threshold. The correct answer properly interprets p-value in context of hypothesis testing.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You're finalizing your statistical portfolio for a retail analytics internship. You have two datasets: Dataset 1 has 50 observations with mean = $45,000 and standard error = $1,200; Dataset 2 has 200 observations with mean = $45,500 and standard error = $600. You need to estimate the population mean for inventory value. Which dataset provides better evidence, and why?",
+    "options": [
+      "Dataset 2 provides better evidence because the larger sample size (200 vs. 50) yields a smaller standard error ($600 vs. $1,200), indicating more precision in the population mean estimate",
+      "Dataset 1 provides better evidence because it has a lower mean value ($45,000)",
+      "Both datasets provide equal evidence because they both estimate the population mean around $45,000",
+      "Dataset 2 is worse because the larger sample size introduces more measurement error"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error (SE = SD ÷ √n) decreases as sample size increases. Dataset 2's smaller SE of $600 reflects higher precision in estimating the true population mean. The 95% confidence intervals would be approximately ±$1,176 for Dataset 1 and ±$588 for Dataset 2, making Dataset 2 more precise. Option B confuses mean level with estimation precision. Option C ignores the importance of standard error. Option D reverses the relationship between sample size and error. The correct answer demonstrates understanding of how sample size affects statistical precision—crucial for portfolio quality assessment.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

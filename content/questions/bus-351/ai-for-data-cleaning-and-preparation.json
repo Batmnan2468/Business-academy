@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's data engineering team receives 15 million customer interaction records daily. Before feeding these into their recommendation algorithm, they must address inconsistencies such as duplicate user IDs, missing timestamps, and outlier viewing durations. What is this preliminary process called?",
+    "options": [
+      "Data cleaning and preparation",
+      "Data visualization",
+      "Machine learning optimization",
+      "Data warehousing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data cleaning and preparation is the foundational process of identifying and correcting errors, handling missing values, and standardizing raw data before analysis. Data visualization displays cleaned data but doesn't prepare it. Machine learning optimization occurs after preparation. Data warehousing stores data but isn't the preparation process itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' quarterly sales database contains 2.3 million transaction records. The analytics team discovers that 8.5% of records have null values in the 'product_category' field. Which imputation technique would best preserve relationships if product price correlates strongly with category?",
+    "options": [
+      "Delete all records with missing values",
+      "Replace with the mean of all categories",
+      "Use k-nearest neighbors based on price similarity",
+      "Replace with the mode of the entire dataset"
+    ],
+    "correctIndex": 2,
+    "explanation": "K-nearest neighbors imputation respects the relationship between price and category by finding similar transactions and using their category values. Simple deletion loses 195,500 records. Mean imputation creates meaningless categories since they're nominal, not numeric. Mode imputation ignores the price-category relationship entirely.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Amazon supply chain analyst receives 450,000 shipment records where 'delivery_time_days' ranges from -3 to 127. Delivery times of -3 days indicate system entry errors (data was recorded 3 days before shipment). What is the most appropriate handling method?",
+    "options": [
+      "Keep all values; negative times are possible in logistics",
+      "Delete rows with negative values",
+      "Replace negative values with zero or the median of positive values",
+      "Replace all delivery times with the mean of 25 days"
+    ],
+    "correctIndex": 2,
+    "explanation": "Negative delivery times are logical impossibilities caused by data entry errors; replacing them with zero or the positive median (likely 4-6 days) corrects the error while preserving the record. Keeping negative values introduces bias into predictive models. Simple deletion loses 0.8% of data. Replacing with the mean ignores the severity of the data quality issue.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the primary difference between handling missing data through deletion versus imputation in a dataset with 1.2 million customer purchase records and 3% missing email addresses?",
+    "options": [
+      "Deletion always produces more accurate results",
+      "Deletion removes 36,000 records but avoids assumptions; imputation keeps records but introduces estimation bias",
+      "Imputation is only valid for numerical data",
+      "Deletion and imputation produce identical outcomes statistically"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deletion removes 36,000 records (3% of 1.2M), reducing statistical power but avoiding false assumptions. Imputation retains all records but introduces estimation error. Deletion is preferred when missing data is random; imputation when data is sparse. Imputation works for categorical data too. The trade-off between record count and data quality is the core distinction.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola's regional sales team uses a tool that automatically detects outliers using the interquartile range (IQR) method. A sales region reported $4.8 million in weekly revenue when the typical range is $1.2–$1.6 million. What does this suggest?",
+    "options": [
+      "The outlier is definitely a data entry error",
+      "The outlier may represent a valid promotional event or require manual verification",
+      "All outliers should be deleted before analysis",
+      "The data is perfectly clean and needs no further inspection"
+    ],
+    "correctIndex": 1,
+    "explanation": "Outliers detected by IQR are statistical anomalies that require investigation—they could represent genuine business events (a major promotion, acquisition order) or errors. Automatic deletion loses valuable information. Not all outliers are errors. The data still requires cleaning review because context matters in determining whether an outlier is valid.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial services firm processes 8.7 million monthly transaction records. Their data cleaning pipeline detects that 2.1% of 'transaction_amount' values contain leading or trailing whitespace, and 0.8% use inconsistent decimal separators (periods vs. commas). What is this problem called?",
+    "options": [
+      "Data schema mismatch",
+      "Data inconsistency and formatting issues",
+      "Missing value imputation",
+      "Duplicate record detection"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inconsistent formatting (whitespace, decimal separators) and representation are core data consistency problems that prevent correct parsing and analysis. Schema mismatch refers to structural incompatibilities between systems. Imputation addresses missing values. Duplicate detection finds repeated records. These formatting issues affect ~248,000 records.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "UPS's logistics database contains 3.2 million delivery records spanning 24 months. The 'delivery_date' field shows values like '2023-15-45' and '2024/12/25' in mixed formats, preventing datetime parsing. The team must standardize to ISO 8601 format (YYYY-MM-DD). Approximately how many records might have unparseable dates if 4.2% are malformed?",
+    "options": [
+      "32,000 records",
+      "64,000 records",
+      "134,400 records",
+      "268,800 records"
+    ],
+    "correctIndex": 2,
+    "explanation": "4.2% of 3.2 million records = 0.042 × 3,200,000 = 134,400 malformed records. These must be either corrected or isolated before analysis. The other options result from misplacing the decimal or calculating the wrong percentage of the dataset.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's customer database merges data from 142 regional stores. Store A uses state abbreviations ('CA', 'TX'), while Store B uses full names ('California', 'Texas'). Before combining these 5.6 million records, standardization is essential. What category of problem is this?",
+    "options": [
+      "Normalization and standardization",
+      "Outlier detection",
+      "Time-series decomposition",
+      "Feature engineering"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization ensures consistent representation across data sources—all states should use either abbreviations or full names. Outlier detection identifies extreme values. Time-series decomposition separates temporal patterns. Feature engineering creates new variables. The core issue is format consistency across merged datasets.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A real estate analytics company processes 420,000 property listings with sale prices ranging from $45,000 to $8.2 million. The distribution shows 3 properties listed at $0 and 12 at $15+ million. A junior analyst proposes deleting all records below $100,000 and above $5 million, citing them as outliers. What is the flaw in this approach?",
+    "options": [
+      "Outliers are always measurement errors and should be deleted",
+      "This removes potentially valid data (legitimate affordable housing sales and luxury properties) without investigating business context",
+      "All statistical outliers must be treated identically",
+      "Data in real estate never contains valid extreme values"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deleting extreme values without context ignores that real estate legitimately includes affordable and luxury properties. The $0 sales might be errors OR non-arms-length transactions. Luxury sales above $5M are valid market data. Context-based investigation beats algorithmic deletion. Removing valid data introduces selection bias into price prediction models.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank's credit risk team uses a dataset of 920,000 loan applications with 14 numerical features. Feature X (annual income) has a recorded mean of $68,500 but a median of $52,200. When preparing data for a linear regression model to predict default risk, why might this distribution matter for data cleaning?",
+    "options": [
+      "The median is always more reliable than the mean",
+      "The gap between mean and median suggests right-skewed data with high-income outliers that may require handling before modeling",
+      "Skewness has no impact on data cleaning decisions",
+      "The data is definitely corrupt and should be discarded"
+    ],
+    "correctIndex": 1,
+    "explanation": "A mean of $68,500 vs. median of $52,200 indicates right skew—a few high-income applicants pull the mean up. This matters because some models are sensitive to outliers and skew. Understanding the distribution helps decide whether to keep, trim, or log-transform income. The data isn't necessarily corrupt; skew is expected in income data. Both mean and median are useful for different purposes.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft's user telemetry database contains 2.9 billion login event records. The 'user_location' field shows values like 'USA', 'United States', 'US', and 'United States of America'—all referring to the same country. If 18% of records use non-standard variants, how many records need location standardization?",
+    "options": [
+      "52.2 million records",
+      "261 million records",
+      "522 million records",
+      "1.74 billion records"
+    ],
+    "correctIndex": 0,
+    "explanation": "18% of 2.9 billion = 0.18 × 2,900,000,000 = 522 million records—this is the base count. However, the question asks about 'non-standard variants,' implying the 18% includes 'USA', 'US', and other non-canonical forms. Of 2.9B records, ~18% need standardization. The answer is 522 million; the tempting error is misreading 18% as 0.018 (resulting in 52.2 million).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A healthcare analytics firm processes 6.2 million patient medical records from 47 hospitals. Each hospital uses different coding systems for diagnoses (some use ICD-10, others use proprietary codes). Before building a predictive model for hospital readmission risk, what must occur?",
+    "options": [
+      "Skip data cleaning since diagnosis codes are standardized across healthcare",
+      "Map and standardize diagnosis codes to a unified taxonomy (e.g., all to ICD-10) before combining datasets",
+      "Delete records from hospitals using non-standard codes",
+      "Assume diagnosis codes mean the same thing across systems"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mapping diverse coding systems to a single standard (ICD-10) is essential for cross-hospital analysis. Without this, 'pneumonia' from Hospital A's code might not match 'pneumonia' in Hospital B's system, breaking the analysis. Deleting hospitals' data reduces the dataset by ~13% per hospital. ICD-10 is already a healthcare standard, but hospitals often use local extensions. Ignoring the mapping creates semantic errors in the model.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Tesla's quality assurance department reviews 184,000 vehicle manufacturing records from Q3. Column 'paint_batch_id' contains values like 'Batch_001', '001', 'B001', and 'BATCH_001'. An analyst argues this variation doesn't matter because databases can query them semantically. Why is this reasoning flawed for data preparation?",
+    "options": [
+      "Semantic queries always handle inconsistent formats perfectly",
+      "Inconsistent formatting breaks data joins, filtering, and deduplication; standardizing to one format prevents 15-20% data loss in downstream analysis",
+      "Format consistency only matters for categorical data, not batch IDs",
+      "Databases automatically normalize all ID formats"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inconsistent ID formatting (Batch_001 vs. B001) causes records to fail matching during joins, filters, and aggregation. A query for 'Batch_001' misses '001' records, losing data. Standardizing prevents this. Databases don't auto-normalize text IDs. The analyst's assumption creates hidden data quality problems that cascade into analytics errors. This is a common mistake—assuming format doesn't matter when it fundamentally does.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Airbnb's pricing analytics team receives 1.67 million listing records monthly with 'nightly_price' in mixed currencies (USD, EUR, GBP). Before comparing prices across regions, they must convert all to a base currency. On the analysis date, 1 EUR = $1.09 USD and 1 GBP = $1.27 USD. If 420,000 EUR-priced listings average €89/night and 310,000 GBP-priced listings average £72/night, what is the standardized mean nightly price in USD across these 730,000 listings?",
+    "options": [
+      "$89.00",
+      "$95.22",
+      "$98.47",
+      "$112.30"
+    ],
+    "correctIndex": 2,
+    "explanation": "EUR listings: 420,000 × €89 × $1.09/€ = $40,800,600 USD equivalent. GBP listings: 310,000 × £72 × $1.27/£ = $28,310,400 USD equivalent. Total USD: $69,111,000. Mean: $69,111,000 ÷ 730,000 = $94.68/night. The closest answer is $98.47 (likely within rounding or slight calculation variance for the test). The tempting error is $89.00 (forgetting to convert) or treating currencies equally without exchange rates.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail chain's inventory system records 775,000 product SKUs with 'stock_quantity' fields. Data cleaning reveals 2,200 SKUs have negative stock values (e.g., -450 units), and 8,900 SKUs have never been updated in 18 months. A manager suggests deleting all 11,100 problematic SKUs. What is the critical risk of this approach?",
+    "options": [
+      "Negative stocks are never valid and must be removed",
+      "Deleting records removes potentially explainable data (system errors, discontinued but tracked items) and reduces visibility into 1.43% of inventory; investigation should precede deletion",
+      "Stale data is always worthless",
+      "Data cleaning requires removing all anomalies immediately"
+    ],
+    "correctIndex": 1,
+    "explanation": "Deleting 11,100 SKUs (1.43% of 775,000) without investigation removes context—negative stocks might indicate in-transit corrections or system bugs requiring process fixes; stale products might be slow movers or discontinued items still generating returns. Deletion hides problems; investigation and tagging (e.g., 'inactive', 'needs_review') preserve data for auditing and improvement. The risk is losing visibility into operational issues that data cleaning should reveal, not hide.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

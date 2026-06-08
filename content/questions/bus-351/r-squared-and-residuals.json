@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A regression model for Netflix subscriber churn has an R-squared value of 0.78. What does this mean?",
+    "options": [
+      "78% of the variance in churn is explained by the independent variables in the model",
+      "The model predicts churn with 78% accuracy on all future data",
+      "78% of the residuals are normally distributed",
+      "The correlation coefficient between variables is 0.78"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared specifically measures the proportion of variance in the dependent variable explained by the model. Option B is tempting but incorrect because R-squared doesn't guarantee future prediction accuracy—it only describes current fit. Option C confuses R-squared with residual properties, and Option D conflates R-squared with correlation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a linear regression predicting Apple Inc.'s quarterly revenue based on iPhone sales units, what are residuals?",
+    "options": [
+      "The differences between actual revenue and predicted revenue for each quarter",
+      "The sum of all independent variables divided by the number of observations",
+      "The slope coefficients of the regression line",
+      "The percentage change in revenue from one quarter to the next"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residuals are the vertical distances between observed values and the fitted regression line—exactly the prediction errors. Option B describes a mean calculation, Option C refers to slope parameters, and Option D refers to a growth metric. These are common confusions when defining residuals.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression model for Amazon warehouse labor costs has an R-squared of 0.45. Which statement is correct?",
+    "options": [
+      "45% of the variance in labor costs is explained by the model variables",
+      "The model explains more variance than a model with R-squared of 0.55",
+      "Residuals sum to exactly zero in this model",
+      "The model is suitable for all business decisions regardless of R-squared value"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared = 0.45 means 45% of the variance is explained; Option B is inverted (0.55 > 0.45). Option C is a property of least-squares regression (residuals do sum to zero) but is true for all OLS models, not unique to this one. Option D ignores that low R-squared may indicate insufficient model quality.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a multiple regression predicting Tesla stock price using price-to-earnings ratio, dividend yield, and market cap, what would a residual of +$12 for one observation indicate?",
+    "options": [
+      "The actual stock price was $12 higher than the model predicted",
+      "The model coefficient for one variable is $12",
+      "The R-squared value increased by $12",
+      "The independent variables are correlated by $12"
+    ],
+    "correctIndex": 0,
+    "explanation": "A positive residual means the actual value exceeds the prediction. Option B confuses residuals with coefficients, Option C incorrectly applies a dollar amount to a unitless statistic, and Option D misinterprets what residuals measure. Understanding residual sign and meaning is fundamental.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression model analyzing Walmart's sales against advertising spend has residuals that are heavily skewed with extreme outliers. What does this suggest?",
+    "options": [
+      "The model may violate the assumption of normally distributed errors, and the validity of statistical inferences may be compromised",
+      "The R-squared value must be negative",
+      "The model is definitely wrong and should be discarded immediately",
+      "Residuals should always be perfectly uniform in distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-normal residuals with outliers violate OLS assumptions and can invalidate hypothesis tests and confidence intervals. Option B is false (R-squared ranges 0–1). Option C overstates the problem—the model may still be useful but requires scrutiny. Option D incorrectly states residuals should be uniform; they should be approximately normal.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Starbucks regional manager develops a regression model to predict weekly sales ($) using customer foot traffic (thousands), average transaction value ($), and staff hours. The model produces R-squared = 0.82 with residuals that follow a roughly normal distribution. She claims this model is ready for operational forecasting. What additional analysis should she perform before deployment?",
+    "options": [
+      "Check for autocorrelation in residuals, multicollinearity among predictors, and validate the model on a hold-out test set",
+      "Increase the R-squared value to at least 0.95 before using the model",
+      "Verify that all residuals are exactly zero",
+      "Ensure that the correlation between foot traffic and transaction value is negative"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even with good R-squared and normal residuals, autocorrelation, multicollinearity, and out-of-sample validation are critical. Option B misunderstands that 0.82 is often acceptable; demanding 0.95 is arbitrary. Option C is impossible—residuals won't be exactly zero. Option D imposes an unfounded constraint on correlation direction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst builds two models predicting JPMorgan Chase quarterly net income: Model A has R-squared = 0.71 with 4 predictors; Model B has R-squared = 0.73 with 12 predictors. Which model should be preferred and why?",
+    "options": [
+      "Model A, because the marginal improvement in R-squared (0.02) does not justify adding 8 more predictors, increasing complexity and overfitting risk",
+      "Model B, because it has a higher R-squared value",
+      "Model A, because lower number of predictors always means better predictions",
+      "Model B, because more variables always improve model reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 2% gain in R-squared from 8 additional variables suggests overfitting; adjusted R-squared would penalize this complexity. Option B ignores the cost of additional complexity. Option C is too absolute—more variables can help if significant. Option D falsely assumes more variables improve reliability.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant analyzes Microsoft's cloud service adoption rate (percentage of enterprise clients) using monthly pricing ($), training hours offered, and competitor discount rate (%). After fitting the model, she calculates that the sum of squared residuals is 245.6 with 48 observations. What is the residual standard error (standard deviation of residuals)?",
+    "options": [
+      "Approximately 2.28 (sqrt of 245.6 / (48 - 3 - 1))",
+      "Approximately 5.1 (245.6 / 48)",
+      "Exactly 245.6 divided by the R-squared value",
+      "Approximately 7.0 (245.6 / 3.5)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Residual standard error = sqrt(SSR / (n - p - 1)) where SSR = 245.6, n = 48, p = 3. That equals sqrt(245.6 / 44) ≈ sqrt(5.58) ≈ 2.36 (approximately 2.28 accounting for rounding). Option B divides by n instead of (n-p-1), ignoring degrees of freedom. Option C introduces R-squared incorrectly. Option D uses an arbitrary divisor.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst fits a linear regression predicting monthly sales for a Best Buy store location using store square footage and average customer traffic. The model yields R-squared = 0.58. A colleague suggests adding a variable for \"manager tenure (years)\". After adding this variable, the new R-squared = 0.59. Comparing adjusted R-squared values would show which outcome?",
+    "options": [
+      "Adjusted R-squared likely decreased, indicating the new variable does not justify its cost in model complexity",
+      "Adjusted R-squared must have increased because R-squared increased",
+      "Adjusted R-squared would remain unchanged",
+      "Adjusted R-squared increased more than R-squared did"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R-squared penalizes added variables: Adj-R² = 1 - [(1 - R²)(n-1)/(n-p-1)]. A 1% gain in R² from one new variable likely causes adjusted R² to decline. Option B confuses R² with adjusted R²—they move in opposite directions when a weak predictor is added. Options C and D contradict how adjusted R² works.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing firm uses regression to predict quarterly advertising ROI (return on investment, %) for Coca-Cola campaigns across 40 quarters, using spending ($M), market growth rate (%), and brand sentiment score. The residual plot shows a clear fan-shaped pattern, widening from left to right. What does this indicate?",
+    "options": [
+      "Heteroscedasticity: the variance of residuals is not constant across fitted values, violating an OLS assumption",
+      "The R-squared value is too low and the model should be discarded",
+      "Residuals are perfectly normally distributed",
+      "The independent variables are highly correlated with each other"
+    ],
+    "correctIndex": 0,
+    "explanation": "A fan-shaped residual plot is the classic sign of heteroscedasticity—non-constant error variance. This violates OLS assumptions and can bias standard errors and confidence intervals. Option B misinterprets the plot (it's about error structure, not fit quality). Option C is opposite (fan shape indicates non-normality). Option D describes multicollinearity, diagnosed differently.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data scientist develops a regression model predicting quarterly customer acquisition cost (CAC in $) for a SaaS company using marketing spend ($K), sales team size, and product release frequency. She calculates R-squared = 0.76 using all 32 quarterly observations. She then splits the data: trains on 24 quarters and tests on 8 quarters. The test-set R-squared is only 0.61. What is the most likely explanation?",
+    "options": [
+      "The model is overfitting to the training data; the drop in test R-squared indicates it does not generalize well to unseen data",
+      "The test set must have measurement errors that are not present in the training set",
+      "R-squared always decreases on test sets and this is expected and normal",
+      "The model variables are not correlated with CAC"
+    ],
+    "correctIndex": 0,
+    "explanation": "A substantial drop from 0.76 to 0.61 when moving from training to test data strongly suggests overfitting—the model has learned training noise, not true patterns. Option B blames external data quality without evidence. Option C falsely normalizes large drops; some decrease is expected, but 15% is substantial. Option D contradicts the training R-squared.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression model for predicting monthly foot traffic at Target stores uses 5 independent variables and 120 observations, yielding R-squared = 0.64. The model's sum of squared residuals (SSR) is 8,320. Calculate the total sum of squares (SST) and determine what percentage of variance is unexplained.",
+    "options": [
+      "SST ≈ 23,111; unexplained variance ≈ 36%",
+      "SST ≈ 13,000; unexplained variance ≈ 64%",
+      "SST ≈ 8,320; unexplained variance ≈ 0%",
+      "SST ≈ 500; unexplained variance ≈ 28%"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² = 1 - (SSR/SST), so 0.64 = 1 - (8,320/SST). Thus SST = 8,320/(1-0.64) = 8,320/0.36 ≈ 23,111. Unexplained variance = 1 - R² = 36%. Option B reverses logic (36% unexplained, 64% explained). Option C treats SSR as SST. Option D uses an arbitrary formula.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst builds a regression model predicting Intel processor sales volume (units sold quarterly) using R&D spending ($M), competitor pricing ($/unit), and production capacity (%). After fitting, the analyst notices that 3 of the 60 residuals are extreme outliers (>3 standard deviations). She removes these 3 observations and refits the model, raising R-squared from 0.71 to 0.78. What should she conclude?",
+    "options": [
+      "The outliers were likely data entry errors or special cases; their removal is justified only if documented and reported, but arbitrarily deleting outliers is problematic and reduces model robustness",
+      "Outliers should always be removed because they reduce R-squared",
+      "The improved R-squared proves the model is now correct",
+      "Outliers indicate that the independent variables are uncorrelated with sales volume"
+    ],
+    "correctIndex": 0,
+    "explanation": "While outliers can inflate residuals, removing them without investigation introduces selection bias and overfitting. The analyst should investigate causes, document decisions, and report both models. Option B treats outlier removal as automatic (incorrect practice). Option C confuses improvement with correctness. Option D misinterprets what outliers indicate.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank develops separate regression models for predicting loan default rates (%) at two branches: Downtown (R² = 0.69, n = 180) and Suburban (R² = 0.67, n = 85). The manager claims the Downtown model is superior. Which analytical approach would best evaluate this claim?",
+    "options": [
+      "Compare adjusted R-squared values for both models, since sample sizes differ and adjusted R-squared accounts for model complexity and sample size",
+      "Compare raw R-squared values; Downtown's 0.69 is clearly better than Suburban's 0.67",
+      "Pool both datasets and fit a single model to eliminate the difference in sample sizes",
+      "Use R-squared to calculate which branch has lower default rates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R² = 1 - [(1-R²)(n-1)/(n-p-1)] adjusts for different sample sizes, preventing larger samples from appearing artificially better. With n₁ = 180 and n₂ = 85, a direct comparison of R² is unfair. Option B ignores sample size effects. Option C loses model-specific information. Option D confuses R² (fit quality) with default rates (model output).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup uses linear regression to predict monthly churn rate (%) for a cloud storage service using monthly pricing ($), customer support response time (hours), and product update frequency. The model has R-squared = 0.53 and residuals show no pattern, mild right skew, and approximately normal distribution overall. Before using this model for pricing decisions, what key limitation should the analyst acknowledge?",
+    "options": [
+      "R-squared of 0.53 means 47% of churn variance is unexplained, so the model captures slightly more than half the signal; other important variables may be missing, and predictions should include confidence intervals with caution",
+      "The model cannot be used for any business decisions because R-squared is below 0.70",
+      "Mild residual skew proves the model is invalid and must be completely rebuilt",
+      "The model is perfect for pricing decisions because residuals show 'no pattern'"
+    ],
+    "correctIndex": 0,
+    "explanation": "An R² of 0.53 is moderate—useful but with significant unexplained variance. The analyst must acknowledge limitations and consider missing variables (customer support quality, competitors, product features, etc.). Option B arbitrarily rejects the model; 0.53 can be actionable with appropriate caveats. Option C overstates the impact of mild skew. Option D ignores that 47% unexplained variance is substantial.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

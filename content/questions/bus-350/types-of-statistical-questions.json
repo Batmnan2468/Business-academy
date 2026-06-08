@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which type of statistical question seeks to understand the relationship between two variables, such as whether Apple Inc.'s advertising spend and quarterly revenue are connected?",
+    "options": [
+      "Relationship question",
+      "Descriptive question",
+      "Predictive question",
+      "Prescriptive question"
+    ],
+    "correctIndex": 0,
+    "explanation": "Relationship questions examine associations or correlations between variables. A descriptive question would only summarize one variable (e.g., 'What was Apple's revenue?'), while predictive and prescriptive questions serve different purposes. This is a classic two-variable relationship inquiry.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A descriptive statistical question aims to do which of the following?",
+    "options": [
+      "Predict future customer churn rates at Netflix",
+      "Summarize the average monthly active users for Netflix in 2023 at 247 million",
+      "Determine whether Netflix should increase prices based on demand elasticity",
+      "Forecast Netflix subscriber growth for Q4 2024"
+    ],
+    "correctIndex": 1,
+    "explanation": "Descriptive questions summarize existing data (average, median, percentage, etc.). Predicting future churn, forecasting, and determining strategy are predictive or prescriptive questions. The Netflix example with a specific historical figure (247 million) is purely descriptive.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is an example of a predictive statistical question?",
+    "options": [
+      "What was Starbucks' average daily coffee sales in 2023?",
+      "How many unique customers visited Starbucks locations in North America last month?",
+      "Will Starbucks achieve its goal of 55,000 stores by 2030 based on current expansion rates?",
+      "What percentage of Starbucks revenue came from food items versus beverages?"
+    ],
+    "correctIndex": 2,
+    "explanation": "Predictive questions forecast future outcomes using historical patterns. Options A, B, and D are all descriptive (summarizing past or current data). Only the question about achieving 55,000 stores looks forward and requires modeling future trends based on current expansion rates.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A prescriptive statistical question differs from a predictive question in that it aims to:",
+    "options": [
+      "Forecast what will happen",
+      "Recommend what action to take",
+      "Describe what happened",
+      "Measure correlation strength"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prescriptive questions recommend decisions or actions (what should we do?), while predictive questions forecast outcomes (what will happen?). Descriptive questions summarize data, and correlation measures relationships. Prescriptive is the decision-oriented level of statistical inquiry.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When Amazon analyzes whether customers who bought Product A are more likely to buy Product B, what type of question is being answered?",
+    "options": [
+      "Predictive question",
+      "Relationship question",
+      "Prescriptive question",
+      "Temporal question"
+    ],
+    "correctIndex": 1,
+    "explanation": "This examines the association or correlation between two variables (Product A purchase and Product B purchase), which is a relationship question. Predictive would forecast future behavior; prescriptive would recommend actions. Temporal questions involve time sequences.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase is analyzing whether the bank's loan default rate of 3.2% in Q2 2023 differed significantly from the 2.8% rate in Q1 2023. This is primarily a _______ question.",
+    "options": [
+      "Descriptive",
+      "Comparison",
+      "Relationship",
+      "Predictive"
+    ],
+    "correctIndex": 1,
+    "explanation": "Comparison questions evaluate differences between two or more groups or time periods (Q1 vs. Q2 default rates). While descriptive data (3.2%, 2.8%) is used, the question centers on whether they differ significantly, making it a comparison question. This is not relationship (two variables), predictive (future), or purely descriptive (single summary).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's marketing team collected data on 5,000 customers and found that those who attended webinars had a 34% product purchase rate versus 18% for non-attendees. Before recommending increased webinar investment, the team should ask which follow-up question?",
+    "options": [
+      "Is this 16 percentage point difference likely due to chance, or is it statistically significant?",
+      "What is the total revenue difference between these two groups?",
+      "How many webinars should Microsoft host next year?",
+      "What percentage of Microsoft customers attend webinars?"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before making a prescriptive decision (invest in webinars), the team must determine if the observed difference (34% vs. 18%) is statistically significant or due to random variation. Option B describes revenue but doesn't address significance. Option C is prescriptive (how many) before establishing causation. Option D is merely descriptive.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hotel chain collected guest satisfaction scores (1–10 scale) from 2,400 guests across 15 properties. To compare whether certain hotel locations have significantly different satisfaction levels, what type of question is being answered?",
+    "options": [
+      "Descriptive question",
+      "Relationship question",
+      "Comparison question",
+      "Predictive question"
+    ],
+    "correctIndex": 2,
+    "explanation": "Comparing satisfaction across multiple hotel locations is a comparison question (Location A vs. Location B vs. Location C, etc.). It is not descriptive (single summary), relationship (two continuous variables), or predictive (forecasting future outcomes).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Coca-Cola's data team examined 8,000 retail transactions and calculated that customers who purchased Diet Coke had spent an average of $47.32 per visit while Coke Zero customers spent $43.18. An analyst concluded that Diet Coke customers are 'more valuable.' Which issue most undermines this conclusion?",
+    "options": [
+      "The sample size is too small to draw conclusions",
+      "The difference might be explained by confounding variables, such as customer age or location, not the product itself",
+      "The analysis is missing a predictive component",
+      "Statistical significance cannot be determined from transaction data"
+    ],
+    "correctIndex": 1,
+    "explanation": "The analyst confused association with causation and failed to consider confounding variables. Older customers or those in premium locations might buy both products and spend more overall. A sample of 8,000 is actually adequate (option A is wrong). The analysis doesn't require prediction (option C is wrong). Statistical significance can be tested with transaction data (option D is wrong).",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Tesla analyst notes that Model 3 sales increased 22% year-over-year in 2023 while marketing spend rose only 8%. The analyst claims this proves that Tesla's marketing efficiency improved. Which statement best challenges this interpretation?",
+    "options": [
+      "The percentages should be calculated on a quarterly basis instead of annual",
+      "External factors, such as competitor actions, EV subsidies, or supply chain improvements, could explain the sales increase independent of marketing spend",
+      "The 22% growth is below the industry average for electric vehicles",
+      "Marketing spend must be compared to customer acquisition cost, not total sales"
+    ],
+    "correctIndex": 1,
+    "explanation": "The analyst attributed sales growth solely to marketing efficiency without considering confounding variables like policy changes (EV subsidies), supply constraints lifting, or competitor exits. Option A (quarterly vs. annual) is just a different time frame, not a challenge to the logic. Option C (below industry average) doesn't explain the causal claim. Option D is relevant but doesn't challenge the specific efficiency claim as directly as option B.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company is testing whether a new drug reduces blood pressure. Patients in the treatment group reduced their systolic pressure by 12 mmHg on average, while the control group (given a placebo) reduced theirs by 9 mmHg on average. The 3 mmHg difference was found to be statistically insignificant (p = 0.18). What is the correct interpretation?",
+    "options": [
+      "The drug is ineffective and should not be approved",
+      "The observed difference could plausibly occur by random chance; stronger evidence is needed to claim the drug works",
+      "The study proves the drug is no better than placebo",
+      "The drug works, but the effect size is too small to be clinically meaningful"
+    ],
+    "correctIndex": 1,
+    "explanation": "Statistical insignificance (p = 0.18 means >5% chance the difference is random) means the evidence does not support the drug's effectiveness—not that it's proven ineffective. Option A overstates the conclusion. Option C confuses 'no evidence of difference' with 'evidence of no difference.' Option D assumes clinical insignificance, which the data doesn't establish. We simply lack sufficient evidence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber analyzed 50,000 ride requests in New York City and found that surge pricing (prices 1.8× normal rate) during rush hours increased cancellations by 6 percentage points (from 12% to 18%). An executive suggests raising surge multipliers to 2.2× to increase prices further. What hidden assumption underlies this recommendation?",
+    "options": [
+      "Cancellation rates will remain constant across all price levels",
+      "The relationship between price and cancellation is linear and unbounded—that higher prices will continue to increase cancellations proportionally without diminishing or reversing effects",
+      "Increasing prices will boost driver supply equally in all areas",
+      "Customer satisfaction metrics will remain stable regardless of pricing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The executive assumes the linear trend (1.8× → 6% increase) continues indefinitely, but relationships often plateau, reverse, or follow curves. A 2.2× multiplier might cause cancellations to jump to 22%, or it might trigger supply-side responses that stabilize demand. Option A is too obvious an error. Options C and D are real concerns but don't capture the core logical flaw in extrapolating a single trend.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank compared mortgage approval rates across 12 branches and found Branch A had a 67% approval rate on 300 applications while Branch B had a 71% approval rate on 45 applications. An HR manager concludes Branch B is more effective at approving mortgages. What is the primary statistical issue with this conclusion?",
+    "options": [
+      "The approval rates should be converted to percentages of total company applications",
+      "Sample size differences (300 vs. 45) create vastly different statistical precision; Branch B's rate is less stable and could easily be due to chance variation with its small sample",
+      "Approval rates cannot be compared without knowing the average loan amounts",
+      "The difference is only 4 percentage points, which is below the threshold for significance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Branch B's 71% is based on only 45 applications, making it highly volatile—a few approvals or denials shift the rate substantially. Branch A's 67% on 300 applications is far more stable and reliable. This is a classic sample size and stability issue (standard error). Option A is irrelevant. Option C confuses loan size with approval patterns. Option D assumes a fixed threshold without conducting a formal test.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix conducted an A/B test with 200,000 users (100,000 per group) and found that users shown personalized homepage recommendations had a 24-hour retention rate of 63.4%, while the control group had 62.9%. The difference is statistically significant at p = 0.01. Netflix executives ask: 'Should we roll out personalized recommendations company-wide?' Which consideration is most important before saying yes?",
+    "options": [
+      "Whether the 0.5 percentage point improvement justifies the engineering and infrastructure costs",
+      "Whether the same effect replicates in different regions and user demographics",
+      "Whether 24-hour retention is the most important success metric for long-term business growth",
+      "All of the above"
+    ],
+    "correctIndex": 3,
+    "explanation": "All three considerations are critical for a prescriptive decision. Statistical significance (p = 0.01) only confirms the effect exists; it doesn't answer whether it's worth implementing (A), whether it generalizes (B), or whether it matters for business goals (C). A statistically significant but tiny effect with high costs might not warrant rollout. Geographic variation is vital for global platforms. And optimizing 24-hour retention at the expense of lifetime value could backfire.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail company's analyst calculated that customers in the top income quartile ($125K+) made 3.8 purchases per year on average, while those in the bottom quartile ($35K–$50K) made 1.2 purchases per year. The analyst predicts that a marketing campaign targeting high-income customers will yield the highest return. What assumption is being made, and why might it be flawed?",
+    "options": [
+      "The assumption is that historical purchase behavior will continue; this is flawed because customer preferences change seasonally",
+      "The assumption is that income level causes purchase frequency; this is flawed because other factors (age, family size, product fit, or proximity to stores) might drive both income and purchases",
+      "The assumption is that high-income customers are more responsive to marketing; this is flawed because wealthy customers may ignore discount-based campaigns",
+      "The assumption is that the sample sizes for each income quartile are equal; this is flawed because unequal samples bias the comparison"
+    ],
+    "correctIndex": 1,
+    "explanation": "The analyst inferred causation (income → purchases) from association. Confounding variables could explain both: older customers earn more and buy more; larger families have higher incomes and buy more groceries. Option A (seasonality) doesn't address the core causal claim. Option C assumes the campaign uses discounts (not stated). Option D about sample size could affect precision but isn't the primary logical flaw here.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

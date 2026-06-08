@@ -1,0 +1,210 @@
+[
+  {
+    "question": "You are running a linear regression in R to predict quarterly revenue for Netflix using advertising spend as the independent variable. Which R function is used to fit a linear regression model?",
+    "options": [
+      "lm()",
+      "glm()",
+      "regress()",
+      "fit.linear()"
+    ],
+    "correctIndex": 0,
+    "explanation": "lm() is the correct R function for fitting linear regression models. glm() is for generalized linear models, regress() and fit.linear() are not standard R functions for this purpose. Many beginners confuse lm() with glm(), but glm() is used for logistic, Poisson, and other non-normal distributions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In R, you run the command: model <- lm(revenue ~ advertising_spend, data = netflix_data). What does the tilde (~) symbol represent in this regression formula?",
+    "options": [
+      "The dependent variable separated from independent variables",
+      "A correlation coefficient",
+      "An interaction term",
+      "A residual term"
+    ],
+    "correctIndex": 0,
+    "explanation": "The tilde (~) is the formula operator in R that separates the dependent variable (left side) from independent variables (right side). It is not a correlation symbol, an interaction operator (which uses *), or a residual indicator. This is fundamental R syntax for model specification.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "You fit a regression model in R: model <- lm(sales ~ price + marketing, data = apple_data). How do you extract the R-squared value from this model?",
+    "options": [
+      "summary(model)$r.squared",
+      "model$rsquared",
+      "coef(model)",
+      "residuals(model)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The R-squared value is accessed via summary(model)$r.squared. model$rsquared is incorrect syntax—R stores this in the summary object, not directly in the model object. coef() returns coefficients and residuals() returns residual values, not the R-squared statistic.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When you call summary(model) on a linear regression in R, what does the 'Std. Error' column in the coefficients table represent?",
+    "options": [
+      "The standard deviation of each regression coefficient",
+      "The square root of the variance of the residuals",
+      "The predicted error for each observation",
+      "The difference between observed and fitted values"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard Error measures the variability of each coefficient estimate across repeated samples. It is not the residual standard error (which appears separately in the summary), the prediction error for individual observations, or the residuals themselves. Standard Error is crucial for constructing confidence intervals and hypothesis tests for coefficients.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In R regression output, what does a p-value of 0.0234 for an independent variable coefficient indicate?",
+    "options": [
+      "There is a 2.34% probability of observing this coefficient if the true effect is zero",
+      "The variable explains 2.34% of the variance in the dependent variable",
+      "The variable has a 2.34% effect on the dependent variable",
+      "The regression model is significant at the 5% level"
+    ],
+    "correctIndex": 0,
+    "explanation": "A p-value of 0.0234 is the probability of observing a coefficient this extreme (or more extreme) if the null hypothesis (true coefficient = 0) were true. It does not indicate the percentage of variance explained (that is R-squared), the magnitude of the effect (that is the coefficient itself), or overall model significance. The p-value indicates this specific variable is statistically significant at the 5% level, but that's a secondary interpretation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart runs a regression analysis with annual store revenue (in millions of dollars) as the dependent variable and store size (in thousands of square feet) as the independent variable. The fitted regression equation is: revenue = 2.5 + 0.85 * store_size. If a Walmart store has a size of 120,000 square feet, what is the predicted revenue in millions of dollars?",
+    "options": [
+      "104.5 million",
+      "102 million",
+      "106.5 million",
+      "100.5 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "First, convert 120,000 square feet to thousands: 120 (thousands). Then: revenue = 2.5 + 0.85 * 120 = 2.5 + 102 = 104.5 million dollars. A common mistake is forgetting to convert units (using 120,000 directly gives 102,002.5), or miscalculating the multiplication (0.85 * 120 ≠ 100).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company runs a regression predicting drug sales (in thousands of dollars) using R&D spending (in millions of dollars) and marketing spend (in hundreds of thousands of dollars). The model has 250 observations. After fitting the model, they calculate sum of squared residuals (SSR) = 4,500 and total sum of squares (SST) = 18,000. What is the R-squared value?",
+    "options": [
+      "0.75",
+      "0.25",
+      "0.50",
+      "0.60"
+    ],
+    "correctIndex": 0,
+    "explanation": "R-squared = 1 - (SSR/SST) = 1 - (4,500/18,000) = 1 - 0.25 = 0.75. A common mistake is calculating SSR/SST directly (0.25) and forgetting to subtract from 1. Another error is confusing SSR with explained sum of squares (ESS = SST - SSR = 13,500), which would give 13,500/18,000 = 0.75 if done correctly, but beginners often mix up which approach to use.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase runs a regression with quarterly earnings per share (EPS) as the dependent variable and operating margin (percentage) as the independent variable across 60 quarters. The regression output shows: Coefficient = 3.2, Std. Error = 0.8, t-value = 4.0. Interpret the coefficient 3.2 in context.",
+    "options": [
+      "A one percentage point increase in operating margin is associated with a 3.2 dollar increase in EPS on average",
+      "Operating margin explains 3.2% of variance in EPS",
+      "The t-statistic is 3.2 times the standard error",
+      "A 3.2% increase in operating margin predicts a one dollar increase in EPS"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient 3.2 means that for each one-unit increase in the independent variable (one percentage point of operating margin), the dependent variable (EPS) increases by 3.2 dollars on average. This is the direct interpretation of a slope coefficient. Option B confuses the coefficient with R-squared. Option C incorrectly interprets the coefficient as a t-statistic component. Option D reverses the relationship and misunderstands units.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla collected data on 150 vehicle sales, running a regression with sale price (in thousands of dollars) as the dependent variable and months since model release as the independent variable. The model shows: predicted price = 68.5 - 1.2 * months. If actual price for a car 10 months after release was 55 thousand dollars, what is the residual?",
+    "options": [
+      "-1.5",
+      "1.5",
+      "56.5",
+      "-56.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "The predicted price at 10 months = 68.5 - 1.2(10) = 68.5 - 12 = 56.5 thousand dollars. The residual = actual - predicted = 55 - 56.5 = -1.5. A common error is calculating the predicted value incorrectly (forgetting to multiply or adding instead of subtracting). Another mistake is computing predicted - actual (which gives +1.5 instead of -1.5), reversing the residual definition.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A coffee chain (Starbucks) runs a regression model in R comparing store profitability (dollars per month) to foot traffic (daily customers) across 200 stores. Summary output shows adjusted R-squared = 0.58 with 5 independent variables. If they add 2 more variables and adjusted R-squared drops to 0.56, what is the most likely explanation?",
+    "options": [
+      "The new variables are not contributing enough explanatory power relative to the penalty for added complexity",
+      "The model's prediction error has increased significantly",
+      "The original model was overfitted",
+      "There is perfect multicollinearity among the new variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R-squared penalizes the addition of variables that don't contribute meaningfully to explaining variance. When adjusted R-squared decreases despite adding variables, the new variables add little value relative to the complexity cost. This doesn't mean prediction error necessarily increased in absolute terms (option B), that the original model was overfit (option C—overfitting usually shows high R² with poor validation), or that there is perfect multicollinearity (option D—that would cause coefficient estimation issues, not necessarily lower adjusted R²).",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst runs: model <- lm(quarterly_sales ~ price + promotion_budget + competitor_price, data = target_data) with 120 observations. The correlation between price and competitor_price is 0.92. What is the primary concern with this model, and what should be investigated?",
+    "options": [
+      "Multicollinearity between price and competitor_price; check variance inflation factors (VIF)",
+      "The model violates the linearity assumption",
+      "There are likely outliers inflating the R-squared value",
+      "The dependent variable is not normally distributed"
+    ],
+    "correctIndex": 0,
+    "explanation": "A correlation of 0.92 between two independent variables indicates severe multicollinearity, which inflates standard errors and makes coefficient estimates unstable. VIF (variance inflation factor) should be checked in R using vif(model) from the car package. Multicollinearity is not about linearity assumption (option B), outliers (option C—though they can be present), or normality of the dependent variable (option D). This is a classic multicollinearity detection problem.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital system fits a regression model in R predicting patient recovery time (days) using patient age, severity score (1-100), and comorbidity count. Model 1 (with all three variables): R² = 0.68, Model 2 (excluding age): R² = 0.66. The analyst concludes that age is not important because R² dropped by only 0.02. What is the flaw in this reasoning?",
+    "options": [
+      "A drop in R² of 0.02 could still represent a meaningful reduction in explanatory power if sample size is large, and the significance of age should be tested via hypothesis testing, not just R² comparison",
+      "R² should never decrease when removing variables",
+      "Age must be multicollinear with the other variables",
+      "The model should use adjusted R² instead, which would not drop"
+    ],
+    "correctIndex": 0,
+    "explanation": "The analyst commits two errors: (1) relying on raw R² change rather than statistical significance testing via coefficient t-tests or F-tests, and (2) not considering that even small R² drops can be significant depending on sample size and the magnitude of the age coefficient. Proper evaluation uses hypothesis tests on the age coefficient. Option B is wrong (R² can increase or decrease when removing variables). Option C is not necessarily true (omitting variables causes bias, not necessarily multicollinearity). Option D is incorrect; adjusted R² can also drop when removing important variables.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An automotive company runs two competing models in R predicting vehicle fuel efficiency (MPG): Model A uses 4 predictors with R² = 0.72; Model B uses 8 predictors with R² = 0.73. The residual standard error (RSE) for Model A is 2.1 MPG, and for Model B is 2.0 MPG. Which model is preferable, and why?",
+    "options": [
+      "Model A; it achieves similar predictive accuracy with fewer variables, reducing overfitting risk and improving interpretability",
+      "Model B; it has slightly higher R² and lower RSE, indicating superior fit",
+      "They are equally good; R² values are nearly identical",
+      "Model B; with 8 predictors, it captures more nuance in fuel efficiency factors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model A is preferable because it achieves nearly identical predictive performance (R² = 0.72 vs 0.73, and RSE difference of 0.1 is negligible) with half the variables. This follows the principle of parsimony: simpler models are preferred when predictive accuracy is similar, due to lower overfitting risk, better generalization, and easier interpretation. Option B confuses marginal improvements in R² with actual superiority—the improvement is minimal. Option D falsely assumes more variables always capture more useful information. This is a common misconception in model selection.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Amazon runs a regression in R with 500 e-commerce transactions predicting order value (dollars) using product category, customer age, and purchase frequency. The model output shows a coefficient of -0.15 for a categorical variable 'Electronics' with p-value = 0.18. The analyst states: 'Since p > 0.05, Electronics has no effect on order value.' What is incorrect about this conclusion?",
+    "options": [
+      "Failing to reject the null hypothesis does not prove the variable has no effect; it means there is insufficient evidence at the 5% level to conclude there is an effect. The true effect could be non-zero but smaller than the study can detect.",
+      "With 500 observations, the p-value of 0.18 is automatically invalid",
+      "A negative coefficient means the variable is harmful and should be removed regardless of p-value",
+      "The conclusion is correct; p-value determines whether a variable exists in the data"
+    ],
+    "correctIndex": 0,
+    "explanation": "This addresses a critical statistical misconception: p > 0.05 means 'not significant,' not 'no effect.' The analyst confuses failing to reject the null with proving the null. There may be a real negative effect of -0.15 on order value for Electronics, but the sample size or effect variability prevents detection at the 5% significance level. Option B is wrong (500 observations is adequate). Option C misinterprets the coefficient sign (negative just means direction). Option D is the exact misconception being tested.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company fits a regression model in R predicting annual premium claims (in thousands) with 300 policyholders using age, risk score (0-100), and prior claims (count). When plotting residuals vs. fitted values, the analyst observes a clear fan-shaped pattern (residuals spread increases as fitted values increase). What does this violate, and what should be done?",
+    "options": [
+      "The homoscedasticity assumption; consider a variance-stabilizing transformation such as log(claims) or use robust standard errors",
+      "The linearity assumption; add polynomial terms for age and risk score",
+      "The independence assumption; use time-series methods or cluster standard errors",
+      "The normality assumption; the model predictions are invalid"
+    ],
+    "correctIndex": 0,
+    "explanation": "A fan-shaped residual plot indicates heteroscedasticity (non-constant variance), violating the homoscedasticity assumption. This can be addressed by transforming the dependent variable (log transformation is common for claims data) or using robust standard errors via vcovHC() in R. Option B addresses linearity (which would show a curved pattern). Option C addresses independence (which would show patterns by observation order). Option D is incorrect; heteroscedasticity violates an assumption but doesn't invalidate predictions, though inference (confidence intervals, p-values) becomes unreliable.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "You run the command: confint(model, level = 0.95) in R and get a 95% confidence interval for a coefficient of [1.5, 3.2]. Which statement is the correct interpretation?",
+    "options": [
+      "We are 95% confident that the true population coefficient lies between 1.5 and 3.2",
+      "There is a 95% probability that the true coefficient is 2.35 (the midpoint)",
+      "95% of observed data points fall within this interval",
+      "If we repeated sampling infinitely, 95% of confidence intervals would contain the true coefficient"
+    ],
+    "correctIndex": 0,
+    "explanation": "The first interpretation is the practical (frequentist) interpretation: given our data, we construct an interval [1.5, 3.2] that has a 95% probability of containing the true coefficient under repeated sampling. Option B incorrectly treats the true coefficient as a random variable with a point probability. Option C confuses the confidence interval for a coefficient with prediction intervals for observations. Option D is technically closer but more complicated; the simpler interpretation in Option A is standard practice and widely accepted in business contexts.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

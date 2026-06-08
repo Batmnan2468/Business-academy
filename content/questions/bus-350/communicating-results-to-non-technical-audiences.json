@@ -1,0 +1,197 @@
+[
+  {
+    "question": "When presenting quarterly revenue results to the board of directors at Starbucks, which visualization would be most effective for showing revenue growth from Q1 ($8.2B) to Q4 ($9.7B)?",
+    "options": [
+      "A line chart showing the trend across all four quarters",
+      "A pie chart dividing the total annual revenue",
+      "A scatter plot of individual store sales",
+      "A heat map of geographic regions"
+    ],
+    "correctIndex": 0,
+    "explanation": "A line chart clearly shows trends over time, which is exactly what non-technical stakeholders need to understand revenue progression. A pie chart (option B) shows composition, not trends—it's a common mistake to use pie charts for temporal data, and while it shows revenue breakdown, directors care about the growth trajectory, not just the final distribution.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase needs to communicate that the bank's loan default rate increased from 2.3% to 3.1%. Which statement most clearly explains this change to non-technical executives?",
+    "options": [
+      "The default rate increased by 0.8 percentage points",
+      "The default rate increased by 34.8%",
+      "The default rate increased by 8 basis points",
+      "The default rate increased by 1.2 standard deviations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-technical stakeholders understand 'percentage points'—the absolute difference (3.1% − 2.3% = 0.8 percentage points). Option B (34.8%) is a common error because it calculates the relative change (0.8/2.3 = 34.8%), which confuses executives. Option C uses 'basis points,' jargon they may not understand, and option D invokes statistics unnecessarily.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary reason to avoid using a regression coefficient (e.g., β = 0.847) in a presentation to non-technical stakeholders at Microsoft?",
+    "options": [
+      "Regression coefficients are difficult to interpret without statistical training",
+      "Regression coefficients are always inaccurate",
+      "Non-technical audiences have no interest in statistical relationships",
+      "Regression coefficients cannot be positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression coefficients require statistical knowledge to interpret meaningfully—non-technical stakeholders don't have that background. Option B is false; regression coefficients are not inherently inaccurate. Option C is untrue; stakeholders care about relationships, but they need them in plain language. Option D is incorrect; coefficients can absolutely be positive.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Coca-Cola, the marketing team presents that customer satisfaction improved from 72% to 79%. How should the analyst frame this for the CEO?",
+    "options": [
+      "Satisfaction increased by 7 percentage points, representing a 9.7% relative improvement",
+      "Satisfaction increased by 9.7 percentage points",
+      "Satisfaction increased by 7%, which is statistically significant",
+      "Satisfaction improved by moving from the 72nd percentile to the 79th percentile"
+    ],
+    "correctIndex": 0,
+    "explanation": "This answer provides both the absolute change (easy to understand) and the relative context (useful for business perspective). Option B only gives the absolute difference without context. Option C misuses 'percentage' and adds unnecessary significance language without knowing sample size. Option D incorrectly interprets the percentages as percentiles.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When should a business analyst use simple language like 'stayed about the same' instead of reporting the exact statistical value to stakeholders?",
+    "options": [
+      "When the change is very small relative to the overall measure and the precise number doesn't affect the business decision",
+      "When the analyst is unsure about the calculation",
+      "Always, because statistics confuse non-technical people",
+      "Never, because precision is always required"
+    ],
+    "correctIndex": 0,
+    "explanation": "Simplification is appropriate when precision doesn't change the decision or when noise is high. For example, if quarterly revenue changed 0.2%, saying 'flat' is more informative than drowning in false precision. Option B represents poor practice. Option C is too extreme—context matters. Option D ignores the purpose of communication, which is understanding, not just data reporting.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Netflix analyst calculates that subscriber churn has a correlation of r = −0.68 with customer support response time. The CFO asks, 'Does this mean support response time causes churn?' How should the analyst respond?",
+    "options": [
+      "Not necessarily; correlation shows a relationship but doesn't prove causation. Other factors might be at play.",
+      "Yes; the negative correlation proves that slow support causes churn.",
+      "No; a correlation of −0.68 is too weak to indicate any relationship.",
+      "Maybe; we would need to know the p-value to say for certain."
+    ],
+    "correctIndex": 0,
+    "explanation": "Correlation does not imply causation—this is the most critical distinction for non-technical audiences. Option B is the common misconception that ruins many business decisions. Option C misinterprets strength; −0.68 is actually a moderate-to-strong relationship. Option D, while statistically true, confuses the CFO with further jargon when the main point is about causation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Google, a data analyst reports that the average response time for a new feature is 2.3 seconds with a standard deviation of 4.1 seconds. Why might the CFO find this suspicious?",
+    "options": [
+      "The standard deviation is larger than the mean, suggesting either extreme outliers or a skewed distribution that makes the mean misleading as a central summary",
+      "The mean should always be larger than the standard deviation",
+      "A 2.3-second response time is too slow for modern web applications",
+      "The standard deviation cannot be expressed in seconds"
+    ],
+    "correctIndex": 0,
+    "explanation": "When SD > mean, it signals that the data is highly spread out, likely skewed, or has extreme values. The mean alone becomes an unreliable summary—the CFO should ask for a median or a distribution chart. Option B is false; mathematically, SD can exceed the mean. Option C is a domain opinion, not a statistical issue. Option D is false; SD is always in the same units as the data.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla reports that its vehicle safety rating improved by 15% this year. To evaluate this claim for non-technical investors, what additional information is most critical?",
+    "options": [
+      "The baseline safety rating and what 'safety rating' specifically measures (e.g., crash test score, accidents per 100,000 miles)",
+      "The sample size of vehicles tested",
+      "The margin of error for the improvement estimate",
+      "The number of competitors with similar improvements"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 15% improvement means nothing without knowing the starting point and definition. A 15% improvement from 60 to 69 is different from 90 to 103.5. Non-technical stakeholders need clarity on what changed concretely. Option B (sample size) is statistically relevant but less critical for a stakeholder understanding. Option C (margin of error) is technical jargon. Option D (competitors) is strategic but doesn't clarify the claim itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Amazon manager presents a chart showing daily sales with a sharp spike on one particular day. A skeptical board member asks if the spike is 'real' or 'just noise.' What should the analyst explain?",
+    "options": [
+      "Whether the spike is unusually large compared to the normal variation in daily sales (e.g., using a statistical control chart or z-score concept) and whether there's a known business reason for it",
+      "The p-value for the spike to determine if it's statistically significant",
+      "The average daily sales to see if the spike represents a 'big' percentage increase",
+      "The day of the week, since spikes are always higher on Mondays"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 'real' signal requires both statistical unusualness (compared to normal variation) AND a business explanation (e.g., a promotion, holiday, or media event). Option B introduces jargon without answering the practical question. Option C doesn't distinguish signal from noise. Option D is an unjustified assumption—spikes vary by context and business model.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Procter & Gamble's analyst shows a confidence interval for quarterly earnings as '$8.2B to $9.1B' and states, 'There is a 95% probability that next quarter's earnings will fall in this range.' Is this statement correct for a non-technical board?",
+    "options": [
+      "No; a confidence interval describes the range of estimated true parameters based on sample data, not the probability of a future observation. This is a common misinterpretation.",
+      "Yes; a 95% confidence interval means there is a 95% chance the true value is in that range.",
+      "No; confidence intervals are only valid for sample means, not company earnings.",
+      "Yes; but only if the earnings data is normally distributed."
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a critical misconception. A 95% CI means that if we repeated our estimation procedure many times, 95% of intervals would contain the true parameter—not that there's a 95% chance future earnings land there. Option B is the textbook frequentist misinterpretation that misleads executives. Option C is false; CIs apply broadly. Option D adds a condition that doesn't solve the interpretation error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company analyst reports that Drug A has a 'success rate of 68%' in clinical trials with n=500 patients, while Drug B has a 'success rate of 71%' with n=45 patients. Which statement should the analyst communicate to non-technical stakeholders?",
+    "options": [
+      "Drug A's estimate is more reliable because it's based on a much larger sample, even though Drug B shows a slightly higher point estimate. We should account for sampling variability.",
+      "Drug B is better because 71% is higher than 68%.",
+      "The difference is 3 percentage points, so Drug B is clearly superior.",
+      "The success rates are so close that they are statistically equivalent."
+    ],
+    "correctIndex": 0,
+    "explanation": "The larger sample (n=500) gives Drug A a more stable estimate; Drug B's 71% is more uncertain because of the tiny sample. A higher point estimate with low sample size is less trustworthy. Options B and C ignore sampling variability—a classic error that misleads stakeholders into thinking small differences are meaningful. Option D uses statistical language without computing actual confidence intervals.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At Wells Fargo, a compliance officer finds that 3 out of 50 loan applications (6%) from a particular zip code were fraudulent, compared to 2 out of 1000 (0.2%) overall. The officer claims this is 'proof of area-based fraud risk.' What is the main flaw in this reasoning?",
+    "options": [
+      "The small sample size (n=50) means the 6% rate has high sampling variability and could easily occur by random chance; a larger sample is needed before making an inference.",
+      "The overall fraud rate is too low to detect any real pattern.",
+      "A 6% fraud rate is not high enough to be considered 'proof' of anything.",
+      "The zip code data is confounded by socioeconomic factors that the officer didn't measure."
+    ],
+    "correctIndex": 0,
+    "explanation": "With only 50 applications, random fluctuation alone could easily produce a 6% rate when the true rate is much lower. We need a much larger sample from that zip code to separate signal from noise. Option B is incorrect reasoning. Option C avoids the statistical problem. Option D identifies a potential confound but doesn't address the immediate issue of sample size and variability, which is the primary concern for non-technical stakeholders to understand.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Delta Airlines analyst presents two claims: (1) 'Baggage loss decreased by 12% this year' and (2) 'Customer satisfaction increased from 73% to 75%.' The CEO asks which improvement is more important. What should the analyst say?",
+    "options": [
+      "It depends on the baseline rates and business impact; a 12% drop from 0.8% baggage loss (to 0.7%) is tiny, while a 2-point satisfaction increase is substantial if it drives revenue. Absolute changes matter more than percentages.",
+      "The 12% improvement is bigger because it's a larger percentage change.",
+      "The 2-point satisfaction increase is bigger because percentages are less reliable.",
+      "Both improvements are equally important because they both show positive change."
+    ],
+    "correctIndex": 0,
+    "explanation": "Percentage changes can hide small absolute changes. A 12% drop from a tiny baseline (0.8%) is negligible, while a 2-point satisfaction increase affects every customer and likely revenue. Stakeholders must evaluate both context and business impact, not just the percentage. Option B falls into the percentage trap. Option C rejects percentages too broadly. Option D ignores material business differences.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "At LinkedIn, an analyst communicates to the VP of Sales that the correlation between paid ads and new sign-ups is r = 0.92 over the last 24 months. The VP immediately budgets more for ads. What critical step did the analyst miss?",
+    "options": [
+      "Checking whether a confounding variable (e.g., seasonality, overall market growth, product improvements) might explain both variables, and whether the relationship is stable over time or driven by recent periods",
+      "Reporting the p-value to confirm the correlation is statistically significant",
+      "Computing the coefficient of determination (R²) to show that ads explain 85% of variation",
+      "Removing outliers to ensure the correlation is robust"
+    ],
+    "correctIndex": 0,
+    "explanation": "An r = 0.92 is suspiciously high and warrants scrutiny. Seasonality and platform growth are plausible confounds that could drive both ads and sign-ups independently. The analyst must check if the relationship holds in all periods (not just a boom period) and account for other factors. Option B is true but doesn't address causation. Option C is a valid calculation but doesn't address confounding. Option D (outlier removal) is a separate check that doesn't identify confounds.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Walmart reports that 'inventory turnover improved by 8.3% this quarter, with 95% confidence that the true improvement is between 5.2% and 11.4%.' Which audience statement is most accurate?",
+    "options": [
+      "We estimate inventory turns 8.3% faster; our analysis gives us high confidence this improvement is real (probably between 5.2% and 11.4%), though actual future performance may vary.",
+      "We are 95% certain that inventory improved by exactly 8.3%.",
+      "There is a 95% probability that next quarter's improvement will be between 5.2% and 11.4%.",
+      "The inventory improvement is statistically significant because the confidence interval doesn't include 0%."
+    ],
+    "correctIndex": 0,
+    "explanation": "Option A correctly explains the estimate and confidence interval to a non-technical audience without overstating certainty. Option B claims false precision. Option C misinterprets the CI as predicting future variation (not its purpose). Option D uses 'statistically significant' jargon and, while technically true, doesn't explain it in plain language.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

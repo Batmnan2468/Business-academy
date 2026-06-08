@@ -1,0 +1,184 @@
+[
+  {
+    "question": "A business analyst at Amazon reviews customer purchase data to identify trends in seasonal demand. What is the primary purpose of this analytics activity?",
+    "options": [
+      "Descriptive analytics — summarizing what happened in the past",
+      "Predictive analytics — forecasting future customer behavior",
+      "Prescriptive analytics — recommending specific business actions",
+      "Diagnostic analytics — explaining why customer churn occurred"
+    ],
+    "correctIndex": 0,
+    "explanation": "Descriptive analytics examines historical data to understand patterns; identifying seasonal trends is a backward-looking summary. Predictive analytics would forecast future demand (tempting but requires a forward projection step), whereas the question only describes analyzing past purchase data.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is NOT a core responsibility of a business analyst role at Microsoft?",
+    "options": [
+      "Writing production code and deploying software features",
+      "Gathering requirements from stakeholders and documenting business processes",
+      "Creating dashboards and reports for decision-makers",
+      "Analyzing data to identify improvement opportunities"
+    ],
+    "correctIndex": 0,
+    "explanation": "Business analysts focus on requirements, documentation, reporting, and analysis — not writing and deploying production code, which is a software engineer or developer responsibility. Writing code is a common misconception about the BA role.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A data analyst at Walmart earns $65,000 annually, while a senior data scientist at the same company earns $145,000 annually. What is the approximate salary premium for the senior data scientist role?",
+    "options": [
+      "55%",
+      "123%",
+      "80,000%",
+      "220%"
+    ],
+    "correctIndex": 1,
+    "explanation": "The premium is ($145,000 − $65,000) / $65,000 = $80,000 / $65,000 ≈ 1.23 or 123%. The 55% option confuses the ratio in the opposite direction; 80,000% is a misplaced decimal error; 220% incorrectly adds the base salary.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A market researcher for Tesla defines business analytics as 'the application of statistical and computational methods to uncover patterns and insights from data.' Is this definition correct?",
+    "options": [
+      "Yes, this captures the full scope of business analytics",
+      "No, it omits the action-oriented goal of enabling better decisions",
+      "No, it only describes descriptive analytics, not predictive or prescriptive",
+      "Yes, but it is too technical for non-technical stakeholders"
+    ],
+    "correctIndex": 1,
+    "explanation": "While the definition includes key technical elements, it misses the purpose: business analytics is about using insights to drive decisions and action. The most tempting wrong answer (C) is partially true but incorrect because the definition does not explicitly limit itself to descriptive analytics — it could encompass all types.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A JPMorgan Chase business analyst reviews quarterly loan approval rates over the past 3 years. What type of analytics is being performed?",
+    "options": [
+      "Prescriptive analytics to recommend new lending policies",
+      "Descriptive analytics to understand historical approval patterns",
+      "Predictive analytics to forecast next quarter's approval rate",
+      "Diagnostic analytics to determine why approvals are declining"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reviewing historical quarterly data is descriptive — it summarizes what happened. Predictive would require a forecast model; prescriptive would recommend actions; diagnostic would explain causes. Reviewing past rates is fundamentally backward-looking description.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail analytics team at Target discovers that customers who purchase Item A (average basket: $87) are 2.5 times more likely to purchase Item B than customers who do not purchase Item A. The team wants to use this insight to increase total revenue. Which analytics approach should they recommend next?",
+    "options": [
+      "Descriptive analytics to confirm the relationship holds in other regions",
+      "Predictive analytics to forecast next month's revenue from Item B",
+      "Prescriptive analytics to design a product bundle and promotion strategy",
+      "Diagnostic analytics to determine why this relationship exists"
+    ],
+    "correctIndex": 2,
+    "explanation": "The relationship is already discovered (descriptive finding). To increase revenue, the team must recommend specific actions — bundling products, pricing strategies, or promotions — which is prescriptive. Predictive would only forecast, not drive action; diagnostic would explain but not solve the business problem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce analyst at Shopify analyzes customer purchase history and builds a model that predicts which customers will make a purchase in the next 30 days with 78% accuracy. However, the company implements the model and discovers the actual prediction accuracy is only 54% on new, real-world data. What is the most likely explanation?",
+    "options": [
+      "The 78% accuracy was calculated on training data, and the model overfitted to historical patterns",
+      "The 54% accuracy proves the model is completely useless and should be discarded",
+      "External factors like holiday sales changed customer behavior unpredictably",
+      "The prediction window was too short; 30 days is not enough time"
+    ],
+    "correctIndex": 0,
+    "explanation": "A drop from 78% to 54% accuracy suggests overfitting — the model learned the training data too well but fails on new data. This is a common machine learning problem. While external factors (C) are tempting, the 24-point gap is diagnostic of overfitting, not random variation. The model is not useless (B) but needs tuning.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's analytics team is evaluating two candidate insights for video recommendation: Insight X shows that 45% of subscribers watch comedy after 9 PM, and Insight Y shows that subscribers who watch documentary films are 3.2 times more likely to upgrade to Premium. Which insight is more strategically valuable for Netflix's business?",
+    "options": [
+      "Insight X because it has a higher percentage (45% vs. a multiplier)",
+      "Insight Y because it directly links viewer behavior to revenue-generating actions",
+      "Insight X because it applies to a broader audience (45% of all subscribers)",
+      "Both are equally valuable and should be acted on simultaneously"
+    ],
+    "correctIndex": 1,
+    "explanation": "Insight Y connects to Premium upgrades, directly impacting revenue, making it strategically more valuable. Insight X describes behavior but does not link to business outcomes. Percentage size (A) is misleading — a smaller group with high-value behavior is better than a larger low-value behavior. The tempting error is prioritizing percentages over business impact.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services firm collects 500,000 customer transactions monthly. A business analyst proposes storing all raw transaction data in an Excel file. Why is this approach problematic for analytics?",
+    "options": [
+      "Excel cannot handle more than 100,000 rows of data",
+      "Excel files are unencrypted and violate compliance regulations like GDPR",
+      "Excel lacks version control, scalability, and automation capabilities needed for enterprise analytics",
+      "The analyst should use Python instead of Excel"
+    ],
+    "correctIndex": 2,
+    "explanation": "Excel cannot efficiently manage 500,000+ rows, lacks version control and audit trails, and does not support automated pipelines or complex queries. While B is true in some regulatory contexts, the core issue is technical — Excel is not designed for enterprise-scale analytics. Option D (use Python) is a tool choice, not an explanation of Excel's limitation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analytics team at Coca-Cola tracks the cost per acquisition (CPA) for a digital ad campaign: Month 1: $12, Month 2: $15, Month 3: $18. The team concludes the campaign is becoming less efficient and recommends pausing it. However, further analysis reveals that total customers acquired increased 40% from Month 1 to Month 3, while marketing spend increased 20%. Should the campaign be paused?",
+    "options": [
+      "Yes, because CPA is rising and efficiency is declining",
+      "No, because return on investment (ROI) is improving despite rising CPA",
+      "Yes, because the cost per customer is out of control",
+      "No, because the campaign will eventually break even"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rising CPA is concerning in isolation, but ROI is actually improving: 40% customer growth on 20% spend increase is favorable. The most tempting wrong answer (A) ignores the absolute business outcome — more customers are being acquired profitably. CPA alone is a misleading metric without context of total volume and profitability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics analyst at FedEx develops a model to predict package delivery delays. The model achieves 92% overall accuracy on historical data. However, 98% of packages in the dataset arrived on time, and only 2% were delayed. What critical flaw exists in using 92% accuracy as the sole performance metric?",
+    "options": [
+      "The model is overfitting and needs more training data",
+      "A model that predicts all packages arrive on time would achieve 98% accuracy without any predictive power — accuracy is misleading when classes are imbalanced",
+      "The model is too pessimistic and overestimates delays",
+      "The sample size is too small; more years of data are needed"
+    ],
+    "correctIndex": 1,
+    "explanation": "With 98% of packages on-time, a naive model predicting 'on-time' for everything achieves 98% accuracy without any predictive value. The 92% accuracy is misleading because it does not measure how well the model identifies the rare 2% delayed packages. Metrics like precision, recall, or F1-score are needed. Overfitting (A) is a common misconception but not the core issue here.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare analytics consultant at Humana is hired to reduce hospital readmission costs. The consultant develops a predictive model with 85% accuracy in identifying high-risk patients. The hospital implements intervention programs for flagged patients at $2,000 per patient. However, 60% of flagged patients would not have been readmitted anyway, resulting in wasted intervention spending. What is the core analytics problem?",
+    "options": [
+      "The model accuracy of 85% is too low; the hospital needs 95% accuracy",
+      "The model has high false positive rates, and the hospital lacks a cost-benefit analysis to justify interventions",
+      "The hospital should only intervene on patients with predicted readmission probability above 80%",
+      "The intervention program is too expensive; it should cost less than $1,500 per patient"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 60% false positive rate means 60% of interventions are wasted, but the real issue is cost-benefit: are the $2,000 interventions preventing readmissions that would cost more than $2,000 to treat? This requires a cost-benefit analysis, not just accuracy. Option A assumes higher accuracy fixes false positives, but that is not guaranteed. Option C suggests a threshold adjustment, which could help but does not address the fundamental missing analysis.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance analytics manager at Allstate is comparing two career paths: Path A (current role: Business Analyst, $72,000; promotion to Senior Analyst in 4 years: $95,000) vs. Path B (transition to Data Science, $85,000 starting; Senior Data Scientist in 4 years: $130,000). Assuming 3% annual raises in both paths, which path yields higher total compensation over 4 years?",
+    "options": [
+      "Path A yields approximately $380,000 total",
+      "Path B yields approximately $435,000 total",
+      "Path A yields approximately $427,000 total",
+      "Path B yields approximately $468,000 total"
+    ],
+    "correctIndex": 1,
+    "explanation": "Path A: Year 1=$72k, Year 2=$74.2k, Year 3=$76.4k, Year 4=$78.7k; Total≈$301k (before promotion), then $95k final year ≈ $396k. Path B: Year 1=$85k, Year 2=$87.6k, Year 3=$90.2k, Year 4=$92.9k; Total ≈$356k (before promotion), then $130k final year ≈ $486k. The closest answer is Path B ≈$435k–468k range. Option A underestimates Path A; Option C confuses compounding.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech startup discovers through analytics that users who receive personalized product recommendations have a 35% higher conversion rate (converting at 8.4% vs. 6.2% for non-personalized users). The Chief Analytics Officer proposes launching personalization for all 2 million users immediately, claiming it will increase conversions by 35%. What analytical assumption is flawed?",
+    "options": [
+      "The startup does not have enough data; it needs 5 million users for statistical significance",
+      "The 35% improvement observed in a subset may not generalize to all users due to selection bias or external confounding factors",
+      "Personalization algorithms are too expensive to scale to 2 million users",
+      "A 35% lift is too small; the startup should wait for at least 50% improvement before rolling out"
+    ],
+    "correctIndex": 1,
+    "explanation": "The observed 35% improvement came from a specific group (likely early adopters or high-intent users) and may not hold for all 2 million users due to selection bias, regression to the mean, or external factors. This is a common analytics mistake: assuming a treatment effect generalizes beyond its original context. Option A is about sample size but not the core flaw; Option C is an operational concern, not analytical; Option D is arbitrary.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

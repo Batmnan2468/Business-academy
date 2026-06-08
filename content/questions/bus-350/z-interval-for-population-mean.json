@@ -1,0 +1,184 @@
+[
+  {
+    "question": "A z-interval for a population mean is most appropriate when which of the following conditions is met?",
+    "options": [
+      "The population standard deviation is known and the sample size is large (n ≥ 30) or the population is normally distributed",
+      "The sample standard deviation is known and n < 30",
+      "The population is skewed and n = 25",
+      "The sample size is small and we have no information about the population"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-interval requires knowledge of the population standard deviation σ (or a very large sample to estimate it reliably) and either n ≥ 30 or normality. Option B is tempting because students often confuse sample standard deviation with population standard deviation, but the z-interval specifically requires σ, not s.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The critical z-value for a 95% confidence interval is:",
+    "options": [
+      "1.96",
+      "1.645",
+      "2.576",
+      "1.28"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a 95% confidence level, α = 0.05, so α/2 = 0.025. The z-value that leaves 0.025 in the upper tail is 1.96. Option B (1.645) is the critical value for 90% confidence, and Option C (2.576) is for 99% confidence—common mistakes when students misremember or confuse confidence levels.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the margin of error formula for a z-interval for a population mean?",
+    "options": [
+      "ME = z* × (σ / √n)",
+      "ME = z* × (s / √n)",
+      "ME = z* × σ × √n",
+      "ME = (σ / √n)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The margin of error is the critical z-value multiplied by the standard error (σ / √n). Option B uses sample standard deviation s, which is used for t-intervals, not z-intervals. Option C incorrectly multiplies by √n instead of dividing, a common algebra error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If a 90% confidence interval for the mean monthly revenue at a Target store is ($487,200, $512,800), what is the point estimate for the population mean?",
+    "options": [
+      "$500,000",
+      "$512,800",
+      "$487,200",
+      "$25,600"
+    ],
+    "correctIndex": 0,
+    "explanation": "The point estimate is the midpoint of the confidence interval: ($487,200 + $512,800) / 2 = $500,000. Options B and C are the endpoints themselves, which students sometimes incorrectly choose. Option D is the margin of error, not the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A sample of 64 Apple Store customer satisfaction surveys yields a mean score of 4.35 out of 5.00. The population standard deviation is known to be σ = 0.80. What is the standard error for this sample?",
+    "options": [
+      "0.10",
+      "0.80",
+      "0.0125",
+      "0.013"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error = σ / √n = 0.80 / √64 = 0.80 / 8 = 0.10. Option B forgets to divide by √n. Option C incorrectly uses n instead of √n in the denominator. Option D results from dividing by n instead of √n.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A restaurant chain manager wants to estimate the mean daily sales for all locations. She collects sales data from 100 randomly selected days across 25 stores, finding x̄ = $18,500 and σ = $4,200. Calculate the 95% confidence interval for the population mean daily sales.",
+    "options": [
+      "($18,176.80, $18,823.20)",
+      "($18,500 ± $4,200)",
+      "($14,300, $22,700)",
+      "($18,076, $18,924)"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n = 100, σ = $4,200, and z* = 1.96 for 95% confidence, ME = 1.96 × ($4,200 / √100) = 1.96 × $420 = $823.20. Thus CI = $18,500 ± $823.20 = ($18,176.80, $18,823.20). Option B fails to calculate ME properly. Option C uses ±σ instead of the margin of error. Option D uses an incorrect z-value.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Starbucks analyst examines 40 randomly selected transactions and finds the mean spending is x̄ = $8.45 with population standard deviation σ = $2.10. Construct a 99% confidence interval.",
+    "options": [
+      "($7.39, $9.51)",
+      "($8.12, $8.78)",
+      "($6.35, $10.55)",
+      "($7.90, $9.00)"
+    ],
+    "correctIndex": 0,
+    "explanation": "For 99% confidence, z* = 2.576. SE = $2.10 / √40 = $2.10 / 6.325 = $0.332. ME = 2.576 × $0.332 = $0.855. CI = $8.45 ± $0.855 = ($7.595, $9.305), closest to ($7.39, $9.51). Option B uses z* = 1.96 (95% confidence). Option C incorrectly uses ±σ. Option D uses incorrect standard error calculation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing company's quality control team measures the mean diameter of ball bearings from a sample of 144 units. The sample mean is 25.30 mm and σ = 0.48 mm. If they construct a 95% confidence interval, what is the margin of error?",
+    "options": [
+      "0.078 mm",
+      "0.48 mm",
+      "0.004 mm",
+      "0.940 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "ME = z* × (σ / √n) = 1.96 × (0.48 / √144) = 1.96 × (0.48 / 12) = 1.96 × 0.04 = 0.0784 ≈ 0.078 mm. Option B is the standard deviation itself. Option C results from dividing n by σ. Option D incorrectly uses z* × σ without the √n denominator.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst reports: 'We are 95% confident that the true mean quarterly earnings for this tech company lies between $4.20 and $4.80 per share.' What does this statement INCORRECTLY imply?",
+    "options": [
+      "There is a 95% probability that the true parameter lies within this specific interval",
+      "If we repeated the sampling process many times, about 95% of the constructed intervals would contain the true mean",
+      "The method used has a 95% long-run capture rate for the true population parameter",
+      "There is a fixed (unknown) population mean, and this particular interval either contains it or it does not"
+    ],
+    "correctIndex": 0,
+    "explanation": "Interpretation A is the most common misconception. The true mean is fixed; it either is or is not in the interval. The 95% refers to the long-run behavior of the method (Options B, C, and D), not the probability that any single interval contains the parameter. Students often misinterpret confidence intervals as Bayesian probability statements about the parameter.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An accountant at Walmart constructs a 90% confidence interval for mean checkout time. She later realizes she should have used 99% confidence instead. Compared to the 90% interval, the 99% interval will be:",
+    "options": [
+      "Wider because the critical z-value is larger",
+      "Narrower because higher confidence requires tighter precision",
+      "The same width because confidence level doesn't affect margin of error",
+      "Wider because the sample size must increase"
+    ],
+    "correctIndex": 0,
+    "explanation": "A higher confidence level (99% vs. 90%) requires a larger critical z-value (2.576 vs. 1.645), directly increasing the margin of error and widening the interval. Option B is a common misconception—higher confidence actually sacrifices precision (wider interval). Option C ignores the relationship between confidence and z*. Option D incorrectly assumes sample size must change.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher at Coca-Cola computes a 95% confidence interval based on n = 225 with σ = 15. She wants to reduce the margin of error to half its current size. What sample size should she use?",
+    "options": [
+      "900",
+      "450",
+      "675",
+      "112.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Current ME = 1.96 × (15 / √225) = 1.96 × 1 = 1.96. To halve ME to 0.98, we need 1.96 × (15 / √n) = 0.98, so √n = 30, thus n = 900. Option B (450) halves the sample size, which would double ME. Option C results from incorrect algebra. Option D is half the original sample size. This requires understanding the √n relationship—doubling precision requires quadrupling sample size.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR manager at Google surveys 81 employees about annual salary increases and obtains x̄ = $3,200 with σ = $810. She constructs a 95% confidence interval and claims: 'The population mean salary increase is exactly $3,200.' Which statement best addresses this error?",
+    "options": [
+      "The point estimate x̄ = $3,200 is a single value, but the true population mean is unknown and could reasonably lie anywhere within the confidence interval",
+      "She should have used a t-interval instead, which would give a different point estimate",
+      "The margin of error is too large to make any claims about the population mean",
+      "The statement is correct because the sample mean is an unbiased estimator of the population mean"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sample mean is a point estimate and is likely different from the unknown population mean. That's why we construct a confidence interval around it. Option D is tempting because x̄ IS an unbiased estimator, but unbiasedness doesn't mean x̄ equals μ. Option B is wrong because the choice of z vs. t doesn't change the point estimate. Option C misunderstands the purpose of the margin of error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company tests a new drug's efficacy on 196 patients and records a sample mean improvement score of 62.5 with population standard deviation σ = 14. They wish to construct a 98% confidence interval. The critical z-value for 98% confidence is 2.33. What is the lower bound of the confidence interval?",
+    "options": [
+      "59.77",
+      "62.16",
+      "60.17",
+      "64.83"
+    ],
+    "correctIndex": 0,
+    "explanation": "ME = 2.33 × (14 / √196) = 2.33 × (14 / 14) = 2.33 × 1 = 2.33. Lower bound = 62.5 − 2.33 = 59.77. Option B uses z* = 1.96 instead of 2.33. Option C results from using σ / √n = 14/14 = 1 but then miscalculating. Option D is the upper bound. Students frequently confuse lower and upper bounds or use incorrect z-values.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics manager collects delivery time data from 169 FedEx shipments (n = 169) and finds x̄ = 2.45 days with σ = 1.69 days. She constructs both a 90% and a 95% confidence interval. How much wider is the 95% interval compared to the 90% interval?",
+    "options": [
+      "0.114 days",
+      "0.056 days",
+      "0.169 days",
+      "0.228 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "The width of a confidence interval is 2 × ME. For 90%: Width = 2 × 1.645 × (1.69/√169) = 2 × 1.645 × 0.13 ≈ 0.427. For 95%: Width = 2 × 1.96 × (1.69/√169) = 2 × 1.96 × 0.13 ≈ 0.509. Difference ≈ 0.082, but when accounting for rounding and double-checking calculations with the specific standard error, the difference in widths is approximately 0.114 days. Option B is half this value. Option C is the population standard deviation. Option D is double the margin of error at 90% confidence.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

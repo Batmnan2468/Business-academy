@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following is the primary risk of using a truncated y-axis when displaying revenue data for Microsoft's quarterly earnings?",
+    "options": [
+      "It exaggerates small differences and can mislead viewers about actual performance",
+      "It makes the chart harder to read because there are too many grid lines",
+      "It requires more ink to print the chart",
+      "It prevents the use of color coding for different product lines"
+    ],
+    "correctIndex": 0,
+    "explanation": "A truncated y-axis (not starting at zero) amplifies visual differences, making a 5% revenue increase appear as a 50% spike. This is the core misleading chart problem. Option B is incorrect because grid lines are a separate formatting issue unrelated to truncation; option C confuses printing efficiency with data integrity; option D conflates axis design with color schemes.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla reported Q3 2023 net income of $2.95 billion and Q4 2023 net income of $3.12 billion. If a chart displays this data with a y-axis starting at $2.5 billion instead of $0, what is the visual exaggeration factor?",
+    "options": [
+      "Approximately 10× the actual percentage change",
+      "Exactly 2.5× the actual percentage change",
+      "Approximately 5.8× the actual percentage change",
+      "No exaggeration occurs because the baseline is fixed"
+    ],
+    "correctIndex": 2,
+    "explanation": "The true change is ($3.12 - $2.95) / $2.95 = 5.76%. On a truncated axis from $2.5B to $3.5B, the visual bar heights appear proportionally larger relative to the chart's range. The visual percentage appears to be ($3.12 - $2.95) / ($3.5 - $2.5) = 17%, which is 5.8× larger. Option A (10×) is a common overestimate; option B incorrectly assumes the ratio of starting values; option D falsely claims no exaggeration exists.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A marketing analyst at Coca-Cola is preparing a chart comparing three competitor market share percentages: Pepsi 22%, Sprite 8%, and Fanta 5%. The analyst decides to use a logarithmic scale on the y-axis without labeling it as such. Why is this misleading?",
+    "options": [
+      "Logarithmic scales distort perception of proportional differences and must be explicitly labeled to avoid deception",
+      "Logarithmic scales cannot display percentage data",
+      "Logarithmic scales make all values appear equally spaced",
+      "Logarithmic scales require the data to sum to 100%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logarithmic scales compress larger values and expand smaller ones, changing how viewers perceive magnitude relationships. Without a clear label, viewers assume a linear scale and misinterpret the gaps. Option B is false—logs work with percentages; option C is backwards (logs create unequal spacing); option D conflates scaling with data composition requirements. Unlabeled log scales are deceptive precisely because they hide the transformation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a stacked bar chart showing Apple's product revenue (iPhone $196B, Services $85B, Mac $29B, Wearables $41B), what is the primary visual problem if the bars are not arranged in consistent order across time periods?",
+    "options": [
+      "It makes year-over-year trend analysis extremely difficult because segment positions shift",
+      "It requires more colors to distinguish categories",
+      "It violates GAAP accounting standards",
+      "It prevents the use of a legend"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reordering segments in stacked bars breaks visual continuity and forces viewers to hunt for each segment's trend line, which becomes fragmented. Inconsistent ordering is a major source of misleading stacked charts. Option B is unrelated to ordering; option C confuses visualization with accounting standards; option D is false—legends work regardless of order. The core issue is cognitive load and trend distortion.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the term 'data-ink ratio' refer to in the context of avoiding misleading charts?",
+    "options": [
+      "The proportion of visual elements that directly represent data versus decorative elements",
+      "The ratio of colored ink to black ink used in printing",
+      "The amount of space reserved for chart titles and legends",
+      "The number of data points divided by the number of axis labels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data-ink ratio, coined by Edward Tufte, measures efficiency: higher ratios mean less chartjunk and clearer communication. Low ratios (excessive decorations, 3D effects, unnecessary gridlines) can obscure data and mislead. Option B conflates ink types with data representation; option C addresses layout, not data clarity; option D creates a meaningless mathematical formula. High data-ink ratios reduce confusion.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Johnson & Johnson reports vaccination revenue of $11.4 billion in 2022 and $10.8 billion in 2023. An analyst creates a dual-axis chart with vaccination revenue on the left y-axis (scale 0–15B) and competitor Moderna's revenue on the right y-axis (scale 0–20B). Why might this be misleading?",
+    "options": [
+      "Different y-axis scales can distort visual comparison and exaggerate or minimize relative performance",
+      "Dual axes always require approval from the SEC",
+      "Competitor data should never appear on the same chart as company data",
+      "The scale ranges sum to 35B, which exceeds the actual revenue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dual axes with different scales create visual lies: a steeply rising line on the left (0–15B) can look identical to a flat line on the right (0–20B) even though the underlying data differs. This is a classic chart manipulation technique. Option B is false—dual axes have no regulatory restriction; option C is false—comparison charts are standard; option D misunderstands how scale ranges work (they're independent). Mismatched scales enable deception.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which visual design choice most directly causes viewers to overestimate the difference between $48 million and $50 million in quarterly revenue?",
+    "options": [
+      "Using a truncated y-axis that starts at $45 million instead of $0",
+      "Labeling the data points with exact values",
+      "Using a black background instead of white",
+      "Displaying the chart on a mobile device instead of desktop"
+    ],
+    "correctIndex": 0,
+    "explanation": "A truncated axis amplifies perception: a 4.2% increase ($48M→$50M) appears to be a 100% increase when the axis spans $45M–$55M. This is the single most common misleading chart technique. Option B actually reduces deception by adding transparency; option C affects readability, not magnitude perception; option D is a display medium issue unrelated to data distortion. Truncation is the direct culprit.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at Goldman Sachs displays Amazon's stock price movement from $140 to $145 over one month using a 3D cone chart with perspective distortion. What makes this particularly misleading?",
+    "options": [
+      "3D perspective distorts bar heights and obscures actual magnitude relationships through optical illusions",
+      "Cone shapes cannot display monthly data",
+      "3D charts are always more expensive to produce",
+      "Stock prices should only be shown in candlestick format"
+    ],
+    "correctIndex": 0,
+    "explanation": "3D effects bend human visual perception: cones at the front appear larger than equally-tall cones in the back, and perspective angles exaggerate or diminish perceived heights. A 3.6% price increase becomes visually ambiguous. Option B is false—cones can represent any temporal data; option C addresses cost, not misleading-ness; option D, while conventional, doesn't explain why cones are deceptive. 3D is inherently problematic for quantitative comparison.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the key difference between a misleading chart and a chart that is simply poorly designed?",
+    "options": [
+      "A misleading chart intentionally or unintentionally distorts the data's true message; poor design may be hard to read but still accurately represents the data",
+      "Misleading charts use colors, while poorly designed charts do not",
+      "Misleading charts always violate company policy, while poor design does not",
+      "There is no meaningful difference between misleading and poorly designed charts"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critical distinction is integrity: poor design (cluttered labels, bad font) can be fixed without changing the chart's truthfulness. Misleading charts distort actual relationships—whether intentionally (manipulation) or unintentionally (ignorance)—by changing how viewers perceive magnitude, proportion, or trend. Option B is false—color use is orthogonal to accuracy; option C conflates ethics with design quality; option D misses the deception element. Intent and outcome matter differently.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "BMW reports monthly vehicle sales of 156,000 units in January and 158,000 units in February. Which chart design would most accurately represent this 1.3% increase without misleading viewers?",
+    "options": [
+      "A bar chart with y-axis starting at 0 and extending to at least 200,000 units",
+      "A bar chart with y-axis starting at 155,000 and extending to 160,000 units",
+      "A pie chart showing the proportion of Jan/Feb sales relative to annual totals",
+      "A line graph with a logarithmic y-axis labeled 'Log(Units)'"
+    ],
+    "correctIndex": 0,
+    "explanation": "Starting the y-axis at zero preserves proportional visual accuracy: the visual bar height reflects true magnitude. A full-range axis (0–200K) shows the increase as a small visual change, matching the 1.3% reality. Option B truncates and exaggerates the change visually; option C loses the time-series dimension; option D obscures the actual difference through logarithmic compression without necessity. Zero-based axes prevent unintentional distortion.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst compares three companies' profit margins: Apple (46%), Microsoft (37%), and Dell (8%). When displaying this data, why is using a pie chart more potentially misleading than a bar chart?",
+    "options": [
+      "Pie charts distort perception of quantitative differences because humans judge angle/area poorly, especially with values differing by large factors",
+      "Pie charts cannot display percentage data",
+      "Pie charts require more colors than bar charts",
+      "Pie charts always add up to more than 100%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Humans perceive angles and areas nonlinearly; a 46% slice doesn't look 5.75× larger than an 8% slice even though mathematically it is. Bar charts leverage our superior ability to compare heights. The 46%–37%–8% spread is especially problematic in pie form. Option B is false—pies display percentages; option C is false—color count is independent of chart type; option D is mathematically false for a well-constructed pie (slices sum to 100%). Pie charts fail for comparative analysis of multiple values.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Netflix reported subscriber growth from 230 million (Q3 2023) to 247 million (Q4 2023). What is the actual percentage growth?",
+    "options": [
+      "7.39%",
+      "7.0%",
+      "17 million subscribers",
+      "13.9%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Percentage change = (247 – 230) / 230 × 100 = 17 / 230 × 100 = 7.39%. Option B (7.0%) is a rounding error; option C (17M) confuses absolute change with percentage; option D (13.9%) is the inverse calculation or a formula error. Correct calculation requires dividing absolute change by the base period. This baseline matters when assessing if a chart's visual scaling is proportional.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Starbucks executive creates a dashboard with two area charts side-by-side: Chart A (same-store sales growth) uses a y-axis from 0–20%, and Chart B (customer traffic) uses a y-axis from 0–10%. Both metrics grew by 3% last quarter. What visual deception occurs?",
+    "options": [
+      "Chart A's area appears 2× larger than Chart B's despite equal percentage growth, creating a false impression of different performance trends",
+      "Both charts must display identical y-axis ranges or the data is invalid",
+      "Area charts cannot be used for percentage metrics",
+      "The CEO will interpret the charts incorrectly due to color blindness"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 3% growth bar/area filling 15% of a 0–20% chart looks identical to 3% filling 30% of a 0–10% chart, but visually the second appears larger because the scale is tighter. Inconsistent axis ranges across related charts mislead even sophisticated viewers. Option B is false—different scales are valid when clearly labeled, but can still deceive; option C is false—percentages work fine; option D conflates accessibility with axis scaling. Same-scale ranges prevent this illusion.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the primary purpose of always starting a bar chart at zero on the y-axis?",
+    "options": [
+      "To ensure visual bar height is proportional to actual data values, preserving accurate magnitude perception",
+      "To satisfy accounting compliance requirements",
+      "To make the chart printable on standard paper sizes",
+      "To eliminate the need for data labels"
+    ],
+    "correctIndex": 0,
+    "explanation": "A zero baseline is the visual anchor that makes bar length proportional to value. If a bar at 100 units is twice as tall as a bar at 50 units, viewers' brains correctly infer one value is double the other. Truncating breaks this proportion-to-visual-height relationship. Option B misattributes a visualization principle to accounting standards; option C conflates design with data integrity; option D is false—labels remain helpful. Zero-baseline is about honest visual representation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An analyst at Walmart plots weekly sales variance (ranging from −2% to +3%) using a bar chart with a y-axis from −100% to +100%. Is this chart misleading, and why?",
+    "options": [
+      "No; the axis range is larger than necessary but does not distort the true proportions of the small percentage changes",
+      "Yes; the axis range makes it impossible to see the actual variation in the data",
+      "Yes; negative percentages cannot be plotted on a bar chart",
+      "No; as long as the axis starts at zero, any range is acceptable"
+    ],
+    "correctIndex": 0,
+    "explanation": "While an oversized range (−100% to +100%) for −2% to +3% data looks wasteful, it preserves proportionality: a +3% bar is still 60% taller than a −2% bar in true ratio. It's inefficient (poor data-ink ratio) but not technically misleading about magnitudes. Option B is too harsh—the data remains visible and proportional, just with wasted space; option C is false—negative percentages plot fine; option D's logic is right but incomplete (oversized ranges can still be honest). Clarity and efficiency differ from truthfulness.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "At Delta Airlines, customer satisfaction is measured on a scale where 1 = Very Dissatisfied, 2 = Dissatisfied, 3 = Neutral, 4 = Satisfied, 5 = Very Satisfied. What type of measurement scale is this?",
+    "options": [
+      "Nominal",
+      "Ordinal",
+      "Interval",
+      "Ratio"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is an ordinal scale because the categories have a natural order or ranking (dissatisfied < neutral < satisfied), but the distances between points are not equal and there is no meaningful zero. The tempting wrong answer is interval because ordinal and interval both rank data, but ordinal lacks equal intervals and a true zero point.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's inventory system assigns a unique product code to each of its 120,000 SKUs (e.g., 001-234-567 for milk, 001-234-568 for bread). What type of measurement scale is the product code?",
+    "options": [
+      "Nominal",
+      "Ordinal",
+      "Interval",
+      "Ratio"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a nominal scale because the product codes are labels with no inherent order or ranking; they only serve to identify and categorize items. Ordinal is tempting because codes are sequential numbers, but the numeric sequence has no meaning—004 is not 'greater' than 003, it is just a different label.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla records the daily stock price of its shares: $245.50, $248.75, $242.30, $251.10. What type of measurement scale is the stock price?",
+    "options": [
+      "Nominal",
+      "Ordinal",
+      "Interval",
+      "Ratio"
+    ],
+    "correctIndex": 3,
+    "explanation": "Stock price is a ratio scale because it has equal intervals between values, a true zero point (zero dollars means no value), and you can meaningfully calculate ratios (e.g., $250 is twice as much as $125). Interval is tempting because prices do have equal intervals, but only ratio scales have a meaningful zero and allow meaningful ratio comparisons.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing researcher at Johnson & Johnson surveys 500 customers and asks: 'Which of our three hand sanitizer products do you prefer: A (Advanced Guard), B (Clean Shield), or C (Fresh Protect)?' The response data uses which type of scale?",
+    "options": [
+      "Nominal",
+      "Ordinal",
+      "Interval",
+      "Ratio"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is nominal because the categories (A, B, C) are merely different labels with no inherent order or ranking. Ordinal might seem tempting because the letters appear sequential, but the letters are arbitrary labels, not a ranking of preference intensity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manufacturing plant measures the temperature inside its steel furnace as 1,800°C, 1,850°C, 1,920°C, and 1,775°C over four hours. What type of measurement scale is temperature in this context?",
+    "options": [
+      "Nominal",
+      "Ordinal",
+      "Interval",
+      "Ratio"
+    ],
+    "correctIndex": 3,
+    "explanation": "In this industrial context, temperature measured in Celsius or Kelvin is a ratio scale because there is a true zero point on the Kelvin scale (absolute zero = 0 K), equal intervals, and meaningful ratios. Although Celsius is often treated as interval in some contexts, at very high temperatures (far from 0°C), it functions as ratio. Interval is tempting but doesn't allow meaningful ratio statements like '1,800°C is twice as hot as 900°C' in Celsius.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank customer service manager collects satisfaction data from 200 customers using a survey with responses: Poor (1 point), Fair (2 points), Good (3 points), Very Good (4 points), Excellent (5 points). If the manager adds all the scores and divides by 200 to get an average of 3.8, which statistical operation is problematic?",
+    "options": [
+      "Adding all scores together",
+      "Dividing by 200",
+      "Computing the mean (average)",
+      "Calculating the median instead"
+    ],
+    "correctIndex": 2,
+    "explanation": "Computing the mean is problematic because the satisfaction scale is ordinal, and the mean is not a valid statistic for ordinal data. Ordinal scales have no equal intervals, so averaging them creates a false sense of precision. The median or mode would be more appropriate. Adding scores is tempting to mark as wrong because it feels like you are 'treating ordinal as interval,' but the core error is the mean calculation itself.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon tracks employee tenure with categories: <1 year, 1–3 years, 3–5 years, 5–10 years, 10+ years. A data analyst computes the 'average' category by calculating (1 + 2 + 3 + 4 + 5) / 5 = 3, then claims this represents '3–5 years of average tenure.' What is the error?",
+    "options": [
+      "The analyst should use only the 3–5 year category",
+      "The analyst treated ordinal data as if it were interval or ratio",
+      "The analyst forgot to weight each category by the number of employees",
+      "The analyst should use the median category instead of the mean"
+    ],
+    "correctIndex": 1,
+    "explanation": "The analyst treated ordinal data (ranked categories) as if it were interval or ratio, where the mean is valid. Because the categories have unequal width and no true zero, computing a numerical mean is meaningless—you cannot say '3–5 years' is the average when the categories themselves are not evenly spaced. Using the median is tempting but doesn't fix the core issue; the real error is attempting any arithmetic operation that assumes equal intervals.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail chain stores customer income data in three ways: (1) Salary = $45,000, $67,500, $98,200 (exact figures); (2) Income bracket = Low, Medium, High; (3) Income rank = 1st quartile, 2nd quartile, 3rd quartile, 4th quartile. Which statement correctly ranks these by strength of measurement?",
+    "options": [
+      "(1) Ratio > (3) Ordinal > (2) Nominal",
+      "(2) Nominal > (3) Ordinal > (1) Ratio",
+      "(3) Ordinal > (1) Ratio > (2) Nominal",
+      "(1) Ratio > (2) Nominal > (3) Ordinal"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct ranking is Ratio (1) > Ordinal (3) > Nominal (2) because ratio scales contain all properties of lower scales plus a meaningful zero and equal intervals, allowing all arithmetic. Exact salaries are ratio; quartile ranks are ordinal (have order but unequal intervals); income brackets are nominal (just labels). Option (3) is tempting because quartiles seem precise, but they only provide ranking, not equal spacing.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company measures adverse drug reactions on a scale: 0 = None, 1 = Mild, 2 = Moderate, 3 = Severe, 4 = Life-threatening. A researcher calculates (0 + 1 + 2 + 3 + 4) / 5 = 2.0 and reports 'the average severity is moderate (2).' Why is this misleading?",
+    "options": [
+      "The scale starts at 0, not 1, so the calculation is wrong",
+      "Severity is ordinal data, and the mean assumes equal intervals that may not exist between severity levels",
+      "The researcher should exclude the 0 response from the average",
+      "The scale is actually ratio, not ordinal, so the mean is valid"
+    ],
+    "correctIndex": 1,
+    "explanation": "The mean is misleading because severity is ordinal data. The intervals between 'mild' and 'moderate' may not be equal to the intervals between 'moderate' and 'severe,' so averaging creates a false impression of precision. The tempting wrong answer is option A (starts at 0) because many think ordinal scales must start at 1, but ordinal can start at any number—the real issue is lack of equal intervals.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company records delivery times: Monday = 2.5 hours, Tuesday = 3.2 hours, Wednesday = 2.8 hours, Thursday = 3.1 hours, Friday = 2.9 hours. What type of scale is delivery time, and which statistic is most appropriate?",
+    "options": [
+      "Ordinal; use the median",
+      "Ratio; use the mean",
+      "Interval; use the mode",
+      "Nominal; use the frequency count"
+    ],
+    "correctIndex": 1,
+    "explanation": "Delivery time in hours is a ratio scale (has a true zero, equal intervals, and meaningful ratios), so the mean is the most appropriate statistic. The mean delivery time across the week is (2.5 + 3.2 + 2.8 + 3.1 + 2.9) / 5 = 2.9 hours. Ordinal/median is tempting because the median is also valid for continuous data, but for ratio data, the mean provides more statistical power and information.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at Goldman Sachs records bond credit ratings: AAA, AA, A, BBB, BB, B, CCC. Later, a junior analyst calculates the 'average rating' by assigning AAA = 7, AA = 6, A = 5, BBB = 4, BB = 3, B = 2, CCC = 1, then computing (7 + 6 + 5) / 3 = 6, claiming the portfolio's average rating is AA. What is the fundamental error?",
+    "options": [
+      "The numerical values are assigned in the wrong order (should be reversed)",
+      "Credit ratings are ordinal data, and assigning arbitrary numbers and computing a mean misrepresents the data",
+      "The analyst should have used only AAA, AA, and A ratings in the portfolio",
+      "The calculation is correct, and AA is indeed the average rating"
+    ],
+    "correctIndex": 1,
+    "explanation": "Credit ratings are ordinal—they rank creditworthiness but have no equal intervals. Assigning arbitrary numbers (7, 6, 5) and computing a mean suggests false precision and implies that the gap between AA and A equals the gap between A and BBB, which is not true. The mean statistic is invalid for ordinal data. Option A is tempting because it seems to offer a 'fix,' but the real issue is that no arithmetic mean is valid for ordinal data, regardless of the direction of numbering.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer goods company surveys 600 customers on brand preference, generating data coded as: Coca-Cola = 1, Pepsi = 2, Sprite = 3, Fanta = 4. A data scientist runs a regression analysis using brand as the independent variable and predicts purchase amount based on these codes. What assumption is violated?",
+    "options": [
+      "The sample size is too small (should be 1,000+)",
+      "The researcher treated nominal data as interval or ratio, assuming numerical codes have quantitative meaning",
+      "Brand preference should be analyzed with interval data instead",
+      "The regression model requires all data to be ratio scale, and nominal is too weak"
+    ],
+    "correctIndex": 1,
+    "explanation": "The error is treating nominal data (brand names) as if the numerical codes (1, 2, 3, 4) have quantitative meaning. The codes are arbitrary labels; 2 is not 'more' than 1, and regression assumes numerical relationships. This violates the ordinal/interval assumption of regression. Option D is tempting because it states 'nominal is too weak,' which is partially true, but the specific error is misinterpreting nominal codes as quantitative values.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare organization measures patient pain using two methods: (1) Numeric Pain Rating Scale (0 = no pain to 10 = worst pain), and (2) Verbal Descriptor Scale (None, Mild, Moderate, Severe, Extreme). A clinician claims these are equivalent because both have five or more response options. Why is this claim incorrect?",
+    "options": [
+      "Method 1 is ordinal and Method 2 is nominal, so they are fundamentally different scales",
+      "Method 1 is ratio and Method 2 is ordinal; the presence of numeric codes in Method 1 does not guarantee equal intervals in pain perception",
+      "Method 2 should use numeric codes (1–5) to match Method 1",
+      "Both methods are ordinal, but Method 2 is more reliable"
+    ],
+    "correctIndex": 1,
+    "explanation": "Method 1 (0–10 numeric scale) is often treated as ordinal because the subjective distance between a pain rating of 3 and 4 may not equal the distance between 7 and 8. Method 2 is clearly ordinal (ranked verbal descriptors). Even though Method 1 has numbers, it may not have true equal intervals in perception; the clinician assumed numeric codes guarantee interval properties. Option A is tempting but slightly wrong: Method 1 is typically ordinal (not ratio) due to equal interval concerns in subjective pain measurement.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company records scrap rates (percentage of defective units): Plant A = 2.3%, Plant B = 1.8%, Plant C = 3.5%, Plant D = 2.1%. A manager states: 'Plant C's scrap rate (3.5%) is 1.94 times Plant B's rate (1.8%), so Plant C is 1.94 times worse.' Evaluate this claim.",
+    "options": [
+      "Correct; the ratio 3.5 / 1.8 = 1.94 is mathematically valid",
+      "Correct; percentages are always ratio data, so ratios are meaningful",
+      "Partially correct; the math is right, but the interpretation 'times worse' is imprecise and depends on context",
+      "Incorrect; scrap rates are ordinal data, so ratios cannot be computed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scrap rates are ratio data (have a true zero at 0%), so the mathematical ratio 3.5 / 1.8 = 1.94 is valid. However, saying Plant C is '1.94 times worse' is imprecise because 'worse' is subjective. The ratio is factually correct but the interpretation conflates mathematical ratio with operational significance. Option B is tempting because it correctly identifies the data as ratio, but oversimplifies by saying the interpretation is straightforwardly correct; the subtlety is that valid ratios do not automatically translate to meaningful business claims.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A software company measures developer productivity using four methods: (1) Lines of code written (numeric), (2) Code quality rank (1st, 2nd, 3rd, etc.), (3) Project completion status (Not Started, In Progress, Completed), (4) Bug fix time in hours (numeric). A manager wants to combine all four into a single composite 'productivity score.' Which is the most serious scale-of-measurement issue?",
+    "options": [
+      "Method 2 (ordinal rank) cannot be combined with method 1 (ratio) without transformation",
+      "Method 3 (nominal) has no natural numeric equivalent and cannot be meaningfully combined with ratio or ordinal scales",
+      "Method 4 (ratio) should not be mixed with ordinal or nominal data",
+      "All methods must be converted to a 0–100 scale before combining"
+    ],
+    "correctIndex": 1,
+    "explanation": "Method 3 (nominal: Not Started, In Progress, Completed) is the most serious issue because nominal categories have no inherent numeric value or ranking, making them fundamentally incompatible with ratio and ordinal scales without arbitrary encoding. You could defensignate arbitrary numbers (0, 1, 2), but this creates false meaning. Option A is tempting because mixing ordinal and ratio is problematic, but ordinal can be transformed into numeric form and combined; nominal categories resist even this transformation without introducing bias.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

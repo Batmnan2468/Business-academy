@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A medical device company uses a screening test for heart disease. A false positive occurs when the test indicates disease when the patient is healthy. Which of the following best defines a false positive in this context?",
+    "options": [
+      "The test correctly identifies a patient with heart disease",
+      "The test indicates heart disease when the patient is actually healthy",
+      "The test fails to detect heart disease in a patient who has it",
+      "The test is accurate more than 95% of the time"
+    ],
+    "correctIndex": 1,
+    "explanation": "A false positive is when the test predicts a positive condition (disease present) but the actual condition is negative (patient is healthy). Option 2 is correct. Option 1 describes a true positive, option 3 describes a false negative, and option 4 relates to accuracy but doesn't define false positive.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "RetailCorp's email spam filter flags 80 emails as spam when only 60 are actually spam. How many false positives did the filter generate?",
+    "options": [
+      "20 emails",
+      "60 emails",
+      "80 emails",
+      "140 emails"
+    ],
+    "correctIndex": 0,
+    "explanation": "False positives = total predicted positive − true positives = 80 − 60 = 20 emails. These 20 are emails flagged as spam but were actually legitimate. Option 1 is correct. Option 2 confuses true positives with false positives.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In fraud detection, what is the primary business cost of a false negative at a bank like JPMorgan Chase?",
+    "options": [
+      "The bank incorrectly flags a legitimate transaction, frustrating the customer",
+      "A fraudulent transaction goes undetected and the customer's money is stolen",
+      "The bank spends too much on fraud prevention technology",
+      "Customers receive too many security alerts and stop using their accounts"
+    ],
+    "correctIndex": 1,
+    "explanation": "A false negative in fraud detection means a fraudulent transaction is not flagged (negative prediction when reality is positive fraud). This directly results in financial loss to the bank and customer. Option 2 is correct. Option 1 describes a false positive cost, option 3 is operational spending, not a false negative consequence.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's recommendation algorithm shows 100 movies to users as 'personalized picks' when only 75 are actually relevant to user preferences. What is the false positive rate?",
+    "options": [
+      "75%",
+      "25%",
+      "33%",
+      "42%"
+    ],
+    "correctIndex": 1,
+    "explanation": "False positive rate = false positives / (false positives + true negatives). However, here we're calculating false positive ratio = false positives / total predicted positive = (100 − 75) / 100 = 25 / 100 = 25%. Option 2 is correct. Option 1 confuses this with true positive rate (75/100).",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An airline's baggage screening system misses 5 out of 500 prohibited items. This represents which type of error?",
+    "options": [
+      "False positive",
+      "False negative",
+      "True positive",
+      "True negative"
+    ],
+    "correctIndex": 1,
+    "explanation": "The system failed to detect (negative prediction) something that actually exists (prohibited item present). This is a false negative — a missing or undetected positive case. Option 2 is correct. Option 1 would be flagging a legal item as prohibited.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechCorp uses a loan approval model that approves 200 loan applications, of which 150 borrowers actually repay their loans successfully. The model rejected 50 applications, of which 40 would have defaulted if approved. Calculate the precision of the approval model (true positives / predicted positives).",
+    "options": [
+      "75%",
+      "80%",
+      "88%",
+      "67%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Precision = true positives / (true positives + false positives) = 150 / (150 + 50) = 150 / 200 = 75%. The model approved 200 people, 150 were correct (true positives), and 50 were incorrect (false positives). Option 1 is correct. Option 2 confuses this with recall/sensitivity (150/190).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company's drug screening test correctly identifies 95% of patients with the disease (sensitivity = 95%) and correctly identifies 90% of healthy patients (specificity = 90%). If the company screens 1,000 people and 100 actually have the disease, how many false positives will occur?",
+    "options": [
+      "5 people",
+      "45 people",
+      "90 people",
+      "100 people"
+    ],
+    "correctIndex": 2,
+    "explanation": "False positives occur among the 900 healthy people. With 90% specificity, 10% of healthy people are incorrectly flagged: 900 × 0.10 = 90 false positives. Option 3 is correct. Option 1 mistakes false negatives among diseased people (100 × 0.05 = 5).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's inventory shrinkage detection system flags 12,000 transactions as 'suspicious' (potential theft), but only 3,000 are actual cases of theft. The cost of investigating each flagged transaction is $15, while the cost of missing one theft is $200. What is the total cost of false positives?",
+    "options": [
+      "$45,000",
+      "$135,000",
+      "$600,000",
+      "$180,000"
+    ],
+    "correctIndex": 1,
+    "explanation": "False positives = 12,000 − 3,000 = 9,000. Cost of false positives = 9,000 × $15 = $135,000. Option 2 is correct. Option 3 incorrectly multiplies false positives by the missed theft cost ($200), which is the cost of false negatives, not false positives.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A cybersecurity firm's intrusion detection system blocked 500 network attempts, correctly stopping 480 actual attacks but also blocking 20 legitimate business operations. What should the firm prioritize improving?",
+    "options": [
+      "Increase sensitivity to catch more attacks, even if more false positives occur",
+      "Decrease false positives to allow more legitimate business to proceed unblocked",
+      "Reduce the number of total blocks attempted",
+      "Accept the current error rate as optimal"
+    ],
+    "correctIndex": 1,
+    "explanation": "With 480 true positives and only 20 false positives, the system is already highly sensitive. The business impact of blocking legitimate operations ($millions in lost productivity) likely exceeds the benefit of catching marginally more attacks. Option 2 is correct. Option 1 would worsen the false positive problem that's already impacting operations.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft's spam email filter operates with 99.5% specificity (correctly identifies legitimate emails). If 100,000 emails arrive daily and 500 are spam, how many false positives occur daily? What business impact does this create?",
+    "options": [
+      "50 emails flagged as spam; minimal impact due to small number",
+      "500 emails flagged as spam; moderate business risk",
+      "49,750 emails flagged as spam; extremely high impact",
+      "250 emails flagged as spam; manageable for IT staff"
+    ],
+    "correctIndex": 0,
+    "explanation": "99.5% specificity means 0.5% of legitimate emails (99,500 legitimate emails) are incorrectly flagged: 99,500 × 0.005 = 497.5 ≈ 50 false positives. Option 1 is correct. Option 3 incorrectly calculates specificity as applying to all 100,000 emails rather than the 99,500 legitimate ones. The 50 daily false positives are manageable but still create customer frustration.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce platform's fraud detection system has sensitivity of 85% and specificity of 95%. Out of 50,000 daily transactions, 250 are fraudulent. The platform loses $300 per undetected fraud (false negative) but must refund $50 per incorrectly blocked customer transaction (false positive). Which statement best describes the trade-off decision?",
+    "options": [
+      "Increase specificity to reduce false positives because blocking customers is more expensive",
+      "Increase sensitivity to catch more fraud because false negatives cost more ($300) than false positives ($50)",
+      "The current balance is optimal since specificity is higher than sensitivity",
+      "Reduce both sensitivity and specificity to save on operational costs"
+    ],
+    "correctIndex": 1,
+    "explanation": "False negatives cost $300 each; false positives cost $50 each. Since false negatives are 6× more expensive, the platform should prioritize sensitivity (catching fraud) over specificity. Calculate: False negatives = 250 × 0.15 = 37.5, costing $11,250. False positives = 49,750 × 0.05 = 2,487.5, costing $124,375. However, the RATIO of individual costs ($300:$50 = 6:1) suggests prioritizing sensitivity. Option 2 is correct. Option 1 reverses the cost logic.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google Ads reports that their ad quality filter rejects 2,000 ads daily as 'low quality' when actually 1,800 are legitimately low quality and 200 are acceptable ads. Meanwhile, 500 low-quality ads slip through undetected. What is the recall (sensitivity) of this filter?",
+    "options": [
+      "78.3%",
+      "90%",
+      "79.2%",
+      "88.2%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Recall = true positives / (true positives + false negatives) = 1,800 / (1,800 + 500) = 1,800 / 2,300 = 78.26% ≈ 79.2%. Option 3 is correct. Option 2 (90%) calculates precision instead: 1,800 / 2,000 = 90%. This is a common confusion between the two metrics.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital's emergency triage system uses a predictive model to identify patients at high risk of sepsis. The model is 98% accurate overall, but a clinical audit reveals it misses sepsis in 40 out of 2,000 at-risk patients while falsely alarming on 60 out of 8,000 low-risk patients. Why might the 98% accuracy metric be misleading for this application?",
+    "options": [
+      "The model has too many false positives, which is acceptable in medical settings",
+      "Accuracy hides the asymmetric costs: missing sepsis (false negative) costs lives, while false alarms (false positives) cause unnecessary tests; these have different clinical weights",
+      "The model is actually performing well because 98% is a high accuracy threshold",
+      "False positives are more important than false negatives in hospital settings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Overall accuracy = (true positives + true negatives) / total = (1,960 + 7,940) / 10,000 = 98%. But this masks the critical insight: missing sepsis (40 deaths prevented) is far more costly than unnecessary tests (60 low-risk alerts). Option 2 correctly identifies that accuracy is insufficient for evaluating this high-stakes medical decision. Options 3 and 4 misunderstand the actual clinical priorities.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A fintech company improved its credit default prediction model from 80% recall to 95% recall while precision dropped from 88% to 72%. Previously, the model missed 100 actual defaults and falsely flagged 75 non-defaulters. How many defaults does the improved model miss, and is this trade-off strategically sound given that each missed default costs the company $5,000 but each false positive costs $800 in unnecessary collection effort?",
+    "options": [
+      "Misses 26 defaults; not sound because the cost of false negatives ($130,000) far exceeds false positive costs ($52,800)",
+      "Misses 10 defaults; very sound because fewer defaults are missed",
+      "Misses 75 defaults; not sound because precision dropped unacceptably",
+      "Misses 5 defaults; sound because any reduction in defaults is worthwhile"
+    ],
+    "correctIndex": 0,
+    "explanation": "If recall improved to 95% from 80%, and previously missed 100 defaults, then: 80% recall means 100 = 20% of actual defaults, so 500 total defaults exist. At 95% recall, missed = 5% × 500 = 25 ≈ 26 defaults. Cost of false negatives: 26 × $5,000 = $130,000. If precision dropped to 72%, false positives increased proportionally. Option 1 correctly identifies that the cost of missing defaults ($130,000) vastly exceeds false positive costs. Option 2 oversimplifies by not considering total costs.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company's quality control system inspects 10,000 products daily. The inspection process has 99% specificity and 85% sensitivity. If 300 products are actually defective, why would a manager who only looks at the 99% specificity metric make a dangerous decision?",
+    "options": [
+      "99% specificity means 1% of non-defective products are incorrectly rejected; but with 9,700 non-defective items, this equals ~97 good products wasted, which is costly but acceptable",
+      "99% specificity correctly indicates the system is excellent; the low sensitivity (85%) is the only concern",
+      "The manager might assume the system catches nearly all defects, but 85% sensitivity means 45 defective products escape daily, creating safety and warranty risks unaddressed by the specificity metric alone",
+      "Specificity and sensitivity are the same metric, so 99% means the system works perfectly"
+    ],
+    "correctIndex": 2,
+    "explanation": "Specificity (99%) describes accuracy on non-defective items; sensitivity (85%) describes accuracy on defective items. A manager focusing only on the high specificity might miss that 15% of actual defects (0.15 × 300 = 45 defects daily) go undetected. This is dangerous in manufacturing. Option 2 is tempting but doesn't explain WHY looking only at specificity is dangerous. Option 3 correctly identifies the critical gap.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

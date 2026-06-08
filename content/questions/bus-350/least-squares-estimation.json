@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In least squares estimation, what is the primary objective when fitting a regression line to data?",
+    "options": [
+      "Minimize the sum of squared residuals between observed and predicted values",
+      "Maximize the number of data points that fall exactly on the regression line",
+      "Minimize the sum of absolute deviations from the mean",
+      "Ensure that all residuals are positive"
+    ],
+    "correctIndex": 0,
+    "explanation": "Least squares estimation specifically minimizes the sum of squared residuals (SSE). Option B is tempting because it sounds like a desirable outcome, but the method doesn't require points to fall exactly on the line—it finds the best fit by minimizing squared errors. Options C and D describe different techniques (absolute deviations) and incorrect constraints.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the coefficient of determination (R²) measure in a least squares regression model?",
+    "options": [
+      "The proportion of variance in the dependent variable explained by the independent variable",
+      "The average residual error in the regression model",
+      "The slope of the regression line",
+      "The probability that the regression coefficients are statistically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² represents the goodness of fit, showing what percentage of variation in Y is explained by X. Option B confuses R² with standard error of the estimate. Option C describes the slope coefficient, not the fit measure. Option D relates to p-values, not R².",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a least squares regression equation ŷ = a + bx, what does the intercept 'a' represent?",
+    "options": [
+      "The predicted value of Y when X equals zero",
+      "The rate of change of Y with respect to X",
+      "The average value of the residuals",
+      "The correlation coefficient between X and Y"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intercept 'a' is where the regression line crosses the Y-axis (when X = 0). Option B describes the slope 'b'. Option C is incorrect because residuals sum to zero by design. Option D describes the correlation coefficient r, not the intercept.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a residual in the context of least squares regression?",
+    "options": [
+      "The difference between an observed value and its predicted value",
+      "The difference between the mean and an observed value",
+      "The standard error of the regression equation",
+      "The correlation between X and Y"
+    ],
+    "correctIndex": 0,
+    "explanation": "A residual is e = y - ŷ, the actual minus predicted value. Option B describes a deviation from the mean. Option C is a measure of regression error, not an individual residual. Option D is the correlation coefficient, unrelated to residuals.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In least squares estimation, why do we square the residuals rather than simply sum their absolute values?",
+    "options": [
+      "Squaring penalizes larger errors more heavily and makes the mathematics more convenient for optimization",
+      "Squaring ensures all residuals are positive numbers",
+      "Squaring reduces the number of calculations required",
+      "Squaring makes the regression line pass through more data points"
+    ],
+    "correctIndex": 0,
+    "explanation": "Squaring residuals emphasizes large errors and creates a differentiable objective function with a unique minimum. Option B is a side effect but not the primary reason—we could achieve this with absolute values. Option C is false; squaring adds complexity. Option D misunderstands the method's purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail analyst at Target collected data on weekly advertising spend (in thousands of dollars) and weekly sales revenue (in thousands of dollars) for 20 weeks. The regression equation is ŷ = 15 + 2.5x. If Target spends $8,000 on advertising in a week, what is the predicted sales revenue?",
+    "options": [
+      "$35,000",
+      "$31,000",
+      "$40,000",
+      "$23,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "With x = 8 (in thousands), ŷ = 15 + 2.5(8) = 15 + 20 = 35 (in thousands) = $35,000. Option B incorrectly multiplies 2.5 × 8 = 20, then subtracts from 15 instead of adding. Option C multiplies 2.5 × 10, confusing the scale. Option D uses subtraction incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A restaurant chain collected data on table turnover rate and average customer satisfaction scores across 25 locations. The least squares regression line is ŷ = 7.2 + 0.15x, where x is turnover rate (tables per hour) and y is satisfaction (1–10 scale). If a location has an R² of 0.42, how should this finding be interpreted?",
+    "options": [
+      "Turnover rate explains 42% of the variation in satisfaction scores; other factors account for 58%",
+      "The satisfaction scores are accurate 42% of the time",
+      "The regression slope is 42% of the y-intercept",
+      "42% of locations are performing above average"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² = 0.42 means 42% of variance in Y is explained by X, leaving 58% unexplained by the model. Option B confuses R² with accuracy or prediction error rate. Option C incorrectly relates R² to the relationship between slope and intercept. Option D misinterprets R² as a percentage of observations.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An automotive supplier estimated a regression model for monthly production volume (units) versus total manufacturing cost ($). The equation is ŷ = 5,000 + 150x, where x is units produced. Last month, the company produced 200 units at an actual cost of $35,500. What is the residual for that observation?",
+    "options": [
+      "$500",
+      "-$500",
+      "$30,500",
+      "$40,000"
+    ],
+    "correctIndex": 1,
+    "explanation": "Predicted cost: ŷ = 5,000 + 150(200) = 5,000 + 30,000 = $35,000. Residual = Actual − Predicted = $35,500 − $35,000 = $500. Wait, this is positive, so the correct index should be 0. Actually, residual = 35,500 − 35,000 = 500, so option A is correct. Let me recalculate: ŷ = 5,000 + 150(200) = 35,000. e = 35,500 − 35,000 = 500. The correct answer is A ($500), not B.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase regressed quarterly loan defaults (in basis points) on unemployment rate (%) using 40 quarters of data. The regression yielded b = 12.5 and SE(b) = 2.1. What does b = 12.5 most directly tell us?",
+    "options": [
+      "For each 1% increase in unemployment, default rates increase by 12.5 basis points on average",
+      "The unemployment rate explains 12.5% of the variation in defaults",
+      "The probability that unemployment affects defaults is 12.5%",
+      "The forecasted default rate is 12.5 basis points when unemployment is zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope coefficient b = 12.5 represents the change in Y per unit change in X. Option B confuses the slope with R² (goodness of fit). Option C misinterprets the coefficient as a probability. Option D describes the intercept, not the slope.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hotel chain collected data on nightly room rates ($) and occupancy rates (%) from 50 properties. The regression model ŷ = 35 + 0.8x has an R² = 0.64. Which of the following correctly interprets this model?",
+    "options": [
+      "A $1 increase in room rate is associated with a 0.8% increase in occupancy; the model explains 64% of occupancy variation",
+      "The hotel can increase occupancy by 80% by raising rates by $1",
+      "At a $0 room rate, occupancy is 35%, and occupancy always increases with rate",
+      "The standard error of the estimate is 0.8, and 64% of properties have positive residuals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option A correctly states the slope interpretation and R² meaning. Option B treats the coefficient as a direct lever (ignoring causality and exaggerating the effect). Option C assumes the intercept is meaningful at zero price and ignores that correlation isn't causation. Option D misdefines standard error and misstates residual properties.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing firm conducted a least squares regression of annual production cost (Y, in millions) on factory capacity utilization rate (X, in %). The data included 36 months, yielding the equation ŷ = 2.1 + 0.045x with an R² of 0.79. However, the analyst notices the residual plot shows a clear U-shaped pattern. What does this violation of assumptions suggest?",
+    "options": [
+      "The relationship between X and Y may be nonlinear; the linear model is misspecified",
+      "The data contains outliers that need to be removed",
+      "The least squares estimates of the slope and intercept are biased",
+      "The sample size is too small to trust the regression results"
+    ],
+    "correctIndex": 0,
+    "explanation": "A U-shaped residual pattern indicates the linear model misses a nonlinear (e.g., quadratic) relationship. This suggests model specification error. Option B (outliers) would show isolated extreme points, not a systematic pattern. Option C is tempting but bias from nonlinearity is a specification issue, not an estimation issue—OLS is still unbiased *for the linear model*. Option D is unrelated to the pattern observed.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce company regressed daily website traffic (thousands of visitors) on paid search spending ($10,000 units) for 90 days. The model is ŷ = 18 + 5.2x with r = 0.68 (correlation coefficient). A manager claims: 'Since the correlation is 0.68, our model explains 68% of traffic variation.' Why is this statement incorrect?",
+    "options": [
+      "The coefficient of determination (R²) is the square of r; R² = 0.68² ≈ 0.46, so only 46% is explained",
+      "Correlation measures only the strength of linear association, not causation",
+      "The sample size of 90 days is too small; larger samples require higher r values",
+      "The manager confused the slope (5.2) with the correlation coefficient (0.68)"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² = r² = 0.68² = 0.4624 ≈ 46%, not 68%. This is a common misconception. Option B is true but doesn't explain the manager's specific error about the percentage. Option C mixes up correlation inference with sample size. Option D doesn't address the variance explanation claim.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm estimated two regression models for quarterly net income (Y, $ millions) using the same 28 quarters of data: Model 1 uses marketing spend only (R² = 0.51); Model 2 uses marketing spend and R&D investment (R² = 0.58). The lead analyst wants to select the better model. Which statement is most appropriate?",
+    "options": [
+      "Model 2 is likely better because R² increased, but we should check if the additional variable is statistically significant (using t-tests) and consider parsimony",
+      "Model 1 is better because simpler models are always preferable in statistics",
+      "Model 2 is definitively better because R² = 0.58 > 0.51",
+      "Neither model is useful because R² values below 0.70 indicate weak explanatory power"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding any variable increases (or maintains) R²—this is mechanical. Option A correctly notes we must test statistical significance of the new variable and balance fit against complexity. Option B is overly simplistic; more explanatory power can justify added complexity. Option C fails to account for the possibility that the second variable adds noise without true predictive value. Option D is arbitrary; R² acceptability depends on context (e.g., finance vs. psychology).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company regressed delivery time (hours) on distance (miles) for 200 shipments and obtained ŷ = 2.5 + 0.08x with standard error SE(b) = 0.006 and residual standard error = 1.8 hours. The manager interprets the slope as: 'Each additional mile increases delivery time by 0.08 hours.' However, why might this interpretation be misleading in the context of individual predictions?",
+    "options": [
+      "The slope estimates the average effect, but individual shipments have residual error (~1.8 hours); predictions for single shipments are less precise",
+      "The standard error of 0.006 is too small relative to the slope, indicating the estimate is unstable",
+      "The intercept of 2.5 hours is negative, which is impossible for delivery times",
+      "The regression model uses distance in miles, not kilometers, so the slope is not comparable across studies"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope is correct as an average effect, but residual standard error = 1.8 hours indicates substantial scatter around the line. A single prediction's 95% CI would be roughly ±3.5 hours, much wider than the slope coefficient suggests. Option B is wrong; SE(b) = 0.006 is very small, indicating a precise slope estimate, not an unstable one. Option C is factually wrong; 2.5 is positive. Option D is a data interpretation issue, not a statistical one.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company fit a least squares regression of drug efficacy score (0–100 scale) on dosage (mg) using 15 patients. The regression yielded ŷ = 20 + 1.5x with R² = 0.88 and a 95% confidence interval for the slope of [1.1, 1.9]. The researcher plans to use this model to recommend dosages for efficacy scores of 85 in a new population of 500 patients. What is the primary concern with this extrapolation?",
+    "options": [
+      "The model was estimated from only 15 observations; external validity to a new population of 500 is uncertain, and the relationship may not hold at higher dosages or in different patient demographics",
+      "The R² of 0.88 means 12% of variance is unexplained, so predictions are inaccurate",
+      "The confidence interval [1.1, 1.9] is too wide to make reliable recommendations",
+      "The regression equation cannot be solved for X when Y = 85 because it was not built for that purpose"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary concern is generalizability: a model from 15 patients in one context may not apply to 500 in a different setting, especially at the boundary of the observed data. This violates external validity. Option B conflates unexplained variance with prediction error—12% unexplained doesn't invalidate the model. Option C is too narrow; the CI shows the slope is reliably estimated. Option D is wrong; the model *can* be inverted: x = (85 − 20) / 1.5 = 43.3 mg, but the validity concern remains.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

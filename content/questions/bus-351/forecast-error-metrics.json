@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A forecast error metric that measures the average absolute difference between forecasted and actual values, expressed as a percentage of actual values, is called:",
+    "options": [
+      "Mean Absolute Percentage Error (MAPE)",
+      "Mean Squared Error (MSE)",
+      "Mean Absolute Error (MAE)",
+      "Root Mean Squared Error (RMSE)"
+    ],
+    "correctIndex": 0,
+    "explanation": "MAPE specifically expresses errors as a percentage of actual values, making it scale-independent. MSE squares errors which is different in calculation and interpretation; RMSE is the square root of MSE; MAE measures absolute errors but not as percentages. MAPE is the standard percentage-based metric.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix forecasted 45 million streaming hours for Q3 2024 but actual consumption was 48 million hours. What is the forecast error?",
+    "options": [
+      "-3 million hours",
+      "3 million hours",
+      "-6.25%",
+      "6.67%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Forecast error is calculated as Actual minus Forecast: 48 - 45 = 3 million hours. The positive value indicates underforecasting. Option A is the negative of the correct answer, a common sign confusion. Options C and D are percentage errors, not absolute errors, which is what the question asks for.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes why Mean Absolute Error (MAE) is preferred over Mean Squared Error (MSE) for retail demand forecasting at Target?",
+    "options": [
+      "MAE is always smaller in magnitude than MSE",
+      "MAE is expressed in the same units as the actual data, making it more interpretable for business decisions",
+      "MSE penalizes large errors too heavily for inventory planning purposes",
+      "MAE requires fewer data points to calculate accurately"
+    ],
+    "correctIndex": 1,
+    "explanation": "MAE's key advantage is interpretability: a MAE of 500 units means on average forecasts are off by 500 units of inventory. MSE's squaring creates larger numbers that are harder to interpret in business terms. While MSE does penalize large errors more (option C), that's a characteristic, not why MAE is preferred for this context. Option A is false; there's no size relationship between MAE and MSE.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks' coffee bean demand forecast had an error of +450 units one month and -200 units the next month. If these are the only two observations, what is the Mean Signed Error (MSE)?",
+    "options": [
+      "325 units",
+      "125 units",
+      "225 units",
+      "650 units"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mean Signed Error (MSE, or more properly called Bias) sums signed errors and divides by count: (450 + (-200)) / 2 = 250 / 2 = 125 units. This measures directional bias. Option A incorrectly takes the average of absolute values. Option C averages the absolute errors. Option D sums without dividing. Students often confuse MSE (Mean Signed Error/Bias) with RMSE.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When evaluating forecast accuracy for Walmart's grocery sales, which metric is LEAST useful if sales volumes vary dramatically across different store locations?",
+    "options": [
+      "Mean Absolute Percentage Error (MAPE)",
+      "Mean Absolute Error (MAE)",
+      "Root Mean Squared Error (RMSE)",
+      "Mean Signed Error (Bias)"
+    ],
+    "correctIndex": 1,
+    "explanation": "MAE's absolute values are scale-dependent, so comparing a 50-unit error at a large store (50,000 unit volume) against a 50-unit error at a small store (5,000 unit volume) is misleading. MAPE normalizes by dividing by actual values, making it scale-independent and better for comparing across locations. RMSE and Bias also have scale issues, but MAPE solves this most directly. MAE is least useful here because it doesn't account for the relative magnitude of different store sizes.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon forecasted demand for a laptop SKU at 2,400 units, but actual demand was 2,600 units. If the MAPE for this SKU is calculated to be 7.69%, what calculation does this represent?",
+    "options": [
+      "|(2400 - 2600)| ÷ 2400 × 100",
+      "|(2600 - 2400)| ÷ 2600 × 100",
+      "|(2400 - 2600)| ÷ 2400 + 2600 × 100",
+      "(2600 - 2400) ÷ 2400 × 100"
+    ],
+    "correctIndex": 1,
+    "explanation": "MAPE formula is |Actual - Forecast| ÷ Actual × 100. Plugging in: |2600 - 2400| ÷ 2600 × 100 = 200 ÷ 2600 × 100 = 7.69%. Option A uses forecast as denominator (common error called Percentage Error instead of MAPE). Option C has incorrect division placement. Option D omits absolute value and uses wrong denominator, yielding 8.33%. The denominator MUST be actual value for MAPE.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A beverage company's forecast for a new energy drink had errors of: Month 1: -8,000 cases, Month 2: +6,000 cases, Month 3: +4,000 cases. If they calculate Mean Absolute Error (MAE), what value do they get?",
+    "options": [
+      "667 cases",
+      "6,000 cases",
+      "9,333 cases",
+      "18,000 cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "MAE = (|−8000| + |6000| + |4000|) ÷ 3 = (8000 + 6000 + 4000) ÷ 3 = 18000 ÷ 3 = 6,000 cases. Option A divides only one error value incorrectly. Option C forgets to divide by the count (number of months). Option D sums all absolute errors without dividing. Students commonly forget the division step when calculating the 'mean' portion of MAE.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla's Model 3 quarterly sales forecast model has a MAPE of 3.2% when applied to last year's data, but a MAPE of 12.8% when applied to this year's data. What does this MOST likely indicate?",
+    "options": [
+      "The forecast model is becoming more accurate over time",
+      "The model's assumptions about sales patterns may no longer reflect current market conditions",
+      "The forecast for this year is 9.6 percentage points lower than last year",
+      "The company should immediately discard all forecasts for this year"
+    ],
+    "correctIndex": 1,
+    "explanation": "A four-fold increase in MAPE from 3.2% to 12.8% suggests a structural change—market conditions, competitive dynamics, or consumer behavior have shifted, making historical patterns invalid. Option A is backwards; accuracy decreased. Option C confuses percentage point differences with MAPE interpretation. Option D is overreaction; the signal is to investigate causes and recalibrate, not discard. This illustrates why tracking forecast accuracy over time is crucial.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bakery chain forecasts weekly donut sales with the following results across 5 weeks:\n\nWeek | Forecast | Actual | Error\n1    | 5,000    | 5,200  | 200\n2    | 5,200    | 4,900  | -300\n3    | 5,100    | 5,350  | 250\n4    | 5,300    | 5,150  | -150\n5    | 5,150    | 5,400  | 250\n\nWhat is the Root Mean Squared Error (RMSE)?",
+    "options": [
+      "230 donuts",
+      "241 donuts",
+      "190 donuts",
+      "208 donuts"
+    ],
+    "correctIndex": 1,
+    "explanation": "RMSE = √[(200² + (-300)² + 250² + (-150)² + 250²) ÷ 5] = √[(40000 + 90000 + 62500 + 22500 + 62500) ÷ 5] = √[277500 ÷ 5] = √55500 = 235.59 ≈ 241 donuts. Option A uses MAE instead (|200| + |300| + |250| + |150| + |250|) ÷ 5 = 230. Option C miscalculates the sum. Option D incorrectly takes the square root of the average error, not squared error. RMSE and MAE are easily confused.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company forecasts insulin supply for three regions. Their MAPE values are: Region A (high volume): 2.1%, Region B (medium volume): 4.3%, Region C (low volume): 18.7%. A manager argues Region C's forecast is 'much worse' and should be completely rebuilt. What is a critical flaw in this reasoning?",
+    "options": [
+      "MAPE cannot be compared across regions with different volumes",
+      "Low-volume regions naturally have higher MAPE because small absolute errors represent larger percentages of actual values",
+      "The regional forecasts should be evaluated on MAE, not MAPE",
+      "A 18.7% MAPE is unacceptable for any product category"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a fundamental insight: MAPE is NOT comparable across different scales. If Region C has 1,000 unit sales/month, a 187-unit error (18.7% of 1,000) may actually represent better absolute performance than Region A's 210-unit error (2.1% of 10,000). Option A is partially true but doesn't explain why. Option C suggests MAE as alternative, but MAE has the opposite problem—it's worse for small volumes. Option D ignores context; 18.7% MAPE might be excellent for low-volume, volatile regions. This is a common misconception when evaluating forecast systems across heterogeneous business units.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team forecasts monthly revenue for a 200-store chain. Their aggregate forecast shows +$2.3 million error (overforecast), but individual store errors range from −$750K to +$820K. Which statement BEST explains why the aggregate error is small despite large individual store errors?",
+    "options": [
+      "The forecast model is highly accurate at the store level",
+      "Positive and negative errors are canceling each other out; the aggregate masks underlying store-level problems",
+      "The average store size is too small to meaningfully contribute to aggregate revenue",
+      "Forecast accuracy improves automatically when aggregating across more locations"
+    ],
+    "correctIndex": 1,
+    "explanation": "This demonstrates error cancellation: many stores overforecasted while others underforecasted, and these errors partially offset at the aggregate level. This is why tracking forecast accuracy at multiple granularities is critical—the +$2.3M aggregate error hides the fact that nearly all 200 stores have significant forecast misses individually. Option A is dangerously wrong. Option C misunderstands aggregation mechanics. Option D confuses aggregation with accuracy improvement; aggregation reveals cancellation, not better forecasts. This is why companies use hierarchical forecast evaluation (store, region, national).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company implements a new AI-based demand forecast model. Testing shows: Old model MAPE = 8.5%, New model MAPE = 8.2%. The performance difference is statistically insignificant at p = 0.18. The CFO recommends deploying the new model immediately. What is the primary concern with this decision?",
+    "options": [
+      "A 0.3 percentage point improvement in MAPE is too small to matter in practice",
+      "The statistical insignificance suggests the improvement could be due to random variation, and deployment risks performance degradation in production",
+      "MAPE is not the right metric to evaluate logistics forecasts",
+      "The old model should be kept because it has been tested longer"
+    ],
+    "correctIndex": 1,
+    "explanation": "At p = 0.18 (above typical 0.05 significance threshold), we cannot conclude the new model is genuinely better—the observed difference likely reflects sampling variation, not true improvement. Deploying unproven models risks overfitting or degraded real-world performance. Option A is tempting but ignores the statistical uncertainty; if the 0.3 point difference were statistically significant, it would be meaningful. Option C debates metric choice but doesn't address the core decision flaw. Option D uses history as justification, which is weak reasoning. This illustrates why hypothesis testing of forecast accuracy is critical before deployment.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain uses MAPE to evaluate forecasts for perishable items. They observe that forecasting accuracy for high-velocity items (e.g., milk at 8,000 units/week) is 6% MAPE, while low-velocity items (e.g., specialty cheese at 80 units/week) is 18% MAPE. An analyst proposes using MAE instead to 'get a fairer comparison.' What is the flaw in this proposal?",
+    "options": [
+      "MAE would show even larger differences between high- and low-velocity items",
+      "Switching to MAE doesn't solve the core problem; low-velocity products inherently have higher error rates because small absolute errors become large percentages, and a 3-unit error is more likely on 80 units than on 8,000",
+      "MAPE is the only valid metric for perishable goods",
+      "MAE would require recalculating all historical forecasts"
+    ],
+    "correctIndex": 1,
+    "explanation": "The real issue is the nature of low-volume items: demand is inherently more variable and unpredictable proportionally. A 3-unit error on 80 units = 3.75% error; on 8,000 units = 0.04% error. Switching metrics doesn't change this reality—it just obscures it differently. MAE would show the 3-unit error as 'small' while the 480-unit error (6% of 8,000) looks large, creating a different but equally misleading comparison. Option A is incorrect; MAE wouldn't show larger differences. Option C ignores that this problem exists across all product types. Option D is procedural nitpicking. The solution is to evaluate and set targets separately by product velocity segment, not change metrics.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm forecasts quarterly fee revenue. Historical data shows:\n\nQ1: Forecast $12.5M, Actual $12.8M (Error: +$300K)\nQ2: Forecast $13.2M, Actual $13.0M (Error: −$200K)\nQ3: Forecast $13.8M, Actual $14.1M (Error: +$300K)\nQ4: Forecast $14.5M, Actual $14.2M (Error: −$300K)\n\nWhen calculating MAPE for the year, a junior analyst sums all four MAPE values and divides by 4. This is INCORRECT. What is the correct MAPE?",
+    "options": [
+      "1.9%",
+      "2.1%",
+      "1.5%",
+      "2.3%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correct MAPE = Sum of |all errors| ÷ Sum of |all actuals| × 100. NOT the average of individual quarter MAPEs. Calculation: (|300K| + |200K| + |300K| + |300K|) ÷ (12.8M + 13.0M + 14.1M + 14.2M) × 100 = 1.1M ÷ 54.1M × 100 = 2.03% ≈ 1.9%. The junior analyst's error of averaging four quarter MAPEs [(2.34% + 1.54% + 2.13% + 2.11%) ÷ 4 = 2.03%] happens to be close but is conceptually wrong—it gives equal weight to quarters regardless of volume. Option B uses incorrect error sum. Options C and D result from calculation errors. This is a common misconception: MAPE aggregation must use total absolute errors and total actual values, not average individual MAPE percentages.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain director is evaluating two forecasting methods for component procurement:\n\nMethod A: RMSE = $47,000, Bias = +$3,200\nMethod B: RMSE = $43,000, Bias = −$18,500\n\nThe director selects Method A, reasoning: 'Lower bias is more important than lower RMSE because systematic overforecasting ties up $3,200 in excess inventory per period, while random errors average out.' Evaluate this reasoning.",
+    "options": [
+      "The director is correct; Bias indicates systematic waste, which is the greater concern",
+      "The reasoning confuses the impact of bias and error dispersion; Method B's larger bias (in absolute terms: $18,500) means systematic underforecasting creating stockout risk, and RMSE measures dispersion—Method B's lower RMSE means predictions cluster more tightly, which may be preferable depending on stockout vs. overstock costs",
+      "Method A is better because positive bias is always preferable to negative bias",
+      "RMSE should be ignored when comparing forecasting methods; only Bias matters"
+    ],
+    "correctIndex": 1,
+    "explanation": "The director made a classic error: confusing bias magnitude with cost. Method B has a LARGER bias (−$18,500 vs. +$3,200), not smaller. If stockout costs exceed overstock costs, Method B's systematic underforecasting could be far more expensive. Additionally, RMSE measures forecast error dispersion: Method B's lower RMSE ($43K vs. $47K) means its predictions are tighter around the bias line. The choice depends on the cost structure, not just bias direction. Option A misreads Method B's bias. Option C ignores that underforecasting (negative bias) can be worse than overforecasting. Option D dismisses RMSE unnecessarily. This illustrates that choosing between forecast methods requires understanding cost implications of both bias AND error variance.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

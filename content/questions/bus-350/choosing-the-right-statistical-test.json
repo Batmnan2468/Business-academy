@@ -1,0 +1,210 @@
+[
+  {
+    "question": "A market research team at Apple Inc. wants to compare customer satisfaction scores (measured on a 1-10 scale) between two groups: iPhone 15 Pro users (n=45) and iPhone 15 standard users (n=42). What is the most appropriate statistical test?",
+    "options": [
+      "Independent samples t-test",
+      "Chi-square test",
+      "ANOVA",
+      "Paired t-test"
+    ],
+    "correctIndex": 0,
+    "explanation": "The independent samples t-test is correct because we have two independent groups with continuous data (satisfaction scores). Chi-square is for categorical data, ANOVA is for 3+ groups, and paired t-test requires matched/repeated measurements. A t-test directly compares means between two unrelated samples.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statistical test should be used to determine if there is an association between product category (Electronics, Clothing, Food) and customer purchase method (Online, In-Store, Mobile App)?",
+    "options": [
+      "Chi-square test of independence",
+      "Pearson correlation",
+      "Regression analysis",
+      "One-way ANOVA"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chi-square test of independence is correct because both variables are categorical (product categories and purchase methods are nominal data). Pearson correlation requires continuous variables, regression requires at least one continuous dependent variable, and ANOVA tests differences in means across groups, not associations between categorical variables.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix conducted a study measuring streaming hours per week for the same 60 customers during three consecutive months. What test should be used to determine if streaming behavior changed significantly over time?",
+    "options": [
+      "Repeated measures ANOVA",
+      "Independent samples t-test",
+      "Chi-square test",
+      "Kruskal-Wallis test"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated measures ANOVA is correct because the same subjects are measured three times (three related/dependent samples). Independent samples t-test compares only two independent groups, Chi-square is for categorical data, and Kruskal-Wallis is the non-parametric alternative but not the first choice when assumptions are met.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A researcher is examining whether there is a linear relationship between advertising spend ($1,000-$50,000) and monthly sales revenue ($5,000-$250,000) for a retail chain. What test is most appropriate?",
+    "options": [
+      "Pearson correlation or linear regression",
+      "T-test",
+      "Chi-square test",
+      "Mann-Whitney U test"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pearson correlation or linear regression is correct because both variables are continuous and we are testing the relationship between them. T-test compares means between groups, Chi-square tests categorical associations, and Mann-Whitney U is for non-normal continuous data between two groups. Both variables here are continuous and numeric.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks collected employee satisfaction survey responses (1-5 Likert scale) from 120 employees across four store locations. What is the appropriate test to compare satisfaction across locations?",
+    "options": [
+      "One-way ANOVA (or Kruskal-Wallis if non-normal)",
+      "T-test",
+      "Paired t-test",
+      "Chi-square test"
+    ],
+    "correctIndex": 0,
+    "explanation": "One-way ANOVA is correct because we have more than two independent groups (four locations) and continuous outcome data (satisfaction scores, treated as interval). T-test only handles two groups, paired t-test requires matched measurements, and Chi-square is for categorical data. ANOVA is the standard choice for comparing means across multiple independent groups.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft surveyed 200 employees about remote work preference (Strongly Prefer, Somewhat Prefer, Neutral, Somewhat Oppose, Strongly Oppose) and job tenure in years (1-30 years). A researcher wants to test whether these variables are associated. What test is appropriate, and why?",
+    "options": [
+      "Spearman correlation (ordinal vs. continuous), not Pearson correlation",
+      "Pearson correlation",
+      "T-test",
+      "One-way ANOVA"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spearman correlation is correct because remote work preference is ordinal data (ranked categories with natural order) while tenure is continuous. Pearson correlation assumes both variables are continuous/interval. Although ANOVA or Spearman could both work conceptually, Spearman is the more precise choice for ordinal×continuous relationships. Pearson assumes interval/continuous for both variables, violating assumptions here.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's logistics team measured package delivery times (in hours) for 85 shipments using their standard delivery process and 87 shipments using an experimental 2-hour delivery option. The delivery time data show extreme outliers and fail the Shapiro-Wilk normality test. What test should be used instead of a t-test?",
+    "options": [
+      "Mann-Whitney U test",
+      "ANOVA",
+      "Paired t-test",
+      "Chi-square test"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mann-Whitney U test is correct because it is the non-parametric alternative to the independent samples t-test, requiring no normality assumption. When normality is violated (confirmed by Shapiro-Wilk test failure) and especially with outliers, Mann-Whitney U is more robust. ANOVA also assumes normality, paired t-test requires matching, and Chi-square is for categorical data.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial services firm wants to assess whether customer satisfaction scores (1-100 scale, n=150) significantly differ between three account types: Basic ($0 fees), Premium ($9.99/month, n=52), and Elite ($19.99/month, n=48). Customer scores follow a normal distribution. What test is appropriate, and what would be a critical assumption to verify?",
+    "options": [
+      "One-way ANOVA; verify homogeneity of variance across groups using Levene's test",
+      "Paired t-test; verify normality",
+      "Kruskal-Wallis; verify independence",
+      "Chi-square; verify expected frequencies"
+    ],
+    "correctIndex": 0,
+    "explanation": "One-way ANOVA is correct because we have three independent groups and continuous, normally-distributed data. A critical assumption is homogeneity of variance (equal variances across groups), tested using Levene's test. Paired t-test is for related samples, Kruskal-Wallis is for non-normal data, and Chi-square is for categorical data. Verifying Levene's test ensures ANOVA validity.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company conducted a clinical trial measuring blood pressure reduction (mm Hg) in 90 patients using Drug A versus Drug B. The same 90 patients tested both drugs in sequence, one month apart. Which test is most appropriate?",
+    "options": [
+      "Paired samples t-test",
+      "Independent samples t-test",
+      "Repeated measures ANOVA",
+      "Mann-Whitney U test"
+    ],
+    "correctIndex": 0,
+    "explanation": "Paired samples t-test is correct because the same subjects are measured twice (before/after or Drug A vs. Drug B), creating dependent/paired data. Independent samples t-test assumes unrelated groups, repeated measures ANOVA is for 3+ repeated measurements, and Mann-Whitney U is for non-normal independent groups. The key is that measurements are paired (same subjects).",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Tesla collected fuel efficiency data (miles per kilowatt-hour, measured on continuous scale) from 200 Model Y vehicles across five U.S. regions. The data are normally distributed. A manager wants to test whether efficiency differs by region. However, Levene's test shows unequal variances across regions. What is the best course of action?",
+    "options": [
+      "Use Welch's ANOVA instead of standard ANOVA to handle unequal variances",
+      "Use standard one-way ANOVA despite the unequal variances",
+      "Switch to Kruskal-Wallis test",
+      "Use multiple t-tests between each pair of regions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Welch's ANOVA is correct because it is specifically designed to handle unequal variances while maintaining the advantages of parametric testing with normal data. Standard ANOVA assumes homogeneity of variance, so Levene's test violation is serious. Kruskal-Wallis is for non-normal data, and multiple t-tests inflate Type I error (multiple comparisons problem). Welch's ANOVA is the robust parametric solution here.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A recruiter at Google is analyzing whether there is a relationship between years of experience (0-25 years) and annual salary ($80,000-$350,000) for 180 engineers. After calculating Pearson r = 0.68, p-value = 0.0002, what is the correct interpretation?",
+    "options": [
+      "There is a strong positive correlation; years of experience explain approximately 46% of salary variance",
+      "There is a strong positive correlation; years of experience explain approximately 68% of salary variance",
+      "There is a moderate positive correlation; no variance is explained without regression R-squared",
+      "There is a weak positive correlation; the p-value is too high to conclude significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer correctly interprets r = 0.68 as a strong positive relationship and correctly calculates R² = 0.68² ≈ 0.46 (46% of variance explained). The second option mistakes the correlation coefficient for the variance explained. The third option ignores that r² directly measures variance explained. The fourth option misinterprets p = 0.0002 as high (it is very low, indicating strong significance). R² = r², not R² = r.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A beverage company tested four formulations of a sports drink (Current, Formula A, Formula B, Formula C) for taste appeal (1-10 scale) using 120 consumers. After conducting a one-way ANOVA, F(3,116)=5.21, p=0.0023, the researcher concludes that all pairwise comparisons between formulations are statistically significant. What is the error in this reasoning?",
+    "options": [
+      "The ANOVA only tests the overall null hypothesis; post-hoc tests (Tukey, Bonferroni) are required for pairwise comparisons and multiple comparison correction",
+      "The ANOVA p-value is too high to support any conclusion",
+      "A one-way ANOVA cannot be used to compare more than three groups",
+      "The effect size is too small to perform post-hoc testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "The error is that ANOVA tests whether at least one group differs, not which pairs differ. Post-hoc tests with multiple comparison corrections (Tukey, Bonferroni, Scheffé) are required for pairwise comparisons to control Type I error. Without post-hoc testing, the researcher incorrectly assumes all pairs differ. The p-value is significant, one-way ANOVA handles 4 groups, and effect size doesn't prevent post-hoc testing. This is a common misconception.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher at JPMorgan Chase collected quarterly revenue growth rates (%) for 40 branches over 8 quarters. They fit a linear regression with Quarter (predictor) on Revenue Growth (outcome), obtaining R² = 0.34. They then conduct a Pearson correlation between Quarter and Revenue Growth, obtaining r = 0.583. What does this tell us about the relationship?",
+    "options": [
+      "R² = r² ≈ 0.34, confirming consistency; 34% of variance in revenue growth is explained by quarter timing; r=0.583 is the correlation, not the variance explained",
+      "The R² and r values contradict each other and the analysis is invalid",
+      "The regression is unreliable because R² is less than 0.50",
+      "Pearson r should equal the square root of R², so r should be 0.583, which correctly equals √0.34"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct answer properly recognizes that R² = 0.34 matches r² ≈ (0.583)² ≈ 0.34, showing internal consistency. The correlation r = 0.583 measures the strength and direction of relationship, while R² quantifies variance explained. The second option misses this consistent relationship. The third option incorrectly assumes R² must exceed 0.50. The fourth option reverses the math: r = 0.583, so R² = r² = 0.34, not vice versa. This catches the subtle difference between r and R².",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing firm wants to compare defect rates (% of defects per batch) across six production lines over 12 months. Defect rates are non-normally distributed with suspected outliers. Additionally, variances are unequal across production lines. Which test is most defensible given these violations?",
+    "options": [
+      "Kruskal-Wallis test (non-parametric, doesn't assume normality or equal variances)",
+      "One-way ANOVA (robust enough to minor violations)",
+      "Welch's ANOVA (handles unequal variances but assumes normality)",
+      "Six pairwise Mann-Whitney U tests with Bonferroni correction"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kruskal-Wallis is most appropriate because it is non-parametric (no normality assumption) and does not assume equal variances, addressing both violations. One-way ANOVA assumes normality and equal variances. Welch's ANOVA fixes unequal variance but still requires normality. Six pairwise tests inflate Type I error even with Bonferroni correction. Kruskal-Wallis, the non-parametric alternative to ANOVA for 3+ groups, is the gold standard here.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A UX researcher at Airbnb collected user experience ratings (1-5 Likert scale) from two independent user groups: Group A (n=200, Web users) and Group B (n=180, Mobile app users). Responses are non-normally distributed (most ratings cluster at 4-5). The researcher plans to conduct an independent samples t-test. What is the concern, and what is the better alternative?",
+    "options": [
+      "T-test assumes normality; use Mann-Whitney U test (non-parametric alternative for two independent groups)",
+      "T-test is appropriate despite the non-normal distribution because sample sizes are large (n>30)",
+      "Likert scale data are ordinal, not continuous, so Chi-square goodness-of-fit is required",
+      "ANOVA should be used instead because there are two groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mann-Whitney U is the correct alternative because Likert data are technically ordinal and non-normally distributed. Although the Central Limit Theorem allows t-tests with large samples, Mann-Whitney U is more appropriate for ordinal data and is robust to non-normality. The second option incorrectly invokes CLT as a blanket defense. Likert data are ordinal, but Chi-square is for categorical associations, not comparing central tendencies. ANOVA requires 3+ groups. Mann-Whitney U directly handles this scenario.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics team suspects a three-way interaction between Season (Winter, Spring, Summer, Fall), Store Format (Mall-based, Standalone, Outlet), and Discount Level (None, 10%, 20%) on monthly sales revenue. They have 240 stores (each measured once). What statistical approach is most appropriate?",
+    "options": [
+      "Three-way ANOVA to test main effects and interactions simultaneously",
+      "Multiple independent one-way ANOVAs for each factor pair",
+      "Three separate t-tests for each factor",
+      "Factorial regression with interaction terms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Three-way ANOVA (or factorial ANOVA) is correct because it simultaneously tests main effects for three factors and all their interactions (2-way and 3-way), partitioning variance efficiently. Multiple ANOVAs risk missing interaction effects and inflate Type I error. Three t-tests ignore the complexity. While factorial regression with interactions is equivalent and also correct, three-way ANOVA is the classic, most direct approach for this design. Three-way ANOVA directly addresses the research question about interactions.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

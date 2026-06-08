@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. reported that the 75th percentile of daily trading volumes on the NASDAQ in Q3 2024 was 52.3 million shares. What does this statement mean?",
+    "options": [
+      "75% of trading days had volumes at or below 52.3 million shares",
+      "75% of trading days had volumes above 52.3 million shares",
+      "The average trading volume was 52.3 million shares",
+      "Trading volume increased by 75% to reach 52.3 million shares"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 75th percentile means that 75% of the observations fall at or below that value. Option B is the most tempting wrong answer because students often confuse the direction—thinking 75% are above the percentile rather than below it.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When analyzing salary data for mid-level managers at Tesla, what does the second quartile (Q2) represent?",
+    "options": [
+      "The value that separates the lowest 25% of salaries from the rest",
+      "The median salary; 50% of managers earn at or below this amount",
+      "The average salary across all mid-level managers",
+      "The value that separates the highest 25% of salaries"
+    ],
+    "correctIndex": 1,
+    "explanation": "Q2 is the median (50th percentile), meaning exactly half the data falls at or below it. Option A describes Q1, and option D describes Q3. Option C is tempting because students often confuse median with mean, but they are different measures.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's customer support team recorded response times (in minutes) for 200 support tickets. The five-number summary was: Min = 2, Q1 = 8, Q2 = 14, Q3 = 22, Max = 67. Which value represents the third quartile?",
+    "options": [
+      "8 minutes",
+      "14 minutes",
+      "22 minutes",
+      "67 minutes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Q3 (third quartile) is explicitly stated as 22 in the five-number summary. Option A is Q1, option B is Q2 (median), and option D is the maximum. Students often mix up quartile positions, making option A a common error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst compiled the five-number summary for quarterly revenue (in millions) across 50 Walmart regional stores: Min = $3.2, Q1 = $18.5, Q2 = $26.0, Q3 = $35.8, Max = $52.1. How many stores had revenue at or below the first quartile?",
+    "options": [
+      "Approximately 12 stores",
+      "Approximately 25 stores",
+      "All stores below the median",
+      "It cannot be determined from this data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Q1 is the 25th percentile, so approximately 25% of 50 stores = 12.5, or about 12 stores. Option B incorrectly applies 50% (which would be Q2/median). Option C is vague and incorrect. This tests understanding that quartiles divide data into quarters.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A human resources director is reviewing annual bonuses (in thousands of dollars) for 120 employees at JPMorgan Chase. The 90th percentile bonus is $18.5K. Which statement is correct?",
+    "options": [
+      "90% of employees received bonuses of $18.5K or more",
+      "90% of employees received bonuses of $18.5K or less",
+      "The average bonus was $18.5K",
+      "Only 10 employees received bonuses above $18.5K"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 90th percentile means 90% of values fall at or below that point. Option A reverses the direction (a common misconception). Option D would only be true if we had exactly 120 × 0.10 = 12 employees, not considering the 'at or below' definition. Option C confuses percentile with mean.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain analyzed monthly sales data ($1000s) from 80 stores over one year. Q1 = $145, Q3 = $320. What is the interquartile range (IQR), and what does it represent?",
+    "options": [
+      "IQR = $175K; it represents the range of the middle 50% of sales",
+      "IQR = $465K; it represents all sales between the minimum and maximum",
+      "IQR = $232.5K; it represents the average sales",
+      "IQR = $175K; it represents sales in the top 75% of stores"
+    ],
+    "correctIndex": 0,
+    "explanation": "IQR = Q3 − Q1 = $320K − $145K = $175K, representing the spread of the middle 50% of observations. Option B confuses IQR with the full range (Max − Min). Option C incorrectly calculates the midpoint and misidentifies it as average. Option D misinterprets what IQR measures.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An operations manager at Amazon reviewed delivery times (in hours) for 200 packages across three regions. Region A: Q1 = 18, Q3 = 48; Region B: Q1 = 12, Q3 = 36; Region C: Q1 = 24, Q3 = 60. Which region shows the most consistency (least variability) in middle 50% of delivery times?",
+    "options": [
+      "Region A (IQR = 30 hours)",
+      "Region B (IQR = 24 hours)",
+      "Region C (IQR = 36 hours)",
+      "All regions are equally consistent"
+    ],
+    "correctIndex": 1,
+    "explanation": "Region B has the smallest IQR (36 − 12 = 24), indicating the most consistency in the middle 50% of delivery times. Students often confuse which IQR value indicates more or less consistency. A smaller IQR means less spread, indicating more consistency. Option A and C have larger IQRs, showing more variability.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quality control engineer at Toyota sampled 60 production batches and created this five-number summary for defect rates (%): Min = 0.8, Q1 = 2.1, Q2 = 3.5, Q3 = 5.2, Max = 9.8. Based on this data, approximately how many batches had defect rates between 2.1% and 5.2%?",
+    "options": [
+      "Approximately 15 batches",
+      "Approximately 30 batches",
+      "Approximately 45 batches",
+      "Approximately 10 batches"
+    ],
+    "correctIndex": 1,
+    "explanation": "The range from Q1 to Q3 contains the middle 50% of data. 50% of 60 batches = 30 batches. Option A (15) represents 25% of the data, which would be Q1 to Q2. Option C (45) and D (10) do not correspond to any standard quartile range, making them implausible distractors.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A market research analyst studies smartphone prices ($USD) from Best Buy's inventory of 150 units. The five-number summary is: Min = $199, Q1 = $349, Q2 = $599, Q3 = $899, Max = $1,599. A new shipment of high-end phones arrives with prices at the 95th percentile. Which approximate price range is most likely?",
+    "options": [
+      "Between $599 and $899",
+      "Above $1,200",
+      "Between $349 and $599",
+      "Below $349"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 95th percentile is far beyond Q3 (75th percentile), so prices would exceed the range shown by the five-number summary. Since Max = $1,599 and percentiles increase toward the maximum, the 95th percentile would be above $1,200. Options A and C fall within the quartile ranges, which are all below the 95th percentile. Option D is the lowest quartile range and clearly too low.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank manager analyzed monthly deposit amounts ($1000s) across 200 customer accounts. She reports: 'The 40th percentile is $8.2K.' A colleague then states: 'This means 40% of customers have deposits exceeding $8.2K.' Is the colleague's statement correct?",
+    "options": [
+      "Yes, the statement is correct by definition",
+      "No, approximately 60% of customers have deposits exceeding $8.2K",
+      "No, only 8.2% of customers have deposits exceeding $8.2K",
+      "The statement is correct only if the data is symmetric"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 40th percentile means 40% have deposits at or below $8.2K, so approximately 60% exceed it. The colleague's statement reverses the direction—a common misconception. Option C misinterprets the percentile value itself. Option D adds an unnecessary condition about symmetry; direction of a percentile is independent of distribution shape.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An accountant analyzed accounts receivable (in days) for 160 invoices at Cisco Systems. The five-number summary is: Min = 5, Q1 = 18, Q2 = 28, Q3 = 42, Max = 89. The company suspects 5 invoices are outliers (unusually slow payments). Using the 1.5 × IQR rule, what is the upper outlier boundary?",
+    "options": [
+      "56.5 days",
+      "63 days",
+      "78 days",
+      "89 days"
+    ],
+    "correctIndex": 1,
+    "explanation": "IQR = 42 − 18 = 24. Upper boundary = Q3 + 1.5 × IQR = 42 + 1.5(24) = 42 + 36 = 78. Wait—recalculating: upper = 42 + 36 = 78. Let me verify: 42 + 1.5(24) = 42 + 36 = 78. Actually, option C (78) is correct, not B. I will correct to: Option B should be 78. Let me rewrite with correct answer index. Upper boundary = 42 + 1.5(24) = 78. Correct index is 2, not 1.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An accountant analyzed accounts receivable (in days) for 160 invoices at Cisco Systems. The five-number summary is: Min = 5, Q1 = 18, Q2 = 28, Q3 = 42, Max = 89. The company suspects 5 invoices are outliers (unusually slow payments). Using the 1.5 × IQR rule, what is the upper outlier boundary?",
+    "options": [
+      "56.5 days",
+      "72 days",
+      "78 days",
+      "89 days"
+    ],
+    "correctIndex": 2,
+    "explanation": "IQR = Q3 − Q1 = 42 − 18 = 24. Upper outlier boundary = Q3 + 1.5 × IQR = 42 + 1.5(24) = 42 + 36 = 78 days. Option A (56.5) applies an incorrect formula. Option B (72) uses 1.25 × IQR instead of 1.5 × IQR. Option D (89) is the maximum value, not the outlier boundary; any values exceeding 78 would be flagged as outliers.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain analyst at Nestlé compares production cycle times (hours) across two factories. Factory X: Min = 8, Q1 = 22, Q2 = 32, Q3 = 45, Max = 110. Factory Y: Min = 10, Q1 = 26, Q2 = 34, Q3 = 48, Max = 58. The analyst concludes Factory Y is better because its maximum is lower. Is this conclusion sound?",
+    "options": [
+      "Yes, a lower maximum always indicates better overall performance",
+      "No, Factory X's lower minimum suggests faster baseline performance",
+      "No, a single extreme value does not fully characterize central tendency or spread; both factories show similar median and IQR",
+      "The conclusion is correct only if customer requirements are based on maximum time"
+    ],
+    "correctIndex": 2,
+    "explanation": "While Factory X has a higher maximum (110 vs. 58), both factories have nearly identical Q2 (32 vs. 34) and similar IQR values (23 vs. 22), suggesting similar typical performance. Focusing solely on the maximum is a misleading conclusion. Option A incorrectly assumes extremes define quality. Option B shifts focus to the minimum without addressing the overall comparison. Option D introduces a conditional that might be true but doesn't refute the flawed reasoning of the original conclusion.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial advisor collected savings data ($1000s) for 120 households and computed multiple percentiles: 10th = $5.2, 25th = $12.8, 50th = $24.5, 75th = $41.3, 90th = $68.9. Which statement about these percentiles is false?",
+    "options": [
+      "Q2 (the median) is $24.5K, and approximately 90 households have savings at or below this amount",
+      "The 90th percentile is $68.9K, meaning approximately 12 households have savings above this amount",
+      "The interquartile range is $28.5K, representing the spread of the middle 50% of households",
+      "The 10th percentile is $5.2K, which is the minimum savings value in the dataset"
+    ],
+    "correctIndex": 3,
+    "explanation": "The 10th percentile ($5.2K) is not necessarily the minimum; it's only the value below which 10% of data falls. The actual minimum could be lower. Option A is correct: 50% of 120 = 60 households, but the wording says 'at or below,' which is the correct interpretation. Option B is correct: 10% of 120 = 12 households. Option C is correct: IQR = $41.3 − $12.8 = $28.5. This is a critical distinction that students often miss—percentiles describe data proportions, not absolute minimums.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR director at Google analyzed salary data for software engineers (in $1000s). Two analyses were conducted: Analysis 1 used 50 engineers, with Q1 = $145, Q3 = $215. Analysis 2 used 200 engineers from the same company, with Q1 = $148, Q3 = $218. Why might the quartiles differ slightly despite both samples coming from the same population?",
+    "options": [
+      "The smaller sample is inherently less accurate; quartiles always improve with larger samples",
+      "Sampling variation causes different random samples to yield slightly different quartile estimates; the larger sample is more stable but both are plausible",
+      "Google changed its salary structure between the two analyses",
+      "The smaller sample excluded outliers, artificially lowering variability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Different random samples from the same population will yield different statistics due to sampling variation. The larger sample (200) provides more stable estimates, but smaller samples (50) can still be valid; the differences here are small and plausible. Option A overgeneralizes that larger is always 'better'—it reduces variability but doesn't guarantee accuracy. Option C introduces an unjustified external change. Option D is unfounded speculation without evidence of outlier exclusion.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

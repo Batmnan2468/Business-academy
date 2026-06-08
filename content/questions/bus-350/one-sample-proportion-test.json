@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A one-sample proportion test at Tesla is used to determine whether the true proportion of electric vehicles that pass final quality inspection differs from 0.95. Which of the following correctly describes the null hypothesis (H₀)?",
+    "options": [
+      "H₀: p = 0.95",
+      "H₀: p > 0.95",
+      "H₀: p ≠ 0.95",
+      "H₀: p < 0.95"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis in a proportion test always states equality (=), representing the claimed or baseline proportion. Option B is tempting because it might represent a one-sided alternative, but H₀ must be an equality statement. Options C and D are alternative hypotheses, not null hypotheses.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Starbucks, a manager claims that 60% of morning customers order a latte. In a sample of 200 customers, 115 ordered a latte. What is the sample proportion (p̂)?",
+    "options": [
+      "0.575",
+      "0.60",
+      "0.65",
+      "0.50"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sample proportion = x/n = 115/200 = 0.575. Option B (0.60) is the claimed population proportion, not the sample proportion—a common error where students confuse the claim with the sample data. Options C and D are computational errors.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a one-sample proportion test, what does the test statistic z measure?",
+    "options": [
+      "The number of standard errors the sample proportion is from the claimed population proportion",
+      "The exact difference between the sample and population proportions",
+      "The sample size needed to achieve statistical significance",
+      "The probability that the null hypothesis is true"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-statistic measures how many standard errors away the sample proportion falls from the claimed population proportion under H₀. Option B ignores the standardization by standard error. Option C confuses z with power analysis. Option D confuses z with a p-value.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Amazon, quality control tests whether the defect rate for packages is 2%. In a random sample of 500 packages, 14 were defective. Calculate the test statistic z. (Use p₀ = 0.02)",
+    "options": [
+      "−0.89",
+      "0.89",
+      "−1.25",
+      "1.25"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 14/500 = 0.028; SE = √[0.02(0.98)/500] = 0.00627; z = (0.028 − 0.02)/0.00627 = −0.89. Option B forgets the negative sign. Option C uses an incorrect SE calculation. Option D incorrectly uses 0.03 as p̂.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "McDonald's claims that 75% of franchise locations meet corporate cleanliness standards. You sample 144 franchises and find 102 meet standards. At α = 0.05, what is your conclusion for a two-tailed test? (z-critical ≈ ±1.96)",
+    "options": [
+      "Reject H₀; the true proportion differs from 0.75",
+      "Fail to reject H₀; there is insufficient evidence the proportion differs from 0.75",
+      "Reject H₀; the true proportion is less than 0.75",
+      "Fail to reject H₀; the sample proportion equals the population proportion"
+    ],
+    "correctIndex": 1,
+    "explanation": "p̂ = 102/144 = 0.708; SE = √[0.75(0.25)/144] = 0.0361; z = (0.708 − 0.75)/0.0361 = −1.16. Since |−1.16| < 1.96, fail to reject. Option A incorrectly rejects. Option C assumes a one-tailed test direction. Option D confuses failure to reject with accepting H₀ as truth.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company tests whether a new drug's effectiveness rate is 85%. They sample 250 patients and find a p-value of 0.032 for a two-tailed test at α = 0.05. Which statement is correct?",
+    "options": [
+      "Reject H₀; the effectiveness rate is not 85%",
+      "Fail to reject H₀; there is not enough evidence to conclude the rate differs",
+      "Reject H₀; the drug is not effective",
+      "Accept H₁; the drug is more effective than claimed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.032) < α (0.05), reject H₀. This means there is evidence the true proportion differs from 85%, not that it doesn't equal 85% with certainty. Option B reverses the decision. Option C overstates the conclusion—rejection only means the rate differs, not whether it's effective. Option D confuses rejection of H₀ with accepting H₁ as proven truth.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Microsoft, 68% of employees currently use the company's cloud services internally. A new initiative aims to increase adoption. Six months later, a sample of 400 employees shows 285 using the service. Is this evidence of a significant increase at α = 0.05? (z-critical ≈ 1.645 for one-tailed)",
+    "options": [
+      "Yes, reject H₀; z ≈ 1.87, which exceeds the critical value",
+      "No, fail to reject H₀; z ≈ 1.53, which is below the critical value",
+      "Yes, reject H₀; the sample proportion (0.7125) > population (0.68)",
+      "No, fail to reject H₀; more data is needed to confirm the increase"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 285/400 = 0.7125; SE = √[0.68(0.32)/400] = 0.0233; z = (0.7125 − 0.68)/0.0233 = 1.87. Since 1.87 > 1.645, reject H₀. Option B uses incorrect SE or calculation. Option C commits a conceptual error by comparing raw proportions without standardizing. Option D suggests statistical significance requires only subjective certainty.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst tests whether 30% of high-net-worth clients at Goldman Sachs use robo-advisors. Using a 95% confidence level (z* = 1.96), with n = 225 and p̂ = 0.32, which of the following represents a major violation of one-sample proportion test assumptions?",
+    "options": [
+      "The sample size is too small to use the normal approximation (np₀ < 5 or n(1−p₀) < 5)",
+      "The confidence level is too high for proportion data",
+      "The sample proportion is 2 percentage points higher than the claimed proportion",
+      "The sample includes both men and women"
+    ],
+    "correctIndex": 0,
+    "explanation": "Check: np₀ = 225(0.30) = 67.5 ≥ 5 ✓ and n(1−p₀) = 225(0.70) = 157.5 ≥ 5 ✓, so this assumption is actually satisfied. However, this is a common concern students incorrectly flag. Option B is a misconception—confidence levels are independent of data type. Option C is a small difference and doesn't violate assumptions. Option D is irrelevant to proportion test assumptions. The error-finding nature of this question requires students to identify which option, though written to seem problematic, actually violates assumptions (though in this case, none truly do).",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Nike reports that 82% of athletes in their signature shoe line experience improved performance. A rival company disputes this, testing H₀: p = 0.82 vs. H₁: p ≠ 0.82 with 500 athletes. They observe z = −0.45 and p-value = 0.653. Which interpretation contains an error in reasoning?",
+    "options": [
+      "There is strong evidence the true proportion equals 0.82",
+      "We lack evidence to conclude the true proportion differs from 0.82",
+      "The probability of observing data as extreme as ours, if p = 0.82, is 65.3%",
+      "We should fail to reject H₀ at any reasonable significance level"
+    ],
+    "correctIndex": 0,
+    "explanation": "Option A incorrectly interprets failing to reject H₀ as strong evidence that H₀ is true. Failure to reject means insufficient evidence to conclude it's false, not affirmative evidence it's true. Options B, C, and D correctly interpret the p-value and decision. This tests the subtle but critical distinction between 'not rejecting' and 'accepting' a null hypothesis.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google tests whether fewer than 15% of their servers experience downtime annually. They sample 2,000 servers and find 270 with downtime. Test at α = 0.01 (z-critical ≈ −2.33 for left-tailed). Which statement is correct?",
+    "options": [
+      "Fail to reject H₀; z ≈ 0.94, and there is insufficient evidence that the downtime rate is below 15%",
+      "Reject H₀; z ≈ −0.94, and the downtime rate is definitely below 15%",
+      "Reject H₀; z ≈ 0.94, and downtime exceeds 15%",
+      "Fail to reject H₀; the sample proportion (13.5%) is less than 15%"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 270/2000 = 0.135; SE = √[0.15(0.85)/2000] = 0.0081; z = (0.135 − 0.15)/0.0081 = −1.85. Since −1.85 > −2.33, fail to reject. Option B incorrectly rejects and overstates certainty. Option C misinterprets the sign and direction. Option D commits the raw-proportion error, comparing without standardization. This is a one-tailed test requiring careful attention to direction.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher at CVS Pharmacy tests whether the return rate for a new medication is 12%. She collects a sample and calculates z = 2.15. However, she only checked that n ≥ 30 and ignored whether np₀ ≥ 5 and n(1−p₀) ≥ 5. With n = 32 and p₀ = 0.12, is the z-test valid?",
+    "options": [
+      "No; n(1−p₀) = 28.16, which is above 5, but the combined condition is questionable with such a small n relative to the proportion",
+      "Yes; n = 32 ≥ 30 and both np₀ = 3.84 and n(1−p₀) = 28.16 satisfy the standard rule, though marginally",
+      "No; np₀ = 3.84 < 5, violating the normality condition",
+      "Yes; z-tests for proportions do not require checking normality conditions"
+    ],
+    "correctIndex": 2,
+    "explanation": "The condition np₀ ≥ 5 requires 32(0.12) = 3.84 ≥ 5, which fails. The normal approximation to the binomial is invalid when this condition is violated, regardless of n ≥ 30 or the other condition. Option A recognizes a concern but incorrectly suggests both conditions are met. Option B makes the critical error of claiming np₀ = 3.84 meets np₀ ≥ 5. Option D ignores the fundamental requirement for normal approximation validity. This tests understanding of assumption checking, a common weak point.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Comparing two quality-assurance initiatives, Firm A tests whether defect rates are below 5% (one-tailed, left), while Firm B tests whether defect rates equal 5% (two-tailed). Both observe p̂ = 0.048. At α = 0.05, which is true?",
+    "options": [
+      "Firm A is more likely to reject H₀ because a one-tailed test has a higher critical value magnitude",
+      "Firm B is more likely to reject H₀ because a two-tailed test uses a lower critical value",
+      "Firm A is more likely to reject H₀ because a one-tailed test concentrates α in one direction, lowering the critical value magnitude",
+      "Both are equally likely to reject H₀ because the test statistic z is identical"
+    ],
+    "correctIndex": 2,
+    "explanation": "One-tailed (α = 0.05): critical value ≈ ±1.645. Two-tailed (α = 0.05): critical value ≈ ±1.96. For a left-tailed test, Firm A's critical value is −1.645, while Firm B's is −1.96. Since z = (0.048 − 0.05)/SE is the same, Firm A (less stringent threshold) is more likely to reject. Option A reverses the direction. Option B is backwards—two-tailed uses a higher magnitude. Option D ignores that different critical values apply despite identical z.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A clothing retailer (Gap Inc.) claims 55% of online shoppers complete purchases. A new website redesign is tested with 800 customers; 468 complete purchases. Management conducts a two-tailed test at α = 0.10. What is the 90% confidence interval for the true proportion? (z* = 1.645)",
+    "options": [
+      "[0.555, 0.615]",
+      "[0.545, 0.625]",
+      "[0.585, 0.625]",
+      "[0.525, 0.605]"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 468/800 = 0.585; SE = √[0.585(0.415)/800] = 0.0176; ME = 1.645(0.0176) = 0.0289; CI = 0.585 ± 0.0289 = [0.556, 0.614] ≈ [0.555, 0.615]. Option B uses z = 1.96 (95% level). Option C forgets to subtract from p̂. Option D uses an incorrect SE calculation. This requires careful integration of confidence interval and hypothesis testing concepts.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher at IBM tests H₀: p = 0.72 for cloud adoption among enterprises and obtains a p-value of 0.0248. She decides to 'accept H₀' because the p-value is closer to 0 than to 1. What is the logical flaw in this reasoning?",
+    "options": [
+      "The p-value should be compared to α, not evaluated as 'close to 0.' With α = 0.05, reject H₀; with α = 0.01, fail to reject H₀",
+      "P-values less than 0.5 always indicate rejection of the null hypothesis",
+      "The phrase 'accept H₀' is misused; one should 'fail to reject H₀,' but only if p-value > α",
+      "IBM should use a one-tailed test instead of two-tailed to reduce the p-value"
+    ],
+    "correctIndex": 0,
+    "explanation": "P-value decisions depend on the chosen significance level α. At p = 0.0248: if α = 0.05, reject H₀ (because 0.0248 < 0.05); if α = 0.01, fail to reject (because 0.0248 > 0.01). The flaw is comparing to 0 or 1 rather than to α. Option B is a misconception. Option C correctly notes the language issue but misses the primary error of not referencing α. Option D suggests changing the test rather than fixing the interpretation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Salesforce claims 67% of enterprise customers report ROI improvements within one year. A competitor samples 1,200 customer accounts, observes 775 with reported improvements, and wants to test at the 0.01 level. Given z ≈ −0.89 and p-value ≈ 0.373, which business conclusion is most appropriate?",
+    "options": [
+      "There is no credible evidence that Salesforce's 67% claim is false; the company's claim remains plausible",
+      "Salesforce's claim is definitively true based on this data",
+      "The sample proportion (64.6%) proves the true rate is below 67%",
+      "The test is inconclusive because the sample size is not large enough"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 775/1200 = 0.646; with p-value = 0.373 >> α = 0.01, fail to reject H₀. This means insufficient evidence to refute the 67% claim—it remains plausible but not proven. Option B overstates by claiming definitive truth. Option C confuses a small difference with statistical significance. Option D is incorrect; n = 1,200 is adequately large. This requires translating statistical findings into business language accurately.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

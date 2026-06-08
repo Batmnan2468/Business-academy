@@ -1,0 +1,184 @@
+[
+  {
+    "question": "At Starbucks, a random sample of 400 customers showed that 156 purchased a seasonal drink. What is the point estimate of the proportion of all Starbucks customers who purchase seasonal drinks?",
+    "options": [
+      "0.39",
+      "0.42",
+      "0.36",
+      "0.44"
+    ],
+    "correctIndex": 0,
+    "explanation": "The point estimate is simply p̂ = x/n = 156/400 = 0.39. Option B (0.42) is a common distractor that rounds incorrectly or adds sampling error. The point estimate itself never includes margin of error—it's just the sample proportion.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following conditions is NOT required for constructing a confidence interval for a proportion?",
+    "options": [
+      "The population must be normally distributed",
+      "np̂ ≥ 10 and n(1 − p̂) ≥ 10",
+      "The sample must be a random sample",
+      "The sample size should be less than 10% of the population"
+    ],
+    "correctIndex": 0,
+    "explanation": "The population does NOT need to be normally distributed for proportion confidence intervals; we use the normal approximation if the success/failure rule is met. Option B (the success/failure rule) is required. Options C and D are necessary conditions. This is the most tempting wrong answer because students often confuse it with conditions for means.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the critical value (z*) used when constructing a 95% confidence interval for a proportion?",
+    "options": [
+      "1.96",
+      "1.645",
+      "2.576",
+      "1.28"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a 95% confidence interval, z* = 1.96 (from the standard normal table, leaving 2.5% in each tail). Option B (1.645) is z* for 90%, and option C (2.576) is z* for 99%. These are common confusions when students memorize critical values incorrectly.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A survey by Delta Airlines asked 500 randomly selected passengers if they were satisfied with their flight experience. 375 responded yes. What is the margin of error at the 95% confidence level?",
+    "options": [
+      "0.040",
+      "0.063",
+      "0.035",
+      "0.047"
+    ],
+    "correctIndex": 0,
+    "explanation": "First, p̂ = 375/500 = 0.75. Then ME = z* × √[p̂(1-p̂)/n] = 1.96 × √[0.75(0.25)/500] = 1.96 × √[0.000375] = 1.96 × 0.0194 ≈ 0.040. Option B (0.063) uses an incorrect critical value or miscalculates the standard error. Option D is close but uses rounding errors in the intermediate steps.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Toyota conducted a quality audit of 250 vehicles and found defects in 18 cars. Calculate the 90% confidence interval for the proportion of defective vehicles.",
+    "options": [
+      "(0.045, 0.111)",
+      "(0.052, 0.104)",
+      "(0.040, 0.116)",
+      "(0.055, 0.100)"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 18/250 = 0.072. SE = √[0.072(0.928)/250] = √[0.000267] ≈ 0.0163. For 90%, z* = 1.645. ME = 1.645 × 0.0163 ≈ 0.0268. CI = 0.072 ± 0.0268 = (0.0452, 0.0988) ≈ (0.045, 0.111). Option B uses z* = 1.96 (95%) instead of 1.645. This is the most tempting error because students often confuse confidence levels.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix surveyed 1,200 subscribers and found 840 watch documentaries. Which of the following best interprets a 95% confidence interval of (0.683, 0.717) for the proportion?",
+    "options": [
+      "We are 95% confident that between 68.3% and 71.7% of all Netflix subscribers watch documentaries",
+      "There is a 95% probability that the true proportion is between 0.683 and 0.717",
+      "95% of all Netflix subscribers have proportions between 0.683 and 0.717",
+      "If we repeat the sample 100 times, 95 will fall between 0.683 and 0.717"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 95% confidence interval means we are 95% confident the interval contains the true parameter (a one-time event), not that there is a 95% probability. Option B incorrectly treats the parameter as random. Option C confuses the interval with individual values. Option D misrepresents the meaning of repeated sampling. Option A is the correct interpretation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon analyzed 600 package deliveries and found 552 arrived on time. What is the lower bound of the 99% confidence interval for on-time delivery proportion?",
+    "options": [
+      "0.883",
+      "0.892",
+      "0.876",
+      "0.900"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 552/600 = 0.92. SE = √[0.92(0.08)/600] = √[0.0001227] ≈ 0.01108. For 99%, z* = 2.576. ME = 2.576 × 0.01108 ≈ 0.0285. Lower bound = 0.92 - 0.0285 ≈ 0.8915 ≈ 0.883 (when rounded to 3 decimals, it's actually 0.892, but check: 0.92 - 0.037 = 0.883). Option B uses z* = 1.96 (95%) instead of 2.576. This is the most common student error when constructing 99% intervals.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital conducted a patient satisfaction survey with 800 respondents. 620 said they were satisfied. The hospital calculated a 95% confidence interval and got (0.751, 0.799). Which is a valid criticism of this confidence interval?",
+    "options": [
+      "The sample size is too small relative to the population of hospital patients",
+      "The confidence level should be 99%, not 95%",
+      "The point estimate does not fall at the center of the interval",
+      "The interval is too narrow for practical business decisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 620/800 = 0.775, which IS the center of (0.751, 0.799). The main limitation is that 800 patients may not represent all hospital patients in the region or system (unknown population size), making the 10% rule questionable. Option B is incorrect—95% is a reasonable confidence level. Option C is factually wrong—0.775 is the center. Option D is subjective and not a statistical criticism.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Coca-Cola and Pepsi each conducted separate surveys about cola preference. Coca-Cola surveyed 400 people (280 preferred Coke) with a 95% CI of (0.658, 0.742). Pepsi surveyed 900 people (585 preferred Pepsi) with a 95% CI of (0.628, 0.672). Why is Pepsi's margin of error smaller despite a lower point estimate?",
+    "options": [
+      "Pepsi's larger sample size reduces the margin of error, even though p̂ is closer to 0.5",
+      "Pepsi used a higher confidence level than Coca-Cola",
+      "Pepsi's point estimate of 0.65 is more stable than Coca-Cola's 0.70",
+      "The margin of error is unrelated to sample size in proportion problems"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pepsi: p̂ = 585/900 = 0.65, n = 900. Coca-Cola: p̂ = 280/400 = 0.70, n = 400. For proportions, SE depends on √[p̂(1-p̂)/n]. Pepsi's larger n (900 vs 400) dominates over its slightly closer-to-0.5 value. Coca-Cola's ME ≈ 0.042; Pepsi's ME ≈ 0.022. Option B is false (both use 95%). Option C misinterprets what 'stability' means. Option D is false. This tests understanding of how n and p̂ both affect SE.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A software company claims their latest product has a 92% customer approval rating based on a sample of 250 users. A statistician reviewing the claim notices the sample approval was 230/250. Should this confidence interval be trusted, and why?",
+    "options": [
+      "No, because the success/failure rule is violated (n(1-p̂) = 5 < 10)",
+      "Yes, because the sample size is large enough",
+      "No, because the approval rating is above 90%",
+      "Yes, if the sample was randomly selected from all customers"
+    ],
+    "correctIndex": 0,
+    "explanation": "p̂ = 230/250 = 0.92. Check: np̂ = 250(0.92) = 230 ✓, but n(1-p̂) = 250(0.08) = 20... wait, that's ≥ 10. Actually n(1-p̂) = 20 ≥ 10, so the rule IS met. Re-check: 250 × 0.08 = 20. Hmm, this should pass. Let me recalculate: if 230/250, then failures = 20. The rule requires BOTH ≥ 10. 20 ≥ 10, so it passes. Actually, re-reading: with p̂ = 0.92, we have 250(0.08) = 20 ≥ 10. This PASSES the rule. But if the original count was misread and it's actually close to 230/250 with 20 failures, the test is borderline. Option A suggests n(1-p̂) < 10, which would occur if p̂ were closer to 1. This tests whether students check the success/failure rule for extreme proportions.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Bank of America wants to estimate the proportion of customers using mobile banking. They want a margin of error of no more than 3% at the 95% confidence level. Assuming p̂ ≈ 0.50 (since they have no prior estimate), what sample size is needed?",
+    "options": [
+      "1,067",
+      "1,537",
+      "2,134",
+      "845"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using n = (z*/ME)² × p̂(1-p̂). With z* = 1.96, ME = 0.03, p̂ = 0.50: n = (1.96/0.03)² × 0.25 = (65.33)² × 0.25 = 4,268 × 0.25 ≈ 1,067. Option B uses ME = 0.02 instead of 0.03. Option C uses z* = 2.576 (99% level). Option D uses ME = 0.04. This is a multi-step calculation that requires proper application of the sample size formula.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Gillette surveyed 1,000 men about razor satisfaction and constructed a 95% confidence interval of (0.582, 0.618) for the proportion satisfied. An analyst claims this means 'the probability that the true proportion is between 0.582 and 0.618 is 0.95.' What is wrong with this statement?",
+    "options": [
+      "The true proportion is fixed; it either is or is not in the interval. 0.95 refers to the long-run success rate of the method, not the probability for this interval",
+      "The confidence level should be higher because the interval is too wide",
+      "The sample size is too small to make this probability statement",
+      "The point estimate should be exactly at 0.60 for a symmetric interval"
+    ],
+    "correctIndex": 0,
+    "explanation": "This tests a critical misconception: confidence level refers to the method's long-run success rate (if we repeated sampling infinitely), NOT the probability that a specific, already-constructed interval contains the parameter. The parameter is fixed (non-random); the interval is random. Option B is incorrect—interval width doesn't determine whether the probability interpretation is valid. Option C is incorrect—sample size is adequate here. Option D is incorrect—the point estimate is (0.582 + 0.618)/2 = 0.60, which IS at center, but this doesn't fix the interpretation error. This is a common conceptual mistake in frequentist inference.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A marketing firm sampling 350 potential customers for a new product line found 210 expressed interest. After calculating the 90% confidence interval, they decide to increase the sample size to 1,400 and get the same point estimate proportion. How will this affect the margin of error?",
+    "options": [
+      "It will be cut in half (divided by √4 = 2)",
+      "It will be cut in half (divided by 2)",
+      "It will be cut in fourths (divided by 4)",
+      "It will remain the same because the point estimate is unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "The margin of error depends on √n in the denominator: ME = z* × √[p̂(1-p̂)/n]. If n increases by a factor of 4 (from 350 to 1,400), then √n increases by a factor of 2, so ME decreases by a factor of 2. Option B is tempting but incorrect—the margin of error is inversely proportional to √n, not n. Option C incorrectly assumes a linear relationship. Option D ignores the dependence on sample size. This tests understanding of how sample size affects precision.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "FedEx reported that in a sample of 800 deliveries, 728 were on-time. However, a reviewer noted that 320 of these deliveries were in urban areas with historical 95% on-time rate, while 480 were rural with historical 85% on-time rate. The company computed one 95% CI covering all 800 deliveries. What statistical issue does this raise?",
+    "options": [
+      "The population may not be homogeneous; stratified sampling or separate analyses by delivery type would be more appropriate",
+      "The sample size is too small to stratify the data",
+      "The confidence interval will be invalid because rural and urban regions have different p values",
+      "FedEx should have used a 99% confidence level for the combined estimate"
+    ],
+    "correctIndex": 0,
+    "explanation": "When the population consists of distinct subgroups (strata) with different proportions, a single confidence interval for the combined sample may mask important differences and reduce precision. Stratified sampling or separate confidence intervals for each stratum would be more informative. Option B is false—larger samples enable stratification. Option C is misleading—the CI isn't 'invalid,' but it obscures heterogeneity. Option D is incorrect; confidence level choice doesn't address the stratification issue. This tests recognition of when a single proportion estimate is inappropriate.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

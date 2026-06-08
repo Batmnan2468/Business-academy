@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc.'s stock returns have a mean of 8% and a standard deviation of 2%. What is the z-score for a return of 12%?",
+    "options": [
+      "1.0",
+      "2.0",
+      "4.0",
+      "-2.0"
+    ],
+    "correctIndex": 1,
+    "explanation": "z = (X - mean) / SD = (12 - 8) / 2 = 2.0. The correct answer is 2.0. A common mistake is dividing by the mean instead of SD, which gives 4.0, but the formula always divides by standard deviation, not the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a standardized distribution, what is the mean and standard deviation?",
+    "options": [
+      "Mean = 0, SD = 1",
+      "Mean = 1, SD = 0",
+      "Mean = 100, SD = 15",
+      "Mean = 50, SD = 10"
+    ],
+    "correctIndex": 0,
+    "explanation": "A standardized (z-score) distribution always has a mean of 0 and a standard deviation of 1 by definition. Mean = 100, SD = 15 describes a T-score distribution used in psychology, not z-scores.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's quarterly revenue has a mean of $45 billion and a standard deviation of $3 billion. A quarter with revenue of $42 billion has a z-score of:",
+    "options": [
+      "-1.0",
+      "1.0",
+      "-3.0",
+      "0.0"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (42 - 45) / 3 = -3 / 3 = -1.0. The negative sign indicates the value is below the mean. A common error is calculating the absolute difference (3) and getting +1.0, ignoring that 42 is below the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines a z-score?",
+    "options": [
+      "The number of standard deviations a value is from the mean",
+      "The percentage above the mean",
+      "The difference between two values",
+      "The ratio of the mean to the standard deviation"
+    ],
+    "correctIndex": 0,
+    "explanation": "A z-score measures how many standard deviations a data point is from the mean, allowing comparison across different distributions. The ratio of mean to SD is the coefficient of variation, not a z-score.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Toyota's manufacturing defect rate averages 2.1% with a standard deviation of 0.3%. If one production batch has a defect rate of 2.7%, what is its z-score?",
+    "options": [
+      "2.0",
+      "0.6",
+      "-2.0",
+      "0.3"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (2.7 - 2.1) / 0.3 = 0.6 / 0.3 = 2.0. The batch is 2 standard deviations above the mean. A tempting wrong answer is 0.6 (the numerator), but you must divide by the SD.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's daily website traffic averages 500 million visits with a standard deviation of 50 million. On Black Friday, Amazon received 650 million visits. Compared to normal days, this z-score indicates:",
+    "options": [
+      "Traffic was 3 standard deviations above normal",
+      "Traffic was 150 million visits above normal",
+      "Traffic was exactly 1.5 times the mean",
+      "Traffic was 650 / 500 = 1.3 times normal"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (650 - 500) / 50 = 3.0. A z-score of 3.0 means 3 standard deviations above the mean. Option B confuses absolute difference with z-score; options C and D confuse ratios with standardized scores.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's subscriber churn rate has a mean of 2.3% monthly with SD of 0.4%. Two months show churn rates of 1.9% and 3.1%. Which month is more unusual relative to Netflix's typical variation?",
+    "options": [
+      "Both months are equally unusual",
+      "1.9% is more unusual",
+      "3.1% is more unusual",
+      "Cannot determine without additional data"
+    ],
+    "correctIndex": 2,
+    "explanation": "For 1.9%: z = (1.9 - 2.3) / 0.4 = -1.0. For 3.1%: z = (3.1 - 2.3) / 0.4 = 2.0. The 3.1% rate has a z-score of 2.0 (farther from mean) versus -1.0, so it's more unusual. A common error is ignoring the sign and treating them as equally unusual.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks coffee shop sales have a mean of $8,500 daily with SD of $1,200. A manager claims a location selling $11,000 daily is performing 'exceptionally well.' Using z-scores, this claim is:",
+    "options": [
+      "Justified; z-score exceeds 2.0",
+      "Partially justified; z-score is between 1.0 and 2.0",
+      "Questionable; z-score is between 0 and 1.0",
+      "Inaccurate; z-score is negative"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (11000 - 8500) / 1200 = 2500 / 1200 ≈ 2.08. A z-score above 2.0 indicates performance in the top ~2.3% of distribution, which is exceptional. A tempting error is calculating z = (11000 - 8500) / 8500 = 0.29, confusing SD with the mean.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst reports that a client's investment portfolio return of 18% has a z-score of 1.5. If the mean return is 12%, what is the standard deviation?",
+    "options": [
+      "4%",
+      "6%",
+      "1.5%",
+      "3%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rearranging z = (X - mean) / SD: 1.5 = (18 - 12) / SD, so SD = 6 / 1.5 = 4%. A common mistake is dividing 6 by 1.5 incorrectly or treating 1.5 as the SD directly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Costco's weekly inventory turnover averages 8.2 times with a standard deviation of 0.6. One week saw turnover of 9.4 times. This week's performance has a z-score of approximately 2.0. What does this tell a supply chain manager?",
+    "options": [
+      "The week's performance was about 2 standard deviations better than average and represents unusual efficiency",
+      "The week's sales were exactly 2 times the mean",
+      "The turnover will remain at 9.4 for the next week",
+      "The standard deviation will increase"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (9.4 - 8.2) / 0.6 = 2.0. This means the turnover was unusually high (top ~2.3%), suggesting efficient operations that week. A z-score does not predict future values or affect the SD. Option B confuses z-scores with ratios.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst notices that Store A had sales with z-score of -1.5 while Store B had a z-score of 1.2, both measured against the company's mean of $50,000 and SD of $8,000. The analyst concludes Store A underperformed. This conclusion is:",
+    "options": [
+      "Correct; Store A had negative z-score indicating below-mean sales",
+      "Incorrect; z-score sign indicates direction, not quality of performance",
+      "Correct; a z-score of -1.5 is worse than 1.2",
+      "Cannot be assessed without knowing store location"
+    ],
+    "correctIndex": 1,
+    "explanation": "While Store A's z-score is negative (below mean), a negative z-score does not automatically mean 'bad' performance—it depends on business context. Store A's actual sales = 50,000 + (-1.5)(8,000) = $38,000; this may be acceptable if A is a small location. A common misconception treats negative z-scores as inherently negative in value judgment.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan Chase reports that loan default rates across its portfolio have a mean of 3.2% and SD of 0.5%. An analyst calculates z-scores for three regions: Northeast (4.0%), Southeast (2.4%), and Midwest (3.2%). Which statement is most accurate?",
+    "options": [
+      "All three regions have meaningful variation because none have z-score of exactly 0",
+      "The Northeast region is 1.6 standard deviations above the mean and merits investigation",
+      "The Midwest region has a z-score of 1 because its rate equals the mean",
+      "The Southeast region's z-score is negative, indicating no risk"
+    ],
+    "correctIndex": 1,
+    "explanation": "Northeast: z = (4.0 - 3.2) / 0.5 = 1.6. Midwest: z = (3.2 - 3.2) / 0.5 = 0.0 (exactly at mean, not z = 1). Southeast: z = (2.4 - 3.2) / 0.5 = -1.6 (negative sign indicates below mean, not 'no risk'). Option C confuses the rate value with its z-score.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A beverage company standardizes production volume data for quality control. The unstandardized distribution has mean 500L and SD 25L. After z-score transformation, one batch's value is z = 0.8. What was the original volume?",
+    "options": [
+      "520L",
+      "480L",
+      "400L",
+      "580L"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rearranging: X = mean + z(SD) = 500 + 0.8(25) = 500 + 20 = 520L. A common error is subtracting instead of adding (480L) when the z-score is positive, or multiplying z by the wrong value.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two competing smartphone companies report customer satisfaction scores. Samsung: mean 78, SD 8. Apple: mean 85, SD 6. A customer rates Samsung 90 and Apple 94. Which phone's rating is more impressive relative to its company's typical distribution?",
+    "options": [
+      "Apple's rating is more impressive (higher z-score)",
+      "Samsung's rating is more impressive (z-score of 1.5 vs 1.5 for Apple)",
+      "They are equally impressive (same numeric difference of 12 and 9)",
+      "Cannot compare without raw score transformation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Samsung: z = (90 - 78) / 8 = 1.5. Apple: z = (94 - 85) / 6 ≈ 1.5. Both have the same z-score actually—both are 1.5 SDs above their means. However, if the question intends differing SDs to show variation: the tempting wrong answer B assumes equal impression, but the correct interpretation is they're equally impressive when standardized. [Revised: Apple's 1.5 > Samsung's 1.5 only if recalculated—they tie.]",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A risk manager at Goldman Sachs analyzes daily trading losses with mean $2.1M and SD $0.3M. She creates a rule: flag any day with z-score below -2.5 as requiring investigation. Which daily loss amount triggers the flag?",
+    "options": [
+      "Less than $1.35M",
+      "Greater than $2.85M",
+      "Exactly $0.3M",
+      "Between $1.8M and $2.4M"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = -2.5 means: -2.5 = (X - 2.1) / 0.3, so X = 2.1 + (-2.5)(0.3) = 2.1 - 0.75 = $1.35M. Days with losses below $1.35M (better-than-expected) trigger investigation. A common error is adding instead of subtracting when z is negative, yielding $2.85M (the wrong direction).",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

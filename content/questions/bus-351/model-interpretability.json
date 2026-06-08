@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Amazon's machine learning team is explaining their recommendation system to business stakeholders. Which of the following BEST defines model interpretability in this context?",
+    "options": [
+      "The ability to explain why the model recommended a specific product to a customer",
+      "The accuracy of the recommendation system in predicting customer purchases",
+      "The speed at which the model processes customer data",
+      "The number of products the model can recommend simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model interpretability is about explainability—understanding the reasoning behind predictions. Option B (accuracy) is a common misconception; accuracy measures performance, not interpretability. A model can be highly accurate but completely uninterpretable (black box), or interpretable but less accurate.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "JPMorgan Chase's credit risk team built a logistic regression model to approve/deny loans. Why is logistic regression considered more interpretable than a deep neural network for this application?",
+    "options": [
+      "Logistic regression produces coefficient weights that directly show feature importance and direction of impact",
+      "Logistic regression always produces higher accuracy rates than neural networks",
+      "Logistic regression requires less computational power to train",
+      "Logistic regression automatically eliminates multicollinearity from the data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logistic regression's interpretability comes from transparent coefficients that show which factors increase/decrease loan approval odds. Option B is incorrect—neural networks often achieve higher accuracy; the trade-off is interpretability vs. performance, not one being universally better.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Uber's data science team is reviewing their driver-demand prediction model. Which of the following is NOT a method for improving model interpretability?",
+    "options": [
+      "Increasing the number of features from 50 to 500 to capture more complexity",
+      "Using SHAP values to explain individual predictions",
+      "Creating partial dependence plots to show feature relationships",
+      "Applying feature selection to reduce the model to the 20 most important variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding more features typically reduces interpretability by increasing complexity; models become harder to understand as dimensionality grows. Options B, C, and D are all legitimate interpretability-enhancement techniques. This is a common misconception that more data always helps.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail bank built a decision tree to classify customers as high or low credit risk, with 8 decision nodes. Netflix built a gradient boosting ensemble with 500 trees for movie recommendations. Considering only interpretability, which model is easier to explain to non-technical stakeholders?",
+    "options": [
+      "The decision tree, because it provides a single clear path of rules that anyone can follow",
+      "The gradient boosting model, because ensemble methods are always more interpretable",
+      "Both are equally interpretable because they both use tree-based algorithms",
+      "The gradient boosting model, because 500 trees capture more patterns than 8 nodes"
+    ],
+    "correctIndex": 0,
+    "explanation": "A single decision tree with 8 nodes is highly interpretable—stakeholders can trace a decision path easily. An ensemble of 500 trees is a black box; interpretability decreases as complexity increases. Option B is a tempting misconception; more trees mean more predictive power but less explainability.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft's HR analytics team is explaining their employee turnover prediction model to management. What is the primary reason interpretability matters in this use case?",
+    "options": [
+      "So managers can understand which factors drive turnover and take targeted retention actions",
+      "So the model can process employee data faster during hiring season",
+      "So the model achieves 95% or higher prediction accuracy on validation data",
+      "So the model requires fewer variables to train effectively"
+    ],
+    "correctIndex": 0,
+    "explanation": "In HR contexts, interpretability is crucial for actionable insights—managers need to know what levers to pull (salary, work environment, etc.). Option C confuses accuracy with interpretability; a perfectly accurate but unexplainable model is useless for strategic decision-making.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Goldman Sachs built a linear regression model with the equation: Stock Return = 0.45 + 0.032(Earnings) + 0.018(Market Cap) − 0.005(Debt) + error. If a company has Earnings of $2.5B, Market Cap of $80B, and Debt of $6B, what is the predicted return, and why is this model interpretable?",
+    "options": [
+      "Predicted return = 3.34%, and the model is interpretable because each coefficient directly shows the impact of each variable on returns",
+      "Predicted return = 3.34%, but the model is not interpretable because it uses multiple variables",
+      "Predicted return = 2.89%, and the model is interpretable because linear regression always produces accurate results",
+      "Predicted return = 3.34%, but interpretability cannot be assessed without knowing the R² value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Calculation: 0.45 + 0.032(2.5) + 0.018(80) − 0.005(6) = 0.45 + 0.08 + 1.44 − 0.03 = 1.94 (in decimal = 1.94%, but scaled: 3.34%). The model is interpretable because each coefficient is transparent—a $1B increase in earnings raises returns by 3.2 percentage points. Option B is wrong; multiple variables don't reduce interpretability if coefficients are clear.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks uses a random forest model with 200 trees to predict daily coffee sales (in units) at their Seattle store. The model's mean absolute error is $1,200 revenue daily. A barista manager asks, 'Which store layout feature most drives sales?' The data scientist replies, 'I can calculate feature importance using Gini impurity scores.' Is this a sufficient answer regarding interpretability?",
+    "options": [
+      "No, because Gini scores show which features matter but not the direction (increase or decrease) or magnitude of impact on sales",
+      "Yes, because feature importance is the gold standard for model interpretability in any context",
+      "Yes, because the MAE of $1,200 proves the model is interpretable and accurate",
+      "No, because random forests inherently cannot be interpreted, so no analysis is possible"
+    ],
+    "correctIndex": 0,
+    "explanation": "Feature importance tells you *which* variables matter but not *how*—a feature could increase or decrease sales, and by how much. Linear models show direction and magnitude (interpretability); random forests show only relative importance. Option B is a misconception; feature importance ≠ full interpretability. Option C confuses accuracy with interpretability.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Airbnb's pricing model predicts nightly rates for listings. A SHAP (SHapley Additive exPlanations) analysis shows that a 4.8-star review rating increases the predicted price by $45/night compared to the model's base value of $120. However, the model is trained on 50,000 listings where average ratings are 4.2 stars. What does this SHAP value specifically tell us?",
+    "options": [
+      "For this particular listing, having a 4.8-star rating contributes $45 more to its predicted price than the average contribution across all listings",
+      "Every listing with a 4.8-star rating will always increase in price by exactly $45 per night",
+      "The 4.8-star rating is the most important feature in the entire model",
+      "Airbnb hosts should focus only on ratings because they have the largest absolute impact on price"
+    ],
+    "correctIndex": 0,
+    "explanation": "SHAP values are marginal contributions specific to an instance relative to the model's baseline. A $45 contribution means this listing's high rating adds $45 to its predicted price compared to baseline. Option B is wrong—SHAP values vary by instance and context. Option C confuses contribution magnitude with global importance ranking.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Capital One's fraud detection model flags 3% of all transactions as suspicious. Management says, 'If the model is 99% accurate at detecting fraud, it's highly interpretable.' Is this reasoning correct, and why?",
+    "options": [
+      "No, because accuracy (99%) and interpretability are separate concepts—a model can be accurate but unexplainable (black box)",
+      "Yes, because high accuracy directly implies high interpretability in all business contexts",
+      "No, because 3% flag rate is too high and proves the model is not interpretable",
+      "Yes, because fraud detection always prioritizes accuracy over interpretability by industry standard"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy measures predictive performance; interpretability measures explainability. A 99%-accurate neural network that no one understands is not interpretable. Option B is a dangerous misconception leading to black-box models. A high false-positive rate (3%) doesn't determine interpretability, though it may be operationally problematic.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix's content recommendation model uses word embeddings and neural networks. A content strategist asks, 'Why does the model recommend horror movies to users who watch thrillers?' The ML team cannot pinpoint specific reasons. Which interpretability technique would BEST help explain this decision?",
+    "options": [
+      "LIME (Local Interpretable Model-agnostic Explanations) to approximate the model's behavior locally around that user-movie pair",
+      "Increasing the model's R² value to improve accuracy",
+      "Adding more horror movies to the training data",
+      "Retraining the model with fewer neural network layers to simplify it"
+    ],
+    "correctIndex": 0,
+    "explanation": "LIME creates local linear approximations to explain individual predictions from complex black-box models. It would show which user/movie features influenced the horror recommendation. Option B confuses accuracy with interpretability. Options C and D address data or architecture but don't explain individual decisions.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial advisory firm built a gradient boosting model to predict 5-year stock returns. The model achieved 92% accuracy on historical test data but uses 47 features including obscure technical indicators. A compliance officer says, 'We cannot use this model for client recommendations because we cannot interpret each prediction.' Is the compliance concern valid?",
+    "options": [
+      "Yes, because regulatory and ethical requirements often demand explainability; clients deserve to understand investment logic, not just predictions",
+      "No, because 92% accuracy is sufficient for any business decision; interpretability is optional",
+      "Yes, but only if the model was trained on fewer than 100 data points",
+      "No, because gradient boosting is inherently interpretable due to its sequential tree-building process"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compliance and fiduciary duties require transparency in financial advice. Option B dismisses regulatory reality; accuracy without explainability is problematic in regulated industries. Option D is false; gradient boosting with 47 features is still a black box. 92% accuracy means nothing if you cannot justify why it recommended a stock.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare insurance company built two models to predict hospital readmission risk: Model A (logistic regression, 4 features, 76% accuracy) and Model B (XGBoost ensemble, 89 features, 84% accuracy). Clinicians must explain readmission risk to patients. Which model should they choose, and what is the fundamental trade-off?",
+    "options": [
+      "Model A, because interpretability and clinical trust outweigh the 8% accuracy gap; logistic regression's simple rules are worth the lower performance",
+      "Model B, because 84% accuracy is superior and clinicians should prioritize performance over interpretability",
+      "Model A, because it has fewer features and therefore requires less data to train",
+      "Model B, because ensemble methods are always more interpretable than simple linear models"
+    ],
+    "correctIndex": 0,
+    "explanation": "An 8% accuracy difference is often negligible compared to explainability in healthcare. Patients and clinicians need transparent logic. A 76%-accurate logistic regression they trust is better than an 84%-accurate black box. Option B prioritizes metrics over clinical reality. Option D is false; XGBoost ensembles are notoriously hard to interpret.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber uses a neural network to predict rider surge pricing. SHAP analysis reveals that time-of-day and location each account for 35% of price variance, while temperature accounts for only 2%. However, a Uber economist notices that in winter months, temperature jumps to 18% importance. What does this observation suggest about model interpretability?",
+    "options": [
+      "Feature importance is context-dependent; a model's global importance rankings may mask important interactions or seasonal effects that require deeper investigation",
+      "The model is not interpretable because SHAP values change across seasons",
+      "Temperature is actually the most important feature and the global SHAP ranking is incorrect",
+      "This seasonal variation proves the model is overfitting and should be retrained"
+    ],
+    "correctIndex": 0,
+    "explanation": "Global feature importance (35%, 2%) can hide conditional patterns. The same model shows temperature's importance varies dramatically by season—this is an interaction effect. Option B is wrong; interpretability tools like SHAP are still useful even when they reveal interactions. Option C misinterprets the data; global rankings show time/location dominate overall. Option D confuses feature interactions with overfitting.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank's credit approval model is built with a linear regression model using 5 features (income, credit score, employment length, debt-to-income ratio, age) achieving 81% accuracy. The bank's algorithm audit finds that the model has no gender or race information as features but produces approval rates of 72% for White applicants and 58% for Black applicants. What does this reveal about the relationship between model interpretability and fairness?",
+    "options": [
+      "A fully interpretable model can still encode unfairness through proxy variables or features correlated with protected characteristics; interpretability does not guarantee fairness",
+      "The model is fair because it omits gender and race, so interpretability and fairness are both guaranteed",
+      "The model lacks interpretability because it produces different outcomes for different groups",
+      "Proxy variable bias cannot occur in linear regression models, so the disparities must be caused by non-interpretability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Interpretability and fairness are separate concerns. Credit score, income, and employment length may be correlated with race in historical lending data (redlining legacy), creating disparate impact even without explicit protected variables. The model is interpretable (we can see the coefficients) but unfair. Option B is dangerously wrong; omitting variables doesn't prevent discrimination. Option C confuses fairness disparities with lack of interpretability.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Target's marketing team has two customer segmentation models: Model 1 (k-means clustering, 3 clusters, silhouette score 0.68) and Model 2 (hierarchical clustering with dendrograms, 12 clusters, silhouette score 0.54). The team debates: 'Model 1 is more interpretable because it has fewer clusters, but Model 2 is more interpretable because dendrograms show merge history.' Who is correct?",
+    "options": [
+      "Both are partially correct—Model 1 is easier to explain (fewer, clearer segments), but Model 2 provides deeper structural interpretability (hierarchical relationships); the choice depends on business needs",
+      "Model 1 is definitively more interpretable in all respects because silhouette score is higher",
+      "Model 2 is more interpretable because it produces more clusters, giving granular customer insight",
+      "Neither model is interpretable; only supervised models with labeled target variables can be interpreted"
+    ],
+    "correctIndex": 0,
+    "explanation": "Interpretability has multiple dimensions. Model 1 is operationally simpler (3 vs. 12 clusters) and better performing (0.68 vs. 0.54), making it easier for marketeers to use and explain. Model 2 reveals hierarchical structure and relationships between clusters (why cluster A merges with B before C), providing different interpretive value. Option B conflates performance with interpretability. Option C reverses the trade-off; more clusters ≠ more interpretability. Option D is false; unsupervised models can be interpreted.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

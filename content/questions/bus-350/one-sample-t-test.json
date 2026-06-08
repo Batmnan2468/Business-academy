@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's analytics team wants to test whether the average monthly subscription retention rate differs from the industry standard of 92%. Which statistical test is most appropriate?",
+    "options": [
+      "One-sample t-test",
+      "Two-sample t-test",
+      "Chi-square goodness-of-fit test",
+      "ANOVA"
+    ],
+    "correctIndex": 0,
+    "explanation": "A one-sample t-test compares a sample mean against a known population parameter (92%). The two-sample t-test compares two groups, not a sample against a fixed standard, making it incorrect here.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a one-sample t-test, the null hypothesis for Apple's iPad battery life testing (claimed 10 hours) is stated as:",
+    "options": [
+      "H₀: μ = 10 hours",
+      "H₀: μ ≠ 10 hours",
+      "H₀: x̄ = 10 hours",
+      "H₀: σ = 10 hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis always refers to the population mean (μ), not the sample mean (x̄). The null hypothesis assumes equality, not inequality. Using σ would relate to variance testing, not a t-test.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the degrees of freedom when conducting a one-sample t-test with n=24 survey responses from Starbucks customers about coffee temperature satisfaction?",
+    "options": [
+      "23",
+      "24",
+      "25",
+      "12"
+    ],
+    "correctIndex": 0,
+    "explanation": "Degrees of freedom for a one-sample t-test = n - 1 = 24 - 1 = 23. Using n (24) is a common error; using n + 1 confuses the formula; using n/2 has no statistical basis.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A hotel chain claims its check-in process takes an average of 5 minutes. A sample of 16 guests showed a mean of 5.8 minutes with a sample standard deviation of 1.2 minutes. Calculate the t-statistic.",
+    "options": [
+      "t ≈ 2.67",
+      "t ≈ 0.67",
+      "t ≈ 1.33",
+      "t ≈ 3.33"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (x̄ - μ) / (s / √n) = (5.8 - 5) / (1.2 / √16) = 0.8 / 0.3 ≈ 2.67. Using 0.67 forgets the sample size adjustment; 1.33 divides incorrectly by 2; 3.33 uses wrong denominator.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a one-sample t-test, if the p-value equals 0.023 and α = 0.05, what decision should Amazon make about their hypothesis?",
+    "options": [
+      "Reject the null hypothesis",
+      "Fail to reject the null hypothesis",
+      "Conduct a two-sample test instead",
+      "Increase the sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "When p-value (0.023) < α (0.05), we reject the null hypothesis. Failing to reject is incorrect because the p-value is below the threshold. Changing to two-sample or increasing sample size are not appropriate decisions at this stage.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tesla's quality control team tests whether the average defect rate in a production batch differs from the expected 2.1%. A sample of 25 vehicles yields a mean of 2.8% with s = 1.4%. What is the calculated t-statistic?",
+    "options": [
+      "t ≈ 2.50",
+      "t ≈ 0.50",
+      "t ≈ 1.75",
+      "t ≈ 3.50"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (2.8 - 2.1) / (1.4 / √25) = 0.7 / 0.28 ≈ 2.50. Using 0.50 ignores the √n adjustment; 1.75 uses wrong standard error calculation; 3.50 fails to subtract means correctly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A restaurant claims its lunch special costs exactly $12. A sample of 30 transactions shows a mean price of $12.95 with s = $1.80. At α = 0.05 and df = 29, the critical value is ±2.045. Should the restaurant's claim be rejected?",
+    "options": [
+      "Yes, because t ≈ 2.89 exceeds the critical value",
+      "No, because the sample mean is close to $12",
+      "Yes, because the sample standard deviation is too high",
+      "No, because n = 30 is a large sample"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (12.95 - 12) / (1.80 / √30) ≈ 2.89 > 2.045, so reject H₀. Focusing on proximity to $12 ignores statistical significance. Standard deviation magnitude alone doesn't determine rejection. Sample size n = 30 doesn't automatically preserve H₀.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Costco's supply chain team conducted a one-sample t-test on warehouse delivery times. The t-statistic was 1.45 with df = 18 and a two-tailed critical value of ±2.101 at α = 0.05. What conclusion is appropriate?",
+    "options": [
+      "Fail to reject the null hypothesis; delivery times meet expected standards",
+      "Reject the null hypothesis; delivery times differ from expected",
+      "Reject the null hypothesis; the sample size is too small",
+      "Fail to reject based on the size of the t-statistic alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since |1.45| < 2.101, we fail to reject H₀. The test statistic does not exceed the critical value, so no significant difference is detected. Rejecting would require |t| ≥ 2.101. Sample size criticism comes after the test decision, not as justification for rejection.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company testing a drug's average shelf life claims 36 months. A quality control sample of 20 units showed a mean of 34.2 months with s = 3.6 months. Using α = 0.05 (two-tailed, df = 19, critical value = ±2.093), determine the correct conclusion.",
+    "options": [
+      "Reject H₀; shelf life significantly differs from 36 months",
+      "Fail to reject H₀; shelf life is not significantly different from 36 months",
+      "Accept H₀; the sample mean is close to 36 months",
+      "Reject H₀ because the sample standard deviation is less than 5"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (34.2 - 36) / (3.6 / √20) ≈ -2.23. Since |-2.23| > 2.093, reject H₀. Option B incorrectly fails to reject. Option C confuses sample closeness with statistical significance. Option D uses an arbitrary standard deviation threshold unrelated to the test.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When assuming normality in a one-sample t-test with n = 500, which statement is most accurate regarding this assumption?",
+    "options": [
+      "The assumption becomes less critical due to the Central Limit Theorem",
+      "The assumption must be perfectly met because sample size doesn't help",
+      "Non-normality invalidates all results regardless of sample size",
+      "Normality is only required if the population variance is unknown"
+    ],
+    "correctIndex": 0,
+    "explanation": "With large sample sizes (n = 500), the t-test is robust to non-normality due to the Central Limit Theorem. The second option incorrectly claims sample size provides no benefit. The third overstates the impact of non-normality. The fourth misses that normality matters more with smaller samples and unknown variance.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Uber Eats tests whether average delivery time equals 28 minutes. A sample of 16 orders showed x̄ = 29.5 minutes, s = 2.8 minutes. A colleague calculated t = 2.14 but mistakenly used σ instead of s in the denominator. How would this error affect the conclusion at α = 0.05 (df = 15, critical = ±2.131)?",
+    "options": [
+      "The error doesn't change the conclusion here, but using σ assumes it's known when it's not",
+      "The error would make t larger, causing an incorrect rejection",
+      "The error would make t smaller, causing an incorrect failure to reject",
+      "The error is irrelevant because the sample size is too small anyway"
+    ],
+    "correctIndex": 0,
+    "explanation": "The correct t = (29.5 - 28) / (2.8 / 4) = 2.14. In this case, using known σ (if it were 2.8) gives the same result, so the conclusion remains borderline at the critical value. However, using σ when s is the only available estimate violates the test's assumption that population variance is unknown. Options B and C misrepresent the mathematical direction; Option D incorrectly dismisses n = 16.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft's HR department tested whether average employee training hours equals 40 hours/year. Sample of n = 25, x̄ = 42.1, s = 6.2. A manager interpreted a p-value of 0.087 (two-tailed, α = 0.05) as: 'There's an 8.7% chance the null hypothesis is true.' What is wrong with this interpretation?",
+    "options": [
+      "P-value is the probability of observing data this extreme IF H₀ is true, not the probability H₀ is true",
+      "The p-value is too high, so we should reject the null hypothesis anyway",
+      "The interpretation is correct; it properly reflects the probability of H₀",
+      "The manager should have used α = 0.10 instead, making the interpretation valid"
+    ],
+    "correctIndex": 0,
+    "explanation": "A common misconception is that p-value = P(H₀ is true). Correct: p-value = P(data | H₀). The manager reversed the conditional probability. Option B misuses the p-value for decision-making. Option C endorses the incorrect interpretation. Option D doesn't fix the fundamental misunderstanding of what p-value represents.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google conducted a one-sample t-test on search latency, claiming 200 milliseconds average. From n = 36 queries, x̄ = 205.8 ms, s = 18.5 ms. The test yielded t ≈ 1.88 with p-value = 0.068 at α = 0.05 (two-tailed). Which statement best reflects the proper conclusion?",
+    "options": [
+      "Fail to reject H₀; insufficient evidence that true latency differs from 200 ms",
+      "Reject H₀; latency is slightly higher than claimed at 205.8 ms",
+      "Fail to reject H₀; the sample mean is very close to 200 ms",
+      "Reject H₀; the p-value of 0.068 indicates significant results"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since p-value (0.068) > α (0.05), we fail to reject H₀. Option B confuses sample evidence with population conclusion. Option C focuses on sample proximity rather than statistical significance testing. Option D inverts the decision rule (reject when p < α, not p > α). The proper conclusion acknowledges lack of evidence, not acceptance of H₀.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst tests whether a mutual fund's average return differs from the S&P 500 benchmark of 9.2% annually. Using n = 40 funds, x̄ = 9.8%, s = 2.1%. The analyst computes t ≈ 1.81 but then uses the normal distribution table instead of the t-distribution table, finding p ≈ 0.035. Which error is committed?",
+    "options": [
+      "Using the normal distribution instead of t-distribution leads to an artificially low p-value, risking Type I error",
+      "The t-statistic of 1.81 is too large, so the normal approximation is justified",
+      "The normal distribution error has no impact when n = 40 because CLT applies",
+      "The analyst should have used z-test from the start, making the normal table correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "With df = 39, the t-distribution has heavier tails than the normal distribution. Using z instead of t produces a smaller p-value than warranted, increasing Type I error risk. Option B incorrectly claims a large t-statistic justifies the normal table. Option C confuses CLT (sample mean distribution) with the test distribution selection. Option D overlooks that σ is unknown, requiring a t-test.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A beverage company tests whether bottling line output equals 500 bottles/hour. After collecting n = 21 samples with x̄ = 487.3 bottles/hour and s = 24.6, the researcher obtains t ≈ -2.36 with df = 20. At α = 0.05 (two-tailed, critical = ±2.086), and considering 95% confidence interval = [475.2, 499.4], what is the most complete conclusion?",
+    "options": [
+      "Reject H₀; reject that output equals 500 bottles/hour because the confidence interval excludes 500 and |t| exceeds the critical value",
+      "Reject H₀ based on t-statistic alone, though the confidence interval suggests 500 is plausible",
+      "Fail to reject H₀ because the sample mean is reasonably close to 500",
+      "The confidence interval and t-test reach opposite conclusions, so the test is invalid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since |-2.36| > 2.086 and the 95% CI [475.2, 499.4] does not include 500, both methods agree: reject H₀. The CI and t-test are consistent; rejecting H₀ means 500 lies outside the CI. Option B cherry-picks one tool. Option C ignores statistical significance. Option D incorrectly claims inconsistency when the tools actually align.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

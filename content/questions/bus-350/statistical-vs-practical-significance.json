@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A pharmaceutical company tests a new drug and finds a p-value of 0.03. The effect size (Cohen's d) is 0.12. Which statement best describes this result?",
+    "options": [
+      "Statistically significant but potentially not practically significant",
+      "Both statistically and practically significant",
+      "Practically significant but not statistically significant",
+      "Neither statistically nor practically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "A p-value of 0.03 indicates statistical significance at the 0.05 level. However, Cohen's d of 0.12 is considered a small effect size (small is typically < 0.2), suggesting the practical difference may be minimal in real-world application. Option B is tempting because students often assume statistical significance guarantees practical importance, but effect size tells the true story of magnitude.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a t-test comparing average customer satisfaction scores for Amazon Prime ($119/year) versus Costco Plus ($65/year) memberships, statistical significance means:",
+    "options": [
+      "The observed difference is unlikely to have occurred by chance alone",
+      "The difference is large enough to matter to business decisions",
+      "The sample size was large enough to detect any difference",
+      "Customers clearly prefer one service over the other"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (based on p-values) tells us only that an observed difference is unlikely due to random sampling variation—not that the difference is large or practically meaningful. Option B confuses statistical significance with practical significance; large samples can make tiny, unimportant differences statistically significant.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retail chain tests whether a new checkout system reduces average transaction time. They find p = 0.049 with a sample size of 2,000 transactions, reducing time from 4.3 minutes to 4.25 minutes. Why might this result be misleading?",
+    "options": [
+      "The effect size is very small (5 seconds) despite statistical significance; large samples can detect tiny, impractical differences",
+      "The p-value is too close to 0.05 to trust the results",
+      "The sample size is too large and distorts the findings",
+      "The difference of 5 seconds is statistically impossible"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n=2,000, even a 5-second difference becomes statistically significant because larger samples reduce standard error. However, a 5-second improvement in transaction time may not justify the cost of system implementation. Option B is tempting because students worry about borderline p-values, but the real issue is sample size inflating significance without practical importance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Facebook advertising campaign targeting age 25–34 generated a 2.3% click-through rate (CTR) versus the platform average of 2.1%. With 50,000 impressions, this difference was statistically significant (p = 0.041). The ad cost $8,000 and generated $12,000 in revenue. What can we conclude?",
+    "options": [
+      "The result is statistically significant but the 0.2 percentage point difference has modest practical value; profitability depends on repeatability and costs",
+      "The result is statistically significant and therefore the campaign should be expanded immediately",
+      "The result is not practically significant because the CTR difference is less than 1%",
+      "Statistical significance is irrelevant since the campaign was profitable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p=0.041) confirms the effect is real, but a 0.2 pp difference on CTR is small in marketing contexts. While profitable this time ($4,000 gain), the modest effect size (0.2 pp) means the result may not reliably repeat with new ad spend. Option B incorrectly assumes statistical significance guarantees scalability; Option D ignores that understanding true effect size helps predict future performance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study of Tesla employee retention found that a new wellness program increased annual retention from 87% to 88.5% (p < 0.001 with n = 45,000 employees). The 1.5 percentage point increase costs $2.1 million annually. How should leadership interpret this?",
+    "options": [
+      "Statistically significant but likely not practically significant; a 1.5 pp improvement may not justify $2.1M in costs",
+      "Highly significant both statistically and practically given the large sample size",
+      "Not practically significant because p-value is too small to be believable",
+      "Practically significant because the program saved more than $2 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "p < 0.001 with n=45,000 indicates the effect is real and reproducible. However, retaining only 1.5% more employees (1,500 additional workers) must be weighed against $2.1M cost—that's $1,400 per retained employee, which may not exceed turnover costs saved. Option B mistakenly equates large samples with practical importance; Option C misunderstands that very small p-values actually strengthen confidence in the effect's reality.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In hypothesis testing, what is the relationship between sample size, statistical significance, and effect size?",
+    "options": [
+      "Larger samples make it easier to detect small effect sizes and achieve statistical significance, but do not change the actual effect size",
+      "Larger samples increase both statistical significance and the true effect size in the population",
+      "Larger samples are necessary to achieve both statistical significance and practical significance",
+      "Sample size has no effect on statistical significance when effect size is small"
+    ],
+    "correctIndex": 0,
+    "explanation": "Larger samples reduce the standard error, making it easier to achieve statistical significance for the same effect size. However, sample size does not change the true population effect—it only changes our ability to detect it. Option B incorrectly suggests sample size alters the population parameter; Option C conflates the two concepts by suggesting both require large samples.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Define practical significance in business statistics.",
+    "options": [
+      "The magnitude of an effect is large enough to have real-world importance and justify business action",
+      "A p-value less than 0.05 in a statistical test",
+      "The sample size is large enough to detect any difference",
+      "The confidence interval does not contain zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "Practical significance concerns whether an effect is meaningful in real-world context—its size matters, not just its statistical detectability. Option B defines statistical significance, not practical significance; students often confuse these terms, thinking p < 0.05 automatically means the finding matters in practice.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Netflix study found that a 0.1-second improvement in video load time reduced churn by 0.02% (p = 0.002). If Netflix has 230 million subscribers, approximately how many subscribers would this improve annually?",
+    "options": [
+      "46,000 subscribers (230M × 0.0002)",
+      "230,000 subscribers (230M × 0.001)",
+      "2.3 million subscribers (230M × 0.01)",
+      "23 million subscribers (230M × 0.1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 0.02% reduction = 0.02/100 = 0.0002, so 230M × 0.0002 = 46,000 subscribers. This statistically significant finding (p=0.002) may or may not be practically significant depending on lifetime value per subscriber. Option B incorrectly converts 0.02% as 0.001; Option C overcalculates by 50x.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hotel chain testing a new check-in process found average check-in time decreased from 6.8 minutes to 6.7 minutes (p = 0.51, n = 200). An analyst argues this is still practically significant because time is money. What is the error in this reasoning?",
+    "options": [
+      "p = 0.51 indicates no statistical evidence of a real difference; claiming practical significance without statistical significance requires independent evidence of business value",
+      "The sample size of 200 is too small to detect practical differences",
+      "A 0.1-minute difference is always negligible regardless of p-value",
+      "Practical significance requires a larger effect size than statistical significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "With p = 0.51, the 0.1-minute difference is likely due to chance. Claiming practical importance without first establishing statistical significance is backwards logic; you need evidence the effect is real before arguing it's big enough to matter. Option B is incorrect because n=200 is adequate; Option C makes an absolute claim when business context determines value.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Comparing two investment strategies, Fund A beats Fund B by 0.8% annually with p = 0.034 over 15 years of returns. Cohen's d = 0.18. A financial advisor says this is practically significant because the p-value is below 0.05. What is the flaw?",
+    "options": [
+      "Cohen's d = 0.18 indicates a small effect size; while statistically significant, 0.8% annual outperformance may not justify higher fees or complexity unless other factors support it",
+      "The p-value of 0.034 is not small enough to claim significance",
+      "15 years of data is not enough to establish practical significance",
+      "Fund performance differences are never practically significant"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p=0.034) confirms Fund A truly outperforms, but Cohen's d = 0.18 (small effect) and 0.8% annual gain must be weighed against costs. After fees, the advantage may disappear. The advisor confused statistical significance with practical importance. Option B misreads the p-value; Option C incorrectly assumes time period determines practical value.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Starbucks experiment increased average transaction value from $8.34 to $8.47 (3-week test, n = 3,500 transactions, p = 0.008). How should management evaluate this?",
+    "options": [
+      "Statistically significant small effect; annualized impact could be $6.76M, but must verify repeatability and account for seasonal variation before rollout",
+      "Statistically significant and the $0.13 increase guarantees immediate profit",
+      "The small effect size means the result is not statistically significant",
+      "The short 3-week test period makes this practically insignificant"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = 0.008 confirms a real effect. With n=3,500, a $0.13 increase is 13 cents—potentially meaningful if multiplied across stores and years (~$6.76M if 16,000 stores × 365 days × $0.13). However, 3-week results may reflect novelty bias rather than sustained behavior. Option B assumes statistical significance guarantees profit; Option C confuses effect magnitude with statistical detectability.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Statistical significance and practical significance differ primarily in that statistical significance concerns:",
+    "options": [
+      "Whether an observed effect is likely real (not due to chance), while practical significance concerns whether the effect is large enough to matter in real business decisions",
+      "The p-value, while practical significance concerns the confidence interval",
+      "Only large sample sizes, while practical significance concerns small sample sizes",
+      "Null hypothesis rejection, while practical significance is irrelevant to hypothesis testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistical significance (p-values) answers 'Is the effect real?' Practical significance answers 'Does the effect size matter?' Option B incorrectly assigns statistical vs. practical to p-value vs. CI; both relate to both concepts. Option C reverses the relationship between sample size and detectability.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A medical device company's blood glucose monitor shows 0.3 mg/dL mean absolute error vs. the industry standard of 0.5 mg/dL (p < 0.001, n = 8,000 patient readings). Why might this be statistically significant but not practically significant for clinical use?",
+    "options": [
+      "A 0.2 mg/dL difference is within normal measurement variability and unlikely to change treatment decisions; clinical significance requires effect sizes relevant to medical outcomes",
+      "The p-value is too small to be trustworthy in medical applications",
+      "8,000 readings is too large a sample for medical devices",
+      "Blood glucose monitoring doesn't require practical significance testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "p < 0.001 confirms the device truly outperforms, but 0.2 mg/dL difference is negligible medically—endocrinologists typically adjust insulin dosing by much larger margins, so this precision doesn't improve patient care. Option B misunderstands that small p-values strengthen evidence; Option C reverses sample size logic.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A UPS efficiency study found that a new delivery route planning algorithm reduced average route time by 3.2 minutes per driver per day (p = 0.087, n = 450 driver-days). The estimated annual fuel savings would be $4.8M. Should UPS implement this?",
+    "options": [
+      "The p-value of 0.087 fails to reach statistical significance at α = 0.05; without evidence the effect is real, projecting $4.8M savings is premature and risky",
+      "Yes, because the $4.8M annual savings is practically significant regardless of the p-value",
+      "No, because 3.2 minutes is too small to matter operationally",
+      "The study is inconclusive because p = 0.087 is too close to call"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = 0.087 > 0.05 means insufficient evidence the 3.2-minute difference is real—it could be sampling noise. Projecting $4.8M savings without statistical significance is risky; even if real, savings assume perfect implementation. Option B reverses logic by ignoring that statistical significance must precede practical calculations; Option C ignores that 3.2 min × 450 drivers × ~250 workdays = substantial operational impact if real.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A LinkedIn study found that job postings with the word 'innovative' received 7% more applications (p = 0.002, 95% CI: [4.2%, 9.8%], n = 12,000 postings). How should HR professionals interpret this?",
+    "options": [
+      "Statistically significant and practically significant; effect size of 4–10% additional applications likely justifies the marketing investment and is reliably repeatable",
+      "Practically significant but not statistically significant because the effect is only 7%",
+      "Statistically significant but sample size inflates the finding's importance",
+      "Only statistically significant; the word 'innovative' is too common to matter"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = 0.002 confirms the effect is real; the 95% CI [4.2%, 9.8%] shows we're confident the true effect is between 4–10%, a material difference for recruiting. With n=12,000, statistical significance reflects a real, repeatable finding. Option B confuses the relationship; Option C incorrectly assumes large samples automatically inflate importance rather than reveal true effects.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  }
+]

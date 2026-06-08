@@ -1,0 +1,184 @@
+[
+  {
+    "question": "Which of the following best describes the Central Limit Theorem (CLT)?",
+    "options": [
+      "The distribution of sample means approaches a normal distribution as sample size increases, regardless of the population distribution",
+      "The population distribution must be normal for the theorem to apply",
+      "Sample means will always equal the population mean",
+      "The standard deviation of sample means equals the population standard deviation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CLT states that sample means follow an approximately normal distribution for large n, even if the population is non-normal. Option B is tempting because students often confuse the requirement: the population doesn't need to be normal, but the sampling distribution becomes normal. Options C and D misstate the relationships between parameters.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bakery chain has weekly sales that are heavily right-skewed with mean $45,000 and standard deviation $8,000. If you take a random sample of 50 weeks, what shape will the distribution of sample means approximately follow?",
+    "options": [
+      "Normal distribution",
+      "Right-skewed distribution matching the population",
+      "Uniform distribution",
+      "Bimodal distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "With n=50, the CLT applies and the sampling distribution of means becomes approximately normal, even though the population is right-skewed. Option B is the common misconception that the sampling distribution inherits the population's skewness; this is false for large enough samples. The CLT 'normalizes' the shape.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The standard error of the mean is calculated as σ/√n. For a population with standard deviation $2,400 and a sample size of 64, what is the standard error?",
+    "options": [
+      "$300",
+      "$2,400",
+      "$37.50",
+      "$150"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard error = $2,400 / √64 = $2,400 / 8 = $300. Option B is a common error where students forget to divide by √n. Option C incorrectly divides by n instead of √n. Option D represents dividing by 16 instead of 8.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst knows that customer account balances at a credit union are normally distributed with mean $12,500 and standard deviation $3,200. What is the primary reason the Central Limit Theorem still matters in this context?",
+    "options": [
+      "It guarantees that sample means will be normally distributed, allowing confidence intervals and hypothesis tests to be valid",
+      "It tells us the population must be normally distributed",
+      "It proves individual account balances follow a normal curve",
+      "It eliminates the need for sampling"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even when the population is already normal, the CLT is crucial because it establishes that sample means are normal with SE = σ/√n, enabling valid statistical inference. Option B reverses causality. Option C confuses the theorem's focus. Option D is false; the theorem doesn't eliminate sampling.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manufacturing plant produces widgets with defect rates that have a mean of 2.8% and standard deviation of 1.2%. If quality inspectors randomly sample 100 batches, approximately what is the standard error of the sample proportion?",
+    "options": [
+      "0.12%",
+      "1.2%",
+      "2.8%",
+      "0.028%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the standard error formula for proportions or means: SE = 1.2% / √100 = 1.2% / 10 = 0.12%. Option B forgets the √n denominator entirely. Option C conflates the mean with the standard error. Option D incorrectly divides the mean instead of the standard deviation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A fast-food chain's daily revenues across 1,200 locations have a mean of $8,900 and standard deviation of $1,850. A regional manager randomly selects 36 stores for a promotional audit. What is the standard error of the sample mean revenue?",
+    "options": [
+      "$308.33",
+      "$51.39",
+      "$206.67",
+      "$1,850"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = $1,850 / √36 = $1,850 / 6 = $308.33. Option B incorrectly divides by 36 directly instead of √36. Option C divides by 9 (the square root of 81, not 36). Option D forgets the division by √n entirely, just returning the population standard deviation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company knows customer order values are uniformly distributed between $25 and $225. The manager claims that because the population is not normally distributed, sample means from 80 randomly selected orders cannot be used to construct a 95% confidence interval. Is this claim correct?",
+    "options": [
+      "No, the CLT allows valid confidence intervals because n=80 is large enough",
+      "Yes, only normal populations allow confidence intervals",
+      "Yes, uniform distributions are incompatible with statistical inference",
+      "No, but only if the sample size were at least 200"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CLT applies at n=80 for a uniform distribution, making the sampling distribution approximately normal and valid for confidence intervals. Option B is a misconception about CLT requirements. Option C is false; many distributions work. Option D incorrectly suggests n=200 is needed when n=80 is typically sufficient.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company tests drug efficacy across patient populations with a true success rate of 68% and standard deviation of 8.5%. An analyst calculates the 95% confidence interval for a sample of 144 patients. Which assumption relies directly on the Central Limit Theorem?",
+    "options": [
+      "The sample mean success rate will be approximately normally distributed",
+      "The population success rate equals exactly 68%",
+      "Individual patient outcomes are independent",
+      "The sample size must be a multiple of 12"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CLT directly supports the assumption that the sampling distribution of the mean is normal, enabling valid z-critical values for the confidence interval. Option B confuses a known parameter with an assumption. Option C is a requirement for CLT but not what it assumes. Option D is arbitrary and nonsensical.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail analyst observes that store inventory costs follow a distribution with extreme positive outliers (luxury items). She collects sample means from 25 stores, then 100 stores. Which statement about the standard error is correct?",
+    "options": [
+      "The standard error decreases by a factor of 2 when moving from n=25 to n=100",
+      "The standard error increases because the CLT requires larger samples",
+      "The outliers prevent the standard error from decreasing at all",
+      "The standard error decreases by exactly half the original value"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE at n=100 is SE at n=25 divided by √(100/25) = √4 = 2. So error decreases by factor of 2. Option B falsely claims CLT requires larger samples to reduce error. Option C incorrectly suggests outliers eliminate the √n benefit. Option D misspecifies the factor (should be 2, not half).",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics firm's delivery times have mean 4.2 hours and an unknown distribution shape. A manager plans to sample 30 delivery routes. A colleague argues: 'We cannot use a t-test or construct confidence intervals because we don't know if the population is normal.' Is this concern valid?",
+    "options": [
+      "No; the CLT makes this valid for n=30, though t-test is slightly more conservative than z-test",
+      "Yes; the population normality assumption is always required",
+      "No; the CLT only applies to large samples (n>100)",
+      "Yes; unknown population distributions invalidate all inference methods"
+    ],
+    "correctIndex": 0,
+    "explanation": "At n=30, CLT provides reasonable normality of the sampling distribution, validating confidence intervals and t-tests. The colleague's concern reflects a misconception that population normality is required (option B). Option C wrongly sets an arbitrary threshold of n>100. Option D is false; CLT enables inference for non-normal populations.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank's loan approval times across all branches have a right-skewed distribution with μ=3.5 days and σ=2.1 days. An operations analyst incorrectly assumes a sample of n=15 times will be normally distributed. How would increasing the sample size to n=60 specifically address this error?",
+    "options": [
+      "The sampling distribution of means becomes approximately normal by CLT, correcting the misapplication to a sample of individual values",
+      "Individual approval times become normally distributed",
+      "The population distribution shifts toward normality",
+      "The skewness disappears from all samples"
+    ],
+    "correctIndex": 0,
+    "explanation": "The analyst conflated the population distribution with the sampling distribution of means. At n=60, CLT ensures sample means (not individual times) are approximately normal. This clarifies that we're working with a distribution of means, not raw data. Option B wrongly suggests individual values normalize. Options C and D misstate what CLT accomplishes.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An insurance company models claim amounts with mean $3,400 and standard deviation $850. An actuary needs a 95% confidence interval for the true mean from a sample of 289 claims. Which of the following correctly applies the CLT?",
+    "options": [
+      "CI = $3,400 ± 1.96 × ($850/√289); the standard error is $50",
+      "CI = $3,400 ± 1.96 × $850; the sample size doesn't affect the interval",
+      "CI = $3,400 ± 1.96 × $850/289; the standard error is $2.94",
+      "CI = $3,400 ± 2.576 × $850; always use z=2.576 for insurance data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Correct: SE = $850/√289 = $850/17 = $50. CI = $3,400 ± $98. Option B ignores sample size (a major misconception). Option C incorrectly divides by n instead of √n. Option D uses the wrong z-value (2.576 is for 99%, not 95%) and ignores SE.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A tech startup's daily active users (DAU) are non-normally distributed with mean 48,000 and standard deviation 12,000. Which comparison correctly distinguishes when CLT applies?",
+    "options": [
+      "For a sample of 49 daily observations, the distribution of sample means approaches normality; for a single day's DAU count, it remains skewed",
+      "CLT applies equally to individual days and to sample means of multiple days",
+      "CLT applies only if actual DAU counts are normal to begin with",
+      "For larger sample sizes, individual DAU counts become normally distributed"
+    ],
+    "correctIndex": 0,
+    "explanation": "CLT applies to the sampling distribution of means (n=49 days), not to individual observations. This is a critical distinction: sample means ≈ normal, but raw data remains skewed. Option B confuses the two distributions. Option C reverses the requirement. Option D misapplies the theorem to raw data instead of means.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer goods company tests product weights across a highly variable supply chain (σ=$0.85). They collect 100 sample batches. An engineer claims the 95% CI for mean weight is: $10.20 ± $0.17. A colleague notes the margin of error should be approximately $0.167. Who is correct, and why?",
+    "options": [
+      "The colleague is correct; ME ≈ 1.96 × ($0.85/√100) = 1.96 × $0.085 ≈ $0.167",
+      "The engineer is correct; ME = $0.17 accounts for rounding",
+      "Neither is correct; the margin of error should be $0.85",
+      "The colleague is correct only if the sample size were 144 instead of 100"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = $0.85/10 = $0.085. ME = 1.96 × $0.085 ≈ $0.1666 ≈ $0.167. The colleague's answer is more precise. Option B incorrectly treats rounding as justifying a less accurate value. Option C ignores the √n effect. Option D invokes an arbitrary alternative without mathematical basis.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

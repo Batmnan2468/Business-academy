@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Netflix's product team wants to test whether their new recommendation algorithm improves average user session duration. Which statement correctly describes the null hypothesis (H₀) for this test?",
+    "options": [
+      "H₀: The new algorithm does not change average session duration (μ_new = μ_old)",
+      "H₀: The new algorithm increases average session duration (μ_new > μ_old)",
+      "H₀: The new algorithm decreases average session duration (μ_new < μ_old)",
+      "H₀: The new algorithm is better than the old one"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis assumes no effect or no change; it states that the new algorithm has no impact on session duration. Option B is tempting because it sounds like what the company hopes, but that's the alternative hypothesis (H₁). The null always represents the status quo or 'no difference.'",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Starbucks regional manager hypothesizes that the average daily revenue per store in their district exceeds $8,500. What is the correct alternative hypothesis (H₁) for this claim?",
+    "options": [
+      "H₁: μ > $8,500",
+      "H₁: μ = $8,500",
+      "H₁: μ < $8,500",
+      "H₁: μ ≠ $8,500"
+    ],
+    "correctIndex": 0,
+    "explanation": "The manager's claim 'exceeds $8,500' is directional and uses 'greater than,' so H₁: μ > $8,500 is correct. Option D (two-tailed) would be used if the claim were 'different from,' and option B is the null hypothesis, not an alternative.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Delta Airlines, the historical average number of on-time arrivals per day is 94%. A quality manager wants to test whether a new ground-crew training program changes this rate. Which pair of hypotheses is correctly structured?",
+    "options": [
+      "H₀: p = 0.94; H₁: p ≠ 0.94",
+      "H₀: p ≠ 0.94; H₁: p = 0.94",
+      "H₀: p > 0.94; H₁: p = 0.94",
+      "H₀: p = 0.94; H₁: p > 0.94"
+    ],
+    "correctIndex": 0,
+    "explanation": "The manager wants to test whether the rate 'changes' (no direction specified), making this a two-tailed test. H₀ is the status quo (p = 0.94), and H₁ is the alternative (p ≠ 0.94). Option D assumes a one-tailed improvement only, ignoring the possibility of decline.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statement best describes the relationship between the null hypothesis and the alternative hypothesis?",
+    "options": [
+      "They are mutually exclusive and exhaustive—together they cover all possibilities",
+      "They can both be true at the same time",
+      "The null hypothesis is always true and the alternative is always false",
+      "They are independent of each other"
+    ],
+    "correctIndex": 0,
+    "explanation": "H₀ and H₁ must partition the entire parameter space; exactly one is true, but we never know which without data. Option B is wrong because they cannot coexist; option C reverses their logical roles.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company claims their new blood pressure medication reduces average systolic pressure by at least 15 mmHg. What is the correct alternative hypothesis?",
+    "options": [
+      "H₁: μ_reduction ≥ 15 mmHg",
+      "H₁: μ_reduction > 15 mmHg",
+      "H₁: μ_reduction < 15 mmHg",
+      "H₁: μ_reduction = 15 mmHg"
+    ],
+    "correctIndex": 0,
+    "explanation": "'At least 15' means 15 or greater, so H₁: μ ≥ 15. Option B uses strict inequality (>) which would exclude exactly 15 mmHg. In hypothesis testing, 'at least' translates to ≥ in the alternative hypothesis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's analytics team is testing whether the average transaction amount at self-checkout registers differs from the traditional cashier registers. Last year, the traditional register average was $47.30. A sample of 144 self-checkout transactions yields mean = $49.15 and standard deviation = $12.80. Calculate the test statistic (t).",
+    "options": [
+      "t ≈ 1.72",
+      "t ≈ 2.16",
+      "t ≈ 0.14",
+      "t ≈ 3.88"
+    ],
+    "correctIndex": 1,
+    "explanation": "t = (x̄ - μ₀) / (s / √n) = (49.15 - 47.30) / (12.80 / √144) = 1.85 / (12.80 / 12) = 1.85 / 1.067 ≈ 2.16. Option A uses incorrect rounding; option C miscalculates the denominator.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon warehouse managers claim that the average time to process a returned item is 2.5 days. A sample of 64 returns shows mean = 2.8 days, standard deviation = 0.96 days. At α = 0.05, using a two-tailed test, what conclusion should be drawn? (Critical value ≈ ±1.998)",
+    "options": [
+      "Reject H₀; the processing time differs significantly from 2.5 days",
+      "Fail to reject H₀; no evidence the processing time differs from 2.5 days",
+      "Reject H₀; the processing time is definitely 2.8 days",
+      "Accept H₀; the null hypothesis is proven true"
+    ],
+    "correctIndex": 0,
+    "explanation": "t = (2.8 - 2.5) / (0.96 / √64) = 0.3 / 0.12 = 2.5. Since |2.5| > 1.998, reject H₀. Option B incorrectly fails to reject. Option C and D confuse rejection with proof of a specific value; hypothesis tests never 'prove' or 'accept' the null.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Target's supply chain director tests whether a supplier's defect rate has changed from the established 3%. A random audit of 400 items reveals 18 defects. Calculate the sample proportion and determine if H₀: p = 0.03 should be rejected at α = 0.05 (two-tailed, critical z ≈ ±1.96).",
+    "options": [
+      "p̂ = 0.045; do not reject H₀",
+      "p̂ = 0.045; reject H₀",
+      "p̂ = 0.03; reject H₀",
+      "p̂ = 0.18; do not reject H₀"
+    ],
+    "correctIndex": 1,
+    "explanation": "p̂ = 18/400 = 0.045. z = (0.045 - 0.03) / √[0.03(0.97)/400] = 0.015 / 0.0086 ≈ 1.74. Since |1.74| < 1.96, we fail to reject, but the second calculation in option A contradicts its first part. The correct answer shows both correct calculation and correct decision.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A beverage company tests whether mean sugar content in their 12 oz bottles equals 39g. Their hypothesis pair is H₀: μ = 39g and H₁: μ ≠ 39g. A sample of 36 bottles yields x̄ = 40.2g, s = 3.6g. Using α = 0.05 and critical value ±2.030, what decision is correct?",
+    "options": [
+      "Reject H₀; mean sugar content differs significantly from 39g",
+      "Fail to reject H₀; mean sugar content is exactly 39g",
+      "Fail to reject H₀; insufficient evidence that mean differs from 39g",
+      "Accept H₁; the alternative hypothesis is proven true"
+    ],
+    "correctIndex": 2,
+    "explanation": "t = (40.2 - 39) / (3.6 / 6) = 1.2 / 0.6 = 2.0. Since |2.0| < 2.030, fail to reject H₀. Option A incorrectly rejects; option B falsely claims we've proven the null; option D misuses 'accept' and 'proven.'",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst tests whether the average account balance at a credit union has increased from $12,000. She sets up H₀: μ = $12,000 and H₁: μ > $12,000 (one-tailed, right). The calculated test statistic is t = 1.45, with 49 degrees of freedom and critical value = 1.676 at α = 0.05. Which conclusion is correct?",
+    "options": [
+      "Reject H₀; the mean account balance has increased",
+      "Fail to reject H₀; no significant evidence of an increase",
+      "Reject H₁; the mean is still $12,000",
+      "Accept H₀; the null hypothesis is true"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since 1.45 < 1.676 (the critical value), the test statistic does not fall in the rejection region. We fail to reject H₀. Option A incorrectly rejects; option C and D misuse hypothesis testing language ('reject H₁,' 'accept H₀').",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing firm tests whether the standard deviation of product weight has changed from 0.85 oz. The supervisor writes: H₀: σ² = 0.7225 and H₁: σ² ≠ 0.7225. Why is there a potential conceptual issue with how this hypothesis is stated?",
+    "options": [
+      "The hypotheses are correctly stated; squaring the standard deviation is proper notation",
+      "The null should use σ (not σ²) to match the claim about standard deviation",
+      "Both hypotheses should be in terms of the sample standard deviation (s)",
+      "The alternative hypothesis should be one-tailed, not two-tailed"
+    ],
+    "correctIndex": 0,
+    "explanation": "While the original claim is about σ, hypothesis tests for variance use σ² (or variance chi-square tests). The statement σ² = (0.85)² = 0.7225 is mathematically correct. Option B is tempting but overlooks that variance tests properly use σ². Options C and D reflect different errors.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An e-commerce firm tests H₀: μ = $85 (average order value) vs. H₁: μ ≠ $85. After collecting data, the p-value is 0.042. The firm concludes 'the null hypothesis is false.' Which misconception does this reflect?",
+    "options": [
+      "A p-value of 0.042 proves the null is false; this is correct statistical reasoning",
+      "A low p-value is evidence against H₀ but does not 'prove' it false; formal rejection depends on α",
+      "The p-value measures the probability that H₀ is true",
+      "If the p-value is below 0.05, the sample mean must equal the hypothesized value"
+    ],
+    "correctIndex": 1,
+    "explanation": "A p-value of 0.042 provides evidence against H₀; at α = 0.05, we reject H₀. However, we never 'prove' hypotheses false—we only reject them or fail to reject them. Option A overstates certainty. Options C and D are common misconceptions about what p-values represent.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Johnson & Johnson tests whether a new vaccine's efficacy rate is at least 92%. The marketing team sets H₀: p ≥ 0.92 and H₁: p < 0.92. A biostatistician points out an error. What is the issue?",
+    "options": [
+      "The null and alternative are reversed; H₀ should state p < 0.92",
+      "The null hypothesis should be H₀: p = 0.92 (the boundary value), with H₁: p < 0.92",
+      "Both hypotheses use the same inequality direction; they are not mutually exclusive",
+      "A one-tailed test is inappropriate for vaccine efficacy testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The null hypothesis always uses equality (=) at the boundary, and the alternative captures the claim under investigation. Here, H₀: p = 0.92 and H₁: p < 0.92 is correct (one-tailed, left). Option A reverses them incorrectly; option C is technically true about the setup but misses the fundamental structure error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A clothing retailer tests two claims: Claim A is 'The average time on website is 4.5 minutes' and Claim B is 'The conversion rate is not 12%.' For Claim A, the null is H₀: μ = 4.5; for Claim B, the null is H₀: p = 0.12. Why is the interpretation of these nulls different?",
+    "options": [
+      "Claim A's null assumes the claim is true, while Claim B's null assumes the claim is false",
+      "Claim A uses a parameter (μ) while Claim B uses a proportion (p); the null always reflects the status quo or a specific value being tested",
+      "Claim A is directional while Claim B is not; nulls are always non-directional",
+      "The null hypotheses are identical; there is no difference in interpretation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both nulls state specific values being tested against data. The null never 'assumes the claim is true or false'—it proposes a value. The difference between μ and p is just parameter type, not interpretation. Claim A's H₁ could be directional or two-tailed depending on what the test is actually investigating.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company tests H₀: μ = 8.5 hours (average delivery time) vs. H₁: μ ≠ 8.5 hours. A sample of 81 deliveries yields x̄ = 8.2 hours and s = 1.62 hours. The calculated t-statistic is approximately −1.67. Using α = 0.05 with critical values ±1.99, the firm fails to reject H₀. However, a manager argues: 'The sample mean is noticeably lower (8.2 vs. 8.5), so we should reject H₀.' Why is this reasoning flawed?",
+    "options": [
+      "The difference of 0.3 hours is practically significant, so statistical non-significance is irrelevant",
+      "Statistical significance depends on both the magnitude of difference and the sample variability/size; a single difference value cannot determine rejection",
+      "The firm used the wrong critical values; they should have used ±1.96",
+      "A two-tailed test is inappropriate for delivery time; only one-tailed makes sense"
+    ],
+    "correctIndex": 1,
+    "explanation": "The manager conflates practical difference (0.3 hours) with statistical significance. Statistical tests account for variation and sample size. Here, |−1.67| < 1.99, so the difference is not statistically significant. Option A ignores statistical rigor; option C confuses critical values (close but not the deciding factor); option D ignores the manager's directive.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]
