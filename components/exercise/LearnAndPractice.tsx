@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import PracticeQuestion from './PracticeQuestion'
+import { onTopicCompleted } from '@/lib/mastery'
 
 const MASTERY_STREAK = 4
 
@@ -78,6 +79,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
 
   function handleMasteryTransition() {
     markTopicComplete(courseSlug, topicSlug)
+    onTopicCompleted(courseSlug, topicSlug)
     setSession((prev) => ({ ...prev, showMastery: true }))
   }
 
