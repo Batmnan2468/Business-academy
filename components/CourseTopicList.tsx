@@ -37,33 +37,37 @@ function loadMasteryMap(
   courseSlug: string,
   units: UnitItem[] | undefined,
   topics: TopicItem[] | undefined,
-): { map: Map<string, TopicMastery>; dueCount: number } {
+): { map: Map<string, TopicMastery>; dueCount: number; masteredCount: number } {
   const allSlugs = [
     ...(units?.flatMap((u) => u.topics.map((t) => t.slug)) ?? []),
     ...(topics?.map((t) => t.slug) ?? []),
   ]
   const map = new Map<string, TopicMastery>()
   let dueCount = 0
+  let masteredCount = 0
   for (const slug of allSlugs) {
     const m = getMastery(courseSlug, slug)
     if (m) {
       map.set(slug, m)
       if (isDueToday(m)) dueCount++
+      if (m.masteryLevel >= 1) masteredCount++
     }
   }
-  return { map, dueCount }
+  return { map, dueCount, masteredCount }
 }
 
 export default function CourseTopicList({ courseSlug, units, topics, totalTopics }: Props) {
   const [completed, setCompleted] = useState<Set<string> | null>(null)
   const [masteryMap, setMasteryMap] = useState<Map<string, TopicMastery>>(new Map())
   const [dueCount, setDueCount] = useState(0)
+  const [masteredCount, setMasteredCount] = useState(0)
 
   function refresh() {
     setCompleted(getCompleted(courseSlug))
-    const { map, dueCount: due } = loadMasteryMap(courseSlug, units, topics)
+    const { map, dueCount: due, masteredCount: mc } = loadMasteryMap(courseSlug, units, topics)
     setMasteryMap(map)
     setDueCount(due)
+    setMasteredCount(mc)
   }
 
   useEffect(() => {
@@ -182,8 +186,8 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
 
   return (
     <div>
-      {/* Progress + Daily Review row */}
-      <div className="mb-8">
+      {/* Progress bar */}
+      <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-gray-500 dark:text-gray-400">
             <span className="font-semibold text-gray-900 dark:text-white">{completedCount}</span>
@@ -192,26 +196,45 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
               <span className="ml-2 text-xs text-gray-400">{pct}%</span>
             )}
           </span>
-
-          {dueCount > 0 && (
-            <Link
-              href={`/courses/${courseSlug}/review`}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors text-xs font-medium text-blue-700 dark:text-blue-300"
-            >
-              <span>🔁 Daily Review</span>
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-600 text-white text-xs font-bold leading-none">
-                {dueCount}
-              </span>
-            </Link>
-          )}
         </div>
-
         <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-blue-500 rounded-full transition-all duration-500"
             style={{ width: `${pct}%` }}
           />
         </div>
+      </div>
+
+      {/* Practice mode buttons */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Link
+          href={`/courses/${courseSlug}/test`}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-xs font-medium text-gray-700 dark:text-gray-300"
+        >
+          📝 Course Test
+        </Link>
+
+        {masteredCount >= 5 && (
+          <Link
+            href={`/courses/${courseSlug}/mastered-review`}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 dark:hover:bg-amber-900 transition-colors text-xs font-medium text-amber-700 dark:text-amber-300"
+          >
+            ⭐ Mastered Review
+            <span className="text-amber-500 dark:text-amber-400 font-bold">{masteredCount}</span>
+          </Link>
+        )}
+
+        {dueCount > 0 && (
+          <Link
+            href={`/courses/${courseSlug}/review`}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors text-xs font-medium text-blue-700 dark:text-blue-300"
+          >
+            🔁 Daily Review
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-600 text-white text-xs font-bold leading-none">
+              {dueCount}
+            </span>
+          </Link>
+        )}
       </div>
 
       {units ? (
