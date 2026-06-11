@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which type of information system is designed to handle the daily operational transactions of a business?",
+    "options": [
+      "Decision Support System",
+      "Executive Information System",
+      "Transaction Processing System",
+      "Management Information System"
+    ],
+    "correctIndex": 2,
+    "explanation": "Transaction Processing Systems (TPS) handle high-volume, routine daily operations — recording sales, processing payroll, logging inventory. DSS supports analytical decisions, EIS serves executives with strategic summaries, and MIS aggregates TPS data into reports. TPS is the operational foundation all other IS types depend on.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regional sales manager receives a weekly report showing total sales by territory, average deal size, and rep performance rankings. Which IS type is producing this report?",
+    "options": [
+      "Transaction Processing System recording each individual sale",
+      "Management Information System aggregating operational data for managers",
+      "Decision Support System modeling future sales scenarios",
+      "Executive Information System showing portfolio-wide strategy"
+    ],
+    "correctIndex": 1,
+    "explanation": "MIS takes TPS data and aggregates it into scheduled, structured reports for middle managers. The weekly sales summary by territory is a classic MIS output — it summarizes what happened operationally to support management decisions. TPS records individual transactions, DSS models scenarios, and EIS serves senior executives.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the correct order of IS types from most operational to most strategic?",
+    "options": [
+      "EIS → MIS → DSS → TPS",
+      "DSS → TPS → EIS → MIS",
+      "TPS → MIS → DSS → EIS",
+      "MIS → TPS → EIS → DSS"
+    ],
+    "correctIndex": 2,
+    "explanation": "TPS handles daily operations at the base, MIS aggregates that data for middle managers, DSS supports analytical and semi-structured decisions, and EIS gives executives high-level strategic dashboards. Each level builds on data from the level below it — the pyramid runs from operational to strategic.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A revenue manager at Marriott uses a tool that lets her model how changing room prices by 10% would affect occupancy based on historical booking patterns. Which IS type is this?",
+    "options": [
+      "Transaction Processing System logging reservation records",
+      "Management Information System reporting current occupancy rates",
+      "Decision Support System modeling pricing scenarios analytically",
+      "Executive Information System displaying portfolio-wide metrics"
+    ],
+    "correctIndex": 2,
+    "explanation": "DSS is defined by its support for semi-structured, analytical decisions using models and data. Pricing scenario modeling — 'what happens if I change this variable?' — is the classic DSS use case. TPS records bookings, MIS reports on them, and EIS serves the C-suite with strategic summaries.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which IS type would a CEO use to monitor company-wide KPIs, market trends, and competitor activity in a single view?",
+    "options": [
+      "Transaction Processing System with real-time sales feeds",
+      "Executive Information System with high-level strategic dashboards",
+      "Management Information System with departmental reports",
+      "Decision Support System with scenario modeling tools"
+    ],
+    "correctIndex": 1,
+    "explanation": "EIS is designed specifically for senior executives — high-level, visual, strategic, and often pulling from multiple IS sources. KPI dashboards, market trends, and competitive monitoring are EIS hallmarks. TPS is too granular, MIS is departmental, and DSS is for analytical scenario work rather than executive monitoring.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's TPS goes offline for 4 hours. Which other IS types are most immediately affected and why?",
+    "options": [
+      "Only EIS is affected because executives need real-time data",
+      "DSS and EIS are unaffected since they use historical data only",
+      "MIS, DSS, and EIS are all affected because they depend on TPS data flowing upward",
+      "No other IS types are affected since each operates independently"
+    ],
+    "correctIndex": 2,
+    "explanation": "The IS pyramid is dependent — MIS aggregates TPS data, DSS analyzes MIS outputs, and EIS draws from all levels. A TPS outage cuts off the data supply chain. After 4 hours, MIS reports become stale, DSS models lose current inputs, and EIS dashboards stop reflecting real operations. IS types are interdependent, not isolated.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of a Transaction Processing System?",
+    "options": [
+      "High transaction volume with repetitive, structured processes",
+      "Real-time or batch processing of operational events",
+      "Modeling future scenarios to support manager decisions",
+      "Serving as the data source for higher-level IS types"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scenario modeling is a DSS characteristic, not TPS. TPS is defined by high-volume structured processing of operational events — recording what happened, not modeling what might happen. TPS does process in real-time or batches and does feed data upward to MIS and beyond.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company's IS automatically flags shipments that deviate more than 2 hours from schedule and routes them to a supervisor. Which IS type best describes this?",
+    "options": [
+      "Executive Information System displaying fleet-wide performance",
+      "Pure Transaction Processing System recording shipment events",
+      "Management Information System with exception-based reporting",
+      "Decision Support System running optimization algorithms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Exception-based reporting — automatically surfacing anomalies for management attention — is a classic MIS capability. It aggregates TPS data (shipment records) and applies business rules to filter what managers need to see. EIS is for executives, pure TPS just records events without flagging, and DSS models decisions rather than monitoring operations.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why do EIS dashboards typically show less granular data than MIS reports, even though EIS serves more senior decision-makers?",
+    "options": [
+      "EIS systems have less storage capacity than MIS systems",
+      "Senior executives have less technical ability to interpret detailed data",
+      "Executive decisions are strategic and directional — detail would obscure signal with noise",
+      "EIS cannot connect to the same databases that MIS uses"
+    ],
+    "correctIndex": 2,
+    "explanation": "The granularity-to-seniority inverse relationship is intentional — executives make directional decisions that require trend recognition, not transaction-level detail. A CEO seeing every invoice would miss the pattern that matters. Detail is valuable at the operational level; abstraction is valuable at the strategic level. This is by design, not technical limitation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company replaces its separate TPS, MIS, and reporting tools with a single integrated ERP platform. What is the primary IS risk of this consolidation?",
+    "options": [
+      "The ERP will generate too many reports for managers to read",
+      "A single system failure now disrupts all IS functions simultaneously",
+      "Executives will have access to operational data they shouldn't see",
+      "Transaction processing will become slower due to reporting overhead"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consolidation creates a single point of failure — if the ERP goes down, the organization loses TPS, MIS, and executive reporting simultaneously. When IS functions were separate, a TPS outage didn't necessarily kill executive dashboards. Integration creates efficiency but concentrates risk. The other options describe possible minor issues, not the primary systemic risk.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which scenario best illustrates the difference between MIS and DSS in practice?",
+    "options": [
+      "MIS is used by IT staff; DSS is used by business managers",
+      "MIS reports what happened last quarter; DSS models what might happen next quarter",
+      "MIS handles structured data; DSS handles unstructured data only",
+      "MIS is cloud-based; DSS requires on-premise servers"
+    ],
+    "correctIndex": 1,
+    "explanation": "The core MIS vs. DSS distinction is backward-looking vs. forward-looking: MIS aggregates historical operational data into reports, while DSS uses that data plus models to explore future scenarios. 'Sales were $4.2M last quarter' is MIS. 'If we increase marketing spend by 15%, sales will likely reach $4.8M' is DSS.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup has 12 employees and uses spreadsheets to track orders, email for customer communication, and QuickBooks for accounting. Which statement about their IS is most accurate?",
+    "options": [
+      "They have no IS because they lack enterprise software",
+      "They have a TPS only since they are tracking transactions",
+      "They have a basic IS combining TPS and MIS functions informally",
+      "They need an EIS before implementing any other IS type"
+    ],
+    "correctIndex": 2,
+    "explanation": "Even informal tools constitute an IS when people, processes, and data work together. Spreadsheets tracking orders function as a basic TPS; summaries for the founder function as informal MIS. IS exists on a spectrum — it doesn't require enterprise software. Startups have IS from day one, just less formalized.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst at Target notices the MIS report shows a 22% drop in electronics sales but cannot determine why from the report alone. What IS type would best help investigate the cause?",
+    "options": [
+      "A more detailed TPS log of individual electronics transactions",
+      "An EIS dashboard showing company-wide revenue trends",
+      "A DSS that lets her slice data by region, product, and time period",
+      "A second MIS report from a different department"
+    ],
+    "correctIndex": 2,
+    "explanation": "Investigating an anomaly requires analytical flexibility — slicing data across dimensions, testing hypotheses, and modeling explanations. That is DSS territory. The TPS log would be too granular and unstructured for pattern analysis. EIS is too high-level. A second MIS report describes more of what happened without explaining why.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What does it mean when an organization says its IS types are 'integrated'?",
+    "options": [
+      "All IS types run on the same physical server hardware",
+      "Data flows automatically between IS levels without manual re-entry",
+      "All employees have access to every IS type regardless of role",
+      "The IS was purchased from a single vendor"
+    ],
+    "correctIndex": 1,
+    "explanation": "IS integration means data flows automatically up the pyramid — TPS transactions feed MIS reports, which feed DSS models, which feed EIS dashboards — without manual export, re-entry, or reconciliation. Integration eliminates data silos and delays. Single vendor, same hardware, and universal access are separate concerns unrelated to integration.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which IS type is most critical to get right first when building an organization's information infrastructure, and why?",
+    "options": [
+      "EIS — because executives drive strategy and need data first",
+      "DSS — because analytical capability is the highest-value IS function",
+      "TPS — because all higher IS types depend on reliable operational data",
+      "MIS — because managers make more decisions than executives daily"
+    ],
+    "correctIndex": 2,
+    "explanation": "TPS is the foundation — if operational data is unreliable, incomplete, or delayed, every IS type built on top of it inherits those flaws. Garbage in, garbage out applies at the system architecture level. MIS reports on bad TPS data are misleading. DSS models fed by bad data produce wrong recommendations. EIS dashboards built on bad data mislead executives. Get TPS right first.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]
