@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which dimension of data quality means that a dataset contains all required records with no missing values?",
+    "options": [
+      "Accuracy — the data values correctly represent the real-world entities they are intended to describe",
+      "Consistency — the same data values appear identically wherever they are stored across all systems",
+      "Completeness — the dataset includes all required records and no mandatory fields are missing or null",
+      "Timeliness — the data was captured and made available within the time period the business requires"
+    ],
+    "correctIndex": 2,
+    "explanation": "Completeness means all required data is present — no records are missing and no mandatory fields contain null or placeholder values. Option A describes accuracy, which measures whether values are correct, not whether they exist. Option B describes consistency, which measures whether the same value appears the same way across systems. Option D describes timeliness, which is about data freshness relative to when it is needed.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does data accuracy differ from data consistency as dimensions of data quality?",
+    "options": [
+      "Accuracy measures whether data was entered on time; consistency measures whether data was entered completely",
+      "Accuracy measures whether values are correct; consistency measures whether values match across systems",
+      "Accuracy applies to numerical data; consistency applies to text fields and categorical data entries",
+      "Accuracy is managed by IT teams; consistency is the responsibility of business data stewards only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accuracy and consistency are related but distinct: accuracy asks whether a value correctly represents the real world (a customer's address is right), while consistency asks whether the same value appears identically wherever it is stored (the address in CRM matches the address in the billing system). A value can be consistent across systems but still be inaccurate if an error was replicated. Option A confuses accuracy with timeliness and consistency with completeness. Option C incorrectly limits each dimension by data type.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A hospital's patient database shows the same patient with two different birth dates — one in the admissions system and a different one in the billing system. Which data quality dimension has failed?",
+    "options": [
+      "Completeness — the patient's birth date is missing from one of the two systems storing the record",
+      "Timeliness — the birth date was updated in admissions but the billing system has not been refreshed yet",
+      "Accuracy — both systems contain incorrect birth date values that do not match the patient's true birth date",
+      "Consistency — the same attribute has different values in two systems that should agree on a single value"
+    ],
+    "correctIndex": 3,
+    "explanation": "When the same attribute has different values in two systems that should hold identical information, that is a consistency failure — the two systems do not agree. Note that this is distinct from accuracy: we do not know which date (if either) is correct, but we do know they cannot both be right. Option A is incorrect because both systems have a value — neither is missing. Option B is possible but requires additional context; the scenario describes a mismatch, not necessarily a synchronization lag.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the role of a data steward in a data governance program?",
+    "options": [
+      "A technical specialist who designs and maintains the physical database infrastructure and query performance",
+      "An executive who approves all data-related budgets and vendor contracts for the IS organization",
+      "A designated owner responsible for the quality, definition, and appropriate use of a specific data domain",
+      "A security analyst who monitors access logs and enforces encryption policies on sensitive data assets"
+    ],
+    "correctIndex": 0,
+    "explanation": "A data steward is a designated business owner — typically embedded in a specific function like finance or HR — responsible for defining what a data domain means, ensuring its quality, and governing its appropriate use. This is a business accountability role, not a purely technical one. Option A describes a database administrator (DBA). Option D describes a data security role, which is a separate function within a broader data governance program.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "JPMorgan's risk team discovers that 12% of loan records have missing income verification data, which was marked as optional in the original intake form. A compliance audit finds these loans were approved without sufficient documentation. What does this illustrate?",
+    "options": [
+      "Inaccurate data — the income figures recorded in loan files do not reflect the borrowers' true income levels",
+      "Poor data completeness creating downstream compliance risk when required business data was treated as optional",
+      "Inconsistent data — income verification appears in some records but not others across the loan portfolio",
+      "Data timeliness failure — income verification was captured but not updated when borrowers' finances changed"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a completeness failure with real business consequences: income verification data was missing from 12% of records because the intake form treated a compliance-critical field as optional. The downstream impact — improper loan approvals — illustrates why data completeness governance matters beyond technical hygiene. Option A is incorrect because the issue is absent data, not incorrect data. Option C is incorrect because consistency refers to matching values across systems, not to whether a field is sometimes absent.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A CFO dismisses a data quality initiative, saying: 'Minor errors in our data don't affect strategic decisions — we deal in averages and trends, not individual records.' What is the most valid challenge to this view?",
+    "options": [
+      "Regulatory bodies require data quality certifications as a legal precondition for using IS in financial settings",
+      "Individual record errors aggregate into systematic biases that corrupt the trends and averages executives rely on",
+      "The initiative will also uncover security vulnerabilities that extend well beyond data quality concerns",
+      "Minor errors compound geometrically over time, making every database unacceptable after two to three years"
+    ],
+    "correctIndex": 1,
+    "explanation": "The CFO's reasoning fails because record-level errors do not average out — they accumulate into systematic bias. If 8% of customer records have incorrect revenue classifications, the revenue-by-segment trend the executive relies on is structurally wrong, not just noisy. Poor data quality at the record level corrupts aggregations at every level. Option A raises a regulatory argument that may be valid in specific industries but is not the strongest analytical challenge to the CFO's claim. Option D invents a geometric compounding rule that has no basis in data quality theory.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Salesforce has customer records where the same company appears under three different names: 'Acme Corp,' 'ACME Corporation,' and 'Acme Corp.' — all representing the same entity. Sales reports show this company as three separate customers. What data quality problem does this represent?",
+    "options": [
+      "Completeness failure — the records are missing a canonical company name that should appear in all three entries",
+      "Timeliness failure — the company name was updated in the CRM but older records were not refreshed accordingly",
+      "Accuracy failure — the company's legal name is stored incorrectly in at least two of the three entries",
+      "Consistency failure combined with a deduplication problem creating entity resolution errors in reporting"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is a consistency and entity resolution problem — the same real-world company is represented by three non-identical strings that should be recognized as the same entity. When reports treat them as separate customers, data quality failures cascade into reporting errors. Option C is partially valid but insufficient — accuracy alone does not explain the fragmentation; even if each name were considered 'accurate enough,' the three representations need deduplication. Option A is incorrect because all three records have a name; the issue is variant spellings, not missing values.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's marketing team uses customer purchase history from a database that is updated weekly. A campaign targets customers who have not purchased in 90 days. A post-campaign analysis finds 30% of targeted customers had actually purchased within the week before the campaign launched. What data quality dimension failed?",
+    "options": [
+      "Timeliness — the data was not current enough to reflect purchases made in the week before campaign launch",
+      "Completeness — purchase records from recent transactions were missing from the campaign targeting dataset",
+      "Accuracy — the purchase dates recorded in the system were incorrect for the targeted customer segment",
+      "Consistency — purchase records were stored in two systems that disagreed on which customers were inactive"
+    ],
+    "correctIndex": 0,
+    "explanation": "The failure is timeliness — the weekly update cycle meant the targeting data was up to 7 days stale. For a 90-day inactivity threshold, a 7-day lag is significant enough to mislabel active customers as inactive. The data was likely accurate and complete at the time of the last update; it simply was not current enough for the campaign's decision window. Option B would require the records to be absent entirely — but the issue is staleness, not absence. Option D would require a mismatch between two systems, which is not indicated here.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data governance council at a large retail company is debating whether 'data quality' is an IT problem or a business problem. What is the most accurate characterization?",
+    "options": [
+      "Data quality is strictly an IT responsibility because all data originates from IS systems that IT manages",
+      "Data quality is strictly a business responsibility because IT systems execute instructions given by business owners",
+      "Data quality requires joint ownership — IT provides technical infrastructure and business stewards ensure correct use",
+      "Data quality is irrelevant to governance once automated data validation rules are implemented in the IS platform"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data quality cannot be fully owned by either IT or the business alone. IT builds and maintains the systems, validation rules, and pipelines that enable quality enforcement. Business data stewards define what 'correct' means in context — what counts as a valid customer, a complete order, or an acceptable address format. Option A is incorrect because IT cannot determine business rules; they can only enforce rules they are given. Option D overstates the power of automated validation — rules can enforce formats but cannot correct semantic errors or missing domain knowledge.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Boeing's supply chain IS flags that 18% of supplier records have outdated contact information. The procurement team argues this is a minor issue since they use email for most supplier communications. What risk does the team's position understate?",
+    "options": [
+      "Outdated contacts reduce IS system performance because stale records increase query processing time",
+      "The IS vendor's SLA requires 100% contact accuracy, creating a contractual liability for Boeing",
+      "Supplier contact inaccuracy could cause order failures or compliance gaps when primary email channels fail",
+      "Poor contact data will prevent Boeing from migrating to a new ERP platform in future upgrade cycles"
+    ],
+    "correctIndex": 2,
+    "explanation": "The team understates the risk of single-point communication dependency. When email is disrupted — through a cyberattack, a domain change, or a supplier organizational change — accurate fallback contact information becomes critical for order fulfillment, compliance notification, or emergency coordination. Eighteen percent inaccurate records is a latent operational risk. Option A incorrectly frames the issue as a performance problem — stale records have negligible query processing impact. Option B invents a contractual SLA requirement that is not a general rule.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A student argues: 'Data governance is just about data security — it's mostly about who can access sensitive records.' What is the most significant gap in this definition?",
+    "options": [
+      "Data governance excludes security entirely; security is handled by a separate IS compliance function",
+      "Data governance also covers data quality, stewardship, definitions, lineage, and lifecycle management beyond access controls",
+      "Data governance is primarily focused on regulatory compliance with GDPR and HIPAA, not security or access",
+      "Data security is the correct term; governance only refers to organizational decision-making structures"
+    ],
+    "correctIndex": 3,
+    "explanation": "The student's definition captures access control — one component of governance — but misses the broader scope. Data governance defines who owns data, what it means, how its quality is maintained, how it flows through systems (lineage), and how its lifecycle is managed from creation to deletion. Security is one pillar of governance, not a synonym for it. Option A is incorrect — security is absolutely included in governance programs. Option C overstates regulatory compliance as the primary focus and understates internal quality and stewardship.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retailer runs a customer lifetime value model using purchase history data. The model consistently overestimates CLV for customers acquired before 2020. Investigation reveals that pre-2020 purchase records have inflated transaction amounts due to a legacy system migration error. What downstream effect does this illustrate?",
+    "options": [
+      "Poor data accuracy in source records propagates into model outputs, corrupting strategic decisions built on those outputs",
+      "Legacy data migration projects automatically introduce accuracy errors that require manual validation after completion",
+      "CLV models are inherently unreliable for customers with more than three years of purchase history in any IS",
+      "The retailer should exclude pre-2020 records and rerun the model using only recent transaction data going forward"
+    ],
+    "correctIndex": 0,
+    "explanation": "This illustrates the cascading effect of upstream data quality failures on downstream analytical models. Inaccurate source data — inflated transaction amounts from the migration error — flows into the CLV model and systematically biases its outputs. The model is technically correct given its inputs; the problem is data quality. Option B overstates the inevitability of migration errors. Option C makes an unsupported generalization about CLV model reliability. Option D is a workaround, not a diagnosis of the principle the scenario illustrates.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two business units at the same company define 'active customer' differently — one unit uses 'purchased in last 12 months,' the other uses 'purchased in last 6 months.' When reports are consolidated, active customer counts are inconsistent. What governance failure does this represent?",
+    "options": [
+      "A data consistency failure because the two systems store customer records using different database schemas",
+      "A data accuracy failure because at least one definition of active customer is factually incorrect for the business",
+      "A missing data dictionary and shared business definitions — a core data governance accountability gap",
+      "A referential integrity failure because foreign keys linking customers to transactions are not uniformly enforced"
+    ],
+    "correctIndex": 2,
+    "explanation": "The root problem is not technical — it is definitional. Two business units using different definitions for the same metric is a data governance failure: no shared data dictionary or enterprise-wide business glossary was established to align terminology. This is why data stewardship includes defining and maintaining common business definitions. Option A is incorrect — the inconsistency is definitional, not a database schema divergence. Option B is incorrect because neither definition is necessarily 'wrong' — they are just different.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company discovers that 40% of its customer records are duplicates created when customers re-registered after forgetting their login. Sales reports double-count these customers, inflating metrics. What does this primarily represent?",
+    "options": [
+      "A completeness failure — the IS did not capture all unique customer attributes during the original registration",
+      "A data quality failure affecting accuracy and uniqueness, with direct business impact on reporting reliability",
+      "A data timeliness failure — duplicate records accumulate over time as the system fails to refresh stale entries",
+      "A referential integrity failure — the foreign keys linking customer records to transaction records are broken"
+    ],
+    "correctIndex": 1,
+    "explanation": "Duplicate records are a multi-dimensional data quality failure: they violate uniqueness (each real-world entity should appear once), damage accuracy of any metric computed from the records, and create direct downstream harm in reporting. The 40% duplication rate means revenue, customer count, and retention metrics are systematically inflated. Option A is incorrect because records exist — completeness would be the concern if records were missing. Option C misattributes the problem to a time-based refresh failure when the root cause is a lack of duplicate detection at registration.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data governance policy requires that every data field in the enterprise data warehouse must have a designated data steward, a documented definition, and a defined acceptable value range. A product manager argues this creates unnecessary overhead for 'simple' fields like ProductName. What is the strongest argument against this position?",
+    "options": [
+      "Regulatory bodies require formal stewardship documentation for every field in enterprise data warehouses",
+      "Fields that seem simple often develop quality problems when systems are integrated or definitions diverge across teams",
+      "Governance overhead is irrelevant because modern data catalogs automatically enforce field-level documentation",
+      "ProductName is a legally protected field requiring stewardship due to trademark and intellectual property rules"
+    ],
+    "correctIndex": 3,
+    "explanation": "Fields that appear simple are frequently the source of inconsistency problems when systems are integrated or different teams apply them differently — 'iPhone 15' versus 'Apple iPhone 15 Pro' versus 'iPhone15' represent the same product but would fragment reports without governance. The governance overhead is justified precisely because unmanaged simple fields are where deduplication and entity resolution problems silently accumulate. Option A invents a regulatory requirement that is not universally applicable. Option C overstates the capability of data catalogs — they organize documentation but do not enforce quality automatically.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

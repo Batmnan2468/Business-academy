@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is a record in a relational database table?",
+    "options": [
+      "A named column that defines one attribute stored across all rows in the table",
+      "A constraint that enforces uniqueness across all values in a specified column",
+      "A single row representing one complete instance of the entity the table describes",
+      "A link connecting two tables based on matching values in a shared identifier column"
+    ],
+    "correctIndex": 2,
+    "explanation": "A record (also called a row) represents one complete instance of the entity the table models — one customer, one order, one product. Option A describes a field (column), which defines an attribute. Option B describes a unique constraint or primary key rule. Option D describes a relationship enforced through a foreign key, not a record.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does a primary key differ from a foreign key in a relational database?",
+    "options": [
+      "A primary key uniquely identifies each record in its own table; a foreign key references a primary key in another table",
+      "A primary key links two tables together; a foreign key ensures uniqueness within a single table's records",
+      "A primary key stores text data; a foreign key stores numeric identifiers for faster database query performance",
+      "A primary key is optional; a foreign key is required in every table to maintain referential integrity"
+    ],
+    "correctIndex": 0,
+    "explanation": "A primary key uniquely identifies each record within its table — no two records can share the same primary key value. A foreign key is a field in one table that holds the primary key value from a related table, creating the link between them. Option B reverses the two definitions entirely. Option C incorrectly ties the distinction to data types, which is unrelated to the conceptual roles of primary and foreign keys.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A university database has a Students table and an Enrollments table. Each enrollment record includes a StudentID that matches a record in the Students table. What is the StudentID in the Enrollments table?",
+    "options": [
+      "A primary key — it uniquely identifies each enrollment event stored in the Enrollments table",
+      "A field — it stores one attribute of each enrollment record alongside course and grade data",
+      "A record — it represents one complete enrollment instance linking a student to a course",
+      "A foreign key — it references the Students table's primary key to connect the two tables"
+    ],
+    "correctIndex": 3,
+    "explanation": "The StudentID in Enrollments is a foreign key — it holds a value that matches the primary key of the Students table, creating the relationship between the two tables. Option A is incorrect because StudentID does not uniquely identify each enrollment; multiple enrollments can share the same StudentID (one student, many courses). Option C incorrectly identifies StudentID as a record when it is a field within a record.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a field represent in a relational database table?",
+    "options": [
+      "A single attribute or characteristic that is captured for every record stored in the table",
+      "A unique row that stores all attributes for one instance of the entity in the table",
+      "A relationship link connecting matching values between two separate database tables",
+      "A constraint preventing duplicate values from being entered into the same table row"
+    ],
+    "correctIndex": 0,
+    "explanation": "A field (column) represents one specific attribute captured for every record in the table — LastName, OrderDate, and ProductPrice are each separate fields. Option B describes a record (row). Option C describes a foreign key relationship. Option D describes a uniqueness constraint, which is a rule applied to a field rather than the definition of what a field is.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's product database has a Products table and an Orders table. The Orders table has a ProductID column matching records in Products. A manager runs a query joining the two tables to find which products had returns in Q3. What makes this join possible?",
+    "options": [
+      "Both tables were created with the same number of records, allowing row-by-row alignment in the query",
+      "The shared ProductID creates a foreign key relationship that connects matching records across both tables",
+      "Amazon's database engine automatically creates joins between any two tables that share a column name",
+      "The Orders table stores a copy of every product attribute so that joins require no additional table access"
+    ],
+    "correctIndex": 1,
+    "explanation": "The join is possible because ProductID serves as a foreign key in Orders, referencing the primary key in Products. This relationship allows the database to match each order record with its corresponding product record. Option A incorrectly suggests row count determines join capability — tables can have vastly different record counts and still join correctly. Option C overstates what database engines do automatically; matching column names alone do not create valid joins.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A student designs a Customers table and assigns each customer a unique CustomerID as the primary key. Later, they find two records with the same CustomerID. What database rule was violated?",
+    "options": [
+      "Referential integrity — foreign key values must always match an existing primary key in the referenced table",
+      "Primary key uniqueness — no two records in the same table can share the same primary key value",
+      "Field normalization — each column must store only one type of data to ensure consistent table structure",
+      "Table cardinality — one-to-many relationships require that child records outnumber parent records"
+    ],
+    "correctIndex": 1,
+    "explanation": "The primary key uniqueness constraint guarantees that no two records in a table share the same primary key value — this is the fundamental rule that makes each record uniquely identifiable. Option A describes referential integrity, which governs foreign key consistency across tables, not uniqueness within a table. Option C describes data type consistency, which is a separate design consideration.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's Orders table has 500,000 records. A query joining Orders to Customers returns only 480,000 results. What does this most likely indicate?",
+    "options": [
+      "The query was written using an inner join, which only returns records with matching values in both tables",
+      "The database engine automatically excludes duplicate records from query results to prevent double-counting",
+      "The Customers table contains fewer records than Orders, which limits the total query output volume",
+      "The Orders table contains a primary key violation, causing 20,000 records to be silently excluded"
+    ],
+    "correctIndex": 3,
+    "explanation": "An inner join returns only records with a matching value in both tables. The 20,000 missing rows are orders with no matching CustomerID in the Customers table — either because the customer was deleted, the foreign key was not enforced, or data entry errors exist. Option C sounds plausible but is not what an inner join does — the row count depends on matching values, not the relative size of the tables. Option B invents automatic deduplication behavior that standard joins do not perform.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's database has a Suppliers table (SupplierID as primary key) and a Products table (foreign key SupplierID). A database administrator tries to delete a supplier record that has 200 associated product records. The database blocks the deletion. What principle caused this?",
+    "options": [
+      "Primary key constraint — the SupplierID is referenced as a primary key in the Products table simultaneously",
+      "Referential integrity — deleting the parent record would leave child records with an unresolved foreign key reference",
+      "Table normalization — deletion operations on parent tables require prior removal of all duplicate field values",
+      "Cardinality enforcement — one-to-many relationships block parent deletion when more than 100 child records exist"
+    ],
+    "correctIndex": 0,
+    "explanation": "Referential integrity prevents deletion of a parent record when child records in another table still reference it via foreign key. Deleting the supplier would leave 200 product records pointing to a non-existent SupplierID, breaking the relationship. Option A incorrectly describes the mechanism — the SupplierID is the primary key of the Suppliers table, not a primary key in Products. Option D invents a 100-record threshold, which is not a real database constraint.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A one-to-many relationship exists between a Departments table and an Employees table. What does this relationship structure mean?",
+    "options": [
+      "Each employee record must belong to many departments, and each department must have many employees",
+      "One department record can be associated with many employee records, but each employee belongs to one department",
+      "One department can be linked to one other department, and many employees can exist outside any department",
+      "Many department records must exist before any employee records can be entered into the database"
+    ],
+    "correctIndex": 1,
+    "explanation": "A one-to-many relationship means one record on the 'one' side relates to multiple records on the 'many' side. One department has many employees, but each employee belongs to exactly one department. This is enforced by storing the DepartmentID as a foreign key in the Employees table. Option A describes a many-to-many relationship, which would require a junction table. Option D invents a data entry sequencing rule that is not a property of the relationship type.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A sales analyst at Target runs a query: SELECT CustomerID, SUM(OrderTotal) FROM Orders GROUP BY CustomerID. What database concept makes this aggregation possible and meaningful?",
+    "options": [
+      "Foreign keys link orders to customers, ensuring that SUM is computed using the correct relationship",
+      "Primary keys on CustomerID ensure each grouped result represents exactly one distinct customer",
+      "Referential integrity ensures that no order records are excluded from the aggregation by the query engine",
+      "Table normalization separates order and customer data into distinct tables to support GROUP BY operations"
+    ],
+    "correctIndex": 1,
+    "explanation": "The CustomerID primary key in the Customers table (and its role as a unique identifier in Orders) ensures that the GROUP BY CustomerID operation aggregates all orders belonging to the same customer under one key. If CustomerID were not a reliable unique identifier, grouping could split or merge records incorrectly. Option A is partially relevant but foreign keys connect tables — they do not directly drive aggregation logic within a single table. Option D confuses normalization (a design principle) with query execution.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A database designer creates one giant table with 80 columns storing customer name, address, order date, product name, product price, and supplier contact in every row. What fundamental design problem does this represent?",
+    "options": [
+      "Primary key overflow — 80-column tables exceed relational database primary key limits per record",
+      "Query complexity — a single table with 80 columns requires more complex JOIN syntax than multiple tables",
+      "Missing referential integrity — the table cannot enforce foreign key constraints without separate parent tables",
+      "Denormalization and data redundancy — customer and product data repeat across every order row, creating update anomalies"
+    ],
+    "correctIndex": 3,
+    "explanation": "Storing customer, product, and supplier data in every order row is a classic denormalization problem. If a customer's address changes, every one of their order rows must be updated — creating update anomalies. If a product is discontinued, deleting its rows risks losing customer data. Proper relational design separates these into related tables. Option C is a consequence of the design but not the root problem — referential integrity could be added to a single-table design, but redundancy would remain. Option A invents a column count limit that does not exist in relational databases.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs maintains a Trades table (TradeID primary key), an Accounts table (AccountID primary key), and a Traders table (TraderID primary key). The Trades table has both AccountID and TraderID as foreign keys. What does this structure allow?",
+    "options": [
+      "The Trades table to exist independently of the Accounts and Traders tables for compliance reporting",
+      "Multiple trades to share a single primary key, reducing storage overhead in the high-volume Trades table",
+      "Each trade to be linked to one account and one trader, enabling queries that span all three related entities",
+      "TradeID to serve simultaneously as the primary key in all three tables for cross-table joins"
+    ],
+    "correctIndex": 2,
+    "explanation": "Two foreign keys in the Trades table create two separate relationships — each trade is linked to one account and one trader. This allows analysts to query 'which trades were made by Trader X on Account Y' by joining all three tables through the foreign key relationships. Option A is incorrect because foreign key relationships create dependencies between tables, not independence from them. Option B incorrectly suggests foreign keys reduce storage or allow shared primary keys — foreign keys point to primary keys, they are not the primary keys of the child table.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A database has a many-to-many relationship between Students and Courses — one student can enroll in many courses, and one course can have many students. How is this relationship typically implemented in a relational database?",
+    "options": [
+      "By duplicating the Students table for each course, ensuring no single table holds more than one relationship",
+      "By adding a multi-value field to the Students table that stores a list of all CourseIDs for each student",
+      "By creating a junction table with foreign keys to both Students and Courses, plus its own primary key",
+      "By adding the complete student record as a nested row inside each course record that the student attends"
+    ],
+    "correctIndex": 2,
+    "explanation": "Many-to-many relationships require a junction (bridge) table that holds foreign keys to both parent tables — typically with its own primary key (e.g., EnrollmentID) plus StudentID and CourseID as foreign keys. This allows one student to appear with many courses and one course to appear with many students without redundancy. Option A describes table duplication, which multiplies storage and creates update anomalies. Option B describes a multi-value field, which violates relational normalization — each field should store one atomic value.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A developer removes the foreign key constraint from an Orders table that referenced a Customers table, arguing it speeds up bulk data imports. Six months later, reports show orders linked to non-existent customers. What principle was sacrificed?",
+    "options": [
+      "Primary key uniqueness — removing constraints allowed duplicate CustomerID values to enter the Orders table",
+      "Table normalization — foreign key constraints are required to maintain normalized table structure in relational design",
+      "Referential integrity — the foreign key constraint was the mechanism preventing orphaned records across tables",
+      "Query performance — foreign key enforcement is what allows the database to optimize join operation speed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Referential integrity ensures that every foreign key value in a child table matches an existing primary key in the parent table. Removing the foreign key constraint eliminated this enforcement, allowing orders to be inserted with CustomerIDs that have no corresponding customer record — creating orphaned rows. Option A is incorrect because CustomerID uniqueness is governed by the primary key constraint in the Customers table, not the foreign key in Orders. Option B is wrong because normalization is a design principle, not an enforced constraint.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A student claims: 'Any spreadsheet column can serve as a primary key as long as it contains unique values.' What is the most significant flaw in this reasoning?",
+    "options": [
+      "Spreadsheet columns are not transferable to relational databases without data type conversion processes",
+      "A primary key must also be stable and non-null — a column that is currently unique may acquire duplicates or empty values",
+      "Spreadsheet columns cannot contain numeric data, which is required for all primary key fields in relational design",
+      "Primary keys must be auto-generated by the database engine; manually assigned values are not technically valid"
+    ],
+    "correctIndex": 3,
+    "explanation": "Uniqueness at a point in time is necessary but not sufficient for a primary key. A valid primary key must also be stable (values should not change after assignment), non-null (every record must have a value), and guaranteed to remain unique over time. A column like CustomerEmail might be unique today but could change or be shared across account merges. Option C is incorrect — primary keys can be any data type as long as the key properties are met. Option D is incorrect — manually assigned primary keys are widely used and valid.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following best defines the CIA triad in cybersecurity?",
+    "options": [
+      "The three key cybersecurity agencies — CISA, INTERPOL, and Arpanet — that coordinate national defense",
+      "Confidentiality, Integrity, and Availability — the three core goals of any information security program",
+      "The three attack categories — credential theft, infrastructure attacks, and application vulnerabilities",
+      "Confidentiality, Identity, and Authorization — the components of a strong access management system"
+    ],
+    "correctIndex": 1,
+    "explanation": "The CIA triad defines the three foundational properties every security program must protect: keeping data accessible only to authorized parties (confidentiality), ensuring data is accurate and unaltered (integrity), and ensuring systems are accessible when needed (availability). Option A confuses the acronym with government agencies. Option C misreads the acronym as an attack taxonomy. Option D substitutes incorrect terms — identity and authorization are important security concepts but are not the three components of the CIA triad.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the difference between authentication and authorization in a computer system?",
+    "options": [
+      "Authentication grants access to resources; authorization verifies that a user is who they claim to be",
+      "Authentication uses passwords exclusively; authorization uses biometrics — the difference is credential type",
+      "Authentication and authorization are synonymous terms for verifying a user's identity and permissions",
+      "Authentication verifies who you are; authorization determines what you are permitted to do"
+    ],
+    "correctIndex": 3,
+    "explanation": "Authentication confirms identity — 'are you who you claim to be?' — while authorization determines what actions or resources that verified identity is permitted to access. Option A reverses the two definitions entirely. Option B conflates concepts with specific credential types, which is incorrect — both authentication and authorization can use multiple technologies. Option C is false; they are distinct concepts that operate in sequence within an access control workflow.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does encryption primarily protect in a cybersecurity context?",
+    "options": [
+      "The confidentiality of data by transforming it into an unreadable format without the decryption key",
+      "The integrity of data by detecting unauthorized modifications using digital signatures and hashing",
+      "The availability of data by creating redundant copies stored across multiple geographic locations",
+      "The authenticity of users by verifying that credentials match records in a directory service"
+    ],
+    "correctIndex": 0,
+    "explanation": "Encryption scrambles data so that only parties with the correct decryption key can read it — it directly protects confidentiality. Option B describes integrity controls (hashing and digital signatures), which are related but distinct from encryption. Option C describes data redundancy and backup strategies, which address availability. Option D describes authentication mechanisms, not encryption.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does multi-factor authentication (MFA) differ from standard password-only authentication?",
+    "options": [
+      "MFA uses longer passwords with special characters, making credential theft more technically difficult",
+      "MFA eliminates the need for passwords entirely by replacing them with biometric verification methods",
+      "MFA requires proof from two or more independent categories of evidence before granting access",
+      "MFA is mandatory for all cloud-based systems but optional for on-premises enterprise applications"
+    ],
+    "correctIndex": 2,
+    "explanation": "MFA requires at least two distinct factor categories — something you know (password), something you have (authenticator token), or something you are (biometric) — so that compromising one factor alone is insufficient for access. Option A describes password hardening, not multi-factor authentication. Option B describes passwordless authentication, which is a different approach. Option D makes a false distinction between cloud and on-premises requirements that has no basis in security standards.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft requires employees to enter a password and then approve a push notification on their registered phone to log into corporate systems. Which security principle does this implement?",
+    "options": [
+      "Role-based access control, restricting each employee to resources their specific job function requires",
+      "Multi-factor authentication, combining a knowledge factor with a possession factor for identity verification",
+      "Encryption, ensuring that login credentials are unreadable as they travel across the network",
+      "Authorization, determining which systems and files the employee is permitted to access after login"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using a password (something you know) combined with a phone approval (something you have) is the definition of multi-factor authentication. Option A describes role-based access control, which is an authorization mechanism that governs resource access — it operates after authentication, not during it. Option C describes encryption, which may protect credentials in transit but is not what the two-step verification process represents. Option D describes authorization, which is the separate step that follows successful authentication.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital gives nurses access to patient records for their assigned ward, doctors access to all records in their specialty, and administrators access to billing data only. Which access control model does this describe?",
+    "options": [
+      "Mandatory access control, where security labels set by the operating system determine all data access",
+      "Discretionary access control, where individual data owners decide who may view their files",
+      "Attribute-based access control, where dynamic policies evaluate real-time context for each access request",
+      "Role-based access control, where permissions are assigned based on each user's organizational function"
+    ],
+    "correctIndex": 3,
+    "explanation": "Role-based access control (RBAC) assigns permissions based on job roles — nurses, doctors, and administrators each receive access aligned with their organizational function. Option A describes MAC, used in classified government systems where security labels govern all access regardless of user requests. Option B describes DAC, where individual data owners control access rather than an IT department assigning permissions by role. Option C describes ABAC, which uses dynamic context attributes like time of day or device type to make access decisions.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does symmetric encryption differ from asymmetric encryption?",
+    "options": [
+      "Symmetric encryption uses one shared key for both encrypting and decrypting; asymmetric uses a public-private key pair",
+      "Symmetric encryption protects data at rest exclusively; asymmetric encryption is used only for data in transit",
+      "Symmetric encryption is more secure but slower; asymmetric encryption is faster but offers weaker protection",
+      "Symmetric encryption is used for passwords; asymmetric encryption is used for documents and database records"
+    ],
+    "correctIndex": 0,
+    "explanation": "The fundamental difference is key structure — symmetric encryption uses one shared secret key for both operations, while asymmetric encryption uses mathematically linked key pairs where the public key encrypts and the private key decrypts. Option B invents an application restriction that is not accurate — both types can protect data at rest and in transit. Option C reverses the performance relationship; symmetric encryption is generally faster, and asymmetric is used for smaller payloads like key exchange precisely because of its computational cost. Option D assigns domain restrictions that have no basis in how these algorithms are deployed.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A security audit reveals that former employees still have active login credentials two months after leaving the organization. Which CIA triad component is most directly at risk?",
+    "options": [
+      "Availability — former employees with credentials could overload systems and cause a denial of service",
+      "Integrity — former employees could alter financial or operational records without any accountability",
+      "Confidentiality — unauthorized parties retain access to data they are no longer permitted to view",
+      "Authentication — the credential system is failing to verify that only current employees are logging in"
+    ],
+    "correctIndex": 2,
+    "explanation": "Active credentials for departed employees create a direct unauthorized access risk — people outside the organization can read, copy, or exfiltrate data they no longer have a legitimate need to see, which is a confidentiality failure. Option A describes a secondary risk, but denial of service is not the primary threat from lingering credentials. Option B is also a real risk, but the more immediate exposure is unauthorized viewing rather than active modification. Option D is incorrect because authentication is still functioning correctly; the failure is in the identity lifecycle management process, not the authentication mechanism itself.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A ransomware attack encrypts all files on a hospital's servers and clinical staff cannot access patient records for 36 hours. Which component of the CIA triad has been most directly violated?",
+    "options": [
+      "Confidentiality — the attackers had unauthorized access to patient records during the encryption process",
+      "Availability — legitimate users cannot access the systems and data they require to function",
+      "Integrity — the ransomware has permanently corrupted and altered the data stored on the servers",
+      "Authentication — the ransomware bypassed the login controls that protected the hospital's systems"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ransomware that locks users out of their own data is a direct availability attack — the data exists but cannot be accessed by those who need it. Option A addresses a legitimate secondary concern, but the 36-hour operational disruption is primarily an availability failure, not a data exposure event. Option C is partially true in that encryption alters files, but ransomware is specifically designed to restore access upon payment — the attacker's goal is to deny access, not destroy integrity. Option D is incorrect; authentication describes the mechanism that may have been exploited for initial delivery, not the CIA property the attack violated.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's IT policy grants all employees administrator-level access to all systems to ensure no one is ever blocked from the tools they need. What is the fundamental security flaw in this policy?",
+    "options": [
+      "Administrator access requires MFA, so the policy will generate excessive authentication prompts daily",
+      "Universal administrator access increases availability risk because too many simultaneous logins degrade performance",
+      "The policy violates encryption standards that require certificate-based credentials for administrator accounts",
+      "The policy violates least privilege, exposing the entire system if any single employee account is compromised"
+    ],
+    "correctIndex": 3,
+    "explanation": "The principle of least privilege holds that users should have only the access their role requires — granting everyone administrator access means a single compromised or malicious account can read all data, modify any system, and cause unrestricted damage. Option A conflates MFA requirements with access level; these are independent security policies. Option B invents a performance degradation claim that is not how administrator access functions. Option C is fabricated — no encryption standard dictates credential types for administrator accounts.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "JPMorgan implements end-to-end encryption for all customer wire transfer communications. An attacker intercepts the encrypted data packets in transit. What is the most accurate assessment of the security situation?",
+    "options": [
+      "The encryption succeeds — the attacker captures ciphertext they cannot decode without the private key",
+      "The interception succeeds — capturing data in transit is a confidentiality breach regardless of encryption",
+      "The encryption fails — wire transfer data requires physical security controls rather than software encryption",
+      "The attacker can decrypt the data by running brute-force attacks against standard encryption rapidly"
+    ],
+    "correctIndex": 0,
+    "explanation": "End-to-end encryption means that even intercepted data is unreadable ciphertext without the corresponding decryption key — the confidentiality goal is preserved even when packets are captured. Option B is incorrect; interception of encrypted data does not constitute a confidentiality breach because no meaningful information is exposed. Option C invents a false claim that physical controls are required for financial communication security. Option D is incorrect; modern encryption standards like AES-256 and RSA-2048 are computationally infeasible to brute-force with current hardware.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An organization must grant a third-party auditor temporary read-only access to financial records for 30 days. Which approach best limits security risk?",
+    "options": [
+      "Grant the auditor full administrator access to ensure they can retrieve whatever records are needed",
+      "Give the auditor access through the CFO's existing login to avoid provisioning a separate account",
+      "Provision a time-limited account with read-only permissions scoped to the specific financial systems",
+      "Export all relevant records and send them via email to eliminate any direct system access entirely"
+    ],
+    "correctIndex": 2,
+    "explanation": "A time-limited, read-only account scoped to only the required systems applies three security principles simultaneously: least privilege (read-only, scoped access), accountability (individual account creates an audit trail), and time-bounding (automatic expiry after the audit period). Option A grants excessive privilege well beyond what the audit requires. Option B is a serious security failure — sharing executive credentials eliminates accountability and exposes the CFO's full access scope. Option D introduces data exfiltration risk by transferring records outside controlled systems via email.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Salesforce stores customer data encrypted with AES-256 at rest. A malicious insider with database administrator privileges exports the data to an external server. Which security control was most insufficient to prevent this breach?",
+    "options": [
+      "Encryption at rest, because AES-256 is outdated and vulnerable to attacks from privileged insiders",
+      "Access controls, because database administrator privileges should be restricted and activity monitored",
+      "Availability controls, because insider threats require redundant systems to maintain service continuity",
+      "Authentication, because the insider would need to bypass login controls to access the database system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Encryption at rest protects against unauthorized physical access to storage, but it cannot stop a user who is already authorized to access the data from exporting it — the gap is in access controls, specifically over-privileged administrator roles and insufficient monitoring of bulk data exports. Option A is incorrect; AES-256 remains the industry standard and is not the weak link when the attacker is an authorized user. Option C is irrelevant — availability controls address system uptime, not insider data theft. Option D is incorrect; the insider was already authenticated and authorized, so the authentication mechanism did not fail.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "After implementing MFA across all employee accounts, a company sees its successful phishing-based account compromises drop by 90% while the volume of phishing attempts stays constant. What does this result demonstrate?",
+    "options": [
+      "Phishing attacks are less frequent than reported because most employees recognize and discard them",
+      "MFA is unnecessary for employees below management level since they are rarely targeted by phishing",
+      "The 10% remaining compromises indicate MFA is not effective and a replacement solution is needed",
+      "MFA significantly reduces the impact of credential theft because stolen passwords alone cannot grant access"
+    ],
+    "correctIndex": 3,
+    "explanation": "A 90% reduction in successful compromises while phishing volume holds constant proves that MFA breaks the attack chain — a stolen password alone is insufficient to gain access without the second factor. Option A misreads the data; attack volume is unchanged, so phishing frequency is not the reason for fewer successes. Option B introduces an unsubstantiated tier-based MFA policy that contradicts the evidence of broad effectiveness. Option C inverts the conclusion; a 90% reduction is a strong positive result, and the remaining 10% represents sophisticated attacks (e.g., real-time adversary-in-the-middle bypasses), not a fundamental MFA failure.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup's security policy states it will protect customer data confidentiality by maintaining daily backups of all customer records in a separate data center. What is the fundamental problem with this security reasoning?",
+    "options": [
+      "Daily backups violate compliance requirements; regulations require near-continuous backup for customer data",
+      "Backups in a separate data center are still exposed to the same network-based attacks as the primary system",
+      "Backups protect availability and disaster recovery, not confidentiality — they do not prevent unauthorized access",
+      "Storing data in a second data center violates data residency laws requiring data in a single physical location"
+    ],
+    "correctIndex": 2,
+    "explanation": "Backups address availability and recovery — they ensure data can be restored after loss or corruption. They do not prevent unauthorized parties from reading the original data, which is the confidentiality goal. The startup has confused two distinct CIA triad components. Option A invents a specific backup frequency regulation that does not exist broadly. Option B is technically true for some attack types but is not the core logical flaw in the policy's stated reasoning. Option D is a real legal consideration in some jurisdictions but is not the primary error in the stated security logic.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

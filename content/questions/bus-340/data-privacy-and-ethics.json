@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does 'informed consent' mean in the context of personal data collection?",
+    "options": [
+      "Users are notified that their data may be disclosed to law enforcement when legally required",
+      "Users understand what data is collected and why, and can genuinely choose to agree or refuse",
+      "Users receive a legally complete privacy policy document before creating an account on the platform",
+      "Users are alerted within 72 hours whenever any third party accesses their stored personal data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Informed consent requires that individuals understand what they are agreeing to — the type of data collected, its purpose, and how it will be used — and that their agreement is genuinely voluntary rather than coerced or buried in fine print. Option A describes a narrow legal disclosure requirement for law enforcement requests, not informed consent at the point of collection. Option C describes a privacy policy delivery mechanism, but a dense legal document most users don't read does not constitute meaningful informed consent. Option D describes a breach or access notification requirement found in GDPR, not the consent standard at collection time.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the principle of data minimization?",
+    "options": [
+      "Organizations should retain data for the minimum time required by applicable regulatory frameworks",
+      "Organizations should collect only publicly available data and avoid storing any private user information",
+      "Organizations should limit the number of employees who have access to sensitive data storage systems",
+      "Organizations should collect only the data that is necessary for the specific purpose it was gathered for"
+    ],
+    "correctIndex": 3,
+    "explanation": "Data minimization holds that collection should be limited to what is actually needed for a stated purpose — collecting more than necessary increases privacy risk without business justification. Option A describes data retention limits, which is a related but distinct privacy principle called storage limitation. Option B mischaracterizes minimization as a restriction on data types rather than a proportionality requirement for collection. Option C describes access control — limiting who can view data — which is a security principle rather than a data collection principle.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is algorithmic bias in an AI or data-driven system?",
+    "options": [
+      "When a model produces systematically unfair outcomes for certain groups due to biased training data or design",
+      "When a model runs more slowly for certain user groups due to hardware optimization differences",
+      "When a model produces inaccurate predictions because it was trained on an insufficiently large dataset",
+      "When a model is intentionally designed to favor a company's own products in search or recommendation results"
+    ],
+    "correctIndex": 0,
+    "explanation": "Algorithmic bias occurs when a model's outputs systematically disadvantage or misrepresent certain demographic or social groups — often because training data reflects historical inequities or because the objective function wasn't designed with fairness in mind. Option B describes a performance optimization issue, not bias in the social fairness sense. Option C describes underfitting or poor generalization, which is a model quality problem but not algorithmic bias. Option D describes intentional anti-competitive design (self-preferencing), which is a different ethical problem rather than bias arising from training data or model design.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does surveillance capitalism differ from standard business data analytics?",
+    "options": [
+      "Standard analytics uses structured data; surveillance capitalism relies solely on unstructured behavioral data",
+      "Surveillance capitalism is fully regulated in most countries; standard analytics operates without legal constraints",
+      "Surveillance capitalism monetizes personal behavioral data as a core business product; standard analytics uses data to improve operations",
+      "Standard analytics requires explicit user consent; surveillance capitalism collects data with no notice to users"
+    ],
+    "correctIndex": 2,
+    "explanation": "Surveillance capitalism describes a business model where detailed behavioral data about individuals is the core commodity — collected, analyzed, and used to predict and influence behavior for profit, as described in Shoshana Zuboff's research. Standard data analytics uses data to improve internal operations or products rather than treating individuals' behavioral profiles as the product itself. Option A invents a data structure distinction that doesn't define the real difference. Option B is inaccurate — surveillance capitalism practices face contested regulation globally, and standard analytics is also subject to privacy laws. Option D overstates the consent distinction; surveillance capitalism typically does obtain nominal consent through extensive terms of service.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Facebook collects users' location data, message content, browsing history outside the platform, and facial recognition data from photos — far beyond what is needed to operate a social network. Which data privacy principle does this most directly violate?",
+    "options": [
+      "Data integrity, because collecting excess data increases the risk of records becoming inaccurate over time",
+      "Data minimization, because organizations should collect only data necessary for the stated service purpose",
+      "Purpose limitation, because Facebook uses each data type exclusively for the function it was collected for",
+      "Data portability, because users cannot easily download and delete the full set of data Facebook has collected"
+    ],
+    "correctIndex": 1,
+    "explanation": "Collecting location, messages, external browsing history, and biometrics well beyond what a social networking function requires is a textbook data minimization violation — the collection is disproportionate to the stated purpose. Option A confuses minimization with data quality; excess collection doesn't inherently corrupt records. Option C states the opposite of the actual issue: Facebook uses data far beyond the functions each piece was collected for, which is a purpose limitation problem, but the question specifically asks about the quantity and breadth of collection. Option D describes portability rights, which address users' ability to access their data, not the excess collection itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's hiring algorithm, trained on ten years of historical hiring decisions, was found to systematically downgrade resumes from women because the training data reflected male-dominated historical hiring patterns. What type of ethical problem does this represent?",
+    "options": [
+      "Data minimization violation, because Amazon collected more candidate information than the hiring process required",
+      "Privacy breach, because Amazon processed candidate data without obtaining explicit informed consent first",
+      "Purpose limitation violation, because the algorithm applied past hiring data to a new unintended application",
+      "Algorithmic bias, because historical discrimination in training data caused the model to perpetuate unfair outcomes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Amazon's case is a landmark example of algorithmic bias — the training data encoded historical discrimination (fewer women hired in past decades), so the model learned to treat female-associated features as negative signals, amplifying rather than correcting past inequity. Option A is not the primary ethical problem; using employment history data for a hiring model is standard and proportionate. Option B is a separate concern that isn't the focus of this specific issue. Option C is incorrect; using historical hiring data to train a hiring tool is the intended application of that data, not a purpose limitation violation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does opt-in consent differ from opt-out consent in data collection practices?",
+    "options": [
+      "Opt-in requires users to actively agree before data is collected; opt-out assumes consent unless users decline",
+      "Opt-in applies to marketing emails; opt-out applies to third-party data sharing in most privacy frameworks",
+      "Opt-in covers sensitive data categories; opt-out is used for non-sensitive data in all major privacy laws",
+      "Opt-in gives users stronger deletion rights; opt-out only restricts the original collecting organization"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critical difference is the default — opt-in means no data collection occurs until the user takes a positive affirmative action, while opt-out means collection proceeds by default unless the user explicitly declines. Opt-in provides stronger privacy protection because it requires affirmative rather than passive consent. Option B invents a domain-specific assignment for each model that does not reflect how consent frameworks are actually structured. Option C is partially related to GDPR's treatment of sensitive data but misrepresents how opt-in and opt-out apply across privacy laws. Option D describes deletion rights (right to erasure), which are separate from the consent mechanism itself.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's loan approval algorithm approves 80% of applications from high-income zip codes but only 45% from lower-income zip codes with otherwise similar credit profiles. What is the most ethically significant concern?",
+    "options": [
+      "The algorithm is inefficient because it processes applications from different zip codes at different speeds",
+      "Using zip codes violates data minimization since location is not relevant to measuring individual credit risk",
+      "Zip code may serve as a proxy for race or socioeconomic status, producing discriminatory lending outcomes",
+      "The approval rate gap indicates the algorithm is overfitting to zip code rather than generalizing across all applicants"
+    ],
+    "correctIndex": 2,
+    "explanation": "In the United States, zip code correlates heavily with race and socioeconomic status due to historical residential segregation — using it as a loan feature can constitute illegal disparate impact discrimination under the Equal Credit Opportunity Act, even without explicit racial intent in the model's design. Option A is not an ethical concern; processing speed differences are a performance issue, not a fairness one. Option B misapplies data minimization; zip code may be legitimately relevant to economic risk factors, but its use must be evaluated for discriminatory impact. Option D describes a machine learning quality problem (overfitting) rather than the ethical discrimination concern raised by the disparate approval rates.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Google's Privacy Sandbox initiative proposes replacing third-party cookies with on-device processing that creates anonymized interest cohorts rather than transmitting individual user profiles to advertisers. Which data privacy principles does this approach attempt to address?",
+    "options": [
+      "Data breach notification and encryption at rest, reducing harm if Google's advertising servers are compromised",
+      "Data minimization and privacy by design, limiting individual data exposure while preserving advertising functionality",
+      "Purpose limitation and data portability, restricting data use to advertising and giving users export rights",
+      "Informed consent and opt-out rights, requiring users to approve each individual advertiser's data access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Processing data on-device and sharing only anonymized cohort-level signals embodies data minimization (less individual-level data transmitted) and privacy by design (building privacy protection into the architecture rather than adding it afterward). Option A addresses security principles — encryption and breach notification — which are not the design goals Privacy Sandbox is addressing. Option C is partially relevant, but portability is about user data export rights rather than on-device processing architecture. Option D is incorrect; Privacy Sandbox is a technical architecture change, not a consent mechanism that requires per-advertiser approval from users.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's data ethics policy states: 'Our AI hiring tool is unbiased because it does not consider race, gender, or age as input variables.' What is the critical flaw in this reasoning?",
+    "options": [
+      "Excluding demographic variables from AI is prohibited by employment law, which requires demographic representation",
+      "Removing demographic variables reduces model accuracy and increases the hiring tool's overall legal exposure",
+      "The policy should also exclude education and work experience data to prevent any form of demographic correlation",
+      "Excluding protected attributes does not prevent bias if other input variables act as proxies for those demographics"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is the proxy variable problem — variables like zip code, college name, or graduation year can correlate strongly with race, gender, or socioeconomic status, so excluding explicit demographic labels from the model does not guarantee unbiased outcomes. Option A is false; removing sensitive demographic variables from AI systems is generally encouraged under fairness frameworks, not prohibited. Option B invents a legal exposure claim with no grounding in employment or AI regulation. Option C takes the exclusion logic to an absurd extreme that would eliminate all substantive inputs and make the hiring model nonfunctional.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "UnitedHealth Group wants to use patient prescription history, geographic data, and socioeconomic indicators to train a model that flags patients at risk of opioid addiction before a prescription is written. What is the primary ethical tension in this proposal?",
+    "options": [
+      "Predictive models may stigmatize individuals as high-risk before any harmful behavior occurs, affecting their care",
+      "Using prescription history violates data minimization because only current prescriptions are needed for treatment",
+      "Training a model on geographic data violates patients' right to informed consent for data collection",
+      "Socioeconomic indicators are not permitted inputs under HIPAA, making the model legally nonfunctional"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predictive risk models in healthcare create a pre-emptive labeling problem — flagging patients as potential future addicts before any behavior occurs can lead to under-treatment of legitimate pain conditions, stigma, and differential care quality for individuals who may never develop addiction. Option B misapplies data minimization; using existing prescription history for a health-improvement purpose is proportionate and not excess collection. Option C conflates using data for model training with the consent obligation at original collection time — consent frameworks govern the collection decision, not all downstream analytical uses of legitimately held clinical data. Option D is incorrect; HIPAA does not specifically prohibit socioeconomic inputs in clinical models used for patient care improvement.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does the EU's GDPR approach to data consent differ from the approach common in US data privacy law?",
+    "options": [
+      "GDPR requires companies to destroy all personal data after 30 days; US law allows indefinite data retention",
+      "GDPR applies only to European companies operating within EU member states; US companies face no GDPR obligations",
+      "GDPR requires explicit, informed, freely given consent before collection; US law generally uses an opt-out model",
+      "GDPR enforces data minimization for sensitive health data only; US law applies minimization across all data types"
+    ],
+    "correctIndex": 2,
+    "explanation": "GDPR establishes opt-in as the baseline — data processing requires a lawful basis, and consent (where used) must be specific, informed, and freely given. US privacy law typically allows collection unless users opt out (for example, CCPA's opt-out of sale right). Option A is false; GDPR sets no 30-day destruction rule and allows retention for as long as a legitimate purpose exists. Option B is a common misconception; GDPR applies to any organization processing EU residents' data regardless of where the company is incorporated or headquartered. Option D is incorrect; GDPR's minimization and other principles apply to all personal data categories, not only sensitive health information.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail analytics firm sells a dataset of shoppers' purchase histories, financial behaviors, and location patterns to a political campaign that uses the data to target voters with polarizing content. What is the primary responsible data use concern?",
+    "options": [
+      "The firm violated data minimization by collecting location and financial data that retail transactions do not require",
+      "The data was used for a purpose far outside what shoppers could reasonably have expected at the time of collection",
+      "The political campaign violated informed consent by not notifying shoppers before using their purchase data",
+      "Selling behavioral data to any third party violates GDPR in all circumstances regardless of consent provisions"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a purpose limitation and contextual integrity violation — shoppers shared purchase data in a retail transactional context, not to have their financial and behavioral profiles weaponized for political targeting. Using data in ways incompatible with the context and reasonable expectations of collection is a core responsible data use failure. Option A may be a contributing issue but is not the primary ethical problem with this specific use of the data. Option C misidentifies who bears the consent obligation — it is the collecting firm, not the political campaign, that held the consent relationship with shoppers. Option D is false; GDPR allows data transfers to third parties under specific lawful bases, including legitimate interests and explicit consent.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A facial recognition system has a 35% error rate for identifying Black women and a 1% error rate for white men. The vendor claims the system is 'highly accurate' with a 2% aggregate error rate. What does this result reveal?",
+    "options": [
+      "The 2% aggregate confirms the system is functional; the 35% subgroup error reflects a correctable data gap",
+      "The accuracy gap proves that facial recognition technology cannot reliably identify women in any context",
+      "A 35% subgroup error rate is acceptable in law enforcement when aggregate accuracy exceeds 95% overall",
+      "Aggregate accuracy metrics can mask severe performance disparities across subgroups, creating discriminatory risk"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is a case where aggregate metrics hide demographic disparities — the dominant group (white men) is well-represented in training data, so overall accuracy looks strong while a minority subgroup (Black women) faces dramatically worse outcomes. Deploying a law enforcement tool with a 35% misidentification rate for one group would produce false identifications at highly disproportionate rates. Option A acknowledges the gap but frames it as merely a fixable data issue, understating the active discriminatory harm of deploying the system now. Option B overgeneralizes to all women from one specific subgroup finding. Option C invents an acceptability threshold for subgroup error rates in law enforcement that has no basis in policy or ethics frameworks.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's privacy policy states: 'We anonymize all user data before sharing with third parties, so sharing presents no privacy risk.' A researcher later demonstrates that combining three shared data fields re-identifies 87% of users. What privacy concept does this scenario expose?",
+    "options": [
+      "Data breach — the re-identification constitutes unauthorized disclosure that must be reported to regulators",
+      "Purpose limitation — the shared data was used for research, which was not the original stated collection purpose",
+      "Re-identification risk — anonymization is not always irreversible when combined with external available datasets",
+      "Consent failure — explicit opt-in permission should have been obtained before any data fields were shared"
+    ],
+    "correctIndex": 2,
+    "explanation": "This scenario illustrates the re-identification problem in privacy: data that appears anonymized in isolation can often be re-identified when combined with other publicly available or purchasable datasets — a phenomenon documented extensively in privacy research by Latanya Sweeney and others. The company's claim of zero risk through anonymization was overconfident. Option A is technically debatable; re-identification by an external researcher using shared data is not automatically a reportable breach under all regulatory definitions. Option B makes the research use incidental to the core re-identification finding — the problem exists regardless of who did the combining. Option D may be a sound policy recommendation but is not the specific privacy concept the re-identification finding exposes.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

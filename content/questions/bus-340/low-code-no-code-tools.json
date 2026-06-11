@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is a low-code development platform?",
+    "options": [
+      "A programming language that requires fewer lines of code than traditional languages such as Java or Python",
+      "A visual development environment that accelerates application building through pre-built components, reducing manual coding required",
+      "A marketplace where businesses purchase pre-built software applications at a lower cost than custom development",
+      "A development framework that restricts application features to reduce the technical complexity of the codebase"
+    ],
+    "correctIndex": 1,
+    "explanation": "A low-code platform provides a visual, drag-and-drop environment with pre-built components and logic blocks so developers and technical business users can build applications faster with less hand-written code. Option A confuses the concept with a programming language syntax choice. Options C and D describe software procurement and architectural constraints, neither of which captures the defining feature of a low-code platform: visual, component-driven development.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does a no-code platform differ most fundamentally from a low-code platform?",
+    "options": [
+      "No-code platforms are free to use, while low-code platforms require a paid business subscription for most features",
+      "No-code platforms target enterprise departments, while low-code platforms are designed for individual consumers",
+      "No-code platforms require no programming at all and target non-technical users, while low-code still requires some coding for complex logic",
+      "No-code platforms only produce static web content, while low-code platforms support full enterprise application development"
+    ],
+    "correctIndex": 2,
+    "explanation": "The defining difference is the target user: no-code platforms are built entirely around visual configuration with no code required, making them accessible to non-technical business users. Low-code platforms reduce but do not eliminate coding — developers use them to build faster, but some custom logic or integration work may still require scripting. Options A, B, and D all contain false generalizations about pricing, target market, and capability that do not hold across the market.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing manager uses Zapier to automatically send a follow-up email when a deal closes in Salesforce and log the survey response in a Google Sheet — without writing any code. What type of tool is Zapier?",
+    "options": [
+      "A low-code platform, since the manager is building a custom integration connecting two enterprise software systems",
+      "An API management platform, since Zapier internally calls the Salesforce and Google APIs to transfer data",
+      "A business intelligence tool, since the workflow captures customer response data and stores it for future analysis",
+      "A no-code automation tool, since the entire workflow is configured through a visual interface with no programming"
+    ],
+    "correctIndex": 3,
+    "explanation": "Zapier is a no-code automation tool — it provides a visual workflow builder where users connect triggers and actions across apps with no code required. Option A is inaccurate because low-code still implies some coding; Zapier requires none. Option B describes what Zapier does under the hood technically, but from the user's perspective they are configuring automation visually, not managing APIs. Option C mischaracterizes a workflow automation tool as a business intelligence product.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the 'democratization of software development' enabled by low-code and no-code tools?",
+    "options": [
+      "Non-technical business users gain the ability to build functional applications and automations without depending on scarce developer resources",
+      "Software development becomes free to use, making enterprise-grade applications accessible to organizations without development budgets",
+      "Open-source software replaces commercial tools, democratizing access to enterprise capabilities across all company sizes",
+      "Large technology companies open their internal tools as public APIs, allowing anyone to build products on their platforms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Democratization in this context means expanding who can build software — operations managers, HR analysts, and marketing teams can now create working applications and automations without waiting for a developer. Options B and C describe cost and licensing dynamics that are separate from the democratization concept. Option D describes platform APIs and developer ecosystems, which is related but not what democratization of software building means.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A sales operations manager uses Salesforce Flow to automatically assign inbound leads by territory and product line without filing an IT request. What does this scenario most directly illustrate?",
+    "options": [
+      "The tool has eliminated the need for Salesforce administrators since business users can now maintain CRM without technical help",
+      "IT departments are no longer necessary in organizations that adopt Salesforce for their primary operational workflows",
+      "Low-code tools allow business users to solve operational problems directly, reducing the IT development backlog and accelerating deployment",
+      "Flow automation is AI-powered and configures itself based on the business rules already stored in the Salesforce CRM"
+    ],
+    "correctIndex": 2,
+    "explanation": "The scenario illustrates the primary value proposition of low-code tools for business users: the person who owns the problem — the sales ops manager — can now solve it directly without waiting for IT to prioritize the work. This compresses the feedback cycle between business need and deployed solution. Option A overstates the consequence; Salesforce administrators are still needed for complex configuration, governance, and security. Option D is inaccurate — Salesforce Flow is a user-configured automation tool, not an AI that configures itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company needs to build a customer portal with complex custom business logic, deep third-party security integrations, and high transaction volume. Why might a no-code platform be insufficient?",
+    "options": [
+      "No-code platforms do not support internet-connected applications, restricting them to internal workflow tools",
+      "No-code platforms are designed for prototyping only and cannot be deployed to production environments",
+      "No-code platforms charge per-user fees that make them cost-prohibitive for high-volume transactional applications",
+      "No-code platforms limit customization to their pre-built component set, making them unsuitable for highly complex or specialized requirements"
+    ],
+    "correctIndex": 3,
+    "explanation": "No-code platforms work best within the bounds of their pre-built components and configuration options. When requirements demand custom authentication flows, complex conditional logic, performance tuning at scale, or deep integration with proprietary security systems, the platform's constraints become blockers. Option A is factually wrong — most modern no-code platforms build internet-connected applications by default. Option B is also wrong; many no-code tools run in production for significant business workflows across large organizations.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An IT director tells the CIO: 'Allowing business users to build apps in no-code tools is just shadow IT — it creates security and governance risks we cannot control.' What is the most accurate assessment of this concern?",
+    "options": [
+      "The IT director is fully correct — no-code tools are inherently insecure and should be prohibited in all enterprise settings",
+      "The concern is partially valid — ungoverned no-code usage can create real risks, but the solution is governance policies rather than banning the tools",
+      "The concern is unfounded — enterprise no-code platforms are built to security standards and eliminate all shadow IT risk by design",
+      "The IT director is confusing no-code with consumer apps — enterprise platforms are fully vendor-managed and carry no security risk"
+    ],
+    "correctIndex": 1,
+    "explanation": "The IT director's instinct is right that ungoverned no-code usage creates real risks: unreviewed data connections, poorly secured applications handling sensitive data, and business-critical workflows that IT cannot maintain or recover. But prohibition is the wrong response — the tools provide genuine business value. The answer is governance: approved platforms, data classification rules about what business users can connect, and a review process for applications that touch sensitive data. Options C and D both dismiss real risks that enterprise security teams legitimately encounter.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An HR team builds an employee onboarding tracker in Airtable connected to Slack notifications via Zapier. Six months later, 200 employees rely on it daily. What risk does this scaling scenario most commonly reveal?",
+    "options": [
+      "As no-code applications scale beyond their original scope, they accumulate undocumented logic and maintenance challenges the original builder cannot manage",
+      "Airtable and Zapier are not enterprise-grade platforms and the company will be required to replace them with IT-approved software",
+      "Connecting two separate no-code tools in one workflow violates most enterprise software vendor terms of service",
+      "Scaling no-code tools past 50 users triggers pricing tiers that make them more expensive than custom-built alternatives"
+    ],
+    "correctIndex": 0,
+    "explanation": "The most common no-code scaling failure is technical debt accumulation: the tool was built quickly to solve one problem, and as more people depend on it, the original builder adds features without documentation, testing, or change management. When that person leaves or the system breaks, there is no engineer who can diagnose or fix it. This 'shadow system' problem is why governance of no-code tools matters. Options B, C, and D all contain false factual premises about platform eligibility, vendor agreements, and pricing thresholds.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank's compliance team wants to automate suspicious transaction flagging using a no-code workflow tool. The IT team pushes back. Which argument most specifically justifies IT's concern in this context?",
+    "options": [
+      "No-code tools cannot connect to banking databases because financial institutions are prohibited from using third-party software",
+      "Compliance workflows involving financial transactions require audit trails, version control, and security testing that most no-code platforms do not provide at the required regulatory standard",
+      "No-code tools are designed for HR and marketing use cases and cannot process the data volumes involved in banking transactions",
+      "The compliance team would be bypassing the procurement process, which requires all new software to pass a vendor security review"
+    ],
+    "correctIndex": 1,
+    "explanation": "Financial compliance systems face strict requirements: every decision must be logged immutably for auditors, workflow logic must be version-controlled so changes can be reviewed, and the system must pass penetration testing and security certification. Most consumer-grade or mid-market no-code platforms are not built to meet these standards out of the box. Option C is a false generalization about no-code tool capabilities. Option D describes a process concern that is real but secondary — the underlying issue is whether the platform meets regulatory technical requirements.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's IT team finds that 35% of business data now flows through no-code applications built by business departments over two years, but none are documented, tested, or included in the disaster recovery plan. What does this most directly indicate?",
+    "options": [
+      "Business users have demonstrated self-sufficiency, suggesting the IT department should be reduced in scope and headcount",
+      "No-code tools have failed in this environment because undocumented applications indicate the tools were used incorrectly",
+      "No-code adoption has outpaced governance — the company faces real data continuity and recovery risk from workflows outside formal IT architecture",
+      "The company should immediately shut down all no-code applications and rebuild them as formally developed IT systems"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a governance failure, not a technology failure: no-code tools successfully enabled business users to build useful applications, but the absence of documentation, testing, and disaster recovery coverage means the company now has critical business processes it cannot restore after a failure. The risk is real: if Airtable, Zapier, or Power Automate goes down, workflows dependent on them may not be recoverable. Option A draws an unsupported conclusion. Option D overcorrects — shutting down working applications would eliminate the business value they provide.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup must choose between hiring a developer to build a customer feedback form and dashboard, or using Typeform for forms and Google Looker Studio for dashboards. When is the no-code stack the stronger choice?",
+    "options": [
+      "When the startup needs a highly customized data model that standard form and dashboard tools cannot represent",
+      "When the startup expects millions of form submissions per month from day one of launch",
+      "When the technical team wants full codebase control for future customization and integration at scale",
+      "When speed to deployment and cost matter more than custom functionality, and the requirements fit the tools' built-in capabilities"
+    ],
+    "correctIndex": 3,
+    "explanation": "The no-code stack wins when the startup needs something working now at low cost and the requirements are well within what off-the-shelf tools handle well — collecting structured feedback and visualizing it. Typeform and Looker Studio can be live the same day with no development cost. Options A, B, and C all describe scenarios where the no-code stack's limitations become blockers: highly custom data models, extreme scale, and the need for deep code-level control all push toward custom development.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A CTO says: 'We have adopted a no-code platform company-wide, so we no longer need to hire software developers.' What is the most significant flaw in this claim?",
+    "options": [
+      "No-code tools address routine business workflows but cannot replace developers for complex architecture, security, integrations, and performance engineering",
+      "No-code platforms are licensed per developer seat, so eliminating developers would actually increase overall software licensing costs",
+      "Most enterprise no-code platforms require a certified developer as system administrator, making developer headcount reduction impossible",
+      "Regulators in most industries require companies to employ licensed software engineers for any customer-facing digital product"
+    ],
+    "correctIndex": 0,
+    "explanation": "No-code tools genuinely reduce the demand for development resources on routine internal tooling, but they do not replace engineers for the work that requires deep expertise: designing distributed systems, implementing security controls, building and maintaining APIs, optimizing database performance, and managing infrastructure. The CTO is overgeneralizing from a category of tasks where no-code excels to all software work, which is a different scope. Options B, C, and D all contain false premises about licensing, certification requirements, and regulation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft Power Platform is widely used across Fortune 500 companies to let finance, operations, and HR teams build dashboards, automate approvals, and create internal tools without IT involvement. What strategic advantage does this reflect?",
+    "options": [
+      "Power Platform replaces Microsoft's own enterprise software products, significantly reducing Microsoft's internal development overhead",
+      "Distributing app-building capability to domain experts who understand the business problem accelerates delivery of solutions more closely aligned with actual operational needs",
+      "Finance and HR analysts using Power Platform consistently produce higher-quality applications than professional developers because they understand the requirements",
+      "Power Platform eliminates integration costs by replacing all third-party enterprise software with Microsoft-native applications"
+    ],
+    "correctIndex": 1,
+    "explanation": "The strategic advantage is shortened time-to-solution and better requirement fidelity: a finance analyst who builds their own reconciliation tool designs exactly what they need without translating requirements through an IT team that may misunderstand the business context. This is the core promise of democratized development — domain experts become capable of directly solving their own problems. Option C overstates the quality claim; domain expertise improves requirement clarity, but technical quality still benefits from engineering discipline. Option D is a significant overstatement of what Power Platform replaces.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A product manager must choose between Webflow (a no-code website builder) and a development team to build a marketing site. Which criterion most directly favors Webflow?",
+    "options": [
+      "The site requires complex server-side personalization that adjusts content based on authenticated user session data",
+      "The team needs fine-grained control over caching behavior and page load performance for an audience of millions",
+      "The goal is launching quickly with a professional design, and the requirements fit within Webflow's existing component library",
+      "Brand guidelines require custom animation behavior that must be coded specifically for each target browser environment"
+    ],
+    "correctIndex": 2,
+    "explanation": "Webflow's advantage is speed and design quality within its component model: a marketing site that uses standard sections — hero, features, pricing, contact — is exactly the use case Webflow was built for and can be launched in days rather than weeks. Options A, B, and D all describe requirements that push past Webflow's built-in capabilities: server-side session logic, advanced performance engineering, and cross-browser custom animation code all require developer-level control that Webflow does not provide.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study shows companies using low-code/no-code platforms report 60% faster deployment of internal tools but 40% more unplanned rework than traditionally developed applications. What does this tradeoff most likely indicate?",
+    "options": [
+      "Low-code/no-code tools should be avoided since rework costs eliminate the time savings across most use cases",
+      "The 40% rework rate proves that business users cannot build reliable applications without mandatory developer oversight",
+      "The time savings apply only to initial deployment, while rework costs confirm these platforms outperform traditional development over the full lifecycle",
+      "Low-code/no-code accelerates initial delivery but may generate technical debt, and the right use case is where speed-to-value justifies accepting some rework"
+    ],
+    "correctIndex": 3,
+    "explanation": "The data shows a genuine tradeoff: faster shipping comes with higher rework rates, likely because quick-build no-code applications are not designed, tested, or architected with the rigor of traditional development. Neither side of the data invalidates the other — the right conclusion is that context determines fit. When a business needs a working internal tool this week and can iterate, no-code is the right call. When reliability and minimal rework are paramount, traditional development may be better. Option A overstates the negative. Option C inverts the correct interpretation of the lifecycle data.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

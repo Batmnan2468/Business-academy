@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does API stand for, and what is its primary function?",
+    "options": [
+      "Application Processing Interface — a system that routes data requests between a company's internal databases",
+      "Application Programming Interface — a defined set of protocols that allows different software systems to communicate",
+      "Automated Pipeline Integration — a scheduled tool that synchronizes data between enterprise systems in batches",
+      "Application Portal Interface — a portal through which external developers access a company's internal software tools"
+    ],
+    "correctIndex": 1,
+    "explanation": "API stands for Application Programming Interface — it defines the rules and methods by which one software system can request data or functionality from another. Options A, C, and D each describe specific integration mechanisms or tools, but none captures the definition: a standardized communication contract between software systems. Option C describes ETL/batch processes, which are one integration pattern, not the definition of an API.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the most accurate analogy for how an API works in a business context?",
+    "options": [
+      "A database — it stores the shared data that multiple applications need to access in a central location",
+      "A translator — it converts data from one format into another so that incompatible systems can exchange information",
+      "A waiter — it takes a request from one system, retrieves what is needed from another, and returns the result",
+      "A firewall — it controls which external systems are allowed to connect to a company's internal infrastructure"
+    ],
+    "correctIndex": 2,
+    "explanation": "The waiter analogy captures the request-response nature of APIs: a client system (the customer) sends a request through the API (the waiter) to a backend system (the kitchen), and the API returns the result without the client needing to know how the backend works internally. Option A describes a database, which stores data rather than mediating communication. Option B describes a data transformation layer, which is related but distinct from what an API fundamentally does.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a REST API in the context of enterprise system integration?",
+    "options": [
+      "A proprietary Microsoft standard for connecting Office 365 applications to on-premises enterprise databases",
+      "A protocol designed specifically for secure financial data transmission between banking institutions",
+      "A batch processing method that transfers records between systems during scheduled off-peak maintenance windows",
+      "A widely used architectural style for building web APIs that communicate over HTTP using standard web conventions"
+    ],
+    "correctIndex": 3,
+    "explanation": "REST (Representational State Transfer) is an architectural style — not a protocol or product — that defines how APIs should behave when built on top of HTTP. REST APIs are stateless, use standard HTTP methods (GET, POST, PUT, DELETE), and are the dominant design pattern for modern web and mobile integrations. Options A and B describe specific proprietary or industry-specific integration standards. Option C describes batch file-based integration, which is a different integration pattern entirely.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When a customer books a flight on Expedia and sees real-time prices from United, Delta, and Southwest simultaneously, which technology makes this possible?",
+    "options": [
+      "APIs — Expedia calls each airline's API to retrieve current pricing and seat availability in real time",
+      "A shared reservation database — all airlines and Expedia read and write to a common central data store",
+      "Web scraping — Expedia's servers scan airline websites and extract price data every few seconds automatically",
+      "EDI — standardized transaction messages are exchanged between Expedia and each airline on a fixed schedule"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expedia uses APIs exposed by each airline to query real-time flight inventory and pricing on demand when a user searches. This is the canonical example of third-party API consumption enabling a marketplace business model. Option B describes a scenario that airlines would never agree to for competitive reasons — their pricing systems are proprietary. Option D describes EDI, which transmits structured batch transactions and does not support real-time query/response interactions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Uber's app displays arrival estimates using Google Maps, processes payments through Stripe, and sends receipts via Twilio. What does this architecture illustrate about how modern companies build products?",
+    "options": [
+      "Uber built all three capabilities internally and now exposes them as APIs for other companies to consume",
+      "Uber relies on a single cloud platform that bundles mapping, payments, and messaging into one integrated service",
+      "Companies use third-party APIs to integrate best-in-class external services rather than building every capability from scratch",
+      "API integrations function reliably only when all service providers are hosted on the same cloud infrastructure"
+    ],
+    "correctIndex": 2,
+    "explanation": "Uber's architecture is a model of API-driven product development: rather than spending years building a payment processor, a mapping engine, and an SMS platform, Uber integrated proven third-party services via their APIs, allowing it to focus engineering effort on the core product. This pattern — assembling best-in-class services through APIs — is a fundamental characteristic of modern software architecture. Option A inverts the relationship; Uber is a consumer of these APIs, not a producer. Option D is factually wrong.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does an API differ most fundamentally from direct database integration between two enterprise systems?",
+    "options": [
+      "APIs are designed for real-time exchange, while database integrations are always executed as scheduled batch jobs",
+      "APIs function only over the public internet, while direct database integrations are restricted to internal networks",
+      "Direct database integrations provide stronger security guarantees than any API-based integration approach",
+      "APIs create a stable, versioned contract between systems, while direct database integration tightly couples systems to each other's internal data structure"
+    ],
+    "correctIndex": 3,
+    "explanation": "The defining difference is coupling: a direct database integration means System A knows the exact table structure of System B's database — if that structure changes, the integration breaks. An API provides an abstraction layer: System A only knows the API contract (the endpoints, parameters, and response format), not the underlying data model. This makes APIs far more maintainable as both systems evolve independently. Options A and B both contain false absolutes — both APIs and database integrations can be used for real-time or batch scenarios, on internal or public networks.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Salesforce offers an API that connects an ERP to CRM records so that a closed sales deal automatically creates an invoice in the ERP. What business benefit does this provide?",
+    "options": [
+      "It eliminates the need for a separate ERP by replicating all financial functions directly within Salesforce",
+      "It removes the manual handoff between sales and finance, reducing data entry errors and accelerating invoice creation",
+      "It allows Salesforce to serve as the company's primary database, replacing the ERP's storage of financial records",
+      "It enables the company to use Salesforce as its accounting system by extending financial transaction capabilities to the CRM"
+    ],
+    "correctIndex": 1,
+    "explanation": "The business value of this integration is eliminating the gap between systems that requires a human to manually re-enter deal data into the ERP after it closes in Salesforce. This reduces errors, removes delay, and frees salespeople and finance staff from repetitive data entry. Options A, C, and D all describe replacing the ERP or changing the data storage model — none of which is what the API integration does. The ERP and CRM remain separate; the API connects them.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A project manager says: 'APIs are just for developers — they have no relevance to business strategy or decisions.' What is the most significant flaw in this claim?",
+    "options": [
+      "API strategy shapes product capabilities, revenue models, and competitive positioning — making it a core business decision, not just a technical one",
+      "APIs have no technical complexity and can be built by business analysts without any developer involvement",
+      "APIs only connect internal systems and do not interact with external partners, so they carry no strategic implications",
+      "Business strategy is driven by financial performance data, so software interfaces have no bearing on strategic decisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "API decisions are deeply strategic: whether to open an API to third-party developers (like Stripe or Twilio did), which data to expose to partners, and which integrations to prioritize directly affect a company's product reach, partner ecosystem, and competitive differentiation. Stripe's entire revenue model is an API strategy. Option B is wrong — APIs require significant engineering expertise to design and maintain securely. Option C is wrong — APIs are central to external partner and customer integrations.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's Marketplace API lets third-party sellers automate product listings, inventory updates, and order fulfillment directly from their own systems. What strategic role does this API play for Amazon?",
+    "options": [
+      "It reduces Amazon's software development costs by outsourcing listing and fulfillment logic to third-party seller systems",
+      "It expands the Amazon platform by enabling a seller ecosystem — making it easier to sell at scale and increasing product variety for customers",
+      "It shifts all liability for product data accuracy and fulfillment failures from Amazon to the third-party sellers",
+      "It allows Amazon to monitor seller ERP systems in real time, giving Amazon competitive intelligence on seller inventory"
+    ],
+    "correctIndex": 1,
+    "explanation": "Amazon's Marketplace API is a platform strategy: by making it easy for sellers to integrate their own systems with Amazon, Amazon reduces friction for sellers, increasing the number and diversity of products available to shoppers. More products drives more customer traffic, which attracts more sellers — a classic platform flywheel. Option A misattributes the motivation; the API generates revenue and expands the catalog, which is far more valuable than development cost savings. Option D would be a privacy and legal violation, not a business model.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Shopify, Lyft, and many others integrate Stripe's payment API into their platforms. What does this adoption pattern most directly reveal about the strategic value of a well-designed API for the provider?",
+    "options": [
+      "It reveals that Stripe has eliminated payment processing competition because all major companies now depend on its infrastructure",
+      "It reveals that Stripe's customers are locked in and cannot switch to competitors since rebuilding payment flows would be prohibitive",
+      "It reveals that a well-designed API creates a revenue and distribution channel — each integration embeds Stripe deeper into a partner's product, driving transaction volume without additional sales effort",
+      "It reveals that Stripe's API is a security risk because multiple major platforms share the same integration points and vulnerability surface"
+    ],
+    "correctIndex": 2,
+    "explanation": "Every time a new company integrates Stripe's API, Stripe gains a new revenue stream and expands its market presence without deploying a sales team for that customer — the API does the distribution work. This is the flywheel of API-first businesses: great developer experience drives adoption, adoption drives transaction volume, and transaction volume drives revenue. Option A overstates — Stripe has significant competition from Adyen, Braintree, and others. Option B describes lock-in, which is real, but is not the primary strategic value the scenario reveals.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital integrates its HRIS, EHR, and billing system via APIs. When a nurse's certification expires in the HRIS, an alert automatically flags relevant claims in the billing system. What does this cross-system integration most directly demonstrate?",
+    "options": [
+      "It reduces the need for compliance officers since automated alerts replace the requirement for manual credential auditing",
+      "It allows the hospital to consolidate all employee and patient data into a single centralized database system",
+      "It improves the HRIS vendor's API quality by providing real-world integration testing across multiple enterprise systems",
+      "It creates automated compliance workflows across systems that would otherwise operate in silos, reducing regulatory risk without adding manual steps"
+    ],
+    "correctIndex": 3,
+    "explanation": "The integration's value is that a compliance-relevant event in one system (credential expiration in HRIS) automatically triggers a protective action in a completely different system (flagging claims in billing) — without any human needing to notice the connection and act on it. This is what cross-system API integration enables: real-time, automated business logic that spans organizational and technical boundaries. Option A overstates the reduction in human oversight; automated alerts supplement compliance functions, they don't replace them. Option B describes a data architecture decision, not the integration benefit.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup built its entire product on Twitter's free public API. The lead developer says: 'We have no integration risk since APIs never change.' What critical risk has the developer overlooked?",
+    "options": [
+      "API providers can change pricing, restrict access, or deprecate endpoints at any time — Twitter's 2023 decision to charge for API access is a direct example of this risk",
+      "Public APIs are inherently less reliable than private APIs because they are shared across thousands of developers simultaneously",
+      "Free public APIs lack encryption, making products built on them vulnerable to data interception by third parties",
+      "Building on a public API prevents a startup from raising venture capital since investors treat public API dependencies as disqualifying"
+    ],
+    "correctIndex": 0,
+    "explanation": "Twitter's 2023 decision to restrict its API and begin charging for access — previously free — left thousands of developers and businesses scrambling. APIs are not immutable contracts; providers can change pricing, deprecate endpoints, or shut down access entirely. Any product that depends on a third-party API for core functionality carries this platform risk. Options B, C, and D all contain false premises: public APIs can be highly reliable, do use encryption, and API dependencies are common in VC-backed startups.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs opened a developer API for its Marcus product, allowing fintech partners to embed Goldman savings and lending offerings inside their own apps. What strategic motivation most directly explains this approach?",
+    "options": [
+      "Goldman Sachs opened the API primarily to reduce its own software development costs by outsourcing the Marcus front end to fintech partners",
+      "The API lets Goldman Sachs distribute its financial products through partners' existing customer bases, reaching consumers it could not efficiently acquire directly",
+      "Providing an open developer API is a regulatory requirement for large banks under open banking provisions in the Dodd-Frank Act",
+      "Goldman Sachs opened the API to give regulators visibility into Marcus transactions, simplifying the compliance reporting process"
+    ],
+    "correctIndex": 1,
+    "explanation": "Goldman Sachs's consumer banking division faces a distribution challenge: it lacks the branch network and consumer brand recognition of retail banks. By opening an API that lets fintech apps embed Marcus products, Goldman gains distribution through partners who already have established consumer relationships — without having to acquire those customers through expensive direct marketing. Option A misidentifies the motivation; Goldman's goal is revenue and customer acquisition, not development cost reduction. Option C is factually incorrect; Dodd-Frank does not mandate open banking APIs in the U.S.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company must choose between custom point-to-point integrations for each system pair versus an integration platform (iPaaS) like MuleSoft as its system landscape grows. What is the strongest argument for the iPaaS approach?",
+    "options": [
+      "iPaaS tools eliminate the need for any developer involvement, making integration accessible to business analysts",
+      "Point-to-point integrations are harder to monitor than iPaaS workflows because the data path lacks centralized logging",
+      "As the number of systems grows, point-to-point integrations multiply in complexity exponentially, while iPaaS provides a single hub each system connects to once",
+      "Custom point-to-point integrations cannot support real-time data transfer, while iPaaS is designed specifically for sub-second synchronization"
+    ],
+    "correctIndex": 2,
+    "explanation": "The core argument for iPaaS is scalability of the integration architecture: with N systems, point-to-point integration can require up to N*(N-1)/2 separate connections — 45 integrations for 10 systems. iPaaS turns this into a hub model where each system connects once, and the platform manages routing, transformation, and monitoring centrally. Option A overstates the no-code aspect of iPaaS; complex integrations still require developer work. Option D is false — well-built point-to-point integrations can absolutely support real-time data transfer.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company exposes a real-time shipment tracking API and finds that 60% of API traffic comes from enterprise customers embedding the feed into their own supply chain dashboards rather than using the company's own app. What does this pattern most directly indicate?",
+    "options": [
+      "The company's own app is underperforming and should be redesigned to recapture the engagement currently happening through the API",
+      "The API has created a security vulnerability since enterprise customers have access to shipment data beyond what the company intended",
+      "The company is undercharging for API access since enterprise customers are extracting significant operational value without a proportionate fee",
+      "The API has become a product in itself — enterprise customers value embedded data over the native interface, representing a new distribution and partnership channel"
+    ],
+    "correctIndex": 3,
+    "explanation": "When the majority of value consumption happens through an API rather than a native product, it signals that the API is not just a technical interface — it is a distribution channel in its own right. Enterprise customers prefer the embedded data because it fits their existing workflows. This is an opportunity to formalize the API as a product: create developer documentation, pricing tiers, and support to grow that channel intentionally. Option A frames API usage as a failure of the native app, but both can succeed simultaneously. Option C may be a downstream business decision, but it doesn't describe what the pattern 'most directly indicates.'",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

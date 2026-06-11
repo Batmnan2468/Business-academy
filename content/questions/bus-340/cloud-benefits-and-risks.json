@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does 'elasticity' mean as a cloud computing benefit?",
+    "options": [
+      "The ability to migrate workloads from one cloud provider to another without rebuilding applications",
+      "The ability to automatically scale computing resources up or down in response to changing demand",
+      "The ability to recover from an outage by failing over to a geographically redundant data center",
+      "The ability to reduce per-unit costs as a company purchases more resources from the same provider"
+    ],
+    "correctIndex": 1,
+    "explanation": "Elasticity means the cloud can automatically provision more resources when demand spikes and release them when demand falls — you pay for what you use rather than over-provisioning for peak. Option A describes portability, a separate cloud property. Option C describes disaster recovery and failover capability. Option D describes volume pricing discounts, which is a cost benefit but not the definition of elasticity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which benefit best explains why companies prefer cloud's operating expense (OpEx) model over on-premises capital expense (CapEx) for hardware?",
+    "options": [
+      "OpEx cloud costs are tax-exempt, while CapEx hardware purchases must be depreciated over multiple years",
+      "Cloud vendors guarantee contractual zero-downtime under OpEx agreements, which on-premises hardware lacks",
+      "OpEx cloud spending scales with actual usage and avoids large upfront hardware investment that may be over- or under-sized",
+      "On-premises hardware total cost consistently exceeds equivalent cloud services across any five-year comparison period"
+    ],
+    "correctIndex": 2,
+    "explanation": "The OpEx advantage is flexibility and right-sizing: companies avoid committing capital to physical hardware that may sit underutilized or prove insufficient as the business grows. Cloud lets spending track actual consumption. Option A is factually wrong — cloud expenses are not tax-exempt. Option D is an overstatement; on-premises can be cheaper than cloud for stable, predictable, high-utilization workloads at sufficient scale.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is vendor lock-in in the context of cloud computing?",
+    "options": [
+      "A contract clause preventing a company from renegotiating cloud pricing during a multi-year committed spend agreement",
+      "A security restriction that prevents external developers from accessing a cloud provider's proprietary service APIs",
+      "A pricing structure where cloud vendors charge premium fees for workloads that exceed agreed capacity thresholds",
+      "The difficulty of migrating away from a cloud provider due to dependence on proprietary services, data formats, or architecture"
+    ],
+    "correctIndex": 3,
+    "explanation": "Vendor lock-in occurs when a company's deep reliance on a provider's proprietary tools — AWS Lambda, DynamoDB, Azure Active Directory — makes switching to a competitor prohibitively expensive or technically complex. Options A, B, and C each describe real cloud pricing and access concepts, but none of them captures the defining characteristic of lock-in: the migration cost and architectural dependency that makes leaving difficult.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the shared responsibility model for cloud security?",
+    "options": [
+      "The cloud provider secures the infrastructure layer, while the customer is responsible for its own data, identities, and application configuration",
+      "The cloud provider assumes full security responsibility for everything, including customer data and access management",
+      "The customer is solely responsible for all security since the provider only supplies physical hardware infrastructure",
+      "Security responsibilities are negotiated individually in the service level agreement between provider and each customer"
+    ],
+    "correctIndex": 0,
+    "explanation": "The shared responsibility model divides security: the cloud provider secures the physical data center, hardware, and foundational network (security 'of' the cloud), while the customer is responsible for how it configures and uses those services — including data encryption, identity management, and application-level security (security 'in' the cloud). Option B is wrong because no major cloud provider takes full responsibility for customer data security. Option C is wrong because the provider does secure the infrastructure layer.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon's retail site experiences a 10x traffic surge every Black Friday. What cloud benefit most directly allows Amazon to handle this without maintaining that peak capacity year-round?",
+    "options": [
+      "Geographic redundancy, which distributes traffic across multiple data centers to prevent any single point of failure",
+      "Vendor lock-in avoidance, which lets Amazon switch providers quickly if any single provider cannot handle peak load",
+      "Elasticity, which lets Amazon provision additional compute for peak demand and release it once traffic normalizes",
+      "The OpEx model, which makes it financially feasible to pay for additional capacity only during peak periods"
+    ],
+    "correctIndex": 2,
+    "explanation": "Elasticity is the cloud property that allows Amazon to rapidly scale compute capacity up for Black Friday traffic and scale it back down afterward, paying only for what was used. Option A describes redundancy for availability, which addresses a different problem than traffic spikes. Option D describes a billing model benefit, which is real but is downstream of the architectural capability — elasticity is what makes the OpEx savings possible.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A startup chooses Google Cloud over building its own data center. Which cost benefit most directly justifies this decision at the early stage of the business?",
+    "options": [
+      "Google Cloud eliminates all ongoing IT maintenance costs, while on-premises data centers require continuous hardware upgrades",
+      "Google Cloud guarantees a lower total cost of ownership over any five-year period compared to equivalent on-premises infrastructure",
+      "Choosing Google Cloud means the startup will not need to hire any IT staff, since Google handles all operations",
+      "The startup avoids large upfront capital investment and pays only for the resources it actually consumes as it grows"
+    ],
+    "correctIndex": 3,
+    "explanation": "For an early-stage startup, the most direct cloud benefit is avoiding the capital outlay of purchasing servers, networking gear, and data center space before knowing what scale they will actually reach. Pay-as-you-go pricing aligns cost with growth. Option A is an overstatement — cloud still requires IT staff to configure and secure the environment. Option B is a blanket generalization that is not true for all workloads and scale levels.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An IT director says: 'We moved to AWS, so our data is now more secure than it was on-premises.' What is the most significant flaw in this reasoning?",
+    "options": [
+      "AWS data centers are physically less secure than most enterprise on-premises facilities due to their multi-tenant design",
+      "Cloud migration shifts some security responsibilities to AWS but the company still owns decisions about data access, encryption, and identity management",
+      "AWS security certifications apply only to enterprise-tier accounts, not to standard commercial cloud customers",
+      "On-premises infrastructure is universally more secure than cloud because the company retains full physical control"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moving to AWS means AWS secures the physical and network infrastructure, but the shared responsibility model leaves the customer responsible for configuring access controls, encrypting sensitive data, managing identity, and securing applications. If those responsibilities are handled poorly, cloud is no safer than on-premises. Option A is wrong — AWS invests in physical security that most enterprises cannot match. Option D is a blanket assertion that ignores the many organizations that have stronger security postures in cloud than they did on-premises.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company builds its entire product on AWS Lambda, DynamoDB, and API Gateway — all AWS-proprietary services. A new CTO raises concerns about this architecture. What risk is she most likely identifying?",
+    "options": [
+      "Deep reliance on AWS-proprietary services creates vendor lock-in — migrating to another provider would require re-architecting the entire application",
+      "AWS Lambda and DynamoDB are not production-grade services and are intended for proof-of-concept use cases",
+      "Using managed cloud services exposes the company's source code to AWS engineers who maintain the underlying infrastructure",
+      "Proprietary managed services cost significantly more than equivalent open-source alternatives on standard virtual machines"
+    ],
+    "correctIndex": 0,
+    "explanation": "When every layer of an application uses AWS-proprietary services — serverless functions, a proprietary NoSQL database, a managed API gateway — the switching cost to any other cloud provider becomes enormous. The application cannot simply be redeployed on Azure or GCP without significant re-architecture. This is textbook vendor lock-in. Option B is factually wrong — all three services are widely used in production at massive scale. Option C misrepresents how managed services work; AWS engineers do not have access to customer code.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's SLA with its cloud provider guarantees 99.9% uptime. The company's finance system processes $50M in transactions per day. What does this SLA most directly imply for risk assessment?",
+    "options": [
+      "The company can expect no meaningful unplanned outages because 99.9% uptime represents a near-perfect operational standard",
+      "99.9% uptime still permits roughly 8.7 hours of downtime annually — at $50M in daily transactions, each outage hour carries substantial financial exposure",
+      "The $50M daily transaction volume qualifies the company for an enhanced SLA with guaranteed 100% uptime from most major providers",
+      "A 99.9% SLA makes the cloud provider financially liable for all revenue lost during any outage exceeding the permitted threshold"
+    ],
+    "correctIndex": 1,
+    "explanation": "99.9% uptime sounds reassuring but translates to approximately 8.76 hours of allowed downtime per year. At $50M in daily transactions — roughly $2M per hour — even a fraction of that downtime carries millions in potential exposure. The SLA defines the threshold, not a financial guarantee of full recovery. Option A misinterprets 99.9% as effectively perfect. Option D is wrong — SLAs typically provide service credits (small fee refunds), not full revenue indemnification.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Zoom experienced an outage in 2021 that made the platform unavailable for millions of enterprise users who relied on it for critical business meetings. Which cloud risk and mitigation does this illustrate?",
+    "options": [
+      "Vendor lock-in risk — Zoom's architecture made it impossible for customers to switch to Webex or Teams during the outage",
+      "Data security risk — the outage exposed customer communications to unauthorized access by external parties",
+      "Single-vendor dependency and downtime risk — relying on one platform for critical operations creates disruption exposure, suggesting business continuity planning",
+      "Scalability risk — Zoom failed because its infrastructure was not elastic enough to handle simultaneous user demand"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Zoom outage illustrates the risk of critical single-vendor dependency: when that one vendor goes down, business operations halt. The mitigation is business continuity planning — identifying fallback communication channels, negotiating multi-vendor arrangements, or defining acceptable downtime thresholds. Option A describes lock-in, which is about switching costs over time, not the inability to use an alternative during an outage. Option D is incorrect; Zoom's elasticity was not the cause of this outage.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital considers moving patient records to a public cloud SaaS platform. The compliance team raises HIPAA concerns and the security team raises breach exposure concerns. Which approach best balances cloud cost benefits with these risks?",
+    "options": [
+      "Abandon the cloud migration entirely since healthcare regulations prohibit storing patient records in any cloud environment",
+      "Proceed with migration and rely on the SaaS vendor's Business Associate Agreement to transfer all HIPAA liability to the vendor",
+      "Migrate only non-sensitive administrative data to cloud and maintain all clinical records on legacy systems permanently",
+      "Select a vendor that signs a HIPAA Business Associate Agreement, implement encryption and access controls, and conduct ongoing compliance audits"
+    ],
+    "correctIndex": 3,
+    "explanation": "HIPAA does not prohibit cloud storage of patient data — it requires appropriate safeguards: a signed BAA with the vendor, encryption in transit and at rest, access controls, and audit logging. Option A is factually wrong; many healthcare organizations store PHI in cloud environments. Option B is wrong because a BAA establishes shared obligations — it does not transfer all liability to the vendor, and the covered entity retains responsibility for its own security configurations.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup's CEO says: 'Cloud is cheaper for us — we only pay for what we use, so costs are lower than on-premises.' What is the most significant limitation of this reasoning?",
+    "options": [
+      "Cloud's pay-per-use model can become more expensive than on-premises for stable, predictable workloads if resources are not actively managed and rightsized",
+      "Pay-per-use pricing applies only to development and test environments — production workloads use fixed reserved-instance pricing",
+      "Cloud providers offer pay-per-use pricing only during an initial free-tier period before converting to flat enterprise rates",
+      "Cloud costs exceed on-premises in the first year of adoption but typically fall below on-premises after three years of optimization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pay-per-use is a genuine cloud advantage for variable workloads, but it can backfire for stable, high-utilization workloads that run at consistent levels 24/7. In those cases, owning physical hardware can be cheaper over a multi-year horizon than paying on-demand rates continuously. The CEO's claim is also vulnerable to cost management failures — cloud bills grow quickly when over-provisioned resources go unmonitored. Options B, C, and D all contain false factual premises about how cloud pricing works.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retail company stores all customer data in Snowflake, uses Salesforce for CRM, and runs marketing automation through HubSpot. The data team realizes migrating Snowflake to a competing analytics platform would require rebuilding all pipelines. What risk does this illustrate?",
+    "options": [
+      "Data security risk — storing customer data across three platforms creates fragmented security boundaries difficult to audit",
+      "Vendor lock-in — the operational dependency on Snowflake's data formats and pipelines makes switching costly even though the data is technically owned by the company",
+      "Compliance risk — distributing customer data across three SaaS vendors violates data residency requirements in most jurisdictions",
+      "Downtime risk — failures in any one of the three platforms propagate outages to the others through shared data pipelines"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vendor lock-in is not only about software code — it applies to data pipeline architecture too. Even if the company legally owns its data, the cost of extracting it from Snowflake's proprietary format, transforming it, and rebuilding all downstream pipelines can be prohibitive. This is lock-in through operational dependency rather than contractual restriction. Option A describes a real security concern but is not what the scenario describes. Option C is an overstatement; three-vendor data storage does not automatically violate data residency laws.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing company's CIO is evaluating on-premises ERP versus cloud-hosted ERP, with reliability as the primary decision factor. Which consideration most directly supports the cloud option?",
+    "options": [
+      "Cloud ERP vendors guarantee contractual 100% uptime, while on-premises hardware has no formal performance commitment",
+      "Cloud vendors are legally required to notify customers within one hour of any outage event for faster incident response",
+      "Major cloud providers invest in redundant infrastructure and geographic failover at a scale most companies cannot replicate internally",
+      "On-premises ERP has inherently lower reliability because internal IT teams lack the certifications held by cloud vendor operations staff"
+    ],
+    "correctIndex": 2,
+    "explanation": "Leading cloud providers operate globally redundant infrastructure with dedicated reliability engineering teams, multiple availability zones, and automatic failover — capabilities that represent billions of dollars of investment that most manufacturing companies cannot feasibly replicate in their own data centers. Option A is wrong — no cloud provider guarantees 100% uptime contractually. Option D is an unfair generalization; some internal IT teams run highly reliable on-premises environments, and cloud reliability depends on the customer's configuration, not just the vendor's investment.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Six months after migrating to public cloud, a company's monthly bills fluctuate between $80K and $220K with no predictable pattern. The CFO says this is worse than on-premises from a budgeting perspective. What does this most directly reveal?",
+    "options": [
+      "The company should revert to on-premises infrastructure since predictable costs matter more than scalability for financial planning",
+      "The CFO is misinterpreting the data — wide bill fluctuations confirm that elasticity is working correctly and costs are being optimized",
+      "The cloud provider is billing incorrectly since legitimate cloud invoices should remain relatively consistent month over month",
+      "Cloud's usage-based model provides operational flexibility but creates budget unpredictability, requiring new governance practices like FinOps to manage spend effectively"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is a real and common tension: cloud's elasticity is operationally valuable but produces variable costs that are harder to forecast than a fixed on-premises budget. The solution is not reverting to on-premises but adopting cloud financial management practices — tagging resources, setting budgets and alerts, rightsizing instances, and forecasting demand patterns. Option B is not entirely wrong, but it dismisses the CFO's legitimate financial governance concern. Option C is factually wrong — cloud bills vary naturally with consumption.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

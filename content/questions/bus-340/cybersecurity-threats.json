@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following best defines a phishing attack?",
+    "options": [
+      "A network intrusion that exploits software vulnerabilities to gain unauthorized remote system access",
+      "A type of malware that encrypts victim files and demands cryptocurrency payment to restore access",
+      "A deceptive communication, usually an email, that tricks recipients into revealing sensitive information",
+      "A brute-force technique that systematically tests password combinations until the correct one is found"
+    ],
+    "correctIndex": 2,
+    "explanation": "Phishing uses social deception — typically fraudulent emails impersonating trusted organizations — to manipulate recipients into clicking malicious links, providing credentials, or downloading malware. Option A describes an exploit or network intrusion attack, which is a technical rather than social technique. Option B describes ransomware, which is a distinct malware category with a different mechanism of harm. Option D describes a brute-force or credential stuffing attack, which works against the authentication system rather than through human manipulation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What distinguishes malware from other categories of cybersecurity threats?",
+    "options": [
+      "Malware is malicious software — programs designed to damage, disrupt, or gain unauthorized system access",
+      "Malware refers exclusively to email-based attacks that deliver harmful content through file attachments",
+      "Malware is a network-level attack that disrupts communication pathways between servers and clients",
+      "Malware describes any unauthorized person attempting to access a system without valid login credentials"
+    ],
+    "correctIndex": 0,
+    "explanation": "Malware is a broad software-based category covering viruses, trojans, spyware, ransomware, and worms — any malicious program designed to harm systems or steal data. Option B incorrectly limits malware to email delivery; malware spreads through web downloads, USB drives, and other vectors as well. Option C describes a network disruption attack such as DDoS, which is a threat category separate from software-based malware. Option D describes unauthorized access attempts, which may use malware as a tool but are not what malware itself means.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does spear phishing differ from standard phishing?",
+    "options": [
+      "Spear phishing uses malware attachments; standard phishing relies on fake login pages for credential theft",
+      "Spear phishing targets only financial executives; standard phishing targets lower-level employees exclusively",
+      "Spear phishing is conducted via phone calls; standard phishing uses email as its primary delivery method",
+      "Spear phishing is highly personalized to a specific individual or organization; standard phishing is sent broadly"
+    ],
+    "correctIndex": 3,
+    "explanation": "Standard phishing casts a wide net with generic messages, while spear phishing uses researched personal details — name, employer, role, recent activities — to craft a convincing targeted message aimed at a specific individual. Option A incorrectly ties each type to a specific delivery mechanism; both can use attachments or fake login pages. Option B invents a role-based restriction; spear phishing can target any individual, not only executives (attacks targeting specifically CEOs or CFOs are called whaling). Option C is incorrect; spear phishing is typically email-based, while phone-based social engineering is called vishing.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is ransomware, and what is its primary mechanism of impact on an organization?",
+    "options": [
+      "Ransomware steals and publicly exposes sensitive data to damage a company's reputation and customer trust",
+      "Ransomware encrypts a victim's files and demands payment, typically in cryptocurrency, to restore access",
+      "Ransomware is a phishing variant that harvests user credentials through convincing fake login screens",
+      "Ransomware floods a target network with traffic, making systems unavailable until the attacker is paid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ransomware is a malware category that encrypts files on infected systems, rendering them inaccessible, then demands a ransom — typically cryptocurrency — in exchange for the decryption key. Option A describes a doxing or double-extortion tactic, which is a related but distinct threat some advanced ransomware groups use in addition to encryption. Option C describes phishing or credential harvesting, not ransomware — the distinction is encryption-based operational disruption versus credential theft. Option D describes a Denial of Service attack, which is a separate threat category that disrupts availability through traffic flooding rather than file encryption.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An employee at Target receives an email appearing to be from IT Support, asking them to click a link and re-enter their network credentials due to a mandatory system upgrade. The link leads to a convincing fake login page. Which attack type is this?",
+    "options": [
+      "A brute-force attack, systematically testing credential combinations against Target's authentication servers",
+      "A man-in-the-middle attack, intercepting credentials as they travel between the employee and IT systems",
+      "A phishing attack, using a deceptive email and fraudulent site to trick the employee into surrendering credentials",
+      "A malware attack, installing a keylogger on the employee's machine when the linked page is visited"
+    ],
+    "correctIndex": 2,
+    "explanation": "The scenario describes a credential phishing attack — a fraudulent email impersonating IT Support directs the target to a fake login page to harvest their password. Option A is incorrect; brute-force attacks work against the authentication system automatically and require no employee interaction. Option B is incorrect; a man-in-the-middle intercepts legitimate communications in transit without the user's awareness, rather than directing them to a fake site. Option D could be a secondary outcome if malware is loaded through the link, but the described primary attack vector is credential phishing via a fake login page.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital discovers that software has been silently running on its billing systems for three months, periodically copying patient payment records to an external server. Which malware category best describes this threat?",
+    "options": [
+      "Spyware — software that covertly monitors and exfiltrates sensitive data without the user's knowledge",
+      "Ransomware — software that encrypts billing system files and demands payment for the decryption key",
+      "A worm — self-replicating software that spreads across the hospital network by exploiting vulnerabilities",
+      "Adware — software that tracks user browsing habits and behavior to deliver targeted advertisements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spyware covertly collects and transmits sensitive data — in this case, patient payment records — without the victim's knowledge, making it the correct classification for silent, sustained data exfiltration. Option B is incorrect; the billing systems are still operational and no ransom demand is described. Option C describes a worm, which is defined by self-replication and network propagation rather than covert data collection. Option D describes adware, which is focused on advertising delivery and behavioral tracking rather than financial record theft.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the primary distinction between a virus and a worm in the malware taxonomy?",
+    "options": [
+      "A virus targets financial data; a worm targets operating system files — they differ in what they attack",
+      "A virus is delivered by email; a worm is delivered through malicious websites and drive-by downloads",
+      "A virus is detectable by antivirus software; a worm evades all standard security detection methods",
+      "A virus requires a host program to spread; a worm is self-replicating and propagates independently across networks"
+    ],
+    "correctIndex": 3,
+    "explanation": "The defining distinction is propagation mechanism — a virus attaches itself to a legitimate program or file and spreads only when that host is executed, while a worm propagates independently by exploiting network vulnerabilities without needing a carrier. Options A and B invent targeting and delivery distinctions that have no basis in malware taxonomy. Option C is incorrect; both viruses and worms can be detected by antivirus tools, and neither category has a guaranteed evasion advantage over the other.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "After a ransomware attack, the incident response team discovers the malware entered through a phishing email opened three weeks before the encryption event occurred. What does this finding most likely reveal?",
+    "options": [
+      "The attacker was inefficient; a well-executed ransomware attack would encrypt files within hours of entry",
+      "The malware had a three-week dwell period, during which it likely moved laterally before triggering encryption",
+      "The phishing email was the primary damage mechanism; the encryption event was only a secondary effect",
+      "The three-week gap indicates early detection limited the attack, making the encryption only partially successful"
+    ],
+    "correctIndex": 1,
+    "explanation": "Most sophisticated ransomware campaigns include a dwell period between initial compromise and the encryption trigger — attackers use this window to move laterally, escalate privileges, and maximize the scope of encrypted systems to increase leverage. Option A imposes an invented standard for attack execution speed. Option C reverses the severity — the encryption event is the primary business impact; the phishing email was only the delivery mechanism. Option D misreads the timeline; a multi-week dwell period typically indicates a more thorough, damaging attack rather than a partial or interrupted one.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A CFO at Boeing receives an email appearing to be from the CEO's personal address, urgently requesting a $2.3M wire transfer to close a confidential acquisition before markets open. The CEO is actually traveling internationally. Which social engineering technique is being used?",
+    "options": [
+      "Vishing — a voice-based social engineering attack impersonating a senior leader to authorize a transaction",
+      "Pretexting — fabricating a false scenario to manipulate a victim into providing confidential access credentials",
+      "Business Email Compromise (BEC) / whaling — targeting a senior executive with a spoofed authority request",
+      "Spear phishing — harvesting the CFO's login credentials through a convincing fake internal portal page"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a Business Email Compromise attack targeting a senior executive (whaling) — the attacker spoofs an authority figure (the CEO) and exploits urgency and confidentiality to manipulate a high-value target into authorizing a large fraudulent wire transfer. Option A is incorrect; the attack uses email, not voice. Option B describes pretexting, which typically targets information or access credentials rather than direct financial authorizations. Option D is incorrect; no fake login portal is involved and the goal is a wire transfer, not credential harvesting through a fake site.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's incident response plan states: 'In the event of ransomware, immediately restore all systems from last night's backup to resume operations as quickly as possible.' What is the critical flaw in this plan?",
+    "options": [
+      "Last-night backups are too recent; compliance frameworks require a minimum 30-day recovery window for ransomware",
+      "Restoring from backup is ineffective because ransomware permanently destroys data rather than encrypting it",
+      "Incident response plans cannot specify ransomware by name; they must use generic malware event language",
+      "Restoring without first containing and eradicating the threat will re-infect the restored systems immediately"
+    ],
+    "correctIndex": 3,
+    "explanation": "The plan's error is sequencing — restoring systems before identifying and eliminating the attack vector means the same ransomware (or its delivery mechanism) will likely re-infect the freshly restored environment within hours. Proper incident response requires containment and eradication before the recovery phase begins. Option A invents a regulatory backup retention requirement that does not exist broadly. Option B is false; ransomware encrypts data but does not permanently destroy it — files are recoverable with the key or from a clean backup. Option C is fabricated; incident response plans absolutely should address specific threat scenarios by name.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google's security team detects sustained anomalous outbound data transfers from an employee workstation to an unknown external IP address. The workstation shows no ransomware indicators and no user-initiated file sharing activity. What threat does this pattern most likely indicate?",
+    "options": [
+      "An advanced persistent threat or spyware conducting covert, long-term data exfiltration from the endpoint",
+      "A denial-of-service attack using the employee's workstation to flood external servers with traffic",
+      "A phishing attack in progress, with the employee actively entering credentials on an external attacker's site",
+      "Ransomware staging, where the malware copies files to an external server before initiating local encryption"
+    ],
+    "correctIndex": 0,
+    "explanation": "Silent, sustained outbound data transfers to an unknown external IP — with no user action or visible malware behavior — is a signature pattern of spyware or an advanced persistent threat conducting long-term data theft. Option B is incorrect; DDoS attacks send high-volume traffic outward in flood patterns, not steady file-transfer streams. Option C is incorrect; credential phishing happens through a browser interaction, not automated background file transfers. Option D is plausible but describes a short-term pre-encryption behavior; the scenario specifies no signs of ransomware and implies sustained, ongoing transfers.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What distinguishes incident containment from incident eradication in a cybersecurity incident response framework?",
+    "options": [
+      "Containment is performed by the legal team; eradication is performed by the technical security operations team",
+      "Containment stops the threat from spreading further; eradication removes the threat and its root cause entirely",
+      "Containment applies only to ransomware events; eradication applies to malware and unauthorized access incidents",
+      "Containment restores systems to a clean operational state; eradication notifies affected users and regulators"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the NIST incident response framework, containment limits damage and prevents lateral spread — such as isolating affected network segments — while eradication removes the malware, closes the exploited attack vector, and addresses the root cause before recovery begins. Option A incorrectly assigns these phases to specific organizational teams; both are typically executed by the security operations team working with stakeholders. Option C invents a false restriction on which threat types each phase applies to — both steps apply to any incident type. Option D reverses the definitions; restoring systems belongs to the recovery phase, and regulatory notification is a post-incident or parallel activity.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A forensics team finds attackers entered a retailer's network via phishing, escalated to domain administrator privileges, moved laterally to the point-of-sale network segment, and installed a payment card skimmer. What NIST incident response phase does this reconstruction represent?",
+    "options": [
+      "Containment — the team is isolating affected systems to prevent the attackers from spreading further",
+      "Recovery — the team is restoring clean system images and confirming all malware has been removed",
+      "Preparation — the team is updating security policies and training employees on lessons learned",
+      "Detection and Analysis — the team is reconstructing the full attack chain to understand the compromise scope"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reconstructing how attackers moved through the network, what privileges they acquired, and what they installed is the work of Detection and Analysis — characterizing the full scope of the incident. Option A is incorrect; containment involves active steps to stop further damage (isolating the POS network segment), not reconstructing the attack path after the fact. Option B describes recovery, which restores operational systems and comes after full eradication. Option C describes post-incident lessons-learned activities, which occur after the recovery phase is complete.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturer hit by ransomware faces a $500,000 ransom demand. Production losses total $200,000 per day. The cyber insurance deductible is $50,000, and the reliability of the decryption key is unknown. What does this scenario most accurately highlight about the payment decision?",
+    "options": [
+      "Paying is straightforward since $500,000 is less than three days of production downtime at $200,000 per day",
+      "Paying may reduce short-term losses but carries strategic and legal risks that make the decision non-trivial",
+      "The insurance deductible makes payment impractical; restoring from backups is the correct response here",
+      "Ransoms should be negotiated down before payment since attackers routinely accept less than their initial demand"
+    ],
+    "correctIndex": 1,
+    "explanation": "The economic math may favor payment — three days of downtime exceeds the $500K ransom — but non-economic risks complicate the decision: payment incentivizes future attacks against the same organization, provides no guarantee the decryption key will work or be delivered, and may violate OFAC regulations if the attacker is a sanctioned entity. Option A correctly identifies the economic logic but ignores the strategic, operational, and legal dimensions. Option C invents a rule connecting deductible size to decision-making and uses overly certain language about backup restoration without knowing backup integrity. Option D may reflect observed negotiation behavior but presents it as reliable guidance, overstating certainty about attacker conduct.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's security policy requires employees to forward suspicious emails to IT before deleting them, write passwords on sticky notes for IT access during audits, and report security incidents to their direct manager first. Which element creates the most significant vulnerability?",
+    "options": [
+      "Forwarding suspicious emails delays threat detection and should be replaced with automated quarantine rules",
+      "Requiring incident reports to managers first slows response time but is acceptable for lower-priority events",
+      "Writing passwords on sticky notes defeats credential protection and enables physical theft by any passerby",
+      "Reporting incidents to managers rather than IT directly creates escalation delays that can violate regulatory timelines"
+    ],
+    "correctIndex": 2,
+    "explanation": "Writing passwords on sticky notes is a fundamental security failure — it transforms a credential protection mechanism into a physical exposure risk where any person who can see the note (colleagues, visitors, cleaning staff) gains access without authentication. Option A describes a debatable workflow decision about email handling, not a fundamental credential security failure. Option B is a real process concern but represents an escalation delay, not a direct credential exposure. Option D is a legitimate concern but is secondary in severity to having plaintext passwords physically visible to anyone near the workspace.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

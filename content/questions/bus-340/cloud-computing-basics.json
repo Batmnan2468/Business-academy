@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does SaaS stand for, and how do users typically interact with it?",
+    "options": [
+      "Software as a System — enterprise software integrated and managed across all business departments centrally",
+      "Software as a Service — applications hosted by a vendor and accessed by users over the internet",
+      "Scalable as a Service — infrastructure that automatically expands based on the application's current demand",
+      "Software as a Subscription — licensed software installed on company hardware and billed on a recurring basis"
+    ],
+    "correctIndex": 1,
+    "explanation": "SaaS stands for Software as a Service — the vendor hosts and maintains the application, and users access it through a web browser without managing any underlying infrastructure. Option A is a fabricated term that misrepresents how software integration works. Option D describes traditional on-premises licensing with a subscription billing model, which is distinct from SaaS because the software still runs on the customer's own hardware.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which cloud service model gives a business the most control over its operating systems, middleware, and application runtime?",
+    "options": [
+      "SaaS — software delivered fully managed by the vendor with no access to the underlying infrastructure",
+      "PaaS — a managed environment providing development tools and runtimes without server management",
+      "IaaS — raw compute, storage, and networking that the business configures and manages directly",
+      "Hybrid cloud — a combination of public and private infrastructure managed across two separate environments"
+    ],
+    "correctIndex": 2,
+    "explanation": "IaaS (Infrastructure as a Service) gives the customer raw virtual machines, storage, and networking — the customer installs and manages the OS, middleware, and applications themselves. SaaS sits at the opposite extreme: the vendor controls everything and the customer only configures the application. PaaS falls in between — developers use the platform but do not manage servers. Option D describes a deployment model, not a service model.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which cloud deployment type is reserved exclusively for a single organization, either on-premises or hosted by a third party?",
+    "options": [
+      "Public cloud — infrastructure shared across many customer organizations and managed by a third-party provider",
+      "Hybrid cloud — an integrated mix of public and private infrastructure connected through orchestration tools",
+      "Community cloud — shared infrastructure among several organizations with similar compliance or security needs",
+      "Private cloud — dedicated infrastructure used by one organization and not shared with other tenants"
+    ],
+    "correctIndex": 3,
+    "explanation": "A private cloud is dedicated to a single organization — whether hosted on-premises or by a third party — and is never shared with other customers. Public cloud (option A) is the opposite: multi-tenant infrastructure shared across many organizations. Hybrid cloud (option B) is not a standalone deployment type but a combination of private and public environments. Community cloud (option C) is shared, which distinguishes it from private.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Microsoft Azure, Amazon Web Services, and Google Cloud Platform are all examples of which cloud deployment model?",
+    "options": [
+      "Public cloud — multi-tenant infrastructure delivered over the internet and shared across many customer organizations",
+      "Private cloud — infrastructure managed by these vendors but dedicated exclusively to each customer's individual workloads",
+      "Hybrid cloud — a blend of on-premises data center resources and external provider infrastructure",
+      "Community cloud — shared infrastructure operated by a consortium of technology companies with aligned interests"
+    ],
+    "correctIndex": 0,
+    "explanation": "AWS, Azure, and Google Cloud are public clouds — they offer shared, multi-tenant infrastructure to any customer over the internet. Option B describes a managed private cloud scenario, which is a different offering from general-purpose public cloud. Option C describes hybrid cloud, which is an architecture that combines environments rather than a standalone provider type. Option D is a fabricated description that does not apply to these providers.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A startup uses Salesforce for CRM, Gmail for email, and Slack for team communication — all accessed through a browser with no software installed on company laptops. Which cloud model describes all three?",
+    "options": [
+      "IaaS — the startup is renting raw infrastructure from these vendors to run its own applications",
+      "PaaS — the startup is using vendor-provided platforms to develop and deploy its own custom software",
+      "SaaS — the startup is consuming fully managed applications delivered over the internet with no infrastructure control",
+      "Hybrid cloud — the startup combines on-premises collaboration tools with externally hosted enterprise applications"
+    ],
+    "correctIndex": 2,
+    "explanation": "Salesforce, Gmail, and Slack are all SaaS applications — the vendors host, maintain, and update the software, and users access it through a browser without managing servers, databases, or application code. Option A is wrong because IaaS provides virtual machines the customer configures — not finished applications. Option B is wrong because PaaS is for developers building applications, not end users consuming them.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank needs maximum control over customer data for regulatory reasons but also needs to handle traffic surges by accessing additional external compute capacity. Which deployment model best fits?",
+    "options": [
+      "Public cloud — it provides the control and dedicated environment that regulated financial institutions require",
+      "Private cloud — it supports bursting into shared external compute capacity during high-demand periods",
+      "Community cloud — it provides a shared environment specifically designed for regulated financial institutions",
+      "Hybrid cloud — it combines private infrastructure for sensitive workloads with public cloud capacity for demand spikes"
+    ],
+    "correctIndex": 3,
+    "explanation": "Hybrid cloud is designed for exactly this scenario: sensitive or regulated workloads remain on controlled private infrastructure while burst demand can be handled by scaling into the public cloud temporarily. Option A is wrong because public cloud does not provide the dedicated, isolated control that regulated data requires. Option B inverts how private cloud works — private cloud does not natively burst into public infrastructure without a hybrid architecture to support it.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A development team wants to build and deploy a web application without managing servers, operating systems, or runtime environments. Which cloud service model is designed for this use case?",
+    "options": [
+      "IaaS — provides virtual machines that the team configures and manages with full operating system access",
+      "PaaS — provides a managed environment with built-in runtimes, deployment pipelines, and developer tooling",
+      "SaaS — provides a finished application the team can use without any development or configuration work",
+      "Private cloud — provides dedicated infrastructure fully under the team's control in a single-tenant environment"
+    ],
+    "correctIndex": 1,
+    "explanation": "PaaS (Platform as a Service) abstracts away server and OS management so developers can focus on writing and deploying code. Heroku, Google App Engine, and AWS Elastic Beanstalk are examples. Option A describes IaaS, which still requires teams to manage the operating system and runtime themselves. Option C describes SaaS, which delivers finished applications — there is nothing to develop or deploy. Option D describes a deployment model, not a service layer.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manager tells her team: 'We moved our accounting software to the cloud, so we are now using IaaS.' The company uses QuickBooks Online, which Intuit hosts and maintains. What is incorrect?",
+    "options": [
+      "QuickBooks Online is SaaS — Intuit manages everything and the company accesses it through a browser with no infrastructure control",
+      "The classification is correct only if the company also uses a VPN connection to access QuickBooks Online remotely",
+      "IaaS is technically correct since QuickBooks Online ultimately runs on cloud servers managed by Amazon Web Services",
+      "QuickBooks Online qualifies as PaaS because accountants use it as a platform to enter and process financial data"
+    ],
+    "correctIndex": 0,
+    "explanation": "QuickBooks Online is a SaaS application — Intuit handles all infrastructure, updates, and maintenance, and the company simply logs in through a browser. Calling it IaaS is wrong because IaaS means renting raw virtual infrastructure (servers, storage) that the company manages itself. Option C represents a common misconception: the fact that a SaaS application runs on IaaS underneath does not change the service model the customer is consuming. Option D misuses 'PaaS' — PaaS is for building applications, not for end users consuming an accounting product.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Netflix uses AWS for its infrastructure. An engineer says Netflix is an AWS IaaS customer. A product manager says Netflix is a SaaS provider to its subscribers. Who is correct?",
+    "options": [
+      "The engineer is wrong — Netflix's use of AWS is PaaS since AWS provides managed developer tooling to Netflix",
+      "Both are correct — Netflix consumes IaaS from AWS to run its platform and delivers a SaaS product to its subscribers",
+      "The product manager is wrong — Netflix subscribers receive IaaS since their video streams run on AWS cloud resources",
+      "Neither is fully right — Netflix operates a hybrid model blending AWS services with its own proprietary infrastructure"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both perspectives are correct at different layers. From Netflix's point of view, it uses AWS as IaaS — renting virtual compute and storage that Netflix engineers configure to run its streaming platform. From a subscriber's point of view, Netflix is a SaaS provider: they pay a subscription fee and access a fully managed streaming application with no infrastructure involvement. Option C confuses the delivery mechanism with the service layer the subscriber interacts with.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare company runs patient records on a private cloud and appointment scheduling on a public cloud. The CTO requires both to share patient data in real time. What does this requirement most directly reveal about hybrid cloud complexity?",
+    "options": [
+      "Patient records do not need private cloud — public cloud with strong encryption provides equivalent security and compliance",
+      "The appointment system should move to the private cloud to simplify data sharing and eliminate cross-environment latency",
+      "Hybrid environments require robust integration architecture and security controls at the boundary between private and public layers",
+      "Real-time data sharing between private and public cloud environments is technically infeasible due to inherent network latency"
+    ],
+    "correctIndex": 2,
+    "explanation": "Hybrid cloud creates integration challenges at the boundary: data moving between a private HIPAA-regulated environment and a public cloud must be encrypted in transit, routed through controlled pathways, and governed consistently across both environments. Option A dismisses the private cloud rationale without acknowledging the regulatory and trust reasons healthcare organizations segment sensitive data. Option D is factually wrong — real-time data sharing across hybrid environments is technically achievable with proper network and API design.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company uses AWS for e-commerce hosting (IaaS), Shopify as its storefront (SaaS), and Heroku to deploy a custom inventory app (PaaS). A consultant recommends simplifying to one cloud model. What is the strongest counter-argument?",
+    "options": [
+      "Using three cloud models significantly increases IT costs and validates the consultant's concern about unnecessary complexity",
+      "Heroku and AWS share the same parent company, so this architecture is effectively already a single unified model",
+      "The company should consolidate on a private cloud to gain full control over all layers of its technology stack",
+      "Each model serves a distinct need — IaaS for infrastructure control, PaaS for developer velocity, SaaS for turnkey capabilities — and combining them is standard and often optimal"
+    ],
+    "correctIndex": 3,
+    "explanation": "Using multiple cloud service models is not a sign of poor architecture — it reflects the reality that different needs are best served by different abstraction levels. IaaS gives control over infrastructure, PaaS frees developers from managing servers, and SaaS delivers finished applications that would take years to build internally. Option A is incorrect because mixing models does not automatically increase cost — it often reduces it by matching cost structure to the work. Option B is factually misleading.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A CTO presents to the board: 'Moving to SaaS eliminates all IT risk because the vendor handles everything.' What critical risk category does this claim overlook?",
+    "options": [
+      "The company retains significant exposure — data portability loss, vendor outages affecting operations, and dependence on the vendor's security posture",
+      "SaaS vendors must share all security incident details with customers by law, so remaining risks are fully transparent and manageable",
+      "SaaS eliminates infrastructure risk but introduces hardware procurement risk as vendors refresh their underlying server equipment",
+      "Moving to SaaS increases software licensing costs substantially, which is the primary residual risk for the board to evaluate"
+    ],
+    "correctIndex": 0,
+    "explanation": "SaaS transfers infrastructure responsibility to the vendor but does not eliminate risk — it transforms it. The company is now exposed to vendor reliability risk (if Salesforce goes down, so does CRM), data portability risk (can you get your data out if you switch?), and indirect security risk (a breach at the vendor exposes the company's data). Option B is factually wrong — SaaS vendors are not legally required to disclose security incidents in real time. Options C and D describe secondary concerns that do not capture the primary residual risks.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm stores trading data on a private cloud to meet SEC retention rules but uses a public cloud SaaS platform for internal collaboration tools. Which hybrid cloud principle does this best illustrate?",
+    "options": [
+      "Cost optimization — private clouds cost more, so companies use public cloud wherever possible to reduce overall IT spending",
+      "Workload tiering — sensitive regulated data stays on controlled private infrastructure while lower-risk workloads use public cloud economics",
+      "Vendor diversification — using multiple cloud providers reduces dependency on any single provider's service reliability and pricing",
+      "Compliance arbitrage — placing workloads in different environments lets companies select which regulations apply to each system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Workload tiering is the practice of routing each workload to the environment that best fits its sensitivity and regulatory requirements — high-sensitivity trading data to a controlled private environment, low-sensitivity collaboration tools to cost-efficient public cloud. Option A overstates the cost driver and ignores compliance as the primary motivation for private cloud in this case. Option D misrepresents compliance: the regulations that apply are determined by the data type, not the storage location.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company can subscribe to a SaaS solution covering 80% of its requirements or build on IaaS with full custom control. What is the strongest argument for choosing IaaS?",
+    "options": [
+      "IaaS subscription fees are lower than SaaS because the company avoids paying for software development done by the vendor",
+      "SaaS solutions require no customization, making them inappropriate for any business with unique process requirements",
+      "The unmet 20% represents a critical competitive differentiator, and IaaS provides full control to build exactly what the business requires",
+      "IaaS implementations are faster than SaaS subscriptions since no vendor selection or procurement process is required"
+    ],
+    "correctIndex": 2,
+    "explanation": "The case for IaaS over SaaS depends on whether the functionality gap matters competitively. If the missing 20% is a differentiating capability — a proprietary pricing model, a unique customer experience — then the control that IaaS provides justifies the development cost and complexity. Option A is wrong — IaaS often costs more in total when engineering and operational work is included. Option D inverts reality: custom development on IaaS typically takes far longer than subscribing to a SaaS product.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company migrated from on-premises to public cloud IaaS two years ago. Monthly bills are now 40% higher than the original on-premises budget, yet the company has not grown. What does this most likely indicate?",
+    "options": [
+      "Public cloud IaaS is inherently more expensive than on-premises infrastructure for any workload at comparable scale",
+      "The cloud provider has been billing incorrectly for unused resources, indicating a system error that should be disputed",
+      "The company's original on-premises budget failed to account for hardware refresh, facility, and staffing costs accurately",
+      "The company is likely over-provisioning — running instances at on-premises scale without leveraging cloud elasticity — a common migration pitfall"
+    ],
+    "correctIndex": 3,
+    "explanation": "A very common cloud migration failure is 'lift and shift' without rightsizing: companies move workloads to cloud VMs provisioned at the same fixed size as their old physical servers, missing the elasticity that makes cloud cost-efficient. On-premises systems run 24/7 at peak capacity; cloud systems should scale down during off-hours. Option A is a blanket generalization — cloud can be cheaper or more expensive depending on how it is managed. Option C may also be partially true but doesn't explain ongoing elevated costs two years post-migration.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

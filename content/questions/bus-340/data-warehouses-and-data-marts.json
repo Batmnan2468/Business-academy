@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the primary purpose of a data warehouse in a business intelligence architecture?",
+    "options": [
+      "To process and record individual operational transactions as they occur throughout the business day",
+      "To enforce data quality rules at the point of entry across all operational IS systems simultaneously",
+      "To consolidate historical data from multiple sources into a single repository optimized for analysis",
+      "To replace operational databases with a unified platform that handles both transactions and reporting"
+    ],
+    "correctIndex": 2,
+    "explanation": "A data warehouse consolidates historical data from multiple operational systems into a single, integrated repository designed for analysis and reporting, not for transaction processing. Option A describes the function of a TPS or operational database — the data warehouse receives data from these systems after the fact. Option D is incorrect because data warehouses are separate from operational databases and are not designed for real-time transaction recording.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does a data warehouse differ from an operational database in terms of its primary design goal?",
+    "options": [
+      "A data warehouse optimizes for fast read queries and historical analysis; an operational database optimizes for transaction speed and data integrity",
+      "A data warehouse stores only current data; an operational database stores both historical and current transaction records",
+      "A data warehouse is updated in real time as transactions occur; an operational database stores batch summaries weekly",
+      "A data warehouse is designed for security and access control; an operational database is designed for reporting"
+    ],
+    "correctIndex": 0,
+    "explanation": "The design goals are opposite: operational databases are optimized for high-speed write operations — recording individual transactions quickly while maintaining ACID integrity. Data warehouses are optimized for complex read queries — analytical queries that scan millions of historical records. Option B reverses the currency of data: operational databases hold current transactional state, while warehouses accumulate historical records for trend analysis. Option C reverses the update frequency: operational databases update continuously; warehouses are typically loaded in batches.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Target's analysts run daily reports on sales trends by region, product category, and store. The data comes from a system that integrates point-of-sale data from all stores, loaded each night. This system is best described as:",
+    "options": [
+      "A Transaction Processing System recording each checkout event in real time at store registers",
+      "An operational database enforcing inventory constraints and supporting in-store checkout workflows",
+      "An Executive Information System delivering strategic KPI dashboards to Target's senior leadership",
+      "A data warehouse — it integrates data from multiple sources and is optimized for analytical queries"
+    ],
+    "correctIndex": 3,
+    "explanation": "A system that integrates data from multiple operational sources (POS systems across all stores), loads it in nightly batches, and supports analytical queries by region, category, and store is a data warehouse. Option A describes the POS systems feeding the warehouse, not the warehouse itself. Option C describes a reporting layer that could be built on top of a data warehouse, but the underlying integration and storage system itself is the warehouse.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a data mart, and how does it relate to a data warehouse?",
+    "options": [
+      "A data mart is a full copy of the data warehouse deployed in a separate cloud region for disaster recovery",
+      "A data mart is a focused subset of the data warehouse scoped to a specific department or business function",
+      "A data mart is an early-stage data warehouse that grows into a full enterprise warehouse over several years",
+      "A data mart is an operational database used before a data warehouse is implemented in the organization"
+    ],
+    "correctIndex": 1,
+    "explanation": "A data mart is a subject-specific subset of a data warehouse — it contains the data and metrics relevant to one department (finance, marketing, HR) rather than the full enterprise dataset. This allows teams to query relevant data quickly without accessing the entire warehouse. Option C describes an evolutionary path that is sometimes followed, but it is not the definition of a data mart. Option A describes a disaster recovery replica, which is a different concept.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart's enterprise data warehouse stores 10 years of transaction history across all global stores. The marketing team queries it daily for customer segmentation analysis, but queries take 4-6 hours to run. What is the most appropriate architectural solution?",
+    "options": [
+      "Replace the data warehouse with a real-time operational database optimized for marketing query patterns",
+      "Build a marketing data mart — a pre-aggregated subset of the warehouse scoped to marketing's specific needs",
+      "Increase the data warehouse's physical server capacity to handle the marketing team's query concurrency",
+      "Move the data warehouse to weekly batch loads to reduce the processing load during business hours"
+    ],
+    "correctIndex": 1,
+    "explanation": "The solution is a marketing data mart: a subset of the warehouse pre-aggregated and indexed for the specific queries the marketing team runs. This dramatically reduces query time by limiting the data scanned to what marketing actually needs. Option A is incorrect — replacing a 10-year historical warehouse with an operational database would eliminate the analytical capability the business requires. Option C is a hardware approach that addresses concurrency but does not solve the underlying query scope problem.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst says: 'Our operational CRM database is better for customer analytics than a data warehouse because it has real-time data.' What is the most important limitation this view overlooks?",
+    "options": [
+      "CRM databases charge higher licensing fees than data warehouses for analytical query workloads",
+      "Real-time data is never accurate enough for analytical purposes in customer segmentation and trend analysis",
+      "Analytical queries on operational databases compete with live transactions, degrading performance for both",
+      "CRM systems are legally prohibited from being used for analytics in industries handling customer data"
+    ],
+    "correctIndex": 2,
+    "explanation": "Running complex analytical queries on an operational database creates a resource conflict — analytical queries scan large volumes of data and hold locks that interfere with the write-intensive operations the operational system must perform in real time. This is the core architectural reason data warehouses exist: to separate analytical workloads from operational ones. Option A introduces a licensing cost argument that is irrelevant to the analytical design question. Option D invents a legal prohibition that does not exist.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's finance team accesses a system that stores five years of revenue, cost, and margin data across product categories. The logistics team accesses a separate system with five years of delivery times, carrier performance, and warehouse costs. Both systems draw from the same underlying enterprise repository. What is the enterprise repository most likely called?",
+    "options": [
+      "A Transaction Processing System that centralizes all financial and logistics events across Amazon's operations",
+      "A data warehouse, with separate finance and logistics data marts providing department-specific access",
+      "Two independent operational databases that share a backup server for data redundancy and recovery",
+      "An Executive Information System delivering aggregated financial and logistics KPIs to senior leadership"
+    ],
+    "correctIndex": 3,
+    "explanation": "The architecture described is a data warehouse with subject-specific data marts: the enterprise repository is the data warehouse (holding five years of integrated data), while the finance and logistics teams access separate data marts — subsets scoped to their specific domains. Option A is incorrect because TPS systems record real-time operational events; they do not store five years of multi-domain analytical history. Option C describes operational databases with shared backup, which is a different infrastructure pattern.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's operational order management system is updated 24,000 times per day with new orders and status changes. The data warehouse is loaded from this system each night. An analyst queries the warehouse at 9am and finds yesterday's orders but not the ones placed at 7am today. Is this a problem?",
+    "options": [
+      "No — data warehouses are typically loaded in scheduled batches; this delay is an expected design characteristic",
+      "Yes — the data warehouse should always reflect transactions from within the last 15 minutes to support analysis",
+      "Yes — the missing orders indicate a failure in the ETL pipeline that requires immediate technical investigation",
+      "No — the operational database is the authoritative record; the warehouse is only needed for archival purposes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data warehouses are designed for batch loading — data is extracted from operational systems, transformed, and loaded on a scheduled cycle (often nightly). A few hours of lag is an expected and accepted tradeoff for maintaining separation between analytical and operational workloads. Option B describes a streaming architecture (near real-time warehousing) that is more expensive and not the standard for most analytical use cases. Option C would be appropriate if the 7am orders were simply missing rather than expected to appear after the next batch load.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer has five operational systems: POS, CRM, inventory, HR, and finance. Each uses a different data format, currency notation, and customer ID structure. An IS team proposes building a data warehouse. What is the most technically significant challenge they must address first?",
+    "options": [
+      "ETL design — extracting data from five systems, transforming it into a unified format, and loading it consistently",
+      "Choosing between a star schema and a snowflake schema for the warehouse's physical storage architecture",
+      "Determining the appropriate query engine to support the analytical workloads the warehouse will serve",
+      "Migrating all five operational systems to a single IS vendor platform before warehouse integration begins"
+    ],
+    "correctIndex": 0,
+    "explanation": "The most significant challenge is ETL (Extract, Transform, Load): five systems with different formats, ID structures, and conventions must be reconciled into a single, consistent schema before data can be loaded into the warehouse. Without a well-designed ETL process, the warehouse will contain incompatible records that cannot be queried coherently. Option B (schema design) is important but secondary to solving the data integration challenge. Option D would be expensive, disruptive, and unnecessary — ETL is specifically designed to integrate disparate source systems without replacing them.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Goldman Sachs builds a risk analytics data mart for its trading division, pulling data from the enterprise data warehouse nightly. A risk analyst runs a model that requires combining trading data with customer account data, which resides in a separate customer data mart. What challenge is the analyst likely to face?",
+    "options": [
+      "Data marts from the same warehouse cannot be joined because they use incompatible database schemas by design",
+      "Risk analytics models are prohibited from accessing customer account data due to financial compliance regulations",
+      "Cross-mart queries may face integration complexity if the two marts were built with different keys or grain levels",
+      "The data warehouse refreshes on a monthly cycle, making nightly mart data too stale for trading risk models"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data marts scoped to different business domains may have been built with different key structures, levels of granularity (grain), or entity definitions. Joining them requires understanding whether a 'customer' in the trading mart represents the same entity as a 'customer' in the account mart — and whether their keys are aligned. This is a real integration challenge even when both marts draw from the same warehouse. Option A is incorrect — data marts from the same warehouse should share enterprise keys, though integration still requires care. Option B invents a compliance restriction that does not universally prohibit cross-domain analytics.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's data warehouse uses a star schema with a central fact table containing sales transactions and surrounding dimension tables for time, product, customer, and store. A query asks: 'What was total revenue by product category in Q3 for stores in the Southeast region?' Which tables does this query require?",
+    "options": [
+      "Only the fact table — it contains all transaction, product, customer, and store data in a single denormalized row",
+      "The fact table joined to time, product, and store dimensions to filter and group on the required attributes",
+      "Only the dimension tables — the fact table stores aggregate totals that are pre-computed during the nightly load",
+      "The fact table joined to all four dimensions — time, product, customer, and store — to ensure complete data retrieval"
+    ],
+    "correctIndex": 3,
+    "explanation": "The query requires Q3 (time dimension), product category (product dimension), Southeast region (store dimension), and revenue totals (from the fact table). The customer dimension is not needed for this specific query — filtering on customer attributes is not required. Star schema queries join the fact table to the specific dimensions needed to answer the question. Option A is incorrect because fact tables typically store foreign keys to dimensions, not all attribute values. Option C reverses the roles: dimension tables hold descriptive attributes; the fact table holds the measurable quantities.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A CIO argues: 'We should skip the data warehouse and give analysts direct access to our five operational databases — it's faster and cheaper.' What is the most significant risk in this approach?",
+    "options": [
+      "Analysts will have too much data available, causing analysis paralysis and reducing decision-making speed",
+      "Analytical queries will compete with live transaction processing, degrading operational performance for both workloads",
+      "Direct database access violates data governance policies in every regulated industry without exception",
+      "Operational databases cannot store more than two years of data, limiting the historical analysis available to analysts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Running heavy analytical queries on operational databases creates resource contention. A complex query scanning millions of rows competes for CPU, memory, and I/O with the live transactions the business depends on — degrading both. Data warehouses exist specifically to offload this analytical workload. Option A overstates access as a problem; more data availability is generally good for analysis. Option C invents a universal governance prohibition — some regulated environments do allow direct database access with appropriate controls.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Nike builds a marketing data mart for its customer analytics team and a supply chain data mart for its operations team, both drawing from the same enterprise data warehouse. Six months later, the two teams report different total customer counts for the same period. What is the most likely cause?",
+    "options": [
+      "The two data marts were loaded from the warehouse at different times, causing a batch synchronization gap",
+      "The two teams applied different business definitions of 'customer' when each mart was originally designed",
+      "The enterprise data warehouse contains a primary key error causing duplicate customer records in both marts",
+      "Marketing and supply chain data marts cannot share the same source warehouse without record duplication"
+    ],
+    "correctIndex": 2,
+    "explanation": "When two marts drawing from the same source warehouse show different counts for what appears to be the same metric, the most common cause is definitional inconsistency: the marketing mart defined 'customer' as anyone who made a purchase, while the supply chain mart defined it as anyone with a shipped order. This is a governance problem — different teams applied different definitions when building their marts, without a shared data dictionary to align them. Option A is possible but would cause only a small lag difference, not a systemic count divergence. Option C would cause duplication in both marts equally, not a count difference between them.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the ETL process, and why is it critical to data warehouse quality?",
+    "options": [
+      "Extract, Test, Load — a quality assurance process that validates all records before warehouse loading occurs",
+      "Extract, Transform, Load — the pipeline that moves data from source systems, reshapes it to a common schema, and loads it",
+      "Enterprise Transaction Logging — a real-time audit trail recording all changes to operational database records",
+      "External Table Linking — a database technique connecting warehouse tables to live operational data sources"
+    ],
+    "correctIndex": 1,
+    "explanation": "ETL (Extract, Transform, Load) is the pipeline that makes data warehouses possible: data is extracted from operational source systems, transformed to resolve format differences and apply business rules, and loaded into the warehouse schema. Without robust ETL, data from incompatible systems cannot be meaningfully combined. Option A invents a false expansion ('Extract, Test, Load') — testing is part of ETL quality practices but is not what the T stands for. Option C describes audit logging, which is a separate IS function.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A student says: 'A data mart is just a smaller data warehouse — the only difference is how much data it stores.' What is the most important distinction this view misses?",
+    "options": [
+      "Data marts are always built before the enterprise data warehouse as the first phase of BI implementation",
+      "Data marts require a separate database vendor from the enterprise warehouse to function correctly",
+      "A data mart is scoped to a specific subject area and user group, not just reduced in size — scope drives the design",
+      "Data marts are only relevant in organizations with more than 500 employees and 10 years of transaction history"
+    ],
+    "correctIndex": 3,
+    "explanation": "The critical difference between a data mart and a warehouse is not size but scope and purpose. A data mart is designed around a specific subject domain (marketing, finance, supply chain) for a specific user group, with pre-aggregated structures and metrics tailored to that audience's needs. It is not simply a smaller warehouse — it reflects deliberate design decisions about what data, at what grain, for what queries, for what users. Option A describes one implementation path (the 'bottom-up' approach) but not a universal truth. Option B invents a vendor requirement that does not exist.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

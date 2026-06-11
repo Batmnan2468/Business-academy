@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is scope creep in an IS implementation project?",
+    "options": [
+      "A pattern of gradual productivity decline as a development team grows beyond an optimal size",
+      "The uncontrolled expansion of project requirements beyond the original agreed-upon scope",
+      "The deliberate process of expanding project deliverables through iterative stakeholder review cycles",
+      "The accumulation of technical debt when developers cut corners to meet project deadlines"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scope creep occurs when requirements expand incrementally beyond what was agreed at project initiation — typically through individually reasonable requests that collectively derail timelines and budgets without formal change control. Option A describes a productivity dynamic sometimes called Brooks's Law, a different concept. Option C describes managed iterative refinement, a controlled process unlike the uncontrolled nature of scope creep. Option D describes technical debt, a code quality concept unrelated to scope management.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does 'user adoption' mean in the context of IS implementation success?",
+    "options": [
+      "The formal executive sign-off process approving a new system for production deployment",
+      "The technical phase where developers confirm the system meets all specified performance requirements",
+      "The degree to which employees actually use the new IS and integrate it into their daily work behavior",
+      "The process of obtaining regulatory approval before a new system can begin processing customer data"
+    ],
+    "correctIndex": 2,
+    "explanation": "User adoption measures whether employees use the system as intended and whether it actually changes how work gets done — it is distinct from technical deployment. A system can be technically flawless and executive-approved yet still fail if users avoid it or work around it. Option A describes deployment governance sign-off, a decision process rather than a usage measure. Option B describes performance or user acceptance testing, a quality gate that precedes adoption. Option D describes regulatory compliance processes unrelated to internal behavioral adoption.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why is requirements gathering considered a critical early phase of IS implementation projects?",
+    "options": [
+      "Errors discovered in requirements are far cheaper to fix than equivalent errors found after development begins",
+      "Requirements documents are legally required by IS vendors before any implementation contract can be signed",
+      "Gathering requirements is when the project team first formally introduces itself to business stakeholders",
+      "Requirements are used to calculate the project budget and must be finalized before any funding is approved"
+    ],
+    "correctIndex": 0,
+    "explanation": "The cost of correcting a misunderstood requirement grows exponentially the later it is discovered — an error caught during requirements review might take hours to fix, while the same error uncovered in production can require months of rework. This principle is often called the 'rule of tens' in software project management. Option B is false; vendor contracts do not universally require formal requirements documents in a specific format. Option C is a procedural assumption that is not the purpose of requirements gathering. Option D describes a budgeting step that may reference requirements but is not their primary purpose.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary structural difference between waterfall and agile IS development methodologies?",
+    "options": [
+      "Waterfall is used by internal IT teams while agile is used when development is outsourced to external vendors",
+      "Waterfall produces higher-quality software by requiring formal testing at the completion of each phase",
+      "Waterfall requires a larger development team while agile operates with smaller, more specialized pods",
+      "Waterfall completes each phase sequentially before the next begins; agile delivers working software in short iterative cycles"
+    ],
+    "correctIndex": 3,
+    "explanation": "Waterfall moves linearly through requirements, design, build, test, and deploy, with each phase signed off before the next starts. Agile delivers working software in short sprints with continuous feedback and adaptation between cycles. Option A is false; both methodologies are used in in-house and outsourced contexts. Option B is not a structural difference — agile also incorporates testing throughout each sprint. Option C makes a false generalization about team size; both methodologies scale across team configurations.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Six months into an ERP implementation, a company discovers that the vendor's standard pricing module cannot accommodate the firm's multi-tiered distributor pricing logic without significant custom development. This was not anticipated in the project plan. Which IS project risk has materialized?",
+    "options": [
+      "Requirements risk — critical business processes were not fully analyzed before vendor selection, leaving capability gaps undiscovered",
+      "Vendor risk — the ERP vendor misrepresented the system's pricing capabilities during the sales demonstration process",
+      "Integration risk — the ERP pricing module cannot connect to the company's existing customer master data system",
+      "Resource risk — the implementation team lacks developers with sufficient ERP customization expertise to proceed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Requirements risk materialized because the firm's unique pricing logic was not documented during vendor evaluation — if it had been, the incompatibility would have surfaced before contract signing rather than six months in. This is the most common and costly IS project risk pattern. Option B may be partially true but assumes deception; the scenario is equally consistent with an undisclosed complexity on the customer side. Option C describes integration failure unrelated to pricing logic incompatibility. Option D describes a staffing concern that is secondary to the discovery of the underlying requirements gap.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing company deploys a new ERP system. On go-live day, production supervisors cannot locate the shift-output reports they relied on daily in the old system and begin tracking production on personal spreadsheets within hours. What is the most likely root cause?",
+    "options": [
+      "The ERP vendor failed to migrate historical report templates from the legacy system as required by contract",
+      "Change management was inadequate — supervisors were not trained on how to navigate reports in the new system",
+      "The project team went live before completing user acceptance testing with production supervisors",
+      "Senior leadership did not communicate the business rationale for the ERP transition to operations staff"
+    ],
+    "correctIndex": 1,
+    "explanation": "Supervisors reverting to spreadsheets on day one is a textbook user adoption failure caused by insufficient change management — specifically, inadequate training on how to navigate the new system and locate equivalent reports. Option A is speculative; standard ERP deployments include reporting configuration and go-live scope is contractually defined. Option C describes incomplete testing, which would manifest as system errors rather than navigational confusion. Option D describes communications, a component of change management, but not the direct cause of the specific navigational failure described.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does organizational change management differ from user training in an IS implementation?",
+    "options": [
+      "Change management is performed by external consultants while training is delivered by internal IT staff",
+      "Change management occurs before implementation kick-off while training occurs exclusively after go-live",
+      "Change management is mandatory for large enterprise projects while training is discretionary for experienced users",
+      "Change management addresses cultural, political, and emotional dimensions of transition; training builds system-specific skills"
+    ],
+    "correctIndex": 3,
+    "explanation": "Training gives people the technical skills to operate the system — navigation, data entry, report generation. Change management addresses the broader organizational transformation: managing resistance, communicating the reasons for change, realigning incentives, and helping people through the psychological transition. An organization can train users perfectly and still fail at adoption if underlying resistance and cultural barriers are unaddressed. Options A and B make false generalizations about roles and timing. Option C incorrectly treats change management as optional based on project scale.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A project manager reports that an ERP implementation is 90% complete, on schedule, and under budget. Three months later, the remaining 10% takes 14 more months and consumes 70% of the original total budget. What planning error does this scenario represent?",
+    "options": [
+      "Optimism bias — project managers systematically underreport remaining risk when presenting status to executives",
+      "Scope lock — the project froze requirements too early, forcing expensive late-stage changes to address business gaps",
+      "The '90% done' fallacy — system integration, data migration, and UAT are disproportionately complex and consistently underestimated",
+      "Vendor underperformance — the third-party implementation team failed to deliver promised functionality in the final phase"
+    ],
+    "correctIndex": 2,
+    "explanation": "The '90% done' problem is a well-documented IS project pattern: early phases feel controlled and linear, but system integration, data migration, user acceptance testing, and production hardening are where hidden complexity surfaces and schedules collapse — often taking as long as all prior phases combined. Option A describes cognitive bias that is real but doesn't explain why the final 10% is structurally disproportionate across projects. Option B describes a requirements process error that is a separate risk type. Option D attributes blame to the vendor without evidence and doesn't explain the pattern's consistency across the industry.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A global pharmaceutical company replaces its clinical trial management system across 42 countries in a single weekend cutover. A data migration error corrupts trial records in 12 countries and clinical operations halt for 11 days. Which risk, specific to the big bang approach, directly caused this magnitude of impact?",
+    "options": [
+      "Simultaneous failure exposure — a single cutover event means defects affect all regions before they can be detected and contained",
+      "Vendor concentration risk — the implementation partner's leverage over a global deployment exceeded manageable limits",
+      "Parallel running cost — maintaining two systems during cutover required infrastructure the company had not provisioned",
+      "Training compression risk — training thousands of users simultaneously reduced the quality of preparation in each session"
+    ],
+    "correctIndex": 0,
+    "explanation": "The big bang approach concentrates all risk into one event — when the migration defect emerged, there was no functioning fallback system and no unaffected regions continuing to operate normally. A phased rollout would have exposed the issue in one or two countries while the remaining 40 continued. Option B describes a procurement risk independent of rollout strategy. Option C mischaracterizes big bang implementations — extended parallel running is more characteristic of phased approaches. Option D is a training logistics concern that is addressable independently of the rollout strategy choice.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Research consistently shows that large IS projects in the public sector experience larger and more frequent cost overruns than comparable private sector projects. Which factor most directly explains this pattern?",
+    "options": [
+      "Public sector IT departments have less technical expertise than private sector peers due to lower compensation levels",
+      "Public sector projects face weaker scope control because political commitments make descoping features difficult",
+      "Public sector procurement rules require selecting the lowest-cost vendor, resulting in underqualified implementers",
+      "Private sector projects use cloud-native architectures that are inherently less prone to implementation complexity"
+    ],
+    "correctIndex": 1,
+    "explanation": "In public sector projects, scope is politically constrained — features promised to legislators, citizens, or agency heads are difficult to remove even when they threaten timelines and budgets. Private sector projects can make hard scope trade-offs without public accountability, enabling tighter budget management. Option A is a stereotype without consistent empirical support; technical talent differences do not explain the systematic pattern. Option C reflects some truth in specific cases but is not the dominant factor in documented overrun patterns. Option D is false — cloud-native architectures introduce their own implementation complexities.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company must replace its core billing system. The CFO prefers a phased rollout by customer segment while the CTO argues for a single full cutover. What is the most compelling argument for phasing that the CTO's position does not adequately weigh?",
+    "options": [
+      "A phased approach spreads vendor fees across fiscal years, making the project easier to budget incrementally",
+      "A phased approach keeps the legacy system available longer, giving resistant users more time to adapt gradually",
+      "A phased approach allows production defects in billing logic to be identified and fixed before affecting all customers",
+      "A phased approach is required by financial regulators when billing systems process consumer payment account data"
+    ],
+    "correctIndex": 2,
+    "explanation": "The strongest case for phasing is production risk containment: billing defects — edge cases in account types, regulatory formats, or unusual fee structures — only emerge under real customer data conditions that testing environments cannot fully replicate. Catching them in one segment protects the rest. Option A is not reliably true; phased approaches often cost more in total due to extended parallel system operation. Option B describes a secondary user experience benefit that understates the risk management rationale. Option D is false as a general regulatory rule for billing system replacements.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital deploys a new patient scheduling system. Post-go-live, nurses report the system cannot create same-day urgent care slots — a workflow performed hundreds of times daily. The IS vendor confirms this capability was absent from the requirements document and built exactly what was specified. Who bears primary responsibility and what failure occurred?",
+    "options": [
+      "The vendor bears primary responsibility for not auditing common clinical workflows during implementation planning",
+      "The hospital's IT department bears primary responsibility for lacking the clinical knowledge to document nursing workflows",
+      "Shared responsibility exists because neither party reviewed the requirements against actual workflows before sign-off",
+      "The hospital's implementation team bears primary responsibility for requirements elicitation failure — critical workflows were not captured before development"
+    ],
+    "correctIndex": 3,
+    "explanation": "Requirements elicitation failure occurs when the implementation team does not sufficiently engage frontline end users — nurses who perform same-day scheduling daily — to discover their actual workflows during discovery. The vendor built exactly what was specified; the failure was in the specification process itself. Option A shifts responsibility to the vendor, who cannot be expected to know undocumented operational workflows. Option B correctly identifies the IT department's role but frames it as a knowledge gap rather than a process failure. Option C diffuses responsibility when the implementation team holds the primary obligation for completeness in requirements elicitation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "After deploying a new claims management system, an insurance company finds that adjusters use personal spreadsheets to manage caseloads because the system's search function takes 45 seconds per query. Six months later, claims data is split between the official system and hundreds of employee-created spreadsheets across the organization. What IS implementation risk has materialized?",
+    "options": [
+      "Data fragmentation — the search performance issue caused structured data to migrate into unstructured document formats",
+      "Technical debt — deferred performance improvements have compounded into a system that cannot support daily operations",
+      "Change management failure — adjusters were not adequately trained to use the official system efficiently",
+      "Shadow IT — unsanctioned tools have become embedded in operations, creating parallel data flows outside IT governance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Shadow IT is the phenomenon where employees adopt unsanctioned tools to work around official system limitations, creating parallel workflows outside IT governance, compliance oversight, and data integrity controls. In regulated industries like insurance, this creates audit trail and regulatory exposure risks. Option A describes a consequence of shadow IT rather than naming the risk category. Option B identifies a technical root cause (slow search) but names the underlying issue rather than the IS implementation risk that has materialized. Option C suggests training would resolve what is fundamentally a performance problem — adjusters chose spreadsheets because the system is too slow, not because they lack skills.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Research on IS project success identifies executive sponsorship as the strongest predictor of positive outcomes. A company's CFO approves the budget for a new financial systems implementation but delegates all oversight to a mid-level IT project manager. Six months later, business unit resistance is mounting and prioritization decisions are stalled. What does this illustrate?",
+    "options": [
+      "CFOs should not sponsor IS projects because financial priorities conflict with the operational change management requirements",
+      "Budget approval alone is insufficient executive sponsorship — active engagement, escalation authority, and cross-functional influence are also required",
+      "The IT project manager should have been elevated to a VP-level position to have adequate organizational authority",
+      "The project required a board-level steering committee rather than delegation to the IT department to succeed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Executive sponsorship requires more than signing a budget — it demands active organizational visibility, authority to resolve cross-functional conflicts, credibility to overcome resistance, and willingness to make scope trade-offs. A sponsor invisible to the organization cannot counter resistance or unblock stalled prioritization decisions. Option A is wrong; CFOs successfully sponsor financial IS projects regularly when they remain actively engaged. Option C conflates role title with the cross-functional authority the sponsor needs to provide directly. Option D overstates the board's appropriate operational involvement in project governance.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Six months after a new procurement system goes live, it has generated $4M in annual savings, but user satisfaction scores are in the bottom quartile, three key supplier integrations are still incomplete, and the IT help desk handles 400 procurement-related calls per week. The project sponsor declares success because the project finished under budget. What is the flaw in this assessment?",
+    "options": [
+      "Under-budget delivery is only valid as a success metric when the original budget was set using rigorous estimation methods",
+      "The $4M savings figure should not be recognized until the system has operated for a complete fiscal year",
+      "IS implementation success is multidimensional — financial return, adoption quality, integration completeness, and operational burden each matter",
+      "Post-implementation reviews should be conducted by an independent third party rather than the project sponsor"
+    ],
+    "correctIndex": 2,
+    "explanation": "Declaring success based on a single financial metric while ignoring poor user experience, incomplete integrations, and high support burden means the system has not delivered its full intended value. IS implementations succeed when they transform operations — and the indicators here suggest the transformation is incomplete. Option A introduces an arbitrary methodology requirement that doesn't address what's wrong with the evaluation. Option B applies an arbitrary timeline to savings recognition that is not standard practice. Option D raises a governance observation that is secondary to the substantive problem with the evaluation criteria used.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]
