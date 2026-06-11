@@ -37,3 +37,12 @@ export interface UserProgress {
   lastAccessedAt: string
   percentComplete: number
 }
+
+export interface UnitTestQuestion {
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  topicSlug: string
+  topicTitle: string
+}

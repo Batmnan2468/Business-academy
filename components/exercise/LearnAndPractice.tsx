@@ -1,8 +1,9 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import PracticeQuestion from './PracticeQuestion'
 import { onTopicCompleted } from '@/lib/mastery'
+import { getTopicState, setTopicState } from '@/lib/topicState'
 
 const MASTERY_STREAK = 4
 
@@ -60,9 +61,30 @@ const DIFFICULTIES = [
 ]
 
 export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, nextTopic }: Props) {
-  const [mode, setMode] = useState<'learn' | 'practice'>(learn ? 'learn' : 'practice')
+  const initialMode = learn ? 'learn' : 'practice'
+  const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
   const [difficulty, setDifficulty] = useState('medium')
+
+  // Transition topic state on mount
+  useEffect(() => {
+    const current = getTopicState(courseSlug, topicSlug)
+    if (current === 'untouched') {
+      setTopicState(courseSlug, topicSlug, 'inProgress')
+    } else if (current === 'practiced' && initialMode === 'practice') {
+      // Starting directly in practice mode is a new session — risk of regression
+      setTopicState(courseSlug, topicSlug, 'inProgress')
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function startPractice() {
+    const current = getTopicState(courseSlug, topicSlug)
+    if (current === 'practiced') {
+      setTopicState(courseSlug, topicSlug, 'inProgress')
+    }
+    setMode('practice')
+  }
 
   function handleAnswer(isCorrect: boolean) {
     setSession((prev) => {
@@ -80,10 +102,15 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   function handleMasteryTransition() {
     markTopicComplete(courseSlug, topicSlug)
     onTopicCompleted(courseSlug, topicSlug)
+    setTopicState(courseSlug, topicSlug, 'practiced')
     setSession((prev) => ({ ...prev, showMastery: true }))
   }
 
   function handleKeepPracticing() {
+    const current = getTopicState(courseSlug, topicSlug)
+    if (current === 'practiced') {
+      setTopicState(courseSlug, topicSlug, 'inProgress')
+    }
     setSession(INITIAL_SESSION)
   }
 
@@ -104,14 +131,24 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
 
     return (
       <div>
-        {learn && (
-          <button
-            onClick={() => setMode('learn')}
-            className="text-sm text-blue-500 hover:underline mb-8 inline-block"
-          >
-            ← Review explanation
-          </button>
-        )}
+        {/* Header: back link (left) + session score (right) */}
+        <div className="flex items-center justify-between mb-6">
+          {learn ? (
+            <button
+              onClick={() => setMode('learn')}
+              className="text-sm text-blue-500 hover:underline"
+            >
+              ← Review explanation
+            </button>
+          ) : (
+            <span />
+          )}
+          <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">
+            Session:{' '}
+            <span className="font-semibold text-gray-700 dark:text-gray-300">{session.correct}</span>
+            {' '}correct / {session.total} answered
+          </span>
+        </div>
 
         {session.total > 0 && (
           <ScoreBar
@@ -164,7 +201,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
       <div className="flex items-center gap-4 flex-wrap">
         <DifficultySelector value={difficulty} onChange={setDifficulty} />
         <button
-          onClick={() => setMode('practice')}
+          onClick={startPractice}
           className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
         >
           Start Practicing →
@@ -236,12 +273,12 @@ function MasteryScreen({
 
   return (
     <div className="text-center py-6">
-      <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-3xl mx-auto mb-5">
-        🎯
+      <div className="w-16 h-16 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-3xl mx-auto mb-5">
+        ⭐
       </div>
 
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-        Topic mastered!
+        Topic practiced!
       </h2>
       <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">
         4 correct answers in a row on{' '}

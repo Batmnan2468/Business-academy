@@ -29,6 +29,7 @@ export default function HomePage() {
                   description={course.description}
                   level={course.level}
                   totalTopics={getAllTopics(course).length}
+                  topicSlugs={getAllTopics(course).map((t) => t.slug)}
                 />
               </Link>
             ))}

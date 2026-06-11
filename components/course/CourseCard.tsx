@@ -9,6 +9,7 @@ interface Props {
   description: string
   level: string
   totalTopics: number
+  topicSlugs: string[]
 }
 
 const levelColors: Record<string, string> = {
@@ -17,22 +18,34 @@ const levelColors: Record<string, string> = {
   advanced: 'bg-red-100 text-red-700',
 }
 
-export default function CourseCard({ courseSlug, subject, title, description, level, totalTopics }: Props) {
-  const [completedCount, setCompletedCount] = useState<number | null>(null)
+export default function CourseCard({
+  courseSlug,
+  subject,
+  title,
+  description,
+  level,
+  totalTopics,
+  topicSlugs,
+}: Props) {
+  const [practicedCount, setPracticedCount] = useState<number | null>(null)
 
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(`completed:${courseSlug}`)
-      const arr: string[] = raw ? JSON.parse(raw) : []
-      setCompletedCount(arr.length)
+      let count = 0
+      for (const slug of topicSlugs) {
+        const state = localStorage.getItem(`topicState_${courseSlug}_${slug}`) ?? 'untouched'
+        if (state === 'practiced' || state === 'mastered') count++
+      }
+      setPracticedCount(count)
     } catch {
-      setCompletedCount(0)
+      setPracticedCount(0)
     }
-  }, [courseSlug])
+  }, [courseSlug, topicSlugs])
 
-  const pct = completedCount !== null && totalTopics > 0
-    ? Math.round((completedCount / totalTopics) * 100)
-    : null
+  const pct =
+    practicedCount !== null && totalTopics > 0
+      ? Math.round((practicedCount / totalTopics) * 100)
+      : null
 
   return (
     <div className="rounded-2xl border border-gray-100 p-5 hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col">
@@ -48,20 +61,32 @@ export default function CourseCard({ courseSlug, subject, title, description, le
       </div>
       <h3 className="font-semibold text-base leading-snug mb-1">{title}</h3>
       <p className="text-sm text-gray-500 line-clamp-2 flex-1">{description}</p>
-      <div className="mt-4 flex items-center justify-between">
-        <p className="text-xs text-gray-400">{totalTopics} topics</p>
-        {pct !== null && pct > 0 && (
-          <p className="text-xs font-medium text-blue-500">{pct}% complete</p>
-        )}
-      </div>
-      {pct !== null && pct > 0 && (
-        <div className="mt-2 h-1 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+
+      <div className="mt-4">
+        <div className="flex items-center justify-between mb-1.5">
+          <p className="text-xs text-gray-400">
+            {practicedCount !== null ? (
+              <>
+                <span className="font-medium text-gray-600">{practicedCount}</span>
+                /{totalTopics} topics practiced
+              </>
+            ) : (
+              <>{totalTopics} topics</>
+            )}
+          </p>
+          {pct !== null && pct > 0 && (
+            <p className="text-xs font-medium" style={{ color: '#ca8a04' }}>
+              {pct}%
+            </p>
+          )}
+        </div>
+        <div className="h-1 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
           <div
-            className="h-full bg-blue-500 rounded-full transition-all duration-500"
-            style={{ width: `${pct}%` }}
+            className="h-full rounded-full transition-all duration-500"
+            style={{ width: `${pct ?? 0}%`, backgroundColor: '#eab308' }}
           />
         </div>
-      )}
+      </div>
     </div>
   )
 }
