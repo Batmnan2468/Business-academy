@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is robotic process automation (RPA)?",
+    "options": [
+      "Software bots that mimic human interactions with digital interfaces to automate tasks",
+      "Physical robots that replace assembly line workers in manufacturing environments",
+      "AI models that rewrite business processes based on machine learning algorithms",
+      "Cloud platforms that automatically provision and scale IT infrastructure resources"
+    ],
+    "correctIndex": 0,
+    "explanation": "RPA uses software robots to interact with applications — clicking, typing, copying data — exactly as a human would, without changing the underlying systems. Option B confuses software robots with physical industrial robots; RPA is entirely software-based. Option C describes an AI-driven process redesign, which is more transformative than RPA's surface-level automation. Option D describes cloud auto-scaling, which is infrastructure management, not process automation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which task is most suitable for RPA automation?",
+    "options": [
+      "Negotiating contract terms with suppliers based on shifting market conditions",
+      "Designing a new marketing campaign strategy for a product launch",
+      "Copying invoice data from PDF emails into an accounting system spreadsheet",
+      "Counseling employees on career development paths within the organization"
+    ],
+    "correctIndex": 2,
+    "explanation": "RPA excels at high-volume, repetitive, rules-based tasks with structured data — extracting and entering invoice data is an ideal fit. Option A requires negotiation judgment bots cannot perform. Option B requires creative strategy thinking beyond RPA's capabilities. Option D involves relationship skills and contextual understanding that automation cannot replicate.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a chatbot primarily use to determine how to respond to a user's message?",
+    "options": [
+      "Patterns learned from training data or rules that map intents to appropriate responses",
+      "Direct database queries that retrieve pre-written answers by matching keywords exactly",
+      "Live human agents who review each message and type responses in real time",
+      "The user's account history, which determines which response template is displayed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Modern chatbots use either NLP models trained to recognize user intent or decision-tree rules that map recognized intents to responses. Option B describes a simple keyword lookup — not how modern chatbots determine responses as a general definition. Option C describes live agent support, not a chatbot. Option D describes personalization logic that may supplement a chatbot but is not the core response mechanism.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a 'human-in-the-loop' system?",
+    "options": [
+      "A fully automated system that requires no human review after initial configuration",
+      "An automated workflow that escalates uncertain or high-stakes decisions to a human",
+      "A system where humans manually perform every step without any automation assistance",
+      "An AI model that is trained using feedback collected from customer surveys"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human-in-the-loop means automation handles the routine cases while humans review edge cases, exceptions, or decisions above a risk threshold. Option A describes full automation, which is the opposite of human-in-the-loop. Option C describes fully manual work with no automation. Option D describes a model training approach (human feedback), not a workflow design pattern.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bank uses RPA to process routine loan applications, but some applications get stuck in the bot queue for days when they contain unexpected document formats. What type of automation limitation does this illustrate?",
+    "options": [
+      "RPA is brittle when inputs deviate from the structured formats it was designed for",
+      "RPA bots lack sufficient processing speed to handle high document volumes",
+      "The bank's network security policies prevent bots from accessing document storage",
+      "Loan applications require regulatory approval before any automation can process them"
+    ],
+    "correctIndex": 0,
+    "explanation": "RPA's key weakness is brittleness — bots follow exact rules and fail or stall when inputs vary from expected formats. This is a core limitation distinguishing RPA from more adaptive AI. Option B is wrong; speed is generally a strength of RPA, not a bottleneck. Option C describes a security configuration issue, not an inherent RPA limitation. Option D is factually incorrect — no blanket regulation prohibits automated loan processing.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan deploys a chatbot to handle customer inquiries about account balances and recent transactions. For which inquiry type should the chatbot be designed to automatically escalate to a human agent?",
+    "options": [
+      "A customer asking for their current checking account balance",
+      "A customer requesting the bank's hours of operation for a local branch",
+      "A customer disputing a transaction they claim they did not authorize",
+      "A customer asking how to set up automatic bill payment through the app"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fraud disputes require investigation, empathy, regulatory compliance, and judgment — tasks that demand human expertise and accountability. Options A, B, and D are straightforward informational requests the bot can handle reliably with structured data lookups. The design principle is: escalate when stakes are high, situations are ambiguous, or emotional sensitivity is required.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does attended RPA differ from unattended RPA?",
+    "options": [
+      "Attended RPA runs on cloud servers while unattended RPA runs on employee desktops",
+      "Attended RPA is triggered and works alongside humans; unattended RPA runs autonomously",
+      "Attended RPA requires vendor support contracts while unattended RPA is self-managed",
+      "Attended RPA processes structured data only while unattended RPA handles unstructured data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Attended bots run on a user's machine, activated by the employee to assist mid-task (e.g., auto-filling a form). Unattended bots run on servers without human triggers, typically in batch processing overnight. Option A reverses the infrastructure relationship — the attended/unattended distinction is about human involvement, not deployment location. Options C and D describe unrelated dimensions of RPA.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company claims its new AI system will 'eliminate' the risks associated with human error in financial reporting. What is the most significant flaw in this claim?",
+    "options": [
+      "AI systems are prohibited from performing financial reporting tasks under SEC regulations",
+      "Financial reporting errors are too rare to justify the cost of AI implementation",
+      "Eliminating human error would require processing speeds no current hardware supports",
+      "AI systems introduce their own error types — including data quality and model errors"
+    ],
+    "correctIndex": 3,
+    "explanation": "Replacing human error with automation does not eliminate error — it substitutes one error profile for another. AI systems can produce systematic errors from biased training data, incorrect model assumptions, or poor data quality at scale. Option A is false; AI tools are widely used in financial reporting. Option B is factually wrong — financial reporting errors have material consequences and are not rare. Option C conflates processing speed with error rates.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company implements RPA to process shipping manifests. After six months, a vendor changes the format of their manifest PDF. What is the most likely outcome?",
+    "options": [
+      "The RPA bot adapts automatically by relearning the new format from examples",
+      "The RPA bot fails or produces errors because it was configured for the previous format",
+      "The RPA bot continues working normally because PDFs are format-independent",
+      "The RPA vendor is contractually required to update the bot at no additional cost"
+    ],
+    "correctIndex": 1,
+    "explanation": "RPA bots are configured for specific field locations and data structures. A format change breaks the bot's ability to locate and extract fields correctly, requiring reconfiguration. Option A describes adaptive ML behavior — RPA does not self-retrain. Option C is wrong; PDF content and layout are not format-independent from the bot's perspective. Option D is a business negotiation matter, not a technical certainty.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturer uses a human-in-the-loop AI system to approve quality control exceptions. Over time, the human reviewer approves every exception the AI flags, without evaluating them. What systemic risk does this create?",
+    "options": [
+      "The AI model will degrade because it stops receiving corrective feedback from reviews",
+      "The human review step loses its value, creating automation bias and accountability gaps",
+      "The manufacturer will exceed the volume of exceptions permitted by its quality standard",
+      "Regulators will classify the process as fully automated and apply stricter audit rules"
+    ],
+    "correctIndex": 1,
+    "explanation": "When humans rubber-stamp AI outputs without genuine review, automation bias sets in — the intended safeguard becomes theater. This undermines the purpose of human-in-the-loop design and creates accountability gaps when the AI makes errors. Option A describes a separate issue around model feedback loops that is secondary to the governance failure. Option C conflates exception volume limits with process design. Option D is speculative and not how regulators generally classify processes.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Walmart uses RPA to reconcile supplier invoices against purchase orders across thousands of transactions daily. A manager proposes replacing this with a rules-based expert system instead. What is the strongest argument for keeping RPA?",
+    "options": [
+      "RPA is more accurate than expert systems when processing structured numeric data",
+      "RPA bots are faster to configure and require less vendor licensing than expert systems",
+      "RPA works within existing systems without requiring process redesign or integration",
+      "Expert systems cannot handle the volume of transactions Walmart processes daily"
+    ],
+    "correctIndex": 2,
+    "explanation": "RPA's key advantage is non-invasiveness — it interacts with existing UI layers and requires no changes to legacy systems. An expert system typically requires structured data integration with those systems. Option A is not generally true; accuracy depends on the specific implementation. Option B is a business consideration that may or may not apply. Option D is false — expert systems can be built to handle high volumes when properly architected.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company deploys an AI-powered chatbot to resolve customer service tickets. The chatbot resolves 70% of tickets autonomously, but customer satisfaction scores fall despite faster resolution times. What is the most likely explanation?",
+    "options": [
+      "The chatbot is resolving tickets incorrectly, producing higher error rates than human agents",
+      "Faster resolution times reduce repeat customer contact, lowering overall satisfaction scores",
+      "The chatbot is only routing tickets to humans rather than resolving them autonomously",
+      "Customers perceive automated responses as less empathetic, reducing perceived service quality"
+    ],
+    "correctIndex": 3,
+    "explanation": "Speed and resolution rate don't capture emotional satisfaction. Research on service quality shows customers value feeling heard and understood — chatbot responses, even when technically correct, often feel transactional and impersonal. Option A is possible but contradicts the given data point that 70% are resolved. Option B proposes an implausible mechanism — fewer repeat contacts would not inherently reduce satisfaction. Option C contradicts the stated 70% autonomous resolution rate.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which risk is most unique to large-scale RPA deployments compared to manual processes?",
+    "options": [
+      "A single misconfigured bot can systematically replicate errors across thousands of records",
+      "Individual errors are more visible because bots generate detailed audit logs",
+      "RPA increases the need for human staff to monitor system performance continuously",
+      "Vendor lock-in prevents companies from switching to manual processes if needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scale amplification is RPA's most distinctive risk: a rule error that a human might catch on the second or third instance can silently propagate across an entire batch before anyone notices. Option B is actually a benefit of RPA, not a risk. Option C may be partially true for oversight but is not uniquely tied to RPA's core risk profile. Option D describes a business strategy risk but is not operationally unique to RPA versus other software.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital system uses a human-in-the-loop AI to flag patients at high risk of sepsis. The AI flags 50 patients per shift, but nurses are too busy to review all flags, so many go unactioned. What design flaw does this reveal?",
+    "options": [
+      "The AI model is not sensitive enough and should be set to flag more patients per shift",
+      "Human-in-the-loop systems are inappropriate for clinical settings due to liability concerns",
+      "The hospital's IT infrastructure cannot support the real-time inference the AI requires",
+      "The volume of AI flags exceeds the human capacity available to act on them meaningfully"
+    ],
+    "correctIndex": 3,
+    "explanation": "Human-in-the-loop systems fail when the human capacity constraint is not factored into the alert volume. If humans cannot act on the output, the loop is broken. This is an alert fatigue and workflow design problem, not an AI accuracy problem. Option A would worsen the issue by increasing the number of unreviewed flags. Option B overstates liability concerns and does not address the workload issue. Option C describes an infrastructure problem not supported by the scenario description.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company automates its accounts payable process using RPA and reports a 60% reduction in processing costs. A year later, it begins an ERP modernization project. What is the key risk the RPA investment introduces?",
+    "options": [
+      "The RPA bots will resist integration with the new ERP because of incompatible licensing",
+      "The ERP vendor may require removal of RPA tools as a condition of the implementation",
+      "The RPA layer may become obsolete or require expensive reconfiguration after the ERP changes",
+      "RPA cost savings will offset ERP project justification, making the upgrade harder to approve"
+    ],
+    "correctIndex": 2,
+    "explanation": "RPA is often applied as a workaround for legacy system limitations. When the underlying system is replaced or significantly upgraded, the bots — which were configured for the old system's interface — must be reconfigured or retired, potentially erasing the cost savings. Option A is false; licensing incompatibility is not a typical ERP-RPA conflict. Option B is speculative and not a common contractual requirement. Option D conflates financial modeling with technical risk.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

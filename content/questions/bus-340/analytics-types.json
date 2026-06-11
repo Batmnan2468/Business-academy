@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which of the following most accurately defines descriptive analytics?",
+    "options": [
+      "The use of statistical summaries and historical data to describe what has happened in a business",
+      "The application of machine learning models to forecast future trends from current data patterns",
+      "A root-cause analysis process that identifies why a business outcome occurred as it did",
+      "An optimization technique that recommends specific actions to achieve a desired business outcome"
+    ],
+    "correctIndex": 0,
+    "explanation": "Descriptive analytics answers 'what happened?' by summarizing historical data through metrics, reports, and visualizations — it describes past performance without inferring causes or predicting futures. Option B describes predictive analytics, which forecasts forward from current data. Option C describes diagnostic analytics, which explains why something occurred. Option D describes prescriptive analytics, which recommends specific actions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A hospital uses a system that analyzes each patient's symptoms, vitals, and medical history to recommend specific treatment protocols. Which type of analytics does this represent?",
+    "options": [
+      "Descriptive analytics, because the system summarizes historical patient data for clinical review",
+      "Diagnostic analytics, because the system identifies the underlying cause of each patient's condition",
+      "Prescriptive analytics, because the system recommends specific actions to achieve a desired outcome",
+      "Predictive analytics, because the system forecasts which conditions a patient is likely to develop"
+    ],
+    "correctIndex": 2,
+    "explanation": "Prescriptive analytics goes beyond predicting outcomes to recommending specific actions — in this case, suggesting which treatment protocol to administer. Option A is wrong because descriptive analytics reports past events rather than generating treatment recommendations. Option B misapplies diagnostic analytics, which identifies root causes rather than prescribing solutions. Option D is wrong because the system recommends treatments, not forecasts of future conditions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary distinction between descriptive and diagnostic analytics?",
+    "options": [
+      "Descriptive analytics is used only by executives; diagnostic analytics is used by data scientists",
+      "Descriptive analytics reports what happened; diagnostic analytics investigates why it happened",
+      "Descriptive analytics uses real-time data; diagnostic analytics uses only historical records",
+      "Descriptive analytics requires machine learning; diagnostic analytics uses simpler statistical methods"
+    ],
+    "correctIndex": 1,
+    "explanation": "The distinction lies in the question each type answers — descriptive covers 'what happened' and diagnostic covers 'why it happened.' Option A incorrectly assigns each type to specific organizational roles. Option C reverses the typical data recency relationship; descriptive analytics frequently uses historical data. Option D inverts the complexity relationship — machine learning is more associated with predictive and prescriptive analytics, not descriptive.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which description correctly characterizes diagnostic analytics?",
+    "options": [
+      "Building a regression model to forecast quarterly sales based on historical demand patterns",
+      "Generating a monthly summary dashboard of store-level revenue across all retail locations",
+      "Using an algorithm to recommend product bundling strategies that maximize checkout revenue",
+      "Drilling into data to determine the root cause of an unexpected drop in customer retention"
+    ],
+    "correctIndex": 3,
+    "explanation": "Diagnostic analytics addresses 'why did this happen?' by examining data for causal factors — such as determining that retention dropped because a competitor launched a lower-priced product. Option A describes predictive analytics, which builds forward-looking models. Option B describes descriptive analytics, which summarizes past performance. Option C describes prescriptive analytics, which recommends optimization actions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix's recommendation engine analyzes a viewer's watch history, ratings, and browsing behavior to suggest content the viewer is likely to enjoy. Which analytics type best describes this system?",
+    "options": [
+      "Descriptive analytics, summarizing each viewer's historical content preferences for personal reference",
+      "Diagnostic analytics, identifying why certain content received higher ratings from specific viewers",
+      "Predictive analytics, forecasting which content a viewer will enjoy based on behavioral patterns",
+      "Prescriptive analytics, optimizing Netflix's entire content library to maximize platform-wide engagement"
+    ],
+    "correctIndex": 2,
+    "explanation": "The recommendation engine uses past behavior to forecast future preferences — predicting which content will satisfy the individual viewer next. Option A is incorrect because descriptive analytics reports what happened, not what a viewer will prefer going forward. Option B is incorrect because the system generates recommendations, not root-cause investigations into ratings. Option D is incorrect because prescriptive analytics optimizes decisions at a higher level; this system personalizes predictions for individual users rather than optimizing global content strategy.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "After a 20% sales decline in Q3, a company generates a breakdown of Q3 revenue by product line, region, and customer segment to understand the scope of the drop. Which analytics type is being used?",
+    "options": [
+      "Descriptive analytics, since the analysis summarizes what happened during Q3 by breaking down the data",
+      "Diagnostic analytics, since the analysis is specifically designed to identify the root cause of the decline",
+      "Predictive analytics, since the company is modeling what future quarters will look like given Q3 trends",
+      "Prescriptive analytics, since the breakdown informs strategic recommendations to reverse the decline"
+    ],
+    "correctIndex": 0,
+    "explanation": "Breaking down revenue by dimension is descriptive analytics — it characterizes what the Q3 numbers looked like across segments. Option B is the most tempting distractor; investigating a decline sounds diagnostic, but generating a dimensional breakdown is still a 'what happened' question. Diagnostic analytics would involve identifying the specific causal factor (e.g., a product recall or a competitor entry). Options C and D reflect later stages of analysis, not the breakdown activity itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company has built a model predicting which customers are likely to churn in the next 30 days. What additional step would convert this capability into prescriptive analytics?",
+    "options": [
+      "Increasing the model's training dataset to improve churn prediction accuracy and reduce false positives",
+      "Adding a dashboard that visualizes churn probability scores by customer segment and acquisition channel",
+      "Running historical backtests to validate the model's predictions against actual past churn events",
+      "Generating recommended retention interventions, such as personalized offers, for each at-risk customer"
+    ],
+    "correctIndex": 3,
+    "explanation": "Predictive analytics identifies who will churn; prescriptive analytics goes further to recommend what action to take — in this case, generating tailored retention offers for flagged customers. Option A improves the predictive model's quality but doesn't add prescriptive capability. Option B adds a descriptive visualization layer but doesn't generate action recommendations. Option C validates the model's accuracy but remains entirely within the predictive analytics domain.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart's weekly operations report shows total units sold, inventory levels, and out-of-stock incidents for each product category. Which type of analytics is this report an example of?",
+    "options": [
+      "Diagnostic analytics, because the report identifies which products caused the most operational disruptions",
+      "Descriptive analytics, because the report summarizes what occurred in Walmart's operations that week",
+      "Prescriptive analytics, because the report guides store managers toward specific restocking decisions",
+      "Predictive analytics, because inventory levels can be used to project future out-of-stock events"
+    ],
+    "correctIndex": 1,
+    "explanation": "Summarizing what occurred — units sold, inventory on hand, stockout frequency — is the defining characteristic of descriptive analytics. Option A misclassifies the report as diagnostic; identifying which products caused disruptions would require root-cause analysis beyond summary metrics. Option C is incorrect because the report presents data but doesn't recommend specific actions. Option D mistakes a potential downstream use of the data (forecasting) for what the report itself does (describe past events).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "UnitedHealth Group finds that diabetic patients who miss two or more follow-up appointments are 3x more likely to be hospitalized within six months — a finding built from ten years of patient records. Which analytics type produced this insight, and what question does it answer?",
+    "options": [
+      "Descriptive analytics; it answers 'how many diabetic patients missed appointments in the past decade'",
+      "Diagnostic analytics; it answers 'why diabetic patients are being hospitalized at higher rates than expected'",
+      "Predictive analytics; it answers 'which patients are likely to face hospitalization given their appointment history'",
+      "Prescriptive analytics; it answers 'which intervention should be used to reduce hospitalization for each patient'"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using historical records to build a model that forecasts future hospitalization risk based on appointment behavior is predictive analytics — it answers 'who is likely to be hospitalized' going forward. Option A is incorrect because the 3x risk multiplier is a forward-looking probability, not a count of past events. Option B is tempting but diagnostic analytics would explain causally why hospitalizations occur, not predict which patients are at elevated future risk. Option D would require the model to recommend specific interventions (call patients, schedule visits), which this scenario does not describe.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data analyst tells their manager: 'We used diagnostic analytics to build a model predicting which marketing leads are most likely to convert to customers in the next quarter.' What is wrong with the analyst's statement?",
+    "options": [
+      "Marketing conversion is not a valid analytics use case and should be handled by the marketing team",
+      "Diagnostic analytics is limited to supply chain and operations and cannot be applied to marketing",
+      "The analyst should have used prescriptive analytics, since predicting conversion implies recommending actions",
+      "The analyst mislabeled the work — predicting future conversion likelihood is predictive analytics, not diagnostic"
+    ],
+    "correctIndex": 3,
+    "explanation": "Predicting which leads will convert in the future is by definition predictive analytics — it forecasts a future outcome from historical patterns. Diagnostic analytics would answer 'why did certain leads convert in the past?' Option A is incorrect; analytics is widely applied in marketing with no basis for excluding it. Option B invents a false domain restriction on diagnostic analytics. Option C is incorrect; the analyst described a prediction, not a recommendation — prescriptive analytics requires the additional step of specifying an action to take.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm finds revenue has declined three quarters in a row, traces the decline to customer complaints about delivery delays, identifies a single regional logistics partner as the cause, and recommends switching to a backup carrier. Which sequence of analytics types did the consultants use?",
+    "options": [
+      "Descriptive → Diagnostic → Prescriptive, moving from what happened to why, then recommending action",
+      "Predictive → Descriptive → Prescriptive, forecasting the decline first, then summarizing it, then recommending a fix",
+      "Diagnostic → Predictive → Descriptive, finding root cause first, then forecasting, then summarizing results",
+      "Prescriptive → Descriptive → Diagnostic, starting with recommendations and validating them through data analysis"
+    ],
+    "correctIndex": 0,
+    "explanation": "The consultants first described the decline (descriptive), then identified the causal chain — delivery delays from one logistics partner (diagnostic) — and finally recommended a specific action (prescriptive). Option B is incorrect because the consultants observed the existing decline rather than forecasting it in advance. Option C places diagnostic analysis before descriptive, reversing the natural flow from identifying the problem to investigating its causes. Option D begins with recommendations, which is backward — prescriptive analytics requires the prior descriptive and diagnostic stages to generate valid recommendations.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial services firm can deploy either a predictive model that flags loan applicants likely to default or a prescriptive system that automatically routes each applicant to the best loan product and pricing tier. What is the key functional difference between these two systems?",
+    "options": [
+      "The predictive model requires more training data and is more expensive to build and maintain over time",
+      "The predictive model identifies risk; the prescriptive system both identifies risk and recommends a specific decision",
+      "The prescriptive system requires human approval for each decision; the predictive model operates autonomously",
+      "The predictive model uses logistic regression; the prescriptive system uses neural networks exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "The functional difference is the scope of output — the predictive model tells the firm who is likely to default (a probability), while the prescriptive system tells the firm what to do about it (routing and pricing). Option A makes an unsupported empirical claim about resource requirements without basis in the scenario. Option C reverses a common reality — prescriptive systems are often automated, while predictive model outputs frequently require human follow-through. Option D makes false technical claims about exclusive algorithm use.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Amazon uses a system that analyzes real-time order velocity, weather patterns, and competitor pricing to automatically adjust warehouse inventory positioning and reorder quantities before demand spikes occur. Which analytics type does this represent?",
+    "options": [
+      "Diagnostic analytics, because the system identifies the root causes of inventory imbalances across warehouses",
+      "Predictive analytics, because the system forecasts demand spikes using real-time and historical data inputs",
+      "Prescriptive analytics, because the system automatically adjusts quantities and positioning to optimize operations",
+      "Descriptive analytics, because the system summarizes real-time order and inventory data for operations teams"
+    ],
+    "correctIndex": 2,
+    "explanation": "Prescriptive analytics is distinguished by its output: specific recommended or automated actions. Amazon's system doesn't just predict demand — it automatically reorders and repositions inventory, which is the action-execution step that defines prescriptive analytics. Option B is the strongest distractor; the system does use forecasting, but the prescriptive component (automated action) is the defining feature of the scenario. Option A is incorrect because the system proactively optimizes rather than investigating past failures. Option D ignores the decision-making and action functions entirely.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A prescriptive analytics system outputs: 'Reduce SKU-4421 inventory by 30% in Southeast stores and reallocate units to Northeast stores by next Tuesday.' A manager asks how the system arrived at this recommendation. What is the correct interpretation?",
+    "options": [
+      "The system ran a historical sales summary showing SKU-4421 performs better in Northern climates",
+      "The system conducted a diagnostic analysis tracing SKU-4421 complaints to a regional packaging defect",
+      "The system built a predictive demand forecast for SKU-4421 and generated this output from forecasting alone",
+      "The system predicted a demand imbalance and then solved an optimization model to recommend efficient reallocation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Prescriptive analytics combines predictive forecasting with an optimization model — first predicting where demand would be high or low, then solving for the best allocation to maximize efficiency. Option A describes a descriptive step that could inform but does not constitute the full prescriptive process. Option B is a diagnostic step that would explain a past problem but not generate a specific forward-looking reallocation recommendation. Option C describes stopping at prediction; the specific quantity-and-deadline instruction proves the system went beyond prediction to optimization.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A business report states: 'Our diagnostic analytics found that total Q4 revenue was $42M, broken down by product line: hardware $18M, software $15M, and services $9M.' What is the error in this statement?",
+    "options": [
+      "Q4 revenue breakdowns by product line are too high-level to provide meaningful business insight",
+      "The work described is descriptive analytics, not diagnostic — it summarizes outcomes without investigating causes",
+      "Diagnostic analytics cannot be applied to revenue data; it is reserved for operational and HR metrics only",
+      "The $42M figure should be expressed as a percentage growth rate for analytical validity and comparability"
+    ],
+    "correctIndex": 1,
+    "explanation": "Breaking revenue into product-line components is a classic descriptive analytics task — it answers 'what happened?' Diagnostic analytics would investigate why hardware missed its target or why services grew slower than expected, identifying a causal factor. Option A makes a subjective judgment about granularity that has no basis in analytics methodology. Option C invents a false restriction on diagnostic analytics — it can apply to any domain where root causes need investigation. Option D introduces an invented rule about how financial metrics must be expressed.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

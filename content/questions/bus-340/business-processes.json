@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which statement best defines a business process?",
+    "options": [
+      "A software application automatically managing and recording administrative tasks across business departments",
+      "An organizational chart mapping reporting relationships and accountability structures across all departments",
+      "A structured sequence of activities that transforms specific inputs into desired organizational outputs",
+      "A centralized database capturing all operational transaction records processed throughout the organization"
+    ],
+    "correctIndex": 2,
+    "explanation": "A business process is defined by its structure and purpose: a repeatable sequence of activities that takes defined inputs (materials, data, requests) and transforms them into outputs (products, decisions, services) toward a business goal. Option A describes a software tool, which may support a process but is not the process itself. Option B describes organizational structure, which defines roles but not process flows.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How do inputs differ from outputs in a business process?",
+    "options": [
+      "Inputs are digital data only; outputs are always physical products delivered to external customers",
+      "Inputs are the resources and information entering the process; outputs are the results it produces",
+      "Inputs represent the technology used to run the process; outputs represent the employees executing steps",
+      "Inputs come exclusively from customers; outputs are sent only to internal departments for further use"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inputs are what enters a process — materials, data, customer requests, forms, or raw resources. Outputs are what the process produces — a completed product, a decision, an invoice, or a service delivered. Option A is incorrect because inputs and outputs can be digital or physical and outputs are not limited to external customers. Option C confuses inputs with technology tools and outputs with human actors, neither of which is accurate.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A customer places an online order. The retailer picks the item, packs it, ships it, and the customer receives a delivery confirmation. Which element is the output of this process?",
+    "options": [
+      "The customer's initial order request, which triggers the fulfillment workflow to begin executing",
+      "The warehouse workers executing the picking and packing activities within the fulfillment workflow",
+      "The IS system recording each step and updating the customer's order status in real time",
+      "The delivered package and the confirmation the customer receives as the process result"
+    ],
+    "correctIndex": 3,
+    "explanation": "The output is the end result the process produces — in this case, the delivered package and the confirmation to the customer. Option A is the input: the customer request that initiates the process. Option B describes the human activity components, not the output. Option C is the IS infrastructure supporting the process — it enables execution but is not the output delivered to the customer.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the purpose of a feedback loop in a business process?",
+    "options": [
+      "To use process outputs or performance data to adjust and improve future process execution",
+      "To document the sequence of activities in a process for training and regulatory compliance purposes",
+      "To identify which employees are accountable for executing each specific step in the process",
+      "To separate value-adding activities from non-value-adding steps throughout the process design"
+    ],
+    "correctIndex": 0,
+    "explanation": "A feedback loop routes information about process outputs or performance back into the process to enable adjustment and improvement. Without feedback, processes run open-loop — executing steps without sensing whether results are meeting goals. Option B describes process documentation, which is a separate function. Option D describes value stream analysis, which is a process improvement technique, not the definition of a feedback loop.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Toyota's assembly process uses a 'pull' system where each station signals the upstream station when it needs more components. Which process element does this best illustrate?",
+    "options": [
+      "A process output, since the signal represents the completed result of each assembly station's work",
+      "A process input, since the signal is raw data entered into the production information system",
+      "A feedback loop, since downstream demand signals adjust upstream supply and execution in real time",
+      "A process map, since the signal documents the workflow relationship between each assembly station"
+    ],
+    "correctIndex": 2,
+    "explanation": "Toyota's pull signal is a textbook feedback loop: downstream consumption information (a station running low on components) travels back upstream to trigger replenishment. The process adjusts based on real-time output conditions. Option A incorrectly calls the signal an output — the output of an assembly station is a partially assembled product, not a demand signal. Option B partially describes the signal's data nature but misses the feedback mechanism that defines why it exists.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A process map of accounts payable shows: 'Receive invoice → Approve → Pay.' A consultant calls this map inadequate. What is the most likely reason?",
+    "options": [
+      "The map should use swim lane diagrams rather than flowcharts for formally documented business processes",
+      "The map omits decision points, error-handling paths, and feedback loops present in the actual process",
+      "A 12% reduction is too small a process improvement outcome to justify formal documentation effort",
+      "The map fails to identify the process owner responsible for overseeing the accounts payable function"
+    ],
+    "correctIndex": 1,
+    "explanation": "A three-step linear map of accounts payable is almost certainly incomplete. Real invoice processing includes decision points (is the invoice valid? does it match the PO?), exception handling (what if it's a duplicate? what if it's over budget?), and feedback paths (what triggers re-approval?). None of this appears in the three-step map. Option A describes a formatting preference, not a substantive inadequacy. Option D addresses ownership, which is an organizational issue separate from map completeness.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An insurance company maps its claims process and finds that 60% of cycle time is spent waiting for approvals that add no customer value. What does this analysis reveal?",
+    "options": [
+      "The claims process is highly efficient because each approval step confirms quality before delivery",
+      "The IS system is the bottleneck because digital approval workflows run slower than manual alternatives",
+      "The process map is inaccurate since approval steps are standard value-adding activities in all settings",
+      "The process contains significant non-value-adding waste, making it a strong candidate for redesign"
+    ],
+    "correctIndex": 3,
+    "explanation": "When 60% of cycle time is consumed by steps that add no value to the customer, the process has substantial waste. This is the core insight that Lean process analysis seeks — identifying non-value-adding activities like waiting, rework, and unnecessary approvals that inflate cycle time without improving outputs. Option A incorrectly labels approvals as high-efficiency steps when the data shows the opposite. Option B blames IS without evidence when the identified problem is organizational approval structure, not technology speed.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank uses a swim lane diagram to map its loan approval process. What is the primary advantage of swim lane format over a simple linear flowchart?",
+    "options": [
+      "Swim lanes show which department or role owns each step, clarifying handoffs and accountability",
+      "Swim lanes reduce the total number of process steps by combining related activities into groups",
+      "Swim lanes make the map easier to read by using color coding and icons instead of text labels",
+      "Swim lanes are required for regulatory compliance in processes involving financial transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Swim lane diagrams divide the process map horizontally or vertically by role or department, making it immediately visible who is responsible for each activity and where handoffs between parties occur. For cross-functional processes like loan approval (credit, legal, underwriting, and the customer), this visibility is critical. Option B is incorrect — swim lanes do not reduce steps, they reveal who owns them. Option D invents a regulatory requirement that does not generally exist.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's order-to-cash process spans sales, credit, warehouse, and shipping. How does cross-functional process mapping differ from mapping a single-department process?",
+    "options": [
+      "Single-department maps are more complex because they include more technical IS integration points",
+      "Cross-functional mapping is simpler because each department documents its own steps independently",
+      "Cross-functional mapping reveals handoff points and interdependencies that single-department maps miss",
+      "Cross-functional maps are rarely actionable because departments resist sharing documentation with peers"
+    ],
+    "correctIndex": 2,
+    "explanation": "The primary value of cross-functional process mapping is exposing the handoffs between departments — the points where work passes from one owner to another and where delays, miscommunications, and errors most often occur. A single-department map shows what happens inside one silo but cannot capture the full process flow or its inter-departmental failure points. Option B is incorrect — cross-functional mapping is more complex because it must integrate multiple perspectives. Option A reverses the complexity relationship.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A process analyst measures order fulfillment at 8-day cycle time, 4% error rate, and 96% first-pass yield. A manager claims performance is excellent. What should the analyst question?",
+    "options": [
+      "Whether the IS system accurately captures all cycle time data across the fulfillment workflow steps",
+      "Whether these metrics benchmark favorably against industry standards and competitor performance levels",
+      "Whether the process map was created using swim lane format rather than a basic linear flowchart",
+      "Whether the process owner holds sufficient authority to approve improvements across all departments"
+    ],
+    "correctIndex": 1,
+    "explanation": "Internal metrics only become meaningful in context. An 8-day cycle time might be excellent in one industry and unacceptably slow in another. Without benchmarking against industry standards or competitors, the manager's claim of excellence is unsupported. Option A questions data quality, which is always valid but does not address the substantive claim about performance. Option C raises a formatting concern that is irrelevant to whether the performance numbers indicate excellence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager says: 'We've mapped every step in our process, so we now fully understand it.' What is the most valid challenge to this claim?",
+    "options": [
+      "Process maps should be created by certified analysts rather than managers to ensure technical accuracy",
+      "Mapping steps without capturing cycle times and error rates produces an analytically incomplete picture",
+      "Process maps require regulatory compliance annotations at every step for formal business documentation",
+      "A map shows the intended design; actual execution often deviates from what the map depicts"
+    ],
+    "correctIndex": 3,
+    "explanation": "Process maps document how a process is designed or intended to run — but people in real organizations work around bottlenecks, skip steps, improvise, and deviate from documented procedures. The gap between the designed process (map) and the actual process (execution) is often significant and is precisely what observational process audits reveal. Option B raises a valid measurement concern but does not challenge the fundamental claim that mapping equals understanding. Option A introduces a credential requirement that is not a universal practice.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google's HR team maps its interviewing process and finds that 3 weeks of elapsed time contain only 4 hours of actual interview activity. What does this analysis reveal?",
+    "options": [
+      "Most process cycle time is non-value-adding wait time — a prime target for IS-enabled improvement",
+      "The IS tracking candidate status is generating inaccurate wait time measurements for the HR team",
+      "Google's interview process has a 4-hour design that is being effectively executed with precision",
+      "The process has appropriate cycle time because quality interviewing requires preparation and review time"
+    ],
+    "correctIndex": 0,
+    "explanation": "When 4 hours of value-adding work is embedded in 3 weeks of elapsed time, the remaining time is overwhelmingly non-value-adding — waiting for scheduling, approvals, feedback submission, and coordination between interviewers. This is a classic process efficiency finding: actual work time is a small fraction of total cycle time. Option C misreads the data as evidence of good design. Option D provides a rationalization (preparation time) that cannot account for the magnitude of the gap between 4 hours and 3 weeks.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does an 'as-is' process map differ from a 'to-be' process map in process improvement methodology?",
+    "options": [
+      "'As-is' maps show the desired target state; 'to-be' maps document the existing operational baseline",
+      "'As-is' maps are produced by outside consultants; 'to-be' maps are created by internal process owners",
+      "'As-is' documents what the process is now; 'to-be' designs what the process should become",
+      "Both map the same operational state; they differ in the level of annotation detail captured per step"
+    ],
+    "correctIndex": 2,
+    "explanation": "The 'as-is' map documents current process reality — capturing how work actually flows today, including inefficiencies, workarounds, and handoffs. The 'to-be' map designs the intended future state after improvements are applied. Together they frame the gap between current and desired performance. Option A reverses the two entirely — a common misconception. Option D is incorrect; the two maps document different process states, not the same state at different detail levels.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A bank's mortgage approval has a 22-day average cycle time. IS analysis shows 18 of those 22 days are consumed by handoff delays between credit, legal, and underwriting. What does this finding indicate?",
+    "options": [
+      "The IS system tracking the process is measuring handoff delays inaccurately across department boundaries",
+      "Cross-functional coordination failures are the primary bottleneck, not the speed of individual activities",
+      "The mortgage process is operating within acceptable bounds since complex approvals require extended timelines",
+      "Each department should implement its own IS independently to reduce dependency on shared handoff workflows"
+    ],
+    "correctIndex": 1,
+    "explanation": "When 82% of cycle time (18 of 22 days) is consumed not by doing the work but by waiting between departments, the bottleneck is coordination — handoffs, queues, notification delays, and the absence of integrated workflow. Speeding up individual activities would barely affect total cycle time. The improvement opportunity lies in the inter-departmental connective tissue. Option A questions measurement accuracy without basis when the finding is directionally clear. Option D would fragment the workflow further, likely worsening coordination.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A student says: 'If we document every step in our business process, the process will automatically improve.' What is the flaw in this reasoning?",
+    "options": [
+      "Documentation is counterproductive because revealing inefficiencies creates organizational resistance to change",
+      "Documenting processes is effective only when performed using certified process mapping software templates",
+      "Process documentation is financially costly and rarely justifies the staff time investment it requires",
+      "Documentation creates visibility but does not change anything — improvement requires deliberate redesign effort"
+    ],
+    "correctIndex": 3,
+    "explanation": "Process documentation is a necessary precondition for improvement, not improvement itself. Knowing where the waste, bottlenecks, and errors are located does not eliminate them — that requires deliberate intervention: redesigning workflows, eliminating steps, automating activities, or restructuring handoffs. Option A overstates the risk; documentation revealing inefficiencies is the goal, not the problem. Option B introduces a tool requirement that has no universal validity.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

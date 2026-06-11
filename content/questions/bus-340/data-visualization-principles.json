@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing team wants to show how five products each contribute to total annual revenue as proportions. Which chart type is most appropriate?",
+    "options": [
+      "A scatter plot comparing each product's revenue against its advertising spend over the year",
+      "A line chart showing monthly revenue for all five products across the full calendar year",
+      "A grouped bar chart displaying absolute revenue for each product side by side for comparison",
+      "A pie chart or stacked bar chart displaying each product's share of total annual revenue"
+    ],
+    "correctIndex": 3,
+    "explanation": "Showing parts of a whole — each product's proportion of total revenue — is the primary use case for pie charts or stacked bar charts. Option A (scatter plot) is designed to reveal relationships between two variables, not part-to-whole composition. Option B (line chart) shows trend over time, not proportional composition at a single point. Option C (grouped bar chart) enables comparison of absolute values but does not naturally communicate each product's share of the total.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which limitation makes pie charts unsuitable for comparing more than five or six categories?",
+    "options": [
+      "Pie charts cannot represent data with negative values, limiting them to positive-only datasets",
+      "When many slices are present, small differences in angle become difficult for viewers to accurately perceive",
+      "Pie charts require every category's value to be equal, making them unusable for real business data",
+      "Pie charts are only supported by legacy tools and are unavailable in modern BI platforms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human perception struggles to compare areas or angles precisely, especially when multiple small slices appear together — distinguishing a 12% slice from a 14% slice is very difficult visually. Option A is a real but separate limitation; pie charts don't handle negative values, but that's not the multi-category problem. Option C is entirely false — pie charts are specifically designed for unequal category values that sum to a whole. Option D is false — pie charts remain widely available in Excel, Tableau, Power BI, and all major visualization tools.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which chart type is most appropriate for displaying how a company's quarterly revenue has changed over eight consecutive quarters?",
+    "options": [
+      "A line chart, which connects data points over time to reveal trends and directional movement",
+      "A histogram, which groups continuous data into frequency bins to show distribution shape",
+      "A heat map, which uses color intensity to show relationships between two categorical variables",
+      "A bubble chart, which encodes three data dimensions using position and circle size simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "Line charts are purpose-built for showing change over continuous time periods — they make it easy to see direction, rate of change, and seasonal patterns across sequential data points. Option B (histogram) displays frequency distributions, not sequential values over time. Option C (heat map) works for showing density or correlation across two categorical axes. Option D (bubble chart) encodes three quantitative variables but is not designed for time-series trend display.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A data analyst creates a 3D pie chart to present market share data to executives. What is the primary design problem with this choice?",
+    "options": [
+      "Pie charts are for internal use only; 3D effects are required to make them suitable for formal presentations",
+      "Executives prefer bar charts over pie charts, making any pie chart inappropriate for leadership audiences",
+      "3D perspective distorts the visual size of slices, making accurate proportional comparison impossible",
+      "3D charts require specialized rendering software that most executive laptops do not support"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a 3D pie chart, the perspective tilt makes front slices appear larger than identically-sized back slices — a systematic visual distortion that misleads viewers about relative proportions. Option A is entirely false; 3D effects make charts worse for any audience, not better for formal settings. Option B is an oversimplification — pie charts can be appropriate for executives when showing clear part-to-whole composition. Option D is false; 3D charts render in Excel, PowerPoint, and all standard tools available on any modern device.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Google wants to present how its 2023 annual revenue is divided among Search advertising, YouTube, Cloud, and Other services in a single executive slide. Which chart is most appropriate?",
+    "options": [
+      "A line chart showing monthly revenue for each segment across all twelve months of 2023",
+      "A pie chart displaying the percentage share of each revenue segment for the full year 2023",
+      "A scatter plot comparing each segment's revenue against its operating cost for the same period",
+      "A histogram showing the frequency distribution of monthly revenue values across all segments"
+    ],
+    "correctIndex": 1,
+    "explanation": "A pie chart is ideal for presenting how a whole (total annual revenue) is divided into named parts (business segments), especially when the goal is to communicate proportional composition on a single slide. Option A answers 'how did revenue trend over the year?' not 'how is revenue divided?' Option C answers 'what is the cost-to-revenue relationship?' — a different analytical question. Option D shows frequency distribution, which would only make sense when analyzing variability, not segment composition.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bar chart shows Q3 sales performance with the y-axis starting at $980,000 instead of zero. The bars make one division appear to perform twice as well as another. What is the visualization problem?",
+    "options": [
+      "Bar charts should display only absolute dollar values; starting above zero converts them into line charts",
+      "Sales data should be normalized to percentages before charting to remove baseline reference effects",
+      "A non-zero y-axis is acceptable for bar charts when the range is explained in the chart title",
+      "Truncating the y-axis exaggerates differences between bars, making small gaps appear far larger than they are"
+    ],
+    "correctIndex": 3,
+    "explanation": "Bar charts encode value through bar length — when the axis is truncated, bars no longer represent proportional magnitude accurately. A division with $1.02M in sales versus one with $1.00M can appear twice as tall, implying a 100% performance gap when the actual difference is 2%. Option A is incorrect; the issue is the axis truncation, not the chart type. Option B is an invented rule — normalization is one option but not a requirement for bar charts. Option C is incorrect; for bar charts specifically, the y-axis should start at zero because bar length encodes proportion.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data science team at Visa wants to explore whether card transaction frequency correlates with customer income level. Which chart type should they use?",
+    "options": [
+      "A scatter plot where each point represents a customer with income on one axis and transaction frequency on the other",
+      "A stacked bar chart grouping customers by income bracket and showing total transactions per bracket",
+      "A line chart plotting average transaction frequency over time for each customer income tier",
+      "A heat map showing the geographic distribution of high-income and high-frequency customers by region"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scatter plots are specifically designed to reveal whether a statistical relationship exists between two continuous variables — each point shows one customer's position in both dimensions, making correlation immediately visible. Option B groups data into buckets, which hides within-group variance and reduces analytical precision. Option C shows trends over time but does not directly reveal the income-to-frequency relationship. Option D maps geographic distribution, which is a completely different analytical question than correlation between two variables.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does a histogram differ from a bar chart, and when should each be used?",
+    "options": [
+      "Histograms use horizontal bars; bar charts use vertical bars — orientation determines appropriate use",
+      "Histograms display categorical comparisons; bar charts display continuous frequency distributions",
+      "Histograms show frequency distribution of continuous data; bar charts compare values across discrete categories",
+      "Histograms require at least 1,000 data points to be valid; bar charts work with any sample size"
+    ],
+    "correctIndex": 2,
+    "explanation": "The key distinction is data type — histograms group continuous numeric data into bins to show distribution shape (e.g., distribution of customer ages), while bar charts compare separate categorical values (e.g., revenue by region). Option A confuses orientation with purpose; both chart types can be displayed horizontally or vertically. Option B reverses the descriptions entirely. Option D introduces an invented threshold with no basis in data visualization practice.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consulting team must present three years of monthly revenue for five business units — 180 data points total — to a client board in a single chart. What is the most effective approach?",
+    "options": [
+      "Use a single line chart with all 15 monthly series rendered in different colors for complete data coverage",
+      "Use a small multiples layout with one line chart per business unit, allowing clear side-by-side comparison",
+      "Use a stacked area chart for all five units to show individual contributions and the total together",
+      "Use a bubble chart sizing each monthly data point by revenue and coloring it by business unit"
+    ],
+    "correctIndex": 1,
+    "explanation": "Small multiples — identical small charts laid side by side — preserve the ability to compare trends across business units without the overplotting and color confusion that plague a 15-line single chart. Option A creates visual noise where lines intersect and obscure each other, making individual unit trends unreadable. Option C hides individual unit trends within the cumulative stack, making it hard to isolate any single unit's performance. Option D encodes too many dimensions simultaneously and will confuse a board audience that needs clear trend comparison.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst creates a chart with two y-axes — monthly revenue in dollars on the left and customer satisfaction scores (0–100) on the right — to suggest the two metrics move together. What is the fundamental problem with this approach?",
+    "options": [
+      "Customer satisfaction scores are qualitative data and cannot be plotted alongside quantitative revenue figures",
+      "Dual-axis charts are not available in major BI platforms including Tableau and Power BI",
+      "Displaying two metrics with different units on one chart violates financial data privacy regulations",
+      "Adjusting either axis scale can make unrelated metrics appear strongly correlated in the resulting chart"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dual-axis charts are manipulable — by stretching or compressing either y-axis scale, a designer can make any two time series appear to track each other closely regardless of their actual statistical relationship. This makes the chart potentially misleading rather than informative. Option A is false; customer satisfaction is a numeric score and can legitimately be plotted alongside quantitative data. Option B is false; dual-axis charts are available in Tableau, Power BI, and Excel. Option C invents a regulatory claim with no basis in any reporting standard.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analytics team at Nike is building a dashboard for regional sales directors who need to spot underperforming territories during a 30-second dashboard scan. Which design principle should take highest priority?",
+    "options": [
+      "Include all available metrics so directors have complete information without needing to drill down",
+      "Use vibrant contrasting colors for each data series to make the dashboard visually engaging and memorable",
+      "Apply preattentive attributes — color, size, or position — to direct attention to underperforming metrics",
+      "Provide detailed chart footnotes explaining data sources, methodology, and calculation definitions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Preattentive attributes (red highlighting for underperformers, larger visual weight for critical metrics) are processed by the brain in under 250 milliseconds — they guide attention before conscious reading begins, which is essential for a 30-second scan workflow. Option A creates information overload; more data points do not produce faster insight. Option B prioritizes aesthetics over function; decorative color variation actually slows pattern recognition by adding noise. Option D provides useful context but adds cognitive load during quick scanning, better suited for report appendices.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A PowerPoint slide contains a bar chart with decorative gridlines, a drop shadow on every bar, a 3D bevel on the chart area, two clip-art images, and a legend with 12 entries. What data visualization principle does this violate?",
+    "options": [
+      "Data-ink ratio — the chart contains excessive non-data elements that obscure rather than enhance the insight",
+      "Color consistency — all bars should use a single hue with a unified palette across all chart elements",
+      "Axis scaling — the chart needs a primary and secondary y-axis to handle the multiple visual layers properly",
+      "Chart type selection — a bar chart is inappropriate here; a scatter plot would reduce visual complexity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Edward Tufte's data-ink ratio principle holds that every ink mark on a chart should carry information — decorative elements like shadows, bevels, and unnecessary gridlines dilute the data signal and increase cognitive load without adding insight. Option B addresses color but is not the primary violation; the problem is decorative overloading, not palette inconsistency. Option C introduces an axis scaling rule that is irrelevant to the described visual clutter problem. Option D is incorrect; the chart type is not the issue — the decorative excess is.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Nike's data team has monthly sales data for 12 product categories across five regions for the past three years. They need to identify which category-region combinations have the highest sales in a single view. Which chart type is best suited?",
+    "options": [
+      "A grouped bar chart with 12 bars per group and five groups per time period across 36 time points",
+      "A line chart with one series per product category filtered to show only top-performing regions",
+      "A scatter plot placing each category on the x-axis and each region on the y-axis with bubbles sized by revenue",
+      "A heat map with product categories on one axis and regions on the other, with color encoding sales magnitude"
+    ],
+    "correctIndex": 3,
+    "explanation": "Heat maps excel at revealing which cells in a two-dimensional matrix have the highest or lowest values — exactly what is needed to identify standout category-region combinations at a glance. Option A creates a dense grouped bar chart with potentially dozens of bars per panel, making patterns nearly impossible to see. Option B requires pre-filtering, which eliminates the complete cross-region comparison needed to find the top combinations. Option C maps categories and regions to axes in a way that loses the comparative matrix structure; bubble size is also harder to compare precisely than color intensity.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "When should a data analyst choose a scatter plot over a line chart to display a relationship between two numeric variables?",
+    "options": [
+      "When the dataset has fewer than 50 data points and a line chart would create too much empty whitespace",
+      "When the two variables are not ordered in time and the goal is to explore whether a statistical relationship exists",
+      "When the analyst wants to show cumulative change over time rather than point-to-point movement",
+      "When the data includes negative values that a line chart's axis configuration would misrepresent"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scatter plots are designed for non-temporal relationships between two continuous variables — they show whether and how tightly two metrics associate. Line charts imply a sequential connection between points (typically time), so using one for non-time-ordered data imposes a false narrative of progression. Option A introduces an invented sample-size rule that has no basis in visualization guidance. Option C describes a different use case (cumulative change, better shown with an area chart). Option D is false; line charts handle negative values accurately without distortion.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A line chart shows Apple's quarterly revenue from 2018–2023 with the y-axis starting at $0, producing a shallow upward slope. A redesigned version starting at $200B shows a steep rise. The actual growth over the period is 85%. Which interpretation best applies visualization principles to this case?",
+    "options": [
+      "The $0 version is the only accurate representation; truncating any y-axis on any chart type distorts the data",
+      "The $200B version is misleading because it exaggerates the growth beyond what the data can support",
+      "For line charts, a truncated baseline can be acceptable when the goal is to emphasize relative change",
+      "Both versions should be discarded; Apple's revenue trend is best shown as a percentage growth bar chart"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unlike bar charts — where bar length encodes absolute value and a zero baseline is required — line charts encode value through point position and slope, so a truncated baseline can legitimately highlight relative change when disclosed. Option A incorrectly applies the bar chart zero-baseline rule to all chart types. Option B calls the truncated version misleading without acknowledging that 85% growth over five years is a genuinely steep trend worth emphasizing. Option D is an overcorrection that eliminates valid chart types when both versions serve legitimate purposes for different communication goals.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does ERP stand for, and what is its defining characteristic among enterprise software systems?",
+    "options": [
+      "Enterprise Revenue Platform — a financial system for tracking sales revenue and cost of goods sold",
+      "Enterprise Reporting Portal — a dashboard aggregating performance metrics across business units",
+      "Enterprise Resource Planning — an integrated system connecting core business processes through a shared central database",
+      "Executive Resource Program — a planning framework used by senior leaders during annual budget cycles"
+    ],
+    "correctIndex": 2,
+    "explanation": "ERP stands for Enterprise Resource Planning. Its defining characteristic is integration: unlike standalone departmental tools, an ERP uses a shared database so a transaction in one function — such as a sales order — automatically updates related functions like inventory and accounting. Options A and B describe narrower financial or reporting tools, not integrated process management. Option D is a fabricated term.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best describes the core architecture of a typical ERP system?",
+    "options": [
+      "Independent departmental databases that batch-synchronize with each other at the end of each business day",
+      "A centralized, shared database where all business functions — finance, HR, supply chain — read and write data",
+      "A collection of best-of-breed applications connected through a third-party middleware integration layer",
+      "A data lake that stores historical operational records for business intelligence and analytics reporting"
+    ],
+    "correctIndex": 1,
+    "explanation": "The architectural foundation of ERP is a single shared database that all modules access, ensuring every department works from the same real-time data. Option A describes a batch-integrated architecture that ERP was specifically designed to replace. Option C describes a best-of-breed integration approach, which is an alternative to ERP rather than its architecture. Option D describes a data warehouse — an analytics tool, not a transactional system.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which combination of business functions does an ERP system typically integrate?",
+    "options": [
+      "Only financial accounting and accounts payable, since these generate the most cross-departmental transaction data",
+      "Marketing automation, social media management, and customer analytics platforms for revenue growth",
+      "Customer support ticketing and IT service desk management for internal operations teams",
+      "Finance, supply chain, manufacturing, human resources, and procurement, among other core operations"
+    ],
+    "correctIndex": 3,
+    "explanation": "ERP is distinguished by its breadth of integration — it typically spans finance, HR, supply chain, manufacturing, and procurement in a single unified system. Options A through C all describe narrower specialized tools covering only one or two functions. A defining feature of ERP is that it replaces or connects all of these separate tools with one coherent platform.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When a company using SAP processes a sales order and the system automatically updates inventory and triggers a procurement request without any manual data entry, this demonstrates:",
+    "options": [
+      "ERP integration, which links business processes so one transaction automatically updates related functions across the enterprise",
+      "Machine learning, which predicts demand based on sales patterns and generates replenishment orders proactively",
+      "CRM automation, which manages customer-facing activities across the sales and service lifecycle",
+      "EDI, which transmits structured transaction data electronically between the company and its trading partners"
+    ],
+    "correctIndex": 0,
+    "explanation": "Automatic cross-functional updates triggered by a single transaction are the core value of ERP integration — the shared database means a sales order simultaneously affects inventory records and purchasing without manual re-entry. Option B describes machine learning demand forecasting, a different capability. Option C describes CRM, which manages customer relationships rather than internal process flows. Option D describes an inter-company data exchange standard, not internal ERP process logic.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Before implementing SAP, a manufacturer's finance team waited two weeks for production cost data from the plant floor. After ERP go-live, the data is available in real time. Which ERP benefit best explains this improvement?",
+    "options": [
+      "ERP systems run on more modern server hardware, which reduces processing latency across all business functions",
+      "Finance teams gain direct access to factory floor equipment sensor feeds through the ERP dashboard",
+      "A single shared database eliminates data silos, giving every function immediate access to the same current information",
+      "SAP's consulting team reorganized the company's manual cost reporting workflows during the implementation project"
+    ],
+    "correctIndex": 2,
+    "explanation": "The two-week delay existed because production and finance used separate systems requiring manual data extraction and re-entry between them. ERP's shared database eliminates that hand-off, so production transactions are visible to finance instantly. Option A is wrong because the improvement is architectural, not a hardware speed issue. Option B is implausible — ERP systems do not directly read equipment sensor data in a standard implementation. Option D may have happened during the project, but the sustained real-time improvement is a function of the integrated architecture.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does an ERP system differ most significantly from a collection of best-of-breed departmental applications?",
+    "options": [
+      "ERP is cloud-based and subscription-priced, while best-of-breed tools require on-premises server installation",
+      "ERP vendors provide superior post-implementation support compared to vendors of specialized point solutions",
+      "Best-of-breed systems are inherently more expensive over time due to per-module and per-seat licensing structures",
+      "ERP uses a unified data model and shared database, reducing integration overhead and data inconsistency across departments"
+    ],
+    "correctIndex": 3,
+    "explanation": "The fundamental advantage of ERP over best-of-breed is the unified data model: all modules share one database, so there is no integration to build or maintain and no risk of data diverging between systems. Options A and C are generalizations that are not consistently true — both ERP and best-of-breed are available in cloud and on-premises versions, and total cost depends heavily on specific products. Option B is an opinion claim, not a structural architectural difference.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consultant advises a client: 'ERP implementations fail primarily because companies select the wrong software vendor.' What is the most significant flaw in this assessment?",
+    "options": [
+      "Vendor selection is rarely discussed openly in ERP implementation post-mortems or academic research literature",
+      "Most ERP failures stem from organizational issues — poor change management, scope creep, and inadequate user training — rather than vendor selection",
+      "ERP implementations rarely fail when experienced external consultants follow proven project methodologies",
+      "Software vendor quality is actually the primary predictor of ERP success according to major industry surveys"
+    ],
+    "correctIndex": 1,
+    "explanation": "Research consistently shows ERP failures are driven by organizational factors: business units that keep changing requirements, insufficient training so users reject the system, and weak change management that leaves employees resistant to new processes. Vendor selection matters but is rarely the root cause. Option C is factually wrong — ERP implementations fail regularly, even with experienced consultants. Option D inverts the actual evidence from ERP research.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Nike's 2000 ERP rollout resulted in $400M in lost sales because the system could not process orders reliably after go-live. Which implementation risk does this case most directly illustrate?",
+    "options": [
+      "Vendor lock-in, which prevented Nike from reverting to its legacy systems once serious problems were identified",
+      "Security vulnerabilities that allowed unauthorized access to the new ERP system's order configuration settings",
+      "Inadequate testing of a flawed demand forecasting module, causing cascading inventory and order fulfillment failures",
+      "Scope creep and runaway customization costs that exhausted Nike's original IT capital budget for the project"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nike's failure was traced to a defective demand planning module that was not caught during testing — it generated incorrect demand signals, leading to overstock in some products and unfulfilled orders in others. The timing during peak sales season amplified the damage significantly. Option A is wrong because Nike did not have a lock-in problem; the issue was a technical failure at cutover. Options B and D describe different risk categories with no evidence from this case.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company completes a two-year ERP rollout on time and on budget. Six months later, warehouse managers are running parallel spreadsheets alongside the new system. What root cause and consequence most likely explains this?",
+    "options": [
+      "A technical defect in the ERP's inventory module is generating incorrect stock counts that managers cannot trust",
+      "The company underestimated the hardware upgrades required to run the ERP system at all warehouse locations",
+      "Change management was insufficient — managers were never trained to trust the new system, creating shadow processes that now produce conflicting inventory records",
+      "The ERP vendor excluded warehouse management functionality from the contracted implementation scope"
+    ],
+    "correctIndex": 2,
+    "explanation": "When managers revert to spreadsheets after go-live, it almost always signals a change management failure: they were not convinced the new system was reliable or trained well enough to use it confidently. The consequence is shadow data — two separate inventory records that drift apart over time, undermining the single version of truth ERP was supposed to provide. Option A is a narrow technical explanation for a behavioral pattern that reflects a systemic adoption failure. Option D would have been discovered during implementation, not six months later.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A CFO proposes heavily customizing SAP to match existing company processes exactly, arguing adoption will be easier since users won't need to change how they work. What is the primary strategic risk of this approach?",
+    "options": [
+      "Heavy customization always introduces data integrity errors that corrupt the general ledger over time",
+      "SAP's licensing agreement explicitly prohibits significant customization without purchasing additional compliance modules",
+      "Users resist customized ERP systems more strongly because non-standard interfaces require additional documentation",
+      "Heavy customization locks the company into outdated processes, makes future upgrades extremely costly, and forfeits the best-practice designs embedded in standard SAP"
+    ],
+    "correctIndex": 3,
+    "explanation": "The primary risks of heavy ERP customization are that future upgrades become expensive because all customizations must be rebuilt and re-tested, and the company preserves its current processes rather than adopting SAP's industry best practices. Option A is a blanket overstatement — customization adds technical debt but does not inherently corrupt financial data. Option B is fabricated — SAP does not prohibit customization in its licensing. Option C is an unsupported generalization that contradicts the premise of the CFO's argument.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Hershey's 1999 ERP go-live failed during Halloween season, costing $150M in lost sales because the system could not process orders at volume. Assuming the software itself was functional, what does this most likely indicate about the project?",
+    "options": [
+      "Hershey chose a vendor whose ERP was not designed for the seasonal demand volatility of consumer goods companies",
+      "The project was likely rushed to meet an aggressive go-live deadline, sacrificing testing time and user training and leaving the company unprepared for peak transaction volumes",
+      "Hershey's IT team lacked the technical expertise to configure the order management module correctly during setup",
+      "The ERP system's transaction processing capacity was undersized for a company of Hershey's scale and volume"
+    ],
+    "correctIndex": 1,
+    "explanation": "Post-mortems of the Hershey case consistently identify an accelerated go-live timeline as the core failure: the company launched during its peak season while simultaneously implementing three major software systems, with insufficient parallel testing and user preparation. Option A misattributes the failure to vendor selection — the software was used successfully by other consumer goods companies. Option C shifts blame to the IT team without addressing the more important decision about timing. Option D may have been a contributing factor but does not explain a failure at volumes the system should have been designed to handle.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company must choose between a full ERP suite and best-of-breed departmental applications. In which scenario is the ERP suite the stronger choice?",
+    "options": [
+      "The company prioritizes consistent cross-functional data and unified process flow over having best-in-class features in any single department",
+      "Each department has highly specialized needs that standard ERP modules are not flexible enough to address",
+      "The company has a large IT team capable of maintaining complex point-to-point integrations across departments indefinitely",
+      "The company wants to deploy each department's system on an independent timeline rather than a coordinated rollout"
+    ],
+    "correctIndex": 0,
+    "explanation": "ERP's primary advantage is consistency and integration — when a unified data model and shared process flow matter more than having the deepest feature set in any one area, ERP wins. Options B, C, and D all describe scenarios that favor best-of-breed: specialized departmental needs, strong integration capability, and phased independent deployments are the conditions under which assembling best-of-breed applications makes more sense than accepting ERP's functional compromises.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Boeing's ERP rollout was undermined when several divisions continued using legacy systems after the official go-live date. Which intended ERP benefit was most directly compromised?",
+    "options": [
+      "The single version of truth — real-time data consistency across all divisions — that ERP's unified database is designed to provide",
+      "Cost reductions from decommissioning aging mainframe hardware and associated vendor support contracts",
+      "Employee satisfaction from replacing outdated user interfaces with the ERP's modern design",
+      "Regulatory compliance reporting, which requires aggregating financial data across all legal entities simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "ERP's most fundamental value proposition is one unified, real-time data model. When divisions continue using legacy systems, the organization ends up with multiple conflicting data sources — exactly the problem ERP was supposed to eliminate. Options A and B describe secondary benefits not dependent on full adoption. Option D is partially affected, but consolidated compliance reporting is downstream of the more foundational broken benefit: data consistency across the enterprise.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A mid-sized manufacturer reports its ERP project cost three times the original estimate and ran 18 months over schedule. Which factor most commonly produces this pattern in ERP implementations?",
+    "options": [
+      "ERP vendors systematically underbid implementation contracts and then invoice for scope changes after signing",
+      "Scope creep — business units adding requirements after sign-off — combined with underestimated complexity of migrating and cleansing historical data",
+      "Companies routinely select ERP platforms that are technically too sophisticated for their industry's operational complexity",
+      "Government regulations imposed midproject requiring unplanned compliance modules and extensive parallel testing cycles"
+    ],
+    "correctIndex": 1,
+    "explanation": "The most common drivers of ERP cost overruns and schedule slippage are scope creep — stakeholders who treat requirements sign-off as a starting point rather than a commitment — and data migration complexity, which is almost always underestimated because organizations only discover how dirty their legacy data is when they try to move it. Option A occasionally happens but is not the dominant pattern in published ERP failure analyses. Options C and D describe uncommon scenarios that do not explain the widespread nature of ERP overruns.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A global consumer goods company runs SAP in North America but still uses legacy systems in Asia-Pacific. Finance leadership wants fully consolidated reporting immediately after the North America go-live. Which challenge does this situation highlight?",
+    "options": [
+      "Data security risk, since consolidating financial data across regions creates a concentrated, high-value target for attackers",
+      "Hardware compatibility issues, since SAP and legacy systems require fundamentally different server architectures",
+      "Licensing cost escalation, since running two systems simultaneously doubles the company's annual software expenditure",
+      "A partial rollout undermines the single-version-of-truth benefit, requiring manual reconciliation between two incompatible data models until the full implementation is complete"
+    ],
+    "correctIndex": 3,
+    "explanation": "ERP's core value proposition — a single real-time view of enterprise data — cannot be fully realized when only part of the organization is on the new system. Consolidating financials requires bridging two different data models, introducing manual reconciliation, potential inconsistencies, and reporting delay. Options A, B, and C describe real IT concerns but are secondary issues. The fundamental business challenge is the incompleteness of integration, not security, hardware, or licensing.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

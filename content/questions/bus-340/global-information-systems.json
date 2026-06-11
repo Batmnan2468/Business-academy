@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does 'localization' mean in the context of global information systems?",
+    "options": [
+      "Adapting a system's content, language, and formats for a specific local market",
+      "Restricting a system's user access to employees within a single geographic region",
+      "Moving system infrastructure physically closer to users to reduce network latency",
+      "Translating only the user interface text while keeping data structures unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Localization goes beyond translation to adapt the full user experience — date formats, currency, cultural references, legal content, and language — for a specific market. Option B describes access control, not localization. Option C describes content delivery network strategy, an infrastructure concern. Option D describes partial translation, which is a component of localization but not its full meaning.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary purpose of data residency laws like the EU's GDPR or China's data localization rules?",
+    "options": [
+      "To standardize database schemas used by multinational companies across borders",
+      "To mandate that global companies use open-source software for government contracts",
+      "To require that certain data about residents be stored or processed within national borders",
+      "To prevent foreign companies from competing with domestic technology providers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data residency laws require that personal or sensitive data about a country's residents remain within that country's legal jurisdiction, giving regulators access and ensuring local privacy standards apply. Option A describes a data standards effort unrelated to residency law. Option B describes open-source procurement policy, a separate area. Option D may be an indirect effect in some cases but is not the stated purpose of residency requirements.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What distinguishes offshoring from outsourcing?",
+    "options": [
+      "Offshoring uses contractors while outsourcing transfers work to wholly owned subsidiaries",
+      "Offshoring relocates work to another country; outsourcing transfers work to a third party",
+      "Offshoring applies only to manufacturing; outsourcing applies only to IT services",
+      "Offshoring is permanent while outsourcing is structured as short-term project work"
+    ],
+    "correctIndex": 1,
+    "explanation": "Offshoring means moving work to a different country — which may still be done by your own company. Outsourcing means transferring work to a third-party firm — which may be in the same country. They are independent dimensions: you can offshore and outsource simultaneously, offshore without outsourcing, or outsource domestically. Options A, C, and D all conflate or restrict the terms in ways inconsistent with their standard business definitions.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which element must be adapted for localization but is NOT simply a language translation task?",
+    "options": [
+      "Date formats, where the same date is written differently across countries",
+      "Product description text written in the company's home country language",
+      "The underlying programming language used to build the application",
+      "The internal field names used in the company's back-end database schema"
+    ],
+    "correctIndex": 0,
+    "explanation": "Date format (MM/DD/YYYY vs DD/MM/YYYY vs YYYY-MM-DD) is a localization concern that is not translation — it requires logic changes, not linguistic ones. Option B describes content translation, which is translation. Option C is wrong; programming language is not localized. Option D describes internal database field naming, which is a development convention not exposed to users.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon expands its e-commerce platform into Germany and must comply with GDPR. Which system change is most directly required?",
+    "options": [
+      "Deploying dedicated servers in Germany to reduce page load times for German users",
+      "Offering German-language customer support staff available around the clock",
+      "Implementing mechanisms for users to request access to or deletion of their personal data",
+      "Pricing all products in Euros and reconfiguring payment processing for European banks"
+    ],
+    "correctIndex": 2,
+    "explanation": "GDPR grants individuals rights including access to their data and the right to erasure ('right to be forgotten') — Amazon's IS must support these requests technically and operationally. Option A describes performance optimization, which may be good practice but is not a GDPR requirement. Option B describes customer service staffing, which may be required by other regulations but is not a core GDPR IS requirement. Option D describes payment localization, not privacy compliance.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A U.S. company outsources its IT helpdesk to a vendor in India. After one year, it brings the function back in-house. What is this called and what is the most common reason companies do it?",
+    "options": [
+      "Reshoring — moving production back to the home country to meet domestic content requirements",
+      "Insourcing — reclaiming outsourced functions, often due to quality, control, or cost issues",
+      "Nearshoring — moving operations to a closer country to reduce time-zone coordination friction",
+      "Offshoring — relocating work to a lower-cost country to reduce labor expenses"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bringing outsourced work back under the company's own management is insourcing (sometimes called backsourcing). Reasons include quality degradation, loss of institutional knowledge, hidden costs exceeding savings, or strategic importance of the function. Option A describes reshoring, which is a manufacturing supply chain term for moving production back to the home country. Option C describes nearshoring, which means moving to a geographically closer country. Option D is the original outsourcing decision, not the reversal.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A global retailer runs a centralized ERP system managed from its U.S. headquarters. Stores in Brazil must comply with local tax rules that differ significantly from U.S. tax logic. What global IS challenge does this represent?",
+    "options": [
+      "Tension between global system standardization and the need for local regulatory compliance",
+      "Hardware standardization — different power infrastructure requires distinct server configurations",
+      "Network latency — U.S.-based servers respond too slowly for real-time Brazilian transactions",
+      "Currency risk — the ERP cannot handle exchange rate fluctuations in financial reporting"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a classic global IS tension: centralizing systems delivers efficiency and consistency, but local regulatory environments — especially complex tax codes like Brazil's — may require significant customization that conflicts with standardization goals. Option B is a real infrastructure concern but is not the challenge described. Option C is a performance issue, not a compliance-structure conflict. Option D describes a financial reporting challenge separate from the tax compliance scenario.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which global IS strategy gives local subsidiaries the most autonomy to develop their own systems?",
+    "options": [
+      "Transnational — systems are shared globally but adapted locally where necessary",
+      "International — headquarters exports standardized systems to all foreign operations",
+      "Multidomestic — each country operates largely independently with its own local systems",
+      "Global — a single standardized system is used identically across all locations"
+    ],
+    "correctIndex": 2,
+    "explanation": "The multidomestic IS strategy prioritizes local responsiveness over global efficiency — each subsidiary manages its own systems to serve its local market. Global and International strategies centralize control at headquarters. Transnational attempts a balance but still involves shared global infrastructure. The multidomestic approach trades efficiency for local fit.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A multinational transfers customer data from its EU operations to its U.S. headquarters for centralized analytics. The EU-U.S. Privacy Shield framework was invalidated by EU courts. What is the most accurate description of the company's legal situation?",
+    "options": [
+      "The transfer is fully compliant because the U.S. and EU have equivalent privacy laws",
+      "The transfer may violate GDPR, requiring alternative legal mechanisms such as standard contractual clauses",
+      "The transfer is legal because analytics processing is exempt from cross-border data transfer rules",
+      "The company must stop all U.S. operations until a new Privacy Shield is approved by EU regulators"
+    ],
+    "correctIndex": 1,
+    "explanation": "When Privacy Shield was invalidated (Schrems II ruling), companies lost one of the key legal bases for EU-U.S. data transfers. They must now rely on alternative mechanisms like Standard Contractual Clauses (SCCs) or binding corporate rules. Option A is false — U.S. law does not provide GDPR-equivalent protections. Option C is wrong; analytics does not create a blanket exemption from transfer rules. Option D overstates the consequence — companies are not required to halt operations, but must use valid transfer mechanisms.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Zara's global IS supports real-time inventory visibility across stores in 90 countries. A store manager in Japan updates inventory manually when items sell because the POS system is offline. What global IS risk does this illustrate?",
+    "options": [
+      "Data sovereignty — Japan's regulations prohibit automatic transmission of sales data",
+      "Vendor lock-in — Zara's POS vendor controls data access, preventing real-time syncing",
+      "System latency — global IS networks cannot transmit data fast enough to keep inventory current",
+      "Data integrity — manual updates introduce inconsistencies that corrupt global inventory records"
+    ],
+    "correctIndex": 3,
+    "explanation": "Manual entry as a workaround for system downtime introduces human error and timing gaps, causing inventory records to diverge from reality across a global system that depends on accuracy. This is a data integrity risk. Option A is speculative and not supported by the scenario. Option B attributes the problem to a vendor relationship issue not described. Option C describes a network performance problem, while the scenario specifies an offline POS — a connectivity/availability issue, not a speed issue.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A U.S. software company nearshores development to Mexico instead of offshoring to India. What is the primary operational advantage of nearshoring in this context?",
+    "options": [
+      "Labor costs in Mexico are lower than in India, increasing the total cost savings",
+      "Mexican developers have stronger English proficiency than Indian developers on average",
+      "Overlapping time zones reduce coordination friction and enable real-time collaboration",
+      "Nearshore vendors offer stronger intellectual property protections than offshore vendors"
+    ],
+    "correctIndex": 2,
+    "explanation": "Time zone alignment is the primary operational benefit of nearshoring — when teams share working hours, they can collaborate synchronously, reducing delays from asynchronous handoffs. Option A is not consistently true; India often has lower labor costs than Mexico. Option B is a stereotype without empirical basis. Option D is not a reliable generalization — IP protection depends on specific contracts and legal frameworks, not geography alone.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A global bank runs identical core banking software in 40 countries. One country passes a law requiring all financial transaction data to be processed on locally-owned infrastructure. What conflict does this create for the bank?",
+    "options": [
+      "The bank must rebuild its core banking software from scratch for that country's market",
+      "The bank's vendor is liable for compliance failures because it sold the software globally",
+      "The bank must withdraw from that country because financial data cannot be separated by system",
+      "The bank's global standardization strategy conflicts with the country's data sovereignty requirement"
+    ],
+    "correctIndex": 3,
+    "explanation": "Data sovereignty laws that require local infrastructure processing directly conflict with centralized global IS strategies. The bank must either create a localized instance of its system, negotiate an exception, or exit the market. Option A overstates the requirement — the law requires local processing infrastructure, not a full software rebuild. Option B misassigns liability — the bank, not the software vendor, is responsible for complying with local law. Option C is the most extreme option and not the only resolution.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company outsources its customer data processing to a third-party vendor in a country with weak privacy laws. A data breach at the vendor exposes customer records. Who bears primary regulatory responsibility under GDPR?",
+    "options": [
+      "The third-party vendor, because it directly controlled and processed the customer data",
+      "The company that outsourced, because it remains the data controller under GDPR",
+      "The country's government, because it permitted inadequate privacy standards within its borders",
+      "Neither party, because GDPR only applies when data is processed within EU member states"
+    ],
+    "correctIndex": 1,
+    "explanation": "Under GDPR, the organization that determines the purposes of data processing is the data controller and retains responsibility even when processing is delegated to a third-party processor. Outsourcing processing does not transfer regulatory accountability. Option A is wrong — the vendor is a data processor with obligations, but primary accountability stays with the controller. Option C places responsibility on government rather than the business. Option D is incorrect; GDPR applies based on the residency of the data subjects, not where processing occurs.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A multinational company discovers its global IS produces inconsistent reports because each regional office customized its data entry fields differently over five years. What is the root cause of this problem?",
+    "options": [
+      "The company chose the wrong ERP vendor, which lacked sufficient global reporting capabilities",
+      "Network bandwidth differences between regions caused synchronization errors in the database",
+      "Regional offices were using different hardware that encoded data in incompatible formats",
+      "Lack of data governance standards allowed regional divergence in how data was structured"
+    ],
+    "correctIndex": 3,
+    "explanation": "When global IS governance is weak, regional teams independently customize their implementations. Over time these diverge, making cross-regional reporting impossible because the same fields contain different types of data. Option A attributes the problem to the vendor when it is actually a governance failure. Option B describes a technical synchronization issue not consistent with the scenario description. Option C is implausible — modern databases are not hardware-encoding dependent.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Google operates cloud infrastructure in multiple countries. China requires that user data from Chinese residents be stored only on servers physically located in China. How does this affect Google's global IS architecture?",
+    "options": [
+      "Google must build or partner with a local data center in China to legally serve Chinese users",
+      "Google can serve Chinese users from its nearest existing data center in Hong Kong",
+      "Google stores all Chinese user data encrypted, which satisfies the physical location requirement",
+      "The requirement only applies to government users, not consumer-facing cloud services"
+    ],
+    "correctIndex": 0,
+    "explanation": "China's data localization laws require that data on Chinese residents be stored on infrastructure physically within mainland China. Google must have China-based data centers or partner with a Chinese firm (as required by Chinese law) to comply — serving from Hong Kong does not satisfy the mainland China jurisdiction requirement. Option B is wrong because Hong Kong operates under different legal status. Option C is wrong — encryption does not satisfy geographic residency requirements. Option D is incorrect; China's data localization rules apply broadly, not only to government data.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

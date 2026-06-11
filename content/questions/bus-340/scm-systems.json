@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the primary purpose of a Supply Chain Management (SCM) system?",
+    "options": [
+      "To manage customer relationships and track individual buyer preferences across sales channels",
+      "To coordinate the flow of goods, information, and funds from raw material suppliers through to end customers",
+      "To automate employee scheduling and workforce planning across manufacturing facilities",
+      "To generate financial statements by consolidating data from all production cost centers"
+    ],
+    "correctIndex": 1,
+    "explanation": "SCM systems are designed to manage the full supply chain: the movement of goods, the flow of information between supply chain partners, and the transfer of funds at each stage from raw materials to final delivery. Option A describes a CRM system, which focuses on external customers rather than upstream supply relationships. Options C and D describe HR and financial systems, which are separate enterprise system categories.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the bullwhip effect in supply chain management?",
+    "options": [
+      "The tendency for product quality to decline as goods are handled by more intermediaries downstream",
+      "The phenomenon where supplier lead times lengthen progressively as a manufacturer increases production volume",
+      "The feedback loop that causes retail stockouts when consumer demand spikes unexpectedly during peak seasons",
+      "The amplification of demand variability as orders move upstream through the supply chain, causing excessive inventory swings at each tier"
+    ],
+    "correctIndex": 3,
+    "explanation": "The bullwhip effect describes how a small change in consumer demand gets magnified into much larger order swings as you move upstream — retailers over-order to wholesalers, who over-order to distributors, who over-order to manufacturers. Each tier adds its own buffer out of uncertainty, amplifying the original signal. Options A, B, and C describe related but distinct supply chain problems — quality degradation, lead time extension, and retail stockouts — none of which capture the core mechanism of demand amplification across tiers.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is an example of supplier integration in a supply chain management system?",
+    "options": [
+      "A retailer sharing real-time point-of-sale data with its suppliers so they can adjust production schedules proactively",
+      "A company using CRM software to track all communication history with its key vendor accounts",
+      "A manufacturer setting fixed quarterly purchase orders with suppliers based on annual sales forecasts",
+      "An ERP system generating purchase requisitions automatically when inventory falls below reorder points"
+    ],
+    "correctIndex": 0,
+    "explanation": "Supplier integration means giving supply chain partners direct visibility into your data so they can act on it without waiting for a purchase order — sharing real-time POS data with suppliers is the canonical example. Option B describes CRM activity logging, not supply chain integration. Option C describes traditional batch ordering, which is the opposite of integration. Option D describes internal ERP automation, which does not extend to the supplier's systems.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Walmart uses RFID tags on pallets to automatically track goods as they move through distribution centers. This is primarily an example of which SCM capability?",
+    "options": [
+      "Demand forecasting, which uses historical sales data to predict how much inventory will be needed in stores",
+      "Supplier integration, which links Walmart's ordering systems directly to supplier production schedules",
+      "Real-time inventory visibility, which tracks the location and quantity of goods throughout the supply chain",
+      "Bullwhip effect mitigation, which reduces order quantity swings between Walmart and its merchandise vendors"
+    ],
+    "correctIndex": 2,
+    "explanation": "RFID tracking of pallets through distribution centers is a real-time inventory visibility capability — it tells the system where goods are and in what quantity at every point in the supply chain. Option A describes demand forecasting, which uses historical data to predict future needs. Option B describes supplier integration, which connects ordering systems to supplier production. Option D describes bullwhip mitigation, which is about smoothing order variability, not physical tracking.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Zara replenishes its stores twice weekly based on actual point-of-sale data rather than placing seasonal purchase orders months in advance. How does this approach reduce supply chain risk?",
+    "options": [
+      "It eliminates the need for any safety stock because Zara can predict demand for each item precisely",
+      "Frequent replenishment based on actual sales reduces the gap between orders and real demand, limiting overstock and stockout risk",
+      "Twice-weekly shipping achieves lower per-unit transportation costs through economies of scale on each delivery",
+      "It allows Zara to manufacture exclusively in low-cost countries since shorter runs reduce minimum order quantities"
+    ],
+    "correctIndex": 1,
+    "explanation": "Zara's fast replenishment model works because it closes the information gap between what customers are actually buying and what the supply chain produces. Smaller, more frequent orders based on real sales data mean the company is never too far out of alignment with actual demand, reducing both the cost of excess inventory and the revenue loss from stockouts. Option A is an overstatement — no forecasting system eliminates the need for safety stock. Option C inverts the reality: more frequent smaller shipments typically cost more per unit, not less.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "During the COVID-19 pandemic, a 10% rise in consumer toilet paper buying triggered massive retailer orders, which caused manufacturers to demand enormous quantities of pulp from suppliers. Which concept does this pattern illustrate?",
+    "options": [
+      "Demand forecasting failure, where retailer models could not handle the behavioral changes of a pandemic",
+      "Safety stock depletion, where multi-tier supply chains exhausted buffer inventory within weeks of the demand surge",
+      "The bullwhip effect, where small demand changes at the retail level caused amplified order swings at every upstream supply chain tier",
+      "Supplier integration failure, where poor EDI connectivity between retailers and manufacturers delayed replenishment signals"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a textbook illustration of the bullwhip effect: a relatively modest change in consumer behavior at the retail tier was amplified into extreme order volatility at each upstream stage — retailer to manufacturer, manufacturer to raw material supplier. Each party over-ordered out of uncertainty, compounding the signal distortion. Options A and B describe related phenomena but do not capture the core mechanism: demand amplification as orders travel upstream through supply chain tiers.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does collaborative demand forecasting differ from traditional demand forecasting in a supply chain context?",
+    "options": [
+      "Collaborative forecasting uses AI algorithms, while traditional forecasting relies exclusively on historical sales data",
+      "Collaborative forecasting is more accurate because it aggregates data from a larger number of retail locations",
+      "Traditional forecasting is less expensive because companies do not share proprietary sales data with supply chain partners",
+      "Collaborative forecasting incorporates real-time data shared between retailers and suppliers, while traditional forecasting relies on each party's internal data alone"
+    ],
+    "correctIndex": 3,
+    "explanation": "The defining difference is information sharing: collaborative forecasting involves retailers and suppliers jointly working from shared, real-time demand signals, so suppliers can plan production based on actual sell-through rather than waiting for purchase orders. Traditional forecasting means each party forecasts independently with their own data, which is where demand signal distortion originates. Option A is wrong — the distinction is about information sharing, not technology. Option B confuses data breadth with the mechanism that makes collaboration valuable.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A supply chain manager claims: 'We eliminated the bullwhip effect by increasing safety stock at every tier of the supply chain.' What is the fundamental flaw in this approach?",
+    "options": [
+      "Adding safety stock treats the symptom of demand amplification but does not address the root cause — information asymmetry and delayed ordering signals between supply chain tiers",
+      "Safety stock levels are determined automatically by ERP systems, so managers cannot manually set them across multiple supply chain tiers",
+      "Excess safety stock violates just-in-time principles and would trigger contractual penalties from the company's largest customers",
+      "The bullwhip effect is caused exclusively by transportation delays, so inventory levels have no bearing on it"
+    ],
+    "correctIndex": 0,
+    "explanation": "The bullwhip effect is caused by information gaps — each tier makes ordering decisions based on incomplete, delayed, or distorted demand signals. Adding safety stock cushions the impact of variability but does not stop demand signals from being amplified as they travel upstream. To actually eliminate the bullwhip effect, companies must share real-time demand data across tiers so each partner orders based on actual consumer demand rather than hedged guesses. Options B, C, and D all contain false premises.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Toyota's just-in-time supply system requires suppliers to deliver parts in precise quantities to the assembly line within narrow time windows. What is the primary SCM risk this approach introduces?",
+    "options": [
+      "Supplier over-investment in inventory that inflates component costs passed through to Toyota",
+      "Demand forecasting inaccuracy, since Toyota cannot predict production needs more than 24 hours in advance",
+      "Supply chain disruptions — such as a single supplier's factory stoppage — can halt the entire assembly line because no buffer inventory exists",
+      "Regulatory non-compliance, since just-in-time delivery schedules are difficult to document for customs audits"
+    ],
+    "correctIndex": 2,
+    "explanation": "JIT achieves efficiency by eliminating inventory buffers, but that same absence of buffer is its central vulnerability: when any single supplier fails to deliver on time, the assembly line stops immediately. Toyota experienced this directly in 1997 when a single brake supplier fire halted all production within days. Option A inverts the reality — JIT reduces supplier inventory, not increases it. Option B is wrong because JIT production schedules are typically planned in advance through production leveling (heijunka).",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An SCM system shows that a retailer's orders to its distribution center vary by ±40%, while consumer sales at the retail stores vary by only ±5%. What does this pattern indicate for the supply chain manager?",
+    "options": [
+      "A severe bullwhip effect is present: ordering behavior between the retailer and distribution center is amplifying actual consumer demand fluctuations by approximately 8x",
+      "The retailer's demand forecasting model needs recalibration because it is not using recent enough historical data",
+      "Distribution center lead times are too long, causing the retailer to over-order as a hedge against potential stockouts",
+      "The SCM system is recording order data incorrectly because it cannot distinguish replenishment orders from safety stock adjustments"
+    ],
+    "correctIndex": 0,
+    "explanation": "When upstream order variability (±40%) is dramatically higher than downstream consumer demand variability (±5%), the bullwhip effect is present and quantifiable — in this case, roughly 8x amplification. This is the diagnostic pattern the concept predicts: small demand changes at the consumer level become large, costly order swings further up the chain. Option B and C may be contributing factors but do not describe the pattern being observed. Option D is speculative and introduces a data quality hypothesis without evidence.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Nike uses an SCM system that gives contract manufacturers in Vietnam visibility into North American retail sell-through data. How does this supplier integration create competitive advantage?",
+    "options": [
+      "It reduces Nike's liability for labor practices at contract factories by documenting production schedules digitally",
+      "It allows Nike to audit supplier compliance with environmental standards in near real time",
+      "It gives Nike's finance team visibility into supplier profit margins, strengthening Nike's negotiating position",
+      "Manufacturers can adjust production based on actual sell-through rates, reducing lead times and preventing the demand signal distortion that generates the bullwhip effect"
+    ],
+    "correctIndex": 3,
+    "explanation": "When manufacturers see actual retail sell-through data, they can adjust production schedules to match real demand rather than reacting to purchase orders that may already reflect amplified demand signals. This shortens the feedback loop, reduces lead times, and eliminates the layered over-ordering that creates the bullwhip effect. Options A, B, and C all describe secondary benefits — compliance, auditing, and negotiation — that are not the primary value of giving suppliers real-time sales visibility.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer electronics company is choosing between a push-based and a pull-based supply chain strategy for a new product launch. When is a pull-based strategy most appropriate?",
+    "options": [
+      "When demand is highly predictable and the product has a long shelf life with stable pricing over time",
+      "When demand is uncertain and the product has a short life cycle, since pull systems produce only in response to actual orders",
+      "When the company needs to pre-build large quantities before launch to ensure shelves are fully stocked on day one",
+      "When manufacturing lead times are so long that waiting for actual customer orders would cause unavoidable stockouts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pull strategies work best when demand is uncertain because they avoid committing production capacity before real demand materializes — goods are only made once a customer order triggers production. For short-life-cycle products, this is critical because unsold inventory has little recovery value. Options A, C, and D all describe conditions that favor push strategies: predictable demand, the need to pre-build launch inventory, and long lead times that make waiting for orders impractical.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company's SCM system tracks each drug batch from raw ingredient sourcing through manufacturing and distribution to the dispensing pharmacy. What SCM capability does this represent, and why is it critical in this industry?",
+    "options": [
+      "Demand forecasting, which is critical because pharmaceutical consumption rates vary unpredictably across markets",
+      "Supplier integration, which is critical because pharmaceutical companies typically rely on single-source suppliers for key compounds",
+      "End-to-end traceability, which is critical for rapidly and precisely identifying affected units when a contaminated batch must be recalled",
+      "Bullwhip effect mitigation, which is critical because pharmaceutical demand signals are distorted by insurance reimbursement timing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tracking each batch through the entire supply chain is end-to-end traceability. In pharmaceuticals, this capability is essential for product recalls: when a contaminated batch is identified, the company must be able to instantly determine which specific units were distributed and to which locations, rather than recalling far more product than necessary. Option A describes forecasting, which is valuable but does not explain batch-level tracking. Option B describes supplier integration, which is about procurement, not downstream distribution tracking.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An SCM system's demand forecast shows a 25% increase in orders next quarter. The supply chain team shares this forecast immediately with all tier-1 and tier-2 suppliers. What outcome does this information sharing most directly prevent?",
+    "options": [
+      "Safety stock depletion at the tier-1 level, which would force the company to pay premium prices for expedited materials",
+      "Production line stoppages at the manufacturer caused by parts shortages from tier-2 suppliers without advance notice",
+      "Demand forecast errors that compound across multiple forecasting cycles as market conditions change",
+      "Upstream suppliers independently inflating their own orders in anticipation of demand — the ordering behavior that generates the bullwhip effect"
+    ],
+    "correctIndex": 3,
+    "explanation": "When the buying company shares its demand forecast upstream, each supplier tier can plan based on the same real signal rather than guessing and hedging independently. Without this sharing, each tier would estimate demand, add a buffer, and pass an inflated order further upstream — the classic bullwhip mechanism. Sharing the forecast collapses the information asymmetry that makes bullwhip amplification possible. Options A and B describe supply disruption risks that shared forecasting also helps reduce, but they are secondary benefits. Option C describes forecast accuracy improvement, which is a different issue.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During a semiconductor shortage, a company with full supply chain visibility in its SCM system qualified alternative chip suppliers within three weeks, while competitors took six months. What SCM capability most directly enabled this advantage?",
+    "options": [
+      "Demand forecasting accuracy, which allowed the company to predict the chip shortage four months before it affected production schedules",
+      "Supplier network visibility and pre-documented qualification data, which enabled rapid switching when the primary supplier could not deliver",
+      "Real-time inventory tracking, which let the company stretch existing semiconductor inventory across more product configurations",
+      "Bullwhip effect controls, which prevented the company from over-ordering semiconductors before the shortage and depleting available supply"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ability to qualify a new supplier in three weeks instead of six months comes from having current supplier network data, existing qualification documentation, and visibility into alternative sources already mapped in the SCM system. Without this pre-built knowledge, qualification requires starting from scratch — finding candidates, auditing them, running test orders — which is the six-month path competitors faced. Option A describes forecasting, which is valuable but does not explain the rapid supplier switch. Option C describes inventory optimization, a separate capability.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

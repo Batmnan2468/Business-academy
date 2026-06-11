@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What distinguishes machine learning from traditional rule-based software?",
+    "options": [
+      "Machine learning systems improve their performance by learning patterns from data",
+      "Machine learning systems are written in Python while rule-based systems use Java",
+      "Machine learning systems require more hardware than rule-based systems to operate",
+      "Machine learning systems are only applicable to financial forecasting problems"
+    ],
+    "correctIndex": 0,
+    "explanation": "Machine learning systems improve by finding patterns in data rather than following explicit programmer-defined rules. This allows them to handle tasks where rules are too complex or unknown to specify manually. Option B is wrong because language choice is unrelated to whether a system learns. Option C conflates infrastructure needs with the fundamental programming paradigm. Option D is wrong — machine learning applies broadly across industries and problem types.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix uses a recommendation system to suggest shows to users. What type of data does collaborative filtering primarily rely on?",
+    "options": [
+      "The metadata tags and genre labels assigned to each piece of content",
+      "The production budget and cast information stored in content databases",
+      "The demographic profile data collected during account registration",
+      "The behavioral patterns and ratings of users with similar viewing histories"
+    ],
+    "correctIndex": 3,
+    "explanation": "Collaborative filtering recommends items based on what similar users liked — it finds users with comparable viewing histories and surfaces what those users rated highly. Option A describes content-based filtering, a different approach that relies on item attributes. Option B describes content metadata unrelated to user behavior. Option C is partially used in some systems but is not the foundation of collaborative filtering.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines generative AI?",
+    "options": [
+      "AI that classifies inputs into predefined categories based on labeled training data",
+      "AI that detects anomalies in data streams to flag unusual patterns in real time",
+      "AI that produces new content — text, images, or code — by learning data distributions",
+      "AI that uses reinforcement signals to optimize decisions in game environments"
+    ],
+    "correctIndex": 2,
+    "explanation": "Generative AI learns the statistical distribution of its training data and uses that to produce novel outputs like text, images, or code. Option A describes classification models, which assign labels rather than generate content. Option B describes anomaly detection systems. Option D describes reinforcement learning, which optimizes for rewards and is distinct from generation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A supervised learning model is trained on historical loan data to predict defaults. What does 'supervised' mean in this context?",
+    "options": [
+      "A human supervisor reviews every model prediction before it is acted upon",
+      "The algorithm requires manual feature selection before training can begin",
+      "The model is monitored by regulators for compliance with lending laws",
+      "The training data includes labeled examples of both defaulted and repaid loans"
+    ],
+    "correctIndex": 3,
+    "explanation": "Supervised learning means the training data contains input-output pairs — here, loan features alongside the known outcome (default or repaid). The model learns to map inputs to outputs from these labeled examples. Option A confuses human oversight of a deployed system with the technical meaning of supervised learning. Option B describes a preprocessing step that is not definitionally tied to supervised learning. Option C refers to regulatory governance, not a learning paradigm.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Amazon uses machine learning to forecast inventory needs at fulfillment centers. What is the primary business value of this application?",
+    "options": [
+      "It reduces stockouts and overstock costs by predicting demand more accurately",
+      "It eliminates the need for human warehouse workers by fully automating fulfillment",
+      "It ensures Amazon complies with supplier contracts requiring minimum order quantities",
+      "It replaces Amazon's ERP system with a more flexible AI-driven alternative"
+    ],
+    "correctIndex": 0,
+    "explanation": "Demand forecasting with ML reduces two major inventory costs: stockouts that lose sales and overstock that ties up capital and warehouse space. Option B is wrong — ML forecasting aids human planning but does not eliminate workers. Option C describes a contractual constraint that is unrelated to the purpose of ML forecasting. Option D is wrong because ML forecasting layers on top of ERP systems rather than replacing them.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail company trains a product recommendation model. After deployment, sales from recommendations drop despite high click-through rates. What is the most likely explanation?",
+    "options": [
+      "The model's training data was too large, causing it to overfit to noise",
+      "Customers distrust AI recommendations and prefer human sales associates",
+      "The company's network infrastructure cannot handle real-time inference requests",
+      "The recommendation model was optimized for clicks rather than purchases"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is a classic objective misalignment — the model maximized the metric it was trained on (clicks) but that metric doesn't align with the actual business goal (purchases). Option A describes overfitting, which would reduce accuracy on new data rather than create a clicks/sales split. Option B is speculative and doesn't explain the specific pattern observed. Option C is an infrastructure problem that would manifest as latency, not a divergence between clicks and conversions.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does unsupervised learning differ from supervised learning in a business context?",
+    "options": [
+      "Unsupervised learning requires more training data and longer compute times to run",
+      "Unsupervised learning is used only for image and video recognition tasks",
+      "Unsupervised learning finds hidden structure in data without predefined outcome labels",
+      "Unsupervised learning produces more accurate predictions than supervised models"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unsupervised learning discovers patterns — clusters, associations, anomalies — without needing labeled examples of what to find. Customer segmentation is a classic business use case. Option A is not definitionally true — data volume and compute needs depend on the problem. Option B is wrong; unsupervised techniques like clustering are widely used in marketing, finance, and operations. Option D is a false generalization; accuracy depends on the task.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Google uses AI to automatically flag fraudulent ad clicks. Which statement best describes why this is valuable compared to a manually-coded rule system?",
+    "options": [
+      "AI models can adapt to new fraud patterns without requiring programmer intervention",
+      "AI flags are legally binding while manual rules require additional audit approval",
+      "AI systems eliminate false positives entirely, which manual rules cannot achieve",
+      "AI reduces the need to collect click data, lowering storage infrastructure costs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fraudsters continuously evolve their tactics; ML models can retrain on new data and generalize to unseen patterns, whereas rule systems must be manually updated each time a new fraud pattern emerges. Option B is false — automated flags have no special legal standing over manual rules. Option C is wrong; ML systems produce false positives and the goal is reduction, not elimination. Option D reverses reality — ML-based fraud detection requires more click data, not less.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank deploys a machine learning model to approve or deny mortgage applications. Regulators require the bank to explain each denial to the applicant. Which AI characteristic creates a compliance challenge here?",
+    "options": [
+      "Latency — complex models take too long to return decisions within required timeframes",
+      "Scalability — models degrade in accuracy as application volume increases over time",
+      "Interpretability — many high-performing models cannot explain their reasoning clearly",
+      "Portability — models trained on one dataset cannot be deployed across multiple regions"
+    ],
+    "correctIndex": 2,
+    "explanation": "High-accuracy models like deep neural networks are often 'black boxes' — they produce accurate predictions but cannot generate human-readable explanations for individual decisions, conflicting with regulations like ECOA that require adverse action notices. Option A is a systems engineering concern unrelated to explanation requirements. Option B describes a different model performance issue. Option D describes a data distribution problem unrelated to explainability.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Salesforce embeds AI into its CRM to predict which leads are most likely to convert. A sales manager notices the model performs well on the training data but poorly on new leads from a recent marketing campaign. What is this problem called?",
+    "options": [
+      "Concept drift — the distribution of incoming leads shifted from the training distribution",
+      "Data leakage — training data contained future information unavailable at prediction time",
+      "Underfitting — the model is too simple to capture the patterns in the lead data",
+      "Feature explosion — too many input variables caused the model to become unstable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Concept drift occurs when the real-world data the model encounters differs from the distribution it was trained on — a new campaign targeting a different audience would cause exactly this performance gap. Option B describes data leakage, which would inflate training accuracy but cause poor generalization in a different way. Option C describes underfitting, which manifests as poor performance on training data, not just new data. Option D is not a standard ML concept and misidentifies the cause.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare company trains a model to detect disease from medical images using historical hospital data. The model achieves 97% accuracy in testing but performs poorly when deployed at a new clinic. What is the most likely root cause?",
+    "options": [
+      "The model was not large enough to memorize the training images accurately",
+      "The new clinic's data differs from the hospital's imaging equipment and patient demographics",
+      "Medical image models require cloud infrastructure that the new clinic lacks",
+      "The 97% accuracy threshold is too low for medical applications and indicates poor training"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a distribution shift problem — different imaging equipment produces different image characteristics, and demographic differences affect what 'normal' looks like. The model learned patterns specific to the training hospital. Option A gets causality backwards — memorization (overfitting) typically hurts new-data performance, not helps it. Option C confuses infrastructure with model generalization. Option D is wrong; 97% accuracy is high, and the problem is deployment context, not training quality.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company uses generative AI to draft customer service emails. A customer receives an email containing a plausible-sounding but factually wrong policy statement. What AI risk does this illustrate?",
+    "options": [
+      "Bias — the model systematically disadvantages customers of certain demographics",
+      "Hallucination — the model generated confident but factually incorrect content",
+      "Overfitting — the model memorized training emails rather than learning general patterns",
+      "Underfitting — the model lacks the complexity needed to understand company policies"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hallucination is the tendency of generative AI models to produce fluent, confident-sounding text that is factually wrong. This is a known risk when deploying LLMs in customer-facing contexts without grounding or verification steps. Option A describes demographic bias, which is a different risk category unrelated to factual accuracy. Option C and D are model-fit concepts from traditional ML that don't describe the generative AI failure mode of producing false facts.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which scenario best illustrates a business using AI for prescriptive analytics rather than predictive analytics?",
+    "options": [
+      "A retailer forecasts next quarter's sales using regression on historical transaction data",
+      "A logistics company identifies which customers are most likely to churn next month",
+      "An airline's system recommends the optimal flight routes to minimize fuel costs daily",
+      "A bank analyzes past loan data to estimate the probability of future defaults"
+    ],
+    "correctIndex": 2,
+    "explanation": "Prescriptive analytics goes beyond prediction to recommend specific actions — the airline system doesn't just predict fuel consumption, it recommends what to do to optimize it. Options A, B, and D all describe predictive analytics: forecasting an outcome (sales, churn probability, default probability) without prescribing an action. The distinction is prediction tells you what will happen; prescription tells you what to do about it.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft integrates AI copilots into Office 365. A CFO claims this will reduce the finance team headcount by 80% within two years. What is the most accurate critique of this projection?",
+    "options": [
+      "AI copilots are not yet capable of processing spreadsheets or financial documents",
+      "Current AI tools augment knowledge workers rather than replacing entire job functions",
+      "Microsoft prohibits customers from using AI tools to reduce organizational headcount",
+      "Finance functions are legally required to employ a minimum number of human accountants"
+    ],
+    "correctIndex": 1,
+    "explanation": "Research and current deployment patterns show AI tools increasing productivity and handling specific subtasks, but full job elimination of knowledge worker roles within short timeframes consistently exceeds actual outcomes. AI handles routine subtasks while human judgment, relationship management, and oversight remain. Option A is factually wrong — AI copilots demonstrably process financial data. Option C is false; no such usage restriction exists. Option D may apply to auditing in some jurisdictions but is not a general rule for finance teams.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A content streaming company notices users from underrepresented groups receive fewer relevant recommendations. An audit reveals the recommendation model was trained on data where those groups were a small minority. What problem does this illustrate?",
+    "options": [
+      "Technical debt — the recommendation algorithm has not been updated in several years",
+      "Training data bias — underrepresentation in training data produces skewed model outputs",
+      "Feature engineering error — the wrong input variables were selected for the model",
+      "Cold start problem — new users have no history for the model to use as input"
+    ],
+    "correctIndex": 1,
+    "explanation": "When training data underrepresents a group, the model learns less about that group's preferences and performs worse for them — a direct form of training data bias. This is a documented equity concern with recommendation systems. Option A describes a maintenance issue unrelated to fairness across groups. Option C might affect accuracy generally but doesn't explain a systematic disparity tied to group representation. Option D describes a different problem affecting new individual users, not demographic groups.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

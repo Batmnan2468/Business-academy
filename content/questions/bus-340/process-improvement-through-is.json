@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is a bottleneck in a business process?",
+    "options": [
+      "A step that requires the most IS integration across multiple departments simultaneously",
+      "An output quality issue caused by incorrect inputs entering the process at the beginning",
+      "A constraint point where limited capacity slows the entire process below its potential throughput",
+      "A feedback loop that causes process outputs to repeat earlier steps in the workflow"
+    ],
+    "correctIndex": 2,
+    "explanation": "A bottleneck is the step whose capacity limits overall process throughput — no matter how fast other steps run, the bottleneck determines the maximum rate the entire process can achieve. This concept comes from the Theory of Constraints: improving any step other than the bottleneck produces no gain in output. Option A describes integration complexity, not a throughput constraint. Option D describes a rework loop, which is a separate process problem.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does process automation differ from process redesign as IS-enabled improvement approaches?",
+    "options": [
+      "Automation creates entirely new processes from scratch; redesign optimizes existing documented workflows",
+      "Automation speeds up existing steps using IS; redesign eliminates or restructures the steps themselves",
+      "Automation is manual and people-intensive; redesign uses IS to execute steps without human involvement",
+      "Automation requires regulatory approval for financial processes; redesign is controlled by process owners"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automation applies IS to execute existing process steps faster or without manual effort — the structure of the process stays the same. Redesign questions whether those steps should exist at all, and restructures or eliminates them before applying any technology. Option C reverses the two: automation removes manual work through IS, and redesign is the human analytical activity. Option A is incorrect — automation does not create new processes; it executes existing ones differently.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A shipping company manually re-enters tracking data from its warehouse system into its customer portal three times daily. What IS-based improvement is most appropriate?",
+    "options": [
+      "Process redesign — removing the customer portal since real-time tracking data is now widely available",
+      "Process documentation — creating detailed re-entry guides to reduce operator errors across all shifts",
+      "EIS deployment — giving executives real-time dashboards showing where manual tracking errors occur",
+      "Systems integration — linking the warehouse and portal directly to eliminate the manual re-entry"
+    ],
+    "correctIndex": 3,
+    "explanation": "Manual re-entry between two IS systems that contain the same data is a classic integration gap — the fix is connecting the systems so data flows automatically. This eliminates the error-prone manual step entirely. Option A would destroy value by removing the customer portal, which serves a legitimate function. Option B improves error handling within a flawed process rather than fixing the underlying cause — a common IS anti-pattern.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What distinguishes rules-based automation from decision-based automation in IS process improvement?",
+    "options": [
+      "Rules-based automation executes predefined logic; decision-based handles variable or ambiguous situations",
+      "Rules-based automation is more expensive; decision-based handles routine and low-volume activities",
+      "Rules-based requires human approval for each step; decision-based runs entirely without any oversight",
+      "Rules-based automation is cloud-deployed; decision-based requires on-premise server infrastructure"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rules-based automation (including RPA) executes a predetermined sequence of logic: 'if X, then Y.' It works well for structured, repetitive tasks with clear conditions. Decision-based automation (AI-assisted) handles situations where inputs vary, conditions are ambiguous, or judgment is required — going beyond scripted rules. Option B reverses the cost and use-case relationship; rules-based automation is typically cheaper and used for routine tasks. Option C incorrectly describes oversight requirements for each type.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Boeing's IS identifies that 73% of procurement delays occur at the contract approval step, which requires three sequential manager sign-offs averaging two days each. What should Boeing address first?",
+    "options": [
+      "Upgrade the IS platform to process approvals faster by improving server response and database speed",
+      "Hire additional procurement managers to handle the growing volume of contracts requiring approval",
+      "Restructure the approval workflow to parallelize or reduce sequential sign-off steps at the bottleneck",
+      "Map the entire procurement process end-to-end before targeting any specific step for improvement"
+    ],
+    "correctIndex": 2,
+    "explanation": "The bottleneck is clearly identified: three sequential approvals consuming 6 days. The highest-leverage fix is structural — running approvals in parallel rather than sequentially, or reducing the number required. This is workflow redesign at the constraint. Option A addresses infrastructure speed but the delay is waiting time between sequential humans, not server latency. Option D delays action unnecessarily — the analysis has already identified the bottleneck.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company automates its expense reporting using RPA. Six months later, employees are still submitting errors at the same rate. What is the most likely root cause?",
+    "options": [
+      "The RPA vendor failed to deliver adequate technical support during and after the implementation rollout",
+      "The automation preserved a flawed underlying process rather than redesigning the workflow first",
+      "RPA is not mature enough to reliably handle expense reporting processes at enterprise scale",
+      "Employees lack sufficient technical skills to interact correctly with the RPA-driven expense system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automating a broken process produces a faster broken process. If the upstream workflow — how employees capture, categorize, and submit expenses — is flawed, RPA executing that same workflow will propagate the same errors automatically. The principle is redesign before automate: fix the process structure first, then apply IS to execute the corrected workflow. Option A blames the vendor for a design failure. Option C makes an unsupported generalization about RPA maturity.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer implements an ERP connecting purchasing, inventory, and accounts payable. Immediately after go-live, cross-departmental process times increase. What is the most likely explanation?",
+    "options": [
+      "The ERP vendor deliberately throttled system performance to demonstrate the need for premium support",
+      "The purchasing department reverted to legacy systems to maintain control over its existing workflows",
+      "ERP systems generate processing overhead that eliminates efficiency gains during the initial year",
+      "Users are learning new workflows simultaneously across departments, causing a temporary performance dip"
+    ],
+    "correctIndex": 3,
+    "explanation": "Short-term performance declines immediately after ERP go-live are normal and well-documented. Users across multiple departments are simultaneously learning new interfaces, workflows, and cross-functional coordination patterns. Once the learning curve is absorbed, integrated workflows typically outperform the previous siloed approach. Option A is implausible — vendor sabotage is not a recognized implementation risk. Option C overstates the overhead cost in a way that contradicts the established ERP value case.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "JPMorgan's compliance team processes 10,000 loan applications monthly. The IS team proposes automating initial document verification, which currently takes 2 hours per application. What is the primary benefit?",
+    "options": [
+      "Throughput increases significantly since IS can verify documents faster than manual review allows",
+      "The automation eliminates the need for compliance staff, reducing total workforce costs substantially",
+      "The IS creates a competitive advantage that rival financial institutions cannot easily replicate",
+      "Verification quality improves because IS systems outperform human reviewers in structured data tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "At 10,000 applications monthly and 2 hours per manual verification, document verification is a high-volume bottleneck. Automating it dramatically increases throughput capacity — more applications can be processed in the same time. Option B overstates the workforce impact; automation typically augments staff capacity rather than eliminating compliance roles. Option C conflates a routine IS process improvement with strategic competitive advantage — document verification automation is widely available and does not create durable differentiation.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturer's procurement process has 14 sequential approvals per order. Management must choose between automating those 14 approvals or redesigning the approval structure. Which approach should be prioritized?",
+    "options": [
+      "Automate first because IS implementation is faster and cheaper than attempting structural process redesign",
+      "Automation is sufficient because speeding up each of the 14 approvals will achieve the efficiency target",
+      "Redesign first because automating a broken approval structure amplifies its inefficiencies rather than fixing them",
+      "Both approaches are equivalent in value and should be implemented simultaneously to maximize impact"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fourteen sequential approvals likely represents accumulated organizational decisions that each added process friction — not a well-designed workflow. Automating them makes a broken process run faster without questioning whether 14 approvals are necessary. Redesign first asks: which approvals add genuine value? Can any run in parallel? The correct sequence is redesign to fix the structure, then automate the streamlined process. Option A prioritizes speed over value, risking automation of unnecessary steps. Option B assumes the problem is execution speed when it is structural.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics firm's IS analysis shows its delivery scheduling process has 12 steps, but only 3 are value-adding. The remaining 9 steps exist to correct errors introduced earlier in the process. What does this reveal?",
+    "options": [
+      "The IS system is miscategorizing value-adding versus non-value-adding activities in its process analysis",
+      "Root-cause defects earlier in the process are generating cascading correction work throughout downstream steps",
+      "The delivery scheduling team is understaffed, causing employees to cut corners that create downstream errors",
+      "The 9 correction steps are essential quality controls that protect delivery accuracy and customer satisfaction"
+    ],
+    "correctIndex": 1,
+    "explanation": "When the majority of a process exists to fix errors created upstream, the root cause is not the correction steps — it's the defect sources earlier in the workflow. This is a cascading quality problem: a flawed input or activity early in the process propagates forward, requiring rework at multiple subsequent steps. The IS-enabled fix targets upstream defect prevention, not downstream correction. Option D mislabels rework as quality control — true quality control prevents errors, it does not repeatedly clean them up.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A CIO says: 'We connected our sales and warehouse systems through API integration, so our cross-functional process is now fully optimized.' What is the flaw in this claim?",
+    "options": [
+      "API integrations are technically inferior to direct database connections for cross-functional IS optimization",
+      "Full optimization requires ERP deployment, not API connections, which lack adequate transaction controls",
+      "Connecting only two systems is a complete solution when both systems share identical data structures",
+      "Technical integration is necessary but not sufficient — workflows and user behaviors must also align"
+    ],
+    "correctIndex": 3,
+    "explanation": "Technical connectivity between systems is a prerequisite for cross-functional process improvement, not the end state. Even with a working API, the people using those systems must adapt their workflows, and the underlying process design must align with the integrated data flow. If users route around the integration, enter data inconsistently, or follow handoff procedures that predate the connection, the process remains unoptimized despite technical success. Option A makes an unsupported claim about API inferiority. Option B prescribes ERP without basis as the only valid integration path.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Ford wants to cut supplier invoice processing from 12 days to 2 days. IS analysis shows 9 of 12 days are waiting time between three sequential approval steps. What approach most directly achieves the target?",
+    "options": [
+      "Restructure the approval workflow to run approvals in parallel, enabled by IS notification and routing",
+      "Upgrade the IS database to process invoice records faster, reducing system latency per transaction",
+      "Set time-to-approve KPIs for approval managers and include them in performance review metrics",
+      "Automate all three approval steps using RPA so that no human review of invoices is required"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nine of 12 days are waiting between sequential approvals, not processing time. Parallelizing the approvals — using IS to route invoices to all three approvers simultaneously rather than one after another — eliminates the queueing wait and can compress 9 days to roughly one review cycle. Option B targets database latency, which is irrelevant when the bottleneck is human approval sequencing. Option D misrepresents automation scope — for procurement approvals, removing human review may not be feasible given compliance requirements.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What distinguishes Business Process Management (BPM) software from a basic workflow tool?",
+    "options": [
+      "BPM is primarily adopted by large enterprises; workflow tools are designed specifically for small businesses",
+      "BPM handles document storage and retrieval; workflow tools manage routing of tasks between users",
+      "BPM provides end-to-end monitoring, analytics, and continuous improvement capabilities; workflow tools do not",
+      "BPM requires dedicated IT staff to operate; workflow tools are fully self-service for business managers"
+    ],
+    "correctIndex": 2,
+    "explanation": "BPM software adds a layer of capability that basic workflow tools lack: process performance analytics, bottleneck identification, simulation of proposed changes, and a closed-loop improvement cycle. A workflow tool routes tasks from person to person; BPM monitors aggregate process performance, surfaces deviations, and supports data-driven redesign. Option A incorrectly segments the market by firm size — BPM adoption is not strictly enterprise-only. Option B assigns document management as BPM's primary function, which mischaracterizes what distinguishes BPM from simpler tools.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Walmart connects 5,000 suppliers to its inventory IS. Analysis shows 30% of suppliers transmit data in incompatible formats, causing 40% of orders to fail. What does this reveal about cross-functional IS integration?",
+    "options": [
+      "Walmart's ERP vendor is responsible for resolving all data format incompatibilities at supplier endpoints",
+      "Technical connectivity is insufficient without data standardization — format compatibility is a critical integration barrier",
+      "The integration project should be abandoned and replaced with a manual supplier communication process",
+      "Supplier data formats will align over time as each supplier adapts to Walmart's system requirements"
+    ],
+    "correctIndex": 1,
+    "explanation": "This illustrates a fundamental cross-functional integration principle: connecting systems technically does not ensure they can exchange information usefully. Data standardization — common formats, field definitions, and protocols — must accompany technical connectivity. Without it, data is transmitted but unusable. Option A incorrectly assigns vendor responsibility for what is a multi-party data governance challenge. Option D assumes passive convergence that real-world experience contradicts — format alignment requires deliberate standards enforcement, not just time.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager says: 'We automated customer onboarding and reduced cycle time by 40%. Our process improvement work is done.' What is the error in this reasoning?",
+    "options": [
+      "A 40% reduction is below the benchmark required to justify automation investment in this category",
+      "Automation success should be measured by error rate reduction, not cycle time, in this context",
+      "Process improvement should eliminate non-value-adding steps before measuring any cycle time reductions",
+      "Process improvement is iterative — one improvement reveals new bottlenecks or creates new opportunities"
+    ],
+    "correctIndex": 3,
+    "explanation": "Process improvement is not a one-time event with a definitive end state — it is a continuous cycle. Reducing cycle time by 40% may shift the binding constraint to a different step, reveal data quality problems that were masked by the old workflow, or create new coordination challenges downstream. The manager's 'done' framing contradicts the iterative nature of BPM and continuous improvement methodologies. Option B asserts a universal measurement rule that does not hold — cycle time is a valid IS improvement metric in this context. Option C describes a sequencing preference, not a fundamental error.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]
