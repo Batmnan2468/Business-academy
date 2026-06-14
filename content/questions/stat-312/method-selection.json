@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A researcher measures cholesterol levels before and after a 12-week diet intervention for the same 30 patients. What is the appropriate test?",
+    "options": [
+      "Paired t test, because each patient's before and after measurements are linked",
+      "Two-sample t test, because before and after are two separate groups of measurements",
+      "One-way ANOVA, because there are two time points being compared",
+      "Chi-square test, because cholesterol is measured on a categorical scale"
+    ],
+    "correctIndex": 0,
+    "explanation": "The same patients are measured twice \u2014 this is a paired design. The paired t test computes differences (after \u2212 before) for each patient and tests whether the mean difference is zero. Option B treats paired data as independent groups, which is the most common error in this type of problem. Option C uses ANOVA, which would also be wrong (ANOVA is for three or more groups, and the correct approach for two repeated measures on the same subjects is paired t). Option D is wrong \u2014 cholesterol is quantitative, not categorical.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Walmart store wants to know whether the proportion of customers who use self-checkout differs between morning (8am-12pm) and afternoon (12pm-5pm). Each time period has an independent sample of 200 customers. What is the appropriate procedure?",
+    "options": [
+      "Paired t test, because two time periods are being compared",
+      "Chi-square goodness-of-fit test, because the proportions should follow a known distribution",
+      "One-way ANOVA, because two groups' responses are being compared",
+      "Two-proportion z test, because the response is a binary categorical variable and samples are independent"
+    ],
+    "correctIndex": 3,
+    "explanation": "The response is binary (used self-checkout: yes/no) and the parameter is a proportion. Two independent samples are drawn (morning and afternoon customers are different people). A two-proportion z test is the correct procedure. Option A is for quantitative data measured twice on the same subjects. Option C is for quantitative responses across groups, not proportions. Option B tests one categorical variable against a specified distribution, not compares two proportions.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study examines whether job satisfaction (measured on a 1-10 scale) differs across four departments (Sales, HR, IT, Finance) at Google. What is the appropriate test?",
+    "options": [
+      "Two-sample t test, because two groups are compared at a time",
+      "Chi-square test of independence, because department and satisfaction are two categorical variables",
+      "One-way ANOVA, because a quantitative response is compared across four groups",
+      "Simple linear regression, because one predictor (department) predicts one response (satisfaction)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Job satisfaction (1-10) is quantitative, and there are four independent groups (departments). One-way ANOVA tests whether mean satisfaction differs across the four departments. Option A is wrong \u2014 with four groups, multiple t tests inflate error rates (ANOVA tests all groups simultaneously). Option B is wrong \u2014 satisfaction (1-10 scale) is treated as quantitative, not categorical. Option D is technically possible with a dummy-coded department variable, but ANOVA is the standard approach for this design.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study investigates the association between political party affiliation (Democrat, Republican, Independent) and preferred news source (TV, Online, Print). What test is appropriate?",
+    "options": [
+      "One-way ANOVA, because three groups are compared on a response variable",
+      "Chi-square test of independence, because both variables are categorical and one sample is classified",
+      "Multiple linear regression, because multiple predictors determine news source preference",
+      "Three paired t tests comparing each news source across parties"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both variables are categorical. One sample is classified on two categorical variables simultaneously. The chi-square test of independence tests whether political affiliation and news source are associated. Option A requires a quantitative response \u2014 news source preference is categorical, not quantitative. Option C is for quantitative response variables. Option D inflates familywise error and is the wrong type of test for categorical data.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study samples 100 customers from each of four Target store locations and records whether they made a purchase (yes/no). The researcher wants to know if purchase rates differ across locations. What test should be used?",
+    "options": [
+      "Chi-square test of independence, because one sample is classified by location and purchase status",
+      "One-way ANOVA, because the four store locations are four groups being compared",
+      "Chi-square test of homogeneity, because separate samples were taken from each store location",
+      "Four separate one-proportion z tests, one per store location"
+    ],
+    "correctIndex": 2,
+    "explanation": "Separate random samples (n=100) are drawn from four different populations (store locations), and the distribution of a categorical variable (purchase: yes/no) is compared across them. This is the test of homogeneity. The test of independence is used when ONE sample is classified on two variables. Though the two tests use identical computations, the design determines which is conceptually appropriate. Option B uses ANOVA, which is for quantitative responses. Option D would inflate familywise error without controlling for multiple comparisons.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A nutrition researcher measures caloric intake (quantitative) and wants to see how well it predicts BMI (quantitative) for a sample of 80 adults. What is the most appropriate analysis?",
+    "options": [
+      "Paired t test, because two measurements are taken on each person",
+      "Two-sample t test, because high-calorie and low-calorie individuals are compared",
+      "Simple linear regression, because one quantitative variable predicts another",
+      "One-way ANOVA, because BMI categories define the groups for comparison"
+    ],
+    "correctIndex": 2,
+    "explanation": "Both variables are quantitative and the goal is to examine the predictive relationship between them. Simple linear regression is the appropriate tool. Option A is for paired designs with repeated measures on the same individuals. Option B would require dichotomizing caloric intake into groups, losing information. Option D is wrong \u2014 BMI is the response variable, not a grouping variable, and ANOVA would require treating BMI as categorical.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A psychologist wants to determine whether anxiety scores differ between men and women. She randomly samples 25 men and 25 women and measures anxiety on a validated scale. The distributions within each group are approximately normal. What test should be used?",
+    "options": [
+      "Paired t test, because males and females may be matched on other characteristics",
+      "Chi-square test, because gender and anxiety together form a two-way categorical table",
+      "One-proportion z test, because the proportion of anxious individuals is the parameter of interest",
+      "Two-sample t test (Welch's), because two independent groups are compared on a quantitative response"
+    ],
+    "correctIndex": 3,
+    "explanation": "Two independent groups (men and women, different people) are compared on a quantitative response (anxiety score). Welch's two-sample t test is the default choice. Option A requires the same individuals measured twice; here, men and women are different people. Option C is wrong \u2014 anxiety score is quantitative, not a binary outcome; the parameter is a mean, not a proportion. Option B is wrong \u2014 anxiety score is quantitative and not a categorical variable.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher investigates how annual salary (Y) is related to years of education (X1), years of experience (X2), and job sector (private/public, X3 \u2014 categorical). What analysis is most appropriate?",
+    "options": [
+      "One-way ANOVA, because job sector is a categorical predictor with two levels",
+      "Paired t test comparing salaries in private vs. public sector after matching on education",
+      "Chi-square test, because job sector and education are both categorical variables",
+      "Multiple linear regression with dummy coding for the categorical predictor"
+    ],
+    "correctIndex": 3,
+    "explanation": "The response (salary) is quantitative, and there are multiple predictors including one categorical variable (sector). Multiple regression with a dummy variable for sector (coded 0/1 for public/private) handles this design and allows controlling for education and experience simultaneously. Option A would only address the sector comparison, ignoring the quantitative predictors. Option C is wrong \u2014 salary is quantitative. Option B would require matching, losing the ability to control for multiple predictors simultaneously.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study collects one random sample of 500 adults and classifies each person by dietary pattern (vegan, vegetarian, omnivore) AND health outcome (excellent, good, fair, poor). The goal is to test whether dietary pattern and health outcome are related. The same study also compares the mean blood pressure across the three dietary groups. What tests are needed?",
+    "options": [
+      "Chi-square test of independence for the association; one-way ANOVA for blood pressure comparison",
+      "Chi-square test of homogeneity for the association; paired t test for blood pressure comparison",
+      "Two-way ANOVA for both research questions using dietary pattern and health outcome as factors",
+      "Multiple linear regression predicting health outcome from dietary pattern and blood pressure"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two separate analyses address two research questions: (1) The association between two categorical variables (dietary pattern and health outcome) from one sample \u2192 chi-square test of independence. (2) Comparing mean blood pressure (quantitative) across three dietary groups (categorical with 3 levels) \u2192 one-way ANOVA. Option B incorrectly uses homogeneity (which requires separate samples from different populations) and paired t (which requires the same subjects measured twice). Option C two-way ANOVA requires both factors to be treatment variables, not a categorical outcome. Option D treats health outcome as a quantitative response, which is inappropriate.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An experiment randomly assigns employees to one of four training programs and measures performance at 3 time points (before, 1 month after, 3 months after). The researcher wants to know whether the effect of training type varies by time point. What analysis is most appropriate?",
+    "options": [
+      "Three separate one-way ANOVAs, one per time point, comparing the four programs",
+      "Two-way ANOVA with training type and time as the two factors, with interaction",
+      "Repeated measures ANOVA or mixed model, because the same employees are measured at all time points",
+      "Multiple linear regression with training type, time, and their interaction as predictors"
+    ],
+    "correctIndex": 2,
+    "explanation": "The same employees are measured at all three time points \u2014 this is a repeated measures design (within-subject factor: time; between-subject factor: training type). Standard two-way ANOVA assumes independence of all observations, which is violated here. Repeated measures ANOVA or a mixed model correctly accounts for the correlation among an individual's measurements over time. Option A conducts three separate tests without accounting for repeated measures or controlling familywise error. Option B is the correct two-way structure but ignores the within-subject correlation. Option D has the right interaction idea but also ignores the non-independence of repeated observations.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study examines whether a national anti-smoking campaign was effective. Before the campaign, 1,200 of 5,000 surveyed adults smoked. After the campaign (same geographic areas, different random sample), 1,050 of 5,000 surveyed adults smoked. What is the most appropriate test?",
+    "options": [
+      "Paired t test, because before and after measurements are from the same time period",
+      "Two-proportion z test, because two independent samples are compared on a binary response",
+      "Chi-square goodness-of-fit test, because the current rate is compared to the baseline national rate",
+      "One-sample t test, because only one proportion (the change) is being estimated"
+    ],
+    "correctIndex": 1,
+    "explanation": "Two independent samples are drawn from the same population at different times, and the binary response (smoker: yes/no) is compared. The two-proportion z test compares p\u03021 = 1200/5000 = 0.24 and p\u03022 = 1050/5000 = 0.21. Option A is wrong \u2014 the samples are different people (independent, not paired). Option C is for comparing one observed distribution to a specified distribution \u2014 the 'before' data is not a known specification but an estimated baseline. Option D is wrong \u2014 two proportions are being compared, not a single proportion to a known value.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study examines the effect of caffeine (none, low, high) and exam difficulty (easy, hard) on test anxiety scores. The researchers also want to know if the effect of caffeine is the same for easy and hard exams. What is the appropriate analysis?",
+    "options": [
+      "Two separate one-way ANOVAs, one for easy exams and one for hard exams",
+      "Two-way ANOVA with caffeine and exam difficulty as factors, and their interaction",
+      "Simple linear regression with caffeine as a quantitative predictor of anxiety",
+      "Chi-square test of independence to determine if caffeine and exam difficulty are associated"
+    ],
+    "correctIndex": 1,
+    "explanation": "Two categorical factors (caffeine: 3 levels; difficulty: 2 levels) affect a quantitative response (anxiety score). The specific question \u2014 whether caffeine's effect differs by exam difficulty \u2014 asks about the interaction term. Two-way ANOVA with the interaction term directly tests this. Option A conducts separate analyses that don't formally test the interaction. Option C treats caffeine as quantitative and ignores exam difficulty. Option D tests association between two categorical predictors, not their joint effect on a quantitative response.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company tests whether the mean return on investment (ROI) differs across three regions (North, South, West). They also wonder if ROI is linearly related to the number of sales representatives in each region. Which combination of analyses should they use?",
+    "options": [
+      "One-way ANOVA for the regional comparison; simple linear regression for ROI vs. sales reps",
+      "Three paired t tests comparing regions; multiple regression predicting ROI from region and sales reps",
+      "Chi-square test for regional comparison; polynomial regression for ROI vs. sales reps",
+      "Two-way ANOVA with region and sales reps as two factors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two separate research questions require two separate analyses: (1) ROI (quantitative) compared across three regions (categorical, 3 groups) \u2192 one-way ANOVA. (2) Relationship between ROI (quantitative) and number of sales reps (quantitative) \u2192 simple linear regression. Option B conducts inappropriate pairwise t tests and introduces region as a predictor in regression without justification. Option C uses chi-square for a quantitative response comparison. Option D treats number of sales reps as a categorical factor in ANOVA, which is inappropriate for a quantitative variable.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A sleep researcher records whether participants fall asleep within 30 minutes (yes/no) after taking one of three sleep aids. 80 participants are randomly assigned to the three treatments. What test is appropriate?",
+    "options": [
+      "One-way ANOVA, because three treatment groups are compared on a response variable",
+      "Paired t test, because each participant is measured under one sleep aid condition",
+      "Three two-proportion z tests comparing each pair of sleep aids",
+      "Chi-square test of homogeneity, because three independent groups are compared on a categorical response"
+    ],
+    "correctIndex": 3,
+    "explanation": "Three independent groups (randomly assigned to three sleep aids) are compared on a binary categorical response (fell asleep within 30 minutes: yes/no). This is the test of homogeneity \u2014 separate samples from three groups, comparing the distribution of a categorical outcome. Option A is for quantitative responses (the binary yes/no is not quantitative). Option C inflates familywise error with multiple unadjusted tests. Option B is wrong \u2014 participants are in only one treatment condition.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following is the correct sequence of questions for choosing the right statistical procedure?",
+    "options": [
+      "1) Is the sample size large? 2) Is the data normal? 3) How many variables are there?",
+      "1) What type is the response variable? 2) How many groups or predictors? 3) Are observations paired or independent?",
+      "1) How many predictors are there? 2) What is the p-value threshold? 3) Is the design experimental?",
+      "1) Is there a null hypothesis? 2) What is the effect size? 3) Is blocking used in the design?"
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct decision framework starts with: (1) response variable type \u2014 quantitative or categorical? (2) how many groups or predictors \u2014 one, two, three+? (3) are observations paired or independent? These three questions narrow down the method (t test, ANOVA, regression, chi-square, etc.). Option A focuses on assumptions but doesn't select the method. Option C starts with predictors, not the response. Option D mixes design and testing concepts without a clear method selection logic.",
+    "type": "Definition",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The two-sample t procedures are used when:",
+    "options": [
+      "Two independent groups are compared on a quantitative response variable",
+      "The same individuals are measured twice under different conditions",
+      "Three or more groups are compared simultaneously on a single outcome",
+      "A quantitative variable is regressed on a categorical predictor with two levels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two-sample t procedures compare means from two independent groups \u2014 different people in each group, measured once. Option B describes paired data, which uses paired t procedures. Option C describes one-way ANOVA. Option D describes regression with a binary predictor, which is mathematically equivalent to two-sample t but framed differently and not the standard use case.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A company compares the mean productivity (units/hour) of 30 assembly workers trained with Method A versus 30 workers trained with Method B. The null hypothesis H0: \u03bcA - \u03bcB = 0. Which procedure is appropriate?",
+    "options": [
+      "One-sample t test, because each worker's productivity is measured once",
+      "Paired t test, because Method A and Method B are the two conditions being compared",
+      "Two-sample t test, because two distinct groups of workers are being compared",
+      "Chi-square test, because the research question involves comparing two methods"
+    ],
+    "correctIndex": 2,
+    "explanation": "Different workers are trained in each method (independent samples), making this a two-sample comparison. The response (productivity) is quantitative. Option A is wrong \u2014 one-sample t compares a sample mean to a fixed value, not two groups. Option B is wrong \u2014 paired t requires the same people measured twice; here, the workers in Method A and Method B are different people. Option D is wrong \u2014 chi-square applies to categorical response variables, not quantitative ones like productivity.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the two-sample t test output, the degrees of freedom are reported as df = 47.3 rather than a whole number. What does this indicate?",
+    "options": [
+      "A calculation error occurred \u2014 degrees of freedom must always be a whole number",
+      "Welch's procedure was used, which uses an approximation that produces non-integer df",
+      "The pooled procedure was used, which divides df between the two groups unequally",
+      "The sample sizes in the two groups were unequal, forcing a df adjustment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Welch's (unpooled) two-sample t test uses the Welch-Satterthwaite approximation for degrees of freedom, which produces a non-integer value based on the sample variances and sizes of both groups. This is the default in most software and does not require equal variances. Pooled t tests always produce integer df (n1 + n2 - 2). Option A is wrong \u2014 non-integer df is expected and valid for Welch's. Option D is partially correct (unequal variances drive the non-integer df) but the root cause is the Welch procedure, not just unequal n.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which conditions must be verified before using the two-sample t procedures?",
+    "options": [
+      "Equal sample sizes in both groups and equal variances between groups",
+      "Independent random samples from both populations and approximately normal distributions or large n",
+      "The same individuals must appear in both samples and normal distributions required",
+      "At least 30 observations total and known population standard deviations in both groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "Two-sample t procedures require (1) independent random samples from both groups and (2) either normality within each group or large enough samples (by CLT, typically n \u2265 30 each) for the sampling distribution to be approximately normal. Welch's procedure handles unequal variances, so equal variances are not required. Option A is wrong \u2014 Welch's procedure doesn't require equal variances. Option C describes the paired design condition. Option D is wrong \u2014 known population SDs would indicate using z procedures, not t procedures.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Researchers compare the mean test scores of students taught using online vs. in-person instruction. The 95% CI for \u03bc_online - \u03bc_in-person is (-2.1, 8.4). What is the correct interpretation?",
+    "options": [
+      "Online instruction is significantly better because most of the interval is above zero",
+      "Online and in-person instruction produce equivalent outcomes because the interval contains zero",
+      "There is insufficient evidence to conclude the mean scores differ; zero is plausible",
+      "In-person instruction is significantly better because the interval extends below zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "The confidence interval (-2.1, 8.4) contains zero, meaning zero difference is plausible at this confidence level. We cannot reject H0: \u03bc_online - \u03bc_in-person = 0. Option A overstates the evidence \u2014 the CI containing predominantly positive values is consistent with a positive effect, but since it includes zero, we cannot declare significance. Option B makes the stronger claim that the methods are equivalent \u2014 that requires showing the difference is within a negligible range (equivalence testing), not just that the CI contains zero. Option D is wrong \u2014 the interval extends below zero, but that's one value; the majority of the interval is above zero.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Software output for a two-sample t test comparing mean customer wait times (in minutes) at two Starbucks locations shows: t = 2.34, df = 43, p = 0.024 (two-sided). At \u03b1 = 0.05, what conclusion is correct?",
+    "options": [
+      "Fail to reject H0; the two locations have equal mean wait times",
+      "Reject H0; the mean wait time is 2.34 minutes longer at one location",
+      "Accept H0; the p-value shows there is a 2.4% probability the null is true",
+      "Reject H0; there is sufficient evidence the mean wait times differ between locations"
+    ],
+    "correctIndex": 3,
+    "explanation": "Since p = 0.024 < \u03b1 = 0.05, we reject H0. There is sufficient evidence to conclude the mean wait times differ between the two locations. Option A incorrectly fails to reject \u2014 0.024 is below 0.05. Option C misinterprets the p-value as the probability H0 is true; also 'accept' is never the correct language. Option B misinterprets the test statistic t = 2.34 as the mean difference \u2014 the test statistic and the difference in means are different quantities.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When should the pooled two-sample t test (assuming equal variances) be used instead of Welch's test?",
+    "options": [
+      "Whenever sample sizes are equal in the two groups being compared",
+      "Whenever both samples have more than 30 observations each",
+      "Whenever the populations are both normally distributed",
+      "Only when the equal variance assumption has been formally verified"
+    ],
+    "correctIndex": 3,
+    "explanation": "The pooled t test assumes equal population variances (\u03c31\u00b2 = \u03c32\u00b2). It should only be used when there is strong theoretical justification or when the assumption has been verified (e.g., with an F test or Levene's test, or the sample standard deviations are very similar). Welch's is the safer default because it is robust to unequal variances with little loss of efficiency when variances are equal. Option A is wrong \u2014 equal sample sizes do not imply equal variances. Options C and D describe conditions for normality and large sample sizes, which are about the t procedure in general, not about pooled vs. Welch's.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher calculates a two-sample t test comparing male and female MBA salaries. She uses the pooled procedure, assuming equal variances. The sample SDs are s_male = $45,000 and s_female = $12,000. What error has she made?",
+    "options": [
+      "She should have used a one-sample t test because she is comparing salaries to a fixed benchmark",
+      "The pooled procedure requires equal sample sizes, which may not be the case here",
+      "She should have used a chi-square test because salary categories are categorical",
+      "She should not pool when standard deviations differ this dramatically between groups"
+    ],
+    "correctIndex": 3,
+    "explanation": "The pooled t test assumes equal population variances. When sample SDs differ by a factor of nearly 4 ($45,000 vs $12,000), the equal variance assumption is clearly violated. Using the pooled procedure in this case produces invalid standard errors and unreliable p-values. Welch's procedure should be used \u2014 it does not assume equal variances and handles this situation correctly. Option A is wrong \u2014 comparing two groups is a two-sample problem. Option C is wrong \u2014 salary is quantitative, not categorical. Option B is wrong \u2014 the pooled procedure doesn't require equal sample sizes.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manager at Ford claims that the mean time to complete a manufacturing task is the same for experienced workers (5+ years) and new workers (<1 year). She samples 25 experienced and 25 new workers, computing \u0233_exp = 12.3 min, s_exp = 2.1 min, \u0233_new = 14.1 min, s_new = 2.3 min. Calculate the two-sample t statistic (Welch's) approximately.",
+    "options": [
+      "t \u2248 0.83, because the pooled SD is about 2.2 and the SE is about 2.2",
+      "t \u2248 5.40, because the difference of 1.8 is divided by each group's SD",
+      "t \u2248 2.82, because SE = sqrt(2.1\u00b2/25 + 2.3\u00b2/25) \u2248 0.638 and t = 1.8/0.638",
+      "t \u2248 1.80, because the t statistic equals the mean difference when standard errors equal 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "SE = sqrt(s_exp\u00b2/n_exp + s_new\u00b2/n_new) = sqrt(2.1\u00b2/25 + 2.3\u00b2/25) = sqrt(4.41/25 + 5.29/25) = sqrt(0.1764 + 0.2116) = sqrt(0.388) \u2248 0.623. Mean difference = 14.1 - 12.3 = 1.8. t = 1.8/0.623 \u2248 2.89, closest to option B. Option A uses an incorrect SE calculation. Option B incorrectly divides by individual SDs rather than the standard error of the difference. Option D treats the t statistic as the raw difference, ignoring the SE.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "After finding p = 0.31 for the difference in mean employee retention between two management styles (n = 20 each), an HR director concludes: 'Both management styles retain employees equally well.' What is the main problem with this conclusion?",
+    "options": [
+      "Failing to reject with n = 20 and a borderline p-value is uninformative due to low power",
+      "The direction of the effect is not stated, making the conclusion incomplete",
+      "The p-value of 0.31 means there is a 31% chance the retention rates are different",
+      "Two-sample t tests cannot detect differences in retention rates from management style data"
+    ],
+    "correctIndex": 0,
+    "explanation": "With only 20 people per group, this study almost certainly has low power. A p-value of 0.31 means the data are consistent with equal means, but the study may simply be too small to detect a real difference. 'Consistent with equality' is not the same as 'proven equal.' This is the classic underpowered study error: claiming equivalence from a non-significant result without considering power. Option B is a minor issue. Option C misinterprets the p-value as the probability the alternative is true. Option D is wrong \u2014 two-sample t tests are well-suited for this design.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study reports: 'The 95% confidence interval for the mean salary difference (male - female) is ($4,200, $12,800).' A colleague claims: 'Since $0 is not in the interval, we reject H0 at \u03b1 = 0.05.' Is the colleague correct?",
+    "options": [
+      "Incorrect \u2014 CI and hypothesis tests are separate tools that can give conflicting conclusions",
+      "Correct \u2014 a 95% CI not containing zero corresponds exactly to rejecting H0 at \u03b1 = 0.05 (two-sided)",
+      "Incorrect \u2014 the CI indicates practical significance, not statistical significance",
+      "Correct \u2014 but only if the test was one-sided and zero is below the lower bound"
+    ],
+    "correctIndex": 1,
+    "explanation": "There is a direct correspondence between a 95% confidence interval and a two-sided hypothesis test at \u03b1 = 0.05: if the hypothesized value (zero) falls outside the 95% CI, the test is significant at \u03b1 = 0.05. The CI and hypothesis test use the same standard error and critical value \u2014 they are mathematically equivalent. Option A incorrectly claims they can give conflicting conclusions (they cannot for the same test). Option C confuses statistical and practical significance \u2014 both can be addressed using the CI. Option D incorrectly restricts this to one-sided tests.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Researchers at UnitedHealth compare mean hospital stay lengths for two treatment protocols: n1 = 40 (protocol A) and n2 = 35 (protocol B), with x\u03041 = 4.2 days and x\u03042 = 5.1 days. The p-value is 0.043 and the 95% CI for \u03bc1 - \u03bc2 is (-1.79, -0.01). What is the most complete interpretation?",
+    "options": [
+      "Protocol A results in significantly shorter stays; the true difference is between 0.01 and 1.79 days",
+      "Protocol B results in significantly shorter stays; the CI shows zero is not plausible",
+      "There is no meaningful clinical difference because the CI barely excludes zero",
+      "We cannot conclude which protocol is better without knowing the standard deviations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since x\u03041 < x\u03042, protocol A has shorter average stays. The CI for \u03bc1 - \u03bc2 = (-1.79, -0.01) is entirely negative, excluding zero, which corresponds to the significant p-value. The true difference likely lies between 0.01 and 1.79 days shorter for protocol A. Option B incorrectly names protocol B as having shorter stays \u2014 the negative difference means protocol A stays are shorter. Option C is a judgment about clinical significance that isn't warranted without clinical context; statistically, zero is excluded. Option D is wrong \u2014 we have sufficient information from the output provided.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A two-sample t test produces df = 58 using the pooled procedure. The sample sizes are n1 and n2. What must be true?",
+    "options": [
+      "n1 = n2 = 30, because pooled df = n1 + n2 \u2212 2 = 58",
+      "n1 + n2 = 60, because pooled df = n1 + n2 \u2212 2 implies total n = 60",
+      "n1 = 30 and n2 = 28, because one degree of freedom is added for each group",
+      "n1 = n2 = 29, because each group loses one degree of freedom"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pooled two-sample t degrees of freedom = n1 + n2 \u2212 2. If df = 58, then n1 + n2 = 60. This doesn't uniquely determine n1 and n2 individually \u2014 they could be 30 and 30, 40 and 20, or any combination summing to 60. Option A is a specific valid case (n1 = n2 = 30) but not the only possibility, making it incorrect as a definitive answer. Option C is wrong because the formula is n1 + n2 \u2212 2, not n1 + n2 \u2212 2 with asymmetric subtraction. Option D gives n1 = n2 = 29, which yields df = 56, not 58.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two independent samples are drawn: Group 1 has n = 15, x\u0304 = 88, s = 10; Group 2 has n = 12, x\u0304 = 82, s = 9. A researcher uses the pooled two-sample t test. The pooled variance is approximately:",
+    "options": [
+      "s_p\u00b2 = (10\u00b2 + 9\u00b2) / 2 = 90.5, the simple average of the two variances",
+      "s_p\u00b2 = (15 \u00d7 100 + 12 \u00d7 81) / 27 = (1500 + 972) / 27 \u2248 91.6",
+      "s_p\u00b2 = sqrt(10\u00b2 + 9\u00b2) = sqrt(181) \u2248 13.4, the combined SD",
+      "s_p\u00b2 = ((14)(100) + (11)(81)) / 25 = (1400 + 891) / 25 \u2248 91.6"
+    ],
+    "correctIndex": 3,
+    "explanation": "The pooled variance formula is s_p\u00b2 = [(n1\u22121)s1\u00b2 + (n2\u22121)s2\u00b2] / (n1+n2\u22122) = [(14)(100) + (11)(81)] / (15+12\u22122) = (1400 + 891) / 25 = 2291/25 \u2248 91.6. This is a weighted average of the two sample variances, weighted by their degrees of freedom. Option A incorrectly uses unweighted average (doesn't weight by df). Option C computes a combined SD rather than the pooled variance. Option B uses n instead of (n\u22121) in the numerator, which is the wrong weighting.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following correctly describes what 'independent samples' means in the two-sample t context?",
+    "options": [
+      "Both samples must have the same number of observations",
+      "The response variable must be measured on the same scale in both groups",
+      "Knowing the value of an observation in one group provides no information about any observation in the other group",
+      "The samples must be drawn from populations with the same shape distribution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Independence means that observations across groups are unrelated \u2014 selecting or measuring one person in Group 1 tells us nothing about any person in Group 2. This is violated when the same people appear in both groups (paired design) or when observations are matched. Equal sample sizes, same scale, and same distribution shape are not requirements for independence. Option A is wrong \u2014 unequal n is common and fine. Option B is about measurement compatibility, not independence. Option D describes distributional assumptions, not independence.",
+    "type": "Definition",
+    "difficulty": "medium"
+  }
+]

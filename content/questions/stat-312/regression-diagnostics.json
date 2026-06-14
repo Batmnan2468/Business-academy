@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A residuals-vs-fitted plot shows a fan shape: small residuals for small fitted values, large residuals for large fitted values. What assumption is violated?",
+    "options": [
+      "Linearity \u2014 the relationship between x and y is curved, not linear",
+      "Independence \u2014 residuals are correlated with each other across observations",
+      "Equal variance \u2014 the spread of residuals increases with the fitted value",
+      "Normality \u2014 the residuals are skewed rather than normally distributed"
+    ],
+    "correctIndex": 2,
+    "explanation": "A fan-shaped (or funnel-shaped) residual plot indicates nonconstant variance (heteroscedasticity) \u2014 the variance of the response is larger for larger fitted values. This violates the equal variance assumption of linear regression. Linearity violations show up as curvature in residual plots. Independence violations require residuals-vs-order plots. Normality violations appear in Q-Q plots, not typically in residuals-vs-fitted plots.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An outlier in regression is best defined as an observation that:",
+    "options": [
+      "Has an unusual x value, far from the other x observations",
+      "Has a large residual \u2014 the observed y is far from the predicted \u0177",
+      "Changes the slope substantially when removed from the analysis",
+      "Falls outside the range of the confidence interval at that x value"
+    ],
+    "correctIndex": 1,
+    "explanation": "An outlier has an unusually large residual \u2014 the y value is far from the regression line. Option A describes a high-leverage point (unusual x value). Option C describes an influential point (substantial impact on the slope when removed). Option D describes an observation whose y value falls outside a CI, which is not how outliers are defined in regression diagnostics. These three concepts (outlier, leverage, influence) are distinct and often confused.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A high-leverage point in regression is an observation with:",
+    "options": [
+      "A large residual relative to the rest of the data",
+      "A predicted value far outside the range of the observed y values",
+      "A y value that changes the slope when it is removed from the dataset",
+      "An unusual x value, far from x\u0304, giving it potential to influence the slope"
+    ],
+    "correctIndex": 3,
+    "explanation": "Leverage measures how far an observation's x value is from the mean x\u0304. An observation with extreme x has high leverage \u2014 it is in a position to pull the regression line toward itself. High leverage alone does not make a point influential; it depends on whether the y value also deviates from the line. Option A describes an outlier (large residual). Option C describes an influential point. Option B describes extrapolation territory for predicted values, not leverage.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A normal Q-Q plot of residuals shows the points forming a gentle S-curve rather than a straight line. What does this indicate?",
+    "options": [
+      "Nonconstant variance \u2014 residuals fan out as fitted values increase",
+      "Nonlinearity \u2014 the true relationship between x and y is curved",
+      "Non-normality \u2014 the residuals have heavier or lighter tails than a normal distribution",
+      "High influence \u2014 several observations have large Cook's distance values"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Q-Q plot compares residual quantiles to theoretical normal quantiles. A straight line indicates normality; an S-curve indicates that the tails of the residual distribution are lighter or heavier than normal (platykurtic or leptokurtic). Nonconstant variance appears as a fan shape in residuals-vs-fitted plots, not Q-Q plots. Nonlinearity appears as curvature in residuals-vs-fitted. Influential points are identified by Cook's distance, not Q-Q plots.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A dataset has 25 observations. One point has leverage h = 0.40. Is this concerning?",
+    "options": [
+      "No \u2014 leverage of 0.40 is within the acceptable range of 0 to 1",
+      "Yes \u2014 leverage above 0.50 defines an influential observation in standard practice",
+      "No \u2014 only leverage values greater than 1.0 indicate unusually influential observations",
+      "Yes \u2014 leverage values near 1/n = 0.04 are expected; 0.40 is 10 times the average"
+    ],
+    "correctIndex": 3,
+    "explanation": "Average leverage in simple regression is (k+1)/n = 2/25 = 0.08. A common rule of thumb flags observations where leverage exceeds 2(k+1)/n = 2\u00d72/25 = 0.16, or 3\u00d7average. At h = 0.40, this observation is 5 times the average leverage, indicating an unusual x value that deserves investigation. Option A is technically true (0 \u2264 h \u2264 1) but ignores whether the value is practically large. Option C is wrong \u2014 leverage is bounded by 1, so values > 1 are impossible. Option B uses a threshold of 0.50 which is a common rule but is not the only standard, and the point at 0.40 is still notable.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An influential observation is defined as one that:",
+    "options": [
+      "Has both an unusual x value and a y value consistent with the regression line",
+      "Has a large residual relative to all other observations in the dataset",
+      "Substantially changes the estimated slope when it is removed from the regression",
+      "Has a leverage value that exceeds the average leverage for all observations"
+    ],
+    "correctIndex": 2,
+    "explanation": "An influential point substantially changes model estimates (especially the slope) when removed. Influence = leverage \u00d7 outlyingness: a point must have both an unusual x value (leverage) AND a y value that doesn't fit the trend (large residual). Option A describes a high-leverage point whose y follows the trend \u2014 such a point has high leverage but low influence. Option B describes an outlier (large residual) \u2014 outliers in the center of x have low leverage and minimal influence on the slope. Option D describes high leverage, not high influence.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Residuals from a regression of sales on advertising spend show a U-shaped pattern when plotted against fitted values. What is the appropriate remedy?",
+    "options": [
+      "Remove the outliers that are creating the curved pattern in the residuals",
+      "Transform the response variable using a logarithm to reduce nonconstant variance",
+      "Increase the sample size to reduce the curvature in the residual plot",
+      "Add a quadratic term (advertising\u00b2) to the model to capture the curved relationship"
+    ],
+    "correctIndex": 3,
+    "explanation": "A curved (U-shaped) pattern in residuals-vs-fitted indicates nonlinearity \u2014 the linear model is missing a curved component of the relationship. Adding X\u00b2 to the model (polynomial regression) can capture this curvature. Option A is wrong \u2014 removing observations that reveal model inadequacy doesn't fix the underlying nonlinearity. Option C is wrong \u2014 sample size does not affect the shape of the residual pattern. Option B addresses nonconstant variance (fan shape), not curvature.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study of 30 countries regresses cardiovascular disease rate on population size. Country A has population = 5 (far below x\u0304 = 25) and very high disease rate. When Country A is removed, the slope changes from 0.82 to 0.31. What type of observation is Country A?",
+    "options": [
+      "An outlier only, because its y value (disease rate) is far above the regression line",
+      "A high-leverage point only, because it has an unusually small population",
+      "An influential point, because its removal substantially changes the slope estimate",
+      "A normal observation, because small countries are common in international datasets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Country A is influential because removing it changes the slope dramatically (from 0.82 to 0.31). It combines high leverage (extreme x value: population = 5 vs. x\u0304 = 25) with a y value that contradicts the trend (high disease rate despite small population). This combination pulls the slope toward a steeper value. Option A identifies only the outlier aspect. Option B identifies only the leverage aspect. Option D is incorrect \u2014 'normal' observations don't change slopes by 60% when removed.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "After fitting a regression model, the residuals vs. fitted plot shows random scatter (no pattern), the Q-Q plot is approximately linear, but one point has a Cook's distance of 1.8. What do these diagnostics collectively suggest?",
+    "options": [
+      "All assumptions are met and the model is valid; Cook's distance is not a regression assumption",
+      "Assumptions appear met, but one highly influential observation deserves investigation before finalizing conclusions",
+      "The model violates normality because Cook's distance above 1 indicates non-normal residuals",
+      "The model is valid for inference because the residual and Q-Q plots show no violations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Random residual scatter and linear Q-Q plot suggest the LINE assumptions are reasonably met. However, Cook's distance > 1 (a common threshold for high influence) indicates one observation is pulling the regression line substantially. Even with assumptions met, an influential point can distort coefficient estimates and reduce generalizability. The appropriate response is to investigate the point (data error? legitimate extreme value?) rather than automatically delete it. Option A incorrectly dismisses influential points. Option C misinterprets Cook's distance as a normality measure. Option D is partially right but ignores the influential point warning.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression of Boeing aircraft price on engine count shows: an observation with engine count = 2 (average) but a very high price (far above the line). Another observation has engine count = 12 (extreme) but falls on the regression line. Which observation is more influential?",
+    "options": [
+      "The observation with engine count = 2, because its residual is large",
+      "The observation with engine count = 12, because it has high leverage",
+      "Both are equally influential because influence requires both leverage and an outlying y value",
+      "The observation with engine count = 2, because average x values have maximum leverage"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a careful conceptual distinction. The observation at engine count = 2 (average x) has LOW leverage because its x value is not extreme. However, a large residual combined with any non-zero leverage contributes to influence. The observation at engine count = 12 has HIGH leverage but falls on the regression line (small residual), so it has minimal influence on the slope \u2014 it is a high-leverage, low-influence point. Option A is the better answer: the average-x outlier, while having less leverage potential, does influence the slope because of its large residual at a typical x location. But the key principle is that HIGH leverage + ON the line = low influence. The question tests whether students understand that a high-residual point at average x can be more influential than a high-leverage point on the line.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression uses 50 observations. The residuals vs. fitted values plot shows 3 points with residuals near \u00b14 (all other residuals are between \u22121 and 1). What is the most appropriate next step?",
+    "options": [
+      "Immediately remove all three points and refit the model to improve R\u00b2",
+      "Investigate each point to determine whether the extreme residuals reflect data errors or legitimate variation",
+      "Accept the model as-is because three points out of 50 is below the 10% threshold for concern",
+      "Replace the three outlying residuals with the model's predicted values and refit"
+    ],
+    "correctIndex": 1,
+    "explanation": "Extreme residuals warrant investigation: are these data entry errors, measurement mistakes, or genuinely unusual observations? If they are errors, they should be corrected or removed. If they are legitimate (real events that produced unusual outcomes), they should generally be retained \u2014 removing valid data to improve fit is data manipulation. Option A removes without investigation. Option C applies a pseudo-threshold that has no statistical basis. Option D (replacing observed with predicted values) would artifically deflate residuals and bias all estimates.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "After applying a log transformation to the response variable in a regression, the residuals become approximately normally distributed and the fan shape disappears. What does this confirm?",
+    "options": [
+      "The log transformation effectively addressed nonconstant variance and non-normality",
+      "The original data was incorrectly collected and required correction",
+      "The original linear model was correct; log transformations only change the scale",
+      "The predictor variable should also be log-transformed to maintain symmetry"
+    ],
+    "correctIndex": 0,
+    "explanation": "A log transformation of the response often addresses both nonconstant variance (fan shape) and non-normality simultaneously, because multiplicative error structures (common in economic and biological data) become additive on the log scale. The improvement in residual diagnostics confirms the transformation helped. Interpretation changes: the slope now represents the change in log(y) per unit x, which is a multiplicative relationship on the original scale. Option B is wrong \u2014 the transformation is a modeling choice, not a data correction. Option C is wrong \u2014 applying log changes the model structure and interpretation. Option D is sometimes appropriate (log-log models) but is not confirmed by the described diagnostics.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression produces residuals with patterns: observations 1\u201325 are all positive, observations 26\u201350 are all negative. What assumption is most likely violated?",
+    "options": [
+      "Independence \u2014 the systematic pattern suggests residuals are correlated across time or order",
+      "Normality \u2014 the pattern suggests the residuals follow a bimodal distribution",
+      "Linearity \u2014 alternating positive and negative residuals indicate a curved relationship",
+      "Equal variance \u2014 groups of positive and negative residuals suggest different spreads"
+    ],
+    "correctIndex": 0,
+    "explanation": "When residuals follow a systematic pattern by order or time (first half positive, second half negative), this indicates the residuals are correlated \u2014 the independence assumption is violated. This is common in time series data where conditions change over the study period. A residuals-vs-time (or order) plot specifically tests for this pattern. Option B would require a bimodal Q-Q plot, not the pattern described. Option C shows alternating (not grouped) residuals. Option D is indicated by a fan shape across fitted values, not temporal grouping.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why is it important to check residual plots even when R\u00b2 is high (e.g., R\u00b2 = 0.92)?",
+    "options": [
+      "High R\u00b2 models are more likely to violate the normality assumption",
+      "R\u00b2 can be inflated by influential observations that mask assumption violations",
+      "Residual plots check whether the model's predictions are accurate for all observations",
+      "High R\u00b2 models require more stringent assumption checking than low R\u00b2 models"
+    ],
+    "correctIndex": 1,
+    "explanation": "A high R\u00b2 can result from one or a few influential observations pulling the regression line toward them \u2014 artificially inflating fit while the line doesn't represent the majority of the data well. Additionally, a curved relationship can produce high R\u00b2 with an inappropriate linear model. Residual plots reveal patterns that R\u00b2 averages away. Option A has no statistical basis \u2014 R\u00b2 level doesn't predict which assumptions are violated. Option C conflates accuracy (residual magnitude) with assumption satisfaction (residual patterns). Option D implies a stricter standard for high R\u00b2 models, which has no statistical justification.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In regression diagnostics, what distinguishes a 'high-leverage, not influential' point from a 'high-leverage, influential' point?",
+    "options": [
+      "The number of standard deviations the point is from the mean x value",
+      "The sample size relative to the number of high-leverage points in the dataset",
+      "Whether the predictor or response variable is responsible for the extreme position",
+      "Whether the high-leverage point has a small or large residual"
+    ],
+    "correctIndex": 3,
+    "explanation": "High leverage means the observation's x value is extreme. Whether this translates to influence depends on the residual: if the high-leverage point falls near the regression line (small residual), it confirms the trend and has little influence on the slope. If it has a large residual (falls far from the line), it pulls the slope toward itself and is influential. Influence = Leverage \u00d7 Residual (roughly). Option A just defines what makes leverage high, not what determines influence. Option C is not a standard distinction in regression diagnostics. Option B is not relevant to the high-leverage vs. influential distinction.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  }
+]

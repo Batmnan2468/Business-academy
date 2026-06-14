@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The chi-square goodness-of-fit test is used to determine whether:",
+    "options": [
+      "Two categorical variables from one sample are independent of each other",
+      "The distribution of a single categorical variable matches a specified distribution",
+      "The means of a quantitative variable differ across multiple groups",
+      "Two populations have the same distribution of a categorical variable"
+    ],
+    "correctIndex": 1,
+    "explanation": "The goodness-of-fit test compares the observed distribution of one categorical variable to a hypothesized distribution (e.g., equally distributed, or following a known national proportion). Option A describes the test of independence. Option C describes ANOVA. Option D describes the test of homogeneity. Understanding which chi-square test to use based on the design is a critical skill.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A contingency table has 3 rows and 4 columns. How many degrees of freedom does the chi-square test of independence have?",
+    "options": [
+      "df = 3 \u00d7 4 \u2212 1 = 11, the number of cells minus 1",
+      "df = (3 \u2212 1)(4 \u2212 1) = 6, computed from rows and columns",
+      "df = 3 + 4 \u2212 2 = 5, the sum of margins minus 2",
+      "df = 12 \u2212 4 = 8, total cells minus the number of columns"
+    ],
+    "correctIndex": 1,
+    "explanation": "For the chi-square test of independence (and homogeneity), df = (r \u2212 1)(c \u2212 1) where r = rows and c = columns. Here df = (3-1)(4-1) = 2 \u00d7 3 = 6. Option A gives the total number of cells minus 1, which is the formula for goodness-of-fit when k categories equal total cells. Option C has no statistical basis. Option D is also incorrect. Confusing the goodness-of-fit df (k-1) with the independence/homogeneity df ((r-1)(c-1)) is a very common error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The chi-square test statistic is calculated as:",
+    "options": [
+      "\u03c7\u00b2 = \u03a3(O \u2212 E)\u00b2 / E, summing the squared standardized deviations across all cells",
+      "\u03c7\u00b2 = \u03a3(O \u2212 E) / E, summing the standardized deviations without squaring",
+      "\u03c7\u00b2 = (O \u2212 E)\u00b2 / n, dividing by total sample size instead of expected count",
+      "\u03c7\u00b2 = \u03a3|O \u2212 E| / E, summing the absolute differences divided by expected"
+    ],
+    "correctIndex": 0,
+    "explanation": "The chi-square test statistic is \u03c7\u00b2 = \u03a3(O\u2212E)\u00b2/E, where O is the observed count and E is the expected count in each cell, summed over all cells. Squaring ensures all terms are positive (deviations in either direction contribute). Dividing by E standardizes the deviation relative to the expected count. Options B and D don't square, making them sensitive to direction. Option C divides by n instead of the cell-specific expected count, which doesn't properly standardize.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A university surveys students about major (Business, STEM, Humanities) and study location preference (Library, Home, Caf\u00e9). Researchers want to know if major and study location are related. What chi-square test is appropriate?",
+    "options": [
+      "Goodness-of-fit test, because multiple categories are being compared",
+      "Test of homogeneity, because three different populations (majors) are being compared",
+      "Test of independence, because one sample is classified on two categorical variables",
+      "Two-sample z test, because proportions within each major are being compared"
+    ],
+    "correctIndex": 2,
+    "explanation": "One sample of students is classified simultaneously on two variables (major and study location). The test of independence asks whether knowing a student's major tells us anything about their study location preference. The test of homogeneity would be used if separate random samples were drawn from Business students, STEM students, and Humanities students \u2014 different populations sampled separately. Option A is for one variable tested against a specified distribution. Option D would apply to two proportions, not multiple categories.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a chi-square test with a 3\u00d74 table, the expected count for a cell is computed as:",
+    "options": [
+      "E = (row total + column total) / grand total",
+      "E = (observed count \u00d7 grand total) / (row total \u00d7 column total)",
+      "E = (row total \u00d7 column total) / grand total",
+      "E = (grand total) / (number of rows \u00d7 number of columns)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Expected count under H0 (independence) = (row total \u00d7 column total) / grand total. This formula gives what we'd expect if the two variables were truly independent \u2014 where the row and column proportions multiply together. Option A adds instead of multiplies, producing a meaningless number. Option B has O in the numerator, making it circular. Option D gives a uniform expected count that ignores the marginal distributions.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A chi-square test of independence is conducted on a 2\u00d73 table with n = 120. The computed \u03c7\u00b2 = 5.8. At \u03b1 = 0.05, the critical value for df = 2 is 5.99. What is the conclusion?",
+    "options": [
+      "Reject H0; the chi-square statistic exceeds the degrees of freedom",
+      "Reject H0; there is sufficient evidence the two variables are associated",
+      "Fail to reject H0; insufficient evidence of an association between the variables",
+      "Accept H0; the two variables are definitively independent in the population"
+    ],
+    "correctIndex": 2,
+    "explanation": "\u03c7\u00b2 = 5.8 < critical value of 5.99 at \u03b1 = 0.05 with df = 2. We fail to reject H0. There is insufficient evidence to conclude the two variables are associated. Option A misuses the degrees of freedom as a threshold. Option B incorrectly rejects H0 \u2014 the test statistic does not exceed the critical value. Option D commits the 'accept H0' error \u2014 failing to reject is not the same as proving independence.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher is comparing the proportion of satisfied customers across four store locations using a chi-square test. Three locations are sampled with n = 200 customers each, and the fourth with n = 150. Is this a test of independence or homogeneity?",
+    "options": [
+      "Test of homogeneity, because separate samples are drawn from different populations (store locations)",
+      "Test of independence, because the response variable (satisfaction) is the same across all stores",
+      "Goodness-of-fit test, because there are four groups being compared against a baseline",
+      "Neither \u2014 a chi-square test cannot be used when sample sizes differ across groups"
+    ],
+    "correctIndex": 0,
+    "explanation": "The test of homogeneity is used when separate, independent samples are drawn from different populations, and we test whether they share the same distribution of the response variable. Here, separate samples are drawn from four different store locations (four populations). The test of independence is used when one sample is classified on two variables. Option B misidentifies the design. Option C is for one variable versus a specified distribution. Option D is wrong \u2014 chi-square tests handle unequal group sizes.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A cell in a chi-square table has expected count E = 3. Why does this violate an assumption?",
+    "options": [
+      "The observed count must be larger than the expected count for chi-square to be valid",
+      "The chi-square approximation requires expected counts of at least 5 in each cell",
+      "Small expected counts mean the sample size is too small to conduct any analysis",
+      "Expected counts below 5 cause the chi-square statistic to be negative"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chi-square approximation to the true distribution of the test statistic requires expected counts of at least 5 in each cell. With E = 3, the (O\u2212E)\u00b2/E term becomes large relative to the expected count, making the chi-square distribution a poor approximation. Alternatives include Fisher's exact test or collapsing categories. Option A is false \u2014 expected and observed counts can have any relationship. Option C overstates \u2014 a small E in one cell doesn't prevent analysis; it may require Fisher's exact test. Option D is false \u2014 the chi-square statistic is always non-negative (it sums squared terms).",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher surveys 500 adults on political affiliation (Democrat, Republican, Independent) and media preference (TV News, Social Media, Newspapers, Podcasts). The chi-square test gives \u03c7\u00b2 = 18.7, df = 6, p = 0.0048. What can be correctly concluded?",
+    "options": [
+      "Democrats prefer TV news significantly more than Republicans do",
+      "Media preference causes people to adopt certain political affiliations over time",
+      "Each political affiliation has a significantly different distribution of media preferences",
+      "Political affiliation and media preference are significantly associated"
+    ],
+    "correctIndex": 3,
+    "explanation": "A significant chi-square test of independence (p = 0.0048 < 0.05) tells us that political affiliation and media preference are statistically associated \u2014 knowing someone's affiliation gives us information about their likely media preference. Option A goes beyond what the overall chi-square tells us \u2014 specific pairwise differences require post-hoc analysis of standardized residuals. Option C describes the conclusion for a homogeneity test, not independence. Option B attributes causation, which a cross-sectional survey cannot establish.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A goodness-of-fit test evaluates whether a die is fair. The die is rolled 120 times and results are recorded. The null hypothesis is that each face is equally likely (probability 1/6). What are the expected count per face and degrees of freedom?",
+    "options": [
+      "E = 120/6 = 20 per face, df = 6 (number of categories)",
+      "E = 120 \u00d7 (1/6) = 20 per face, df = 119 (total observations minus 1)",
+      "E = 120/5 = 24 per face, df = 5 (total minus the number of cells)",
+      "E = 120/6 = 20 per face, df = 5 (number of categories minus 1)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Expected count = n \u00d7 p_i = 120 \u00d7 (1/6) = 20 per face. Degrees of freedom for goodness-of-fit = k \u2212 1 = 6 \u2212 1 = 5, where k is the number of categories. One degree of freedom is lost because the expected counts must sum to n (a constraint). Option A uses df = k = 6, missing the subtraction of 1. Option C incorrectly computes E using 5 in the denominator. Option B uses total observations minus 1, which is total df, not goodness-of-fit df.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A chi-square test on a 4\u00d73 contingency table is significant (\u03c7\u00b2 = 21.4, p = 0.006). A researcher examines standardized residuals and finds that cell (row 2, col 3) has a standardized residual of 3.8. What does this indicate?",
+    "options": [
+      "The observed count in cell (2,3) is substantially higher than expected under independence",
+      "Row 2 and column 3 are the only categories that differ significantly from independence",
+      "The chi-square statistic in that cell exceeds the overall p-value threshold",
+      "3.8 is the chi-square contribution of that cell, indicating it drives the overall significance"
+    ],
+    "correctIndex": 0,
+    "explanation": "A standardized residual of 3.8 means the observed count in that cell is 3.8 standard deviations above what we'd expect under independence. Large positive standardized residuals (typically |z| > 2 or 3) indicate cells where the observed counts are much higher than expected, driving the association. Option B overinterprets \u2014 standardized residuals identify where the association is strongest, not whether other cells are exactly at independence. Option C confuses standardized residuals with chi-square contributions. Option D is closer \u2014 the chi-square contribution of a cell is (O-E)\u00b2/E, related to but different from the standardized residual.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study collects one sample of 400 adults and classifies them by income level (Low, Medium, High) and type of investment account (Stocks, Bonds, Savings). A separate study collects separate samples of 200 low-income, 150 medium-income, and 120 high-income adults, then classifies each by investment type. Which test should each study use?",
+    "options": [
+      "Both studies use the test of independence because the response variable is the same",
+      "Both studies use the test of homogeneity because income groups are being compared",
+      "First study: test of independence; second study: test of homogeneity",
+      "First study: goodness-of-fit; second study: test of independence"
+    ],
+    "correctIndex": 2,
+    "explanation": "The first study draws one sample classified on two variables \u2014 classic test of independence. The second study draws separate samples from three populations (income levels) and compares the distribution of investment type across them \u2014 this is the test of homogeneity. Though the computations are identical, the study design determines which test is conceptually appropriate. Option A applies independence to both, ignoring that the second study's design (separate samples by population) defines homogeneity. Options C and D misclassify one or both studies.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A market researcher runs a 3\u00d72 chi-square test of independence (product category \u00d7 purchase decision). The expected cell counts are all between 8 and 45. What sample size was approximately needed for these expected counts, given row and column totals are roughly equal?",
+    "options": [
+      "n \u2248 30, because each of 6 cells needs at least 5 expected observations",
+      "n \u2248 60, because 6 cells \u00d7 10 (target per cell) gives n = 60",
+      "n \u2248 150, because with 6 cells and roughly equal proportions, each cell gets n/6",
+      "n cannot be determined without knowing the actual marginal proportions"
+    ],
+    "correctIndex": 3,
+    "explanation": "The exact sample size needed depends on the marginal proportions. With 3 product categories and 2 decisions in roughly equal proportions (1/3 for rows, 1/2 for columns), expected count per cell \u2248 n \u00d7 (1/3) \u00d7 (1/2) = n/6. For E \u2265 10, we'd need n \u2265 60. But if proportions are unequal \u2014 one category is rare \u2014 expected counts for rare cells may be low even with large n. The expected count range (8 to 45) in the question suggests unequal marginals. Option B would be right for perfectly equal proportions. Option D is correct as a general statement: without knowing the marginals, the required n cannot be precisely determined.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A chi-square test of independence is conducted on a large dataset. The result is \u03c7\u00b2 = 64.2, df = 4, p < 0.001. A manager concludes: 'This is an extremely large chi-square statistic, so the two variables are strongly associated.' Is this correct?",
+    "options": [
+      "Yes \u2014 larger chi-square statistics always indicate stronger associations",
+      "No \u2014 a chi-square of 64.2 with df = 4 means the test is invalid due to insufficient degrees of freedom",
+      "No \u2014 chi-square magnitude indicates the number of cells where the null is violated",
+      "Partially \u2014 large chi-square shows significance, but chi-square magnitude does not directly measure association strength"
+    ],
+    "correctIndex": 3,
+    "explanation": "Chi-square magnitude depends on both association strength AND sample size. A large n can produce a large chi-square statistic even for a weak association. To measure association strength, effect size measures like Cram\u00e9r's V = sqrt(\u03c7\u00b2/(n \u00d7 min(r-1, c-1))) are appropriate. A highly significant result doesn't tell you the association is practically important \u2014 it tells you the association is unlikely due to chance. Option A is wrong because chi-square inflates with sample size. Option C doesn't describe what chi-square measures. Option B is wrong \u2014 df = 4 is a valid degrees of freedom for a chi-square test.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study records blood type (A, B, AB, O) for 200 patients. The researcher tests whether blood type distribution in this hospital matches the national distribution (A: 40%, B: 11%, AB: 4%, O: 45%). What are the expected counts for types A and AB?",
+    "options": [
+      "E_A = 50 and E_AB = 8, using national proportions times n = 200",
+      "E_A = 80 and E_AB = 8, applying 40% and 4% to n = 200",
+      "E_A = 40 and E_AB = 4, using the national percentages directly as counts",
+      "E_A = 80 and E_AB = 4, because AB's proportion is less than 5% and should be doubled"
+    ],
+    "correctIndex": 1,
+    "explanation": "Expected counts = n \u00d7 p_i (null hypothesis proportions). E_A = 200 \u00d7 0.40 = 80; E_AB = 200 \u00d7 0.04 = 8. The condition requires E \u2265 5 \u2014 E_AB = 8 satisfies this. Option A uses 25% for type A (50/200), not 40%. Option C uses the percentages as raw counts rather than proportions times n. Option D applies the correct E_A but incorrectly adjusts E_AB \u2014 there is no rule requiring doubling of small expected counts.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  }
+]

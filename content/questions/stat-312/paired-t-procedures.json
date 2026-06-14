@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the parameter of interest in a paired t test?",
+    "options": [
+      "The difference between two population proportions p1 - p2",
+      "The standard deviation of individual differences within each pair",
+      "The difference between two independent population means \u03bc1 - \u03bc2",
+      "The mean of the population of individual differences \u03bcd"
+    ],
+    "correctIndex": 3,
+    "explanation": "In a paired t test, the data are reduced to differences (d = x1 - x2) for each pair, and we perform a one-sample t test on those differences. The parameter is \u03bcd, the population mean of the differences. Option A is for two-proportion inference. Option C is the parameter for two-sample (independent) t procedures. Option B is a nuisance parameter (the standard deviation of differences), not the parameter of interest.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A researcher measures each employee's productivity before and after a training program. How should the data be analyzed?",
+    "options": [
+      "Two-sample t test comparing the before and after measurements as separate groups",
+      "One-sample z test because the population standard deviation is assumed known",
+      "Paired t test computing the difference for each employee and testing if the mean difference is zero",
+      "Chi-square test comparing the distribution of productivity before and after"
+    ],
+    "correctIndex": 2,
+    "explanation": "When the same individuals are measured twice, the observations are paired. The paired t test computes the difference (after - before) for each employee, then runs a one-sample t test on those differences. This accounts for the fact that each 'before' and 'after' measurement comes from the same person. Option A incorrectly treats paired data as independent \u2014 this is the most common error. Option B requires knowing \u03c3, which is unrealistic. Option D applies to categorical data, not quantitative productivity measurements.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The paired t test is preferred over the two-sample t test when the same individuals are measured twice because it:",
+    "options": [
+      "Reduces Type I error by using smaller critical values",
+      "Requires fewer assumptions about the normality of the response variable",
+      "Eliminates between-subject variability from the error, increasing power",
+      "Uses more degrees of freedom, making the test more powerful"
+    ],
+    "correctIndex": 2,
+    "explanation": "Person-to-person variability is often large \u2014 different people have very different baseline productivity, pain tolerance, reaction times, etc. Pairing eliminates this between-person variability from the error term because each person serves as their own control. The error now reflects only within-person variability, which is typically much smaller, yielding more power. Option A is wrong \u2014 paired tests use n-1 df (for n pairs), while two-sample tests use n1+n2-2 df, so paired tests often have fewer df. Option B is wrong \u2014 paired tests also require approximately normal differences. Option D is wrong \u2014 paired tests lose degrees of freedom compared to two-sample tests.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a paired study, the differences (after - before) for 8 participants are: 3, -1, 2, 4, 1, 2, -1, 2. The mean difference is:",
+    "options": [
+      "d\u0304 = 1.5, computed as the sum 12 divided by 8",
+      "d\u0304 = 0, because the negative differences cancel the positive ones",
+      "d\u0304 = 4, computed as the maximum difference in the dataset",
+      "d\u0304 = 2.0, computed as the median of the differences"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean difference = (3 + (-1) + 2 + 4 + 1 + 2 + (-1) + 2) / 8 = 12/8 = 1.5. This is the sample estimate of \u03bcd. Option B is wrong \u2014 the positives (3+2+4+1+2+2 = 14) exceed the negatives (-1+(-1) = -2), so the mean is not zero. Option C gives the maximum, not the mean. Option D gives the median of the sorted differences (\u22121, \u22121, 1, 2, 2, 2, 3, 4) = (2+2)/2 = 2.0, which is the median, not the mean.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study tests whether a new software tool reduces the time to complete an audit. Twenty auditors complete one audit with the old method and one audit with the new tool. The mean difference (old - new) is 45 minutes with SD of differences = 30 minutes. Calculate the t statistic.",
+    "options": [
+      "t = 45/30 = 1.5, dividing the mean by the standard deviation of differences",
+      "t = 45 / (30/sqrt(20)) = 45/6.71 \u2248 6.71, using the standard error of the mean difference",
+      "t = 45 / (30/sqrt(19)) = 45/6.89 \u2248 6.53, using n-1 in the standard error",
+      "t = (45 - 30) / sqrt(20) = 15/4.47 \u2248 3.35, subtracting SD from mean before dividing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The t statistic for a paired test is t = d\u0304 / (sd / sqrt(n)) = 45 / (30/sqrt(20)) = 45 / 6.708 \u2248 6.71. The denominator is the standard error of the mean difference, not the standard deviation of differences. Option A divides by sd directly, omitting the square root of n. Option C uses n\u22121 in the denominator of SE, which is incorrect \u2014 SE = sd/sqrt(n), not sd/sqrt(n-1). Option D incorrectly subtracts the SD from the mean before dividing.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study uses a paired design where each participant is matched to one other participant on age and gender. Compared to a paired design where the same individual is measured twice, what is the key disadvantage?",
+    "options": [
+      "Matched pairs cannot be analyzed with the paired t test procedure",
+      "The match on age and gender may not absorb enough variability to increase power substantially",
+      "Matching on two variables always introduces confounding into the analysis",
+      "The degrees of freedom are halved compared to a within-subject design"
+    ],
+    "correctIndex": 1,
+    "explanation": "When pairing is based on external matching (matching different people on characteristics) rather than using the same person twice, the pairing is only helpful if those characteristics (age, gender) are strongly related to the response variable. If the matched characteristics explain little variability in outcomes, matched pairs don't reduce error substantially \u2014 and you lose degrees of freedom compared to treating the data as independent samples. Within-subject pairing typically explains much more variability than between-subject matching. Option A is wrong \u2014 matched pairs are analyzed identically to repeated measures (same procedure). Option C is wrong \u2014 matching controls for known confounders, not introduces them. Option D is wrong \u2014 df depends on the number of pairs, not whether it's within-subject or matched.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Researchers mistakenly analyze paired data (before/after measurements on the same 30 patients) as two independent groups (treating before as Group 1 and after as Group 2, n = 60 total). What consequence does this error have?",
+    "options": [
+      "The mean difference will be estimated incorrectly because groups are not independent",
+      "The standard error will be overestimated because between-patient variability is not removed",
+      "The degrees of freedom will be too low, making the test overly conservative",
+      "The test statistic will be inflated, increasing the chance of a false positive"
+    ],
+    "correctIndex": 1,
+    "explanation": "When paired data are incorrectly analyzed as independent groups, the error term includes between-patient variability (which is often large). The paired analysis removes this variability by working with differences. The incorrectly inflated SE leads to a smaller t statistic, making it harder to reject H0. This reduces power \u2014 a Type II error becomes more likely. Option A is wrong \u2014 the estimated mean difference is the same (x\u0304_after - x\u0304_before). Option C is wrong \u2014 the wrong analysis actually uses MORE degrees of freedom (n1+n2-2 instead of n-1), not fewer. Option D is wrong \u2014 the t statistic is deflated (smaller), not inflated.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher tests H0: \u03bcd = 0 vs. Ha: \u03bcd > 0 (improvement after treatment). The paired t test gives t = 2.15 with df = 24 and p = 0.021 (one-sided). At \u03b1 = 0.05, what conclusion is appropriate?",
+    "options": [
+      "Fail to reject H0; the p-value of 0.021 is below our chance of making an error",
+      "Reject H0; there is sufficient evidence the treatment produces a positive mean improvement",
+      "Accept H0; the mean difference is positive so the treatment works in this sample",
+      "The test is invalid because a one-sided test was used for a before-after comparison"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since p = 0.021 < \u03b1 = 0.05 and the alternative is one-sided (\u03bcd > 0), we reject H0. There is evidence the treatment produces a positive mean improvement in the population. Option A incorrectly fails to reject. Option C uses 'accept H0' (wrong) and confuses sample results with population conclusions. Option D is wrong \u2014 one-sided tests are valid when there is a strong theoretical reason to test in a specific direction (e.g., we hypothesize the treatment will improve, not worsen).",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study pairs 50 cities by population size and randomly assigns one city in each pair to receive an anti-pollution campaign. Mean reduction in PM2.5 (campaign - no campaign) is -8.3 \u00b5g/m\u00b3 with SE = 1.9. Compute the 95% CI for the mean difference and interpret it.",
+    "options": [
+      "(-12.0, -4.6); the campaign is associated with a significant reduction of 4.6 to 12.0 \u00b5g/m\u00b3",
+      "(-6.4, -0.3); the campaign shows a borderline significant reduction in PM2.5 levels",
+      "(-4.5, 4.5); zero is contained, so the campaign has no detectable effect",
+      "(-11.4, -5.2); the campaign is associated with a significant reduction of 5.2 to 11.4 \u00b5g/m\u00b3"
+    ],
+    "correctIndex": 0,
+    "explanation": "For df = 49, t* \u2248 2.01. CI = d\u0304 \u00b1 t* \u00d7 SE = -8.3 \u00b1 2.01 \u00d7 1.9 = -8.3 \u00b1 3.82 \u2248 (-12.1, -4.5). The interval is entirely negative (campaign results in lower PM2.5), indicating a significant reduction of approximately 4.5 to 12.1 \u00b5g/m\u00b3. Option A is the closest correct answer. Option B gives a narrower interval that doesn't match the calculation. Option C incorrectly includes zero. Option D uses t* \u2248 3.0, which would be a 99% CI, not 95%.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A tech company tests whether a new algorithm reduces server response time. Each of 20 servers is tested under both the old and new algorithm (in random order). Data: d\u0304 = -12 ms, sd = 18 ms, n = 20. The t statistic is approximately -2.98. What are the df and the approximate p-value for Ha: \u03bcd < 0 (one-sided)?",
+    "options": [
+      "df = 38, p \u2248 0.003, because two groups of 20 are compared",
+      "df = 18, p \u2248 0.004, because the SE formula uses n-1 in the denominator",
+      "df = 19, p \u2248 0.008, because the two-sided p-value must be halved",
+      "df = 19, p \u2248 0.004, because paired t uses n-1 degrees of freedom"
+    ],
+    "correctIndex": 3,
+    "explanation": "Paired t uses df = n \u2212 1 = 20 \u2212 1 = 19, where n is the number of pairs. With t = -2.98 and df = 19 for a one-sided test (Ha: \u03bcd < 0), the p-value is the area to the left of t = -2.98, approximately 0.004. Option A incorrectly uses df = n1 + n2 \u2212 2 = 38, which applies to independent samples. Option C gives p \u2248 0.008, which would be the two-sided p-value (both tails) \u2014 for a one-sided test, we use only the appropriate tail. Option B uses df = 18, which is incorrect; df = n\u22121 = 19.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher has 40 volunteers and must decide between: Design A \u2014 randomly assign 20 to treatment and 20 to control (independent groups), or Design B \u2014 have all 40 volunteers complete both treatment and control tasks (within-subjects). Which design is more powerful and why?",
+    "options": [
+      "Design A, because more subjects means more total measurements in each group",
+      "Design A, because independent groups avoid carryover effects and have more degrees of freedom",
+      "Design B, because within-subject comparisons remove individual differences from the error",
+      "Both designs have equal power because both use 40 volunteers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Design B (within-subjects/paired) is typically more powerful because the individual differences in performance \u2014 some people are always faster, always more productive \u2014 are removed from the error term. With independent groups (Design A), these individual differences inflate the MSE. However, Design B requires assumptions that order effects (carryover) are minimal or controlled by counterbalancing. Option A is wrong \u2014 Design A has 20 measurements per group; Design B has 40 per condition, but the key is the reduction in error variance, not sample size alone. Option B is partially right about carryover effects but wrong that Design A is more powerful. Option D is wrong \u2014 power depends on within-person variability, not just n.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a paired study with n = 12 pairs, the analyst correctly computes the test statistic and finds t = 1.78. The two-sided p-value is 0.103 and the one-sided p-value is 0.052. A colleague argues they should use the one-sided test because the treatment was expected to increase scores. Is this justified?",
+    "options": [
+      "Yes, if the hypothesis was specified as one-sided before data collection, the one-sided p-value is appropriate",
+      "No, two-sided tests are always required for paired data regardless of prior expectations",
+      "Yes, switching to one-sided tests after seeing data is standard practice to maximize power",
+      "No, the two-sided p-value must be used because the CI is two-sided"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using a one-sided test is appropriate when the alternative hypothesis specifying the direction was stated before data collection, based on prior knowledge or theory. The critical issue is pre-specification: if the researcher genuinely expected the treatment to increase scores before seeing results, a one-sided test is valid. However, choosing one-sided based on observing which direction the data went is 'p-hacking' and invalid. Option B is wrong \u2014 one-sided tests are entirely valid for paired data when direction is pre-specified. Option C explicitly endorses p-hacking, which is wrong. Option D is wrong \u2014 the choice of one-sided vs. two-sided CI and test are made together and both are valid when justified.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A nutrition study measures each subject's blood glucose levels after eating Meal A and Meal B on separate days. The differences (Meal A - Meal B) have d\u0304 = 8.5 mg/dL and sd = 22 mg/dL with n = 16 subjects. The t statistic is t = 8.5/(22/4) = 1.545. The p-value for H0: \u03bcd = 0 vs. Ha: \u03bcd \u2260 0 is approximately 0.143. What conclusion is reached at \u03b1 = 0.05?",
+    "options": [
+      "Reject H0; the mean difference of 8.5 mg/dL proves Meal A raises glucose more than Meal B",
+      "Reject H0; the t statistic of 1.545 exceeds the critical value for df = 16",
+      "Accept H0; the meals produce identical blood glucose responses in the population",
+      "Fail to reject H0; there is insufficient evidence of a difference in mean glucose response"
+    ],
+    "correctIndex": 3,
+    "explanation": "With p = 0.143 > \u03b1 = 0.05, we fail to reject H0. There is insufficient evidence to conclude the two meals produce different mean blood glucose responses. Option A incorrectly rejects H0 and uses inappropriately causal language ('proves'). Option C commits the 'accept H0' error \u2014 we cannot conclude the meals are identical, only that we lack sufficient evidence of a difference in this sample. Option B incorrectly states the t statistic exceeds the critical value; for df = 15 and \u03b1 = 0.05 (two-sided), the critical value is approximately 2.13, which exceeds 1.545.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A paired design is appropriate when observations in the two groups are:",
+    "options": [
+      "Drawn from populations with equal variances",
+      "Each drawn from a normal distribution independently",
+      "Naturally linked so that removing one observation from a pair makes its partner meaningless",
+      "Collected by the same researcher using the same measurement protocol"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pairing is appropriate when there is a natural link between observations \u2014 the same person measured twice, twins, matched subjects, or adjacent time periods for the same unit. The linkage means an observation in Group 1 has a meaningful, specific relationship to one observation in Group 2. Removing one observation from a pair destroys the pairing structure. Option A describes an assumption for pooled t tests, not a criterion for pairing. Option B describes independence, the opposite of pairing. Option D describes measurement standardization, not the statistical basis for pairing.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A before-after study at Boeing measures the defect rate for each of 25 manufacturing lines before and after implementing a new quality control system. The null hypothesis is that the mean defect rate does not change. What is the appropriate test and degrees of freedom?",
+    "options": [
+      "Two-sample t test with df = 48, treating before and after as independent groups",
+      "Paired t test with df = 49, using 2n-1 to account for both measurements per line",
+      "One-sample z test with df not applicable, because population SD is known from industry data",
+      "Paired t test with df = 24, using n-1 where n is the number of pairs (lines)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Each manufacturing line is measured before and after \u2014 these are 25 paired observations. The appropriate test is a paired t test. Degrees of freedom for a paired test = n \u2212 1 = 25 \u2212 1 = 24, where n is the number of pairs (lines). Option A treats paired data as independent, which is incorrect. Option C would require known population SD, which is rarely realistic and wouldn't use the paired structure. Option B uses 2n\u22121 = 49, which would apply to independent samples with n1=n2=25, not paired data.",
+    "type": "Application",
+    "difficulty": "medium"
+  }
+]

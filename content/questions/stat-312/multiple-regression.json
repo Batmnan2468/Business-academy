@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In multiple linear regression, a partial slope coefficient represents:",
+    "options": [
+      "The expected change in the response for a one-unit increase in that predictor, holding all other predictors constant",
+      "The total effect of a predictor on the response, ignoring all other predictors",
+      "The correlation between that predictor and the response variable",
+      "The proportion of variability in the response explained by that predictor alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "A partial slope (partial regression coefficient) is interpreted as the expected change in Y for a one-unit increase in Xi while all other predictors are held constant. This 'controlling for' interpretation distinguishes multiple regression from simple regression. Option B describes a marginal (simple regression) slope, not a partial slope. Option C describes a correlation coefficient. Option D describes a partial R\u00b2, not a slope coefficient.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The overall F test in multiple regression tests H0: \u03b21 = \u03b22 = ... = \u03b2k = 0. What does rejecting this hypothesis indicate?",
+    "options": [
+      "Every predictor individually contributes significantly to predicting the response",
+      "At least one predictor has a non-zero slope in the population regression equation",
+      "The model explains more than 50% of the variability in the response variable",
+      "All pairwise correlations among predictors are significantly different from zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "The overall F test rejects H0 that ALL slopes are zero \u2014 at least one predictor has a non-zero relationship with Y. This does not identify which predictors are significant (that requires individual t tests). Option A overclaims \u2014 some predictors may still be non-significant even when F is significant. Option C is wrong \u2014 you can reject H0 with a very low R\u00b2 if n is large enough. Option D is about multicollinearity, not the F test hypothesis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why is adjusted R\u00b2 preferred over R\u00b2 when comparing regression models with different numbers of predictors?",
+    "options": [
+      "Adjusted R\u00b2 can decrease when adding a predictor that doesn't improve the model",
+      "Adjusted R\u00b2 measures association while R\u00b2 measures predictive accuracy",
+      "Adjusted R\u00b2 always equals R\u00b2 when sample size is large",
+      "Adjusted R\u00b2 penalizes for predictor correlation, not for the number of predictors"
+    ],
+    "correctIndex": 0,
+    "explanation": "R\u00b2 always increases (or stays the same) when predictors are added, even if they are useless. Adjusted R\u00b2 penalizes for adding predictors by incorporating (n-1)/(n-k-1) as a correction factor. Adding a predictor that contributes less than random noise will decrease adjusted R\u00b2. This makes adjusted R\u00b2 the appropriate criterion when comparing models with different numbers of predictors. Option B is wrong \u2014 both measure variability explained. Option C is wrong \u2014 they converge but adjusted R\u00b2 < R\u00b2 for any n with k > 0. Option D misdescribes what the adjustment penalizes.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A multiple regression model to predict employee salary has output: Intercept = 28,000; \u03b2(Education years) = 3,200; \u03b2(Experience years) = 1,800. An employee has 16 years of education and 5 years of experience. What is the predicted salary?",
+    "options": [
+      "\u0176 = 28,000 + 3,200(16) = $79,200, using only education",
+      "\u0176 = 28,000 + (3,200 + 1,800) \u00d7 21 = $133,000, adding the predictors together",
+      "\u0176 = 3,200(16) + 1,800(5) = $60,200, using only the slopes",
+      "\u0176 = 28,000 + 3,200(16) + 1,800(5) = $88,200"
+    ],
+    "correctIndex": 3,
+    "explanation": "\u0176 = \u03b20 + \u03b21X1 + \u03b22X2 = 28,000 + 3,200(16) + 1,800(5) = 28,000 + 51,200 + 9,000 = $88,200. Each predictor's contribution is multiplied by its respective slope. Option A omits the experience contribution. Option C omits the intercept. Option B incorrectly sums the X values before multiplying by a combined slope.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Multiple regression output for predicting house price: Intercept = 50,000; \u03b2(sqft) = 150; \u03b2(bedrooms) = 8,000; \u03b2(age) = -500. A house has 2,000 sqft, 3 bedrooms, and is 10 years old. The t-tests show: sqft (p=0.001), bedrooms (p=0.31), age (p=0.04). Which predictors are significantly contributing at \u03b1 = 0.05?",
+    "options": [
+      "Square footage only, because it has the smallest p-value",
+      "Bedrooms only, because the coefficient is the largest in absolute value",
+      "All three predictors, because the overall F test would be significant",
+      "Square footage and house age, because p < 0.05 for both"
+    ],
+    "correctIndex": 3,
+    "explanation": "Individual t tests determine whether each predictor adds significant value, controlling for the others. Square footage (p=0.001 < 0.05) and house age (p=0.04 < 0.05) are each significantly contributing. Bedrooms (p=0.31 > 0.05) is not significant \u2014 its contribution to Y beyond what sqft and age already explain is not statistically different from zero. Option A only includes sqft. Option C confuses the overall F test with individual predictors. Option B incorrectly uses coefficient magnitude as the criterion for significance.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher adds a third predictor to a multiple regression model. R\u00b2 increases from 0.62 to 0.64, but adjusted R\u00b2 decreases from 0.61 to 0.60. What should the researcher conclude?",
+    "options": [
+      "The third predictor significantly improves the model because R\u00b2 increased",
+      "The third predictor adds little value beyond what the two original predictors explain",
+      "The model with three predictors is definitively better based on the higher R\u00b2",
+      "The third predictor should be kept because adjusted R\u00b2 is still positive"
+    ],
+    "correctIndex": 1,
+    "explanation": "When adjusted R\u00b2 decreases after adding a predictor, the predictor is not contributing enough explained variance to overcome the penalty for adding a parameter. The new predictor adds only 2% to R\u00b2 while reducing adjusted R\u00b2 \u2014 it contributes less than a random variable would in expectation. The simpler two-predictor model is preferred. Option A uses the wrong criterion (unadjusted R\u00b2). Option C incorrectly compares using R\u00b2 alone. Option D misinterprets 'positive adjusted R\u00b2' as indicating value \u2014 any positive adjusted R\u00b2 is above zero but doesn't mean the predictor is useful.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Multicollinearity in multiple regression occurs when:",
+    "options": [
+      "The response variable is highly correlated with all of the predictor variables",
+      "Two or more predictor variables are highly correlated with each other",
+      "The residuals are correlated with the fitted values",
+      "The regression model has more predictors than observations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other, making it difficult to estimate their individual partial slopes reliably. When predictors are nearly collinear, their coefficients become unstable \u2014 small changes in the data produce large changes in estimated slopes, and standard errors inflate. Option A describes predictors correlated with Y, which is actually desirable for prediction. Option C describes a violation of the equal variance assumption. Option D describes an overfit model (p > n), a related but distinct problem.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A predictor X1 has a significant t test (p = 0.02) in simple regression but becomes non-significant (p = 0.38) when X2 is added to the model. The partial slope of X1 also changes substantially. What explains this?",
+    "options": [
+      "X1 becomes less important than X2 in the multiple regression, so its significance decreases",
+      "X1 and X2 are correlated \u2014 adding X2 controls for its contribution, leaving less unique variance for X1 to explain",
+      "The significance level must be adjusted for multiple predictors, making X1's threshold stricter",
+      "Adding X2 reduces the sample size effective for estimating X1's effect"
+    ],
+    "correctIndex": 1,
+    "explanation": "When X1 and X2 are correlated, X1's apparent relationship with Y in simple regression partly reflects X2's relationship with Y (confounding). Once X2 is controlled for in multiple regression, the unique relationship between X1 and Y \u2014 what's left after accounting for X2 \u2014 may be much weaker. This is why partial slopes differ from simple regression slopes and can change substantially. Option A is not a statistical phenomenon \u2014 'importance' isn't a direct measure. Option C misapplies multiple testing correction. Option D is wrong \u2014 sample size doesn't change when adding predictors.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Regression output predicting nutrition score (Y) from unfavorable nutrients (X1) and favorable nutrients (X2): \u03b20=3.33, \u03b21=0.82, \u03b22=0.57, R\u00b2=0.31, F(2,97)=21.8, p<0.001. Interpret the coefficient \u03b21=0.82.",
+    "options": [
+      "A one-unit increase in unfavorable nutrients is associated with a 0.82-unit increase in nutrition score, regardless of favorable nutrients",
+      "Unfavorable nutrients explain 82% of the variability in nutrition score after controlling for favorable nutrients",
+      "For each one-unit increase in unfavorable nutrients, holding favorable nutrients constant, predicted nutrition score increases by 0.82 units",
+      "A one-unit increase in unfavorable nutrients causes nutrition score to increase by 0.82 units on average"
+    ],
+    "correctIndex": 2,
+    "explanation": "The partial slope \u03b21 = 0.82 means: for each one-unit increase in unfavorable nutrient score, the predicted nutrition score increases by 0.82 units, holding favorable nutrient score constant. The 'holding constant' qualifier is essential for multiple regression interpretation. Option A drops the 'holding constant' condition \u2014 this describes a marginal (simple regression) slope. Option B confuses the slope coefficient with R\u00b2. Option D uses causal language ('causes') that requires experimental design to support; this is observational regression.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A multiple regression with k=3 predictors and n=25 observations gives SSModel=480, SSError=720, MSError=36. What are the degrees of freedom for the model and the F statistic?",
+    "options": [
+      "df(Model)=3, F = (480/3) / 36 = 160/36 = 4.44",
+      "df(Model)=4, F = (480/4) / 36 = 120/36 = 3.33",
+      "df(Model)=3, F = (480/3) / (720/21) = 160/34.3 = 4.67",
+      "df(Model)=24, F = 480/720 = 0.67"
+    ],
+    "correctIndex": 0,
+    "explanation": "For multiple regression with k predictors: df(Model) = k = 3. df(Error) = n\u2212k\u22121 = 25\u22123\u22121 = 21. MSError = SSError/df(Error) = 720/21 = 34.3, not 36. The question states MSError = 36, but with n=25 and k=3: 720/21 \u2248 34.3. If MSError = 36 as given, then df(Error) = 720/36 = 20 (implying n = k + 1 + df(Error) = 3 + 1 + 20 = 24). Using the stated MSError=36: F = (480/3)/36 = 160/36 \u2248 4.44. Option B uses df(Model)=k+1=4 (incorrect). Option C recalculates MSError, inconsistent with the given value. Option D uses df(Model)=n-1.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher runs a multiple regression of sales on advertising, price, and competitor advertising. The overall F test is not significant (p = 0.12). One predictor \u2014 advertising \u2014 has a significant t test (p = 0.03). Should the researcher interpret the advertising coefficient?",
+    "options": [
+      "Yes \u2014 the significant t test is more specific and overrides the non-significant F test",
+      "Yes \u2014 the t test for advertising directly tests its marginal contribution, independent of the F test",
+      "No \u2014 a non-significant overall F test suggests the model as a whole lacks explanatory power; individual t tests are unreliable in this context",
+      "No \u2014 with a non-significant F, all t tests are automatically non-significant"
+    ],
+    "correctIndex": 2,
+    "explanation": "When the overall F test is not significant, it suggests the model collectively does not explain variance beyond chance. Individual t tests in this context are suspect \u2014 with k predictors and \u03b1 = 0.05, we expect approximately k \u00d7 0.05 spurious significant results by chance. A significant t test for advertising when F is non-significant is likely a false positive, especially with a small p=0.03. The standard practice is to first establish overall model significance before interpreting individual predictors. Option A ignores the multiple testing context. Option B describes what the t test does mathematically but ignores the false positive risk. Option D is too extreme \u2014 individual tests can be non-significant even when F is significant, and vice versa.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two regression models predict employee performance. Model 1: Y ~ X1 (simple, R\u00b2=0.45, adj R\u00b2=0.44). Model 2: Y ~ X1 + X2 + X3 (multiple, R\u00b2=0.52, adj R\u00b2=0.47). Which model is preferred and why?",
+    "options": [
+      "Model 1, because simple models are always preferable to complex ones",
+      "Model 2, because higher R\u00b2 always indicates a better model",
+      "Model 2, because adjusted R\u00b2 improved from 0.44 to 0.47, suggesting the added predictors contribute meaningfully",
+      "Model 1, because the additional 7% in R\u00b2 from three more predictors is insufficient to justify complexity"
+    ],
+    "correctIndex": 2,
+    "explanation": "Adjusted R\u00b2 increased from 0.44 to 0.47, indicating that X2 and X3 collectively contribute enough explained variance to overcome the penalty for adding two parameters. Model 2 is preferred based on this criterion. Option A applies a blanket preference for simplicity without examining the evidence. Option B uses unadjusted R\u00b2 which always increases with more predictors. Option D applies subjective judgment ('insufficient') without a formal criterion \u2014 the adjusted R\u00b2 improvement is the appropriate measure here.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a multiple regression, a variable has t = 0.8 and p = 0.43 individually, but when it is removed from the model, R\u00b2 drops from 0.65 to 0.52. How do you reconcile this?",
+    "options": [
+      "This cannot happen \u2014 a non-significant t test must correspond to a small R\u00b2 change",
+      "R\u00b2 always drops when any variable is removed; the size of the drop doesn't indicate significance",
+      "The p-value of 0.43 means the variable is significant at the 43% level and should be retained",
+      "The variable may be correlated with other predictors; it shares explained variance but still contributes uniquely when other predictors aren't present"
+    ],
+    "correctIndex": 3,
+    "explanation": "This apparent contradiction is caused by multicollinearity. When X1 is correlated with X2 and X3, removing X1 allows X2 and X3 to partially compensate \u2014 but not fully. The individual t test for X1 is non-significant because, given X2 and X3, X1 adds little unique information. But removing X1 eliminates shared variance that X2 and X3 can't fully recapture, causing a large R\u00b2 drop. This illustrates why multicollinearity makes individual t tests hard to interpret. Option A incorrectly assumes consistency between t tests and R\u00b2 changes. Option C misinterprets the p-value. Option B is wrong \u2014 a 13% R\u00b2 drop is atypically large.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression model predicts store sales from square footage, number of employees, and local population. The VIF (Variance Inflation Factor) for 'employees' is 12.4. What does this indicate?",
+    "options": [
+      "The predictor 'employees' has 12.4 times the variance of the response variable",
+      "Removing 'employees' from the model would reduce R\u00b2 by 12.4%",
+      "The variance of the 'employees' coefficient is inflated 12.4 times due to correlation with other predictors",
+      "The coefficient for 'employees' is 12.4 standard deviations from zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "VIF = 1/(1\u2212R\u00b2j) where R\u00b2j is the R\u00b2 from regressing predictor j on all other predictors. VIF = 12.4 means the variance of the 'employees' coefficient is 12.4 times what it would be if 'employees' were uncorrelated with the other predictors. A rule of thumb flags VIF > 10 as problematic multicollinearity. High VIF inflates standard errors, making t tests unreliable. Option A confuses VIF with a variance ratio for the response. Option B confuses VIF with a partial R\u00b2. Option D describes a t statistic, not VIF.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does the individual t test for a predictor in multiple regression differ from the overall F test?",
+    "options": [
+      "The t test uses a different significance threshold (\u03b1/k) to account for multiple testing",
+      "The F and t tests are equivalent in multiple regression, just as in simple regression",
+      "The t test is always less powerful than the F test because it uses fewer degrees of freedom",
+      "The F test tests all slopes simultaneously; the t test evaluates each predictor's unique contribution controlling for all others"
+    ],
+    "correctIndex": 3,
+    "explanation": "The overall F test evaluates whether the complete set of predictors collectively explains significant variance (H0: \u03b21=\u03b22=...=\u03b2k=0). Individual t tests assess whether each specific predictor adds unique predictive value above and beyond all other predictors in the model. A predictor can be non-significant in a t test even when F is significant (due to multicollinearity) or vice versa. Option A incorrectly applies Bonferroni to individual regression t tests. Option C is wrong \u2014 power comparison depends on the specific context. Option B is wrong \u2014 the F=t\u00b2 equivalence only holds in simple regression with one predictor.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  }
+]

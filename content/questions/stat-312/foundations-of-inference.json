@@ -8,7 +8,7 @@
       "The null hypothesis should be rejected with 97% confidence in all future studies"
     ],
     "correctIndex": 2,
-    "explanation": "A p-value is the probability of obtaining a test statistic as extreme as the observed one, assuming the null hypothesis is true. It measures how surprising our data would be if H0 were correct. It does NOT give the probability that H0 is true or false — those require Bayesian reasoning with prior probabilities. Options A and B represent the most common p-value misinterpretations. Option D conflates a single test's p-value with long-run reliability across studies.",
+    "explanation": "A p-value is the probability of obtaining a test statistic as extreme as the observed one, assuming the null hypothesis is true. It measures how surprising our data would be if H0 were correct. It does NOT give the probability that H0 is true or false \u2014 those require Bayesian reasoning with prior probabilities. Options A and B represent the most common p-value misinterpretations. Option D conflates a single test's p-value with long-run reliability across studies.",
     "type": "Definition",
     "difficulty": "easy"
   },
@@ -21,20 +21,20 @@
       "The sample mean has a 95% chance of being between 8.2 and 11.4 hours per week"
     ],
     "correctIndex": 2,
-    "explanation": "The correct frequentist interpretation is about the procedure: if we repeated this sampling and interval construction many times, 95% of such intervals would contain the true population mean. The specific interval (8.2, 11.4) either contains the true mean or it doesn't — there is no probability attached to this particular interval. Option A describes a range for individual values (a prediction interval concept). Option B is technically incorrect under frequentist statistics — the parameter is fixed, not random. Option D confuses the sample mean (known) with the population mean (unknown).",
+    "explanation": "The correct frequentist interpretation is about the procedure: if we repeated this sampling and interval construction many times, 95% of such intervals would contain the true population mean. The specific interval (8.2, 11.4) either contains the true mean or it doesn't \u2014 there is no probability attached to this particular interval. Option A describes a range for individual values (a prediction interval concept). Option B is technically incorrect under frequentist statistics \u2014 the parameter is fixed, not random. Option D confuses the sample mean (known) with the population mean (unknown).",
     "type": "Interpretation",
     "difficulty": "easy"
   },
   {
-    "question": "A researcher tests H0: μ = 50 versus Ha: μ ≠ 50. The p-value is 0.18. At α = 0.05, what is the correct conclusion?",
+    "question": "A researcher tests H0: \u03bc = 50 versus Ha: \u03bc \u2260 50. The p-value is 0.18. At \u03b1 = 0.05, what is the correct conclusion?",
     "options": [
-      "Accept the null hypothesis — the population mean equals 50",
-      "Fail to reject the null hypothesis — insufficient evidence the mean differs from 50",
-      "Reject the null hypothesis — the p-value shows the mean is not 50",
-      "Accept the alternative hypothesis — the data supports a mean different from 50"
+      "Accept the null hypothesis \u2014 the population mean equals 50",
+      "Accept the alternative hypothesis \u2014 the data supports a mean different from 50",
+      "Reject the null hypothesis \u2014 the p-value shows the mean is not 50",
+      "Fail to reject the null hypothesis \u2014 insufficient evidence the mean differs from 50"
     ],
-    "correctIndex": 1,
-    "explanation": "When p-value (0.18) exceeds α (0.05), we fail to reject the null hypothesis. We never 'accept' the null — failing to find evidence against it is not the same as proving it true. The null might still be false; we simply lack sufficient evidence to reject it in this sample. Option A and D use the phrase 'accept' which is incorrect statistical language. Option C incorrectly says to reject — p = 0.18 > α = 0.05 means we do not have enough evidence to reject.",
+    "correctIndex": 3,
+    "explanation": "When p-value (0.18) exceeds \u03b1 (0.05), we fail to reject the null hypothesis. We never 'accept' the null \u2014 failing to find evidence against it is not the same as proving it true. The null might still be false; we simply lack sufficient evidence to reject it in this sample. Option A and D use the phrase 'accept' which is incorrect statistical language. Option C incorrectly says to reject \u2014 p = 0.18 > \u03b1 = 0.05 means we do not have enough evidence to reject.",
     "type": "Application",
     "difficulty": "easy"
   },
@@ -47,33 +47,33 @@
       "Rejecting the null hypothesis when the null hypothesis is actually false"
     ],
     "correctIndex": 2,
-    "explanation": "A Type I error occurs when we reject a true null hypothesis — a false positive. The probability of a Type I error is α, the significance level. Option A describes a Type II error (false negative, probability β). Option B describes a correct decision (true negative). Option D describes a correct decision (true positive, or power). The 2×2 structure of hypothesis test outcomes is critical to master.",
+    "explanation": "A Type I error occurs when we reject a true null hypothesis \u2014 a false positive. The probability of a Type I error is \u03b1, the significance level. Option A describes a Type II error (false negative, probability \u03b2). Option B describes a correct decision (true negative). Option D describes a correct decision (true positive, or power). The 2\u00d72 structure of hypothesis test outcomes is critical to master.",
     "type": "Definition",
     "difficulty": "easy"
   },
   {
-    "question": "A drug company tests a new pain reliever with H0: the drug is no better than placebo. They set α = 0.01 rather than the conventional 0.05. What is the consequence of using a smaller α?",
+    "question": "A drug company tests a new pain reliever with H0: the drug is no better than placebo. They set \u03b1 = 0.01 rather than the conventional 0.05. What is the consequence of using a smaller \u03b1?",
     "options": [
       "Type I error probability increases, making it easier to detect real drug effects",
-      "Type I error probability decreases, but Type II error probability increases for a given sample size",
+      "Type II error probability decreases, reducing the chance of missing a real drug benefit",
       "The study becomes more powerful because stricter standards are applied",
-      "Type II error probability decreases, reducing the chance of missing a real drug benefit"
+      "Type I error probability decreases, but Type II error probability increases for a given sample size"
     ],
-    "correctIndex": 1,
-    "explanation": "Setting a smaller α (0.01 vs 0.05) reduces the Type I error rate — the chance of falsely claiming the drug works when it doesn't. However, for a fixed sample size, this makes it harder to reject H0, increasing the Type II error rate (missing a drug that actually works). Power (1 - β) decreases as α decreases when n is fixed. Option A gets the direction backwards. Options C and D incorrectly claim that a stricter α increases power or reduces Type II error.",
+    "correctIndex": 3,
+    "explanation": "Setting a smaller \u03b1 (0.01 vs 0.05) reduces the Type I error rate \u2014 the chance of falsely claiming the drug works when it doesn't. However, for a fixed sample size, this makes it harder to reject H0, increasing the Type II error rate (missing a drug that actually works). Power (1 - \u03b2) decreases as \u03b1 decreases when n is fixed. Option A gets the direction backwards. Options C and D incorrectly claim that a stricter \u03b1 increases power or reduces Type II error.",
     "type": "Comparison",
     "difficulty": "medium"
   },
   {
     "question": "A 90% confidence interval for the proportion of customers satisfied with Amazon Prime is (0.76, 0.84). A manager claims the true satisfaction rate is below 75%. What does this interval tell you?",
     "options": [
-      "The claim is definitely wrong because 75% falls outside the confidence interval",
       "The data provides evidence against the manager's claim, since the entire interval exceeds 75%",
+      "The claim is definitely wrong because 75% falls outside the confidence interval",
       "The claim cannot be evaluated using a confidence interval; only a hypothesis test can address it",
       "The claim might be correct because 10% of confidence intervals miss the true parameter"
     ],
-    "correctIndex": 1,
-    "explanation": "The entire confidence interval (0.76, 0.84) lies above 0.75, providing evidence against the manager's claim that satisfaction is below 75%. If the true proportion were below 0.75, it would be very surprising to construct a 90% CI that starts at 0.76. Option A overstates certainty — confidence intervals provide evidence, not proof. Option C is too restrictive; confidence intervals are directly related to two-sided hypothesis tests and can be used for inference. Option D is technically true but doesn't address whether the manager's specific claim is supported.",
+    "correctIndex": 0,
+    "explanation": "The entire confidence interval (0.76, 0.84) lies above 0.75, providing evidence against the manager's claim that satisfaction is below 75%. If the true proportion were below 0.75, it would be very surprising to construct a 90% CI that starts at 0.76. Option B overstates certainty \u2014 confidence intervals provide evidence, not proof. Option C is too restrictive; confidence intervals are directly related to two-sided hypothesis tests and can be used for inference. Option D is technically true but doesn't address whether the manager's specific claim is supported.",
     "type": "Interpretation",
     "difficulty": "medium"
   },
@@ -86,7 +86,7 @@
       "A statistically significant result with small samples always indicates practical significance"
     ],
     "correctIndex": 1,
-    "explanation": "Small samples produce noisy estimates with wide confidence intervals. A borderline p-value (0.048) from a small study is more likely due to random variation and may not replicate. This is a genuine replication crisis concern. Option A is wrong — 0.048 is below 0.05 and does qualify as significant at that level; the concern is about reliability, not the threshold. Option C is wrong — n ≥ 30 is a rough guideline for CLT with non-normal data, not a requirement for hypothesis tests. Option D is the opposite of a concern — it would be a strength.",
+    "explanation": "Small samples produce noisy estimates with wide confidence intervals. A borderline p-value (0.048) from a small study is more likely due to random variation and may not replicate. This is a genuine replication crisis concern. Option A is wrong \u2014 0.048 is below 0.05 and does qualify as significant at that level; the concern is about reliability, not the threshold. Option C is wrong \u2014 n \u2265 30 is a rough guideline for CLT with non-normal data, not a requirement for hypothesis tests. Option D is the opposite of a concern \u2014 it would be a strength.",
     "type": "Error-Finding",
     "difficulty": "medium"
   },
@@ -96,15 +96,15 @@
       "The p-value of 0.23 actually shows moderate evidence that the drug works",
       "Failing to reject the null hypothesis is not the same as proving the null hypothesis true",
       "A two-sided test should have been used instead of a one-sided test to reach this conclusion",
-      "The conclusion is correct — a non-significant result confirms the drug is ineffective"
+      "The conclusion is correct \u2014 a non-significant result confirms the drug is ineffective"
     ],
     "correctIndex": 1,
-    "explanation": "A non-significant result means the data are consistent with the null hypothesis, but it does not prove the null is true. The study may have been underpowered — too small to detect a real drug effect. 'No evidence of an effect' is fundamentally different from 'evidence of no effect.' The journalist's strong causal language ('does not work') cannot be supported by a failure to reject. Option A misinterprets p = 0.23 as positive evidence. Option D commits the exact error being identified.",
+    "explanation": "A non-significant result means the data are consistent with the null hypothesis, but it does not prove the null is true. The study may have been underpowered \u2014 too small to detect a real drug effect. 'No evidence of an effect' is fundamentally different from 'evidence of no effect.' The journalist's strong causal language ('does not work') cannot be supported by a failure to reject. Option A misinterprets p = 0.23 as positive evidence. Option D commits the exact error being identified.",
     "type": "Error-Finding",
     "difficulty": "medium"
   },
   {
-    "question": "A hypothesis test for the mean salary of Goldman Sachs analysts uses H0: μ = $120,000 vs. Ha: μ > $120,000. The test statistic is t = 2.45, df = 24, p = 0.011. Which conclusion is correct at α = 0.05?",
+    "question": "A hypothesis test for the mean salary of Goldman Sachs analysts uses H0: \u03bc = $120,000 vs. Ha: \u03bc > $120,000. The test statistic is t = 2.45, df = 24, p = 0.011. Which conclusion is correct at \u03b1 = 0.05?",
     "options": [
       "Fail to reject H0; p = 0.011 means there is only a 1.1% chance the salary differs from $120,000",
       "Reject H0; there is sufficient evidence that the mean analyst salary exceeds $120,000",
@@ -112,7 +112,7 @@
       "Fail to reject H0; we need a larger sample to determine if salaries exceed $120,000"
     ],
     "correctIndex": 1,
-    "explanation": "Since p = 0.011 < α = 0.05, we reject H0. There is sufficient evidence to conclude the mean salary exceeds $120,000. Option A misinterprets the p-value as the probability H0 is true. Option C commits two errors: using 'accept' and misinterpreting p as the probability the alternative is true. Option D incorrectly fails to reject when p < α — the current sample already provides sufficient evidence.",
+    "explanation": "Since p = 0.011 < \u03b1 = 0.05, we reject H0. There is sufficient evidence to conclude the mean salary exceeds $120,000. Option A misinterprets the p-value as the probability H0 is true. Option C commits two errors: using 'accept' and misinterpreting p as the probability the alternative is true. Option D incorrectly fails to reject when p < \u03b1 \u2014 the current sample already provides sufficient evidence.",
     "type": "Interpretation",
     "difficulty": "hard"
   },
@@ -125,7 +125,7 @@
       "We are 95% confident that each individual in the treatment group scored 2.1 to 8.4 points higher"
     ],
     "correctIndex": 2,
-    "explanation": "The frequentist interpretation refers to the procedure: 95% of intervals constructed this way contain the true parameter. For this specific interval, the parameter is either inside or not — no probability statement applies to it. Option A correctly captures the Bayesian spirit but is technically incorrect under frequentist inference (the parameter is fixed). Option B describes the sample result, not the population parameter. Option D confuses a confidence interval for a mean difference with a range for individual scores — these are very different.",
+    "explanation": "The frequentist interpretation refers to the procedure: 95% of intervals constructed this way contain the true parameter. For this specific interval, the parameter is either inside or not \u2014 no probability statement applies to it. Option A correctly captures the Bayesian spirit but is technically incorrect under frequentist inference (the parameter is fixed). Option B describes the sample result, not the population parameter. Option D confuses a confidence interval for a mean difference with a range for individual scores \u2014 these are very different.",
     "type": "Definition",
     "difficulty": "hard"
   },
@@ -133,51 +133,51 @@
     "question": "A company tests H0: the defect rate is 5% versus Ha: defect rate is not 5%. They observe a sample defect rate of 5.3% with p = 0.62. A quality manager says 'This proves our process is on target at 5%.' What is the main flaw in this reasoning?",
     "options": [
       "A two-sided test was used when a one-sided test would provide stronger evidence",
-      "Failing to reject does not prove H0 true — the study may simply be underpowered",
+      "p-values cannot be interpreted for quality control problems involving defect rates",
       "The sample defect rate of 5.3% is significantly different from the target of 5%",
-      "p-values cannot be interpreted for quality control problems involving defect rates"
+      "Failing to reject does not prove H0 true \u2014 the study may simply be underpowered"
     ],
-    "correctIndex": 1,
-    "explanation": "A p-value of 0.62 means the observed 5.3% rate is not surprising if the true rate were 5%, but it does not prove the rate is exactly 5%. The study could be underpowered — unable to detect a meaningful deviation. The defect rate could be 4% or 7% and still produce p = 0.62 with a small sample. 'Fail to reject' means 'consistent with H0,' not 'H0 is confirmed true.' Option C is wrong — 5.3% vs 5% is not statistically significant here. Option A would not improve the logical argument.",
+    "correctIndex": 3,
+    "explanation": "A p-value of 0.62 means the observed 5.3% rate is not surprising if the true rate were 5%, but it does not prove the rate is exactly 5%. The study could be underpowered \u2014 unable to detect a meaningful deviation. The defect rate could be 4% or 7% and still produce p = 0.62 with a small sample. 'Fail to reject' means 'consistent with H0,' not 'H0 is confirmed true.' Option C is wrong \u2014 5.3% vs 5% is not statistically significant here. Option A would not improve the logical argument.",
     "type": "Error-Finding",
     "difficulty": "hard"
   },
   {
     "question": "A study with n = 400 participants finds a statistically significant effect of a wellness program on employee productivity (p = 0.003). The estimated improvement is 0.8 productivity units on a 100-point scale. What is the most appropriate conclusion?",
     "options": [
-      "The program has a meaningful effect and should be implemented company-wide immediately",
       "The result is statistically significant but the effect size may be too small to justify program costs",
+      "The program has a meaningful effect and should be implemented company-wide immediately",
       "A p-value of 0.003 indicates an approximately 0.3% chance the program is ineffective",
       "Statistical significance with large samples guarantees the effect is practically important"
     ],
-    "correctIndex": 1,
-    "explanation": "Large samples can detect statistically significant effects that are practically trivial. A 0.8-point improvement on a 100-point scale may be statistically distinguishable from zero but meaningless in practice. Cost-benefit analysis requires considering the magnitude of the effect, not just its statistical significance. Option A ignores the small effect size. Option C misinterprets the p-value as the probability H0 is true. Option D is incorrect — large samples increase the chance of detecting real effects, but the effects detected may still be trivially small.",
+    "correctIndex": 0,
+    "explanation": "Large samples can detect statistically significant effects that are practically trivial. A 0.8-point improvement on a 100-point scale may be statistically distinguishable from zero but meaningless in practice. Cost-benefit analysis requires considering the magnitude of the effect, not just its statistical significance. Option B ignores the small effect size. Option C misinterprets the p-value as the probability H0 is true. Option D is incorrect \u2014 large samples increase the chance of detecting real effects, but the effects detected may still be trivially small.",
     "type": "Interpretation",
     "difficulty": "hard"
   },
   {
-    "question": "A researcher sets α = 0.05 and conducts a hypothesis test. The true state of the world is that the null hypothesis is FALSE. Which outcome is a Type II error?",
+    "question": "A researcher sets \u03b1 = 0.05 and conducts a hypothesis test. The true state of the world is that the null hypothesis is FALSE. Which outcome is a Type II error?",
     "options": [
       "Rejecting H0 and concluding the effect exists",
       "Failing to reject H0 and concluding insufficient evidence for the effect",
-      "Rejecting H0 with a p-value just below α = 0.05",
+      "Rejecting H0 with a p-value just below \u03b1 = 0.05",
       "Failing to reject H0 when H0 is actually true"
     ],
     "correctIndex": 1,
-    "explanation": "When H0 is false and we fail to reject it, we commit a Type II error — we miss a real effect (false negative). The probability of a Type II error is β, and power = 1 - β. Option A is a correct decision when H0 is false (true positive, or power). Option C describes the process of rejection, not an error type. Option D describes a correct decision when H0 is true (true negative). The question specifies H0 is false, making any failure to reject a Type II error.",
+    "explanation": "When H0 is false and we fail to reject it, we commit a Type II error \u2014 we miss a real effect (false negative). The probability of a Type II error is \u03b2, and power = 1 - \u03b2. Option A is a correct decision when H0 is false (true positive, or power). Option C describes the process of rejection, not an error type. Option D describes a correct decision when H0 is true (true negative). The question specifies H0 is false, making any failure to reject a Type II error.",
     "type": "Definition",
     "difficulty": "hard"
   },
   {
-    "question": "A Walmart store manager conducts 20 separate hypothesis tests on different product categories to identify which ones have changed demand. Using α = 0.05 for each test, approximately how many false positives should she expect if all null hypotheses are actually true?",
+    "question": "A Walmart store manager conducts 20 separate hypothesis tests on different product categories to identify which ones have changed demand. Using \u03b1 = 0.05 for each test, approximately how many false positives should she expect if all null hypotheses are actually true?",
     "options": [
+      "1 false positive on average, because 5% of 20 tests \u2248 1 expected false rejection",
       "0 false positives, because hypothesis testing controls for false positives by design",
-      "1 false positive on average, because 5% of 20 tests ≈ 1 expected false rejection",
-      "5 false positives, because the familywise error rate equals 5% × 20 tests",
+      "5 false positives, because the familywise error rate equals 5% \u00d7 20 tests",
       "20 false positives, because multiple testing always leads to all tests being wrong"
     ],
-    "correctIndex": 1,
-    "explanation": "When all null hypotheses are true and each test is conducted at α = 0.05, the expected number of false positives is 0.05 × 20 = 1. This illustrates the multiple testing problem — even with a well-calibrated test, conducting many tests produces spurious rejections by chance. The familywise error rate (probability of at least one false positive) is 1 - (0.95)^20 ≈ 0.64, much higher than 0.05. Option C confuses the expected count with the familywise error rate. Option D vastly overstates the problem.",
+    "correctIndex": 0,
+    "explanation": "When all null hypotheses are true and each test is conducted at \u03b1 = 0.05, the expected number of false positives is 0.05 \u00d7 20 = 1. This illustrates the multiple testing problem \u2014 even with a well-calibrated test, conducting many tests produces spurious rejections by chance. The familywise error rate (probability of at least one false positive) is 1 - (0.95)^20 \u2248 0.64, much higher than 0.05. Option C confuses the expected count with the familywise error rate. Option D vastly overstates the problem.",
     "type": "Calculation",
     "difficulty": "hard"
   },
@@ -185,12 +185,12 @@
     "question": "For a two-sided test, the p-value is found by:",
     "options": [
       "Computing the probability of a test statistic more extreme than observed in one tail only",
-      "Doubling the one-tail probability to account for deviations in either direction",
+      "Averaging the two one-sided p-values from both tails of the distribution",
       "Subtracting the significance level from 1 to get the probability of rejection",
-      "Averaging the two one-sided p-values from both tails of the distribution"
+      "Doubling the one-tail probability to account for deviations in either direction"
     ],
-    "correctIndex": 1,
-    "explanation": "For a two-sided test (Ha: μ ≠ μ0), the p-value accounts for evidence in both directions. Since the t-distribution is symmetric, the two-sided p-value equals twice the one-tail area beyond the observed test statistic. Option A describes the one-sided p-value calculation. Option C confuses p-value computation with the comparison to α. Option D is similar to B in effect for symmetric distributions but 'averaging' is not the correct description — it's doubling, not averaging the two tail probabilities.",
+    "correctIndex": 3,
+    "explanation": "For a two-sided test (Ha: \u03bc \u2260 \u03bc0), the p-value accounts for evidence in both directions. Since the t-distribution is symmetric, the two-sided p-value equals twice the one-tail area beyond the observed test statistic. Option A describes the one-sided p-value calculation. Option C confuses p-value computation with the comparison to \u03b1. Option B is similar to B in effect for symmetric distributions but 'averaging' is not the correct description \u2014 it's doubling, not averaging the two tail probabilities.",
     "type": "Definition",
     "difficulty": "medium"
   }

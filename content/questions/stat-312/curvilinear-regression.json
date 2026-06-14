@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Curvilinear regression models the relationship between X and Y using:",
+    "options": [
+      "Two separate regression lines, one for each half of the X range",
+      "A polynomial function, such as adding X\u00b2 to allow the relationship to curve",
+      "A logarithm of the response variable to straighten any curved relationship",
+      "The Pearson correlation adjusted for nonlinear associations"
+    ],
+    "correctIndex": 1,
+    "explanation": "Curvilinear (polynomial) regression adds powers of X (X\u00b2, X\u00b3, etc.) to the regression model to capture curvature. For a quadratic model: \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2. The model is still 'linear' in the parameters (\u03b2) even though it's nonlinear in X. Option A is a piecewise linear model, a different approach. Option C (log transformation) is one method for nonlinearity but not the definition of curvilinear regression. Option D is not a regression procedure.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What diagnostic signal in a residuals-vs-fitted plot suggests a quadratic term should be added?",
+    "options": [
+      "A fan shape: residuals increasing in spread as fitted values increase",
+      "Points evenly scattered with no discernible pattern",
+      "A curved (U-shaped or arch-shaped) pattern in the residuals",
+      "One or two extreme points far from the horizontal axis"
+    ],
+    "correctIndex": 2,
+    "explanation": "A curved pattern (U-shape or inverted U-shape) in the residuals-vs-fitted plot indicates that a linear model is systematically wrong in one region (too high or too low), suggesting the true relationship is nonlinear. Adding X\u00b2 can capture this curvature. Option A (fan shape) indicates nonconstant variance, addressed with transformations not necessarily polynomial terms. Option B indicates good fit. Option D indicates outliers, not systematic curvature.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The quadratic regression model is \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2. The hierarchical principle requires that:",
+    "options": [
+      "X must be tested for significance before X\u00b2 is added to the model",
+      "If X\u00b2 is in the model, X must also remain in the model regardless of its significance",
+      "\u03b22 must be positive (U-shaped) for the model to be valid",
+      "The model should be fit with X\u00b2 first, then X added if needed"
+    ],
+    "correctIndex": 1,
+    "explanation": "The hierarchical principle (also called the marginality principle) requires that lower-order terms be retained when higher-order terms are present. If X\u00b2 is in the model, X must also be included \u2014 even if the t test for X is not significant. Removing X while keeping X\u00b2 forces the vertex of the parabola to be at X = 0, which is usually an unreasonable constraint. Option A describes testing sequence, not the hierarchical principle. Option C is wrong \u2014 \u03b22 can be negative (inverted U). Option D reverses the correct sequence.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a quadratic regression model \u0176 = 10 + 5X \u2212 0.3X\u00b2, what does the negative coefficient on X\u00b2 indicate about the relationship?",
+    "options": [
+      "As X increases, Y decreases at an accelerating rate throughout the range",
+      "The relationship is concave up \u2014 Y decreases then increases as X increases",
+      "The relationship is concave down \u2014 Y increases then decreases as X increases",
+      "X\u00b2 has no meaningful effect on Y because the coefficient is small"
+    ],
+    "correctIndex": 2,
+    "explanation": "A negative \u03b22 (\u22120.3) means the parabola opens downward \u2014 concave down. Y initially increases with X (due to the positive \u03b21), but the negative quadratic term eventually dominates, causing Y to peak and then decline. This is the classic 'diminishing returns' pattern. Option A describes an exponentially decreasing relationship. Option B describes a concave up (U-shaped) relationship where \u03b22 would be positive. Option D confuses coefficient magnitude with statistical significance.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Sales Y and advertising X have a quadratic relationship. Simple regression of Y on X: R\u00b2 = 0.61. After adding X\u00b2, R\u00b2 = 0.74, adjusted R\u00b2 increases from 0.60 to 0.72. The t test for X\u00b2 gives t = 3.2, p = 0.002. What should the researcher conclude?",
+    "options": [
+      "The linear model is sufficient because R\u00b2 = 0.61 already explains the majority of variance",
+      "The quadratic term significantly improves model fit; the curvilinear model should be used",
+      "The quadratic term is redundant since X already explains 61% of the variability",
+      "A significant t test for X\u00b2 confirms the relationship is exactly quadratic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Three indicators point to retaining X\u00b2: (1) significant t test (p = 0.002), (2) R\u00b2 increased meaningfully (0.61 to 0.74, a 13-point gain), and (3) adjusted R\u00b2 increased (from 0.60 to 0.72), confirming the gain justifies the extra parameter. Option A is wrong \u2014 'majority' isn't the criterion; the question is whether the quadratic model is significantly better. Option C is wrong \u2014 the linear model's R\u00b2 doesn't make the quadratic term redundant. Option D overstates \u2014 a significant quadratic term shows linearity is inadequate, not that the relationship is exactly quadratic.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The quadratic model \u0176 = 50 + 12X \u2212 0.5X\u00b2 predicts sales (thousands) from advertising (thousands of dollars). What is the predicted maximum sales level and at what advertising level does it occur?",
+    "options": [
+      "Maximum at X = 12, \u0176 = 50 + 12(12) \u2212 0.5(144) = $50k",
+      "Maximum at X = 12, \u0176 = 50 + 12(12) \u2212 0.5(144) = $122k",
+      "Maximum at X = 12, \u0176 = 50 + 12(12) \u2212 0.5(144) = $50k",
+      "Maximum at X = 12, \u0176 = 50 + 144 \u2212 72 = $122k"
+    ],
+    "correctIndex": 3,
+    "explanation": "For \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2, the maximum (vertex) occurs at X* = \u2212\u03b21/(2\u03b22) = \u221212/(2\u00d7(\u22120.5)) = \u221212/(\u22121) = 12. Predicted \u0176 at X=12: \u0176 = 50 + 12(12) \u2212 0.5(144) = 50 + 144 \u2212 72 = 122 (thousands). Maximum sales = $122,000. Options A and C have incorrect calculations. Option B has incorrect intermediate steps. Option D correctly computes the maximum.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher tests H0: \u03b22 = 0 in the model \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2. The t statistic is 0.62, p = 0.54. What should be done?",
+    "options": [
+      "Reject the quadratic term and fit the simple linear model Y = \u03b20 + \u03b21X",
+      "Keep X\u00b2 in the model because the hierarchical principle overrides significance tests",
+      "Remove X\u00b2 and refit without the quadratic term; the linear model is adequate for this data",
+      "Add a cubic term X\u00b3 to compensate for the non-significant quadratic"
+    ],
+    "correctIndex": 2,
+    "explanation": "If the t test for \u03b22 is not significant (p = 0.54 >> 0.05), there is insufficient evidence that the quadratic term improves the model. The linear model (dropping X\u00b2) is adequate. Unlike the hierarchical principle (which says don't remove X when X\u00b2 is present), when X\u00b2 itself is not significant, it can and should be removed. The linear model is then fit without X\u00b2. Option A is partially correct \u2014 remove X\u00b2 \u2014 but the resulting model still includes X (not a simple linear model without X). Option B misapplies the hierarchical principle \u2014 it applies when X\u00b2 IS in the model, not as a reason to keep X\u00b2. Option D adds complexity without evidence it's needed.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher removes X from the model \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2 because X's individual t test is non-significant, keeping only the intercept and X\u00b2. What error has she made?",
+    "options": [
+      "She violated the hierarchical principle \u2014 X must be kept whenever X\u00b2 is in the model",
+      "She correctly simplified the model by removing non-significant terms",
+      "X should have been removed before testing X\u00b2, not after",
+      "Removing X forces the model to use the wrong degrees of freedom for inference"
+    ],
+    "correctIndex": 0,
+    "explanation": "The hierarchical principle requires that X remain in the model whenever X\u00b2 is present. The model \u0176 = \u03b20 + \u03b22X\u00b2 forces the vertex of the parabola to be at X = 0 \u2014 a meaningful and usually unrealistic constraint. Additionally, in the presence of X\u00b2, the individual t test for X is not an appropriate criterion for removing it, because the test measures the unique contribution of X after accounting for X\u00b2, which conflates with multicollinearity between X and X\u00b2. Option B is the researcher's flawed reasoning. Option C is wrong \u2014 the order of testing doesn't fix the hierarchical violation. Option D is a minor consequence, not the main issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Simple regression of productivity Y on stress X gives: b1 = \u22120.8, R\u00b2 = 0.18, residuals show a U-shape. After adding X\u00b2, the model is: \u0176 = 80 + 2.1X \u2212 0.15X\u00b2, R\u00b2 = 0.41, adj R\u00b2 = 0.39. The t test for X\u00b2 gives p = 0.003. Interpret the quadratic coefficient b2 = \u22120.15.",
+    "options": [
+      "The relationship is concave down \u2014 productivity increases with stress initially, then decreases at higher stress levels",
+      "For each unit increase in stress, productivity decreases by 0.15 units",
+      "The relationship is concave up \u2014 productivity decreases with stress initially, then increases at high stress levels",
+      "Productivity is maximally reduced when stress equals 0.15 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "b2 = \u22120.15 (negative) indicates a concave down (inverted U) parabola. With b1 = 2.1 (positive) and b2 = \u22120.15 (negative), productivity initially increases with stress (the linear term dominates at low X) but eventually the quadratic term dominates and productivity declines at high stress. This matches the Yerkes-Dodson law \u2014 moderate stress enhances performance. The vertex (maximum) occurs at X* = \u22122.1/(2\u00d7\u22120.15) = 7 units of stress. Option B describes a simple linear slope, ignoring the X\u00b2 term. Option C reverses the curvature (positive b2 would give concave up). Option D misinterprets b2 as a threshold.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A cubic model (including X, X\u00b2, and X\u00b3) is fit to data. The adjusted R\u00b2 decreases compared to the quadratic model. The t test for X\u00b3 gives p = 0.31. What is the most appropriate model selection decision?",
+    "options": [
+      "Keep X\u00b3 because the hierarchical principle requires it once X and X\u00b2 are included",
+      "Remove X\u00b3 and also remove X\u00b2, leaving only the linear term X",
+      "Keep X\u00b3 only if the overall F test for the cubic model is significant",
+      "Remove X\u00b3 and use the quadratic model \u2014 the cubic term does not improve fit"
+    ],
+    "correctIndex": 3,
+    "explanation": "Two signals indicate removing X\u00b3: (1) the t test is non-significant (p = 0.31), and (2) adjusted R\u00b2 decreased. The hierarchical principle requires keeping X and X\u00b2 if X\u00b3 were significant, but since X\u00b3 is not significant, it should be removed. The quadratic model (with X and X\u00b2) is the appropriate final model. Option A misapplies hierarchical principle \u2014 it only prevents removing lower-order terms, not retaining non-significant higher-order terms. Option C confuses overall F (which tests all predictors collectively) with the individual X\u00b3 decision. Option B incorrectly removes X\u00b2, which is presumably still significant.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A log transformation of Y is applied before fitting a linear regression: log(Y) = \u03b20 + \u03b21X. After fitting, the slope is b1 = 0.05 and R\u00b2 = 0.68. How is the slope interpreted?",
+    "options": [
+      "For each one-unit increase in X, Y increases by 0.05 units on average",
+      "For each 0.05-unit increase in X, Y changes by one unit on the original scale",
+      "For each one-unit increase in X, log(Y) decreases by 0.05 log-units",
+      "For each one-unit increase in X, Y is multiplied by e^0.05 \u2248 1.051 \u2014 a 5.1% increase"
+    ],
+    "correctIndex": 3,
+    "explanation": "When Y is log-transformed and the model is log(Y) = \u03b20 + \u03b21X, the slope is on the log(Y) scale. A one-unit increase in X multiplies Y by e^b1 = e^0.05 \u2248 1.051 on the original scale \u2014 a multiplicative relationship, roughly a 5.1% increase per unit X. Option A incorrectly returns to the original Y scale without applying the exponential transformation. Option C has the sign wrong (b1 = 0.05 is positive, so Y increases). Option B inverts the relationship.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher reports: 'The significant quadratic term proves the relationship between advertising and sales is a perfect parabola.' What is wrong with this statement?",
+    "options": [
+      "A significant quadratic term means the relationship is linear, not quadratic",
+      "The p-value for the quadratic term measures the fit quality, not the shape of the relationship",
+      "Advertising and sales are always linearly related in marketing research",
+      "The quadratic term shows linearity is inadequate, but doesn't confirm the exact form of nonlinearity"
+    ],
+    "correctIndex": 3,
+    "explanation": "A significant X\u00b2 term shows that a purely linear model is insufficient \u2014 there is evidence of curvature. However, this doesn't prove the relationship is exactly quadratic (a perfect parabola). The true functional form could be exponential, logarithmic, or any other nonlinear curve that the quadratic is approximating in the observed range. 'Significant quadratic' means 'significantly better than linear,' not 'exactly quadratic.' Option A reverses the logic. Option C is a false generalization. Option B mischaracterizes what the p-value measures.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Comparing two models for predicting employee productivity from years of experience: Model 1 (linear): \u0176 = 40 + 2.5X, R\u00b2 = 0.52. Model 2 (quadratic): \u0176 = 30 + 5X \u2212 0.1X\u00b2, adj R\u00b2 = 0.58, t(X\u00b2) p = 0.018. Which model is preferred?",
+    "options": [
+      "Model 1, because simpler models are always preferable in business applications",
+      "Model 2, because adjusted R\u00b2 increased and the quadratic term is significant",
+      "Model 1, because R\u00b2 = 0.52 shows the linear relationship is already strong",
+      "Model 2, because it has more parameters and therefore better prediction accuracy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Three criteria support Model 2: (1) the t test for X\u00b2 is significant (p = 0.018 < 0.05), (2) adjusted R\u00b2 increased from approximately 0.51 to 0.58, and (3) the quadratic captures the likely diminishing returns of experience on productivity. Option A applies a blanket parsimony preference without examining evidence. Option C again uses R\u00b2 magnitude as the wrong criterion. Option D incorrectly equates more parameters with better accuracy \u2014 this is the overfitting fallacy.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "For the model \u0176 = \u03b20 + \u03b21X + \u03b22X\u00b2, the vertex (extreme point \u2014 maximum or minimum) occurs at X =",
+    "options": [
+      "X* = \u03b21 / \u03b22",
+      "X* = \u03b22 / (2\u03b21)",
+      "X* = \u2212\u03b21 / (2\u03b22)",
+      "X* = \u2212\u03b20 / \u03b21"
+    ],
+    "correctIndex": 2,
+    "explanation": "Taking the derivative of \u0176 with respect to X and setting it to zero: d\u0177/dX = \u03b21 + 2\u03b22X = 0, solving for X: X* = \u2212\u03b21/(2\u03b22). This is the x-coordinate of the vertex of the parabola. If \u03b22 < 0, this is a maximum (concave down); if \u03b22 > 0, it's a minimum (concave up). Option A omits the factor of 2. Option B inverts the coefficients. Option D is the x-intercept of a line with slope \u03b21, not the vertex of a quadratic.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher fits a linear model and a quadratic model. The residuals-vs-fitted plot for the linear model shows a U-shape; for the quadratic model, the residuals are randomly scattered. What does this pair of plots indicate?",
+    "options": [
+      "The quadratic model substantially improves fit by capturing the nonlinear relationship",
+      "Both models fit the data equally well because residuals are always centered near zero",
+      "The U-shape in the linear residuals indicates heteroscedasticity requiring transformation",
+      "The scattered quadratic residuals suggest the model is overfit to the training data"
+    ],
+    "correctIndex": 0,
+    "explanation": "A U-shaped pattern in residuals from the linear model indicates systematic nonlinearity \u2014 the model consistently underpredicts in the middle and overpredicts at the extremes (or vice versa). After adding X\u00b2, the randomly scattered residuals indicate the nonlinearity has been captured and the remaining variation is random error (the model assumptions are better satisfied). This is textbook evidence that the quadratic model is appropriate. Option B ignores the U-shape signal. Option C confuses a U-shape (nonlinearity) with a fan-shape (heteroscedasticity). Option D misidentifies improvement in residual patterns as overfitting.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  }
+]

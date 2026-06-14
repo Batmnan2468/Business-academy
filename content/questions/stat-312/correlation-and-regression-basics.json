@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The correlation coefficient r = -0.87 between advertising spend and customer complaints indicates:",
+    "options": [
+      "A weak negative relationship \u2014 values near -1 indicate weak correlation",
+      "A strong negative linear relationship between the two variables",
+      "That advertising causes a reduction in customer complaints",
+      "That 87% of complaints can be eliminated by increasing advertising"
+    ],
+    "correctIndex": 1,
+    "explanation": "r = -0.87 indicates a strong negative linear association: as advertising spend increases, customer complaints tend to decrease. Values of r near \u00b11 indicate strong relationships; values near 0 indicate weak ones. Option A reverses the interpretation \u2014 r near -1 indicates strong negative correlation, not weak. Option C incorrectly attributes causation to correlation. Option D confuses r with R\u00b2, and even R\u00b2 doesn't mean 'eliminated.'",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which property is true of the correlation coefficient r?",
+    "options": [
+      "r can exceed 1 when both variables have large standard deviations",
+      "r changes when the units of measurement change (e.g., feet to meters)",
+      "r measures only linear association and is not affected by nonlinear patterns",
+      "r can be negative only when one variable is categorical and one is quantitative"
+    ],
+    "correctIndex": 2,
+    "explanation": "Correlation r measures the strength and direction of the linear component of an association. A strong nonlinear relationship (like a perfect quadratic) can have r near 0. Option A is wrong \u2014 r is bounded between -1 and 1 by definition. Option B is wrong \u2014 r is unitless and unchanged by linear transformations of scale (feet to meters). Option D is wrong \u2014 r can be negative for two quantitative variables whenever higher values of one tend to pair with lower values of the other.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The least squares regression line minimizes:",
+    "options": [
+      "The sum of the absolute values of the residuals",
+      "The sum of the squared residuals (vertical distances from points to the line)",
+      "The sum of the squared horizontal distances from points to the line",
+      "The maximum residual among all data points"
+    ],
+    "correctIndex": 1,
+    "explanation": "Least squares minimizes the sum of squared residuals: \u03a3(yi - \u0177i)\u00b2. Residuals are the vertical distances from each observed point to the fitted line. Squaring ensures all terms are positive and penalizes large deviations more heavily. Option A describes the least absolute deviations criterion, a different estimator. Option C describes horizontal distances, which are not what least squares minimizes. Option D describes the minimax criterion, another different approach.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the regression equation \u0177 = 25 + 3.2x, what does the slope 3.2 mean?",
+    "options": [
+      "The predicted value of y when x equals zero",
+      "For every 3.2-unit increase in x, the predicted y increases by 1 unit",
+      "For every one-unit increase in x, the predicted y increases by 3.2 units",
+      "The correlation coefficient between x and y is 3.2"
+    ],
+    "correctIndex": 2,
+    "explanation": "The slope in a regression equation represents the expected change in \u0177 for each one-unit increase in x. Here, each additional unit of x is associated with a 3.2-unit increase in predicted y. Option A describes the y-intercept (25 in this equation). Option B inverts the relationship \u2014 if slope = 3.2, then y increases by 3.2 for each 1-unit x increase, not 1 unit per 3.2-unit increase. Option D is wrong \u2014 the correlation coefficient and slope are different quantities (slope = r \u00d7 (sy/sx)).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression of annual revenue (y) on years in operation (x) for 50 restaurants gives r = 0.72. What is R\u00b2 and how is it interpreted?",
+    "options": [
+      "R\u00b2 = 0.72; 72% of restaurants have above-average revenue for their years in operation",
+      "R\u00b2 = 0.518; 51.8% of variability in revenue is explained by years in operation",
+      "R\u00b2 = 0.848; 84.8% of the relationship between revenue and years is statistically valid",
+      "R\u00b2 = 1.44; the model explains more than the total variability when r is large"
+    ],
+    "correctIndex": 1,
+    "explanation": "R\u00b2 = r\u00b2 = 0.72\u00b2 = 0.5184 \u2248 51.8%. R\u00b2 is the proportion of variability in the response variable (revenue) that is explained by the linear regression on the explanatory variable (years in operation). Option A uses r directly as R\u00b2 and misinterprets it. Option C incorrectly computes R\u00b2 as sqrt(r) and misinterprets it. Option D is impossible \u2014 R\u00b2 is bounded between 0 and 1.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A scatterplot shows a strong positive association between number of ice cream cones sold and number of drownings in a city, with r = 0.91. What is the most appropriate conclusion?",
+    "options": [
+      "Ice cream consumption causes drownings; warning labels should be added",
+      "Drownings should be predicted from ice cream sales using a linear regression model",
+      "The correlation is invalid because ice cream sales and drownings are unrelated variables",
+      "A confounding variable (likely summer heat) drives both ice cream sales and swimming activity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Temperature is a classic confounding variable here: hot weather simultaneously increases both ice cream consumption and swimming (which increases drowning risk). The association between ice cream and drownings is spurious \u2014 neither causes the other. This illustrates that high correlation does not imply causation and that lurking variables can create misleading associations. Option A makes the causal error. Option C is wrong \u2014 the correlation is mathematically valid; it's the causal interpretation that's invalid. Option B is technically possible to compute but would be meaningless for prediction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Data on housing prices (in thousands of dollars) and square footage for 100 homes gives: \u0233 = 285, x\u0304 = 1800, sy = 65, sx = 400, r = 0.78. What is the least squares regression slope?",
+    "options": [
+      "b1 = r \u00d7 (sy/sx) = 0.78 \u00d7 (65/400) = 0.127 thousand dollars per square foot",
+      "b1 = r \u00d7 (sx/sy) = 0.78 \u00d7 (400/65) = 4.80 thousand dollars per square foot",
+      "b1 = sy/sx = 65/400 = 0.163 thousand dollars per square foot",
+      "b1 = r\u00b2 \u00d7 (sy/sx) = 0.608 \u00d7 0.163 = 0.099 thousand dollars per square foot"
+    ],
+    "correctIndex": 0,
+    "explanation": "The least squares slope formula is b1 = r \u00d7 (sy/sx) = 0.78 \u00d7 (65/400) = 0.78 \u00d7 0.1625 = 0.127 thousand dollars per square foot, or about $127 per square foot. Option B inverts sy and sx. Option C omits the multiplication by r. Option D uses r\u00b2 instead of r in the formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A residual in a regression analysis is defined as:",
+    "options": [
+      "The difference between the sample mean and the predicted value: \u0233 \u2212 \u0177i",
+      "The difference between the predicted value and the population mean: \u0177i \u2212 \u03bc",
+      "The difference between the observed value and the predicted value: yi \u2212 \u0177i",
+      "The squared distance between the observed and predicted values: (yi \u2212 \u0177i)\u00b2"
+    ],
+    "correctIndex": 2,
+    "explanation": "A residual is the difference between what was actually observed and what the model predicted: ei = yi \u2212 \u0177i. A positive residual means the actual value exceeded the prediction; negative means the model overpredicted. Option A subtracts from the sample mean, which is the deviation used in computing variance, not a residual. Option B involves the population mean (unknown). Option D is the squared residual, which is used in computing SSE but is not the definition of a residual.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The regression line always passes through the point (x\u0304, \u0233). The y-intercept for a regression with x\u0304 = 50, \u0233 = 120, and slope b1 = 1.8 is:",
+    "options": [
+      "b0 = \u0233 + b1 \u00d7 x\u0304 = 120 + 1.8(50) = 210",
+      "b0 = (\u0233 \u2212 x\u0304) / b1 = (120 \u2212 50) / 1.8 = 38.9",
+      "b0 = x\u0304 \u2212 b1 \u00d7 \u0233 = 50 \u2212 1.8(120) = \u2212166",
+      "b0 = \u0233 \u2212 b1 \u00d7 x\u0304 = 120 \u2212 1.8(50) = 30"
+    ],
+    "correctIndex": 3,
+    "explanation": "The y-intercept is derived from the fact that \u0177 = b0 + b1x and the line passes through (x\u0304, \u0233): \u0233 = b0 + b1x\u0304, so b0 = \u0233 \u2212 b1x\u0304 = 120 \u2212 1.8(50) = 120 \u2212 90 = 30. Option A adds instead of subtracts b1x\u0304. Option C incorrectly switches x\u0304 and \u0233 in the formula. Option B divides a difference by the slope, which has no basis in the intercept formula.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher uses a regression model to predict housing prices. A house with 3,500 square feet is predicted to cost $480,000. The actual sale price is $510,000. What is the residual and what does it indicate?",
+    "options": [
+      "Residual = \u2212$30,000; the model overestimated the price by $30,000",
+      "Residual = $480,000; the model's prediction is the residual for this observation",
+      "Residual = $30,000; the actual price exceeded the model's prediction by $30,000",
+      "Residual = $510,000 / $480,000 = 1.0625; the price was 6.25% above prediction"
+    ],
+    "correctIndex": 2,
+    "explanation": "Residual = observed \u2212 predicted = $510,000 \u2212 $480,000 = +$30,000. A positive residual means the actual value exceeded the prediction \u2014 this house sold for $30,000 more than the model predicted. Option A reverses the sign \u2014 a negative residual would mean the prediction exceeded the observed value. Option B is incorrect \u2014 the prediction is not the residual. Option D computes a ratio, not a residual.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A dataset of 30 observations has r = 0.35 between sales experience (years) and quarterly sales volume. A new observation with 25 years of experience is added; this person has unusually low sales. What happens to r?",
+    "options": [
+      "r increases because adding a high-x point strengthens the positive association",
+      "r becomes undefined because 25 years exceeds the range of the original data",
+      "r is unchanged because one observation cannot affect a correlation based on 30 points",
+      "r decreases because the new point has high x and unexpectedly low y"
+    ],
+    "correctIndex": 3,
+    "explanation": "The new point has high x (25 years) but low y (sales volume) \u2014 it contradicts the positive trend that generates r > 0. This pulls the correlation toward zero or even negative values, decreasing r. Option A is wrong \u2014 the point would only increase r if it had both high x and high y (following the positive trend). Option C is wrong \u2014 all observations influence correlation, and adding a contrary point changes r. Option B is wrong \u2014 correlation is defined for any finite dataset regardless of the range.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "R\u00b2 = 0.64 in a regression of employee performance score on training hours. An HR manager interprets this as: 'Training hours correctly classifies 64% of employees.' What is wrong with this interpretation?",
+    "options": [
+      "R\u00b2 = 0.64 means the model is 64% reliable for predicting performance, not for classification",
+      "R\u00b2 measures proportion of variability in performance explained, not percentage correctly classified",
+      "R\u00b2 of 0.64 is too low to make any valid predictions about training hours",
+      "The manager should use R\u00b2 = 0.80 as a threshold before interpreting the model"
+    ],
+    "correctIndex": 1,
+    "explanation": "R\u00b2 is the proportion of variability in the response variable explained by the predictor(s). It does NOT measure the percentage of observations correctly classified or predicted \u2014 that concept applies to classification models (like logistic regression), not regression. R\u00b2 = 0.64 means 64% of the variation in performance scores is explained by training hours. Option A partially corrects the error but introduces an equally vague 'reliability' term. Option C is wrong \u2014 R\u00b2 doesn't determine model validity. Option D is a practical threshold that appears in some guidelines but isn't statistically mandated.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression is fit using age (x) to predict salary (y) for employees at Microsoft. The slope is b1 = 2,100 (dollars per year). The correlation is r = 0.58. If the sample standard deviation of age is 8 years, what is the standard deviation of salary?",
+    "options": [
+      "sy = b1 \u00d7 sx / r = 2100 \u00d7 8 / 0.58 \u2248 $28,966",
+      "sy = r \u00d7 sx / b1 = 0.58 \u00d7 8 / 2100 \u2248 $0.0022",
+      "sy = b1 / (r \u00d7 sx) = 2100 / (0.58 \u00d7 8) \u2248 $452",
+      "sy = r \u00d7 b1 \u00d7 sx = 0.58 \u00d7 2100 \u00d7 8 \u2248 $9,744"
+    ],
+    "correctIndex": 0,
+    "explanation": "From b1 = r \u00d7 (sy/sx), solving for sy: sy = b1 \u00d7 sx / r = 2100 \u00d7 8 / 0.58 \u2248 16800/0.58 \u2248 $28,966. This is a straightforward algebraic rearrangement of the slope formula. Option B inverts b1 and r in the formula. Option C divides by both r and sx rather than multiplying by sx and dividing by r. Option D multiplies all three, which doesn't correspond to any valid formula.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two variables have r = 0.90. If you swap the roles of x and y (use the original y to predict x), what happens to r?",
+    "options": [
+      "r becomes 1/0.90 \u2248 1.11, because you are predicting in the opposite direction",
+      "r becomes \u22120.90, because swapping x and y reverses the direction of association",
+      "r becomes 0.90\u00b2 = 0.81, because prediction quality decreases when roles are reversed",
+      "r stays at 0.90, because correlation is symmetric"
+    ],
+    "correctIndex": 3,
+    "explanation": "Correlation is symmetric: r(x,y) = r(y,x). The correlation coefficient does not depend on which variable is labeled 'explanatory' and which is 'response.' However, the regression slopes are not symmetric \u2014 swapping x and y gives a different slope (b1_new = r \u00d7 sx/sy rather than r \u00d7 sy/sx). Option A is impossible since r is bounded between -1 and 1. Option C confuses r with the slope or R\u00b2. Option B is wrong \u2014 swapping variables doesn't change the direction of the linear association.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Extrapolation in regression means:",
+    "options": [
+      "Using the regression line to predict y for x values beyond the observed data range",
+      "Extending the regression line to predict the mean y when x is at its average",
+      "Adding additional predictor variables to improve the model fit",
+      "Transforming the data to improve the normality of the residuals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extrapolation occurs when we use the regression equation to predict y for x values outside the range of the data used to build the model. The linear relationship observed within the data range may not hold outside it \u2014 the true relationship could curve, level off, or reverse. Extrapolation is always risky and should be done cautiously, if at all. Options B, C, and D describe other regression concepts: interpolation, multiple regression, and data transformation, respectively.",
+    "type": "Definition",
+    "difficulty": "easy"
+  }
+]

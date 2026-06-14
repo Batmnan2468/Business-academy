@@ -1,0 +1,197 @@
+[
+  {
+    "question": "One-way ANOVA is used to compare:",
+    "options": [
+      "The means of three or more groups using one continuous response variable",
+      "The variances of two or more groups simultaneously",
+      "The proportions of a categorical response across two independent groups",
+      "The correlation between a quantitative predictor and a categorical response"
+    ],
+    "correctIndex": 0,
+    "explanation": "One-way ANOVA tests H0: \u03bc1 = \u03bc2 = ... = \u03bck \u2014 whether the population means are equal across three or more groups. Despite the name 'analysis of variance,' it tests means, not variances. Option B describes a test of homogeneity of variances (e.g., Levene's test). Option C describes a chi-square test for proportions. Option D describes a different type of association analysis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The null hypothesis in one-way ANOVA is:",
+    "options": [
+      "All group variances are equal to a common population variance",
+      "The within-group variability equals the between-group variability",
+      "At least one group mean differs from the others",
+      "All group means are equal to a common population mean"
+    ],
+    "correctIndex": 3,
+    "explanation": "H0 in one-way ANOVA: \u03bc1 = \u03bc2 = ... = \u03bck. All group means are hypothesized to be equal. This is the null of no treatment effect. Option A describes the equal variance assumption (which is needed for the test, not the hypothesis being tested). Option C is the alternative hypothesis Ha, not H0. Option B describes a condition that would yield F \u2248 1 (under H0), not the hypothesis itself.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In ANOVA, MSE (Mean Square Error) represents:",
+    "options": [
+      "The variation between group means, used in the numerator of the F statistic",
+      "The within-group variability \u2014 a pooled estimate of the common population variance",
+      "The proportion of total variability explained by the treatment groups",
+      "The average squared difference between each group mean and the grand mean"
+    ],
+    "correctIndex": 1,
+    "explanation": "MSE = SSError / df(Error) = SSE / (N\u2212k) estimates \u03c3\u00b2, the common population variance, using the variability within each group (how much individuals within the same group differ from their group mean). It is the denominator of the F statistic. Option A describes MSG (Mean Square for Groups), the numerator. Option C describes R\u00b2. Option D describes MSG/SSTotal or similar quantities, not MSE.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An ANOVA table shows SSBetween = 120, SSError = 360, and there are 4 groups with N = 40 total observations. What is the F statistic?",
+    "options": [
+      "F = 120/360 = 0.33",
+      "F = (120/4) / (360/40) = 30/9 = 3.33",
+      "F = (120/3) / (360/36) = 40/10 = 4.0",
+      "F = 360/120 = 3.0"
+    ],
+    "correctIndex": 2,
+    "explanation": "df(Between) = k \u2212 1 = 4 \u2212 1 = 3. df(Error) = N \u2212 k = 40 \u2212 4 = 36. MSG = SSBetween/df(Between) = 120/3 = 40. MSE = SSError/df(Error) = 360/36 = 10. F = MSG/MSE = 40/10 = 4.0. Option A divides SS values directly without using degrees of freedom. Option B uses k (not k-1) for the between df and N (not N-k) for error df. Option D reverses the F ratio (puts SSE in numerator).",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A significant F test in one-way ANOVA allows you to conclude that:",
+    "options": [
+      "All group means are significantly different from each other",
+      "The group with the largest mean is significantly different from all other groups",
+      "At least one group mean differs from the others, but which ones are not identified",
+      "The treatment accounts for most of the variability in the response variable"
+    ],
+    "correctIndex": 2,
+    "explanation": "A significant ANOVA F test only tells you H0 is rejected \u2014 at least one group mean differs. It does NOT identify which specific groups differ. That requires post-hoc tests (Tukey, Bonferroni, etc.). Option A overclaims \u2014 all pairwise differences are not implied by the omnibus F. Option B speculates about the largest group without statistical justification. Option D is about R\u00b2 or effect size, not what the F test directly concludes.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The equal variance assumption in ANOVA is often checked using the rule of thumb:",
+    "options": [
+      "All group standard deviations must be exactly equal",
+      "The largest group standard deviation should be less than twice the smallest",
+      "All groups must have the same sample size for variances to be comparable",
+      "The ratio of the largest to smallest variance must be less than 5"
+    ],
+    "correctIndex": 1,
+    "explanation": "The common rule of thumb is that ANOVA is robust to unequal variances if the largest sample standard deviation is less than twice the smallest. Equivalently, the ratio of largest to smallest variance should be less than 4 (2\u00b2 = 4). Option A is too strict \u2014 exact equality is unrealistic. Option C is wrong \u2014 unequal sample sizes are allowed and addressed by the formulas. Option D uses a ratio of 5 for variances (not standard deviations), which is similar in spirit but doesn't match the standard rule.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An ANOVA table from a study of 5 teaching methods (k=5) with N = 55 total students shows: SSBetween = 180, SSTotal = 600. Complete the table: SSError, df(Between), df(Error), MSBetween, MSError, F.",
+    "options": [
+      "SSError = 420, df(B) = 5, df(E) = 50, MSB = 36, MSE = 8.4, F = 4.29",
+      "SSError = 480, df(B) = 4, df(E) = 50, MSB = 45, MSE = 9.6, F = 4.69",
+      "SSError = 420, df(B) = 4, df(E) = 50, MSB = 36, MSE = 8.0, F = 4.50",
+      "SSError = 420, df(B) = 4, df(E) = 50, MSB = 45, MSE = 8.4, F = 5.36"
+    ],
+    "correctIndex": 3,
+    "explanation": "SSError = SSTotal \u2212 SSBetween = 600 \u2212 180 = 420. df(Between) = k \u2212 1 = 5 \u2212 1 = 4. df(Error) = N \u2212 k = 55 \u2212 5 = 50. MSBetween = 180/4 = 45. MSError = 420/50 = 8.4. F = 45/8.4 = 5.36. Option A uses df(Between) = k = 5 instead of k-1 = 4. Option C uses MSError = 420/52.5 \u2248 8.0, which doesn't correspond to correct df. Option B has incorrect SSError.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why is ANOVA preferred over running multiple two-sample t tests when comparing 4 or more groups?",
+    "options": [
+      "ANOVA is computationally simpler than running many t tests",
+      "ANOVA can detect differences that t tests cannot due to different test statistics",
+      "Multiple t tests inflate the familywise Type I error rate; ANOVA controls it at \u03b1",
+      "t tests require larger sample sizes than ANOVA for the same number of groups"
+    ],
+    "correctIndex": 2,
+    "explanation": "With k groups, there are C(k,2) = k(k-1)/2 pairwise comparisons. Using \u03b1 = 0.05 for each inflates the familywise error rate: with 6 groups (15 comparisons), P(at least one false positive) \u2248 1 - 0.95^15 \u2248 0.54. ANOVA tests the global null simultaneously at a single \u03b1 level. Option A is not the statistical reason. Option B is wrong \u2014 ANOVA doesn't detect effects t tests can't; the F statistic is equivalent to a two-sample t when k = 2. Option D is wrong \u2014 sample size requirements are not systematically lower for ANOVA.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study tests 3 types of workplace lighting (fluorescent, LED, natural) on employee productivity (scale 0-100) with 10 employees per group. The group means are: fluorescent = 72, LED = 79, natural = 68. ANOVA gives F = 4.21, p = 0.023. A manager concludes: 'LED lighting is best because it has the highest mean.' What is wrong with this conclusion?",
+    "options": [
+      "The F test is not significant at \u03b1 = 0.01, so no conclusion can be drawn",
+      "The overall F test only establishes that some difference exists; post-hoc tests are needed to compare LED to fluorescent and natural lighting",
+      "The manager should compare the means to the grand mean, not to each other",
+      "Productivity scores on a 0-100 scale require a different test than ANOVA"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ANOVA F test establishes that group means are not all equal, but the test doesn't identify which specific groups differ significantly. The manager's conclusion that LED is best requires post-hoc pairwise tests (Tukey, Bonferroni) controlling for multiple comparisons. The observed difference (LED = 79 vs natural = 68) could be due to chance without formal testing. Option A is wrong \u2014 the test is significant at \u03b1 = 0.05. Option C is not a standard follow-up to ANOVA. Option D is wrong \u2014 a 0-100 scale is continuous/quantitative and appropriate for ANOVA.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "ANOVA partitions total variability as: SSTotal = SSBetween + SSError. If SSTotal = 500, SSBetween = 150, k = 4 groups, and N = 24 total observations, what is the F statistic?",
+    "options": [
+      "F = (150/4) / (350/20) = 37.5/17.5 = 2.14",
+      "F = (150/4) / (350/24) = 37.5/14.6 = 2.57",
+      "F = (150/3) / (350/21) = 50/16.7 = 2.99",
+      "F = (150/3) / (350/20) = 50/17.5 = 2.86"
+    ],
+    "correctIndex": 3,
+    "explanation": "SSError = 500 \u2212 150 = 350. df(Between) = k\u22121 = 3. df(Error) = N\u2212k = 24\u22124 = 20. MSG = 150/3 = 50. MSE = 350/20 = 17.5. F = 50/17.5 = 2.86. Option A uses df(Between) = k = 4 (should be k-1 = 3). Option C uses df(Error) = N\u2212k\u22121 = 21 (should be N-k = 20). Option B uses both wrong df values.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In ANOVA, why does MSG overestimate \u03c3\u00b2 when H0 is false, but MSE estimates \u03c3\u00b2 regardless?",
+    "options": [
+      "MSG includes between-group variation due to both random error and true group differences; MSE only measures within-group random error",
+      "MSE is always a biased estimator of \u03c3\u00b2; MSG is unbiased only when H0 is true",
+      "MSG and MSE both estimate \u03c3\u00b2, so the F ratio approaches 1 when H0 is false",
+      "MSE overestimates \u03c3\u00b2 when sample sizes are small; MSG overestimates when groups are numerous"
+    ],
+    "correctIndex": 0,
+    "explanation": "MSG measures between-group variability. When H0 is true (all means equal), the only source of between-group differences is random sampling variability \u2014 MSG estimates \u03c3\u00b2. When H0 is false (means differ), between-group differences include both random error AND systematic differences due to treatments \u2014 MSG estimates \u03c3\u00b2 + a noncentrality term. MSE always measures within-group variability (how much individuals within the same group vary from their group mean), which is purely random error regardless of H0. This is why F = MSG/MSE > 1 when H0 is false.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study compares 5 pharmaceutical compounds on blood pressure reduction (n = 15 per group, N = 75). The ANOVA is significant (F = 3.8, p = 0.007). A researcher then conducts 10 pairwise t tests, each at \u03b1 = 0.05, and finds 3 significant pairs. Why is this problematic?",
+    "options": [
+      "Pairwise t tests after ANOVA use the wrong degrees of freedom for the error term",
+      "With only 15 per group, pairwise t tests lack sufficient power to detect real differences",
+      "The t tests duplicate the ANOVA result and should show the same p-value as the F test",
+      "Multiple unadjusted t tests inflate Type I error; the 3 significant pairs may include false positives"
+    ],
+    "correctIndex": 3,
+    "explanation": "With 10 comparisons each at \u03b1 = 0.05, the familywise Type I error rate is 1 - (0.95)^10 \u2248 0.40. Among the 3 significant pairs, some may be false positives. Post-hoc procedures like Tukey or Bonferroni control the familywise error rate at 0.05. Option A is partially wrong \u2014 pairwise t tests can use MSE from the ANOVA table (actually more efficient), but the main issue is multiple comparisons. Option C is wrong \u2014 t tests test pairwise comparisons, F tests the global null; they are related but not identical. Option B is a concern but not the main statistical problem with this approach.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher has 3 groups with the following data: Group 1: n=10, mean=25, SD=4; Group 2: n=10, mean=22, SD=3.5; Group 3: n=10, mean=28, SD=12. Should the equal variance assumption concern her?",
+    "options": [
+      "No \u2014 the groups have equal sample sizes so equal variance is not required",
+      "Yes \u2014 SD of 12 vs. SD of 3.5 violates the rule that max SD < 2 \u00d7 min SD",
+      "No \u2014 the means differ enough to override any variance inequality",
+      "Yes \u2014 any SD above 10 automatically violates the ANOVA equal variance assumption"
+    ],
+    "correctIndex": 1,
+    "explanation": "The rule of thumb: max SD / min SD < 2. Here max SD = 12, min SD = 3.5, ratio = 12/3.5 \u2248 3.43 > 2. The equal variance assumption is likely violated. Alternatives include Welch's ANOVA or a nonparametric test (Kruskal-Wallis). Option A is wrong \u2014 equal n doesn't exempt from the equal variance assumption. Option C is wrong \u2014 mean differences and variance differences are separate issues. Option D is wrong \u2014 there is no absolute SD threshold; what matters is the relative spread across groups.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "ANOVA output shows F(3, 28) = 2.15, p = 0.118. How many groups were compared, and what is the total sample size?",
+    "options": [
+      "4 groups, N = 32 total observations",
+      "3 groups, N = 31 total observations",
+      "4 groups, N = 31 total observations",
+      "3 groups, N = 30 total observations"
+    ],
+    "correctIndex": 0,
+    "explanation": "F(df_between, df_error). df_between = k\u22121 = 3, so k = 4 groups. df_error = N\u2212k = 28, so N = 28 + k = 28 + 4 = 32 total observations. Option B uses df_between = k = 3, giving k = 3, and then N = 31 + 1 = 31 (confused). Option C uses k = 4 but computes N = 28 + k \u2212 1 = 31. Option D uses df_between = k = 3, and N = 28 + 3 = 31, both wrong.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a one-way ANOVA, the F statistic is the ratio of:",
+    "options": [
+      "The within-group mean square to the total mean square",
+      "The between-group sum of squares to the error sum of squares",
+      "The between-group mean square to the within-group mean square",
+      "The total variability to the unexplained variability"
+    ],
+    "correctIndex": 2,
+    "explanation": "F = MSG / MSE = (between-group mean square) / (within-group mean square). A large F means between-group variation exceeds what we'd expect from within-group variability alone. Option A has the numerator and denominator swapped \u2014 this ratio would be small when groups differ. Option B uses SS values rather than MS values (without dividing by df). Option D describes R\u00b2 = SSModel/SSTotal, not the F ratio.",
+    "type": "Definition",
+    "difficulty": "easy"
+  }
+]

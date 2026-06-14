@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Why are post-hoc tests necessary after a significant one-way ANOVA?",
+    "options": [
+      "To verify that the ANOVA result was not due to a calculation error",
+      "To check whether the equal variance assumption holds for each pairwise comparison",
+      "Because the F test only indicates some means differ; post-hoc tests identify which pairs differ",
+      "Because ANOVA tests variances, while post-hoc tests compare means directly"
+    ],
+    "correctIndex": 2,
+    "explanation": "A significant ANOVA F test rejects H0: all means equal, but provides no information about which specific group means are different from which others. Post-hoc tests (Tukey, Bonferroni) conduct pairwise comparisons while controlling the familywise Type I error rate. Option A is not a statistical purpose of post-hoc tests. Option B describes checking ANOVA assumptions, not the purpose of post-hoc tests. Option D is wrong \u2014 ANOVA tests means (despite the name), and post-hoc tests are the extension of this same comparison.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The familywise error rate when conducting m independent tests at individual \u03b1 level is approximately:",
+    "options": [
+      "\u03b1_FW = m \u00d7 \u03b1, the product of number of tests and individual alpha",
+      "\u03b1_FW = 1 \u2212 (1 \u2212 \u03b1)^m, the probability of at least one false positive across m tests",
+      "\u03b1_FW = \u03b1 / m, the Bonferroni-corrected individual alpha",
+      "\u03b1_FW = \u03b1^m, the probability of making errors in all m tests simultaneously"
+    ],
+    "correctIndex": 1,
+    "explanation": "The familywise error rate is \u03b1_FW = 1 \u2212 (1 \u2212 \u03b1)^m \u2014 the probability of at least one false positive across m tests, assuming tests are independent. For \u03b1 = 0.05 and m = 10, \u03b1_FW = 1 \u2212 0.95^10 \u2248 0.40. Option A overestimates for large m (would give \u03b1_FW > 1 when m > 20). Option C is the Bonferroni correction for the individual test level, not the familywise rate. Option D is the probability of making errors in ALL tests \u2014 the opposite extreme.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The Bonferroni correction adjusts the significance level for individual tests by:",
+    "options": [
+      "Multiplying \u03b1 by the number of comparisons to get the familywise threshold",
+      "Dividing the test statistic by the number of comparisons to adjust for inflation",
+      "Adding the number of comparisons to \u03b1 to increase sensitivity",
+      "Dividing \u03b1 by the number of comparisons to control the familywise error rate"
+    ],
+    "correctIndex": 3,
+    "explanation": "Bonferroni correction: use \u03b1_I = \u03b1_E / m for each individual test, where m is the number of comparisons. For \u03b1_E = 0.05 and m = 6 comparisons, each test uses \u03b1_I = 0.05/6 \u2248 0.0083. This ensures the familywise error rate remains at or below \u03b1_E. Option A multiplies instead of divides. Options C and D describe arithmetically incorrect adjustments with no statistical basis.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "With 6 groups in an ANOVA, how many pairwise comparisons are possible?",
+    "options": [
+      "C(6,2) = 15 pairwise comparisons",
+      "6 \u00d7 5 = 30 pairwise comparisons (order matters)",
+      "6 \u2212 1 = 5 sequential comparisons",
+      "6\u00b2 = 36 total group pairs including self-comparisons"
+    ],
+    "correctIndex": 0,
+    "explanation": "The number of pairwise comparisons for k groups is C(k,2) = k(k-1)/2 = 6\u00d75/2 = 15. Order doesn't matter (comparing Group 1 to Group 2 is the same as Group 2 to Group 1). Option B counts ordered pairs. Option C counts sequential pairs (consecutive groups only), not all pairwise. Option D counts all ordered pairs including identical groups.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Tukey's HSD (Honestly Significant Difference) is specifically designed to control familywise error when:",
+    "options": [
+      "Testing specific contrasts planned before data collection",
+      "Conducting goodness-of-fit tests after a significant chi-square test",
+      "Comparing each treatment group to a single control group",
+      "Performing all pairwise comparisons after a significant ANOVA"
+    ],
+    "correctIndex": 3,
+    "explanation": "Tukey's HSD controls the familywise error rate at \u03b1 for all possible pairwise comparisons simultaneously. It is the preferred method when comparing all group pairs after a significant ANOVA. Dunnett's test is designed for comparing each group to a control (Option C). Planned contrasts are specified before data collection (Option A) and use a different framework. Option B applies chi-square post-hoc methods, not ANOVA.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher uses \u03b1 = 0.05 for each of 10 unadjusted pairwise t tests after a significant ANOVA. What is the approximate familywise Type I error rate?",
+    "options": [
+      "\u03b1_FW = 0.05, because each test controls Type I error at 0.05",
+      "\u03b1_FW = 0.50, because 10 tests means 10 times the error",
+      "\u03b1_FW = 1 \u2212 (0.95)^10 \u2248 0.40, the probability of at least one false positive",
+      "\u03b1_FW = 0.005, because multiple tests reduce individual error through correction"
+    ],
+    "correctIndex": 2,
+    "explanation": "\u03b1_FW = 1 \u2212 (1 \u2212 0.05)^10 = 1 \u2212 0.95^10 \u2248 1 \u2212 0.5987 \u2248 0.40. There is approximately a 40% chance of at least one false positive among 10 tests, even if all null hypotheses are true. Option A is wrong \u2014 the individual \u03b1 applies to each test, not the family of tests. Option B is approximately correct numerically but uses the wrong formula. Option D is the Bonferroni corrected level, which is the remedy, not the current rate.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study compares 4 dietary supplements on weight loss. After significant ANOVA (p = 0.02), a researcher conducts Bonferroni-corrected pairwise tests using \u03b1I = 0.05/6 \u2248 0.0083. Only one comparison reaches significance (Supplement A vs. D, p = 0.006). What is the appropriate conclusion?",
+    "options": [
+      "No supplements differ significantly because the overall F test p = 0.02 < 0.05 but Bonferroni is more conservative",
+      "The Bonferroni correction was unnecessary since ANOVA already controls for multiple comparisons",
+      "All other supplement pairs are equivalent because they were not significant in the Bonferroni tests",
+      "Supplement A produces significantly more weight loss than Supplement D at the familywise 5% error rate"
+    ],
+    "correctIndex": 3,
+    "explanation": "Since p = 0.006 < \u03b1I = 0.0083, the comparison between A and D is significant after Bonferroni correction, controlling the familywise error at 0.05. Option A is wrong \u2014 the single significant comparison does establish a difference between A and D while controlling family error. Option C commits the 'accept H0' error \u2014 non-significant pairwise tests don't prove equality. Option B is wrong \u2014 ANOVA tests the global null; post-hoc tests (with their own error control) identify specific differences.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When is Bonferroni preferable to Tukey's HSD for post-hoc comparisons?",
+    "options": [
+      "When the ANOVA has more than 5 groups, because Bonferroni has more power for large k",
+      "When sample sizes are unequal across groups, because Tukey assumes equal n",
+      "When only a small number of specific comparisons are planned, not all pairwise",
+      "When the F test p-value is very small (< 0.001), indicating strong evidence of differences"
+    ],
+    "correctIndex": 2,
+    "explanation": "Bonferroni is preferable when you have a small, pre-specified set of comparisons \u2014 not all pairwise. For example, if you only care about comparing treatments to a control (3 comparisons instead of all 10 with 5 groups), Bonferroni correction on those 3 is less conservative than Tukey on all 10. When comparing all pairs, Tukey is more powerful than Bonferroni because Tukey's procedure is designed specifically for that complete set. Option A reverses the relationship. Option B is wrong \u2014 Tukey can be adapted for unequal sample sizes. Option D is irrelevant to choosing between methods.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher decides to test only the pairs (Group 1 vs. Group 3) and (Group 2 vs. Group 4) after seeing the ANOVA results and noticing these pairs had the largest differences. Using Bonferroni correction for m=2, she applies \u03b1I = 0.025. What is the fundamental problem?",
+    "options": [
+      "The Bonferroni correction should use all possible pairs (m = 6), not just 2",
+      "Contrasts selected after examining the data invalidate the familywise error control",
+      "The ANOVA p-value must be below 0.01 before post-hoc tests can be conducted",
+      "Bonferroni can only be applied when all groups have equal sample sizes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Choosing which comparisons to test based on the observed data (data snooping) invalidates all Type I error claims. If the researcher selected the two largest-looking differences after seeing the data, she has already used the data to guide the selection \u2014 the apparent \u03b1 = 0.05 familywise error rate is no longer valid. Planned contrasts must be specified before data collection. Option A partially addresses the problem (she should use the full m) but misses the more fundamental issue of data snooping. Option C is wrong \u2014 there is no required threshold for the overall F. Option D is wrong \u2014 Bonferroni doesn't require equal n.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study compares 5 marketing campaigns on click-through rate with n=20 per group. ANOVA: F(4,95) = 5.2, p = 0.001. Tukey's HSD tests: Campaign A vs B: p = 0.003; Campaign A vs C: p = 0.18; Campaign B vs D: p = 0.041; all other pairs p > 0.05. What is the best summary conclusion?",
+    "options": [
+      "All five campaigns have different click-through rates at the familywise 5% level",
+      "Campaign A outperforms B, and B outperforms D, indicating a performance ranking",
+      "Campaigns A and B differ significantly, and B and D differ significantly, but other pairs are not significantly different",
+      "Only Campaign A is effective because it is involved in the most significant comparisons"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tukey's HSD identifies which specific pairs differ significantly at the controlled familywise level. A vs B (p=0.003) and B vs D (p=0.041) are significant; other pairs are not. The correct conclusion reports what was and wasn't found. Option A overclaims \u2014 not all 10 pairs were significant. Option B overinterprets \u2014 A vs B and B vs D being significant doesn't create a transitive ranking (A vs D is not directly compared as significant here). Option D is wrong \u2014 being involved in significant comparisons doesn't make a single campaign 'the effective one.'",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A clinical researcher conducts a study with 4 drug doses and plans to make only 3 planned contrasts (each dose vs. placebo) before data collection, using Bonferroni with \u03b1I = 0.05/3 \u2248 0.0167. A colleague says she should use \u03b1I = 0.05/6 because all pairwise comparisons should be corrected. Who is right?",
+    "options": [
+      "The colleague is right \u2014 all possible comparisons must be in the denominator of Bonferroni",
+      "Neither is right \u2014 the correction should be based on the total number of tests in the entire study",
+      "Both are wrong \u2014 Tukey should be used instead of Bonferroni for dose-response comparisons",
+      "The researcher is right \u2014 Bonferroni only needs to divide by the number of comparisons being made"
+    ],
+    "correctIndex": 3,
+    "explanation": "The Bonferroni correction divides \u03b1 by the number of comparisons being conducted, not the number of possible comparisons. If the researcher pre-specified only 3 comparisons (each dose vs. placebo) before data collection, m=3 is appropriate. Dividing by all possible 6 pairs would be overly conservative and reduce power unnecessarily. The key requirement is that comparisons be pre-specified \u2014 she has met this requirement. Option A imposes an unnecessarily strict correction. Option C may be appropriate for all-pairs comparisons but Dunnett's test (not Tukey) is designed for comparing to a control. Option B extends correction beyond what's reasonable.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "After conducting Tukey's HSD on a 5-group ANOVA, a researcher finds that Groups A and C are not significantly different, A and D are not significantly different, but C and D are significantly different. Is this result logically consistent?",
+    "options": [
+      "No \u2014 if A=C and A=D, then C=D must also be true by transitivity",
+      "Yes \u2014 significance is determined by the data, and non-transitive outcomes are possible",
+      "No \u2014 Tukey's HSD guarantees consistency through its simultaneous comparison framework",
+      "Yes \u2014 the result indicates that A confounds the comparison between C and D"
+    ],
+    "correctIndex": 1,
+    "explanation": "Non-transitive significance results are entirely possible in multiple comparison procedures. 'Not significantly different' does not mean 'equal' \u2014 it means insufficient evidence to detect a difference at this sample size and alpha level. Groups C and D might be different while C-A and D-A differences are not significant because each pairwise comparison has different standard errors (especially with unequal n) or because the true differences are near the threshold of detectability. Statistical significance is not a transitive relation. Option A assumes transitivity of 'not different,' which is a logical error. Option C is wrong \u2014 Tukey's provides error control, not transitive consistency.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher conducts a study with k=3 groups but reports p-values from pairwise t tests rather than Tukey's HSD. The ANOVA was significant at p = 0.04. How does this affect the reliability of the post-hoc conclusions?",
+    "options": [
+      "Minimally \u2014 with only 3 comparisons, the familywise error rate is 1-(0.95)^3 \u2248 0.14, not 0.05",
+      "Not at all \u2014 pairwise t tests are valid after a significant ANOVA omnibus test",
+      "Substantially \u2014 each comparison at \u03b1=0.05 is invalid regardless of the number of comparisons",
+      "Minimally \u2014 only the comparison with the smallest p-value is affected by the inflation"
+    ],
+    "correctIndex": 0,
+    "explanation": "With 3 comparisons at \u03b1=0.05, \u03b1_FW \u2248 1 - (0.95)^3 \u2248 0.143. The researcher's stated \u03b1 = 0.05 for pairwise conclusions is actually closer to 0.14 familywise. While this is less severe than 10+ comparisons, it's still a meaningful inflation above the nominal 0.05 level. The correct solution is to use Tukey or Bonferroni (\u03b1I = 0.05/3 \u2248 0.017). Option B is the 'protected LSD' argument, which is contested in statistics. Option C is too extreme \u2014 the inflation exists but isn't total invalidation. Option D is wrong \u2014 all comparisons in the family contribute to the error inflation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which statement correctly describes the difference between planned contrasts and post-hoc tests?",
+    "options": [
+      "Planned contrasts test all pairwise differences; post-hoc tests test specific pre-specified combinations",
+      "Planned contrasts are specified before data collection; post-hoc tests are selected after observing the data",
+      "Planned contrasts require Bonferroni correction; post-hoc tests require Tukey's correction",
+      "Planned contrasts apply only to balanced designs; post-hoc tests work for any design"
+    ],
+    "correctIndex": 1,
+    "explanation": "The defining distinction is timing: planned contrasts are hypotheses specified before seeing the data (usually theoretically motivated). Post-hoc tests are applied after observing significant ANOVA to identify which groups differ \u2014 they are data-driven. This distinction matters for Type I error control: planned contrasts require less stringent multiple testing correction because the researcher hasn't used the data to guide the selection. Option A reverses the typical scope. Option C is wrong \u2014 both may use various corrections; the choice depends on the specific test, not the timing. Option D is not a standard distinction between planned and post-hoc approaches.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A familywise error rate of 0.05 means:",
+    "options": [
+      "There is a 5% probability of at least one false positive across all tests in the family",
+      "Each individual test in the family has a 5% Type I error rate",
+      "5% of the tests in the family will produce false positive results",
+      "The total Type I error across all tests sums to no more than 5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "The familywise error rate is the probability of committing at least one Type I error across the entire family of tests. Controlling it at 0.05 means the probability of any false positive among all comparisons is at most 5%. Option B describes the individual test alpha, not the familywise rate. Option C confuses the probability with the proportion \u2014 0.05 is a probability for the family, not a percentage of tests. Option D describes what Bonferroni provides (a bound on the sum), but the FWER definition is about at least one error, not the sum.",
+    "type": "Definition",
+    "difficulty": "medium"
+  }
+]

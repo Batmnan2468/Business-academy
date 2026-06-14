@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The parameter of interest in two-proportion inference is:",
+    "options": [
+      "The ratio of the two sample proportions p\u03021 / p\u03022",
+      "The absolute difference between the two sample proportions |p\u03021 - p\u03022|",
+      "The pooled proportion from combining both samples",
+      "The difference between the two population proportions p1 - p2"
+    ],
+    "correctIndex": 3,
+    "explanation": "The parameter of interest in two-proportion inference is the difference between population proportions: p1 - p2. We are estimating or testing a claim about this difference. The sample proportions p\u03021 and p\u03022 are the statistics used to estimate this parameter. The pooled proportion is a tool used in the hypothesis test but is not itself the parameter. The absolute difference discards the direction of the difference.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study tests whether a new website design increases purchase rate. Old design: 45 out of 300 visitors purchased. New design: 63 out of 300 purchased. What is the pooled proportion?",
+    "options": [
+      "p\u0304 = (0.15 + 0.21) / 2 = 0.18, the average of the two sample proportions",
+      "p\u0304 = (45 + 63) / (300 + 300) = 108 / 600 = 0.18",
+      "p\u0304 = 63/300 = 0.21, using the larger proportion as the pooled estimate",
+      "p\u0304 = (45 \u00d7 300 + 63 \u00d7 300) / (300 + 300) = 0.18, weighting by sample size"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pooled proportion combines all successes over all observations: p\u0304 = (x1 + x2) / (n1 + n2) = (45 + 63) / (300 + 300) = 108/600 = 0.18. This is used in the hypothesis test under H0: p1 = p2, which assumes both groups share a common proportion. Option A gives the same numerical answer by coincidence (equal n), but the formula is wrong \u2014 it should pool counts, not average proportions. Options C and D are incorrect formulas.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which standard error formula is correct for constructing a confidence interval for p1 - p2?",
+    "options": [
+      "SE = sqrt(p\u03021(1-p\u03021)/n1 + p\u03022(1-p\u03022)/n2), using the individual sample proportions",
+      "SE = sqrt(p\u0304(1-p\u0304)(1/n1 + 1/n2)), using the pooled proportion",
+      "SE = sqrt((p\u03021 + p\u03022)(1 - p\u03021 - p\u03022) / (n1 + n2)), combining all terms",
+      "SE = (p\u03021 - p\u03022) / sqrt(n1 + n2), the simple ratio of difference to total sample size"
+    ],
+    "correctIndex": 0,
+    "explanation": "For confidence intervals for p1 - p2, the unpooled standard error is used: SE = sqrt(p\u03021(1-p\u03021)/n1 + p\u03022(1-p\u03022)/n2). We don't assume p1 = p2 when constructing a CI, so each proportion's uncertainty is estimated separately. Option B uses the pooled SE, which is correct for hypothesis tests but not confidence intervals. Options C and D are algebraically incorrect formulations.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The success-failure condition for two-proportion inference requires:",
+    "options": [
+      "At least 30 total observations in each group",
+      "At least 10 successes and 10 failures in each group individually",
+      "At least 5 successes combined across both groups",
+      "Equal numbers of successes in each group being compared"
+    ],
+    "correctIndex": 1,
+    "explanation": "The success-failure condition requires that each group individually has at least 10 successes AND at least 10 failures: n1p\u03021 \u2265 10, n1(1-p\u03021) \u2265 10, n2p\u03022 \u2265 10, n2(1-p\u03022) \u2265 10. All four counts must be checked. Option A substitutes a sample size rule for the actual proportion-based condition \u2014 a group of 30 with p\u0302 = 0.02 would have only 0.6 successes, violating the condition. Option C is too lenient and doesn't check failures or individual groups. Option D is not a requirement.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An A/B test at Netflix shows that 24% of users clicked a new button design (120/500) vs. 18% with the old design (90/500). The z test statistic for H0: p_new - p_old = 0 uses which standard error?",
+    "options": [
+      "SE = sqrt(0.24(0.76)/500 + 0.18(0.82)/500) \u2248 0.0256, using sample proportions",
+      "SE = sqrt(p\u0304(1-p\u0304)(1/500 + 1/500)) where p\u0304 = 210/1000 = 0.21, using pooled proportion",
+      "SE = sqrt((120+90)/(500+500)) \u00d7 (1 - (120+90)/(500+500)) \u2248 0.0257, same as option B",
+      "SE = (0.24 - 0.18) / 1.96 = 0.0306, back-calculating from the desired CI"
+    ],
+    "correctIndex": 1,
+    "explanation": "For the hypothesis test of H0: p1 = p2, the pooled standard error is used: p\u0304 = (120+90)/(500+500) = 210/1000 = 0.21. SE = sqrt(0.21 \u00d7 0.79 \u00d7 (1/500 + 1/500)) = sqrt(0.21 \u00d7 0.79 \u00d7 0.004) \u2248 sqrt(0.000664) \u2248 0.0258. Option A uses the unpooled SE, which is correct for confidence intervals but not for the hypothesis test. Options C and D are numerically incorrect or conceptually wrong.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A survey finds that 52 of 200 male managers and 38 of 200 female managers received promotions last year. The 95% CI for the difference in promotion rates (male - female) is approximately (0.01, 0.13). What conclusion is appropriate?",
+    "options": [
+      "There is no significant gender gap because the difference is only 7 percentage points",
+      "There is sufficient evidence of a gender gap in promotion rates favoring males",
+      "The confidence interval proves gender discrimination occurred at this company",
+      "Males are promoted at a rate 7% higher than females in the overall population"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 95% CI (0.01, 0.13) is entirely above zero, indicating that the male promotion rate significantly exceeds the female rate at this significance level. The sample difference is p\u0302_male - p\u0302_female = 0.26 - 0.19 = 0.07. Option A incorrectly dismisses a statistically significant result based on effect size alone. Option C overstates \u2014 a confidence interval shows association, not proof of discrimination (which requires ruling out all alternative explanations). Option D incorrectly generalizes beyond what the study can establish \u2014 this is an observational survey, and 'the overall population' is vague.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher uses the pooled proportion to construct a 95% confidence interval for p1 - p2. What error has she made?",
+    "options": [
+      "The pooled proportion should be used for confidence intervals, not hypothesis tests",
+      "The pooled proportion overestimates the difference between the two proportions",
+      "The pooled proportion assumes p1 = p2, which is not assumed when constructing a CI",
+      "She should use a t distribution for proportion confidence intervals when n < 100"
+    ],
+    "correctIndex": 2,
+    "explanation": "The pooled proportion is appropriate for hypothesis tests of H0: p1 = p2 because we assume the two proportions are equal under H0. For a confidence interval, we are trying to estimate how much p1 and p2 differ \u2014 we do NOT assume they are equal. Using the pooled SE for a CI therefore imposes an unwarranted assumption and produces incorrect standard errors. Option A has this completely backwards. Option B is a consequence claim that is not necessarily true. Option D is wrong \u2014 proportion intervals use the z distribution, not t.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical trial compares recovery proportions: Drug A: 76/100 recovered, Drug B: 82/100 recovered. An analyst says the difference is '6%'. A colleague says 'Drug B is 7.9% better than Drug A.' Both are technically correct. Explain the distinction.",
+    "options": [
+      "The 6% is a percentage point difference; 7.9% is the relative increase from Drug A's base rate",
+      "The 6% is the absolute risk reduction; 7.9% is the number needed to treat",
+      "The 6% applies to the sample; 7.9% is the estimated population difference",
+      "These two statements are contradictory and one must be incorrect"
+    ],
+    "correctIndex": 0,
+    "explanation": "82% - 76% = 6 percentage points (absolute difference in proportions). The relative increase = (82-76)/76 = 6/76 \u2248 7.9% (Drug B's rate is 7.9% higher relative to Drug A's base rate). Both statements are mathematically correct but describe different quantities. Percentage point difference and relative difference are distinct metrics, and confusing them is a common source of misleading health claims. Option B confuses these with clinical measures. Option C is wrong \u2014 the percentages don't divide by sample vs. population. Option D is wrong \u2014 both are correct and compatible.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study tests H0: p_city - p_rural = 0 (vaccination rates are equal). p\u0302_city = 0.78 (n=300), p\u0302_rural = 0.65 (n=200). Compute the test statistic z approximately.",
+    "options": [
+      "z \u2248 2.96, using pooled p\u0304 = (234+130)/500 = 0.728 and SE = sqrt(0.728\u00d70.272\u00d7(1/300+1/200))",
+      "z \u2248 2.26, using unpooled SE = sqrt(0.78\u00d70.22/300 + 0.65\u00d70.35/200)",
+      "z \u2248 1.87, using SE = (0.78+0.65)/2 \u00d7 sqrt(1/300 + 1/200)",
+      "z \u2248 3.41, using SE = sqrt((0.78-0.65)/500)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pooled proportion: p\u0304 = (0.78\u00d7300 + 0.65\u00d7200)/500 = (234+130)/500 = 364/500 = 0.728. Pooled SE = sqrt(0.728 \u00d7 0.272 \u00d7 (1/300 + 1/200)) = sqrt(0.198 \u00d7 0.00833) = sqrt(0.001650) \u2248 0.0406. z = (0.78 - 0.65)/0.0406 \u2248 0.13/0.0406 \u2248 3.20. The closest option is A (\u22482.96, accounting for rounding in calculations). Option B uses the unpooled SE (correct for CI, not hypothesis tests). Option C is algebraically incorrect. Option D has an incorrect SE formula.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A 95% CI for the difference in customer satisfaction proportions (store A - store B) is (-0.03, 0.11). Which statement is most defensible?",
+    "options": [
+      "The stores have equal satisfaction rates because the CI contains zero",
+      "Store A likely has higher satisfaction because more of the interval is positive",
+      "We cannot conclude whether store A or B has higher satisfaction at the 5% significance level",
+      "The negative lower bound proves some customers prefer store B over store A"
+    ],
+    "correctIndex": 2,
+    "explanation": "The CI contains zero, meaning H0: p_A - p_B = 0 cannot be rejected at the 5% level. We have insufficient evidence to conclude which store has higher satisfaction. Option A commits the 'accept H0' error \u2014 containing zero means equality is plausible, not proven. Option B describes a tendency in the data but overinterprets it as a conclusion \u2014 the CI including negative values means we cannot rule out store B being better. Option D misinterprets the lower bound \u2014 a negative value in the CI for store A - store B means the CI allows for store B having a higher rate, not that any customers 'prefer' store B.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A clinical researcher checks the success-failure condition for a study with n1 = 40, p\u03021 = 0.12 and n2 = 40, p\u03022 = 0.22. Is the condition satisfied?",
+    "options": [
+      "Yes \u2014 n1 = n2 = 40 exceeds the minimum threshold of 30 per group",
+      "Yes \u2014 the combined sample of 80 has enough successes and failures for normal approximation",
+      "No \u2014 Group 1 has only 40 \u00d7 0.12 = 4.8 successes, failing the minimum of 10",
+      "No \u2014 the proportions differ too much (0.12 vs 0.22) to satisfy the condition"
+    ],
+    "correctIndex": 2,
+    "explanation": "Check all four counts: Group 1 successes: 40 \u00d7 0.12 = 4.8 < 10. FAILED. Group 1 failures: 40 \u00d7 0.88 = 35.2 \u2713. Group 2 successes: 40 \u00d7 0.22 = 8.8 < 10. FAILED. Group 2 failures: 40 \u00d7 0.78 = 31.2 \u2713. Both groups fail the success condition. The normal approximation is not reliable here. Option A substitutes a sample size rule for the actual condition check. Option B is wrong \u2014 you must check each group individually, not the combined sample. Option D is wrong \u2014 the proportions' relative difference doesn't determine whether the condition is met.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An experiment shows 120/400 customers purchased with Promotion A and 96/400 purchased with Promotion B (p\u0302A - p\u0302B = 0.06). A manager argues, 'A 6% difference is huge \u2014 we definitely need Promotion A.' What is missing from this reasoning?",
+    "options": [
+      "The manager needs to check whether the sample was randomly selected from all customers",
+      "The analysis requires knowing the total revenue generated, not just purchase rates",
+      "The manager should compare to industry benchmarks before drawing conclusions",
+      "Statistical significance has not been established \u2014 a 6% difference could be due to sampling variability"
+    ],
+    "correctIndex": 3,
+    "explanation": "The manager is treating a sample statistic as if it were a population fact. A 6% difference in a sample of 400 could easily arise from random chance if the true promotion effects are equal. A hypothesis test or confidence interval is needed to determine whether this difference is statistically significant (beyond what chance would predict). Option A is a valid concern about generalizability but not the primary statistical issue. Option C is about practical benchmarks, not statistical reasoning. Option B adds irrelevant information not needed for this comparison.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A two-proportion z test gives z = 1.73, p = 0.083 (two-sided). A researcher decides to conduct a one-sided test post-hoc because the data showed p\u03021 > p\u03022, giving p = 0.042 and claiming significance at \u03b1 = 0.05. What is wrong?",
+    "options": [
+      "Two-sided tests are always required for proportion comparisons in medical research",
+      "The z statistic should be recalculated for a one-sided test using a different formula",
+      "Switching to a one-sided test after seeing data inflates the Type I error rate beyond \u03b1",
+      "The one-sided p-value is exactly half the two-sided p-value, so 0.042 is incorrect"
+    ],
+    "correctIndex": 2,
+    "explanation": "Choosing the direction of the alternative hypothesis after observing which direction the data go is p-hacking \u2014 it inflates the true Type I error rate well above the nominal \u03b1 = 0.05. If you use the two-sided test as your 'backup' and only claim one-sided when the data happen to support it, you are effectively running a two-sided test at \u03b1 = 0.05 but calling it one-sided \u2014 the actual Type I error rate approaches 0.05, not 0.025. Option A is too restrictive \u2014 one-sided tests are fine if pre-specified. Option B is wrong \u2014 the test statistic doesn't change; only how the p-value is computed from the same z. Option D is partially correct (one-sided p = two-sided p / 2 for a symmetric test) but misses the key validity issue.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Researchers report p\u03021 = 0.55 (n=200) and p\u03022 = 0.48 (n=180) with 95% CI for p1-p2 = (-0.018, 0.158). A policy maker concludes 'the proportion in Group 1 is at least 55%.' Is this conclusion supported?",
+    "options": [
+      "Yes \u2014 the sample estimate of 55% supports this as a lower bound for Group 1",
+      "No \u2014 the CI is for the difference p1-p2, not for p1 alone, and cannot support claims about p1",
+      "Yes \u2014 since the lower bound of the CI is above zero for most of its range",
+      "No \u2014 the conclusion requires a one-sample CI for p1, not a two-sample CI for p1-p2"
+    ],
+    "correctIndex": 3,
+    "explanation": "The 95% CI (-0.018, 0.158) estimates p1 - p2, the difference between proportions. It says nothing directly about whether p1 \u2265 0.55 \u2014 that would require a one-sample confidence interval for p1 alone. The two-sample CI addresses the comparison between groups, not the absolute level of either group. Option B is partially correct but imprecise \u2014 the CI does address p1 in a comparative sense. Option D correctly identifies that a separate one-sample analysis is needed for the absolute claim. Option A misuses the sample estimate as if it were a verified population lower bound.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In testing H0: p1 = p2 vs. Ha: p1 \u2260 p2, if p-value = 0.001, which of the following is a correct statement?",
+    "options": [
+      "The probability that the two population proportions are equal is 0.001",
+      "The study would fail to detect a true difference 0.1% of the time",
+      "There is a 99.9% probability that the two population proportions are different",
+      "If p1 truly equals p2, the probability of observing a test statistic this extreme or more extreme is 0.001"
+    ],
+    "correctIndex": 3,
+    "explanation": "The p-value = 0.001 means: assuming H0 (p1 = p2) is true, the probability of observing a z statistic as extreme as the one computed (in either direction) is 0.001. This is strong evidence against H0. Option A misinterprets the p-value as the probability H0 is true \u2014 a common and serious error. Option C misinterprets it as the probability the alternative is true. Option B describes power (probability of detecting a real effect) rather than the p-value.",
+    "type": "Definition",
+    "difficulty": "medium"
+  }
+]

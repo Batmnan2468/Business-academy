@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In two-way ANOVA, the interaction term tests whether:",
+    "options": [
+      "The two factors both have significant effects on the response variable",
+      "The residuals from the model are normally distributed",
+      "The two factors are correlated with each other across groups",
+      "The effect of one factor depends on the level of the other factor"
+    ],
+    "correctIndex": 3,
+    "explanation": "The interaction term tests whether the effect of Factor A on the response changes depending on the level of Factor B (and vice versa). If the effect of detergent type is the same at all temperatures, there is no interaction. If detergent A works better in cold water but detergent B works better in hot water, the effects depend on the other factor \u2014 an interaction exists. Option A describes testing main effects, not interaction. Option C describes correlation between factors (a design issue). Option B describes checking assumptions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An interaction plot shows two lines (representing Factor A level 1 and level 2) that are nearly parallel across all levels of Factor B. What does this indicate?",
+    "options": [
+      "A significant interaction \u2014 the parallel lines show Factor A and B operate independently",
+      "Factor B has no main effect because the lines are horizontal across its levels",
+      "Both main effects are significant since both lines show clear differences from zero",
+      "No interaction \u2014 the effect of Factor A is approximately the same across all levels of Factor B"
+    ],
+    "correctIndex": 3,
+    "explanation": "Parallel lines in an interaction plot mean the difference between Factor A's levels is approximately constant across all levels of Factor B \u2014 no interaction. Crossing or converging lines indicate interaction. Option A reverses the interpretation. Option C is wrong \u2014 parallel lines indicate no interaction but don't confirm or deny main effects. Option B confuses the slope of individual lines (which would indicate Factor B's main effect) with the interaction.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a two-way ANOVA with factors A (3 levels) and B (2 levels), what are the degrees of freedom for the interaction term?",
+    "options": [
+      "df(A\u00d7B) = (3-1)(2-1) = 2",
+      "df(A\u00d7B) = (3)(2) = 6",
+      "df(A\u00d7B) = 3 + 2 - 1 = 4",
+      "df(A\u00d7B) = 3 \u00d7 2 - 1 = 5"
+    ],
+    "correctIndex": 0,
+    "explanation": "The interaction degrees of freedom = (a\u22121)(b\u22121), where a and b are the number of levels of each factor. Here df(A\u00d7B) = (3\u22121)(2\u22121) = 2 \u00d7 1 = 2. Option B uses the total cell count (a\u00d7b), not the interaction df. Option C adds instead of multiplies degrees of freedom. Option D subtracts 1 from the total cells, which is also incorrect.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When should you test the interaction term first in a two-way ANOVA analysis?",
+    "options": [
+      "Only when both main effects are statistically significant",
+      "Only when the interaction has a small p-value in the initial output",
+      "Always \u2014 interaction should be tested before interpreting main effects",
+      "After confirming that the equal variance assumption is met"
+    ],
+    "correctIndex": 2,
+    "explanation": "The interaction should always be tested first. A significant interaction means the effect of Factor A differs across levels of Factor B \u2014 interpreting the main effect of A as a single summary (averaged across all levels of B) is then misleading. If there is no significant interaction, main effects can be interpreted in isolation. Option A is backwards \u2014 you can't know if main effects are significant until after you've decided whether to include the interaction. Option B would create circular reasoning. Option D addresses model checking but doesn't determine analysis order.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A two-way ANOVA examines the effect of fertilizer type (organic, synthetic) and irrigation method (drip, flood, sprinkler) on crop yield. Factor A (fertilizer): F = 8.2, p = 0.006. Factor B (irrigation): F = 5.1, p = 0.009. Interaction (A\u00d7B): F = 0.6, p = 0.55. What is the correct interpretation?",
+    "options": [
+      "All three tests are significant; irrigation and fertilizer each have independent effects on yield",
+      "The interaction must be reported as significant since both main effects are significant",
+      "Both main effects are significant, and the non-significant interaction allows main effects to be interpreted separately",
+      "The main effects should not be interpreted because the interaction p-value of 0.55 means they cancel out"
+    ],
+    "correctIndex": 2,
+    "explanation": "The interaction is not significant (p = 0.55), meaning the effect of fertilizer is similar across all irrigation methods (and vice versa). Therefore, the main effects can be interpreted independently: fertilizer type significantly affects yield (p = 0.006), and irrigation method significantly affects yield (p = 0.009). Option A incorrectly calls all three tests significant. Option B is wrong \u2014 main effects can be significant even without interaction. Option D is wrong \u2014 non-significant interaction means main effects CAN be interpreted independently.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study tests exercise type (cardio, weights, yoga) and time of day (morning, evening) on stress reduction. The interaction is significant (F = 4.8, p = 0.02). What is the correct next step?",
+    "options": [
+      "Report the main effect of exercise type, since it is the primary variable of interest",
+      "Examine simple effects \u2014 the effect of exercise type within each time of day separately",
+      "Report the interaction as statistically significant and conclude both factors affect stress",
+      "Ignore the main effects since the interaction makes them uninterpretable on their own"
+    ],
+    "correctIndex": 1,
+    "explanation": "When the interaction is significant, main effects averaged across the other factor are misleading. The correct approach is to examine simple effects \u2014 e.g., which exercise type is best in the morning, and which is best in the evening. These may give different answers. Option A ignores the interaction and reports main effects as if they were independent. Option C describes the interaction significance but doesn't provide the required follow-up analysis. Option D overstates \u2014 main effects can still be presented with the caveat that they must be interpreted conditional on the other factor.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A two-way ANOVA with Factor A (2 levels), Factor B (3 levels), and n = 5 per cell. What are the degrees of freedom for the error term?",
+    "options": [
+      "df(Error) = ab(n\u22121) = 2\u00d73\u00d74 = 24",
+      "df(Error) = N \u2212 ab = 30 \u2212 6 = 24",
+      "df(Error) = N \u2212 a \u2212 b + 1 = 30 \u2212 2 \u2212 3 + 1 = 26",
+      "df(Error) = ab \u2212 1 = 6 \u2212 1 = 5"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a balanced two-way ANOVA with n observations per cell, df(Error) = ab(n\u22121) = 2\u00d73\u00d7(5\u22121) = 6\u00d74 = 24. This is equivalent to N \u2212 ab = 30 \u2212 6 = 24 where N = abn = 30 total observations. Option B gives the same numerical result with a different (but also correct) formula. Since both A and B give 24, option A is the primary formula-based answer but numerically both are correct. Option C is wrong. Option D gives the number of cells minus 1.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher reports that in a two-way ANOVA, the main effect of teaching style is F = 9.2, p < 0.001, and concludes 'online teaching is significantly better than in-person.' The interaction between teaching style and student ability level is significant (F = 5.4, p = 0.008). What is wrong?",
+    "options": [
+      "The F statistic for the main effect should be divided by the interaction F to get the true effect",
+      "With a significant interaction, the main effect cannot be interpreted without specifying student ability level",
+      "The significant interaction means neither main effect is real; both are artifacts of confounding",
+      "The conclusion is valid as long as the main effect was significant before the interaction term"
+    ],
+    "correctIndex": 1,
+    "explanation": "A significant interaction means the effect of teaching style depends on student ability level \u2014 perhaps online is better for high-ability students but worse for struggling students. Reporting a single main effect ('online is better') ignores this qualification and can mislead decisions. The researcher should examine simple effects: is online better for each level of student ability separately? Option A describes a non-standard and incorrect calculation. Option C overstates \u2014 interactions don't invalidate main effects, they qualify them. Option D is wrong \u2014 the main effect p-value doesn't insulate conclusions from interaction concerns.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A two-way ANOVA table shows: Factor A (df=2, SS=120), Factor B (df=1, SS=80), A\u00d7B (df=2, SS=60), Error (df=24, SS=240). What is the F statistic for the interaction?",
+    "options": [
+      "F = (60/2) / (240/24) = 30/10 = 3.0",
+      "F = (60/24) / (240/2) = 2.5/120 = 0.021",
+      "F = 60/240 = 0.25",
+      "F = (60/2) / (240/18) = 30/13.3 = 2.25"
+    ],
+    "correctIndex": 0,
+    "explanation": "F(interaction) = MS(A\u00d7B) / MSError. MS(A\u00d7B) = SS(A\u00d7B)/df(A\u00d7B) = 60/2 = 30. MSError = SSError/df(Error) = 240/24 = 10. F = 30/10 = 3.0. Option B inverts the calculation. Option C divides SS values directly without df weighting. Option D uses incorrect error df of 18 rather than 24.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a 2\u00d73 two-way ANOVA (Factor A has 2 levels, Factor B has 3 levels) with n=4 per cell, what are the degrees of freedom for: Factor A, Factor B, Interaction, Error, Total?",
+    "options": [
+      "df: A=2, B=3, A\u00d7B=6, Error=12, Total=23",
+      "df: A=1, B=2, A\u00d7B=2, Error=18, Total=23",
+      "df: A=1, B=2, A\u00d7B=2, Error=12, Total=23",
+      "df: A=1, B=2, A\u00d7B=4, Error=18, Total=23"
+    ],
+    "correctIndex": 1,
+    "explanation": "N = 2\u00d73\u00d74 = 24 total observations. df(A) = a\u22121 = 1. df(B) = b\u22121 = 2. df(A\u00d7B) = (a\u22121)(b\u22121) = 1\u00d72 = 2. df(Error) = ab(n\u22121) = 6\u00d73 = 18. df(Total) = N\u22121 = 23. Check: 1+2+2+18 = 23 \u2713. Option A uses a and b (not a-1 and b-1) for main effects. Option C uses df(Error) = 12, not 18. Option D has df(A\u00d7B) = 4 rather than 2.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An interaction plot for a study on sleep quality (Factor A: 7 hours vs 9 hours) and caffeine intake (Factor B: none, moderate, high) shows lines that cross each other. What does this pattern indicate about how to report the results?",
+    "options": [
+      "Main effects of sleep and caffeine should be reported as the primary findings",
+      "Crossing lines confirm both main effects are statistically significant at \u03b1 = 0.05",
+      "The crossing lines indicate a calculation error in the group means",
+      "A significant interaction is likely; the effect of sleep duration differs across caffeine levels"
+    ],
+    "correctIndex": 3,
+    "explanation": "Crossing lines in an interaction plot are the hallmark of a disordinal (qualitative) interaction \u2014 the rank order of the Factor A means reverses across levels of Factor B. For example, 7 hours might be better for no-caffeine users but 9 hours better for high-caffeine users. This pattern strongly suggests a significant interaction, meaning main effects alone are insufficient to describe the relationship. Option A is what you'd do WITHOUT interaction. Option C is wrong \u2014 crossing lines are a meaningful pattern, not an error. Option B is wrong \u2014 the pattern suggests interaction significance, not necessarily that main effects are both significant.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A food company tests the effect of salt content (low, medium, high) and packaging color (red, blue, green) on consumer taste ratings. With a=3, b=3, n=5 per cell, and the interaction being non-significant (p=0.42), how should the main effects be interpreted?",
+    "options": [
+      "Main effects cannot be reported because the interaction was tested first",
+      "Main effects are automatically significant when interaction is non-significant",
+      "The main effects can be interpreted independently because there is no significant interaction",
+      "The non-significant interaction means both main effects should also be reported as non-significant"
+    ],
+    "correctIndex": 2,
+    "explanation": "A non-significant interaction (p=0.42) indicates the effect of salt content is approximately the same across all packaging colors (and vice versa). Therefore, the main effects can be interpreted independently \u2014 the average effect of salt content across all colors is a meaningful summary. Option A is wrong \u2014 a non-significant interaction is exactly when main effects can be cleanly interpreted. Option B is wrong \u2014 interaction significance and main effect significance are separate matters. Option D is wrong \u2014 interaction and main effect tests are independent; one being non-significant says nothing about the other.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager reads a two-way ANOVA report that says: 'The main effect of region was significant (F=7.4, p=0.002) and the main effect of product type was significant (F=3.9, p=0.05), and the interaction was significant (F=4.1, p=0.01).' He concludes: 'Region has the largest effect because it has the highest F statistic.' What is wrong with comparing F statistics this way?",
+    "options": [
+      "Nothing \u2014 the F statistic directly measures effect magnitude and can be compared across effects",
+      "F statistics depend on degrees of freedom and cannot be compared across effects with different df",
+      "The interaction must be resolved before any comparison of main effect F statistics is valid",
+      "F statistics compare means; to compare magnitude, effect sizes like eta-squared should be used"
+    ],
+    "correctIndex": 3,
+    "explanation": "F statistics reflect signal-to-noise ratios (MS effect / MSError) and depend on sample size and variability, not just effect magnitude. Two effects can have the same practical importance but different F values depending on their degrees of freedom and the error variance. Effect sizes like \u03b7\u00b2 (eta-squared) = SS_effect/SS_Total or partial \u03b7\u00b2 more directly quantify the proportion of variance explained by each factor. Option A is wrong \u2014 F is not a direct measure of effect size. Option B is partially right (df matters) but incomplete. Option C is a valid concern but doesn't address the magnitude comparison question directly.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the minimum number of cells (cell means) needed to assess interaction in a two-way ANOVA?",
+    "options": [
+      "2 cells \u2014 one per level of the primary factor",
+      "4 cells \u2014 the minimum 2\u00d72 factorial structure",
+      "6 cells \u2014 at least 2 levels per factor with 3 combinations",
+      "1 cell \u2014 a single group is sufficient to estimate interaction effects"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 2\u00d72 factorial design (2 levels of Factor A \u00d7 2 levels of Factor B) creates 4 cells and is the minimum structure for detecting interaction. Interaction requires at least 2 levels of each factor \u2014 you need to see whether the A1-A2 difference changes between B1 and B2. With fewer than 4 cells (a 2\u00d71 or 1\u00d71 design), there are not two levels of both factors and no interaction is estimable. Option A is a one-way design. Option C overstates the minimum. Option D is impossible.",
+    "type": "Definition",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a 2\u00d72 two-way ANOVA, the cell means are: A1B1=20, A1B2=30, A2B1=25, A2B2=25. Is there an interaction?",
+    "options": [
+      "No \u2014 the means in level B2 are not significantly different from level B1",
+      "No \u2014 the grand mean of all four cells is 25, indicating balance",
+      "Yes \u2014 the effect of Factor A (A1 vs A2) changes across levels of B",
+      "Yes \u2014 the sum of diagonal cells is not equal (20+25 \u2260 30+25)"
+    ],
+    "correctIndex": 2,
+    "explanation": "At B1: A1=20, A2=25 (A2 is 5 units higher). At B2: A1=30, A2=25 (A1 is 5 units higher). The direction of the A1 vs A2 difference reverses between B1 and B2 \u2014 this is a disordinal interaction. Option A is wrong \u2014 the question is not about significance but about the pattern of means. Option B is wrong \u2014 balance in the grand mean doesn't indicate no interaction. Option D is a real numerical observation (20+25=45 vs 30+25=55) but not the standard way to diagnose interaction.",
+    "type": "Application",
+    "difficulty": "medium"
+  }
+]

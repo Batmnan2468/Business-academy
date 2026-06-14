@@ -3,12 +3,12 @@
     "question": "What is the primary purpose of randomization in an experiment?",
     "options": [
       "To ensure the sample is representative of the entire population of interest",
-      "To distribute known and unknown confounding variables evenly across treatment groups",
+      "To reduce measurement error in the response variable",
       "To increase the statistical power of the hypothesis test",
-      "To reduce measurement error in the response variable"
+      "To distribute known and unknown confounding variables evenly across treatment groups"
     ],
-    "correctIndex": 1,
-    "explanation": "Randomization assigns participants to treatment groups in a way that distributes all characteristics — age, baseline health, motivation, and unmeasured factors — approximately equally. This is what allows causal conclusions: any systematic difference in outcomes is attributable to the treatment rather than pre-existing differences. Option A describes random sampling, not random assignment. Option C is an indirect benefit (random assignment reduces variability in group characteristics) but not the primary purpose. Option D describes measurement standardization, not randomization.",
+    "correctIndex": 3,
+    "explanation": "Randomization assigns participants to treatment groups in a way that distributes all characteristics \u2014 age, baseline health, motivation, and unmeasured factors \u2014 approximately equally. This is what allows causal conclusions: any systematic difference in outcomes is attributable to the treatment rather than pre-existing differences. Option A describes random sampling, not random assignment. Option C is an indirect benefit (random assignment reduces variability in group characteristics) but not the primary purpose. Option B describes measurement standardization, not randomization.",
     "type": "Definition",
     "difficulty": "easy"
   },
@@ -21,7 +21,7 @@
       "An observational study, because participants are not blinded to their drink"
     ],
     "correctIndex": 1,
-    "explanation": "A completely randomized design (CRD) assigns all experimental units to treatments without first blocking. Participants here are directly randomized to one of three treatments. Option A requires grouping (blocking) before randomization — that did not occur here. Option C (matched pairs) requires each person to receive both treatments, with pairing by a blocking variable. Option D is wrong because the presence or absence of blinding doesn't determine whether a study is observational — random assignment does, and it occurred here.",
+    "explanation": "A completely randomized design (CRD) assigns all experimental units to treatments without first blocking. Participants here are directly randomized to one of three treatments. Option A requires grouping (blocking) before randomization \u2014 that did not occur here. Option C (matched pairs) requires each person to receive both treatments, with pairing by a blocking variable. Option D is wrong because the presence or absence of blinding doesn't determine whether a study is observational \u2014 random assignment does, and it occurred here.",
     "type": "Definition",
     "difficulty": "easy"
   },
@@ -60,7 +60,7 @@
       "This is a confounded result and the experiment should be redesigned as an observational study"
     ],
     "correctIndex": 2,
-    "explanation": "Random assignment does not guarantee perfect balance — it ensures that, in expectation, groups are similar on all characteristics. Imbalances can still occur by chance, especially with moderate sample sizes. The key is that with random assignment, we know this imbalance is due to chance, not systematic bias. Option A is wrong — overtime frequency is related to productivity (the response), so this matters. Option B partially admits failure but goes too far — random assignment still provides unbiased estimates on average. Option D is wrong — one imbalance doesn't invalidate the experiment or require switching to observational.",
+    "explanation": "Random assignment does not guarantee perfect balance \u2014 it ensures that, in expectation, groups are similar on all characteristics. Imbalances can still occur by chance, especially with moderate sample sizes. The key is that with random assignment, we know this imbalance is due to chance, not systematic bias. Option A is wrong \u2014 overtime frequency is related to productivity (the response), so this matters. Option B partially admits failure but goes too far \u2014 random assignment still provides unbiased estimates on average. Option D is wrong \u2014 one imbalance doesn't invalidate the experiment or require switching to observational.",
     "type": "Application",
     "difficulty": "medium"
   },
@@ -73,20 +73,20 @@
       "A matched pairs design, because only two treatments can be compared in a matched design"
     ],
     "correctIndex": 2,
-    "explanation": "When each participant receives all treatments (in random order), they serve as their own block. This is a randomized block design where blocks are individuals — within each person, all three conditions are tested. This removes between-person variability from the error term, increasing precision. Option A is a CRD — this design has structure (same person across conditions), so it's not a CRD. Option B is possible but requires all genre×day combinations as specific treatment groups, which isn't how this is set up. Option D is wrong — matched pairs is a special case with exactly two treatments; three conditions are compared here.",
+    "explanation": "When each participant receives all treatments (in random order), they serve as their own block. This is a randomized block design where blocks are individuals \u2014 within each person, all three conditions are tested. This removes between-person variability from the error term, increasing precision. Option A is a CRD \u2014 this design has structure (same person across conditions), so it's not a CRD. Option B is possible but requires all genre\u00d7day combinations as specific treatment groups, which isn't how this is set up. Option D is wrong \u2014 matched pairs is a special case with exactly two treatments; three conditions are compared here.",
     "type": "Comparison",
     "difficulty": "medium"
   },
   {
     "question": "A researcher blocks by gender in an experiment studying exercise type on endurance. If gender is actually unrelated to endurance in this population, what is the consequence of blocking on gender?",
     "options": [
-      "Power increases because blocking on gender absorbs between-group variability",
       "Power decreases because degrees of freedom are lost without a reduction in error variance",
+      "Power increases because blocking on gender absorbs between-group variability",
       "The experiment is invalid because blocking variables must be related to the response",
       "There is no effect on power because blocking is always neutral in its impact"
     ],
-    "correctIndex": 1,
-    "explanation": "Blocking only helps when the blocking variable is actually associated with the response variable. If gender is unrelated to endurance, blocking on gender does not reduce the error variance — no variability is absorbed. But blocking still uses up degrees of freedom (one per block minus one), which increases the critical value needed for significance and reduces power. Option A is wrong — blocking only increases power when the blocking variable explains variability in the response. Option C is too strong — blocking on an irrelevant variable is a design inefficiency, not an invalidity. Option D is wrong — blocking on an irrelevant variable actively hurts power.",
+    "correctIndex": 0,
+    "explanation": "Blocking only helps when the blocking variable is actually associated with the response variable. If gender is unrelated to endurance, blocking on gender does not reduce the error variance \u2014 no variability is absorbed. But blocking still uses up degrees of freedom (one per block minus one), which increases the critical value needed for significance and reduces power. Option B is wrong \u2014 blocking only increases power when the blocking variable explains variability in the response. Option C is too strong \u2014 blocking on an irrelevant variable is a design inefficiency, not an invalidity. Option D is wrong \u2014 blocking on an irrelevant variable actively hurts power.",
     "type": "Error-Finding",
     "difficulty": "medium"
   },
@@ -94,25 +94,25 @@
     "question": "In a study testing whether a new sales script improves conversion rates, researchers randomly assign 50 sales representatives to use the new script and 50 to use the old script. The new script group has significantly more experienced sales reps (average 8 years experience vs. 4 years). What went wrong?",
     "options": [
       "A confound was introduced, suggesting randomization was not properly implemented",
-      "This is a case of random variation — unequal experience is expected after randomization",
+      "This is a case of random variation \u2014 unequal experience is expected after randomization",
       "The study is invalid because experience should have been used as a blocking variable",
       "Experience is a response variable here, not an explanatory variable or potential confounder"
     ],
     "correctIndex": 0,
-    "explanation": "A 4-year average difference in experience between randomly assigned groups is a substantial imbalance that suggests randomization was not properly carried out — perhaps reps self-selected into groups, or the randomization algorithm was flawed. True random assignment almost never produces imbalances this large in a sample of 100. This compromises the causal interpretation because experience is a confound — more experienced reps may achieve higher conversion rates regardless of script. Option B is too forgiving of a large imbalance. Option C is a potential prevention but doesn't explain what went wrong.",
+    "explanation": "A 4-year average difference in experience between randomly assigned groups is a substantial imbalance that suggests randomization was not properly carried out \u2014 perhaps reps self-selected into groups, or the randomization algorithm was flawed. True random assignment almost never produces imbalances this large in a sample of 100. This compromises the causal interpretation because experience is a confound \u2014 more experienced reps may achieve higher conversion rates regardless of script. Option B is too forgiving of a large imbalance. Option C is a potential prevention but doesn't explain what went wrong.",
     "type": "Error-Finding",
     "difficulty": "medium"
   },
   {
-    "question": "An experiment tests the effect of four teaching methods (lecture, discussion, online, hybrid) on student exam scores. Students are first grouped by prior GPA (low: <2.5, medium: 2.5-3.5, high: >3.5), and within each GPA group, students are randomly assigned to a teaching method. There are 120 students total, 10 per GPA×method combination. What are the degrees of freedom for the blocking factor (GPA group)?",
+    "question": "An experiment tests the effect of four teaching methods (lecture, discussion, online, hybrid) on student exam scores. Students are first grouped by prior GPA (low: <2.5, medium: 2.5-3.5, high: >3.5), and within each GPA group, students are randomly assigned to a teaching method. There are 120 students total, 10 per GPA\u00d7method combination. What are the degrees of freedom for the blocking factor (GPA group)?",
     "options": [
-      "4 − 1 = 3, because there are 4 teaching methods",
-      "3 − 1 = 2, because there are 3 GPA groups",
-      "120 − 1 = 119, because total df is based on sample size",
-      "4 × 3 − 1 = 11, because df equals total treatment combinations minus 1"
+      "4 \u2212 1 = 3, because there are 4 teaching methods",
+      "4 \u00d7 3 \u2212 1 = 11, because df equals total treatment combinations minus 1",
+      "120 \u2212 1 = 119, because total df is based on sample size",
+      "3 \u2212 1 = 2, because there are 3 GPA groups"
     ],
-    "correctIndex": 1,
-    "explanation": "In a randomized block design, the degrees of freedom for the blocking factor equals the number of blocks minus 1. There are 3 GPA groups (blocks), so blocking df = 3 − 1 = 2. The treatment (teaching method) df = 4 − 1 = 3. Error df = total df − treatment df − block df = 119 − 3 − 2 = 114. Option A gives the treatment df, not the block df. Option C is total df, not block df. Option D computes all combinations minus 1, which is not how block df is calculated.",
+    "correctIndex": 3,
+    "explanation": "In a randomized block design, the degrees of freedom for the blocking factor equals the number of blocks minus 1. There are 3 GPA groups (blocks), so blocking df = 3 \u2212 1 = 2. The treatment (teaching method) df = 4 \u2212 1 = 3. Error df = total df \u2212 treatment df \u2212 block df = 119 \u2212 3 \u2212 2 = 114. Option A gives the treatment df, not the block df. Option C is total df, not block df. Option B computes all combinations minus 1, which is not how block df is calculated.",
     "type": "Calculation",
     "difficulty": "hard"
   },
@@ -120,12 +120,12 @@
     "question": "A pharmaceutical company tests whether Drug A, Drug B, or placebo reduces systolic blood pressure. Patients are blocked by baseline blood pressure (normal, prehypertension, hypertension) before random assignment. Compared to a completely randomized design with the same n, the randomized block design will produce:",
     "options": [
       "Larger F statistics and less power if baseline blood pressure explains little variability",
-      "Smaller error variance and more power when baseline blood pressure explains variability in outcomes",
+      "Less valid causal inference because blocking on baseline pressure introduces confounding",
       "Identical results to the CRD because randomization already controls for baseline pressure",
-      "Less valid causal inference because blocking on baseline pressure introduces confounding"
+      "Smaller error variance and more power when baseline blood pressure explains variability in outcomes"
     ],
-    "correctIndex": 1,
-    "explanation": "Blocking on baseline blood pressure removes between-block variability from the error term. Since baseline blood pressure is strongly related to changes in systolic pressure, this variability would otherwise inflate MSE in a CRD. The randomized block design produces a smaller MSE, larger F statistics, and better power. Option A describes what happens when blocking on an irrelevant variable — the opposite situation. Option C is wrong — randomization distributes baseline pressure across groups but doesn't remove its variability from the error. Option D is wrong — blocking is a legitimate design strategy that improves rather than undermines causal inference.",
+    "correctIndex": 3,
+    "explanation": "Blocking on baseline blood pressure removes between-block variability from the error term. Since baseline blood pressure is strongly related to changes in systolic pressure, this variability would otherwise inflate MSE in a CRD. The randomized block design produces a smaller MSE, larger F statistics, and better power. Option A describes what happens when blocking on an irrelevant variable \u2014 the opposite situation. Option C is wrong \u2014 randomization distributes baseline pressure across groups but doesn't remove its variability from the error. Option B is wrong \u2014 blocking is a legitimate design strategy that improves rather than undermines causal inference.",
     "type": "Comparison",
     "difficulty": "hard"
   },
@@ -138,7 +138,7 @@
       "Because store size differences will be eliminated by the rotating layout assignments"
     ],
     "correctIndex": 0,
-    "explanation": "When each store tests all layouts, the store acts as a block. Store-to-store variability (differences in foot traffic, location, customer demographics) is removed from the MSE, because each layout is being compared within stores, not between stores. This dramatically increases sensitivity for detecting real layout effects. Option B is wrong — blinding refers to knowledge of treatment assignment, not the block structure. Option C is wrong — a CRD can certainly analyze three treatments. Option D overstates — store size differences are controlled by the blocking structure but not 'eliminated.'",
+    "explanation": "When each store tests all layouts, the store acts as a block. Store-to-store variability (differences in foot traffic, location, customer demographics) is removed from the MSE, because each layout is being compared within stores, not between stores. This dramatically increases sensitivity for detecting real layout effects. Option B is wrong \u2014 blinding refers to knowledge of treatment assignment, not the block structure. Option C is wrong \u2014 a CRD can certainly analyze three treatments. Option D overstates \u2014 store size differences are controlled by the blocking structure but not 'eliminated.'",
     "type": "Application",
     "difficulty": "hard"
   },
@@ -151,7 +151,7 @@
       "The CRD is more valid because blocking introduces bias by using testosterone as a predictor"
     ],
     "correctIndex": 1,
-    "explanation": "Since testosterone level is related to muscle gain (the response), not blocking on it means this variability ends up in the error term (MSE). A larger MSE means a smaller F statistic and reduced power. Blocking would have removed this testosterone-related variability from the error, producing a smaller MSE and greater power. Option A is a common misconception — losing block degrees of freedom in the ANOVA is more than compensated by the reduction in MSE when blocking on a relevant variable. Option C is wrong — randomization distributes testosterone across groups but doesn't remove its effect from the error. Option D is wrong — blocking is a valid, unbiased design choice.",
+    "explanation": "Since testosterone level is related to muscle gain (the response), not blocking on it means this variability ends up in the error term (MSE). A larger MSE means a smaller F statistic and reduced power. Blocking would have removed this testosterone-related variability from the error, producing a smaller MSE and greater power. Option A is a common misconception \u2014 losing block degrees of freedom in the ANOVA is more than compensated by the reduction in MSE when blocking on a relevant variable. Option C is wrong \u2014 randomization distributes testosterone across groups but doesn't remove its effect from the error. Option D is wrong \u2014 blocking is a valid, unbiased design choice.",
     "type": "Comparison",
     "difficulty": "hard"
   },
@@ -164,20 +164,20 @@
       "Blocking and confounding are synonyms for the same phenomenon in experimental design"
     ],
     "correctIndex": 2,
-    "explanation": "Confounding is when an extraneous variable is associated with both the treatment and outcome, distorting the treatment's apparent effect. In observational studies, confounding is a threat because treatment assignment is not controlled. In experiments, blocking on potential confounders before random assignment prevents them from distorting results. Option A is partially true (blocking is pre-data) but incorrect that confounding cannot be addressed in analysis — ANCOVA can statistically adjust for measured confounders. Option B reverses the logic. Option D is wrong — they are related but distinct concepts.",
+    "explanation": "Confounding is when an extraneous variable is associated with both the treatment and outcome, distorting the treatment's apparent effect. In observational studies, confounding is a threat because treatment assignment is not controlled. In experiments, blocking on potential confounders before random assignment prevents them from distorting results. Option A is partially true (blocking is pre-data) but incorrect that confounding cannot be addressed in analysis \u2014 ANCOVA can statistically adjust for measured confounders. Option B reverses the logic. Option D is wrong \u2014 they are related but distinct concepts.",
     "type": "Comparison",
     "difficulty": "hard"
   },
   {
-    "question": "A researcher claims: 'I don't need a control group — I can measure improvement by comparing participants' outcomes before and after the treatment.' What is wrong with this design?",
+    "question": "A researcher claims: 'I don't need a control group \u2014 I can measure improvement by comparing participants' outcomes before and after the treatment.' What is wrong with this design?",
     "options": [
       "Pre-post comparisons always overestimate the treatment effect due to measurement bias",
-      "Without a control group, improvement may be due to time effects, placebo response, or natural recovery",
+      "Ethical guidelines prohibit researchers from withholding treatment from control group participants",
       "A control group is only needed when the sample size is too small to detect real effects",
-      "Ethical guidelines prohibit researchers from withholding treatment from control group participants"
+      "Without a control group, improvement may be due to time effects, placebo response, or natural recovery"
     ],
-    "correctIndex": 1,
-    "explanation": "Without a control group, there is no way to separate the treatment effect from time-based changes: natural recovery, regression to the mean, historical events during the study, or placebo effects. For example, patients may improve simply because time passed, not because of the treatment. A control group receiving standard care or placebo allows these extraneous changes to be accounted for. Option A overstates — pre-post comparisons don't always overestimate, but they can bias results. Option C is wrong — control groups are needed regardless of sample size. Option D is a real ethical concern in some contexts but doesn't describe what's 'wrong' with the statistical design logic.",
+    "correctIndex": 3,
+    "explanation": "Without a control group, there is no way to separate the treatment effect from time-based changes: natural recovery, regression to the mean, historical events during the study, or placebo effects. For example, patients may improve simply because time passed, not because of the treatment. A control group receiving standard care or placebo allows these extraneous changes to be accounted for. Option A overstates \u2014 pre-post comparisons don't always overestimate, but they can bias results. Option C is wrong \u2014 control groups are needed regardless of sample size. Option B is a real ethical concern in some contexts but doesn't describe what's 'wrong' with the statistical design logic.",
     "type": "Error-Finding",
     "difficulty": "medium"
   },
@@ -190,7 +190,7 @@
       "Ensuring that control group participants receive identical conditions as treatment participants"
     ],
     "correctIndex": 1,
-    "explanation": "Replication means having multiple experimental units per treatment condition. This is necessary to estimate within-treatment variability (error), which provides the baseline for the F test denominator. Without replication (each treatment applied to only one unit), there is no way to estimate experimental error. Option A describes reproducibility — confirming results in a separate study — a different concept. Option C describes what randomization accomplishes. Option D describes aspects of experimental control, not replication.",
+    "explanation": "Replication means having multiple experimental units per treatment condition. This is necessary to estimate within-treatment variability (error), which provides the baseline for the F test denominator. Without replication (each treatment applied to only one unit), there is no way to estimate experimental error. Option A describes reproducibility \u2014 confirming results in a separate study \u2014 a different concept. Option C describes what randomization accomplishes. Option D describes aspects of experimental control, not replication.",
     "type": "Definition",
     "difficulty": "easy"
   }

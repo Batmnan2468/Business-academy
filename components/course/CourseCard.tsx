@@ -18,6 +18,15 @@ const levelColors: Record<string, string> = {
   advanced: 'bg-red-100 text-red-700',
 }
 
+const subjectBorderColors: Record<string, string> = {
+  Accounting: '#3b82f6',
+  'Information Systems': '#8b5cf6',
+  'Business Statistics': '#22c55e',
+  'Business Analytics': '#f97316',
+  'Operations Management': '#ef4444',
+  Statistics: '#eab308',
+}
+
 export default function CourseCard({
   courseSlug,
   subject,
@@ -47,8 +56,13 @@ export default function CourseCard({
       ? Math.round((practicedCount / totalTopics) * 100)
       : null
 
+  const borderColor = subjectBorderColors[subject] ?? '#6b7280'
+
   return (
-    <div className="rounded-2xl border border-gray-100 p-5 hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col">
+    <div
+      className="rounded-2xl border border-gray-100 p-5 hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col"
+      style={{ borderLeftColor: borderColor, borderLeftWidth: '4px' }}
+    >
       <div className="flex items-start justify-between mb-3">
         <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
           {subject}
@@ -65,13 +79,15 @@ export default function CourseCard({
       <div className="mt-4">
         <div className="flex items-center justify-between mb-1.5">
           <p className="text-xs text-gray-400">
-            {practicedCount !== null ? (
+            {practicedCount === null ? (
+              <>{totalTopics} topics</>
+            ) : practicedCount === 0 ? (
+              <span className="text-gray-400">Not started</span>
+            ) : (
               <>
                 <span className="font-medium text-gray-600">{practicedCount}</span>
                 /{totalTopics} topics practiced
               </>
-            ) : (
-              <>{totalTopics} topics</>
             )}
           </p>
           {pct !== null && pct > 0 && (

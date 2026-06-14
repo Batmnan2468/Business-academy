@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In simple linear regression, H0: \u03b21 = 0 tests whether:",
+    "options": [
+      "The y-intercept is significantly different from zero",
+      "The correlation coefficient equals zero in the sample",
+      "There is a linear relationship between x and y in the population",
+      "The response variable has zero mean when the predictor is zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "H0: \u03b21 = 0 tests whether the population slope is zero \u2014 equivalent to testing whether there is any linear relationship between x and y. If \u03b21 = 0, then x provides no information about y. This test is equivalent to testing \u03c1 = 0 (no population correlation) and uses the same p-value. Option A describes testing H0: \u03b20 = 0, which is rarely of interest. Option B refers to the sample correlation, not a population hypothesis. Option D describes the y-intercept's interpretation when \u03b21 = 0, not the hypothesis being tested.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Regression output shows: Slope = 2.3, SE(slope) = 0.85. What is the t statistic for testing H0: \u03b21 = 0?",
+    "options": [
+      "t = 0.85 / 2.3 = 0.37",
+      "t = (2.3 \u2212 0.85) / 2.3 = 0.63",
+      "t = 2.3 \u00d7 0.85 = 1.955",
+      "t = 2.3 / 0.85 \u2248 2.71"
+    ],
+    "correctIndex": 3,
+    "explanation": "The t statistic for testing H0: \u03b21 = 0 is t = (b1 \u2212 0) / SE(b1) = 2.3 / 0.85 \u2248 2.71. This measures how many standard errors the estimated slope is from the null value of zero. Option A inverts the numerator and denominator. Option C multiplies instead of divides. Option B subtracts the SE from the slope before dividing, which has no statistical meaning.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A regression of exam score (y) on study hours (x) gives df = n \u2212 2 = 23. Why does regression use n \u2212 2 degrees of freedom?",
+    "options": [
+      "Because two parameters (\u03b20 and \u03b21) are estimated from the data",
+      "Because two variables (x and y) are used in the regression",
+      "Because two-sided tests require doubling the degrees of freedom",
+      "Because regression assumes independence, losing 2 df for that assumption"
+    ],
+    "correctIndex": 0,
+    "explanation": "In simple linear regression, two parameters are estimated: the y-intercept \u03b20 and the slope \u03b21. Each parameter estimated from the data costs one degree of freedom. So df = n \u2212 2. This is analogous to one-sample t having df = n \u2212 1 because one parameter (the mean \u03bc) is estimated. Option B confuses the number of variables with degrees of freedom calculation. Option C is wrong \u2014 two-sided vs. one-sided affects how you use the t distribution, not df. Option D describes independence as an assumption, not a source of df loss.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A 95% confidence interval for mean exam score when study hours x = 10 is (72, 81). A 95% prediction interval for an individual student's exam score when x = 10 is (58, 95). Why is the prediction interval wider?",
+    "options": [
+      "The CI uses a larger t critical value than the PI",
+      "The PI must account for both uncertainty in the mean and individual-to-individual variation",
+      "The PI has more degrees of freedom, making it wider",
+      "The CI captures 95% of all students' scores; the PI captures only one student's likely score"
+    ],
+    "correctIndex": 1,
+    "explanation": "The confidence interval estimates the mean response at x = 10 \u2014 uncertainty comes only from sampling variability in the estimated line. The prediction interval must capture an individual observation, which varies both because of uncertainty in the mean AND because individuals scatter around the true mean. The PI adds the residual variance \u03c3\u00b2 to the variability in the estimated mean, making it always wider. Option A reverses the relationship. Option C is wrong \u2014 both intervals use the same df (n-2). Option D has the interpretations backwards: the CI covers the mean, not individual students.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Regression ANOVA output for predicting salary from experience: SSModel = 450, SSError = 550, n = 52. What is R\u00b2?",
+    "options": [
+      "R\u00b2 = 450/550 = 0.818, the ratio of model SS to error SS",
+      "R\u00b2 = 550/1000 = 0.55, the error SS proportion as a measure of fit",
+      "R\u00b2 = 450/1000 = 0.45, the model SS divided by total SS",
+      "R\u00b2 = sqrt(450/1000) = 0.671, the square root of the SS ratio"
+    ],
+    "correctIndex": 2,
+    "explanation": "R\u00b2 = SSModel / SSTotal = SSModel / (SSModel + SSError) = 450 / (450 + 550) = 450/1000 = 0.45. This is the proportion of total variability in y explained by the regression on x. Option A divides SSModel by SSError, which is not R\u00b2 (it's a component of the F statistic). Option B gives the proportion of variability NOT explained. Option D takes a square root for no reason \u2014 R\u00b2 doesn't require a square root transformation.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Software output for a regression of customer satisfaction (y) on wait time in minutes (x): Intercept = 8.2, Slope = \u22120.45, t(slope) = \u22123.12, p = 0.003, n = 40. What is the best conclusion?",
+    "options": [
+      "Fail to reject H0; the negative slope is expected and confirms the null of no relationship",
+      "Accept H0; the slope of \u22120.45 is too small to be practically significant",
+      "Reject H0; there is significant evidence that longer wait times are associated with lower satisfaction",
+      "Reject H0; each additional minute of wait time reduces satisfaction by 3.12 units"
+    ],
+    "correctIndex": 2,
+    "explanation": "p = 0.003 < \u03b1 = 0.05: reject H0: \u03b21 = 0. There is significant evidence of a linear association \u2014 each additional minute of wait time is associated with a 0.45-point decrease in satisfaction. Option A incorrectly fails to reject. Option B commits the 'accept H0' error and confuses statistical significance with practical significance. Option D misinterprets the t statistic (\u22123.12) as the slope coefficient \u2014 the slope is \u22120.45.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regression ANOVA table is partially shown: SSModel = 1200, SSError = 800, MSError = 40. What are n and df(Model)?",
+    "options": [
+      "n = 31 and df(Model) = 1, because df(Error) = 800/40 = 20 and df(Total) = 30",
+      "n = 22 and df(Model) = 1, because df(Error) = 800/40 = 20 and df(Total) = 21",
+      "n = 22 and df(Model) = 1, because SSTotal = 2000 implies n = 20 observations",
+      "n = 41 and df(Model) = 1, because df(Error) = 800/40 = 20 and there are 20 x-values"
+    ],
+    "correctIndex": 1,
+    "explanation": "MSError = SSError / df(Error), so df(Error) = SSError / MSError = 800/40 = 20. For simple linear regression, df(Model) = 1. df(Total) = df(Model) + df(Error) = 1 + 20 = 21. Since df(Total) = n \u2212 1, then n = 22. Option A adds an extra observation (df(Total) = 30 would give n = 31). Options C and D have incorrect relationships between SSTotal and n, or incorrect df formulas.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A regression of Amazon product price on customer rating gives F = 0.62, p = 0.43. What does this indicate?",
+    "options": [
+      "Price significantly predicts customer rating with moderate strength",
+      "The regression model explains 62% of variability in customer ratings",
+      "Customer rating significantly predicts price at the \u03b1 = 0.43 significance level",
+      "There is no significant linear relationship between price and customer rating"
+    ],
+    "correctIndex": 3,
+    "explanation": "F = 0.62 with p = 0.43 > 0.05 means we fail to reject H0: \u03b21 = 0. There is no significant evidence of a linear relationship between price and customer rating. In simple linear regression, the F test and t test for the slope are equivalent (F = t\u00b2) and test the same hypothesis. Option A incorrectly concludes significance. Option C misinterprets p = 0.43 as a significance level at which to declare significance. Option B confuses F with R\u00b2.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A 95% confidence interval for mean sales when advertising = $10,000 is ($85,000, $102,000). A manager wants to know what sales to expect for a specific new campaign with $10,000 advertising. Why is the confidence interval insufficient for this purpose?",
+    "options": [
+      "The CI is only valid for historical campaigns, not future ones",
+      "The CI estimates mean sales across all campaigns with $10k spending; a prediction interval captures individual campaign variability",
+      "The CI would need to be recalculated with a different significance level for future predictions",
+      "The CI is insufficient because $10,000 may fall outside the range of the training data"
+    ],
+    "correctIndex": 1,
+    "explanation": "The confidence interval estimates the average sales for all campaigns with $10,000 advertising \u2014 it captures uncertainty about the mean line. For a single specific new campaign, you need a prediction interval, which is wider because it additionally accounts for the scatter of individual outcomes around the mean. The manager wants to know about one specific campaign, not the average of many. Option A has no statistical basis. Option C is wrong \u2014 the significance level doesn't need to change. Option D raises a valid extrapolation concern but isn't the main issue when $10k is within the data range.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Regression output for predicting weight (kg) from height (cm): Intercept = \u221295.2, Slope = 0.93, SE(slope) = 0.12, n = 30. Construct a 95% CI for \u03b21 and interpret it.",
+    "options": [
+      "(0.69, 1.17); each 1 cm increase in height is associated with a 0.69 to 1.17 kg increase in mean weight",
+      "(0.81, 1.05); zero is excluded, confirming height significantly predicts weight in the population",
+      "(0.57, 1.29); the interval contains zero, so height does not significantly predict weight",
+      "(0.93 \u00b1 0.24); the CI equals slope \u00b1 SE and confirms a significant positive relationship"
+    ],
+    "correctIndex": 0,
+    "explanation": "With df = n \u2212 2 = 28, t* \u2248 2.048. CI = b1 \u00b1 t* \u00d7 SE = 0.93 \u00b1 2.048 \u00d7 0.12 = 0.93 \u00b1 0.246 \u2248 (0.684, 1.176) \u2248 (0.69, 1.17). The interval is entirely positive (excludes zero), confirming a significant positive association. Option B uses t* \u2248 1.0 (too narrow). Option C incorrectly states the interval contains zero. Option D uses t* = 1.0 (which would be a 68% CI, not 95%), but the interval produced is a common error.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher fits two models: Model 1 (simple regression, R\u00b2 = 0.45) and Model 2 (simple regression with a different x, R\u00b2 = 0.62). She claims Model 2 is better because of higher R\u00b2. A colleague says the F statistics should also be compared. Who is right and why?",
+    "options": [
+      "The researcher is correct \u2014 R\u00b2 is always the definitive criterion for model selection",
+      "Neither is right \u2014 model comparison requires AIC or BIC, not R\u00b2 or F statistics",
+      "The colleague is correct \u2014 the F statistic accounts for sample size; R\u00b2 does not",
+      "Both are right \u2014 R\u00b2 and F are both relevant for comparing models with the same number of predictors"
+    ],
+    "correctIndex": 3,
+    "explanation": "For simple linear regression (one predictor), comparing R\u00b2 and F are equivalent criteria \u2014 the model with higher R\u00b2 will also have higher F. Both measure how much the predictor reduces unexplained variability. The F test additionally tells you whether the relationship is statistically significant. When comparing models with the same number of predictors (k = 1 here), R\u00b2 is a valid comparison criterion. Option A is partially correct but ignores statistical significance. Option C raises a valid point about F and n but overstates it \u2014 both metrics are useful. Option B is correct for comparing models with different numbers of predictors but overly restrictive here.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "The LINE assumptions for regression inference are: Linearity, Independence, Normality, Equal variance. Which assumption is tested using a normal Q-Q plot of residuals?",
+    "options": [
+      "Linearity \u2014 checking whether the relationship between x and y is linear",
+      "Independence \u2014 checking whether residuals are correlated with each other",
+      "Normality \u2014 checking whether residuals are approximately normally distributed",
+      "Equal variance \u2014 checking whether residual spread is constant across all x values"
+    ],
+    "correctIndex": 2,
+    "explanation": "The normal Q-Q plot plots the quantiles of the residuals against theoretical normal quantiles. If residuals are approximately normal, points fall near a straight line. Deviations (especially in the tails) suggest non-normality. Linearity is assessed with residuals-vs-fitted plots. Independence is assessed with residuals-vs-time or residuals-vs-order plots. Equal variance (homoscedasticity) is also assessed with residuals-vs-fitted, looking for fan shapes.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A regression of test score (y) on anxiety score (x) gives: Slope = \u22120.71, SE = 0.37, t = \u22121.93, df = 22, p = 0.067 (two-sided). A 95% CI for mean test score when x = 20 is (44.1, 52.3). What does this interval mean?",
+    "options": [
+      "95% of students with anxiety score 20 will have test scores between 44.1 and 52.3",
+      "The true slope in the population is between 44.1 and 52.3 points per anxiety unit",
+      "The model predicts that 95% of predictions at x = 20 will fall between 44.1 and 52.3",
+      "We estimate the mean test score for students with anxiety = 20 is between 44.1 and 52.3"
+    ],
+    "correctIndex": 3,
+    "explanation": "A confidence interval for mean response at x = 20 estimates where the true average test score lies for all students with anxiety score 20. This captures uncertainty in the regression line (where the mean falls) but not individual variation around that mean. Option A describes a prediction interval (individual student), which would be wider. Option C restates the definition incorrectly \u2014 95% of predictions from many samples would fall there, not 95% of predictions in one model. Option B describes a CI for the slope, not for a mean response.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A research team tests H0: \u03b21 = 0 and gets t = 2.45, p = 0.017 (two-sided, df = 38). The corresponding F statistic for the overall regression ANOVA is approximately:",
+    "options": [
+      "F = 2.45, because F and t are equal for simple linear regression",
+      "F = 6.00, because F = t\u00b2 = 2.45\u00b2 \u2248 6.00",
+      "F = 0.017, because the F and t tests have the same p-value in simple regression",
+      "F = sqrt(2.45) \u2248 1.56, because F uses the square root of the t statistic"
+    ],
+    "correctIndex": 1,
+    "explanation": "In simple linear regression, the F statistic from the ANOVA table equals the square of the t statistic for the slope: F = t\u00b2 = 2.45\u00b2 \u2248 6.00. Both test the same hypothesis (H0: \u03b21 = 0) and produce the same p-value. This equivalence holds for simple regression only \u2014 in multiple regression, F tests all slopes simultaneously while t tests each slope individually. Option A equates F with t (not t\u00b2). Option C equates F with the p-value, which is wrong. Option D takes the square root rather than squaring.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A student claims: 'Since R\u00b2 = 0.78, the regression model is accurate and the LINE assumptions must be satisfied.' What is wrong with this reasoning?",
+    "options": [
+      "R\u00b2 measures how well the model fits the data but says nothing about whether assumptions are met",
+      "R\u00b2 = 0.78 is too low to claim accuracy; only R\u00b2 > 0.90 indicates a good model",
+      "The LINE assumptions are only required when R\u00b2 < 0.50, not for well-fitting models",
+      "R\u00b2 of 0.78 means 22% of observations are incorrectly predicted, violating normality"
+    ],
+    "correctIndex": 0,
+    "explanation": "R\u00b2 measures the proportion of variability explained, which reflects model fit but not whether the regression assumptions are valid. A model can have high R\u00b2 while violating linearity (curved relationship), equal variance (funnel-shaped residuals), or normality. Assumption checking requires residual plots regardless of R\u00b2. Option B is wrong \u2014 there is no universal R\u00b2 threshold for 'accuracy.' Option C is wrong \u2014 assumptions must be checked for all regression models. Option D misinterprets R\u00b2 as a classification accuracy metric.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  }
+]
