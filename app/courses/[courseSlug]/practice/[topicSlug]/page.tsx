@@ -2,13 +2,12 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getCourse, getAllTopics } from '@/lib/courses'
 import LearnAndPractice from '@/components/exercise/LearnAndPractice'
-import type { LearnContent } from '@/types'
 
 interface Props {
   params: Promise<{ courseSlug: string; topicSlug: string }>
 }
 
-export default async function PracticePage({ params }: Props) {
+export default async function PracticeTopicPage({ params }: Props) {
   const { courseSlug, topicSlug } = await params
   const course = getCourse(courseSlug)
   if (!course) notFound()
@@ -23,17 +22,18 @@ export default async function PracticePage({ params }: Props) {
       ? { slug: allTopics[currentIndex + 1].slug, title: allTopics[currentIndex + 1].title }
       : null
 
-  // Only pass legacy LearnContent (v1) to LearnAndPractice; V2 topics are handled by /learn route
-  const legacyLearn: LearnContent | undefined =
+  // LearnAndPractice only understands the old LearnContent format.
+  // For V2 learn content, skip the learn pane — it's handled by the /learn route.
+  const legacyLearn =
     topic.learn && 'explanation' in topic.learn ? topic.learn : undefined
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-12">
       <Link
-        href={`/courses/${courseSlug}`}
+        href={`/courses/${courseSlug}/practice`}
         className="text-sm text-blue-500 hover:underline mb-8 inline-block"
       >
-        ← {course.title}
+        ← Practice Mode
       </Link>
 
       <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-500">

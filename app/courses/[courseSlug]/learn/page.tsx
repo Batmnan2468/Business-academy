@@ -1,20 +1,18 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getCourse, getAllTopics, hasLearnContent } from '@/lib/courses'
-import CourseTopicList from '@/components/CourseTopicList'
+import { getCourse, getAllTopics } from '@/lib/courses'
+import LearnModeOverview from '@/components/learn/LearnModeOverview'
 
 interface Props {
   params: Promise<{ courseSlug: string }>
 }
 
-export default async function CoursePage({ params }: Props) {
+export default async function LearnOverviewPage({ params }: Props) {
   const { courseSlug } = await params
   const course = getCourse(courseSlug)
-
   if (!course) notFound()
 
   const allTopics = getAllTopics(course)
-  const courseHasLearn = hasLearnContent(course)
 
   const slimUnits = course.units?.map((u) => ({
     id: u.id,
@@ -25,25 +23,24 @@ export default async function CoursePage({ params }: Props) {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-12">
-      <Link href="/" className="text-sm text-blue-500 hover:underline mb-8 inline-block">
-        ← All courses
+      <Link
+        href={`/courses/${courseSlug}`}
+        className="text-sm text-blue-500 hover:underline mb-8 inline-block"
+      >
+        ← {course.title}
       </Link>
 
       <div className="mb-8">
         <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
           {course.subject}
         </span>
-        <h1 className="text-3xl font-bold mt-1">{course.title}</h1>
-        <p className="mt-2 text-gray-500 dark:text-gray-400">{course.description}</p>
+        <h1 className="text-2xl font-bold mt-1">📖 Learn Mode</h1>
+        <p className="text-sm text-gray-400 mt-1">
+          {allTopics.length} topics — read each concept, then test your understanding.
+        </p>
       </div>
 
-      <CourseTopicList
-        courseSlug={courseSlug}
-        units={slimUnits}
-        topics={slimTopics}
-        totalTopics={allTopics.length}
-        hasLearnContent={courseHasLearn}
-      />
+      <LearnModeOverview courseSlug={courseSlug} units={slimUnits} topics={slimTopics} />
     </main>
   )
 }

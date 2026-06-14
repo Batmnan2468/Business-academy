@@ -24,6 +24,7 @@ interface Props {
   units?: UnitItem[]
   topics?: TopicItem[]
   totalTopics: number
+  hasLearnContent?: boolean
 }
 
 // ── localStorage loaders ──────────────────────────────────────────────────────
@@ -162,7 +163,7 @@ function UnitTestRow({
 
 // ── Main component ────────────────────────────────────────────────────────────
 
-export default function CourseTopicList({ courseSlug, units, topics, totalTopics }: Props) {
+export default function CourseTopicList({ courseSlug, units, topics, totalTopics, hasLearnContent = false }: Props) {
   const [masteryMap, setMasteryMap] = useState<Map<string, TopicMastery>>(new Map())
   const [topicStateMap, setTopicStateMap] = useState<Map<string, TopicState>>(new Map())
   const [unitTestStateMap, setUnitTestStateMap] = useState<Map<string, UnitTestState>>(new Map())
@@ -286,6 +287,38 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
             style={{ width: `${pct}%`, backgroundColor: '#eab308' }}
           />
         </div>
+      </div>
+
+      {/* Learn / Practice mode selector */}
+      <div className="grid grid-cols-2 gap-3 mb-6">
+        {hasLearnContent ? (
+          <Link
+            href={`/courses/${courseSlug}/learn`}
+            className="flex flex-col items-center gap-1.5 px-4 py-5 rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-950 hover:border-blue-400 transition-colors group"
+          >
+            <span className="text-2xl">📖</span>
+            <span className="font-semibold text-sm text-blue-700 dark:text-blue-300 group-hover:text-blue-800">
+              Learn Mode
+            </span>
+          </Link>
+        ) : (
+          <div className="flex flex-col items-center gap-1.5 px-4 py-5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/20 opacity-50 cursor-not-allowed">
+            <span className="text-2xl grayscale">📖</span>
+            <span className="font-semibold text-sm text-gray-400 dark:text-gray-500">
+              Learn Mode
+            </span>
+            <span className="text-xs text-gray-400 dark:text-gray-600">Coming soon</span>
+          </div>
+        )}
+        <Link
+          href={`/courses/${courseSlug}/practice`}
+          className="flex flex-col items-center gap-1.5 px-4 py-5 rounded-2xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-950 hover:border-amber-400 transition-colors group"
+        >
+          <span className="text-2xl">✏️</span>
+          <span className="font-semibold text-sm text-amber-700 dark:text-amber-300 group-hover:text-amber-800">
+            Practice Mode
+          </span>
+        </Link>
       </div>
 
       {/* Practice mode buttons */}

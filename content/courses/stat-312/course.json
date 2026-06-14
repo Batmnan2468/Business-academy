@@ -1,0 +1,296 @@
+{
+  "id": "stat-312",
+  "slug": "stat-312",
+  "title": "ST 312 — Introduction to Statistics II",
+  "description": "The full ST 312 curriculum at NC State. Master inference for multiple samples, ANOVA, regression, categorical data analysis, and experimental design — the statistical toolkit for serious business and scientific analysis.",
+  "subject": "Statistics",
+  "level": "intermediate",
+  "units": [
+    {
+      "id": "u0",
+      "title": "ST 311 Prerequisite Review",
+      "topics": [
+        {
+          "id": "t1",
+          "slug": "study-design-and-variables",
+          "title": "Study Design and Variables",
+          "learn": {
+            "explanation": "Statistics begins with understanding where data comes from. Observational studies measure without intervening; experiments randomly assign treatments. The explanatory variable is what we think causes or predicts; the response variable is the outcome we measure. Only random assignment in an experiment allows causal conclusions — observational studies can show association but never establish causation.",
+            "example": "A study finds students who eat breakfast score higher on exams. If researchers simply observed students (observational study), we cannot conclude breakfast causes better scores — maybe students who eat breakfast also sleep more. If researchers randomly assigned students to eat or skip breakfast (experiment), a significant difference would support a causal claim.",
+            "keyPoints": [
+              "Random sampling allows generalization to a population; random assignment allows causal conclusions — these are different and both matter",
+              "Association is not causation — observational studies always have potential confounders",
+              "The scope of inference is determined by study design: who was sampled and whether assignment was random"
+            ]
+          }
+        },
+        {
+          "id": "t2",
+          "slug": "foundations-of-inference",
+          "title": "Foundations of Inference",
+          "learn": {
+            "explanation": "Statistical inference uses sample data to draw conclusions about populations. A confidence interval estimates a parameter with a stated level of certainty. A hypothesis test evaluates evidence against a null hypothesis using a p-value — the probability of seeing data as extreme as ours if the null were true. A small p-value is evidence against the null, not proof the alternative is true.",
+            "example": "A pharmaceutical company tests whether a new drug reduces blood pressure. The null hypothesis is no effect. A p-value of 0.03 means: if the drug truly had no effect, there is only a 3% chance of seeing a result this extreme by chance. This is evidence against the null — but not certainty. A Type I error would be concluding the drug works when it doesn't.",
+            "keyPoints": [
+              "A p-value is NOT the probability the null hypothesis is true — it is the probability of the data given the null is true",
+              "Never say 'accept the null' — we either reject it or fail to reject it. Absence of evidence is not evidence of absence",
+              "Type I error: rejecting a true null (false positive). Type II error: failing to reject a false null (false negative)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u1",
+      "title": "Errors, Power, and Study Design",
+      "topics": [
+        {
+          "id": "t3",
+          "slug": "type-i-type-ii-errors-and-power",
+          "title": "Type I and Type II Errors and Power",
+          "learn": {
+            "explanation": "Power is the probability of correctly rejecting a false null hypothesis — the ability to detect a real effect. Power = 1 - P(Type II error). Power increases with larger sample size, larger effect size, higher significance level, and lower variability. One-sided tests have more power than two-sided tests when the direction is correct. Low power means a study may miss a real effect and incorrectly conclude there is none.",
+            "example": "A clinical trial tests whether a drug reduces cholesterol by at least 10 points. With n=20 patients, power is 0.45 — the study has only a 45% chance of detecting the effect if it exists. Increasing to n=80 raises power to 0.90. The FDA requires power of at least 0.80 before approving trial designs for this reason.",
+            "keyPoints": [
+              "A non-significant result with low power is uninformative — it may simply mean the study was underpowered, not that there is no effect",
+              "Power and significance level (alpha) move in opposite directions when sample size is fixed — increasing alpha increases power but increases Type I error risk",
+              "Effect size matters: a drug that reduces blood pressure by 1 point requires a much larger sample to detect than one that reduces it by 20 points"
+            ]
+          }
+        },
+        {
+          "id": "t4",
+          "slug": "experimental-design",
+          "title": "Experimental Design",
+          "learn": {
+            "explanation": "Good experimental design has four elements: control (comparison group to isolate the treatment effect), randomization (random assignment eliminates systematic bias), replication (enough subjects to detect real effects), and blocking (grouping similar subjects to reduce unexplained variability). A completely randomized design assigns all subjects randomly to treatments. A randomized block design first groups subjects by a blocking variable, then randomizes within blocks.",
+            "example": "Testing three fertilizers on crop yield: a completely randomized design randomly assigns plots to fertilizers. If plots vary in soil quality, blocking by soil type first (clay, loam, sandy), then randomizing fertilizers within each soil type, reduces the variability that soil differences introduce. The blocking variable absorbs variability that would otherwise inflate the error term.",
+            "keyPoints": [
+              "Blocking reduces within-group variability, increasing power — but only for variables you block on. You cannot block on variables you didn't measure",
+              "Confounding occurs when an extraneous variable is associated with both the treatment and outcome — randomization prevents confounding, matching controls for known confounders",
+              "Blinding prevents placebo effects and measurement bias — double blinding means neither subject nor evaluator knows the treatment assignment"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Two-Sample Inference",
+      "topics": [
+        {
+          "id": "t5",
+          "slug": "two-sample-t-procedures",
+          "title": "Two-Sample t Procedures",
+          "learn": {
+            "explanation": "When comparing means from two independent groups, we use two-sample t procedures. The parameter is μ1 - μ2. Welch's (unpooled) procedure does not assume equal variances and is the default. Pooled procedures assume equal variances and should only be used when that assumption is verified. Conditions: independent random samples, and either normality within each group or large enough samples for CLT.",
+            "example": "Comparing mean salaries of male and female managers at a firm. The null hypothesis is H0: μ_male - μ_female = 0. A two-sample t test gives t = 2.31 with p = 0.024. We reject H0 at α = 0.05 and conclude there is significant evidence of a salary difference. The confidence interval (-$8,200, -$650) suggests the gap is between $650 and $8,200, favoring males.",
+            "keyPoints": [
+              "Independent samples means different people in each group — the same person measured twice is paired, not independent",
+              "Welch's procedure is almost always preferred over pooled — equal variance is rarely verified and Welch's is robust when violated",
+              "Failure to reject does NOT prove the means are equal — it only means the data are consistent with equality given this sample size"
+            ]
+          }
+        },
+        {
+          "id": "t6",
+          "slug": "paired-t-procedures",
+          "title": "Paired t Procedures",
+          "learn": {
+            "explanation": "Paired designs measure the same subject twice (before/after) or match subjects on relevant characteristics. The analysis reduces to a one-sample t test on the differences. The parameter is μd (mean difference). Pairing removes between-subject variability, increasing power — but only when the pairing variable is actually related to the response.",
+            "example": "Testing whether a training program improves employee productivity. Measuring each employee before and after creates pairs. The difference (after - before) is computed for each employee. A one-sample t test on these 30 differences tests H0: μd = 0. This is more powerful than treating the 60 measurements as two independent groups because employee-to-employee variability is removed.",
+            "keyPoints": [
+              "The most common mistake is analyzing paired data as two independent samples — this is always wrong and typically has less power",
+              "Direction of subtraction matters for sign of the estimate but not for the p-value — define it consistently and state it clearly",
+              "Pairing only helps when pairs are similar to each other — if pairing is on an irrelevant variable, you lose degrees of freedom with no power benefit"
+            ]
+          }
+        },
+        {
+          "id": "t7",
+          "slug": "two-proportion-inference",
+          "title": "Two-Proportion Inference",
+          "learn": {
+            "explanation": "Comparing two population proportions uses a two-proportion z procedure. The parameter is p1 - p2. For hypothesis tests, the pooled proportion (combining both samples) is used under H0: p1 = p2. For confidence intervals, unpooled standard error is used. Conditions: independent samples, and success-failure condition met in both groups.",
+            "example": "A company tests whether a new website design increases purchase rate. Old design: 45/300 purchased (15%). New design: 63/300 purchased (21%). Pooled proportion: 108/600 = 0.18. Test statistic: z = (0.21 - 0.15) / SE = 2.12, p = 0.034. Reject H0 — the new design significantly increases purchase rate.",
+            "keyPoints": [
+              "Use pooled proportion for the hypothesis test only — for confidence intervals, use the unpooled standard error",
+              "Percentage point difference vs. percent change: going from 15% to 21% is a 6 percentage-point increase but a 40% relative increase. These are very different claims",
+              "Success-failure condition requires at least 10 successes AND 10 failures in EACH group — check all four counts"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Categorical Data Analysis",
+      "topics": [
+        {
+          "id": "t8",
+          "slug": "contingency-tables-and-chi-square",
+          "title": "Contingency Tables and Chi-Square Tests",
+          "learn": {
+            "explanation": "Chi-square tests analyze relationships between categorical variables. Three types: goodness-of-fit (one variable, does it follow a specified distribution?), test of independence (two variables from one sample, are they associated?), and test of homogeneity (same variable across multiple populations, are distributions the same?). All use the same test statistic: χ² = Σ(O-E)²/E. Expected counts must be at least 5 in each cell.",
+            "example": "A university surveys 300 students asking major and coffee preference. Test of independence: H0 is major and coffee preference are independent. Expected count for cell (Business, Black coffee) = (row total × column total) / grand total. If χ² = 12.4 with df = 6, p = 0.053, we fail to reject at α = 0.05 — insufficient evidence of association.",
+            "keyPoints": [
+              "Goodness-of-fit has df = k-1 categories minus 1. Independence and homogeneity have df = (rows-1)(columns-1) — these are different and commonly confused",
+              "A significant chi-square tells you the variables are associated but not which cells drive the association — examine standardized residuals for that",
+              "Chi-square tests association, not causation — a significant result cannot establish that one variable causes the other"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Correlation and Simple Linear Regression",
+      "topics": [
+        {
+          "id": "t9",
+          "slug": "correlation-and-regression-basics",
+          "title": "Correlation and Regression Basics",
+          "learn": {
+            "explanation": "Correlation (r) measures the strength and direction of a linear relationship, ranging from -1 to 1. It is unitless and symmetric. The least squares regression line minimizes the sum of squared residuals. R² = r² is the proportion of variability in y explained by x. The slope β1 represents the expected change in y for a one-unit increase in x. Residuals are the vertical distances between observed and fitted values.",
+            "example": "Predicting house price (Y) from square footage (X). r = 0.85, so R² = 0.72 — 72% of variability in price is explained by square footage. Slope = $142 per square foot. A house with 2,000 sq ft is predicted to sell for $284,000 more than the intercept baseline. A residual of +$15,000 means the actual price exceeded the prediction by $15,000.",
+            "keyPoints": [
+              "R² is the proportion of variability in Y explained by X — it is NOT the percent of observations correctly predicted",
+              "Correlation does not imply causation — a lurking variable can create strong correlation between unrelated variables",
+              "Never extrapolate beyond the range of the data — the linear relationship may not hold outside observed x values"
+            ]
+          }
+        },
+        {
+          "id": "t10",
+          "slug": "inference-for-regression",
+          "title": "Inference for Simple Linear Regression",
+          "learn": {
+            "explanation": "Inference for regression tests whether the slope is significantly different from zero: H0: β1 = 0. The t statistic has n-2 degrees of freedom. The regression ANOVA table partitions total variability into model (explained) and error (unexplained) components. A confidence interval estimates the mean response at a given x; a prediction interval estimates an individual response — prediction intervals are always wider because they account for individual variation.",
+            "example": "Anxiety score predicting exam score. Output: slope = -0.7138, SE = 0.37, t = -1.93, p = 0.096 (two-sided). At α = 0.05, we fail to reject H0 — insufficient evidence that anxiety is linearly associated with exam score. The 95% CI for mean score at anxiety = 15 is (45.2, 52.8). The 95% PI for an individual at anxiety = 15 is (38.1, 59.9) — wider because it includes individual variability.",
+            "keyPoints": [
+              "Confidence interval for mean response vs. prediction interval for individual: prediction intervals are ALWAYS wider — individual values vary more than means",
+              "A significant F test in simple regression is equivalent to a significant t test for the slope — they test the same hypothesis",
+              "Regression assumptions (LINE): Linearity, Independence, Normality of residuals, Equal variance — check residual plots before interpreting results"
+            ]
+          }
+        },
+        {
+          "id": "t11",
+          "slug": "regression-diagnostics",
+          "title": "Regression Diagnostics and Influential Observations",
+          "learn": {
+            "explanation": "Residual plots diagnose assumption violations. Residuals vs. fitted: curvature indicates nonlinearity, fan shape indicates nonconstant variance. Normal Q-Q plot: deviations from a straight line indicate non-normality. An outlier has a large residual. A high-leverage point has an unusual x value. An influential point changes the slope substantially when removed — high leverage + outlier = influential.",
+            "example": "In the cardiovascular disease vs. population size regression, Country A has a very small population (low x) and low disease rate. Despite being far from the other points, its leverage depends on its x distance from x̄ = 25.3. If removing Country A changes the slope dramatically, it is influential. If the slope barely changes, it is merely an outlier or high-leverage point but not influential.",
+            "keyPoints": [
+              "High leverage alone does not make a point influential — a high-leverage point that falls on the regression line has little influence on the slope",
+              "The four residual plot patterns: random scatter (assumptions met), curved pattern (nonlinearity), fan shape (nonconstant variance), one extreme point (outlier)",
+              "Transformations (log, square root) can address nonlinearity and nonconstant variance — always recheck residuals after transforming"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "One-Way ANOVA",
+      "topics": [
+        {
+          "id": "t12",
+          "slug": "one-way-anova-concepts",
+          "title": "One-Way ANOVA Concepts and Table",
+          "learn": {
+            "explanation": "One-way ANOVA compares means across three or more groups simultaneously. The null hypothesis is H0: μ1 = μ2 = ... = μk. The F statistic = MSG/MSE = between-group variation / within-group variation. A large F means groups differ more than chance predicts. Degrees of freedom: between groups = k-1, within groups = N-k, total = N-1. Equal variance assumption: largest SD < 2× smallest SD.",
+            "example": "Testing sugar content across 3 cereal shelf locations. SS_between = 0.2715, SS_error = 0.177, SS_total = 0.4485. df: between = 2, error = 13, total = 15. MS_between = 0.2715/2 = 0.1358. MS_error = 0.177/13 = 0.0136. F = 0.1358/0.0136 = 9.99. At α = 0.05, F_critical(2,13) ≈ 3.81. Reject H0 — evidence that mean sugar content differs across shelf locations.",
+            "keyPoints": [
+              "A significant ANOVA F test only tells you that at least one mean differs — it does NOT identify which means are different",
+              "MSE is always the within-group mean square — it estimates σ² under both null and alternative hypotheses",
+              "Between-group MS estimates σ² only under H0 — when H0 is false, MSG overestimates σ², making F large"
+            ]
+          }
+        },
+        {
+          "id": "t13",
+          "slug": "post-hoc-tests-and-multiple-comparisons",
+          "title": "Post-Hoc Tests and Multiple Comparisons",
+          "learn": {
+            "explanation": "After a significant ANOVA, post-hoc tests identify which specific means differ. Running all pairwise t-tests unadjusted inflates familywise Type I error. Bonferroni correction: divide α by number of comparisons (αI = αE/m). Tukey's method controls familywise error for all pairwise comparisons and is more powerful than Bonferroni when many comparisons are made. Planned contrasts test specific hypotheses specified before data collection.",
+            "example": "With 5 groups, there are C(5,2) = 10 pairwise comparisons. Using unadjusted α = 0.05 for each, familywise error rate = 1-(0.95)^10 = 0.40 — a 40% chance of at least one false positive. Bonferroni correction: αI = 0.05/10 = 0.005 per test. This controls familywise error at 0.05 but is conservative when many comparisons are planned.",
+            "keyPoints": [
+              "Never conduct multiple unadjusted t-tests after ANOVA — this is one of the most common and consequential errors in applied statistics",
+              "Bonferroni is conservative (too strict) with many comparisons; Tukey is preferred for all pairwise comparisons",
+              "Planned contrasts must be specified before seeing the data — using data to decide which contrasts to test invalidates the inference"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Two-Way ANOVA",
+      "topics": [
+        {
+          "id": "t14",
+          "slug": "two-way-anova-and-interaction",
+          "title": "Two-Way ANOVA and Interaction",
+          "learn": {
+            "explanation": "Two-way ANOVA tests two factors simultaneously plus their interaction. The interaction tests whether the effect of Factor A depends on the level of Factor B. Always test interaction first — if significant, main effects cannot be interpreted in isolation. Interaction plots show group means: parallel lines indicate no interaction, crossing or converging lines indicate interaction. The two-way ANOVA table has sources: Factor A, Factor B, A×B interaction, Error, Total.",
+            "example": "Testing detergent type (A vs B) and water temperature (cold/warm/hot) on dirt removal. Interaction F = 6.36, p < 0.05 — significant interaction. This means the effect of detergent type differs across temperatures. We cannot say 'Detergent A is better overall' because the answer depends on temperature. Simple effects (detergent effect within each temperature) must be examined separately.",
+            "keyPoints": [
+              "Always test interaction before main effects — a significant interaction means main effects are misleading without qualification",
+              "Parallel lines in an interaction plot = no interaction. Crossing lines = interaction. Converging lines = possible interaction",
+              "Two-way ANOVA degrees of freedom: Factor A = a-1, Factor B = b-1, Interaction = (a-1)(b-1), Error = ab(n-1) for balanced designs"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Multiple and Curvilinear Regression",
+      "topics": [
+        {
+          "id": "t15",
+          "slug": "multiple-regression",
+          "title": "Multiple Linear Regression",
+          "learn": {
+            "explanation": "Multiple regression predicts Y from two or more predictors. Each slope coefficient is a partial slope — the expected change in Y for a one-unit increase in that predictor, holding all others constant. The overall F test tests H0: all slopes = 0. Individual t tests evaluate each predictor's contribution controlling for others. Adjusted R² penalizes for adding predictors and is used to compare models with different numbers of predictors.",
+            "example": "Predicting nutrition score from unfavorable nutrients (X1) and favorable nutrients (X2): Ŷ = 3.33 + 0.82X1 + 0.57X2. The coefficient 0.82 means: for each one-unit increase in unfavorable nutrient score, holding favorable nutrients constant, overall nutrition score increases by 0.82. R² = 0.31 means 31% of variability in nutrition scores is explained. Adjusted R² penalizes for using 2 predictors.",
+            "keyPoints": [
+              "Partial slopes change when predictors are added or removed — this is not an error, it reflects confounding between predictors",
+              "A predictor can be significant alone but not in a multiple regression model if it is correlated with other predictors (multicollinearity)",
+              "Overall F test and individual t tests answer different questions: F tests whether any predictor helps, t tests whether a specific predictor adds value controlling for others"
+            ]
+          }
+        },
+        {
+          "id": "t16",
+          "slug": "curvilinear-regression",
+          "title": "Curvilinear and Polynomial Regression",
+          "learn": {
+            "explanation": "When the relationship between X and Y is curved, adding a quadratic term X² can improve fit. The model becomes Ŷ = β0 + β1X + β2X². The hierarchical principle requires keeping X in the model if X² is included. Test whether the quadratic term is needed by testing H0: β2 = 0. A curved pattern in residuals vs. fitted values is the key diagnostic. Adjusted R² comparison helps decide if the nonlinear term adds meaningful improvement.",
+            "example": "Sales vs. advertising spend shows a curved pattern in the scatterplot. Adding X² to the model: Ŷ = 10 + 5X - 0.3X². The negative coefficient on X² means the relationship is concave — sales increase with advertising but at a decreasing rate, eventually leveling off. The t test for X² gives p = 0.002, confirming the quadratic term significantly improves the model.",
+            "keyPoints": [
+              "A significant quadratic term does not mean the relationship is definitively quadratic — it means a straight line is insufficient, not that a parabola is the truth",
+              "The sign of β2 indicates direction of curvature: positive = U-shape (concave up), negative = inverted U-shape (concave down)",
+              "Always include the linear term when the quadratic is included — removing X when X² is in the model violates the hierarchical principle"
+            ]
+          }
+        },
+        {
+          "id": "t17",
+          "slug": "method-selection",
+          "title": "Integrated Method Selection",
+          "learn": {
+            "explanation": "Choosing the correct statistical procedure requires identifying: (1) variable types (quantitative vs. categorical), (2) number of groups or variables, (3) study design (paired vs. independent, observational vs. experimental), (4) research question. Quantitative response with one categorical predictor (2 groups independent): two-sample t. Same subject twice: paired t. Categorical response: proportions or chi-square. Three+ groups: ANOVA. Two quantitative variables: regression.",
+            "example": "Common confusions: (1) Paired vs. independent — same people measured twice is always paired. (2) Chi-square independence vs. homogeneity — one sample classified two ways (independence) vs. separate samples from different populations (homogeneity). (3) One-way vs. two-way ANOVA — one factor vs. two factors. (4) Simple vs. multiple regression — one predictor vs. multiple predictors.",
+            "keyPoints": [
+              "Ask three questions in order: What type is the response variable? How many groups or predictors? Are observations paired or independent?",
+              "Chi-square goodness-of-fit: one categorical variable tested against a specified distribution. Independence and homogeneity both use two-way tables but differ in study design",
+              "When in doubt between two methods, identify what parameter each estimates and which one matches your research question"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

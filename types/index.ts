@@ -6,11 +6,27 @@ export interface LearnContent {
   keyPoints: string[]
 }
 
+export interface LearnContentV2 {
+  openingQuestion: string
+  anchor: string
+  anchorSummary: string
+  mechanism: string
+  mechanismSummary: string
+  boundaryConditions: string
+  example: string
+  bridgeToAbstract: string
+  keyPoints: string[]
+}
+
+export function isLearnContentV2(c: LearnContent | LearnContentV2): c is LearnContentV2 {
+  return 'openingQuestion' in c
+}
+
 export interface Topic {
   id: string
   slug: string
   title: string
-  learn?: LearnContent
+  learn?: LearnContent | LearnContentV2
 }
 
 export interface Unit {

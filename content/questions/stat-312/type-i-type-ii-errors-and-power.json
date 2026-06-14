@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Power in hypothesis testing is defined as the probability of:",
+    "options": [
+      "Correctly retaining the null hypothesis when it is true",
+      "Rejecting the null hypothesis when it is actually false",
+      "Making a Type I error when the null hypothesis is true",
+      "Observing a test statistic more extreme than the critical value"
+    ],
+    "correctIndex": 1,
+    "explanation": "Power = P(reject H0 | H0 is false) = 1 - β. It represents the test's ability to detect a real effect when one exists. High power means the study is unlikely to miss a true effect. Option A describes specificity or the probability of a true negative. Option C describes the Type I error rate (α), which is the probability of a false positive. Option D partially describes the mechanics of rejection but conflates the definition with the condition that H0 must be false.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A clinical trial with 30 patients tests a new drug. The study finds no significant effect (p = 0.12). A researcher notes the study had power of 0.35. What is the most appropriate interpretation?",
+    "options": [
+      "The drug definitely has no effect because the p-value exceeded 0.05",
+      "The result is inconclusive because low power means the study likely missed a real effect",
+      "The drug works, and the p-value is wrong because the study was too small",
+      "Power of 0.35 means there is a 35% chance the null hypothesis is true"
+    ],
+    "correctIndex": 1,
+    "explanation": "Power of 0.35 means there was only a 35% chance of detecting a real drug effect if one existed. A non-significant result from a low-power study is uninformative — we simply don't have enough data to tell. Option A is wrong because failing to reject with low power doesn't prove the null. Option C misrepresents what low power means — it doesn't make the test wrong, it makes it underpowered. Option D misinterprets power as a probability statement about H0 being true.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following will increase the power of a hypothesis test?",
+    "options": [
+      "Decreasing the significance level from α = 0.10 to α = 0.01",
+      "Reducing the sample size from n = 200 to n = 50",
+      "Increasing the sample size from n = 50 to n = 200",
+      "Switching from a one-sided test to a two-sided test when the direction is unknown"
+    ],
+    "correctIndex": 2,
+    "explanation": "Larger sample sizes reduce sampling variability, making it easier to detect real effects and increasing power. Option A decreases power — a stricter α makes it harder to reject H0. Option B decreases power because smaller samples have more variability and less ability to detect effects. Option D decreases power — one-sided tests are more powerful in the correct direction because all of α is allocated to one tail rather than split between two.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A study finds a statistically significant reduction in cholesterol with a new diet. A Type I error in this context would be:",
+    "options": [
+      "Concluding the diet reduces cholesterol when it actually does reduce cholesterol",
+      "Failing to detect a real cholesterol reduction that exists in the population",
+      "Concluding the diet reduces cholesterol when it actually has no effect",
+      "Underestimating the magnitude of the cholesterol reduction in the confidence interval"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Type I error is rejecting a true null hypothesis — concluding the diet works when it actually has no effect. This is a false positive. The probability of a Type I error is controlled by α. Option A describes a correct decision (true positive). Option B is a Type II error (false negative). Option D describes estimation error, not a hypothesis testing error type.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A researcher increases her significance level from α = 0.05 to α = 0.10 for a fixed sample size. How does this change the Type I and Type II error rates?",
+    "options": [
+      "Type I error rate decreases; Type II error rate also decreases",
+      "Type I error rate increases; Type II error rate decreases",
+      "Type I error rate decreases; Type II error rate increases",
+      "Both error rates remain unchanged because the data do not change"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increasing α relaxes the threshold for rejection, making it easier to reject H0. This increases the Type I error rate (more false positives) but also increases power, which means the Type II error rate (β = 1 - power) decreases. There is always a trade-off between Type I and Type II errors for a fixed sample size. Option A has both directions wrong. Option C has both directions reversed. Option D is wrong — changing α directly changes error rates even with the same data.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company wants power of at least 0.80 to detect a clinically meaningful 10-point drop in blood pressure. Their initial sample size calculation shows 80 patients are needed. If they can only enroll 40 patients, what happens to power and Type II error?",
+    "options": [
+      "Power stays at 0.80 because the target effect size did not change",
+      "Power decreases below 0.80, meaning Type II error rate rises above 0.20",
+      "Power increases above 0.80 because a smaller study has less variability",
+      "Type II error rate drops to zero because the effect size of 10 points is clinically confirmed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Power increases with sample size for a fixed effect size and significance level. With only half the required patients, power will fall below 0.80, meaning the probability of missing a real 10-point effect rises above 20% (β > 0.20). This is why power calculations determine minimum sample sizes before data collection. Option A incorrectly assumes power is independent of n. Option C reverses the direction. Option D confuses clinical significance with statistical power.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher tests whether mean productivity differs between two office layouts using a one-sided test (Ha: μ_open > μ_traditional). If she had used a two-sided test instead (Ha: μ_open ≠ μ_traditional), holding everything else constant, what changes?",
+    "options": [
+      "The p-value doubles and power decreases for detecting the effect in the specified direction",
+      "The p-value halves and power increases for detecting the effect in either direction",
+      "The test statistic changes because two-sided tests use a different formula",
+      "Power stays the same because the effect size and sample size are unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Switching from a one-sided to a two-sided test doubles the p-value (you add the probability in both tails instead of one). This makes it harder to achieve p < α, reducing power for detecting an effect in the specified direction. One-sided tests are more powerful when you can correctly predict the direction. Options B and C are incorrect — the test statistic formula (t = (x̄ - μ0)/SE) doesn't change; only how the p-value is computed from it changes. Option D is wrong because changing the test type does affect power.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A food scientist studying whether a new preservative extends shelf life beyond 30 days uses α = 0.05 and n = 25 samples. The power is calculated to be 0.60. Which of the following is NOT a valid strategy to increase power without collecting additional data?",
+    "options": [
+      "Increasing the significance level from α = 0.05 to α = 0.10",
+      "Switching from a two-sided test to a one-sided test if the direction is justified",
+      "Reducing measurement error through more careful experimental protocols",
+      "Decreasing the significance level from α = 0.05 to α = 0.01"
+    ],
+    "correctIndex": 3,
+    "explanation": "Decreasing α makes the rejection criterion stricter, reducing power rather than increasing it. For a fixed sample size, α and power trade off against each other. Option A is valid — increasing α loosens the rejection criterion, increasing power. Option B is valid — one-sided tests concentrate all of α in one tail, increasing power when the direction is correctly specified. Option C is valid — reducing measurement error decreases the error variance (MSE), effectively increasing the signal-to-noise ratio and power.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study with n = 15 tests H0: μ = 0 and finds t = 1.8, p = 0.093, power = 0.42. A second study with n = 100 tests the same hypothesis and finds t = 1.85, p = 0.067, power = 0.82. What is the most accurate comparison?",
+    "options": [
+      "The second study is more reliable because larger samples produce more accurate estimates",
+      "The first study's non-significant result is inconclusive due to low power; both studies are consistent with a real effect",
+      "The null hypothesis is probably true because neither study achieved p < 0.05",
+      "Power only matters when results are significant; the non-significant p-values make power irrelevant here"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both studies produce similar test statistics and effect size estimates, but the first study's low power (0.42) makes its non-significant result uninformative — there was only a 42% chance it would detect the true effect. The second study, with power = 0.82, also barely missed α = 0.05. The studies are consistent with a real effect that neither had enough evidence to confirm definitively. Option A is partially true but misses the key point about power and the non-significant results. Option C incorrectly interprets both non-significant results as evidence of no effect. Option D is wrong — power is especially important when interpreting non-significant results.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A meta-analysis of 50 studies on a new teaching intervention finds that 40 studies fail to reject H0 and 10 reject H0 at α = 0.05. Most of the individual studies had n = 30 students. What is the most likely explanation for the 10 significant results?",
+    "options": [
+      "The intervention is effective, and the 40 non-significant studies were poorly designed",
+      "The 10 significant results are likely false positives due to low power and chance variation",
+      "The 10 significant studies used better random sampling and should be trusted over the others",
+      "An intervention that 20% of studies find significant is conclusively ineffective"
+    ],
+    "correctIndex": 1,
+    "explanation": "With α = 0.05 and 50 tests, we expect approximately 50 × 0.05 = 2.5 false positives by chance if the intervention has no effect. With low-powered studies (n = 30), real effects are often missed, and the 10 significant results could easily include many false positives. This illustrates publication bias and the multiple testing problem in research synthesis. Option A cherry-picks positive results without justification. Option C confuses random sampling quality with statistical significance. Option D is an overstatement — 20% is higher than the 5% false positive rate, suggesting some real effects may exist.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A quality control engineer at Toyota tests whether the proportion of defective parts exceeds 2%. The true defect rate is 2.5%. With n = 200 parts and α = 0.05, power is 0.55. If the engineer wants power of at least 0.90, which approach is most direct?",
+    "options": [
+      "Decrease α to 0.01 to make the test more rigorous",
+      "Increase sample size substantially to reduce sampling variability",
+      "Switch to a two-sided test to capture defect rates in both directions",
+      "Redefine the alternative hypothesis as defect rate ≠ 2% instead of > 2%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increasing sample size is the most direct way to increase power — it reduces the standard error, making it easier to distinguish a true defect rate of 2.5% from the null of 2%. Power calculations would determine the exact n needed for 0.90 power. Option A decreases power by making rejection harder. Option C would decrease power because two-sided tests split α between two tails; since we care about the direction (exceeds 2%), one-sided is already correct. Option D switches direction unnecessarily and would make the test two-sided, reducing power.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher conducts a study with 80% power to detect a mean difference of 5 points. The true mean difference is actually 2 points (smaller than the detectable effect). What is the likely outcome of the study?",
+    "options": [
+      "The study will reject H0 because 80% power is sufficient for any real effect",
+      "The study will likely fail to reject H0 because power was calculated for a larger effect",
+      "The study will be unaffected because power calculations are based on hypothetical effects",
+      "Type I error probability increases to compensate for the smaller true effect"
+    ],
+    "correctIndex": 1,
+    "explanation": "Power is calculated for a specific effect size (here, 5 points). If the true effect is smaller (2 points), the actual power for detecting that smaller effect is below 80%. The study is likely to fail to reject H0 — not because the drug doesn't work, but because it works less strongly than assumed in the power calculation. This is why effect size assumptions in power calculations matter enormously. Option A incorrectly treats 80% power as universal. Option C is wrong — power calculations have direct implications for actual study outcomes. Option D is wrong — Type I error probability is fixed at α regardless of effect size.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial analyst at JPMorgan runs a two-sided test for whether the mean return of a portfolio differs from 8%. She gets t = 2.1 with n = 26 (df = 25), p = 0.046. The power for detecting the true effect size is 0.51. What is the best assessment of this significant result?",
+    "options": [
+      "The result is reliable because it reached significance at α = 0.05",
+      "The borderline p-value with moderate power suggests this result may not replicate consistently",
+      "Power is irrelevant for interpreting a statistically significant result",
+      "The analyst should increase α to ensure the result remains significant in future studies"
+    ],
+    "correctIndex": 1,
+    "explanation": "A p-value barely below 0.05 combined with moderate power (0.51) is a warning sign. With only 51% power, the study was underpowered — if there were truly a borderline effect, detecting it at p = 0.046 required a lucky sample. This is sometimes called 'winner's curse': studies that barely reach significance with low power tend to overestimate the true effect size. Option C is incorrect — power matters for interpreting borderline significant results, especially for replication. Option D is backwards — inflating α just to retain significance undermines the logic of hypothesis testing.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the relationship between effect size and power, holding sample size and alpha constant?",
+    "options": [
+      "Larger effects are harder to detect and require more power to confirm",
+      "Effect size is unrelated to power — power depends only on sample size and alpha",
+      "Larger effect sizes are easier to detect, resulting in higher power",
+      "Smaller effect sizes require smaller sample sizes to achieve the same power"
+    ],
+    "correctIndex": 2,
+    "explanation": "Effect size and power are directly related. A large effect (e.g., a drug reducing blood pressure by 30 points vs. 2 points) produces larger test statistics for the same sample size, making it easier to distinguish from the null hypothesis. This is intuitive: it's easier to detect a large signal than a weak one. Option A reverses the direction. Option B is incorrect — effect size is one of the four determinants of power (along with n, α, and variability). Option D reverses the relationship — larger effects need smaller samples to achieve the same power.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study tests whether mean customer wait time at Starbucks exceeds 3 minutes. The true mean is 3.4 minutes. The study has n = 50 customers and α = 0.05. Power is 0.72. What does a power of 0.72 mean in practical terms?",
+    "options": [
+      "There is a 72% chance the null hypothesis is false given the data collected",
+      "If the true mean is 3.4 minutes, there is a 72% chance this study detects it as significant",
+      "The study will correctly identify the true mean as 3.4 minutes 72% of the time",
+      "72% of customers have wait times that exceed the 3-minute null hypothesis threshold"
+    ],
+    "correctIndex": 1,
+    "explanation": "Power = 0.72 means that if the true population mean wait time is indeed 3.4 minutes (as specified), there is a 72% chance this study will produce a p-value below α = 0.05 and correctly reject H0. Equivalently, there is a 28% chance of a Type II error — failing to detect the true 0.4-minute excess. Option A confuses power with the posterior probability of H0 being false. Option C confuses power with point estimation accuracy. Option D interprets power as a statement about individual customer wait times.",
+    "type": "Application",
+    "difficulty": "easy"
+  }
+]

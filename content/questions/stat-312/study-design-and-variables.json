@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A researcher wants to determine whether a new fertilizer increases crop yield. She randomly assigns 50 plots to receive the new fertilizer and 50 plots to receive the standard fertilizer, then measures yield at harvest. What type of study is this?",
+    "options": [
+      "Observational study, because researchers are observing crop growth",
+      "Experiment, because treatments are randomly assigned to units",
+      "Survey, because multiple plots are measured at the same time",
+      "Case-control study, because two groups are being compared"
+    ],
+    "correctIndex": 1,
+    "explanation": "Random assignment of treatments to experimental units defines an experiment. This is the critical feature that allows causal conclusions. Option A is wrong because observation of outcomes doesn't make it observational — the key is whether the researcher intervened with random assignment. Option C is wrong because surveys collect self-reported information without random assignment. Option D describes a specific observational design used in epidemiology.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a study on exercise and heart disease, researchers classify adults as exercising regularly or not, then track heart disease rates over 10 years without intervening. What is the scope of inference for this study?",
+    "options": [
+      "Can generalize to the population and establish causation if the sample was random",
+      "Can generalize to the population sampled from but cannot establish causation",
+      "Can establish causation but cannot generalize beyond study participants",
+      "Can neither generalize to a population nor establish causation in any circumstance"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is an observational study with (presumably) random sampling. Random sampling allows generalization to the population, but only random assignment of treatments establishes causation. Without random assignment, confounders — people who exercise may also eat better, sleep more, smoke less — prevent causal claims. Option A incorrectly grants causation to a study that lacks random assignment. Option C incorrectly links causation to random assignment being absent.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a study of whether coffee consumption affects memory performance, memory score is the:",
+    "options": [
+      "Confounding variable, because it may be affected by other factors",
+      "Explanatory variable, because it explains the coffee consumption pattern",
+      "Response variable, because it is the outcome being measured",
+      "Control variable, because researchers hold other factors constant"
+    ],
+    "correctIndex": 2,
+    "explanation": "The response variable is the outcome we measure — the variable we expect to be affected. Memory score is what we are trying to explain or predict. Coffee consumption is the explanatory variable (what we think causes or predicts the response). Confounding variables are extraneous factors related to both, like sleep, and control variables are those held constant to isolate the effect.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A newspaper reports that people who own pets live longer on average than those who don't. A reader concludes that getting a pet will extend her life. What flaw does this conclusion contain?",
+    "options": [
+      "The study sample was likely too small to detect a meaningful difference",
+      "The conclusion extends correlation to causation from an observational study",
+      "Pet ownership is not a proper explanatory variable for a health study",
+      "The response variable (lifespan) cannot be measured accurately in this design"
+    ],
+    "correctIndex": 1,
+    "explanation": "The newspaper report describes an observational finding — pet owners and non-owners were not randomly assigned. The longer lifespan could be caused by confounders: people who own pets may be more active, have higher income, or have stronger social connections. Drawing a causal conclusion from an association without random assignment is the fundamental error. The other options raise issues that may or may not apply but don't identify the core logical flaw.",
+    "type": "Error-Finding",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A university randomly samples 500 students and asks about study hours and GPA. Another researcher at the same university randomly assigns 200 students to a mandatory tutoring program and measures the GPA change. Which study permits a causal conclusion about tutoring and GPA?",
+    "options": [
+      "The survey, because it sampled more students and has greater external validity",
+      "Both studies, because both involve random selection of some kind",
+      "The experiment, because random assignment of treatment allows causal inference",
+      "Neither study, because GPA is influenced by too many confounding variables"
+    ],
+    "correctIndex": 2,
+    "explanation": "Only random assignment of treatments — as in the experiment — creates groups that are alike in all ways except the treatment, enabling causal conclusions. The survey uses random sampling, which allows generalization to all university students, but cannot establish causation because students self-select their study habits. Option B confuses random sampling (for generalization) with random assignment (for causation). Option D is wrong — confounders are exactly what randomization controls for.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A researcher finds that cities with more hospitals have higher death rates. She does NOT conclude that hospitals cause death. What principle is she applying?",
+    "options": [
+      "Regression to the mean — extreme values tend to move toward average over time",
+      "Confounding — sicker populations attract more hospitals and also have higher death rates",
+      "Selection bias — only certain types of patients choose to go to hospitals",
+      "Non-response bias — many deaths occur outside hospitals and are not counted"
+    ],
+    "correctIndex": 1,
+    "explanation": "Population health status is a confounder — it causes both more hospitals (as infrastructure responds to need) and higher death rates. The association between hospitals and deaths is spurious; both are caused by a third variable. This is the classic distinction between association and causation in observational data. Regression to the mean applies to repeated measurements of the same subjects, not cross-sectional associations. Selection bias is about who chooses to participate.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A study randomly samples 1,000 U.S. adults and finds that those who drink red wine daily have lower rates of cardiovascular disease. What conclusion is best supported?",
+    "options": [
+      "Daily red wine consumption reduces cardiovascular disease in U.S. adults",
+      "Among U.S. adults, daily wine drinkers and non-drinkers have different cardiovascular disease rates",
+      "Red wine prevents cardiovascular disease, but only in the adults sampled in this study",
+      "There is no relationship between wine consumption and cardiovascular disease"
+    ],
+    "correctIndex": 1,
+    "explanation": "The random sample allows generalization to U.S. adults — so the association extends beyond just the sample. However, this is observational (no random assignment), so we can only conclude there is an association, not causation. Option A makes a causal claim that requires random assignment. Option C incorrectly limits generalization to the sample (random sampling is exactly what permits generalization). Option D contradicts the data.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A clinical trial randomly assigns 300 patients to receive either a new medication or a placebo and tracks recovery time. Halfway through the study, researchers notice that wealthier patients are recovering faster regardless of treatment. Wealth is best described as:",
+    "options": [
+      "A confounding variable that invalidates the experiment's causal conclusions",
+      "A lurking variable that is associated with recovery but not with treatment assignment",
+      "The response variable, because recovery time depends on patient income",
+      "An explanatory variable that should be added to the treatment groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a randomized experiment, wealth is a lurking variable — it's associated with the response (recovery time) but, due to random assignment, is not systematically associated with treatment group. Random assignment distributes wealthy patients approximately equally across treatment and placebo groups. This is different from an observational study where wealth could confound the treatment-recovery relationship. Option A incorrectly treats a lurking variable in an experiment as a confounder.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher tests whether a job training program reduces unemployment. She surveys laid-off workers and compares those who voluntarily enrolled in the program to those who did not. Unemployment rates are 12% for program participants and 23% for non-participants. What is the strongest concern about this study?",
+    "options": [
+      "The sample sizes in each group may be unequal, reducing statistical power",
+      "Self-selection means program participants may be more motivated, creating confounding",
+      "Unemployment rates cannot be reliably measured in survey-based studies",
+      "The 11 percentage-point difference is too small to have practical significance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Self-selection is the primary threat to validity here. Workers who voluntarily enroll in training programs may be more motivated, have better social networks, or face less severe economic barriers — all factors independently associated with lower unemployment. Without random assignment, we cannot separate the program's effect from these pre-existing differences. Option A is a minor methodological concern, not the critical one. Option C is not generally true. Option D incorrectly dismisses an 11-point difference as trivial without context.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company wants to test whether Drug X lowers blood pressure. They randomly assign patients to Drug X or placebo and measure blood pressure after 8 weeks. Which statement correctly describes what random assignment accomplishes in this study?",
+    "options": [
+      "It ensures the sample represents all patients with high blood pressure nationwide",
+      "It creates treatment groups that are similar in all characteristics, known and unknown",
+      "It eliminates measurement error in blood pressure readings across both groups",
+      "It guarantees that Drug X will show a statistically significant effect if it works"
+    ],
+    "correctIndex": 1,
+    "explanation": "Random assignment distributes all patient characteristics — age, baseline blood pressure, lifestyle habits, genetics, and unmeasured factors — approximately equally across treatment groups. This is what allows us to attribute any difference in outcomes to the treatment rather than pre-existing differences. Option A describes random sampling, not random assignment. Option C is wrong because random assignment does not address measurement error, which requires blinding and standardized protocols. Option D is wrong — power, not randomization, determines whether a real effect will be detected.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study at Nike finds that employees who participate in the company wellness program have 30% fewer sick days. The study did not randomly assign employees to the program. A manager concludes the program caused the reduction. Which alternative explanation is most plausible?",
+    "options": [
+      "The wellness program was too short to show meaningful health benefits",
+      "Healthier, more motivated employees are more likely to voluntarily join wellness programs",
+      "Sick days are a subjective measure that employees can manipulate by reporting differently",
+      "The sample of wellness participants is too small to generalize company-wide"
+    ],
+    "correctIndex": 1,
+    "explanation": "Healthy worker bias is the classic confound here — employees who voluntarily enroll in wellness programs may already be healthier, more engaged, and more conscientious about their health. The reduction in sick days may reflect pre-existing health differences rather than the program's effect. Without random assignment, these groups are not comparable at baseline. Option C is a legitimate concern but secondary. Option A is plausible but the most fundamental problem is the non-random assignment, not study duration.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Research finds that countries with more televisions per capita have lower infant mortality rates. A public health official concludes that distributing televisions would reduce infant mortality in developing countries. What is the primary error in this reasoning?",
+    "options": [
+      "The official is using international data to make policy for a specific country",
+      "Television ownership is a proxy for economic development, which actually drives both",
+      "Infant mortality rates are unreliable in countries with limited record-keeping",
+      "The relationship only holds for some types of televisions, not all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Television ownership is a proxy for economic development — wealthier countries have more TVs and also have better healthcare, sanitation, nutrition, and education, all of which reduce infant mortality. The association between TVs and mortality is spurious; economic development causes both. Distributing TVs without addressing the underlying development factors would have no effect. This is a textbook example of correlation without causation driven by a confounding variable.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A study randomly selects 200 customers from Target's loyalty database and surveys their shopping frequency and income. The study finds higher-income customers shop more frequently. What is the correct scope of inference?",
+    "options": [
+      "The association generalizes to Target loyalty customers and is causal because income is a genuine driver of spending",
+      "The association generalizes to Target loyalty customers but causation cannot be established from this observational study",
+      "The association applies only to the 200 surveyed customers and cannot generalize further without random assignment",
+      "No inference is valid because income and shopping frequency are both self-reported and unreliable"
+    ],
+    "correctIndex": 1,
+    "explanation": "Random sampling from Target's loyalty database allows generalization to the population of Target loyalty customers. However, this is an observational study — income was not randomly assigned — so we cannot establish causation. Confounders like geographic location, lifestyle, or family size could explain the association. Option A incorrectly applies causal reasoning to an observational study. Option C confuses random sampling (for generalization) with random assignment (for causation). Option D is overly dismissive of self-reported data, which can still yield valid associations.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A researcher studying the effect of class size on student performance randomly selects 50 schools from North Carolina and, within each selected school, randomly assigns classrooms to small (15 students) or large (30 students) class sizes. What can be validly concluded from this study?",
+    "options": [
+      "Causal conclusions about class size effects, generalizable to NC schools",
+      "Causal conclusions about class size effects, generalizable to all U.S. schools",
+      "Associational conclusions about class size, generalizable to NC schools only",
+      "Causal conclusions within sampled schools only, with no generalization possible"
+    ],
+    "correctIndex": 0,
+    "explanation": "This study has both random sampling (50 schools from NC) and random assignment (classrooms to class sizes). Random sampling allows generalization to North Carolina schools; random assignment within those schools allows causal conclusions. The combination is what every well-designed study aims for. Option B overclaims by generalizing to all U.S. schools — random sampling was from NC only. Options C and D miss that random assignment permits causal inference.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following best describes a confounding variable?",
+    "options": [
+      "A variable that is measured after the response variable and is used to explain the results",
+      "A variable that is associated with both the explanatory variable and the response variable",
+      "A variable that has no relationship with the response and can be safely ignored in analysis",
+      "A variable that researchers randomly assign to control for its effects on the outcome"
+    ],
+    "correctIndex": 1,
+    "explanation": "A confounding variable is associated with both the explanatory variable (treatment) and the response variable (outcome), making it difficult to isolate the treatment's true effect. For example, in studying exercise and heart health, diet is a confounder because people who exercise tend to eat better (related to explanatory) and better diet improves heart health (related to response). Option A describes a mediating variable. Option C describes an irrelevant variable. Option D describes how blocking or stratification addresses known confounders.",
+    "type": "Definition",
+    "difficulty": "medium"
+  }
+]
