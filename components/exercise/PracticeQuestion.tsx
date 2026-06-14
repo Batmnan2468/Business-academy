@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { isQuestionSaved, saveQuestion, removeQuestion } from '@/lib/savedQuestions'
 
 interface Question {
   question: string
   options: string[]
   correctIndex: number
   explanation: string
+  type?: string
+  difficulty?: string
 }
 
 function shuffleOptions(q: Question): Question {
@@ -26,23 +29,28 @@ interface Props {
   topicTitle: string
   topicSlug: string
   courseSlug: string
+  courseTitle?: string
   difficulty: string
   onAnswer?: (correct: boolean) => void
   nextLabel?: string
   onNext?: () => void
 }
 
-export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, difficulty, onAnswer, nextLabel, onNext }: Props) {
+export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty, onAnswer, nextLabel, onNext }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [selected, setSelected] = useState<number | null>(null)
+  const [isSaved, setIsSaved] = useState(false)
+  const [showToast, setShowToast] = useState(false)
 
   const fetchQuestion = useCallback(async () => {
     setLoading(true)
     setError(null)
     setSelected(null)
     setQuestion(null)
+    setIsSaved(false)
+    setShowToast(false)
     try {
       const res = await fetch('/api/generate-question', {
         method: 'POST',
@@ -53,7 +61,9 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, di
       if (!res.ok) {
         throw new Error(data.error ?? `HTTP ${res.status}`)
       }
-      setQuestion(shuffleOptions(data as Question))
+      const q = shuffleOptions(data as Question)
+      setQuestion(q)
+      setIsSaved(isQuestionSaved(courseSlug, q.question))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not load question. Please try again.')
     } finally {
@@ -64,6 +74,31 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, di
   useEffect(() => {
     fetchQuestion()
   }, [fetchQuestion])
+
+  function handleSaveToggle() {
+    if (!question) return
+    if (isSaved) {
+      removeQuestion(courseSlug, question.question)
+      setIsSaved(false)
+    } else {
+      saveQuestion({
+        topicSlug,
+        topicTitle,
+        courseSlug,
+        courseTitle: courseTitle ?? courseSlug,
+        question: question.question,
+        options: question.options,
+        correctIndex: question.correctIndex,
+        explanation: question.explanation,
+        type: question.type ?? '',
+        difficulty: question.difficulty ?? difficulty,
+        savedAt: new Date().toISOString(),
+      })
+      setIsSaved(true)
+      setShowToast(true)
+      setTimeout(() => setShowToast(false), 2500)
+    }
+  }
 
   if (loading) {
     return (
@@ -118,7 +153,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, di
         {question.question}
       </p>
 
-      <ul className="space-y-3 mb-6">
+      <ul className="space-y-3 mb-4">
         {question.options.map((option, i) => {
           const isSelected = selected === i
           const isCorrectChoice = i === question.correctIndex
@@ -158,6 +193,25 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, di
           )
         })}
       </ul>
+
+      {/* Save for later button */}
+      <div className="mb-6">
+        <button
+          onClick={handleSaveToggle}
+          className={`text-xs font-medium transition-colors ${
+            isSaved
+              ? 'text-amber-600 dark:text-amber-400 hover:text-red-500 dark:hover:text-red-400'
+              : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+          }`}
+        >
+          {isSaved ? '✓ Saved — tap to remove' : '🚩 Save for later'}
+        </button>
+        {showToast && (
+          <p className="mt-1.5 text-xs text-green-600 dark:text-green-400">
+            Question saved to your review list ✓
+          </p>
+        )}
+      </div>
 
       {answered && (
         <>

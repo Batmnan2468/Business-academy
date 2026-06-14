@@ -47,6 +47,7 @@ export default async function PracticePage({ params }: Props) {
         topicSlug={topicSlug}
         learn={legacyLearn}
         courseSlug={courseSlug}
+        courseTitle={course.title}
         nextTopic={nextTopic}
       />
     </main>

@@ -6,6 +6,7 @@ import { getMastery, getMasteryPct, isDueToday } from '@/lib/mastery'
 import type { TopicMastery } from '@/lib/mastery'
 import { getTopicState, getUnitTestState } from '@/lib/topicState'
 import type { TopicState, UnitTestState } from '@/lib/topicState'
+import { getSavedCountForCourse } from '@/lib/savedQuestions'
 
 interface TopicItem {
   id: string
@@ -169,6 +170,7 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
   const [unitTestStateMap, setUnitTestStateMap] = useState<Map<string, UnitTestState>>(new Map())
   const [dueCount, setDueCount] = useState(0)
   const [masteredCount, setMasteredCount] = useState(0)
+  const [savedCount, setSavedCount] = useState(0)
 
   function refresh() {
     const { map, dueCount: due, masteredCount: mc } = loadMasteryMap(courseSlug, units, topics)
@@ -177,12 +179,17 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
     setMasteredCount(mc)
     setTopicStateMap(loadTopicStateMap(courseSlug, units, topics))
     setUnitTestStateMap(loadUnitTestStateMap(courseSlug, units))
+    setSavedCount(getSavedCountForCourse(courseSlug))
   }
 
   useEffect(() => {
     refresh()
     window.addEventListener('storage', refresh)
-    return () => window.removeEventListener('storage', refresh)
+    window.addEventListener('savedQuestionsChanged', refresh)
+    return () => {
+      window.removeEventListener('storage', refresh)
+      window.removeEventListener('savedQuestionsChanged', refresh)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseSlug])
 
@@ -320,6 +327,18 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
           </span>
         </Link>
       </div>
+
+      {/* Saved questions link */}
+      {savedCount > 0 && (
+        <div className="mb-4">
+          <Link
+            href="/saved-questions"
+            className="text-xs text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+          >
+            🚩 {savedCount} {savedCount === 1 ? 'question' : 'questions'} saved in this course →
+          </Link>
+        </div>
+      )}
 
       {/* Practice mode buttons */}
       <div className="flex flex-wrap gap-2 mb-8">

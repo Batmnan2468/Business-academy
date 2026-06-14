@@ -23,6 +23,7 @@ interface Props {
   topicSlug: string
   learn?: LearnContent
   courseSlug: string
+  courseTitle?: string
   nextTopic?: NextTopic | null
 }
 
@@ -60,7 +61,7 @@ const DIFFICULTIES = [
   { value: 'hard', label: 'Hard' },
 ]
 
-export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, nextTopic }: Props) {
+export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic }: Props) {
   const initialMode = learn ? 'learn' : 'practice'
   const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
@@ -164,6 +165,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           topicTitle={topicTitle}
           topicSlug={topicSlug}
           courseSlug={courseSlug}
+          courseTitle={courseTitle}
           difficulty={difficulty}
           onAnswer={handleAnswer}
           nextLabel={session.masteryPending ? 'See results →' : undefined}
