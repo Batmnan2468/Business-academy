@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the Economic Order Quantity (EOQ) formula?",
+    "options": [
+      "Q* = sqrt(2DS / H), minimizing the sum of ordering and holding costs",
+      "Q* = (2D + S) / H, balancing demand with fixed and variable costs",
+      "Q* = D / S × H, converting annual demand into per-unit ordering cost",
+      "Q* = sqrt(D / 2SH), adjusting for demand uncertainty and lead time"
+    ],
+    "correctIndex": 0,
+    "explanation": "EOQ is Q* = sqrt(2DS/H), where D is annual demand, S is the cost per order (setup/ordering cost), and H is the annual holding cost per unit. This formula finds the order quantity where total inventory cost — the sum of ordering and holding costs — is minimized. Options A, C, and D are algebraically incorrect rearrangements that do not represent the EOQ derivation.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines the reorder point (ROP) in a continuous review inventory system?",
+    "options": [
+      "The inventory level at which a new order should be placed to avoid stockout during lead time",
+      "The maximum inventory level a firm should hold to avoid excess holding costs",
+      "The quantity ordered each time inventory falls below the safety stock threshold",
+      "The point at which cycle stock equals safety stock in a given replenishment cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "The reorder point is the inventory level that triggers a new order, set high enough that existing stock covers demand during lead time (the gap between ordering and receiving). ROP = daily demand × lead time in days. Option A describes order quantity, not reorder point. Option B describes a maximum stock policy. Option D introduces a cycle-stock-equals-safety-stock condition that is not how ROP is defined.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which two assumptions are fundamental to the basic EOQ model?",
+    "options": [
+      "Demand is constant and known, and lead time is fixed and certain",
+      "Demand is seasonal and lead times vary based on supplier reliability",
+      "Ordering costs increase with volume and holding costs decrease with quantity",
+      "Inventory is replenished in multiple partial shipments over the lead time period"
+    ],
+    "correctIndex": 0,
+    "explanation": "The basic EOQ model assumes demand is constant and known (deterministic) and that lead time is fixed and certain, allowing inventory to hit zero exactly when the new order arrives. Option A describes conditions (seasonal demand, variable lead times) that violate EOQ assumptions. Option C reverses the cost behavior assumed — ordering cost is fixed per order and holding cost is fixed per unit. Option D violates the EOQ assumption of instantaneous replenishment.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Annual demand is 1,000 units, ordering cost is $50 per order, and holding cost is $2 per unit per year. What is the EOQ?",
+    "options": [
+      "500 units, found by dividing annual demand by ordering cost per unit",
+      "316 units, derived from a modified formula using half the holding cost",
+      "100 units, calculated as annual demand divided by the number of orders per year",
+      "224 units, found by applying Q* = sqrt(2 × 1,000 × 50 / 2)"
+    ],
+    "correctIndex": 3,
+    "explanation": "EOQ = sqrt(2DS/H) = sqrt(2 × 1,000 × $50 / $2) = sqrt(100,000 / 2) = sqrt(50,000) ≈ 224 units. Option B (316) would result from sqrt(2 × 1,000 × 50 / 1), incorrectly halving the holding cost. Option A (500) divides demand by ordering cost numerically without applying the formula. Option D (100) is an arbitrary division that does not correspond to the EOQ derivation.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Daily demand is 20 units and lead time is 5 days. What is the reorder point?",
+    "options": [
+      "4 units, calculated as lead time divided by daily demand",
+      "25 units, calculated by adding lead time to daily demand",
+      "100 units, calculated as daily demand multiplied by lead time",
+      "200 units, representing two full lead time cycles of demand"
+    ],
+    "correctIndex": 2,
+    "explanation": "ROP = daily demand × lead time = 20 units/day × 5 days = 100 units. When inventory falls to 100 units, an order is placed, and the 100 units cover demand during the 5-day wait for delivery. Option A inverts the formula. Option B adds rather than multiplies, producing a dimensionally incorrect answer. Option D doubles the correct answer without justification.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bakery uses the EOQ model to manage flour orders, but demand spikes every weekend and nearly doubles in summer. Which EOQ assumption is most clearly violated?",
+    "options": [
+      "Instantaneous replenishment, because the bakery cannot receive full deliveries immediately",
+      "Zero lead time, because delivery gaps create stockout risk the basic model ignores",
+      "Fixed ordering cost, because weekend demand surges change the cost of each order placed",
+      "Constant and known demand, because the bakery's demand is both seasonal and variable"
+    ],
+    "correctIndex": 3,
+    "explanation": "EOQ assumes demand is constant and known throughout the planning period. A bakery with weekend peaks and summer seasonality violates this assumption because demand fluctuates unpredictably, making the constant-demand EOQ calculation inaccurate. Option A (instantaneous replenishment) is a separate EOQ assumption but is not what demand variability violates. Option C is incorrect — ordering cost is typically fixed and not affected by demand patterns. Option D (zero lead time) is not a core EOQ assumption; the model accommodates lead time through the reorder point.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A supplier offers a 10% discount on all units if a company orders at least 500 units at a time, but the EOQ is 224 units. What inventory model should the company use instead?",
+    "options": [
+      "Safety stock model, which accounts for demand uncertainty when pricing changes occur",
+      "JIT model, which eliminates the tradeoff by reducing batch sizes to match actual daily demand",
+      "Reorder point model with adjusted lead time to account for the supplier's minimum order policy",
+      "Quantity discount model, which compares total cost including purchase price at each price break"
+    ],
+    "correctIndex": 3,
+    "explanation": "When quantity discounts exist, the basic EOQ model understates total cost by ignoring the purchase price. The quantity discount model evaluates total cost (purchase cost + ordering cost + holding cost) at each price break to find the truly optimal order quantity. Option A (safety stock) addresses demand uncertainty, not pricing. Option C adjusts lead time, which is irrelevant to a discount-driven order size change. Option D (JIT) is a philosophy that avoids large batches, but the question asks which model applies, not which philosophy to adopt.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If annual demand doubles from 1,000 to 2,000 units while ordering cost and holding cost remain unchanged, what happens to the EOQ?",
+    "options": [
+      "EOQ increases by approximately 41% to about 316 units, because EOQ scales with the square root of demand",
+      "EOQ doubles to 448 units, because demand and order quantity scale proportionally",
+      "EOQ stays the same at 224 units, because the cost parameters did not change",
+      "EOQ decreases to 112 units, because higher demand means orders arrive more frequently"
+    ],
+    "correctIndex": 0,
+    "explanation": "EOQ = sqrt(2DS/H). If D doubles, EOQ = sqrt(2 × 2,000 × 50 / 2) = sqrt(100,000) ≈ 316, which is the original 224 × sqrt(2) ≈ 317. EOQ grows proportionally to the square root of demand, not linearly. Option A (doubling) would be correct if EOQ scaled linearly with D, but the square root in the formula means it does not. Option C ignores that D appears in the formula. Option D reverses the direction of change.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company has an EOQ of 200 units and orders 300 units instead to get a bulk discount. What happens to the total inventory cost curve at this point?",
+    "options": [
+      "Total cost falls to zero because bulk ordering eliminates holding and ordering costs simultaneously",
+      "Total cost is at its minimum because any deviation from the EOQ always increases cost proportionally",
+      "Total cost rises above the EOQ minimum, but holding costs increase faster than ordering costs fall",
+      "Total cost falls below the EOQ minimum because the discount reduces the purchase price component"
+    ],
+    "correctIndex": 2,
+    "explanation": "The EOQ minimizes the sum of holding and ordering costs. Ordering more than EOQ means the company holds excess inventory, raising holding costs more than it saves on ordering frequency. This is why the total cost curve is asymmetric — costs rise steeply above EOQ. However, if a purchase price discount is large enough, the overall total cost (including purchase price) can fall below the EOQ-driven total, which is why quantity discounts require a separate model. Option B is wrong because the total cost curve is relatively flat near EOQ, not perfectly sharp. Option D is partially true in concept but ignores that ordering/holding costs still rise.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A reorder point of 100 units is based on average daily demand of 20 units and lead time of 5 days. A student adds 30 units of safety stock. What is the new reorder point?",
+    "options": [
+      "100 units, because safety stock is maintained separately from the reorder point calculation",
+      "130 units, because safety stock is added to the lead time demand to raise the trigger point",
+      "70 units, because safety stock reduces the effective reorder point by providing a buffer below it",
+      "150 units, because safety stock doubles the lead time demand at a standard z-score of 1.5"
+    ],
+    "correctIndex": 1,
+    "explanation": "When safety stock is added, the reorder point becomes ROP = (daily demand × lead time) + safety stock = 100 + 30 = 130 units. The higher trigger ensures that even if demand runs above average during lead time, the safety stock cushion prevents a stockout. Option A is wrong — safety stock does directly raise the reorder point. Option C inverts the logic; adding safety stock increases ROP, not decreases it. Option D uses an arbitrary formula not based on the safety stock calculation.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "EOQ assumes all inventory is replenished instantaneously. A perishable food distributor receives daily partial deliveries instead. Why does this make EOQ inappropriate without modification?",
+    "options": [
+      "Partial deliveries reduce ordering costs to near zero, eliminating the cost tradeoff EOQ depends on",
+      "Daily deliveries mean demand is always fully met, making stockout cost the only relevant variable",
+      "Inventory builds gradually rather than jumping to a maximum, so average inventory and holding costs are lower than EOQ predicts",
+      "Perishability increases demand variability, which violates the constant-demand assumption more than the replenishment assumption"
+    ],
+    "correctIndex": 2,
+    "explanation": "The standard EOQ assumes a full order arrives at once, creating a saw-tooth inventory pattern from maximum to zero. With gradual delivery (production or partial shipments), inventory builds incrementally, so average inventory is lower than EOQ assumes — the production order quantity (POQ) model adjusts for this. Option A is incorrect; ordering costs don't disappear with partial deliveries. Option B conflates delivery frequency with stockout risk. Option D identifies a real problem but the question specifically asks about the replenishment pattern violation.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Toyota's JIT system targets near-zero inventory by synchronizing production with demand. How does this contrast with EOQ as an inventory philosophy?",
+    "options": [
+      "JIT uses the EOQ formula but sets the order quantity to one unit to minimize holding costs to zero",
+      "EOQ optimizes within the existing cost structure; JIT challenges that structure by reducing ordering costs to make small frequent orders optimal",
+      "EOQ and JIT are compatible because both minimize total inventory cost through the same mathematical framework",
+      "JIT increases safety stock to eliminate stockouts; EOQ eliminates safety stock to minimize holding costs"
+    ],
+    "correctIndex": 1,
+    "explanation": "EOQ accepts ordering and holding costs as given and finds the optimal quantity within those constraints. JIT attacks the cost structure itself — primarily by reducing setup and ordering costs dramatically (through supplier relationships, kanban systems, and process improvements), which shifts the EOQ curve so that very small, frequent orders become optimal. Option A is wrong; JIT is not an application of EOQ. Option C is incorrect because the two philosophies start from different assumptions about cost reducibility. Option D reverses JIT's approach — JIT reduces, not increases, safety stock.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital pharmacy applies EOQ to order antibiotics. Why might EOQ lead to suboptimal decisions compared to a grocery retailer applying the same model?",
+    "options": [
+      "Hospitals order more frequently than retailers, making ordering costs higher and rendering EOQ's cost tradeoff irrelevant",
+      "EOQ ignores stockout cost asymmetry — in a hospital, a stockout can harm patients, justifying inventory well above the EOQ optimum",
+      "Antibiotic demand follows seasonal patterns, which EOQ handles through safety stock adjustments built into the formula",
+      "Grocery retailers face higher holding costs than hospitals because food spoils faster, making EOQ more accurate for retail"
+    ],
+    "correctIndex": 1,
+    "explanation": "EOQ minimizes ordering and holding costs but does not account for stockout costs. In a grocery setting, a stockout means a lost sale. In a hospital, a stockout can mean patient harm, legal liability, and regulatory consequences that are orders of magnitude more severe. This asymmetry justifies holding more inventory than the EOQ suggests, even if it raises total holding cost. Option A is incorrect; ordering frequency being high would push toward smaller orders, not invalidate the model. Option C is wrong — safety stock is not built into the EOQ formula itself. Option D is partially true about food spoilage but does not explain why EOQ is suboptimal in healthcare.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager calculates EOQ but notices total cost changes very little whether the company orders 180, 224, or 270 units. What does this illustrate about the EOQ cost curve?",
+    "options": [
+      "The EOQ model is inaccurate for this product, and a different inventory model should replace it",
+      "The total cost curve is flat near the EOQ minimum, so moderate deviations have small cost impact",
+      "The holding cost and ordering cost for this product are both zero, making all order quantities equivalent",
+      "The safety stock level is too high and is masking the true cost differences between order quantities"
+    ],
+    "correctIndex": 1,
+    "explanation": "The total inventory cost curve (holding + ordering costs) is U-shaped and relatively flat near its minimum. This means ordering somewhat more or less than the precise EOQ has a modest cost penalty, giving managers practical flexibility to round to convenient lot sizes or align with supplier minimums without significantly increasing costs. Option A misinterprets the flatness as model failure. Option C is mathematically impossible — zero costs would make all quantities equivalent for a trivial reason. Option D introduces safety stock, which is a separate decision unrelated to the EOQ order quantity curve.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A service firm like a consulting company has no physical inventory but must manage consultant availability. How might EOQ concepts apply, if at all?",
+    "options": [
+      "EOQ does not apply because the formula requires physical units, and intangible services have no holding costs",
+      "EOQ applies directly by substituting billing hours for units and recruiter fees for ordering costs",
+      "EOQ principles apply loosely — staffing decisions involve tradeoffs between excess capacity costs and understaffing costs analogous to holding and stockout costs",
+      "EOQ applies only if the consulting firm standardizes service delivery into repeatable modules that can be inventoried"
+    ],
+    "correctIndex": 2,
+    "explanation": "While EOQ is designed for physical goods, its underlying logic — balancing the cost of having too much versus too little — extends to service capacity planning. Excess consultants represent idle capacity (like holding cost); too few consultants mean missed projects or overworked staff (like stockout cost). Option A is overly rigid; the principles transfer even if the formula doesn't apply perfectly. Option B is too literal a substitution — recruiter fees don't map cleanly onto ordering costs in the EOQ sense. Option D limits the concept unnecessarily to standardized services.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

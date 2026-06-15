@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What does cycle time measure in a process flow?",
+    "options": [
+      "The total time a unit spends waiting in queue before being processed",
+      "The average time between successive units completing the process",
+      "The number of units a process produces per hour",
+      "The ratio of actual output to maximum possible output"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cycle time is the average time between successive completions — in other words, how often a finished unit exits the process. It is the reciprocal of throughput rate. Option A describes queue time, a component of flow time, not cycle time. Option C describes throughput, and Option D describes utilization — both distinct metrics.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following best defines throughput in operations management?",
+    "options": [
+      "The total inventory held at every stage of the production process",
+      "The time required to complete one full cycle of a process",
+      "The rate at which a system produces finished units over a period of time",
+      "The percentage of time a resource is actively working versus idle"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput is the rate of output — units produced per unit of time (e.g., cars per hour, customers served per day). Option A describes work-in-process inventory, not throughput. Option B is cycle time. Option D is utilization. Students often confuse throughput with cycle time, but they are reciprocals of each other.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Little's Law states that in a stable process, WIP equals:",
+    "options": [
+      "Throughput divided by average flow time",
+      "Throughput multiplied by average flow time",
+      "Capacity minus demand at the bottleneck station",
+      "Flow time divided by the number of process stages"
+    ],
+    "correctIndex": 1,
+    "explanation": "Little's Law: WIP = Throughput × Flow Time (L = λW). It relates the three fundamental quantities of any stable queuing or flow system. Option A inverts the relationship incorrectly — dividing gives units of 1/time, not inventory. Option B conflates flow time with stage count. Option C describes excess capacity logic, not Little's Law.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which activity is considered value-added time in a manufacturing process?",
+    "options": [
+      "Machining a metal part to the precise dimensions specified by the customer",
+      "Moving finished sub-assemblies from one workstation to the next",
+      "Inspecting incoming raw materials for defects before production begins",
+      "Storing completed units in a warehouse while awaiting a customer order"
+    ],
+    "correctIndex": 0,
+    "explanation": "Value-added time transforms the product in a way the customer is willing to pay for — machining to specification directly changes the product toward what the customer values. Transportation (Option B), inspection (Option C), and storage (Option D) are classic non-value-added activities: they consume time and resources without physically transforming the product into something the customer values more.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Toyota plant can produce 600 cars per day and currently runs at a demand rate of 450 cars per day. What is the plant's utilization?",
+    "options": [
+      "133% — demand exceeds capacity, creating a bottleneck",
+      "25% — the idle fraction of available capacity",
+      "150 cars per day — representing unused capacity as an absolute figure",
+      "75% — the plant operates at three-quarters of its maximum capacity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Utilization = Demand / Capacity = 450 / 600 = 0.75 = 75%. Option A incorrectly inverts the ratio (600/450). Option B gives the idle fraction (1 − utilization = 25%), not utilization itself. Option C gives the spare capacity in units per day, not a percentage — utilization must be expressed as a ratio of capacity.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An Amazon fulfillment center processes 1,200 packages per hour. Average flow time per package is 45 minutes. Using Little's Law, how many packages are in process at any given time?",
+    "options": [
+      "900 packages — throughput (1,200/hr) multiplied by flow time converted to hours (0.75 hr)",
+      "54,000 packages — throughput multiplied by flow time in minutes without unit conversion",
+      "1,600 packages — capacity figure substituted for throughput in the formula",
+      "26.7 packages — flow time in hours divided by throughput"
+    ],
+    "correctIndex": 0,
+    "explanation": "WIP = Throughput × Flow Time. Convert 45 minutes to 0.75 hours; then WIP = 1,200 × 0.75 = 900 packages. Option B multiplies without unit conversion (1,200 × 45 = 54,000), producing an answer in nonsensical units. Option C uses an incorrect capacity figure. Option D divides instead of multiplies and inverts the variables.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital emergency department has 80 patients in process at any time and a throughput rate of 20 patients per hour. What is the average flow time per patient?",
+    "options": [
+      "1,600 patient-hours — the product of WIP multiplied by throughput",
+      "0.25 hours — the inverse of throughput only",
+      "4 hours — WIP divided by throughput rate using Little's Law",
+      "400 hours — throughput squared instead of dividing WIP by throughput"
+    ],
+    "correctIndex": 2,
+    "explanation": "Rearranging Little's Law: Flow Time = WIP / Throughput = 80 / 20 = 4 hours. Option A multiplies WIP by throughput (80 × 20 = 1,600), yielding nonsensical units. Option B computes 1/20 = 0.05 hours — the inverse of throughput, which ignores WIP entirely. Option D multiplies 20 × 20 = 400 rather than dividing WIP by throughput.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A call center has 200 calls in process at any time. Each call takes 4 minutes to complete. What is the throughput rate?",
+    "options": [
+      "800 calls per minute — WIP multiplied by flow time rather than divided",
+      "200 calls per minute — equating throughput to WIP without applying the formula",
+      "0.02 calls per minute — taking the inverse of flow time while ignoring WIP",
+      "50 calls per minute — WIP divided by flow time using Little's Law"
+    ],
+    "correctIndex": 3,
+    "explanation": "Throughput = WIP / Flow Time = 200 / 4 = 50 calls per minute. Option A multiplies WIP by flow time (200 × 4 = 800), which inverts the relationship. Option B restates WIP as throughput without applying the formula. Option C computes 1/flow time (0.25, not 0.02), and even if computed correctly it ignores WIP entirely.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A McDonald's drive-through has four steps: order taking (30 sec), payment (45 sec), food preparation (90 sec), and window handoff (20 sec). What is the maximum throughput of this process per hour?",
+    "options": [
+      "40 customers per hour — limited by the slowest step, food preparation at 90 seconds",
+      "120 customers per hour — based on the middle step's cycle time of 30 seconds",
+      "80 customers per hour — computed by averaging all four step times",
+      "19.5 customers per hour — computed by summing all step times as though they are sequential delays"
+    ],
+    "correctIndex": 0,
+    "explanation": "Throughput is constrained by the bottleneck — the slowest step. Food preparation at 90 seconds limits output to 3,600 / 90 = 40 customers per hour. Option B picks 30 seconds, which is not the bottleneck. Option C averages step times (185/4 ≈ 46 seconds per step, yielding ~78/hr) — averaging does not determine bottleneck throughput. Option D sums all step times (185 seconds) as if each customer waits through every step end-to-end before the next customer starts, which misapplies total flow time as cycle time.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Zara's distribution center processes 10,000 garments per day. Managers find that garments spend an average of 2.4 days in the facility. Using Little's Law, what is the average WIP inventory?",
+    "options": [
+      "4,167 garments — throughput divided by flow time rather than multiplied",
+      "24,000 garments — throughput multiplied by flow time per Little's Law",
+      "12,400 garments — a sum of throughput and flow time values",
+      "2.4 garments per day — confusing flow time directly with inventory count"
+    ],
+    "correctIndex": 1,
+    "explanation": "WIP = Throughput × Flow Time = 10,000 garments/day × 2.4 days = 24,000 garments. Option A divides instead of multiplying (10,000 / 2.4 ≈ 4,167). Option C adds the two values (10,000 + 2.4), which has no basis in Little's Law. Option D reads flow time as the answer, ignoring throughput. Managers use this calculation to understand how much capital is tied up as in-process inventory.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which statement about the relationship between utilization and wait time is most accurate for a service process?",
+    "options": [
+      "Higher utilization uniformly improves service quality by reducing worker idle time and increasing engagement",
+      "Variability only affects wait times once utilization exceeds 100%, not at lower utilization levels",
+      "Utilization and wait time are linearly related, so doubling utilization doubles average queue length",
+      "As utilization approaches 100%, average wait times increase sharply and become highly sensitive to variability"
+    ],
+    "correctIndex": 3,
+    "explanation": "The relationship between utilization and wait time is nonlinear and convex: as utilization approaches 100%, even small increases cause wait times to escalate dramatically because there is no buffer to absorb variability in arrivals or service times. Option A is false — high utilization creates congestion that harms service quality. Option B is wrong because variability interacts with utilization at all levels, not only above capacity. Option C is wrong because the relationship is exponential near full capacity, not linear.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital's patient intake process has a total flow time of 3 hours. Analysis shows that only 18 minutes actually transforms the patient record or initiates treatment. What percentage of flow time is value-added?",
+    "options": [
+      "10% — 18 minutes divided by 180 minutes",
+      "16.7% — 100 divided by the number of 30-minute blocks in 3 hours",
+      "90% — the non-value-added fraction rather than the value-added fraction",
+      "6% — 3 hours divided by 50 intervals of 18 minutes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Value-added percentage = 18 minutes / 180 minutes = 10%. Option B (16.7%) incorrectly divides 100 by 6 (the number of 30-minute blocks) rather than computing 18/180. Option C gives the non-value-added fraction (90%), which is what remains after subtracting value-added time. Option D (6%) results from dividing 180 by 30 instead of 18/180. A 10% value-added ratio is typical in service operations.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A process redesign team at Dell wants to reduce WIP inventory without changing throughput. According to Little's Law, what lever must they use?",
+    "options": [
+      "Increase utilization at all workstations to ensure no idle time anywhere in the system",
+      "Add inspection checkpoints earlier to catch defects, which extends but purifies flow time",
+      "Reduce average flow time by eliminating non-value-added wait and transport steps",
+      "Increase capacity at the current bottleneck so throughput can grow in proportion to WIP"
+    ],
+    "correctIndex": 2,
+    "explanation": "Little's Law: WIP = Throughput × Flow Time. If throughput is held constant, the only way to reduce WIP is to reduce flow time. Eliminating non-value-added steps (waiting, transport, rework) directly cuts flow time and therefore WIP. Option A (raising utilization) typically increases congestion and flow time, worsening WIP. Option B adds process steps, increasing flow time and raising WIP. Option D increases throughput — without a corresponding flow time reduction, WIP would not decrease.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A flow diagram shows five sequential steps with cycle times of 12, 18, 9, 18, and 14 minutes. What is the system throughput, and which intervention would most increase it?",
+    "options": [
+      "Throughput 1/12 units per minute; speed up the first step to set a faster pace for all downstream steps",
+      "Throughput 1/9 units per minute; the fastest step determines overall output rate by defining the minimum delay",
+      "Throughput 1/14 units per minute; balance all steps to exactly 14 minutes to maximize line efficiency",
+      "Throughput 1/18 units per minute; split or parallelize either 18-minute step to reduce bottleneck cycle time"
+    ],
+    "correctIndex": 3,
+    "explanation": "System throughput in a sequential process is 1 / (longest cycle time) = 1/18 units per minute, because the two 18-minute steps are the binding bottlenecks. The most effective intervention is to split one into parallel sub-steps, halving its effective cycle time. Option A incorrectly identifies the first step as the bottleneck — position in the sequence is irrelevant to throughput. Option B confuses the fastest step with the constraining one; the fastest step never limits throughput. Option C's balancing logic is flawed — reducing one 18-minute step still leaves the other at 18.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Southwest Airlines turns an aircraft around in 25 minutes versus an industry average of 55 minutes. At a busy gate, throughput is 2.4 flights per hour. What is the WIP in the turnaround process, and what does low WIP imply strategically?",
+    "options": [
+      "WIP = 132 flights; low WIP means Southwest gates handle more total volume than competitors per day",
+      "WIP = 25 flights; low WIP implies Southwest has more gate slots available to absorb demand spikes",
+      "WIP = 1 flight; low WIP means fewer aircraft sit idle in turnaround, enabling higher revenue-generating utilization",
+      "WIP = 0.4 flights; low WIP is strategically neutral unless all gates operate at maximum utilization"
+    ],
+    "correctIndex": 2,
+    "explanation": "WIP = Throughput × Flow Time = 2.4 flights/hr × (25/60 hr) = 1 flight in process at any gate. A low WIP means aircraft return to revenue-generating flight quickly rather than sitting idle on the ground — the foundation of Southwest's low-cost, high-asset-utilization model. Option A multiplies without unit conversion (2.4 × 55 = 132). Option B uses flow time in minutes as if it were a count of flights. Option D divides rather than multiplies (2.4 / 60 × 10 ≈ 0.4) and misses the strategic implication.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

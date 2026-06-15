@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The bullwhip effect refers to which phenomenon in supply chains?",
+    "options": [
+      "Stockouts occurring when customer demand spikes unexpectedly at retail locations",
+      "Price volatility caused by fluctuating raw material costs at the supplier level",
+      "Lead time variability caused by transportation delays in global logistics networks",
+      "Demand variability amplifying as orders move upstream from retailer to manufacturer"
+    ],
+    "correctIndex": 3,
+    "explanation": "The bullwhip effect describes how small fluctuations in end-customer demand become increasingly amplified as orders are transmitted upstream through the supply chain — a retailer's slight demand increase leads to large manufacturer production swings. It's about order quantity variability, not stockouts, prices, or lead times specifically.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Order batching as a cause of the bullwhip effect occurs when buyers do which of the following?",
+    "options": [
+      "Accumulate orders over time and submit them in large periodic batches rather than continuously",
+      "Place many small, frequent orders rather than consolidating into periodic large orders",
+      "Duplicate orders to multiple suppliers simultaneously to ensure delivery during shortages",
+      "Reduce order sizes during uncertain periods to avoid excess inventory buildup"
+    ],
+    "correctIndex": 0,
+    "explanation": "Order batching means buyers accumulate demand and place infrequent large orders rather than ordering in small quantities continuously. When the batch hits the upstream supplier, it looks like a demand surge, creating unnecessary amplification. Small frequent orders (Option A) would actually reduce the bullwhip. Option C describes shortage gaming. Option D describes precautionary under-ordering.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which information-sharing practice is specifically designed to address the bullwhip effect by giving suppliers visibility into actual retail demand?",
+    "options": [
+      "Electronic data interchange — automating purchase orders between firms in a standard format",
+      "Enterprise resource planning — integrating internal finance, production, and inventory data",
+      "Radio frequency identification — tracking product location through the supply chain in real time",
+      "Vendor-managed inventory — allowing the supplier to monitor and replenish retailer inventory directly"
+    ],
+    "correctIndex": 3,
+    "explanation": "Vendor-managed inventory (VMI) gives suppliers direct visibility into the retailer's actual inventory levels and sales data, allowing them to replenish based on end demand rather than distorted orders. This directly counters the bullwhip. EDI automates order transmission but doesn't fix demand signal distortion. ERP is internal integration, not supply chain visibility. RFID tracks location, not demand signals.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Shortage gaming refers to which buyer behavior that contributes to the bullwhip effect?",
+    "options": [
+      "Canceling orders when prices fall to avoid purchasing at above-market rates",
+      "Delaying payment to suppliers to extend cash flow during periods of high demand",
+      "Reducing order frequencies to qualify for volume discount pricing thresholds",
+      "Inflating order quantities during scarcity to secure allocation, then canceling when supply returns"
+    ],
+    "correctIndex": 3,
+    "explanation": "Shortage gaming occurs when buyers, fearing limited supply, inflate their orders to receive a larger allocation — knowing suppliers may ration. When the shortage ends, they cancel the excess, creating massive demand swings that propagate upstream. Canceling for price reasons is speculative purchasing. Payment delays are a financial tactic. Volume discount ordering is a form of batching, not shortage gaming.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A grocery chain sees weekly store sales of 100 units, but its distribution center orders 200 units from the manufacturer each week. The manufacturer in turn orders 400 units from the raw material supplier. Which cause of the bullwhip effect is most likely driving this?",
+    "options": [
+      "Price fluctuation — suppliers offered a temporary discount, triggering over-purchasing at each tier",
+      "Shortage gaming — all parties believe supply is constrained and are padding orders for safety",
+      "Demand signal distortion — each upstream party uses its own forecast rather than actual POS data",
+      "Lead time variability — long delivery times force each party to order far in advance with large buffers"
+    ],
+    "correctIndex": 2,
+    "explanation": "The classic bullwhip pattern of 100 → 200 → 400 reflects each party forecasting independently and adding safety buffers to an already-buffered signal. This is demand signal distortion — the root cause that Hau Lee's original bullwhip paper identifies. If price discounts were the cause, you'd expect simultaneous spikes across all tiers, not a progressive doubling. Shortage gaming would require a perceived supply constraint. Lead time buffers could contribute but wouldn't alone explain the doubling pattern.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturer shares its real-time production schedule and inventory data with its top three suppliers through a shared portal. Which bullwhip mitigation does this represent?",
+    "options": [
+      "Price stabilization — removing promotional pricing that distorts downstream purchasing behavior",
+      "Lead time reduction — compressing production cycles to reduce order uncertainty upstream",
+      "Information sharing — giving upstream partners actual demand data rather than distorted order signals",
+      "Order smoothing — using rolling forecasts to reduce order-to-order quantity variability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sharing real-time production and inventory data is a direct information-sharing solution — it replaces the distorted, amplified order signal with actual demand information so suppliers can plan accurately. Price stabilization involves eliminating quantity discounts and promotions. Lead time reduction is a separate operational improvement. Order smoothing uses algorithmic techniques to flatten order quantities.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Procter & Gamble implements Collaborative Planning, Forecasting, and Replenishment (CPFR) with Walmart, sharing shelf-level sales data and joint promotional plans. Which bullwhip consequence does this most directly address?",
+    "options": [
+      "Price volatility caused by promotional discounts triggering forward buying at retail level",
+      "Excessive safety stock caused by uncertain demand signals across supply chain tiers",
+      "Transportation cost spikes caused by irregular, large batch shipments from suppliers",
+      "Supplier capacity shortfalls caused by sudden production orders during demand peaks"
+    ],
+    "correctIndex": 1,
+    "explanation": "CPFR's primary impact is reducing forecast uncertainty — by sharing actual sell-through data and aligned promotional plans, each tier can forecast more accurately and reduce safety stock held against demand uncertainty. Option B (price volatility) requires eliminating promotions, which CPFR complements but doesn't solve alone. Transportation irregularity (C) and capacity shortfalls (D) are downstream consequences of the bullwhip, addressed only indirectly by CPFR.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of the following is a consequence of the bullwhip effect that impacts operational performance beyond excess inventory?",
+    "options": [
+      "Reduced product variety because manufacturers simplify product lines to manage demand swings",
+      "Capacity underutilization or overtime from erratic production schedules driven by amplified orders",
+      "Increased customer returns because products produced in excess are eventually sold at lower quality",
+      "Higher product prices because consumers pay for the inefficiency of excess upstream inventory"
+    ],
+    "correctIndex": 1,
+    "explanation": "The bullwhip forces manufacturers into cycles of idle capacity and frantic overtime as amplified order swings arrive — this is a direct operational consequence beyond excess stock. Product variety reduction is a strategic choice, not a bullwhip consequence. Customer returns due to quality issues aren't a standard bullwhip outcome. While costs do rise, 'lower quality products' isn't the mechanism — it's the cost of misaligned production capacity.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer runs a 'buy 3 get 1 free' promotion for 2 weeks. After the promotion ends, the retailer's orders from the distributor drop sharply for 6 weeks. Which bullwhip cause does this best illustrate?",
+    "options": [
+      "Order batching — the retailer was placing large periodic orders during the discount window",
+      "Price fluctuation and forward buying — customers bought ahead during the promotion, suppressing post-promo demand",
+      "Shortage gaming — the retailer inflated orders expecting promotional inventory to run out early",
+      "Forecast errors — the retailer's demand model failed to account for post-promotion demand normalization"
+    ],
+    "correctIndex": 1,
+    "explanation": "Promotional pricing triggers forward buying — customers stock up during the deal, borrowing demand from future periods. The 6-week slump after the promotion is the demand hangover caused by customers consuming their stockpile. This is price fluctuation as a bullwhip cause: artificial demand spikes during promotions followed by artificial troughs. Order batching relates to infrequent large orders without promotions. Shortage gaming requires perceived scarcity. Forecast errors may occur but aren't the root cause here.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain professor states: 'The bullwhip effect proves that supply chain partners cannot be trusted to share accurate demand information.' Which counterargument best challenges this claim?",
+    "options": [
+      "Modern ERP systems automatically correct demand signal distortion before it reaches upstream partners",
+      "Single sourcing agreements legally require all supply chain tiers to share forecasts accurately",
+      "The bullwhip effect occurs even when all partners are acting rationally in their own interest with accurate local data",
+      "The bullwhip effect is only observed in global supply chains, not domestic ones with shorter lead times"
+    ],
+    "correctIndex": 2,
+    "explanation": "The bullwhip effect doesn't require dishonesty or distrust — it can emerge from each party acting rationally on their own local information while adding safety buffers against uncertainty. The problem is structural, not behavioral. ERP does not automatically fix inter-company demand signal distortion. Legal contracts don't address the rational buffering behavior. The bullwhip occurs in domestic chains too, though global lead times worsen it.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturer switches from weekly to daily order cycles with its suppliers. Which bullwhip mitigation strategy does this represent, and what is its primary mechanism?",
+    "options": [
+      "VMI — the supplier now controls replenishment frequency to eliminate buyer order distortion",
+      "Lead time reduction — daily cycles compress the response window, reducing forecast horizon uncertainty",
+      "Order frequency increase — reducing batch size smooths the demand signal reaching the supplier",
+      "Price stabilization — daily orders prevent buyers from accumulating forward buys during discounts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Moving from weekly to daily orders reduces order batching — instead of one large weekly order creating a demand spike, seven smaller daily orders spread the same demand evenly. This directly smooths the demand signal the supplier sees. VMI requires the supplier to own the replenishment decision. Lead time reduction is a different lever (compressing delivery time, not order frequency). Price stabilization involves removing promotions, not changing order frequency.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "During a semiconductor shortage, smartphone manufacturers dramatically increased their chip orders far beyond current demand. Six months later, orders collapsed as internal inventories exceeded years of supply. Which bullwhip mechanism does this cycle illustrate?",
+    "options": [
+      "Shortage gaming combined with order batching — inflated orders during scarcity followed by mass cancellations",
+      "Forecast error — manufacturers used incorrect demand models that overstated consumer smartphone demand",
+      "VMI failure — chip suppliers took control of inventory and over-replenished manufacturer warehouses",
+      "Price fluctuation — manufacturers forward-bought when chip prices were low, then stopped when prices rose"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a textbook shortage gaming / bullwhip cycle: fearing allocation rationing during the shortage, manufacturers placed orders far exceeding actual need (shortage gaming), each adding batch-order buffers. When supply normalized, the accumulated excess inventory caused complete demand collapse. Forecast error about end consumer demand may have contributed, but the mechanism is the gaming behavior. VMI wasn't the driver here. Chip prices were rising during the shortage, not falling — so forward buying for price reasons doesn't fit.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following supply chain structural changes most directly eliminates the bullwhip effect rather than merely dampening it?",
+    "options": [
+      "Replacing retailer purchase orders with supplier replenishment triggered by actual consumer POS data",
+      "Implementing rolling 13-week forecasts updated monthly to smooth order variability",
+      "Requiring all supply chain partners to share safety stock levels monthly to improve visibility",
+      "Reducing supplier lead times through lean manufacturing to shorten the forecast horizon"
+    ],
+    "correctIndex": 0,
+    "explanation": "Replacing purchase orders with replenishment triggered by actual POS data (the VMI/CPFR model) eliminates the distorted order signal at its source — suppliers respond to real demand, bypassing all the amplification layers. Rolling forecasts smooth orders but don't eliminate the distorted signal. Sharing safety stock levels improves visibility but doesn't change the fundamental signal structure. Lead time reduction helps but doesn't address demand signal distortion directly.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consulting firm recommends that a food manufacturer eliminate quantity discounts to reduce the bullwhip effect. Which causal mechanism supports this recommendation?",
+    "options": [
+      "Quantity discounts cause order batching because buyers accumulate demand to reach the discount threshold",
+      "Removing quantity discounts forces buyers to place smaller, more frequent orders rather than waiting for price thresholds",
+      "Eliminating discounts gives the manufacturer better revenue predictability to improve production scheduling",
+      "Quantity discounts create price competition among retailers that inflates upstream demand signals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Quantity discounts incentivize buyers to delay orders and accumulate demand until they reach the threshold that triggers the better price — this is order batching caused by price incentives. Removing the discount removes the incentive to batch. Option A reverses the logic (quantity discounts cause batching, not small orders). Revenue predictability (C) is a benefit but not the causal mechanism the question asks about. Price competition among retailers (D) is not how quantity discounts create bullwhip effects.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A supply chain consultant claims: 'Better demand forecasting alone will solve the bullwhip effect.' Which evidence best refutes this claim?",
+    "options": [
+      "Forecast accuracy improvements above 85% provide diminishing returns and rarely reach 100% precision",
+      "The bullwhip arises from structural incentives like order batching and shortage gaming that better forecasting cannot remove",
+      "Modern machine learning algorithms produce equally accurate forecasts at any tier in the supply chain",
+      "Forecast sharing costs exceed the inventory savings for most small and mid-sized supply chains"
+    ],
+    "correctIndex": 1,
+    "explanation": "Better forecasting addresses demand uncertainty but not the structural causes of the bullwhip — a perfectly accurate forecast doesn't stop a buyer from order-batching for transportation efficiency or gaming orders during perceived scarcity. These behaviors amplify demand signals regardless of forecast quality. Diminishing returns to accuracy (A) is true but a weak refutation. Equal algorithm accuracy (C) is irrelevant to the argument. Cost comparisons (D) are contextual and don't refute the core claim.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

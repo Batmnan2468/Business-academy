@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getCourse, getAllTopics } from '@/lib/courses'
+import { getCourse, getAllTopics, getTopicQuestions } from '@/lib/courses'
 import { isLearnContentV2 } from '@/types'
 import LearnTopicContent, { LearnTopicContentLegacy } from '@/components/learn/LearnTopicContent'
 
@@ -22,6 +22,8 @@ export default async function LearnTopicPage({ params }: Props) {
     currentIndex < allTopics.length - 1
       ? { slug: allTopics[currentIndex + 1].slug, title: allTopics[currentIndex + 1].title }
       : null
+
+  const checkpointQuestions = getTopicQuestions(courseSlug, topicSlug)
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
@@ -45,6 +47,7 @@ export default async function LearnTopicPage({ params }: Props) {
             topicSlug={topicSlug}
             learnV2={topic.learn}
             nextTopic={nextTopic}
+            checkpointQuestions={checkpointQuestions}
           />
         ) : (
           <LearnTopicContentLegacy
@@ -52,6 +55,7 @@ export default async function LearnTopicPage({ params }: Props) {
             topicSlug={topicSlug}
             learnLegacy={topic.learn}
             nextTopic={nextTopic}
+            checkpointQuestions={checkpointQuestions}
           />
         )
       ) : (

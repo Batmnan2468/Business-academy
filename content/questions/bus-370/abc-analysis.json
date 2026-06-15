@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is ABC analysis in inventory management?",
+    "options": [
+      "A method for classifying inventory items by their alphabetical order in the supplier catalog",
+      "A technique for grading supplier performance across three quality tiers based on defect rates",
+      "A classification system that groups inventory items by their relative importance, typically measured by annual usage value",
+      "A financial accounting method for valuing inventory using average, base, and current cost methods"
+    ],
+    "correctIndex": 2,
+    "explanation": "ABC analysis categorizes inventory items into three groups — A (most important), B (moderate), and C (least important) — based on annual usage value (unit cost × annual demand). The goal is to direct management attention and resources to the items that matter most financially. Option A is alphabetical ordering, not a value-based classification. Option B describes supplier scorecarding. Option D describes inventory accounting methods unrelated to operational classification.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statement best describes the Pareto principle as applied to inventory management?",
+    "options": [
+      "Roughly 80% of annual inventory value typically comes from 20% of the SKUs in the catalog",
+      "All inventory items should receive equal management attention to ensure no category is neglected",
+      "Exactly 80 items in every 100-item catalog will fall into the A category by annual usage value",
+      "Twenty percent of inventory should be held as safety stock to protect against stockout events"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Pareto principle (80/20 rule) in inventory states that a small fraction of SKUs (roughly 20%) typically account for the majority of annual inventory value (roughly 80%). This justifies focusing tighter controls on A items rather than treating all SKUs equally. Option A rejects the Pareto logic entirely. Option C misapplies the 80/20 guideline as an exact count rather than a pattern. Option D confuses Pareto with a specific safety stock percentage rule.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is cycle counting in inventory management?",
+    "options": [
+      "Counting all inventory simultaneously once a year to produce accurate financial statements",
+      "Calculating the number of replenishment cycles an item completes in a fiscal year based on turnover",
+      "Tracking inventory levels in real time using RFID or barcode scanning at each transaction point",
+      "A continuous audit process where a subset of inventory items is counted on a rotating schedule throughout the year"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cycle counting is an ongoing inventory audit approach where different subsets of items are counted regularly — often daily or weekly — so that the entire inventory is reviewed multiple times per year without shutting down operations. A items are counted most frequently. Option A describes an annual physical inventory count. Option C describes real-time inventory tracking technology. Option D describes inventory turnover calculation, not counting.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retailer finds that 15% of its SKUs account for 78% of annual inventory value. Which ABC classification principle does this illustrate?",
+    "options": [
+      "C items dominate by count but not by value, meaning they should be eliminated from the catalog",
+      "The 80/20 rule has been violated because the threshold is 78%, not exactly 80%, requiring recalibration",
+      "B items are misclassified and should be reclassified as A items to receive greater management attention",
+      "The Pareto principle — a small number of high-value items drive the majority of total inventory investment"
+    ],
+    "correctIndex": 3,
+    "explanation": "The finding that 15% of SKUs represent 78% of value closely mirrors the Pareto principle (80/20 rule) and confirms that ABC analysis applies here — a small group of A items commands the bulk of inventory investment. Option A makes an unjustified conclusion about eliminating C items. Option C incorrectly implies a reclassification is needed based on these numbers alone. Option D misapplies the 80/20 rule as a strict threshold; the pattern, not the exact percentage, defines the principle.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A distribution center counts its A items weekly, B items monthly, and C items quarterly. A manager suggests counting all items monthly to simplify scheduling. What is the main problem with this proposal?",
+    "options": [
+      "Monthly counting of A items is insufficient; high-value, fast-moving items require more frequent verification to catch discrepancies early",
+      "Counting C items monthly wastes labor on low-value items that do not justify the added operational cost",
+      "Quarterly counting of C items is already too frequent; they should only be counted during the annual physical inventory",
+      "The proposal would eliminate cycle counting entirely and replace it with a batch-counting approach incompatible with ABC logic"
+    ],
+    "correctIndex": 0,
+    "explanation": "The core problem is that reducing A items to monthly counts removes the protection that frequent counts provide for the most critical, highest-value inventory. A items drive most of the financial risk — discrepancies in A item counts can represent large losses that go undetected for an entire month. Option B identifies a secondary inefficiency but is not the main risk. Option C is too prescriptive — quarterly C-item counts are common. Option D mislabels the proposal; monthly counting for all items is still a cycle counting approach.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which statement best explains why A items warrant more intensive management attention than C items?",
+    "options": [
+      "A items are ordered more frequently, so supplier relationships for those SKUs require constant renegotiation",
+      "A items are the newest additions to the catalog and have not yet been optimized through historical data analysis",
+      "A items are always the highest-volume products, meaning their picking and packing requires more warehouse labor",
+      "A items have higher annual usage value, so errors, stockouts, or excess inventory have a proportionally larger financial impact"
+    ],
+    "correctIndex": 3,
+    "explanation": "ABC analysis allocates management effort where financial stakes are highest. A items have the greatest annual usage value, so a stockout, overstock, or record error on an A item represents a larger dollar impact than the same error on a C item. Option A incorrectly links A-item classification to ordering frequency — classification is based on value, not frequency. Option C confuses volume with value; a low-volume, high-cost item can be an A item. Option D is incorrect; ABC classification uses current data, not catalog age.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital stocks two items: surgical staples that cost $0.10 each and are used 500,000 times a year (annual value $50,000), and a specialized implant that costs $8,000 each and is used 5 times a year (annual value $40,000). How should these be classified under standard ABC, and what complication arises?",
+    "options": [
+      "Both should be A items based on annual value alone, which shows ABC analysis is sufficient for hospital inventory",
+      "Surgical staples are A and implants are C because volume always dominates value in a medical setting",
+      "Staples are likely A by value, but implants may also need A-level management due to criticality despite moderate annual value",
+      "Implants are B items because their annual value is below the staples, so they need only monthly cycle counts"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standard ABC classifies by annual usage value. Staples ($50,000) rank higher than implants ($40,000), so both might be A or borderline A/B depending on other SKUs. But the complication is criticality: a stockout on a $8,000 implant during surgery is catastrophic regardless of its annual value. This is why hospitals layer criticality overrides onto ABC analysis — some low-value or moderate-value items receive A-level management because a stockout is medically unacceptable. Option A ignores the classification question. Option B is wrong — volume does not override value in ABC. Option D incorrectly assigns B status based only on relative annual value.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A pharmaceutical company adds an XYZ dimension to its ABC analysis, classifying items by demand variability (X=stable, Y=variable, Z=unpredictable). An item classified AZ would require which management approach?",
+    "options": [
+      "High safety stock and tight monitoring because the item is high-value (A) with highly unpredictable demand (Z)",
+      "Minimal safety stock because A items have predictable demand that rarely requires buffer inventory",
+      "Reduced order frequency because high variability means the item should be ordered only when demand patterns stabilize",
+      "Supplier consolidation to reduce the number of sources and smooth demand variability through contract terms"
+    ],
+    "correctIndex": 0,
+    "explanation": "An AZ item is both high in annual usage value (A) and highly unpredictable in demand (Z), creating the most challenging inventory management scenario. It requires frequent attention, tight monitoring, elevated safety stock to buffer uncertainty, and possibly specialized forecasting. Option A mistakes A classification for stable demand — ABC measures value, not variability; that is what XYZ adds. Option C reduces ordering, which would increase stockout risk for an unpredictable item. Option D addresses one potential mitigation but does not capture the full management requirement.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer applies ABC analysis and finds that 70% of its SKUs are C items generating only 5% of revenue. A manager proposes eliminating all C items. What is the most significant risk of this action?",
+    "options": [
+      "Eliminating C items will reduce ordering costs, causing the EOQ for remaining A items to increase significantly",
+      "C items may fulfill customer expectations for product variety; removing them could drive customers to competitors who carry a full range",
+      "C items always have the highest safety stock, so eliminating them would destabilize the company's overall buffer inventory",
+      "ABC analysis cannot identify which C items to eliminate because it does not measure customer satisfaction scores"
+    ],
+    "correctIndex": 1,
+    "explanation": "The risk of eliminating C items is a reduction in assortment breadth that customers may value even if individual SKUs have low sales volume. In retail, customers often make store choices based on the breadth of selection — a grocery store that stops stocking a niche product may lose a customer who buys many other items there. Option A incorrectly links C-item elimination to EOQ for unrelated A items. Option C reverses the relationship; C items typically have low, not high, safety stock. Option D is incorrect; ABC analysis can absolutely flag which C items exist, even if it cannot measure satisfaction directly.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the primary limitation of using annual usage value as the sole criterion for ABC classification?",
+    "options": [
+      "Annual usage value cannot be calculated for service industries because services have no physical unit cost",
+      "Annual usage value changes every year, making ABC classifications unstable and requiring constant reclassification",
+      "Annual usage value ignores factors like criticality, lead time risk, and substitutability that determine true business impact",
+      "Annual usage value overweights low-cost, high-volume items, systematically misclassifying them as A items"
+    ],
+    "correctIndex": 2,
+    "explanation": "ABC analysis based solely on annual usage value can misclassify items that are critically important for operations or safety but have low annual value — for example, a $5 safety pin that, if missing, shuts down an assembly line. Criticality, supply risk, and substitutability are not captured by the value metric alone, which is why hospitals and manufacturers often augment ABC with criticality overrides or additional classification dimensions. Option A is incorrect — annual usage value can be approximated for services. Option B is true but is a data management challenge, not an inherent conceptual limitation. Option D is incorrect — high-volume, low-cost items can legitimately rank as A items if their total annual value is large.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital applies ABC analysis to its medication inventory. A blood pressure medication costs $0.05 per tablet and is dispensed 2,000,000 times per year (annual value $100,000). A cancer drug costs $15,000 per dose and is used 3 times per year (annual value $45,000). Which item is classified as A, and what override might apply?",
+    "options": [
+      "The cancer drug is A by annual value alone, and no override is needed because cost per unit captures clinical importance",
+      "The blood pressure medication is A by annual value; the cancer drug may still require A-level management due to its criticality and catastrophic stockout consequences",
+      "Both items should be classified as C because hospital inventory is governed by clinical protocols, not annual usage value",
+      "The blood pressure medication is B because daily-use commodities never qualify as A items regardless of annual value"
+    ],
+    "correctIndex": 1,
+    "explanation": "By annual usage value, the blood pressure medication ($100,000) outranks the cancer drug ($45,000) and would be classified A. However, the cancer drug — though lower in annual value — has catastrophic consequences if stocked out: a patient may not receive life-saving treatment. Hospitals apply criticality overrides to ensure such drugs receive A-level monitoring regardless of annual value ranking. Option A is mathematically wrong; $100,000 > $45,000, so the blood pressure medication ranks higher by annual value. Options C and D ignore the standard ABC methodology.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does cycle counting under ABC differ from an annual physical inventory count, and which approach better supports continuous operations?",
+    "options": [
+      "Annual physical counts are more accurate because they capture every item simultaneously, preventing discrepancies from mid-count transactions",
+      "Cycle counting distributes counting throughout the year, allowing operations to continue and catching errors more quickly than a single annual count",
+      "Annual physical counts are faster because all staff focus simultaneously on counting, reducing total person-hours spent per year",
+      "Cycle counting is only appropriate for A items; B and C items always require annual physical counting to maintain accounting accuracy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cycle counting spreads inventory verification across the year by counting subsets of items continuously. A items may be counted monthly or weekly, B items monthly, and C items quarterly. This approach catches discrepancies quickly — errors are found and corrected throughout the year rather than discovered all at once in an annual count that may require shutting down operations. Option A is incorrect; simultaneous counting is actually more prone to disruption and does not prevent transaction errors during the count. Option C is wrong — annual counts typically require significant labor for a concentrated shut-down period. Option D is incorrect; all item categories benefit from cycle counting.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Walmart buyer uses ABC analysis to prioritize which suppliers to audit and renegotiate contracts with. An A-item supplier charges higher prices than the market average. What action does ABC analysis most strongly support?",
+    "options": [
+      "Eliminate the supplier immediately because A items should never be single-sourced from a high-cost vendor",
+      "Reclassify the item as B to reduce audit frequency and deprioritize the cost negotiation effort",
+      "Prioritize renegotiation with this supplier because A items have the highest value impact and even a small price reduction yields large savings",
+      "Accept the higher price because A items are critical and switching suppliers would risk supply continuity"
+    ],
+    "correctIndex": 2,
+    "explanation": "ABC analysis guides where to focus negotiation effort. A items drive the most annual spending, so even a 2% price reduction on an A item saves far more than a 20% reduction on a C item. Walmart would prioritize renegotiating with this supplier precisely because the leverage is greatest where volume and value are highest. Option A is overly prescriptive — single-sourcing risk is real, but elimination is not the automatic conclusion. Option B contradicts the logic of ABC: reclassifying to avoid scrutiny wastes the framework's insight. Option D is a passive response that ignores the financial opportunity ABC analysis highlights.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Pareto analysis is applied to customer complaints at a service center and finds that 3 issue types account for 75% of all complaints. How does this extend the ABC principle beyond inventory?",
+    "options": [
+      "It does not extend — ABC analysis is inventory-specific and cannot be applied to service quality data",
+      "The Pareto principle identifies that a small number of root causes drive most of a problem, allowing focused process improvement with high impact",
+      "The same 20% of customers always drive 80% of complaints, so Pareto analysis is only valid for customer segmentation",
+      "Pareto analysis of complaints reclassifies service issues as A, B, or C items requiring cycle-count-style monitoring"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Pareto principle is a universal prioritization heuristic: a small number of causes, items, or factors typically account for the majority of an effect. Applied to complaints, fixing the top 3 issue types eliminates 75% of the problem — far more efficient than addressing all issues equally. This is the same logic as ABC analysis: focus resources where impact is highest. Option A is incorrect; the Pareto principle applies broadly to quality, complaints, revenue, and many other domains. Option C incorrectly narrows Pareto to customer segmentation only. Option D misapplies inventory-specific cycle counting language to a process improvement context.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An electronics retailer has two similar products: a $500 headphone model that sells 2,000 units/year (annual value $1,000,000) and a $480 headphone model that sells 1,900 units/year (annual value $912,000). ABC analysis places both in the A category. What limitation does this reveal?",
+    "options": [
+      "ABC analysis cannot distinguish between items within the same category, potentially misallocating effort between two nearly identical items",
+      "Both items should be merged into one SKU because their values are too similar to manage independently under ABC",
+      "The ABC model requires recalibration when two A items differ in annual value by less than 10% of the higher item's value",
+      "Annual value differences below $100,000 always indicate data entry errors that must be corrected before ABC analysis proceeds"
+    ],
+    "correctIndex": 0,
+    "explanation": "ABC analysis creates broad categories and does not differentiate between items within the same category. The $88,000 value difference between these two A items might justify different sourcing strategies, promotional priority, or stockout tolerance, but ABC treats them identically. This is a known limitation — ABC tells you which category items belong to, not how to rank items within a category. Option B is an overreach; two different SKUs serve different customer preferences and should not be merged. Option C introduces a nonexistent recalibration rule. Option D mischaracterizes value differences as data errors.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  }
+]

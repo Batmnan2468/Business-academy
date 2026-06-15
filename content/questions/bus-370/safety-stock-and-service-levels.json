@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is safety stock in an inventory system?",
+    "options": [
+      "Extra inventory held as a buffer against uncertainty in demand or supply lead time",
+      "The portion of inventory that depletes steadily to meet expected average demand each period",
+      "The minimum order quantity required to qualify for a supplier's volume discount",
+      "Inventory reserved exclusively for the highest-priority customers during supply shortages"
+    ],
+    "correctIndex": 0,
+    "explanation": "Safety stock is buffer inventory held above the expected demand quantity to protect against uncertainty — demand spikes or supplier delays — that could otherwise cause a stockout. Option A describes cycle stock, which covers predictable average demand. Option C describes a quantity discount threshold, unrelated to safety stock. Option D describes a rationing policy during shortages, not a standing inventory buffer.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statement best defines service level in inventory management?",
+    "options": [
+      "The percentage of customer orders shipped within 24 hours of placement",
+      "The ratio of safety stock to cycle stock held in a distribution center",
+      "The average number of days between a stockout event and inventory replenishment",
+      "The probability that inventory on hand will be sufficient to meet demand during lead time"
+    ],
+    "correctIndex": 3,
+    "explanation": "Service level is the probability of not stocking out during a replenishment cycle — for example, a 95% service level means there is a 5% chance of running out before the next order arrives. Option A describes an order fulfillment speed metric, not service level. Option B describes a stock ratio that is not a standard definition. Option D describes a recovery time after a stockout, not the probability of avoiding one.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the fundamental tradeoff a manager must accept when choosing a higher service level?",
+    "options": [
+      "Higher service levels require shorter lead times, which increases supplier switching costs",
+      "Higher service levels lower cycle stock requirements, shifting cost burden to ordering",
+      "Higher service levels reduce ordering frequency, which increases the risk of large stockout events",
+      "Higher service levels require more safety stock, which increases inventory holding costs"
+    ],
+    "correctIndex": 3,
+    "explanation": "Increasing service level (e.g., from 90% to 99%) requires holding more safety stock to reduce stockout probability, which directly increases holding costs for warehousing, capital, and insurance. Option A is incorrect — lead time is a supplier characteristic, not a result of service level choice. Option C reverses the logic; higher service levels do not reduce order frequency. Option D is wrong; cycle stock is driven by order quantity and demand, not service level decisions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A manager prefers high service levels but ignores holding costs entirely. Which cost is being overlooked?",
+    "options": [
+      "Ordering costs, which rise as order frequency increases to replenish larger safety stock reserves",
+      "Stockout costs, which remain even when service level is high due to residual demand variability",
+      "Transportation costs, which increase when safety stock is held at multiple distribution points",
+      "Holding costs for warehousing, capital, insurance, and obsolescence tied up in excess safety stock"
+    ],
+    "correctIndex": 3,
+    "explanation": "The tradeoff in service level decisions is between stockout risk (reduced by more safety stock) and holding costs (increased by more safety stock). Ignoring holding costs leads to excessive inventory that is expensive to store and ties up capital. Option A is incorrect — ordering costs are driven by order quantity and frequency, not safety stock level. Option B identifies a real cost but not the one being ignored in this scenario. Option D is a secondary logistics cost, not the primary holding cost tradeoff.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retailer uses a 95% service level (z = 1.65), has a daily demand standard deviation of 10 units, and a lead time of 4 days. What is the required safety stock?",
+    "options": [
+      "33 units, calculated as z × σ_d × sqrt(L) = 1.65 × 10 × sqrt(4) = 1.65 × 10 × 2",
+      "66 units, calculated as z multiplied by standard deviation multiplied by lead time directly",
+      "16.5 units, calculated as z multiplied by the standard deviation of daily demand only",
+      "26 units, calculated by dividing lead time demand by the z-score for the target service level"
+    ],
+    "correctIndex": 0,
+    "explanation": "Safety stock = z × σ_d × sqrt(L) = 1.65 × 10 × sqrt(4) = 1.65 × 10 × 2 = 33 units. The square root of lead time is used because demand uncertainty compounds over multiple days in a statistically correct way. Option A (16.5) omits the lead time adjustment entirely. Option B (66) multiplies by lead time directly (×4) instead of by its square root (×2), overstating safety stock. Option D inverts the formula incorrectly.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company targets a 95% service level for its product line. A new manager interprets this as: 'we will fill 95% of individual unit requests.' What is wrong with this interpretation?",
+    "options": [
+      "Nothing is wrong — a 95% service level and a 95% fill rate are mathematically equivalent metrics",
+      "Service level measures cycle-level stockout probability, while fill rate measures individual unit fulfillment; they differ especially when stockouts are large",
+      "Service level refers only to on-time delivery performance, not to inventory availability during lead time",
+      "A 95% service level means 5% of orders are cancelled entirely, while fill rate measures partial fulfillment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Service level (cycle service level) is the probability of not stocking out at all during a lead time period — it says nothing about how many units are unfilled during a stockout. Fill rate (item fill rate) measures the fraction of demand satisfied directly from stock. A 95% cycle service level can coexist with a fill rate above or below 95% depending on the size of stockout events when they occur. Option A treats them as equivalent, which is incorrect. Option C confuses service level with on-time delivery. Option D mischaracterizes both metrics.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hospital sets a 99.9% service level for surgical supplies while a fashion retailer sets a 90% service level for seasonal items. What best explains this difference?",
+    "options": [
+      "The hospital has lower holding costs because medical supplies are compact and require less warehouse space",
+      "The retailer has higher demand variability, which makes achieving 90% easier than the hospital's 99.9% target",
+      "The cost of a stockout differs dramatically — patient harm for the hospital versus lost sales for the retailer",
+      "The hospital orders in smaller batches than the retailer, making high service levels less expensive to maintain"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service level targets reflect the consequences of stockouts. For a hospital, a stockout of surgical supplies can harm or kill a patient, creating catastrophic liability. For a fashion retailer, a stockout on a seasonal item means a lost sale and a disappointed customer — severe but not life-threatening. The asymmetry in stockout consequences drives the dramatic difference in service level targets. Option A is incorrect — medical supplies often require refrigeration and special storage, which can increase holding costs. Option B confuses variability with service level difficulty. Option D is unsupported and unrelated to the service level rationale.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer currently operates at a 95% service level and considers raising it to 99%. Why might this increase cost more than moving from 85% to 95%?",
+    "options": [
+      "Raising service level from 95% to 99% requires a proportionally larger safety stock increase due to the nonlinear relationship between z-scores and service level",
+      "Moving from 85% to 95% is easy because cycle stock alone covers most demand, requiring no additional safety stock",
+      "At 99% service level, ordering costs increase sharply because the company must place emergency orders to avoid stockouts",
+      "The 95% to 99% jump triggers regulatory requirements for additional warehouse inspections that add fixed compliance costs"
+    ],
+    "correctIndex": 0,
+    "explanation": "The relationship between service level and required safety stock is nonlinear because it follows the normal distribution's tail. Moving from 85% (z≈1.04) to 95% (z≈1.65) requires an increase of about 0.61 standard deviations of safety stock. Moving from 95% (z≈1.65) to 99% (z≈2.33) requires an additional 0.68 standard deviations but covers only 4 more percentage points — diminishing marginal return at increasing marginal cost. Option B is incorrect; cycle stock does not eliminate the need for safety stock. Option C is wrong; service level decisions do not directly affect ordering cost. Option D describes a fictional regulatory requirement.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Both demand and lead time are variable for a product. Daily demand has a standard deviation of 8 units, average lead time is 9 days, and lead time standard deviation is 2 days with average daily demand of 20 units. Which formula correctly captures combined safety stock uncertainty?",
+    "options": [
+      "SS = z × (σ_d × sqrt(L) + d × σ_L), adding demand uncertainty and lead time uncertainty linearly",
+      "SS = z × sqrt(L × σ_d² + d² × σ_L²), combining demand and lead time uncertainty via the variance formula",
+      "SS = z × σ_d × sqrt(L) + z × d × σ_L, using separate z-scores for each source of uncertainty",
+      "SS = z × (σ_d + σ_L) × sqrt(d × L), combining standard deviations before adjusting for scale"
+    ],
+    "correctIndex": 1,
+    "explanation": "When both demand and lead time are variable, the combined uncertainty must account for both sources via their variances: SS = z × sqrt(L × σ_d² + d² × σ_L²). This formula combines demand variance (σ_d² scaled by lead time) and lead time variance (σ_L² scaled by average demand squared) under a single square root, consistent with variance addition for independent random variables. Option A adds standard deviations directly, which understates uncertainty (variances, not standard deviations, add independently). Option C uses two z-scores incorrectly. Option D combines terms in a mathematically unsound way.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company serves customers from one central warehouse and considers splitting inventory into three regional warehouses. How does this affect safety stock requirements?",
+    "options": [
+      "Safety stock decreases because splitting inventory geographically reduces each warehouse's lead time",
+      "Safety stock stays the same because total demand across all locations does not change with pooling",
+      "Safety stock increases because three separate locations each require independent buffers against local demand variability",
+      "Safety stock decreases because pooling demand reduces the coefficient of variation at each location equally"
+    ],
+    "correctIndex": 2,
+    "explanation": "When a single pool of inventory is split into multiple locations, each location must independently hold safety stock for its local demand variability. The central warehouse benefits from demand pooling — high demand at one end of the distribution often offsets low demand elsewhere. Once split, this natural hedging is lost, and total safety stock across all three locations exceeds what was needed at the single central warehouse. This is the square root law of inventory pooling. Option A incorrectly links geographic split to lead time reduction. Option B is wrong because pooling effect is lost when inventory is disaggregated. Option D describes the benefit of pooling, which is the opposite of what the question describes.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A demand pooling strategy consolidates inventory for similar products across SKUs. Why does this reduce the total safety stock needed?",
+    "options": [
+      "Pooling reduces cycle stock by combining replenishment orders, lowering the frequency of ordering across SKUs",
+      "When demand across SKUs is not perfectly correlated, aggregate variability is less than the sum of individual variabilities",
+      "Pooling lowers the service level target because customers accept substitution between similar products",
+      "Combined SKUs have lower holding costs per unit due to bulk storage discounts in larger warehouses"
+    ],
+    "correctIndex": 1,
+    "explanation": "Safety stock is driven by demand variability (standard deviation). When two products' demands are not perfectly correlated, their combined standard deviation is less than the sum of their individual standard deviations (by the variance addition rule for non-perfectly-correlated variables). This means pooled inventory requires less total safety stock. Option A confuses pooling's effect on cycle stock rather than safety stock. Option C is incorrect — pooling does not change the service level target. Option D describes an unrelated holding cost benefit.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company uses z = 2.05 for a 98% service level and z = 2.33 for a 99% service level. If daily demand std dev is 15 units and lead time is 9 days, how much more safety stock does the 99% level require compared to 98%?",
+    "options": [
+      "About 12.6 units more, based on the difference in z-scores multiplied by σ_d × sqrt(L)",
+      "About 45 units more, because each percentage point of service level adds 15 units of safety stock",
+      "About 28 units more, using the percentage difference between z-scores applied to average demand",
+      "About 3.5 units more, calculated as the z-score difference divided by lead time days"
+    ],
+    "correctIndex": 0,
+    "explanation": "SS = z × σ_d × sqrt(L). At 98%: 2.05 × 15 × sqrt(9) = 2.05 × 15 × 3 = 92.25 units. At 99%: 2.33 × 15 × 3 = 104.85 units. The difference is 104.85 − 92.25 = 12.6 units. Option B assumes a constant linear rate of 15 units per percentage point, which ignores the nonlinear z-score distribution. Option C applies the percentage difference between z-scores to average demand rather than to the safety stock formula. Option D divides by lead time, which is not part of the marginal calculation.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A luxury retailer achieves a 98% service level on handbags priced at $2,000 each. A commodity retailer targets 90% on $5 paper notebooks. Which factor most justifies this difference in service level targets?",
+    "options": [
+      "The handbag retailer has lower holding costs because luxury items require less warehouse space per dollar of value",
+      "The notebook retailer has higher demand variability, making 90% the practical maximum achievable service level",
+      "The handbag's higher margin and customer loyalty impact make a stockout more costly than a notebook stockout",
+      "Luxury retailers always use higher service levels due to regulatory requirements for premium retail categories"
+    ],
+    "correctIndex": 2,
+    "explanation": "The cost of a stockout depends on the item's margin and the customer's switching behavior. A customer who cannot find a $2,000 handbag may not substitute a competitor's product — the lost sale has high margin impact and potential long-term customer relationship damage. A $5 notebook customer will simply buy another brand. Higher stockout cost per unit justifies the higher holding cost of maintaining a 98% service level. Option A is incorrect — luxury items often require special storage. Option B confuses demand variability with service level achievability. Option D describes a fictional regulation.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain evaluates its safety stock policy for produce. What makes a high service level target particularly costly in this case compared to canned goods?",
+    "options": [
+      "Produce has lower demand variability than canned goods, making it easier to overstock without financial impact",
+      "Perishable inventory held as safety stock may expire before it is used, adding obsolescence cost on top of holding cost",
+      "Canned goods require more refrigeration, making their holding costs higher and safety stock more expensive to maintain",
+      "Safety stock for produce is calculated differently using a spoilage-adjusted z-score unavailable for shelf-stable goods"
+    ],
+    "correctIndex": 1,
+    "explanation": "For perishable items like produce, safety stock that is not used before its expiration must be discarded, adding a spoilage (obsolescence) cost to the standard holding cost. This means high service levels for produce are doubly expensive: more inventory held and a higher fraction of that inventory wasted. Canned goods do not spoil quickly, so excess safety stock can simply carry forward to the next period. Option A is incorrect — produce can have high demand variability. Option C reverses the refrigeration logic. Option D describes a nonexistent spoilage-adjusted z-score.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company reduces safety stock to cut costs. Which operational signal would best indicate the service level has dropped unacceptably?",
+    "options": [
+      "Average inventory levels fall below the previously established EOQ order quantity benchmarks",
+      "Ordering frequency increases as the company compensates for lower safety stock with more frequent replenishments",
+      "Stockout frequency and backorder rates increase, indicating demand is exceeding available inventory during lead time",
+      "Holding costs remain constant despite safety stock reduction, suggesting safety stock was not driving costs"
+    ],
+    "correctIndex": 2,
+    "explanation": "A drop in safety stock will manifest operationally as more frequent stockouts — inventory runs out before replenishment arrives more often. Rising backorder rates and customer complaints signal that the service level has degraded. Option A links EOQ to safety stock without logical connection; EOQ governs order quantity, not safety stock adequacy. Option B is incorrect — ordering frequency is driven by order quantity decisions, not safety stock level. Option D describes a puzzling cost anomaly but is not the operational signal for service level degradation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

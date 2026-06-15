@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import type { Course, Topic } from '@/types'
+import type { Course, Topic, PracticeQuestion } from '@/types'
 import { isLearnContentV2 } from '@/types'
 
 export function getAllTopics(course: Course): Topic[] {
@@ -45,5 +45,16 @@ export function hasPracticeQuestions(courseSlug: string): boolean {
     return fs.existsSync(dir) && fs.readdirSync(dir).length > 0
   } catch {
     return false
+  }
+}
+
+export function getTopicQuestions(courseSlug: string, topicSlug: string): PracticeQuestion[] {
+  try {
+    const filePath = path.join(questionsDir, courseSlug, `${topicSlug}.json`)
+    if (!fs.existsSync(filePath)) return []
+    const raw = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(raw) as PracticeQuestion[]
+  } catch {
+    return []
   }
 }

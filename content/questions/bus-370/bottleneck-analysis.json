@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In operations management, what is a bottleneck?",
+    "options": [
+      "A queue that forms when customer arrival rates exceed average service rates",
+      "Any workstation that operates below its designed capacity during peak demand",
+      "The process step with the lowest capacity that limits overall system throughput",
+      "The step with the highest cost per unit, constraining the profitability of a process"
+    ],
+    "correctIndex": 2,
+    "explanation": "A bottleneck is the resource or step with the least capacity — it sets the ceiling for the entire system's output. Option B describes underutilization, not a bottleneck. Option C describes a queue, which is a symptom of a bottleneck but not the definition. Option D confuses cost constraint with capacity constraint; the highest-cost step is not necessarily the throughput limit.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the central claim of the Theory of Constraints (TOC)?",
+    "options": [
+      "Every process has multiple simultaneous bottlenecks that must be addressed in parallel",
+      "Reducing waste at every workstation equally is the fastest path to higher throughput",
+      "Increasing worker productivity at non-bottleneck stations directly raises system throughput",
+      "A system's output is governed by its single most constrained resource at any given time"
+    ],
+    "correctIndex": 3,
+    "explanation": "TOC holds that every system has at least one constraint, and overall throughput cannot exceed what that constraint allows. Improving non-bottleneck stations does not increase system output — it only creates more inventory in front of the bottleneck. Option A is wrong; TOC focuses on one binding constraint at a time. Option B describes lean thinking, not TOC. Option C is the classic TOC pitfall: local optimization at non-bottleneck points wastes resources.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A factory has three sequential stations with capacities of 80, 50, and 70 units per hour. Which station is the bottleneck?",
+    "options": [
+      "Station 1 with 80 units per hour, because it processes first and creates downstream pressure",
+      "Station 2 with 50 units per hour, because it has the lowest capacity in the sequence",
+      "Station 3 with 70 units per hour, because finished goods accumulate and create back-pressure",
+      "The bottleneck shifts hourly between Stations 2 and 3 depending on variability in arrival rates"
+    ],
+    "correctIndex": 1,
+    "explanation": "The bottleneck is always the step with the lowest capacity — Station 2 at 50 units per hour. No matter how fast Stations 1 and 3 run, the system can only produce 50 units per hour. Option A confuses highest capacity with bottleneck; first-in-sequence has no bearing on which step constrains throughput. Option C's back-pressure logic is incorrect. Option D is wrong in a deterministic model with fixed capacities.",
+    "type": "Application",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does TOC distinguish between 'exploiting' and 'elevating' a constraint?",
+    "options": [
+      "Exploiting maximizes output from the existing constraint without new investment; elevating adds capacity to increase the constraint's limit",
+      "Exploiting adds more capacity to the constraint station; elevating schedules the constraint more carefully to reduce downtime",
+      "Exploiting removes the constraint permanently; elevating is a temporary workaround until investment is approved",
+      "Exploiting reduces demand on the constraint; elevating transfers constraint work to non-bottleneck stations"
+    ],
+    "correctIndex": 0,
+    "explanation": "In TOC's five focusing steps, exploiting means getting the most out of the current constraint without additional investment — scheduling it optimally, reducing its downtime. Elevating means spending money or restructuring to increase the constraint's capacity. Option B swaps the definitions. Option C is incorrect; exploiting does not remove the constraint. Option D describes subordination (step 3 in TOC), not exploitation or elevation.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A production line has four stations with throughput rates of 120, 95, 110, and 130 units per hour. What is the maximum system throughput per 8-hour shift?",
+    "options": [
+      "455 units — the hourly rates summed across all four stations as though they run in parallel",
+      "760 units — the bottleneck rate of 95 units per hour multiplied by the 8-hour shift",
+      "880 units — the average of all four rates multiplied by shift length",
+      "1,040 units — the fastest station rate multiplied by shift length"
+    ],
+    "correctIndex": 1,
+    "explanation": "System throughput is limited by the bottleneck — Station 2 at 95 units per hour. Over an 8-hour shift: 95 × 8 = 760 units. Option A sums station capacities as if they operate in parallel, not in sequence. Option C averages the rates, ignoring that the system is constrained by its weakest link. Option D uses the fastest station, which is never the binding constraint in a sequential process.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Apple's chip manufacturing has a photolithography step running at 60% the speed of adjacent steps. A manager proposes adding a second photolithography machine. Under TOC, how should this proposal be evaluated?",
+    "options": [
+      "Reject it — TOC requires exploiting the constraint fully before any capital investment in elevation",
+      "Accept it immediately — capacity additions at any step improve overall system throughput",
+      "Evaluate it only after confirming photolithography is the current system constraint and exploitation has been maximized",
+      "Accept it only if photolithography has the highest cost per unit in the process"
+    ],
+    "correctIndex": 2,
+    "explanation": "TOC's focusing steps require first confirming which step is the current constraint, then exploiting it (maximizing output with existing resources) before elevating (adding capacity). Option A is partially correct but incomplete — the step must first be confirmed as the constraint, and exploitation must be exhausted. Option B violates TOC; adding capacity at a non-bottleneck produces no throughput gain. Option D uses cost logic, which is irrelevant to TOC's throughput framework.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manager finds that Station B in a five-station line has 30 minutes of unplanned downtime per shift. Under TOC, what is the significance of this downtime?",
+    "options": [
+      "It is critical only if Station B is the system constraint; at a non-constraint station, the idle time can be absorbed by buffer inventory",
+      "Downtime at Station B always reduces final throughput because all sequential steps share the same production rate",
+      "Downtime at Station B reduces utilization uniformly across all downstream stations in the line",
+      "Downtime at any station is equivalent in impact, since every station contributes to total output"
+    ],
+    "correctIndex": 0,
+    "explanation": "TOC distinguishes sharply between downtime at the constraint versus non-constraint stations. If Station B is the bottleneck, 30 lost minutes directly reduces total system output. If Station B has surplus capacity, buffer inventory and idle time absorb the disruption without affecting final throughput. Option B is the error TOC was built to correct. Option C is incorrect; utilization effects are not uniform across stations. Option D treats all stations equally — TOC's core insight is that they are not.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which station should a manager invest in to increase overall throughput in a system with station capacities of 200, 175, 210, and 190 units per hour?",
+    "options": [
+      "Station 1 with 200 units/hr — it processes first and sets the pace for downstream stations",
+      "Station 3 with 210 units/hr — highest capacity offers the most room for scheduling improvement",
+      "Station 4 with 190 units/hr — the final step determines the rate at which finished goods exit",
+      "Station 2 with 175 units/hr — it is the bottleneck and limits total system throughput"
+    ],
+    "correctIndex": 3,
+    "explanation": "Station 2 has the lowest capacity (175 units/hr) and is the bottleneck. Investing in Stations 1, 3, or 4 will not increase throughput because the system is already constrained at 175 units/hr. Option A is wrong — first-in-sequence does not indicate the binding constraint. Option B is backward; the highest-capacity station produces no throughput gain when elevated. Option C is a common error; the last step in sequence does not set the throughput rate.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Toyota assembly line has a bottleneck at the welding station. Management increases welding capacity by 40%. What most likely happens next, according to TOC?",
+    "options": [
+      "A new bottleneck emerges at a previously non-binding station, and throughput increases only to the new constraint's level",
+      "Overall throughput increases by exactly 40% because the only binding constraint has been relieved",
+      "Throughput rises by 40% initially, then returns to its prior level once protective inventory buffers are consumed",
+      "Welding's higher speed causes upstream stations to run short of work, permanently reducing their utilization"
+    ],
+    "correctIndex": 0,
+    "explanation": "When a constraint is elevated, it may no longer be the binding constraint. Throughput rises only until the next weakest link emerges as the new bottleneck. Option B assumes no other constraint exists, which is rarely true in a multi-step process. Option C's buffer logic is incorrect; protective buffers do not reverse throughput gains after elevation. Option D confuses upstream starvation (a real but temporary phenomenon) with a permanent throughput reduction.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturer has five stations (units/hr): A=150, B=130, C=140, D=130, E=160. After elevating Station B to 145 units/hr, what is the new system throughput and which station is the new bottleneck?",
+    "options": [
+      "Throughput = 130 units/hr; Station D at 130 units/hr is now the sole binding bottleneck",
+      "Throughput = 145 units/hr; the elevation makes B no longer constrained, and D becomes the bottleneck",
+      "Throughput = 145 units/hr; raising B removes all constraints because B was the only bottleneck",
+      "Throughput = 150 units/hr; Station A is now the bottleneck because B and D are both above 145"
+    ],
+    "correctIndex": 0,
+    "explanation": "Before elevation, both B and D are tied at 130 units/hr as co-bottlenecks. Raising B to 145 makes D (still at 130) the sole bottleneck, so system throughput remains at 130 units/hr — the elevation did not increase throughput because D was equally constrained. Option B incorrectly says throughput rises to 145, ignoring that D still caps the system at 130. Option C claims one elevation removes all constraints, which is wrong. Option D leaps past D to Station A, ignoring that D remains more constrained at 130.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In TOC's five focusing steps, what does 'subordinate everything else to the constraint' require in a factory context?",
+    "options": [
+      "All non-bottleneck workers should be reassigned to the bottleneck station until its capacity equals adjacent stations",
+      "Non-bottleneck stations should deliberately pace output to the constraint's rate rather than running at full capacity",
+      "Every improvement budget line should be subordinated to constraint investment, defunding all other projects",
+      "The bottleneck should be relocated to the end of the line so it functions as a final quality gate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Subordination means non-bottleneck stations intentionally run at the constraint's rate rather than their own maximum capacity. Running non-bottlenecks at full speed only piles WIP inventory in front of the bottleneck. Option A (reassigning workers) is an exploitation tactic, not subordination. Option C misapplies 'subordinate' as a budget principle — TOC uses it in a scheduling context. Option D relocating the bottleneck would not resolve a capacity constraint and would create a massive queue before the last step.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Throughput accounting (a TOC concept) differs from traditional cost accounting primarily because it:",
+    "options": [
+      "Allocates overhead to products using machine hours rather than direct labor hours as the cost driver",
+      "Treats direct labor as variable and cuts it to improve profitability when demand temporarily falls",
+      "Prioritizes raising throughput (revenue minus truly variable costs) over reducing operating expenses",
+      "Values inventory at fully absorbed cost to reflect total operational spending accurately on the balance sheet"
+    ],
+    "correctIndex": 2,
+    "explanation": "Throughput accounting's priority hierarchy is: raise throughput first, reduce operating expenses second, reduce inventory third. Traditional cost accounting incentivizes cutting labor or overhead and encourages building inventory to absorb fixed costs. Option A describes activity-based costing, not throughput accounting. Option B is a traditional cost-accounting practice that TOC argues leads to perverse decisions. Option D is full absorption costing — TOC explicitly rejects treating unsold inventory as a financial asset.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In the drum-buffer-rope concept, what does the 'rope' represent?",
+    "options": [
+      "The protective inventory buffer placed immediately before the bottleneck to prevent it from starving",
+      "The bottleneck resource whose pace sets the rhythm for the entire production system",
+      "The signal or schedule that ties raw material release at the start of the line to the bottleneck's consumption rate",
+      "The manager who coordinates handoffs between bottleneck and non-bottleneck workstations"
+    ],
+    "correctIndex": 2,
+    "explanation": "In drum-buffer-rope, the rope is the communication mechanism that connects the drum (bottleneck) back to the input of the system — raw materials are only released at the rate the drum consumes them, preventing WIP buildup. Option A describes the buffer, not the rope. Option B describes the drum (the bottleneck that beats the pace). Option D is not a TOC concept — no named managerial role is part of DBR.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Amazon's fulfillment centers face 3x normal holiday demand. The pick station normally runs at 90% of capacity. Which operational response best reflects TOC principles?",
+    "options": [
+      "Hire temporary workers at all stations equally so every step scales proportionally with the demand surge",
+      "Focus all surge capacity resources on whichever station becomes the binding constraint under 3x load",
+      "Pre-build finished inventory before the peak to reduce real-time throughput pressure during the surge",
+      "Raise fulfillment prices during peak demand to reduce order volume to a level the system can sustain"
+    ],
+    "correctIndex": 1,
+    "explanation": "TOC requires identifying the constraint under new demand conditions and concentrating resources there. At 3x demand, the bottleneck may shift from pick to pack to shipping — the team must find and fix each successive constraint. Adding workers uniformly (Option A) wastes resources at non-bottleneck stations. Option C (pre-building inventory) applies to make-to-stock environments and does not address the constraint directly. Option D (raising prices) is a demand management strategy, not an operations response in TOC's framework.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital emergency department has triage as the bottleneck (8 patients/hr vs. 12/hr at registration and 10/hr at treatment). Adding a fast-track triage lane for low-acuity patients reflects which TOC step?",
+    "options": [
+      "Step 1 (identify the constraint) — the analysis is still in the diagnostic phase",
+      "Step 2 (exploit the constraint) — maximizing throughput from the existing triage process without adding resources",
+      "Step 3 (subordinate) — pacing registration to triage's output rate to prevent WIP buildup",
+      "Step 4 (elevate the constraint) — adding a parallel triage lane increases triage's effective total capacity"
+    ],
+    "correctIndex": 3,
+    "explanation": "Adding a new fast-track lane is an elevation — it increases triage's total capacity through additional investment in staffing, space, and process redesign. This is TOC Step 4. Option B (exploit) would mean optimizing the existing single triage process to extract more from it without adding capacity, such as reducing documentation time per patient. Option C (subordinate) would mean deliberately slowing registration to match triage's 8/hr pace. Option A assumes the bottleneck hasn't been identified yet, but the scenario explicitly identifies triage.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

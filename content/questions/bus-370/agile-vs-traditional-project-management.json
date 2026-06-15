@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which project management approach delivers work in fixed-length iterations called sprints?",
+    "options": [
+      "Waterfall — the traditional sequential approach where each phase completes before the next begins",
+      "Critical Path Method — a scheduling technique that identifies the longest sequence of dependent activities",
+      "Scrum — an agile framework that organizes work into short, time-boxed sprints typically 2-4 weeks long",
+      "PRINCE2 — a structured project management methodology with defined stages and governance gates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Scrum is the most widely used agile framework, and sprints — fixed-length work cycles (typically 1-4 weeks) that produce a potentially shippable product increment — are its defining structural element. Waterfall delivers in phases, not sprints. CPM is a scheduling tool. PRINCE2 is a structured traditional methodology with stage gates, not sprints.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The Waterfall project management model is characterized by which fundamental structural principle?",
+    "options": [
+      "Work is organized into parallel workstreams that teams execute simultaneously to maximize speed",
+      "Each project phase must fully complete and be approved before the next phase can begin",
+      "Requirements evolve continuously based on stakeholder feedback throughout the project lifecycle",
+      "Teams self-organize and select their own work from a backlog each week based on capacity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Waterfall is linear and sequential — requirements → design → build → test → deploy happen in order, with each phase formally closed before the next opens. Parallel workstreams describe a different scheduling approach. Evolving requirements describe agile. Self-organizing teams selecting from a backlog are Scrum mechanics.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the Scrum framework, what is the Product Backlog?",
+    "options": [
+      "The prioritized list of all features, requirements, and improvements the product team intends to deliver",
+      "The list of defects and bugs discovered during sprint testing that must be resolved before release",
+      "The set of tasks assigned to each developer for completion during the current sprint",
+      "The documentation of all completed features approved by the Product Owner after sprint review"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Product Backlog is the single, prioritized list of everything the team might build — features, fixes, technical work, and requirements — maintained and ordered by the Product Owner. Defects may appear in the backlog but it's not limited to bugs. The Sprint Backlog (not the Product Backlog) contains tasks selected for the current sprint. Completed and approved work goes into the product increment, not back to the backlog.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Agile project management is most appropriate when which project condition exists?",
+    "options": [
+      "Project requirements are fully defined upfront and unlikely to change throughout the project lifecycle",
+      "Requirements are uncertain or expected to evolve as stakeholders learn from working increments",
+      "The project involves physical construction where rework is prohibitively expensive once work is complete",
+      "Regulatory compliance requires formal documentation of each phase before work can proceed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Agile shines when requirements are uncertain or expected to evolve — software products, new market innovations, and customer-driven platforms where learning from incremental delivery shapes what gets built. Stable, fully-defined requirements favor Waterfall. Physical construction with costly rework favors Waterfall. Heavy regulatory documentation requirements often favor structured Waterfall or hybrid approaches.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Spotify organizes its engineering teams into small, autonomous 'squads' that own specific product areas and deploy continuously. Which project management philosophy does this most resemble?",
+    "options": [
+      "Waterfall — Spotify's stage-gate structure ensures thorough testing before each major release",
+      "Critical Path Method — Spotify maps dependencies between squads to identify release bottlenecks",
+      "PRINCE2 — Spotify's defined governance roles match the PRINCE2 project board structure",
+      "Agile — small autonomous teams, continuous delivery, and iterative improvement match agile principles"
+    ],
+    "correctIndex": 3,
+    "explanation": "Spotify's model (squads, tribes, chapters, guilds) is an agile organizational design — small autonomous teams, rapid iteration, continuous deployment, and decentralized decision-making are all agile principles. Spotify explicitly built its model on Scrum and Kanban principles. CPM and PRINCE2 are structured, planning-heavy approaches antithetical to Spotify's self-organizing culture.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "NASA's James Webb Space Telescope project used traditional Waterfall project management with detailed upfront planning and stage gate reviews. Which project characteristic best justifies this choice over agile?",
+    "options": [
+      "NASA had a large team requiring detailed task coordination through a formal project manager",
+      "NASA's government contractors required a structured methodology for contract compliance reasons",
+      "The project timeline was shorter than typical agile sprints, making iteration impractical",
+      "The telescope's physical components could not be iteratively revised after integration — rework was catastrophically expensive"
+    ],
+    "correctIndex": 3,
+    "explanation": "Webb's physical nature makes iterative delivery impossible — you cannot 'release an MVP telescope' and get customer feedback. Once components are integrated and launched, rework is essentially impossible. Waterfall's comprehensive upfront design and sequential phase gates are appropriate when the cost of defects discovered late is catastrophic. Team size and contractor requirements are real factors but secondary to the fundamental physical irreversibility.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A software team switches from Waterfall to Scrum for a mobile app project. Which challenge is the team most likely to face during the first few sprints?",
+    "options": [
+      "Creating detailed project plans becomes more complex because Scrum requires daily schedule updates",
+      "Stakeholders must accept that requirements cannot be changed once the sprint backlog is set for a sprint",
+      "Product Owners struggle to prioritize a backlog when full requirements are not defined upfront",
+      "Developers resist pair programming and test-driven development required by all Scrum implementations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Teams transitioning from Waterfall often struggle with backlog prioritization because Waterfall conditions stakeholders to expect complete requirements before work begins — in Scrum, the Product Owner must prioritize and make decisions with incomplete information. Scrum does not require daily schedule updates (daily standups track blockers, not schedules). Scrum allows backlog changes between sprints, not mid-sprint. Pair programming and TDD are XP practices, not mandatory Scrum requirements.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A hybrid project management approach combines Waterfall and agile elements. Which project scenario most justifies a hybrid approach?",
+    "options": [
+      "A hardware and software system where hardware design is fixed but embedded software requirements evolve",
+      "A pure software product with no external dependencies and highly uncertain user requirements",
+      "A regulatory compliance project requiring full documentation of every decision and change throughout",
+      "A construction project with a fixed blueprint that prohibits any design changes once approved"
+    ],
+    "correctIndex": 0,
+    "explanation": "A hybrid approach fits when different parts of a project have different characteristics — hardware design benefits from Waterfall's upfront planning (physical components can't be iterated cheaply) while embedded software can evolve iteratively once the hardware interface is locked. Pure software with uncertain requirements (A) suits full agile. Heavy regulatory projects (C) typically suit Waterfall. Fixed construction (D) suits Waterfall throughout.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Spotify's squad model gave teams high autonomy but later faced criticism for creating misalignment between squads working on interdependent features. Which agile scaling challenge does this illustrate?",
+    "options": [
+      "Sprint velocity inconsistency — different squads complete sprints at different speeds, causing integration delays",
+      "Autonomy-alignment tension — highly autonomous teams can optimize locally while diverging from overall product goals",
+      "Product Owner overload — a single Product Owner cannot prioritize backlogs for multiple squads simultaneously",
+      "Definition of Done conflicts — squads developed incompatible quality standards for shared codebases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spotify's primary scaling challenge was the autonomy-alignment tradeoff: squads had great local freedom and speed but struggled to coordinate when their features were interdependent. This is a fundamental agile scaling tension — the decentralization that makes small teams fast creates coordination overhead at scale. Velocity variance (A) and Product Owner capacity (C) are real challenges but not what the Spotify model criticism primarily addresses. Definition of Done (D) is a quality process issue, not the primary alignment problem.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager argues: 'Agile is always better than Waterfall because it allows more flexibility.' Which scenario best challenges this claim?",
+    "options": [
+      "A pharmaceutical clinical trial with FDA-mandated protocol documentation and no approved protocol changes mid-trial",
+      "A project where the client has a fixed budget that cannot accommodate iterative scope adjustments",
+      "A small team project where sprint ceremony overhead exceeds the time spent on productive work",
+      "A creative marketing campaign where the final deliverable concept is undefined until creative review"
+    ],
+    "correctIndex": 0,
+    "explanation": "FDA-mandated clinical trial protocols are a clear case where Waterfall's sequential, documentation-heavy approach is required by regulation — the trial protocol must be formally approved before starting, and mid-trial changes require new FDA submissions. Agile's iterative, evolving-requirements model is incompatible with this regulatory structure. Fixed budget (A) can be managed in both methodologies. Small team overhead (C) is a process efficiency issue, not a fundamental Waterfall vs. agile argument. Undefined creative brief (D) actually favors agile.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A product team running Scrum reports high velocity (story points completed per sprint) but low customer satisfaction. Which diagnosis best explains this pattern?",
+    "options": [
+      "The team is delivering features efficiently but the Product Owner's backlog prioritization misaligns with what customers actually value",
+      "The team is using story points incorrectly — points should measure time, not complexity, to track true velocity",
+      "High velocity indicates the team is rushing work, producing defects that reduce customer experience quality",
+      "Customer satisfaction surveys are a lagging indicator that cannot reflect work completed in recent sprints"
+    ],
+    "correctIndex": 0,
+    "explanation": "Velocity measures how much backlog work gets done — but if the backlog contains the wrong things (technically interesting but customer-irrelevant features), teams can be highly efficient at building what nobody wants. This is the 'build the wrong thing fast' failure mode in agile. Story points measure complexity, not time — but that's not the cause here. High velocity doesn't inherently cause defects. Survey lag is real but doesn't explain sustained low satisfaction.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A large financial institution wants to use agile for a core banking system replacement. Which factor makes this riskier than agile in a startup context?",
+    "options": [
+      "Financial institutions have larger development teams than startups, requiring more sprint planning time",
+      "Agile requires co-located teams, but large banks have distributed global development centers",
+      "Core banking systems have regulatory compliance, data integrity, and integration requirements that are difficult to iterate on incrementally",
+      "Financial institutions have fixed annual budget cycles that conflict with agile's continuous funding model"
+    ],
+    "correctIndex": 2,
+    "explanation": "Core banking replacements are high-stakes because regulatory compliance (SOX, PCI-DSS, Basel III), zero data integrity tolerance, and hundreds of system integrations must all be satisfied — not 'good enough for now' increments. Agile's 'release early, learn from failure' ethos is incompatible with banking systems where failures affect millions of customers and attract regulatory consequences. Team size, distribution, and budgeting are real challenges but secondary to the compliance and integrity requirements.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Scrum Master notices the team consistently completes only 60% of sprint backlog commitments each sprint. Which root cause requires investigation before concluding the team is underperforming?",
+    "options": [
+      "Team velocity is too high — backlog items are being underestimated relative to their true complexity",
+      "Backlog items may be systematically overestimated in scope, interruptions from outside the sprint may be high, or the team's capacity was miscalculated",
+      "Sprint ceremonies are too long, consuming 40% of available development time each sprint",
+      "The Product Owner is adding new items to the sprint backlog mid-sprint, disrupting the team's completion rate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Consistent 60% completion could stem from multiple root causes: backlog items are too large or poorly defined, the team is frequently interrupted by unplanned work outside the sprint, or capacity is miscalculated (vacations, meetings not counted). All must be investigated before labeling the team underperforming. High velocity (A) is a contradiction. 40% on ceremonies (B) is unrealistically high. Mid-sprint additions (D) are a scrum anti-pattern that could contribute but are one of many root causes, not the definitive answer.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which statement accurately captures the core difference between how Waterfall and agile handle project risk?",
+    "options": [
+      "Waterfall eliminates risk through comprehensive upfront planning; agile accepts that all projects carry equal risk",
+      "Agile eliminates requirement risk because stakeholders continuously provide input throughout the project",
+      "Waterfall is higher risk in all situations because changes discovered late are more expensive to address",
+      "Waterfall front-loads risk in the planning phase while agile distributes and discovers risk through iterative delivery"
+    ],
+    "correctIndex": 3,
+    "explanation": "Waterfall attempts to resolve all uncertainty upfront — if planning succeeds, later phases proceed smoothly; if planning fails, risk is realized late and expensively. Agile distributes risk across sprints — each sprint tests assumptions with working software, catching requirement and technical risks early when corrections are cheap. Waterfall doesn't eliminate risk (A). Agile reduces but doesn't eliminate requirement risk (C). Waterfall is not higher risk in all situations — for well-defined stable requirements, Waterfall is efficient (D).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A project transitions from agile to Waterfall halfway through because a regulatory body requires full documentation before approving the next phase. Which implication does this mid-project methodology switch create?",
+    "options": [
+      "The switch improves quality because Waterfall's sequential testing is more rigorous than agile sprint reviews",
+      "The team's velocity will immediately improve because Waterfall eliminates sprint ceremony overhead",
+      "Agile deliverables produced so far may lack the formal documentation required by Waterfall governance processes",
+      "The transition has no impact on project outcomes if the team redefines the sprint backlog as a Waterfall requirements document"
+    ],
+    "correctIndex": 2,
+    "explanation": "Agile teams typically produce minimal documentation — working software over comprehensive docs is an Agile Manifesto principle. Switching to Waterfall mid-project for regulatory approval means the team must retroactively produce formal requirements, design documents, and traceability matrices that were never created during the agile phase. This is a significant overhead. Waterfall testing isn't inherently more rigorous. Velocity doesn't improve by switching — governance documentation creates overhead. Renaming the backlog doesn't satisfy regulatory documentation requirements.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

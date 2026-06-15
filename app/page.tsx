@@ -26,12 +26,20 @@ export default function HomePage() {
             {totalTopics} total topics
           </span>
         </div>
-        <a
-          href="#courses"
-          className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-700 transition-colors"
-        >
-          Start Learning →
-        </a>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="#courses"
+            className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-700 transition-colors"
+          >
+            Start Learning →
+          </a>
+          <a
+            href="/dashboard"
+            className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition-colors"
+          >
+            Go to Dashboard →
+          </a>
+        </div>
       </section>
 
       <EmptyStateBanner allTopicData={allTopicData} />

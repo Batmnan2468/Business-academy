@@ -19,20 +19,27 @@ export default function NavBar() {
     }
   }, [])
 
-  if (savedCount === 0) return null
-
   return (
     <nav className="border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950">
-      <div className="max-w-6xl mx-auto px-4 py-2.5 flex justify-end">
+      <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
         <Link
-          href="/saved-questions"
-          className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+          href="/dashboard"
+          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
         >
-          🚩<span className="hidden sm:inline"> Saved</span>
-          <span className="inline-flex items-center justify-center min-w-[1.25rem] h-5 px-1.5 rounded-full bg-red-500 text-white text-xs font-bold leading-none">
-            {savedCount}
-          </span>
+          Dashboard
         </Link>
+
+        {savedCount > 0 && (
+          <Link
+            href="/saved-questions"
+            className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+          >
+            🚩<span className="hidden sm:inline"> Saved</span>
+            <span className="inline-flex items-center justify-center min-w-[1.25rem] h-5 px-1.5 rounded-full bg-red-500 text-white text-xs font-bold leading-none">
+              {savedCount}
+            </span>
+          </Link>
+        )}
       </div>
     </nav>
   )

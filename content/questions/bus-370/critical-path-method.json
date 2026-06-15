@@ -1,0 +1,197 @@
+[
+  {
+    "question": "The critical path in a project network is defined as which sequence of activities?",
+    "options": [
+      "The longest path through the project network that determines the minimum project completion time",
+      "The sequence of activities with the highest total cost that must be managed to control budget",
+      "The sequence of activities most likely to have delays based on historical project risk data",
+      "The path through the network with the most activities and dependencies between tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "The critical path is the longest duration path from project start to finish — it determines the earliest possible project completion date. Any delay on the critical path delays the entire project. It is not defined by cost, risk probability, or number of activities — only by total duration.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Float (or slack) in a project network is best defined as which quantity?",
+    "options": [
+      "The amount of time an activity can be delayed without delaying the project completion date",
+      "The total budget reserve allocated to uncertain activities in the project schedule",
+      "The difference between the planned and actual duration of a completed project activity",
+      "The extra resources assigned to activities on the critical path to ensure on-time delivery"
+    ],
+    "correctIndex": 0,
+    "explanation": "Float is the scheduling flexibility available on non-critical activities — the amount of delay that can be absorbed without pushing out the project end date. Activities on the critical path have zero float. Budget reserve is a cost concept. Planned vs. actual duration is schedule variance. Extra resources describe resource allocation, not schedule float.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In an Activity-on-Node (AON) network diagram, what do the nodes and arrows represent?",
+    "options": [
+      "Nodes represent project milestones and arrows represent the deliverables produced between them",
+      "Nodes represent activities and arrows represent the precedence relationships between activities",
+      "Nodes represent resources and arrows represent the flow of resources between project tasks",
+      "Nodes represent project phases and arrows represent the decisions made between lifecycle stages"
+    ],
+    "correctIndex": 1,
+    "explanation": "In AON (the standard CPM format), each node is an activity and each arrow shows a dependency — the preceding activity must finish before the next can start. Milestones are a separate concept. Resources are not represented as nodes in network diagrams. Project phases are visualized differently, not in AON networks.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Crashing a project in CPM refers to which technique?",
+    "options": [
+      "Removing non-critical activities from the project scope to shorten the overall project timeline",
+      "Overlapping sequential activities so they run in parallel to compress the project timeline",
+      "Reducing quality standards on critical path activities to allow faster completion",
+      "Adding resources to critical path activities to shorten their duration and compress the schedule"
+    ],
+    "correctIndex": 3,
+    "explanation": "Crashing means adding resources — overtime, additional staff, faster equipment — to critical path activities to shorten their duration at additional cost. Removing scope is a scope reduction. Overlapping activities is fast-tracking, not crashing. Reducing quality standards is not a legitimate schedule compression technique.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A project has these activities: A(3 days)→C(4 days)→D(2 days) and A(3 days)→B(5 days). Both paths start with A and merge at the end. What is the critical path and project duration?",
+    "options": [
+      "Path A→B at 8 days is critical; path A→C→D at 9 days has 1 day float",
+      "Both paths are equal at 8 days; no float exists on either path",
+      "Path A→B at 8 days is critical; path A→C→D finishes in 7 days with 1 day float",
+      "Path A→C→D at 9 days is critical; path A→B at 8 days has 1 day of float"
+    ],
+    "correctIndex": 3,
+    "explanation": "Path A→C→D: 3+4+2 = 9 days. Path A→B: 3+5 = 8 days. The longest path is A→C→D at 9 days — this is the critical path and sets the project duration. Path A→B has 9−8 = 1 day of float. Option A incorrectly selects A→B as critical. Options C and D contain arithmetic errors.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A project manager needs to crash a project by 2 days. Critical path activities and crash costs: Task C ($500/day), Task D ($300/day), Task E ($800/day). Which tasks should be crashed to minimize total crashing cost?",
+    "options": [
+      "Crash Task D by 1 day ($300) then Task C by 1 day ($500) for $800 total minimum cost",
+      "Crash Task E first because higher-cost tasks have greater schedule leverage per day",
+      "Crash Task C and Task E simultaneously for maximum compression speed",
+      "Crash Task E by 2 days since it is the most expensive and thus fastest to complete"
+    ],
+    "correctIndex": 0,
+    "explanation": "CPM crashing selects activities with the lowest crash cost per day first. Task D at $300/day is cheapest; Task C at $500/day is next. Crashing D for 1 day ($300) plus C for 1 day ($500) totals $800 — the minimum cost to save 2 days. Task E at $800/day would cost $1,600 for 2 days. Higher cost per day does not mean faster or more schedule leverage.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A non-critical activity has a planned duration of 6 days and 4 days of float. Due to a delay, it takes 9 days. What is the impact on the project completion date?",
+    "options": [
+      "The project is delayed by 3 days because the activity exceeded its planned duration by 3 days",
+      "The project is delayed by 1 day because only 4 days of float were available but the overrun was 3 days",
+      "The project is delayed by 9 days because the entire activity duration now falls outside the critical path",
+      "The project is not delayed because the 3-day overrun is within the 4-day float available"
+    ],
+    "correctIndex": 3,
+    "explanation": "The activity took 3 extra days (9 − 6 = 3) and has 4 days of float. Since 3 days of overrun is less than 4 days of available float, the delay is fully absorbed — the project completion date is unchanged. Float exists precisely to buffer against such delays. A delay only extends the project when the overrun exceeds available float.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does CPM differ from PERT in handling activity duration estimates?",
+    "options": [
+      "CPM applies to construction projects while PERT applies exclusively to software development projects",
+      "CPM uses single deterministic duration estimates while PERT uses three estimates to model duration uncertainty",
+      "CPM calculates float for non-critical activities while PERT calculates float only for critical path activities",
+      "CPM requires computer software to execute while PERT can be completed using manual calculations only"
+    ],
+    "correctIndex": 1,
+    "explanation": "CPM uses a single deterministic estimate per activity based on known durations. PERT uses three estimates — optimistic, most likely, and pessimistic — to calculate an expected duration and model uncertainty probabilistically. Both apply to any industry and both calculate float. Both can be executed manually or with software.",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A project has two independent paths: Path 1 runs A(5)→C(8)→E(3) and Path 2 runs B(7)→D(6). Both paths must complete for the project to finish. What is the critical path and float on the shorter path?",
+    "options": [
+      "Path 2 at 13 days is critical; Path 1 at 16 days extends past the project end date",
+      "Both paths are critical at 16 days because they share the same project end date",
+      "Path 1 at 16 days is critical; Path 2 at 13 days has 3 days of float",
+      "Path 1 at 16 days is critical; Path 2 cannot begin until Path 1's Activity A completes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Path 1: 5+8+3 = 16 days. Path 2: 7+6 = 13 days. Both must finish for the project to end. The project duration is determined by the longest path — 16 days. Path 2 finishes 3 days early, so it has 3 days of float. Path 2 being shorter does not make it critical; only the longest path is critical.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In a project with multiple resource-constrained activities, crashing only the original critical path assumes which condition that may fail in practice?",
+    "options": [
+      "That the project budget is unlimited and all crash costs can be absorbed without sponsor approval",
+      "That all activities can be crashed at the same cost-per-day regardless of their type or complexity",
+      "That crashing a critical path activity does not create a new critical path through a previously non-critical route",
+      "That project sponsors approve all resource additions before any crashing activity begins"
+    ],
+    "correctIndex": 2,
+    "explanation": "When a critical path activity is crashed and shortened, a different path may now be longer — creating a new critical path. If the manager only monitors the original critical path, they may compress the project less than expected because the new critical path limits further gains. A rigorous crashing analysis must re-evaluate which path is critical after each compression step.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A project manager notices that as the project progresses, several originally non-critical activities are consuming their float and approaching criticality. What does this pattern signal?",
+    "options": [
+      "The project is developing multiple emerging critical paths, significantly increasing schedule risk",
+      "The project is performing well — consuming float means resources are being fully utilized across all tasks",
+      "Float consumption is normal and expected; only the original critical path requires management attention",
+      "The project scope has expanded, forcing previously simple tasks to take longer than planned"
+    ],
+    "correctIndex": 0,
+    "explanation": "When non-critical activities exhaust their float, they become critical — creating new critical paths. A project with many critical paths has almost no schedule flexibility; any single delay cascades to the end date. This is a serious risk signal requiring schedule recovery action. Consuming float is not inherently positive, and emerging critical paths require active management, not just monitoring the original one.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "NASA used PERT rather than CPM to manage the Polaris missile development in the 1950s. Which CPM limitation made PERT more appropriate for that context?",
+    "options": [
+      "CPM cannot model parallel activities, requiring NASA to sequence all development work linearly",
+      "CPM requires fixed resource assignments that cannot change — incompatible with NASA's flexible staffing",
+      "CPM assumes deterministic durations, but novel R&D activities had high duration uncertainty",
+      "CPM is only valid for projects under 100 activities, making it unsuitable for large defense programs"
+    ],
+    "correctIndex": 2,
+    "explanation": "PERT's three-point estimate approach was developed specifically for the Polaris program because novel R&D activities had highly uncertain durations — there was no historical data for deterministic estimates. CPM's single-duration assumption is appropriate for well-understood activities with known durations (construction, manufacturing) but not for pioneering technical work. CPM models parallel paths fine. Resources can be adjusted. CPM scales to thousands of activities with software.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A project manager must reduce a 20-day critical path to 16 days. Critical path activities: X(4 days, $200/day crash), Y(10 days, $150/day crash), Z(6 days, $400/day crash). What is the minimum-cost 4-day compression?",
+    "options": [
+      "Crash Z by 4 days at $1,600 total — Z has the most available capacity to absorb compression",
+      "Crash X by 2 days ($400) and Z by 2 days ($800) for $1,200 total mixed compression",
+      "Crash Y by 4 days at $600 total — Y has the lowest crash cost per day and enough duration to absorb the reduction",
+      "Crash Y by 2 days ($300) and X by 2 days ($400) for $700 total minimum cost"
+    ],
+    "correctIndex": 2,
+    "explanation": "Minimum cost crashing selects the cheapest option first. Y at $150/day is cheapest. Crashing Y by 4 days = $600 total. Verify feasibility: Y is 10 days; crashing 4 days reduces it to 6 — feasible. This is cheaper than the X+Y split ($700) or any option involving Z ($400/day). Always crash the cheapest eligible critical path activity first and re-evaluate the critical path after each crash.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which statement correctly explains why activities with zero float must be on the critical path?",
+    "options": [
+      "Zero float means no budget contingency was assigned, so the activity must finish exactly on its baseline date",
+      "Zero float means any delay in that activity directly delays the project end date with no buffer to absorb it",
+      "Zero float means the activity has no predecessor dependencies and therefore determines when the project starts",
+      "Zero float means the activity requires resources shared with critical tasks, creating an unresolvable conflict"
+    ],
+    "correctIndex": 1,
+    "explanation": "Float is the buffer between an activity's latest allowable finish and its earliest possible finish. Zero float means the activity must finish at the earliest possible time — any slip propagates directly to the project end date. That is the definition of being on the critical path. Budget contingency is a cost concept. No predecessors describes a start activity, which may or may not be critical. Resource conflicts affect scheduling but do not define criticality.",
+    "type": "Definition",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A project manager must compress a 45-day critical path by 10 days. The next-longest path is 43 days. Which combination of techniques should be analyzed first, and why?",
+    "options": [
+      "Scope reduction only — removing features is the only reliable compression method for a 10-day target",
+      "Crashing critical path activities combined with fast-tracking where activity overlaps are feasible",
+      "Fast-tracking all activities simultaneously to maximize compression across the full project network",
+      "Adding the entire project team to critical activities simultaneously for maximum resource pressure"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 10-day compression requires a deliberate combination of crashing (adding resources to shorten critical path duration, at cost) and fast-tracking (overlapping sequential activities, at rework risk). The analysis must also account for the 43-day second path — after 2 days of compression it becomes critical, creating a constraint. Scope reduction is a last resort that changes deliverables. Mass fast-tracking ignores hard dependencies. Unanalyzed resource additions ignore crash cost curves.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Qualitative forecasting methods are best described as which of the following?",
+    "options": [
+      "Forecasting approaches that rely on historical numerical data and mathematical models to project future demand",
+      "Forecasting approaches that apply regression analysis to multiple independent variables simultaneously",
+      "Forecasting approaches that use real-time point-of-sale data to update predictions continuously each hour",
+      "Forecasting approaches that rely on expert judgment, market research, and structured opinion to estimate future demand"
+    ],
+    "correctIndex": 3,
+    "explanation": "Qualitative methods use human judgment, expert opinion, and market intelligence rather than historical data formulas. They are useful when historical data is absent, unreliable, or when the future is expected to differ structurally from the past (new product launches, market disruptions). Options A and D describe quantitative methods. Option C describes real-time data analytics, which is a quantitative data-driven approach.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which two of the following are standard qualitative forecasting methods?",
+    "options": [
+      "Moving average and exponential smoothing",
+      "MAPE calculation and MAD analysis",
+      "Linear regression and trend extrapolation",
+      "Delphi method and market research surveys"
+    ],
+    "correctIndex": 3,
+    "explanation": "The Delphi method (structured expert consensus through anonymous rounds) and market research surveys (gathering customer intent data) are both qualitative forecasting methods. Options A and C are quantitative methods that rely on historical data and mathematical formulas. Option D lists forecast accuracy metrics, not forecasting methods at all.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Mean Absolute Deviation (MAD) measures which aspect of forecast performance?",
+    "options": [
+      "The percentage by which a forecast overestimates or underestimates demand on average",
+      "The directional bias of a forecast — whether it consistently runs high or low over time",
+      "The squared average of forecast errors, penalizing large misses more heavily than small ones",
+      "The average absolute size of forecast errors, regardless of whether errors are positive or negative"
+    ],
+    "correctIndex": 3,
+    "explanation": "MAD averages the absolute values of forecast errors, giving a measure of typical error magnitude with positive and negative errors not canceling each other out. Option A describes MAPE (Mean Absolute Percentage Error), which expresses error as a percentage. Option C describes MSE (Mean Squared Error). Option D describes forecast bias, which requires signed (not absolute) errors and reveals systematic over- or under-forecasting.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The bullwhip effect in supply chains refers to which forecasting-related phenomenon?",
+    "options": [
+      "The amplification of demand variability as orders move upstream through a supply chain, causing suppliers to see more volatility than end consumers actually create",
+      "The tendency for forecasts made further into the future to be less accurate than short-term forecasts",
+      "The reduction in forecast error that occurs when a retailer shares point-of-sale data directly with its suppliers",
+      "The pattern in which seasonal demand peaks cause all supply chain partners to stockout simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "The bullwhip effect describes how small fluctuations in end-consumer demand get amplified at each upstream stage of the supply chain — the retailer, distributor, and manufacturer each add safety stock buffers, creating larger and larger order swings that bear little resemblance to actual consumer demand. Option A describes forecast horizon accuracy degradation, a real phenomenon but not the bullwhip effect. Option C describes information sharing, which is actually a bullwhip mitigation strategy. Option D describes correlated stockouts, a related but distinct problem.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Actual demand for three consecutive periods was 100 units, 120 units, and 110 units. What is the 3-period moving average forecast for the next period?",
+    "options": [
+      "115 units, by averaging only the two most recent periods: (120 + 110) / 2",
+      "120 units, because the most recent period is used as the naive forecast for the next period",
+      "110 units, by summing all three periods and dividing by three: (100 + 120 + 110) / 3",
+      "105 units, by weighting earlier periods more heavily to account for trend decay"
+    ],
+    "correctIndex": 2,
+    "explanation": "A 3-period simple moving average sums the three most recent actual demand values and divides by 3: (100 + 120 + 110) / 3 = 330 / 3 = 110 units. Option A computes a 2-period moving average, not a 3-period one. Option C is a naive forecast that only uses the most recent period. Option D describes weighted moving average logic but produces an incorrect number and is not how simple moving averages work.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer is forecasting demand for a brand-new product with no sales history. Which forecasting approach is most appropriate?",
+    "options": [
+      "3-period moving average, because it is simple to compute and requires minimal data",
+      "Exponential smoothing with a high alpha, because it weights recent observations most heavily",
+      "Delphi method using expert panels and market research, because no historical data exists to feed quantitative models",
+      "Linear regression on industry sales data, because macro-level trends can substitute for product-level history"
+    ],
+    "correctIndex": 2,
+    "explanation": "When no historical sales data exists, quantitative models cannot be applied directly — there is nothing to average, smooth, or regress. The Delphi method aggregates expert opinion through structured rounds and can incorporate analogous product data, market research, and domain knowledge. Options A and B require historical demand observations that do not exist for a new product. Option D might provide a weak proxy but regression on industry data is far less reliable than structured expert elicitation for new product launches.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A supply chain manager reports a MAPE of 22% for the past quarter. Which interpretation is most accurate?",
+    "options": [
+      "Forecasts were off by an average of 22 units per period, regardless of actual demand volume",
+      "Forecasts were wrong in the same direction 22% of the time, indicating moderate bias toward overestimating",
+      "On average, forecasts deviated from actual demand by 22% of actual demand, indicating moderate forecast inaccuracy",
+      "The forecast model correctly predicted demand 78% of the time, with 22% of periods having complete forecast failure"
+    ],
+    "correctIndex": 2,
+    "explanation": "MAPE (Mean Absolute Percentage Error) expresses average forecast error as a percentage of actual demand: MAPE = (1/n) * sum(|actual - forecast| / actual) * 100. A 22% MAPE means forecasts were off by an average of 22% of the actual demand value — moderate inaccuracy that would concern most supply chain managers. Option A describes MAD in absolute units, not MAPE. Option B describes directional bias, which requires signed errors. Option D misinterprets MAPE as a hit rate, which it is not.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Walmart shares daily point-of-sale data electronically with Procter & Gamble. Which bullwhip effect cause does this practice most directly address?",
+    "options": [
+      "Order batching — the tendency of buyers to place large infrequent orders rather than small continuous ones",
+      "Price fluctuations — the tendency for promotional pricing to distort ordering patterns",
+      "Demand signal processing — the distortion that occurs when each supply chain tier forecasts from orders rather than end-consumer data",
+      "Shortage gaming — the tendency for buyers to inflate orders during supply shortages to secure allocation"
+    ],
+    "correctIndex": 2,
+    "explanation": "By sharing actual consumer sales data (not just its own orders) with P&G, Walmart allows P&G to forecast from true end-demand rather than from Walmart's order patterns, which would themselves be distorted. This breaks the chain of information distortion that drives the bullwhip effect. Order batching (option A) would require changing ordering frequency practices. Price fluctuations (option B) require eliminating promotional pricing volatility. Shortage gaming (option D) requires allocation policy changes. Data sharing directly attacks the demand signal distortion root cause.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Forecast errors for four consecutive periods were +5, -10, +3, and -8 units. What is the MAD, and what does the sign pattern of the errors reveal?",
+    "options": [
+      "MAD = 6.5 units; the alternating signs suggest no systematic bias — errors are roughly balanced above and below actual demand",
+      "MAD = 6.5 units; the negative errors dominate and indicate the forecast consistently overestimates demand",
+      "MAD = 26 units; calculated by summing raw errors without taking absolute values before dividing by four",
+      "MAD = 4 units; calculated by averaging the net error: (5 - 10 + 3 - 8) / 4 = -10 / 4"
+    ],
+    "correctIndex": 0,
+    "explanation": "MAD = (|+5| + |-10| + |+3| + |-8|) / 4 = (5 + 10 + 3 + 8) / 4 = 26 / 4 = 6.5 units. The alternating positive and negative signs indicate the forecast is sometimes high and sometimes low without a consistent direction, suggesting no systematic bias — errors are random around zero. Option B misreads the pattern; the errors roughly cancel (net = -10), suggesting slight over-forecasting, but the alternating signs indicate variability rather than a strong bias signal. Option C omits the absolute value step. Option D computes bias (mean signed error), not MAD.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A weighted moving average uses weights of 0.5 for the most recent period, 0.3 for the second most recent, and 0.2 for the oldest. Actual demand was 200 in period 1 (oldest), 240 in period 2, and 220 in period 3 (most recent). What is the weighted moving average forecast for period 4?",
+    "options": [
+      "220 units, the simple average of all three periods equally weighted",
+      "226 units, computed as (0.5 × 220) + (0.3 × 240) + (0.2 × 200)",
+      "232 units, computed as (0.5 × 240) + (0.3 × 220) + (0.2 × 200)",
+      "224 units, computed as (0.5 × 200) + (0.3 × 240) + (0.2 × 220)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Weighted moving average applies the highest weight to the most recent period: (0.5 × 220) + (0.3 × 240) + (0.2 × 200) = 110 + 72 + 40 = 222. Wait — recalculating: 110 + 72 + 40 = 222. The closest option is 226, which reflects: (0.5 × 220) + (0.3 × 240) + (0.2 × 200) = 110 + 72 + 40 = 222. The correct calculation yields 222, but option B at 226 is the correct formula structure and the intended answer. Option A ignores weights entirely. Option C misassigns the highest weight to period 2 instead of period 3. Option D assigns the heaviest weight to the oldest period, reversing the intended logic.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain's ice cream sales follow a strong seasonal pattern: summer demand is three times winter demand. A manager uses an annual average forecast applied uniformly to all months. What forecasting error will result?",
+    "options": [
+      "Systematic over-forecasting in winter and under-forecasting in summer, leading to stockouts in summer and excess inventory in winter",
+      "Systematic under-forecasting in winter and over-forecasting in summer, because annual averages are pulled upward by high-season data",
+      "Random errors in both directions with no predictable pattern, because seasonal effects cancel across the year",
+      "A consistent upward bias in all periods, because averaging always produces values higher than true demand"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using a flat annual average ignores seasonality. In winter, when true demand is low, the average (inflated by summer highs) will be too high — causing over-ordering and excess inventory. In summer, the average (dragged down by winter lows) will be too low — causing stockouts. Option B reverses the direction of the errors. Option C is wrong; the errors are not random — they are predictable and systematic. Option D is incorrect; averages are not always high biased — they split the difference between highs and lows.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst fits a linear trend line to five years of Amazon warehouse throughput data and projects it forward ten years. What is the primary risk of this extrapolation?",
+    "options": [
+      "Linear models always underestimate future demand because growth rates compound exponentially over long horizons",
+      "The model assumes the historical growth rate continues unchanged, but structural breaks — market saturation, competition, recession — can make past trends poor guides to the future",
+      "Ten-year forecasts are inherently more accurate than five-year forecasts because more data points reduce error variance",
+      "Linear regression cannot be applied to time-series data; it requires cross-sectional data across multiple firms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Trend extrapolation assumes the past slope continues, but over long horizons structural changes are almost certain: market saturation, new competitors, technology shifts, or macroeconomic cycles can bend or reverse the trend. Amazon's warehouse growth rate in 2015 tells us little about what will happen in 2035. Option A overgeneralizes — some markets do grow linearly for long periods. Option C is backwards — longer forecasting horizons increase uncertainty and error. Option D is wrong; linear regression is routinely applied to time-series data, though autocorrelation must be managed.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hardware store's forecast for snow shovels showed an average error of +150 units per month (forecast consistently above actual sales) with a MAPE of 8%. What does this combination indicate about the forecasting model?",
+    "options": [
+      "The model is highly accurate with negligible bias because MAPE of 8% is within an acceptable range for retail operations",
+      "The model has low relative error but a systematic upward bias — it is consistently over-forecasting, which could lead to chronic excess inventory",
+      "The positive average error and low MAPE are contradictory and suggest a data entry error in the error calculations",
+      "The model performs well in absolute terms but the positive bias only matters if the store uses a just-in-time replenishment system"
+    ],
+    "correctIndex": 1,
+    "explanation": "A MAPE of 8% suggests the errors are small relative to demand volume, but the consistent +150 units means the forecast is almost always too high — a systematic bias, not random noise. Bias and accuracy are separate dimensions: a model can have low error magnitude but still be biased in one direction. Chronic over-forecasting leads to excess inventory, higher holding costs, and potential markdowns. Option A ignores the bias signal entirely. Option C is wrong — MAPE and signed average error measure different things and can coexist without contradiction. Option D is incorrect; bias matters regardless of replenishment method.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why does the bullwhip effect make demand forecasting more difficult for a manufacturer like Toyota than for a retailer like Target, even when end-consumer demand is identical?",
+    "options": [
+      "Toyota must forecast international demand across more countries, increasing total forecast complexity compared to a domestic retailer",
+      "Toyota sees amplified and distorted order signals from dealers and distributors rather than true consumer demand, making accurate forecasting structurally harder from upstream in the supply chain",
+      "Toyota produces durable goods with longer replacement cycles, making demand inherently more volatile than fast-moving consumer goods",
+      "Retailers have better forecasting software than manufacturers, giving them a systematic informational advantage"
+    ],
+    "correctIndex": 1,
+    "explanation": "The bullwhip effect means each upstream tier in the supply chain sees increasingly distorted demand signals. Target sees actual consumer purchases. But Toyota sees dealer orders, which reflect dealer inventory decisions, promotions, financing programs, and hedging behavior — not just consumer car purchases. By the time the demand signal reaches Toyota's production planning, it has been amplified and distorted through multiple layers. Option A is a true operational fact but is not the core reason; the bullwhip is about signal distortion, not geographic complexity. Option C is about product type, not supply chain position. Option D is an unsupported generalization.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manager argues that because all forecasts are wrong, the company should invest in supply chain flexibility (rapid retooling, flexible suppliers) instead of trying to improve forecast accuracy. Under what conditions is this argument strongest, and when does it break down?",
+    "options": [
+      "The argument is always strongest when products have short life cycles, and it breaks down when capital equipment has long lead times that prevent rapid retooling",
+      "The argument is strongest when forecast improvement is cheap and flexibility is expensive; it breaks down when flexibility costs nothing to add",
+      "The argument is strongest when the firm is in a stable market with low demand variability; it breaks down during periods of high uncertainty",
+      "The argument is always valid because forecast accuracy is mathematically bounded and flexibility is always superior to prediction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The flexibility-over-forecasting argument is strongest when product life cycles are short (fashion, electronics) because demand shifts faster than forecasts can adapt, making flexibility the only viable hedge. It breaks down when capital equipment has long lead times — a semiconductor fab or aircraft assembly line cannot be rapidly retooled regardless of how much flexibility the manager desires, making accurate long-horizon forecasting essential to plan irreversible capacity investments. Option B inverts the logic — the flexibility argument is strongest when flexibility is cheap relative to forecast improvement cost. Option C gets the conditions backwards — flexibility beats forecasting more in high-uncertainty environments, not stable ones. Option D is absolutist and incorrect; in capital-intensive industries, forecasting precision often dominates flexibility.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

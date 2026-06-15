@@ -4,6 +4,7 @@ import Link from 'next/link'
 import PracticeQuestion from './PracticeQuestion'
 import { onTopicCompleted } from '@/lib/mastery'
 import { getTopicState, setTopicState } from '@/lib/topicState'
+import { setLastPracticeVisit } from '@/lib/learnState'
 
 const MASTERY_STREAK = 4
 
@@ -75,6 +76,9 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     } else if (current === 'practiced' && initialMode === 'practice') {
       // Starting directly in practice mode is a new session — risk of regression
       setTopicState(courseSlug, topicSlug, 'inProgress')
+    }
+    if (initialMode === 'practice') {
+      setLastPracticeVisit(courseSlug, topicSlug)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

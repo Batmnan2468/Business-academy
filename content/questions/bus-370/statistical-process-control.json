@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A control chart monitors a production process over time. What does a data point falling outside the upper or lower control limit indicate?",
+    "options": [
+      "A special cause variation has occurred that requires investigation and corrective action",
+      "The process is experiencing normal, random variation within expected statistical bounds",
+      "The product specification limit has been violated and the batch must be rejected",
+      "The sample size used for measurement was too small to produce reliable control data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Points outside control limits signal special cause variation — something unusual has changed in the process that warrants investigation (broken tool, new operator, raw material change). This is distinct from common cause variation (natural random noise within limits) that does not require intervention. Control limits are not specification limits — exceeding them triggers process investigation, not automatic batch rejection. Sample size issues would affect the chart's sensitivity, not produce out-of-control signals.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the difference between common cause variation and special cause variation in a production process?",
+    "options": [
+      "Common cause is planned variation from design changes while special cause is unplanned operator error",
+      "Common cause occurs in manual processes while special cause occurs in automated manufacturing systems",
+      "Common cause variation requires immediate shutdown while special cause is monitored but tolerated",
+      "Common cause is natural random noise inherent to the process while special cause has an identifiable root cause"
+    ],
+    "correctIndex": 3,
+    "explanation": "Common cause variation is the natural, random fluctuation every stable process exhibits — it's always present and expected. Special cause variation comes from a specific, identifiable source (equipment failure, shift change, material lot change) that shouldn't be there. The correct response is to identify and eliminate special causes; common causes require process redesign to reduce, not individual interventions.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The X-bar chart in statistical process control monitors which process characteristic?",
+    "options": [
+      "Individual measurements from a single unit to detect point defects in real time",
+      "The range of variation within subgroups to track process spread or dispersion",
+      "Cumulative defects per unit to assess overall product quality over a production run",
+      "The average (mean) of sample subgroups to track process centering over time"
+    ],
+    "correctIndex": 3,
+    "explanation": "The X-bar chart plots the mean of each sample subgroup over time, tracking whether the process center is shifting. The R chart (range chart) monitors within-subgroup variation (process spread). Individual measurement charts (I-MR) exist for single observations. Cumulative defect tracking is a different tool (c-chart or u-chart for attribute data).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Process capability is measured by comparing which two things?",
+    "options": [
+      "The process average to the target specification value specified in the product design",
+      "The natural variation of the process to the design specification limits set by the customer",
+      "The sample size used in control charting to the total production volume over a shift",
+      "The defect rate observed in production to the defect rate tolerated by regulatory standards"
+    ],
+    "correctIndex": 1,
+    "explanation": "Process capability (Cp, Cpk) measures whether the process's natural variation fits within the customer's specification limits. A capable process has its variation comfortably within specs; an incapable process produces parts outside the allowed range. The comparison is process spread vs. spec spread — not process average to target, not sample sizes, not regulatory benchmarks.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A bottling line fills bottles to an average of 500 mL with a standard deviation of 5 mL. Control limits are set at ±3 standard deviations of the sample mean. What are the upper and lower control limits for samples of n=4?",
+    "options": [
+      "UCL = 507.5 mL, LCL = 492.5 mL — using standard error of the mean for samples of four",
+      "UCL = 515 mL, LCL = 485 mL — using individual measurement standard deviation directly",
+      "UCL = 510 mL, LCL = 490 mL — using ±2 standard deviations for a 95% confidence interval",
+      "UCL = 505 mL, LCL = 495 mL — using ±1 standard deviation to detect small process shifts"
+    ],
+    "correctIndex": 0,
+    "explanation": "For an X-bar chart, control limits use the standard error of the mean: σ/√n = 5/√4 = 2.5 mL. UCL = 500 + 3(2.5) = 507.5; LCL = 500 − 3(2.5) = 492.5. Option A incorrectly uses individual σ (appropriate for I-charts, not X-bar). Options C and D use incorrect sigma multipliers — SPC uses 3σ limits, not 2σ or 1σ.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quality engineer observes seven consecutive data points on a control chart all trending upward, even though none exceed the control limits. What action should she take?",
+    "options": [
+      "No action — all points are within control limits, indicating the process is statistically in control",
+      "Widen the control limits — the upward trend shows the process natural variation is larger than originally estimated",
+      "Investigate the process — a run of seven points in one direction signals a non-random trend indicating special cause",
+      "Reduce the sample size — smaller samples will produce more stable averages and eliminate the apparent trend"
+    ],
+    "correctIndex": 2,
+    "explanation": "SPC rules recognize non-random patterns beyond just out-of-limit points. A run of seven or more consecutive points trending in one direction (runs rule) indicates a systematic shift — a special cause — even if no individual point exceeds limits. The correct response is investigation. Widening limits defeats the purpose of monitoring. Reducing sample size reduces chart sensitivity and doesn't address the underlying shift.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A machining process has Cp = 1.5 but Cpk = 0.8. What does this tell the quality engineer about the process?",
+    "options": [
+      "The process is both centered and capable — both indices exceed the acceptable threshold of 1.0",
+      "The process has adequate spread capability but is off-center, producing output near or beyond one specification limit",
+      "The process is incapable because Cpk below 1.0 means the variation exceeds the specification width",
+      "The Cp and Cpk discrepancy indicates measurement system error that must be corrected before interpreting results"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cp = 1.5 means the process spread is well within the spec width (good potential capability). Cpk = 0.8 means the process is not centered — it's shifted toward or beyond one specification limit. A Cpk below 1.0 means the process is producing output outside specification, despite having enough inherent spread to fit within spec if centered. The fix is to re-center the process mean, not reduce variation.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A production manager wants to reduce process variation to improve quality. Which action specifically addresses common cause variation rather than special cause variation?",
+    "options": [
+      "Redesigning the process flow to reduce inherent variability in raw material handling steps",
+      "Investigating why a machine produced an out-of-control measurement after a shift changeover",
+      "Replacing a broken cutting tool that caused three consecutive out-of-limit measurements",
+      "Retraining an operator whose technique caused measurement data to shift on their shift"
+    ],
+    "correctIndex": 0,
+    "explanation": "Common cause variation is systemic — it's built into the process design and can only be reduced through process redesign or system-level changes. Investigating a shift-changeover anomaly (A), replacing a broken tool (B), and retraining an operator (D) all address identifiable special causes — specific, removable sources of variation. Redesigning the process flow reduces inherent process variability.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturer sets its control limits at ±2 standard deviations instead of the standard ±3. What is the practical consequence of this change?",
+    "options": [
+      "The chart becomes less sensitive to real process changes, increasing the risk of missing a true shift",
+      "The chart improves product conformance by catching more defects before they reach customers",
+      "Specification limits automatically tighten to match the new control limit boundaries",
+      "The false alarm rate increases — in-control points will more often fall outside the tighter limits by chance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Tighter ±2σ limits reduce the range of 'in control' — more points from a perfectly stable process will fall outside by chance (about 5% vs. 0.27% at 3σ). This creates more false alarms, triggering unnecessary investigations. The chart is actually oversensitive, not undersensitive. Catching more 'signals' sounds good but most are false alarms — the real defect rate is unchanged. Spec limits are customer requirements, not derived from control chart settings.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A process produces shafts with a target diameter of 25 mm, LSL = 24.0 mm, USL = 26.0 mm. The process has mean = 24.5 mm and σ = 0.25 mm. Calculate Cp and Cpk, and interpret the result.",
+    "options": [
+      "Cp = 1.33, Cpk = 1.33 — the process is centered and capable within specifications",
+      "Cp = 0.67, Cpk = 0.67 — the process is incapable and off-center, requiring both centering and spread reduction",
+      "Cp = 1.33, Cpk = 0.67 — the process has adequate spread but is shifted toward the lower spec limit",
+      "Cp = 2.00, Cpk = 1.00 — the process is off-center but barely capable with current shift"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cp = (USL − LSL) / (6σ) = (26 − 24) / (6 × 0.25) = 2.0 / 1.5 = 1.33. Cpk = min[(USL − μ) / (3σ), (μ − LSL) / (3σ)] = min[(26 − 24.5)/0.75, (24.5 − 24)/0.75] = min[2.0, 0.67] = 0.67. Cp = 1.33 confirms adequate spread; Cpk = 0.67 shows the process is shifted toward the lower limit, producing parts outside LSL. The fix is to re-center the mean to 25.0 mm.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A process is statistically in control but produces 8% defective output. A manager concludes: 'Since the process is in control, we should leave it alone.' Which error in reasoning does this reflect?",
+    "options": [
+      "Statistical control means the process is stable and predictable, but it may be stably producing unacceptable output",
+      "Statistical control means zero defects, so a defect rate of 8% proves the process is actually out of control",
+      "An 8% defect rate always indicates special cause variation that the control chart failed to detect",
+      "In-control processes cannot be improved — the manager is correct that intervention is not possible"
+    ],
+    "correctIndex": 0,
+    "explanation": "A process can be perfectly 'in control' (stable, predictable, no special causes) while still being incapable of meeting specifications — the control limits are set on process behavior, not customer requirements. An 8% defect rate from an in-control process means the process must be redesigned (reduce variation or re-center) to shift it toward specification. The manager's error is conflating 'in control' with 'acceptable.' Statistical control ≠ zero defects.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An operator adjusts a machine every time a measurement differs from the target, even if the measurement is within control limits. Which SPC principle is being violated, and what is the consequence?",
+    "options": [
+      "The operator is correctly responding to special cause signals, reducing variation through active management",
+      "The operator is applying the wrong control chart type for the measurement data being collected",
+      "Tampering — adjusting a stable process in response to common cause variation increases rather than decreases variation",
+      "Over-inspection — sampling too frequently causes measurement interference that inflates apparent variation"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is tampering — Deming's classic mistake of adjusting a stable process each time an observation differs from target. Because in-control variation is random, adjusting for it adds a second source of variation (the adjustments themselves), making the process less stable. The correct response to in-control variation is to leave the process alone. This is one of Deming's key insights from his 'Red Bead Experiment.'",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Cpk of 2.0 corresponds to approximately what defect rate in a well-centered process?",
+    "options": [
+      "Approximately 2,700 defects per million opportunities — the same as a ±3σ process",
+      "Approximately 3.4 defects per million opportunities — the level achieved by a Six Sigma process",
+      "Approximately 63 defects per million opportunities — the level of a 4.5σ process centered at target",
+      "Approximately 0 defects per million — Cpk of 2.0 guarantees perfect production output"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Cpk of 2.0 means the nearest spec limit is 6σ away — the process produces roughly 3.4 defects per million opportunities when centered, which is the Six Sigma quality standard. A Cpk of 1.0 corresponds to ±3σ (2,700 DPMO). 4.5σ (63 DPMO) is an intermediate level. No real process achieves exactly 0 DPMO — statistical distributions have tails that extend infinitely.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which situation would correctly prompt a quality engineer to use an R chart rather than (or alongside) an X-bar chart?",
+    "options": [
+      "Monitoring whether the process average is shifting over time due to tool wear or material changes",
+      "Tracking whether the within-subgroup spread of measurements is changing over production shifts",
+      "Detecting whether individual product units are falling outside customer specification limits",
+      "Counting the total number of defects produced per production batch across the entire shift"
+    ],
+    "correctIndex": 1,
+    "explanation": "The R (range) chart monitors within-subgroup variation — it detects when the spread of measurements is increasing (e.g., a tool wearing out unevenly, operator inconsistency within a batch). The X-bar chart monitors process centering. Individual spec violations are assessed against spec limits, not control charts. Defects per batch are attribute data tracked with c-charts or p-charts, not R charts.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A production manager sees a control chart with all 25 data points within control limits but alternating above and below the center line in a perfect zigzag pattern. Which SPC conclusion is correct?",
+    "options": [
+      "The process is in control — all points are within control limits, indicating only random variation",
+      "The zigzag indicates the control limits are set too wide, allowing systematic variation to appear controlled",
+      "The alternating pattern indicates a non-random special cause such as two machines or operators alternating",
+      "The pattern is expected for processes with high Cpk ratios and does not require investigation"
+    ],
+    "correctIndex": 2,
+    "explanation": "A consistent alternating pattern (zigzag) is a non-random pattern even if all points fall within control limits — randomness would produce some runs of consecutive points on the same side. This pattern typically indicates two alternating special causes: two machines, two operators, two raw material lots alternating in production. SPC rules for detecting non-random patterns (not just out-of-limit points) flag this for investigation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

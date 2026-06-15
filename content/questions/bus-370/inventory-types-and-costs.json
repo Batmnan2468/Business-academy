@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Which type of inventory consists of materials a manufacturer has purchased but not yet begun processing?",
+    "options": [
+      "Raw materials inventory, waiting to enter the production process",
+      "Work-in-process inventory, partially assembled on the floor",
+      "Finished goods inventory, awaiting shipment to customers",
+      "Safety stock inventory, held as a buffer against demand spikes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Raw materials inventory is stock purchased from suppliers that has not yet entered the production process. Once processing begins, materials become work-in-process (WIP). Finished goods are completed products ready for sale. Safety stock is a strategic buffer category that can apply to any inventory type, not a separate form of raw material.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which statement best describes cycle stock in an inventory system?",
+    "options": [
+      "The portion of inventory that depletes steadily and is replenished with each order",
+      "Inventory that has passed its expiration date and must be written off",
+      "Extra inventory held to protect against unexpected demand surges or supply delays",
+      "Goods that move between facilities as part of the distribution cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cycle stock is the inventory that fluctuates predictably between a maximum level (just after a replenishment order arrives) and a minimum level (just before the next order). It represents the regular working inventory needed to meet expected demand. Safety stock is the extra buffer against uncertainty, making option A the definition of that concept instead. In-transit stock describes goods moving between locations.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does the inventory turnover ratio measure?",
+    "options": [
+      "The percentage of orders fulfilled without a stockout during a period",
+      "How many times a company sells and replenishes its average inventory in a year",
+      "The number of days required to convert raw materials into finished goods",
+      "The ratio of safety stock to cycle stock held at any point in time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inventory turnover measures how frequently a company cycles through its average inventory in a given period, calculated as COGS divided by average inventory. A higher number means inventory is moving quickly. Option A describes service level or fill rate. Option C describes manufacturing cycle time or throughput time. Option D describes a safety stock ratio, not a standard turnover metric.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is an example of a holding cost?",
+    "options": [
+      "The fee charged by a supplier each time a new purchase order is placed",
+      "Lost revenue and expediting fees when a product is out of stock",
+      "Shipping charges incurred when replenishing inventory from a distant supplier",
+      "The cost of warehouse space, insurance, and capital tied up in inventory"
+    ],
+    "correctIndex": 3,
+    "explanation": "Holding costs (also called carrying costs) include warehouse rent, insurance, obsolescence, spoilage, and the opportunity cost of capital tied up in inventory. Option A is an ordering cost — the per-order administrative expense. Option B describes stockout costs. Option D is a transportation cost that is often bundled into ordering cost but is distinct from the cost of physically holding goods in storage.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A company has annual COGS of $2,400,000 and average inventory of $200,000. What is the inventory turnover ratio?",
+    "options": [
+      "8 turns per year, meaning inventory replenishes every 45 days",
+      "12 turns per year, meaning inventory replenishes roughly every 30 days",
+      "24 turns per year, meaning inventory replenishes every 15 days",
+      "6 turns per year, meaning inventory replenishes every 60 days"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inventory turnover = COGS / Average Inventory = $2,400,000 / $200,000 = 12 turns per year. Days of supply = 365 / 12 ≈ 30 days. Option A (8 turns) would require average inventory of $300,000. Option C (24 turns) would require average inventory of only $100,000. Option D (6 turns) would result from dividing by $400,000 in average inventory.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If a company's inventory turns 12 times per year, what is its approximate days of supply?",
+    "options": [
+      "12 days, matching the number of turns directly",
+      "52 days, based on weekly replenishment cycles",
+      "45 days, using a 540-day business year convention",
+      "30 days, representing roughly one month of inventory on hand"
+    ],
+    "correctIndex": 3,
+    "explanation": "Days of supply = 365 / inventory turnover = 365 / 12 ≈ 30.4 days. This means the company holds about one month of inventory on average. Option A confuses the number of turns with the number of days. Option B would apply to 7 turns (365/7≈52). Option D is based on a non-standard year and an incorrect formula.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A Walmart distribution center keeps 500 units of a product to meet average weekly demand and an additional 150 units in case a supplier ships late. Which statement correctly classifies this inventory?",
+    "options": [
+      "The 500 units are safety stock and the 150 units are cycle stock",
+      "Both 500 and 150 units are cycle stock because demand is predictable at Walmart",
+      "Both 500 and 150 units are safety stock because Walmart buffers all risk centrally",
+      "The 500 units are cycle stock and the 150 units are safety stock"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cycle stock meets expected, predictable demand — the 500 units that deplete and are reordered regularly. Safety stock is the buffer held against uncertainty, specifically supply delays or demand surges — the extra 150 units. Option A reverses the two definitions. Option B is wrong because even predictable demand does not convert safety stock into cycle stock. Option D mischaracterizes cycle stock as safety stock.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retailer pays $25 per purchase order for administrative processing and $8 per unit per year for warehouse space. Which cost category does each belong to?",
+    "options": [
+      "$25 is an ordering cost and $8 is a holding cost representing the expense of keeping inventory",
+      "$25 is a stockout cost and $8 is an ordering cost because orders create the need for storage",
+      "$25 is a holding cost and $8 is a stockout cost based on their timing in the supply chain",
+      "$25 is a holding cost and $8 is an ordering cost because the $8 triggers each replenishment"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ordering costs are per-order fixed expenses like purchase order processing, setup, or administrative fees — the $25 per order. Holding costs are ongoing per-unit costs like warehousing, insurance, and capital — the $8 per unit per year. Options A and D incorrectly label the $25 as a holding cost. Option B reverses both definitions entirely.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "As a company increases its order quantity, holding costs rise while ordering costs fall. What is the optimal implication of this tradeoff?",
+    "options": [
+      "Always order in the largest batch possible to minimize per-unit ordering costs",
+      "Order exactly when stockout risk exceeds safety stock capacity to minimize total cost",
+      "The optimal order quantity balances holding and ordering costs at their intersection point",
+      "Order frequency should match production cycles regardless of cost relationships"
+    ],
+    "correctIndex": 2,
+    "explanation": "The total inventory cost curve is U-shaped: holding costs increase with larger orders while ordering costs decrease. The optimal order quantity (EOQ) occurs where total cost is minimized, which coincides with where holding cost equals ordering cost. Option A ignores the rising holding cost of large batches. Option B confuses the safety stock decision with the order quantity decision. Option D ignores cost entirely.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hospital runs out of a critical surgical supply mid-procedure. Which type of inventory cost is most directly illustrated, and why is it different from a retail stockout?",
+    "options": [
+      "Holding cost, because the hospital failed to maintain sufficient warehouse capacity for critical items",
+      "Ordering cost, because the hospital must now expedite an emergency purchase at a premium price",
+      "Stockout cost, which in healthcare includes patient harm and liability beyond lost sales revenue",
+      "Obsolescence cost, because critical supplies must be reordered frequently to stay current"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stockout costs are the consequences of having no inventory when demand occurs. In retail, this usually means lost sales and a frustrated customer. In a hospital, a stockout can directly harm a patient, creating liability, regulatory scrutiny, and reputational damage that dwarf typical retail stockout costs. Option B describes an ordering cost, not a stockout cost. Option A describes a holding cost category. Option D describes obsolescence, which is a holding cost.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A grocery chain turns inventory 52 times per year while a luxury furniture retailer turns inventory 4 times per year. Which interpretation is most accurate?",
+    "options": [
+      "The furniture retailer is more efficient because lower turns mean less wasted ordering effort",
+      "High turns in grocery reflect perishability and low margins requiring rapid movement of goods",
+      "The grocery chain is underperforming because frequent reordering raises total ordering costs",
+      "Both retailers should target 20 turns per year as the industry-neutral optimal benchmark"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inventory turnover is highly industry-dependent. Grocery stores turn inventory rapidly because products are perishable and margins are thin — speed compensates for low per-unit profit. Luxury furniture has high margins, long lead times, and slow-moving SKUs, so low turns are appropriate, not a sign of inefficiency. Option A is backwards — low turns mean more capital tied up in inventory, not less ordering effort. Option C misapplies the cost model. Option D ignores industry differences entirely.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Toyota assembly plant has unusually high work-in-process (WIP) inventory piling up between two workstations. What does this most likely indicate?",
+    "options": [
+      "Demand has surged and the plant is building finished goods ahead of customer orders",
+      "The upstream workstation is a bottleneck producing faster than the downstream station can absorb",
+      "The downstream workstation is a bottleneck processing slower than the upstream station can supply",
+      "Raw materials inventory has been reclassified as WIP to improve financial reporting accuracy"
+    ],
+    "correctIndex": 2,
+    "explanation": "WIP accumulates between stations when the downstream station cannot process work as fast as the upstream station produces it. This downstream bottleneck is the constraint. Option B reverses the logic — if the upstream station were the bottleneck, it would produce too slowly and WIP would not build up. Option A describes finished goods inventory, not WIP between production steps. Option D is not an operational explanation.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A retailer in a stable market with predictable demand considers holding 90 days of safety stock. An advisor calls this excessive. What is the most likely reason?",
+    "options": [
+      "Safety stock should match cycle stock exactly to maintain balanced inventory ratios",
+      "In a stable demand environment, safety stock addresses variability that does not exist, tying up capital unnecessarily",
+      "Holding 90 days of safety stock violates EOQ assumptions about constant demand rates",
+      "Safety stock is only appropriate for items with high ordering costs, not stable consumer goods"
+    ],
+    "correctIndex": 1,
+    "explanation": "Safety stock exists to buffer against demand or supply uncertainty. When demand is stable and predictable, there is little uncertainty to buffer against, making large safety stock reserves wasteful — capital is tied up in inventory that earns no return. Option A introduces a nonexistent 1:1 ratio rule. Option C misapplies EOQ, which governs order quantity, not safety stock levels. Option D is incorrect; ordering cost level does not determine whether safety stock is appropriate.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Amazon uses sophisticated demand forecasting to minimize inventory, while Walmart uses cross-docking to reduce warehouse time. How do these strategies reflect different approaches to inventory cost reduction?",
+    "options": [
+      "Amazon reduces holding costs through forecasting accuracy; Walmart reduces holding costs by moving goods through without storing them",
+      "Amazon reduces ordering costs by batching purchases; Walmart reduces stockout costs through its store network density",
+      "Both companies prioritize ordering cost reduction, with Amazon using automation and Walmart using supplier consolidation",
+      "Amazon focuses on safety stock minimization; Walmart focuses on cycle stock maximization to meet store replenishment"
+    ],
+    "correctIndex": 0,
+    "explanation": "Amazon's forecasting reduces the inventory it needs to hold, directly cutting holding costs (storage, capital, obsolescence). Walmart's cross-docking passes goods from inbound trucks directly to outbound trucks, minimizing warehouse dwell time and therefore storage holding costs. Both strategies attack holding cost from different angles. Option B mischaracterizes Walmart's cross-docking strategy and Amazon's ordering approach. Option C misidentifies the primary cost target for each company.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consumer electronics company holds $5 million in smartphone inventory that is now obsolete after a new model launch. Which inventory cost category does this illustrate, and why is it particularly severe in tech?",
+    "options": [
+      "Ordering cost, because the company over-placed purchase orders relative to actual sell-through demand",
+      "Stockout cost, because failure to stock the new model means lost sales on the current product",
+      "Holding cost in the form of obsolescence, which is amplified in tech by rapid product lifecycle compression",
+      "WIP cost, because partially assembled units cannot be sold and must be reworked at additional expense"
+    ],
+    "correctIndex": 2,
+    "explanation": "Obsolescence is a holding cost — it represents the loss in value of inventory while it sits. In technology, product lifecycles are compressed (months, not years), so inventory held too long can lose most of its value rapidly after a new model release. This makes tech companies like Apple hyper-focused on minimizing finished goods inventory. Option A describes an ordering cost. Option B describes a stockout scenario for the new product, not an obsolescence event for the existing one. Option D describes WIP, which requires partially completed goods.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]
