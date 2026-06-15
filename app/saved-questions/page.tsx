@@ -127,7 +127,7 @@ export default function SavedQuestionsPage() {
   if (!mounted) return null
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-12">
+    <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
       <Link href="/" className="text-sm text-blue-500 hover:underline mb-8 inline-block">
         ← All courses
       </Link>
@@ -162,7 +162,7 @@ export default function SavedQuestionsPage() {
         <div className="space-y-10">
           {groups.map(({ courseSlug, courseTitle, questions }) => (
             <section key={courseSlug}>
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex flex-wrap items-center justify-between gap-y-2 mb-4">
                 <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                   {courseTitle}
                 </h2>

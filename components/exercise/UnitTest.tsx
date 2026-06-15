@@ -161,7 +161,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
                     : 'border-gray-200 dark:border-gray-700'
                 }`}
               >
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 pr-2">
                   <p className="font-medium text-sm text-gray-900 dark:text-gray-100 truncate">
                     {result.title}
                   </p>
@@ -258,7 +258,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
           const isCorrectChoice = i === currentQuestion.correctIndex
 
           let cls =
-            'w-full text-left px-5 py-4 rounded-xl border text-sm font-medium transition-colors '
+            'w-full text-left px-5 py-4 min-h-[48px] rounded-xl border text-sm font-medium transition-colors '
           if (!answered) {
             cls += isSelected
               ? 'border-blue-500 bg-blue-50 dark:bg-blue-950 text-blue-900 dark:text-blue-100'

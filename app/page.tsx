@@ -12,13 +12,13 @@ export default function HomePage() {
   }))
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <section className="mb-16 text-center">
-        <h1 className="text-5xl font-bold tracking-tight mb-4">Business Academy</h1>
-        <p className="text-xl text-gray-500 mb-6">
+    <main className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+      <section className="mb-10 sm:mb-16 text-center">
+        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Business Academy</h1>
+        <p className="text-base sm:text-xl text-gray-500 mb-6">
           Master your NC State business courses before you walk in the door.
         </p>
-        <div className="flex justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gray-100 text-sm font-medium text-gray-700">
             {courses.length} courses available
           </span>
@@ -28,7 +28,7 @@ export default function HomePage() {
         </div>
         <a
           href="#courses"
-          className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-700 transition-colors"
+          className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-700 transition-colors"
         >
           Start Learning →
         </a>

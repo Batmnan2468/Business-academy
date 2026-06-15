@@ -73,12 +73,12 @@ export default function LearnModeOverview({ courseSlug, units, topics }: Props) 
       <li key={topic.id}>
         <Link
           href={`/courses/${courseSlug}/learn/${topic.slug}`}
-          className="flex items-center gap-3 px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group"
+          className="flex items-center gap-3 px-5 py-4 min-h-[48px] rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group"
         >
           <LearnStateIcon state={state} />
           <span className="text-xs text-gray-400 tabular-nums w-5 shrink-0">{num}</span>
           <span
-            className={`flex-1 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 ${
+            className={`flex-1 min-w-0 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 ${
               state === 'completed'
                 ? 'text-gray-400 dark:text-gray-500'
                 : 'text-gray-900 dark:text-gray-100'

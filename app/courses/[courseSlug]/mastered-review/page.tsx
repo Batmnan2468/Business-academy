@@ -15,7 +15,7 @@ export default async function MasteredReviewPage({ params }: Props) {
   const allTopics = getAllTopics(course).map(({ slug, title }) => ({ slug, title }))
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-12">
+    <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
       <Link
         href={`/courses/${courseSlug}`}
         className="text-sm text-blue-500 hover:underline mb-8 inline-block"

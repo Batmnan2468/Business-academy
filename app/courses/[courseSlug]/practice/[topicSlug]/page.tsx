@@ -28,7 +28,7 @@ export default async function PracticeTopicPage({ params }: Props) {
     topic.learn && 'explanation' in topic.learn ? topic.learn : undefined
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-12">
+    <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
       <Link
         href={`/courses/${courseSlug}/practice`}
         className="text-sm text-blue-500 hover:underline mb-8 inline-block"

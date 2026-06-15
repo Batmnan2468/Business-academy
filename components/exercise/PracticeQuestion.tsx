@@ -159,7 +159,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
           const isCorrectChoice = i === question.correctIndex
 
           let className =
-            'w-full text-left px-5 py-4 rounded-xl border text-sm font-medium transition-colors '
+            'w-full text-left px-5 py-4 min-h-[48px] rounded-xl border text-sm font-medium transition-colors '
 
           if (!answered) {
             className += isSelected
@@ -198,7 +198,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       <div className="mb-6">
         <button
           onClick={handleSaveToggle}
-          className={`text-xs font-medium transition-colors ${
+          className={`block w-full text-left py-2 text-xs font-medium transition-colors ${
             isSaved
               ? 'text-amber-600 dark:text-amber-400 hover:text-red-500 dark:hover:text-red-400'
               : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'

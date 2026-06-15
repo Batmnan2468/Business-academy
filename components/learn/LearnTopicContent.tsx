@@ -66,14 +66,14 @@ export function LearnTopicContentLegacy({ courseSlug, topicSlug, learnLegacy, ne
         {nextTopic && (
           <Link
             href={`/courses/${courseSlug}/learn/${nextTopic.slug}`}
-            className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+            className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
           >
             Next: {nextTopic.title} →
           </Link>
         )}
         <Link
           href={`/courses/${courseSlug}/practice/${topicSlug}`}
-          className="px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+          className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
         >
           Start Practicing →
         </Link>
@@ -132,19 +132,19 @@ export default function LearnTopicContent({ courseSlug, topicSlug, learnV2, next
       {/* Stage 0 — Opening question */}
       {stage === 0 ? (
         <div>
-          <p className="text-xl font-semibold text-gray-900 dark:text-white leading-snug mb-6">
+          <p className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white leading-snug mb-6">
             {learnV2.openingQuestion}
           </p>
           <textarea
             value={thought}
             onChange={(e) => handleThoughtChange(e.target.value)}
             placeholder="Write your initial thoughts here before seeing the explanation..."
-            className="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-200 px-4 py-3 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-base sm:text-sm text-gray-800 dark:text-gray-200 px-4 py-3 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 min-h-[120px]"
             rows={4}
           />
           <button
             onClick={() => advance(1)}
-            className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+            className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
           >
             {"I've written my thoughts → Reveal Layer 1"}
           </button>
@@ -183,7 +183,7 @@ export default function LearnTopicContent({ courseSlug, topicSlug, learnV2, next
               </div>
               <button
                 onClick={() => advance(2)}
-                className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
               >
                 Continue →
               </button>
@@ -212,7 +212,7 @@ export default function LearnTopicContent({ courseSlug, topicSlug, learnV2, next
               </div>
               <button
                 onClick={() => advance(3)}
-                className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
               >
                 Continue →
               </button>
@@ -286,22 +286,22 @@ export default function LearnTopicContent({ courseSlug, topicSlug, learnV2, next
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                 How did your initial thinking compare?
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <button
                   onClick={() => submitRating('nailed')}
-                  className="px-4 py-2 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium hover:bg-green-200 dark:hover:bg-green-900/60 transition-colors border border-green-200 dark:border-green-800"
+                  className="px-4 py-3 sm:py-2 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium hover:bg-green-200 dark:hover:bg-green-900/60 transition-colors border border-green-200 dark:border-green-800"
                 >
                   ✓ Nailed it
                 </button>
                 <button
                   onClick={() => submitRating('partial')}
-                  className="px-4 py-2 rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-sm font-medium hover:bg-yellow-200 dark:hover:bg-yellow-900/60 transition-colors border border-yellow-200 dark:border-yellow-800"
+                  className="px-4 py-3 sm:py-2 rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-sm font-medium hover:bg-yellow-200 dark:hover:bg-yellow-900/60 transition-colors border border-yellow-200 dark:border-yellow-800"
                 >
                   ~ Partially right
                 </button>
                 <button
                   onClick={() => submitRating('missed')}
-                  className="px-4 py-2 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-medium hover:bg-red-200 dark:hover:bg-red-900/60 transition-colors border border-red-200 dark:border-red-800"
+                  className="px-4 py-3 sm:py-2 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-sm font-medium hover:bg-red-200 dark:hover:bg-red-900/60 transition-colors border border-red-200 dark:border-red-800"
                 >
                   ✗ Missed it
                 </button>
@@ -326,18 +326,18 @@ export default function LearnTopicContent({ courseSlug, topicSlug, learnV2, next
                 </p>
               </div>
 
-              <div className="flex gap-3 flex-wrap">
+              <div className="flex flex-col sm:flex-row gap-3">
                 {nextTopic && (
                   <Link
                     href={`/courses/${courseSlug}/learn/${nextTopic.slug}`}
-                    className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+                    className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
                   >
                     Next Topic → {nextTopic.title}
                   </Link>
                 )}
                 <Link
                   href={`/courses/${courseSlug}/practice/${topicSlug}`}
-                  className="px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
                 >
                   Start Practicing →
                 </Link>

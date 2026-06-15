@@ -28,7 +28,7 @@ export default function NavBar() {
           href="/saved-questions"
           className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
         >
-          🚩 Saved
+          🚩<span className="hidden sm:inline"> Saved</span>
           <span className="inline-flex items-center justify-center min-w-[1.25rem] h-5 px-1.5 rounded-full bg-red-500 text-white text-xs font-bold leading-none">
             {savedCount}
           </span>

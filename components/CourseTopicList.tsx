@@ -147,7 +147,7 @@ function UnitTestRow({
     <li>
       <Link
         href={`/courses/${courseSlug}/unit-test/${unitId}`}
-        className="flex items-center gap-4 px-5 py-4 rounded-xl border-2 border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/20 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group"
+        className="flex items-center gap-4 px-5 py-4 min-h-[48px] rounded-xl border-2 border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/20 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group"
       >
         <span className="text-base shrink-0">📋</span>
         <span className="flex-1 font-semibold text-sm text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300">
@@ -251,7 +251,7 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
       <li key={topic.id}>
         <Link
           href={`/courses/${courseSlug}/${topic.slug}`}
-          className={`flex items-center gap-4 px-5 py-4 rounded-xl border hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group ${borderClass}`}
+          className={`flex items-center gap-4 px-5 py-4 min-h-[48px] rounded-xl border hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group ${borderClass}`}
         >
           {/* Left: state circle + topic number */}
           <div className="flex items-center gap-2 shrink-0">
@@ -260,7 +260,7 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
           </div>
 
           <span
-            className={`flex-1 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 ${
+            className={`flex-1 min-w-0 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 ${
               state !== 'untouched'
                 ? 'text-gray-500 dark:text-gray-500'
                 : 'text-gray-900 dark:text-gray-100'
@@ -297,7 +297,7 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
       </div>
 
       {/* Learn / Practice mode selector */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
         {hasLearnContent ? (
           <Link
             href={`/courses/${courseSlug}/learn`}

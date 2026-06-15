@@ -133,7 +133,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     return (
       <div>
         {/* Header: back link (left) + session score (right) */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-wrap items-center justify-between gap-y-1 mb-6">
           {learn ? (
             <button
               onClick={() => setMode('learn')}
@@ -200,11 +200,11 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
         </p>
       </div>
 
-      <div className="flex items-center gap-4 flex-wrap">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
         <DifficultySelector value={difficulty} onChange={setDifficulty} />
         <button
           onClick={startPractice}
-          className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+          className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
         >
           Start Practicing →
         </button>
