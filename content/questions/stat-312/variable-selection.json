@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A retail analyst at Target is building a regression model to predict quarterly sales. Which of the following best describes the primary goal of variable selection?",
+    "options": [
+      "To identify and retain only the most predictive variables while removing those with little explanatory power",
+      "To include every available variable in the dataset to maximize R-squared",
+      "To ensure all variables have a p-value less than 0.10",
+      "To eliminate variables that have high correlation with the outcome variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variable selection aims to build a parsimonious model with only relevant predictors, improving interpretability and reducing overfitting. Option B is tempting because R-squared increases with more variables, but this leads to overfitting and poor out-of-sample performance. Option C confuses significance thresholds with variable selection. Option D misunderstands correlation direction—predictive variables often correlate with outcomes.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In stepwise forward selection, what is the first variable entered into the model for predicting customer lifetime value at Amazon?",
+    "options": [
+      "The variable with the largest correlation coefficient with the dependent variable",
+      "The variable with the smallest p-value in a univariate regression",
+      "The variable with the highest variance among all predictors",
+      "The variable that reduces the AIC the most"
+    ],
+    "correctIndex": 1,
+    "explanation": "Forward selection enters the variable that is most significantly associated with the outcome in simple regression (smallest p-value). Option A is incorrect because correlation magnitude and statistical significance differ; a weakly correlated variable in a large sample can have a smaller p-value than a strongly correlated variable in a small sample. Option C confuses predictor variance with predictive power. Option D, while related to model quality, describes backward elimination criteria.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which criterion is most appropriate for comparing the fit of two nested linear regression models where Model A has 8 predictors and Model B has 12 predictors, when predicting annual revenue for Nike?",
+    "options": [
+      "Adjusted R-squared",
+      "R-squared",
+      "Pearson correlation coefficient",
+      "Standard error of the regression"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adjusted R-squared penalizes the addition of variables, making it appropriate for comparing nested models of different sizes. Option B (R-squared) always increases or stays the same with additional variables, even if they add no predictive value. Option C measures bivariate association, not model fit. Option D alone does not account for degrees of freedom differences between models.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase is selecting variables for a logistic regression predicting loan default. What is the name of the method that removes variables one at a time, starting with the variable with the highest p-value, until all remaining variables are significant?",
+    "options": [
+      "Backward elimination",
+      "Forward selection",
+      "Stepwise regression",
+      "Elastic net regularization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Backward elimination starts with all variables and removes the least significant (highest p-value) iteratively. Forward selection does the opposite, adding variables. Stepwise regression combines both directions. Elastic net is a regularization method, not a sequential selection procedure. The question describes the backward elimination algorithm specifically.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "At Coca-Cola, a model uses advertising spend ($2.5M), distribution channels (12 regions), and brand loyalty scores to predict quarterly sales. What is multicollinearity?",
+    "options": [
+      "A condition where predictor variables are highly correlated with each other",
+      "The correlation between each predictor and the outcome variable",
+      "The presence of multiple outcome variables in a regression model",
+      "The inflation of R-squared due to adding variables that improve fit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multicollinearity occurs when predictors are highly intercorrelated, causing unstable coefficient estimates. Option B describes predictor-outcome correlation, which is desirable. Option C refers to multivariate regression. Option D describes overfitting, though related, it is not the definition of multicollinearity.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing team at Microsoft is building a model with 25 initial candidates to predict software adoption rates. After computing the variance inflation factor (VIF) for each variable, they find that operating system updates (VIF = 8.2) and software compatibility scores (VIF = 7.9) have very high values. What does this indicate?",
+    "options": [
+      "These two variables are likely highly correlated with each other, and keeping both may destabilize coefficient estimates",
+      "These variables should definitely be removed because their individual effects are weak",
+      "These variables have strong predictive power and should be retained",
+      "The regression model violates the assumption of normality"
+    ],
+    "correctIndex": 0,
+    "explanation": "High VIF (typically >5 or >10) signals multicollinearity among predictors. Removing or combining one of these correlated variables can stabilize estimates. Option B is incorrect—multicollinearity does not necessarily mean weak predictive power; the problem is coefficient instability. Option C reverses the interpretation. Option D confuses multicollinearity with normality assumptions.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs is predicting bond portfolio returns using 40 macroeconomic variables. The analyst applies L1 regularization (lasso) and finds that the coefficient for 'currency volatility' is shrunk to zero. What is the practical interpretation?",
+    "options": [
+      "The lasso has excluded currency volatility from the model because its contribution is minimal after controlling for other variables",
+      "Currency volatility is perfectly correlated with the outcome and should be investigated immediately",
+      "The lasso made a statistical error and the variable should be re-included manually",
+      "Currency volatility has a negative relationship with returns that the lasso failed to detect"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lasso shrinks coefficients to zero by design; when a coefficient becomes exactly zero, that variable is excluded from the model. This indicates the variable adds little explanatory power relative to others in the regularized context. Option B misinterprets perfect correlation. Option C misunderstands lasso as an error-prone procedure; it is a designed feature. Option D confuses shrinkage with sign misdetection.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "At Walmart, a model predicts store revenue using 15 variables including store size (sq ft), employee count, and inventory turnover. The cross-validated mean squared error (CV-MSE) for a 10-variable model is 125,000, while a 15-variable model has CV-MSE of 127,500. What should the analyst conclude?",
+    "options": [
+      "The 10-variable model is preferable because it generalizes better to new data despite lower R-squared on the training set",
+      "The 15-variable model should be used because it includes more information",
+      "Both models perform identically and the choice does not matter",
+      "A new model with fewer than 10 variables should be built immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cross-validated MSE estimates out-of-sample performance; the 10-variable model has lower CV-MSE (125,000 < 127,500), indicating better generalization. This is the purpose of cross-validation—to select models that perform well on unseen data, not just the training set. Option B prioritizes completeness over performance. Option C ignores the numerical difference. Option D premature to conclude without testing smaller models.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An analyst at Intel is building a regression model with 8 predictor variables to forecast CPU demand (measured in millions of units). All variables have p-values less than 0.05. The Akaike Information Criterion (AIC) is 432. After removing 2 variables (both with VIF > 5), the AIC becomes 425 and all remaining variables still have p-values < 0.05. Interpret this result.",
+    "options": [
+      "Removing the 2 variables improved the model because AIC decreased, suggesting the remaining 6 variables provide a better balance of fit and complexity",
+      "Removing variables was a mistake because p-values alone should be the criterion for variable selection",
+      "The original 8-variable model is better because it had more information and higher R-squared",
+      "The models are equivalent because both have all significant variables"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lower AIC indicates a better model after adjusting for the number of parameters. Removing the collinear variables reduced penalty without substantially sacrificing fit, suggesting the removed variables were redundant. Option B relies only on p-values and ignores multicollinearity and model complexity trade-offs. Option C confuses 'more' with 'better'; collinear variables reduce precision despite higher R-squared. Option D ignores the AIC improvement.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A revenue analyst at Netflix is comparing two models: Model A uses 20 variables and achieves R² = 0.875 on training data with 2,400 observations; Model B uses 5 variables and achieves R² = 0.818 on the same training data. When evaluated on a holdout test set of 600 observations, Model A has R² = 0.712 and Model B has R² = 0.801. What does this pattern suggest?",
+    "options": [
+      "Model A is overfitting because its performance degraded much more severely on test data",
+      "Model B has worse predictive ability because its training R² is lower",
+      "The test set is unrepresentative and the results should be ignored",
+      "Model A is superior because it fits the training data better"
+    ],
+    "correctIndex": 0,
+    "explanation": "Model A's sharp drop in R² (0.875 → 0.712, a 16.3 percentage point decline) versus Model B's drop (0.818 → 0.801, a 1.7 percentage point decline) is classic overfitting. The extra 15 variables in Model A exploit training noise without improving generalization. Option B inverts the interpretation—lower training R² with better test performance is a sign of good generalization. Option C incorrectly dismisses valid test results. Option D values training fit over generalization.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A credit risk analyst at Bank of America is selecting variables for predicting 5-year loan default probability. The raw correlation between 'average daily balance' and default is r = 0.31. However, when controlling for 'credit score' in a partial correlation, the correlation becomes r = 0.08. What is the most appropriate conclusion?",
+    "options": [
+      "The apparent relationship between daily balance and default is largely explained by credit score; daily balance is redundant for prediction after controlling for credit score",
+      "Daily balance must be included because it has a positive correlation of 0.31 with default",
+      "Credit score is a suppressor variable and should be removed from the model",
+      "Daily balance and credit score should not be used together due to multicollinearity"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sharp drop in correlation from 0.31 to 0.08 after controlling for credit score indicates that credit score explains most of daily balance's association with default. Daily balance adds little additional predictive information. Option B ignores confounding—the raw correlation does not account for credit score. Option C misdefines suppressor variables (which increase rather than decrease apparent effects). Option D overstates multicollinearity concerns; partial correlation analysis is precisely designed to address this scenario.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A machine learning engineer at Uber is comparing backward elimination, forward selection, and best subset selection for predicting ride-share demand using 18 variables. After running all three methods on the same dataset, backward elimination selects 7 variables, forward selection selects 9 variables, and best subset selection selects 6 variables (based on minimized BIC). Why might these methods produce different variable sets?",
+    "options": [
+      "The three methods use different algorithms and search strategies; backward elimination misses some important variables, forward selection may include redundant ones, while best subset explores all possible combinations and selects based on BIC",
+      "One of the three methods is mathematically incorrect and should never be used",
+      "The methods found different data patterns, indicating the dataset is unreliable",
+      "The results should be identical if the data quality is good; differences indicate a computational error"
+    ],
+    "correctIndex": 0,
+    "explanation": "These are fundamentally different algorithms with distinct search strategies. Backward elimination eliminates greedily from the full model; forward selection adds greedily; best subset compares all possible subsets. They can arrive at different solutions, especially with correlated variables. Option B is false—all three are valid but use different logic. Option C misattributes algorithmic differences to data issues. Option D is incorrect; even perfect data can produce different subsets depending on the selection method and criterion (e.g., p-value threshold vs. BIC).",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A data scientist at Ford is building a model to predict vehicle fuel efficiency (MPG) from 12 engine and design variables. She observes that 'engine displacement' has a VIF of 4.2, which is borderline high but not extreme. However, 'horsepower' has a VIF of 9.8. The correlation between displacement and horsepower is 0.89. Removing horsepower reduces VIF for displacement to 2.1. What does this reveal about the multicollinearity structure?",
+    "options": [
+      "Displacement and horsepower are highly correlated; removing horsepower eliminates most multicollinearity for displacement, suggesting horsepower is the redundant variable",
+      "Displacement is the problematic variable and should be removed instead",
+      "Both variables are equally problematic and should both be removed",
+      "VIF values of 4.2 and 9.8 do not indicate concerning multicollinearity for model building"
+    ],
+    "correctIndex": 0,
+    "explanation": "The high correlation (0.89) and horsepower's higher VIF (9.8 vs 4.2) indicate horsepower is the source of multicollinearity. Removing it restores displacement's VIF to acceptable levels (2.1). This shows horsepower is redundant given displacement. Option B reverses the logic—displacement's lower individual VIF and lower final VIF after horsepower removal indicate it is the less redundant variable. Option C overshoots; removing one solves the problem. Option D is factually wrong; VIF > 5 or > 10 typically signals concern.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A portfolio manager at Fidelity builds two models to predict 12-month stock returns using 8 variables: Model X uses ordinary least squares (OLS) regression; Model Y applies ridge regression with λ = 0.5. On the training set, Model X has MSE = 125 and Model Y has MSE = 142. On the test set, Model X has MSE = 318 and Model Y has MSE = 267. The analyst concludes that ridge regression is better because it reduces overfitting. What critical piece of information is missing from this analysis?",
+    "options": [
+      "The penalty strength λ = 0.5 may not be optimal; cross-validation should have been used to select λ that minimizes test-set error",
+      "Ridge regression is always worse than OLS on the training set, so Model Y's results are invalid",
+      "The sample sizes must be equal for a fair comparison",
+      "R-squared values should be reported instead of MSE"
+    ],
+    "correctIndex": 0,
+    "explanation": "While the analyst's conclusion about overfitting is correct (Model Y generalizes better: 267 < 318), the λ value was chosen arbitrarily without validation. A larger or smaller λ might produce even better test-set MSE. Cross-validation or a held-out validation set should optimize λ before final test-set evaluation. Option B is incorrect—ridge regression intentionally trades training fit for better generalization by introducing bias. Option C assumes unequal samples without justification. Option D is preference-based; MSE is valid for this comparison.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare economist at UnitedHealth Group is predicting annual medical costs using diagnosis codes, age, gender, and comorbidity counts for 50,000 patients. After running stepwise selection, 23 variables enter the model with all p-values < 0.05 and R² = 0.687. However, a simpler model with just age, gender, and total comorbidity count (3 variables) has R² = 0.664 and all coefficients remain stable across multiple random samples. Which model is more suitable for deployment to predict costs for new patient populations, and why?",
+    "options": [
+      "The 3-variable model is preferable because it is simpler, less prone to overfitting, more interpretable, and its stable coefficients suggest better generalization despite marginally lower training R²",
+      "The 23-variable model should be deployed because R² = 0.687 is substantially higher than 0.664",
+      "Neither model is suitable; a machine learning algorithm should be used instead",
+      "The choice depends only on whether p-values are all significant, making the 23-variable model correct"
+    ],
+    "correctIndex": 0,
+    "explanation": "In production, simpler models with stable coefficients across samples generalize better and are easier to maintain and explain to stakeholders. The R² difference (0.687 vs 0.664 ≈ 2.3 percentage points) is modest relative to the complexity trade-off. The 23 variables may overfit despite significant p-values on this large sample where even weak effects become significant. Option B prioritizes training R² without considering generalization. Option C unnecessarily rejects regression. Option D equates statistical significance with practical model quality.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]

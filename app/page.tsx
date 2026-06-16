@@ -50,6 +50,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <Link
+          href="/dashboard"
+          className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:text-blue-500 transition-colors"
+        >
+          📊 Dashboard
+        </Link>
+        <Link
+          href="/saved-questions"
+          className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:text-blue-500 transition-colors"
+        >
+          🚩 Saved Questions
+        </Link>
+      </div>
+
       <ContinueCard topicMap={topicMap} />
 
       <EmptyStateBanner allTopicData={allTopicData} />

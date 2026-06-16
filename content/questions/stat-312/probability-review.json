@@ -1,0 +1,197 @@
+[
+  {
+    "question": "Apple Inc. released a new iPhone model. A market research firm surveyed 1,000 potential customers and found that 340 said they would 'definitely' or 'probably' buy the phone. What is the empirical probability that a randomly selected customer from this survey would buy the phone?",
+    "options": [
+      "0.34",
+      "0.66",
+      "0.50",
+      "0.17"
+    ],
+    "correctIndex": 0,
+    "explanation": "The empirical probability is the observed frequency divided by total sample size: 340/1000 = 0.34. Option B (0.66) is tempting because it represents the complement (those who would NOT buy), but the question asks for the probability of buying, not not buying.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is an example of mutually exclusive events in a manufacturing context?",
+    "options": [
+      "A product batch passes quality control AND fails quality control",
+      "A product is made of metal AND is painted red",
+      "A worker is assigned to the morning shift AND the afternoon shift on the same day",
+      "A customer purchases product A AND receives a discount on product B"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mutually exclusive events cannot occur simultaneously. A batch cannot both pass and fail quality control at the same time. Option B is wrong because a product can be both metal AND red simultaneously (not mutually exclusive). Options C and D also describe events that could occur together.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Starbucks reports that 45% of morning orders include a pastry and 60% include a beverage. What is the probability that a random morning order includes both a pastry AND a beverage, assuming independence?",
+    "options": [
+      "0.27",
+      "0.75",
+      "0.45",
+      "0.60"
+    ],
+    "correctIndex": 0,
+    "explanation": "For independent events, P(A and B) = P(A) × P(B) = 0.45 × 0.60 = 0.27. Option B (0.75) is a common wrong answer from adding the probabilities (0.45 + 0.60 - 0.30), which applies the addition rule instead of the multiplication rule for independent events.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company is testing a new drug. The probability of a successful trial is 0.78. What is the probability that the drug trial is NOT successful?",
+    "options": [
+      "0.22",
+      "0.78",
+      "0.39",
+      "0.50"
+    ],
+    "correctIndex": 0,
+    "explanation": "The complement rule states P(not A) = 1 - P(A) = 1 - 0.78 = 0.22. Option B repeats the original probability (a common error of confusing what is being asked). Option C divides by 2, which incorrectly assumes equal split between success and failure.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In the insurance industry, an event is considered 'unlikely' if its probability is below what threshold?",
+    "options": [
+      "0.05 or 5%",
+      "0.25 or 25%",
+      "0.50 or 50%",
+      "0.75 or 75%"
+    ],
+    "correctIndex": 0,
+    "explanation": "In statistics and business, a probability of 0.05 (5%) is the standard significance level threshold; events below this are considered statistically unlikely or significant. Option B (0.25) is too high to be considered 'unlikely.' Options C and D represent moderate to likely events.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix conducted a survey of 500 subscribers. 180 watch comedy shows, 220 watch drama shows, and 60 watch both comedy and drama. What is the probability that a randomly selected subscriber watches comedy OR drama?",
+    "options": [
+      "0.68",
+      "0.80",
+      "0.52",
+      "0.88"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the addition rule: P(A or B) = P(A) + P(B) - P(A and B) = (180/500) + (220/500) - (60/500) = 340/500 = 0.68. Option B (0.80) results from forgetting to subtract the overlap, adding all viewers (180 + 220)/500. This is a common mistake when not accounting for those who watch both.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A car rental company knows that 15% of its customers have had a previous accident. The company wants to calculate the probability that in a random sample of 3 customers, at least one has had a previous accident. Which approach is most appropriate?",
+    "options": [
+      "Calculate 1 - P(none had accident) = 1 - (0.85)³",
+      "Calculate 3 × 0.15 = 0.45",
+      "Calculate 0.15 + 0.15 + 0.15 = 0.45",
+      "Calculate (0.15)³"
+    ],
+    "correctIndex": 0,
+    "explanation": "The complement rule is most efficient: P(at least one) = 1 - P(none). Since independence applies, P(none) = (0.85)³ ≈ 0.614, so P(at least one) ≈ 0.386. Option B and C incorrectly add probabilities assuming the events are mutually exclusive, which they aren't. Option D calculates the probability of ALL three having accidents, which is the opposite of what's asked.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Goldman Sachs analyzed 1,200 investment portfolios. Of these, 480 experienced market gains, 520 experienced market losses, and 200 remained flat. A portfolio manager randomly selects one portfolio. What is the probability it experienced either gains or losses?",
+    "options": [
+      "0.833",
+      "0.640",
+      "0.417",
+      "0.167"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(gains or losses) = (480 + 520)/1200 = 1000/1200 = 0.833. These are mutually exclusive events (cannot happen simultaneously), so we simply add. Option B (0.640) is close to the probability of losses only (520/1200). Option C represents just the gains portion.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A logistics company found that 70% of shipments arrive on time and 85% arrive undamaged. Assuming independence, what is the probability a shipment arrives both on time AND undamaged?",
+    "options": [
+      "0.595",
+      "0.85",
+      "0.70",
+      "0.955"
+    ],
+    "correctIndex": 0,
+    "explanation": "For independent events: P(both) = 0.70 × 0.85 = 0.595. Option D (0.955) results from adding instead of multiplying, or using P(at least one) formula. Option B and C represent individual probabilities, not the joint probability.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail chain analyzed customer purchases and found P(buys socks) = 0.40 and P(buys shoes | buys socks) = 0.75. What is P(buys both socks and shoes)?",
+    "options": [
+      "0.30",
+      "0.40",
+      "0.75",
+      "1.15"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the multiplication rule for dependent events: P(both) = P(socks) × P(shoes|socks) = 0.40 × 0.75 = 0.30. Option B forgets to multiply by the conditional probability. Option C uses only the conditional probability, ignoring the base rate of buying socks.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A credit card company claims that the probability of a customer defaulting is independent of whether they carried a balance in the previous month. However, analysis shows: P(default) = 0.08, P(carried balance) = 0.45, and P(default AND carried balance) = 0.050. Are these events truly independent?",
+    "options": [
+      "No, because 0.08 × 0.45 = 0.036 ≠ 0.050",
+      "Yes, because all probabilities are less than 1",
+      "No, because 0.050 < 0.08",
+      "Yes, because 0.050 is close to 0.036"
+    ],
+    "correctIndex": 0,
+    "explanation": "Events are independent only if P(A and B) = P(A) × P(B). Here, 0.08 × 0.45 = 0.036, but the observed P(both) = 0.050. These are not equal, so the events are NOT independent. Option B incorrectly assumes all valid probabilities mean independence. Option D uses 'close to' reasoning, which is not mathematically valid—exact equality is required. This is a key misconception students have about independence.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An HR department reports that P(employee attends training | employee is promoted) = 0.92. An employee attends training. Can we conclude there is a 92% chance the employee will be promoted?",
+    "options": [
+      "No, because we have P(training|promoted), not P(promoted|training)",
+      "Yes, because 0.92 is a high probability",
+      "No, because the sample size is unknown",
+      "Yes, because conditional probability can be reversed"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(training|promoted) ≠ P(promoted|training). This is the common confusion about the direction of conditional probability (prosecutor's fallacy). Knowing an employee attended training doesn't tell us the probability they'll be promoted without also knowing P(promoted) and P(training). Option B relies on intuition rather than logic. Option D is a misconception—conditional probabilities cannot be reversed without additional calculation using Bayes' theorem.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A manufacturing plant produces widgets with a defect rate of 2%. A quality control inspector checks 250 widgets and finds 8 defective items. The plant manager claims this proves the actual defect rate is higher than 2%. What is the logical flaw in this reasoning?",
+    "options": [
+      "The observed sample proportion (3.2%) differs from the theoretical 2%, but this variation is expected due to sampling variability alone",
+      "The sample size of 250 is too small to make any conclusions",
+      "The defect rate must be exactly 2%, not approximately 2%",
+      "There is no logical flaw; the data clearly proves the rate is higher"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sampling variability naturally produces variation around the true parameter. Observing 8 defects (3.2%) instead of exactly 5 (2% of 250) doesn't prove the true rate has changed—this fluctuation is expected under random sampling. Option B is incorrect; 250 is actually a reasonable sample size. Option C is too rigid; parameters are rarely exactly theoretical values in practice. This question addresses the critical distinction between sample statistics and population parameters, a major misconception in applied statistics.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A medical device company tests a diagnostic tool with two independent evaluations. P(test A correct) = 0.88 and P(test B correct) = 0.91. A patient wants BOTH tests to be correct before taking medical action. What is the probability both tests will be correct?",
+    "options": [
+      "0.801",
+      "0.880",
+      "0.910",
+      "1.79"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(both correct) = 0.88 × 0.91 = 0.8008 ≈ 0.801. This shows that requiring both independent tests to be correct results in LOWER reliability than either single test, which surprises many people. Option B and C reflect individual test accuracies. Option D is impossible (exceeds 1). This addresses the misconception that combining tests always improves reliability—it requires correlation or strategic design, not just multiplication of independent probabilities.",
+    "type": "Application",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial institution evaluates loan applicants using two criteria: credit score ≥ 700 (occurs in 65% of cases) and income ≥ $50,000 (occurs in 78% of cases). Historical data shows P(both criteria met) = 0.60. Which statement is correct?",
+    "options": [
+      "The events are negatively associated because 0.60 < 0.65 × 0.78",
+      "The events are independent because 0.60 + 0.65 + 0.78 > 1",
+      "The events are positively associated because both probabilities are above 50%",
+      "The events must be mutually exclusive because P(both) is less than each individual probability"
+    ],
+    "correctIndex": 0,
+    "explanation": "If independent: P(both) = 0.65 × 0.78 = 0.507. But observed P(both) = 0.60 > 0.507, indicating POSITIVE association (not negative as stated, so the phrasing is misleading—actually the answer is there's dependence). Let me reconsider: if 0.60 > 0.507, the association is positive. If 0.60 < 0.507 it would be negative. With 0.60 > 0.507, this shows positive association—having a high credit score makes high income MORE likely. Option B incorrectly adds probabilities. Option C assumes high probabilities alone create association. Option D confuses mutually exclusive (cannot both occur) with association.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question": "A marketing manager at Tesla is testing whether the mean monthly sales of their Model 3 lineup exceeds $8.5 million. Which of the following correctly states the null hypothesis?",
+    "options": [
+      "H₀: μ = $8.5 million",
+      "H₀: μ > $8.5 million",
+      "H₀: μ ≠ $8.5 million",
+      "H₀: x̄ = $8.5 million"
+    ],
+    "correctIndex": 0,
+    "explanation": "The null hypothesis always states equality (H₀: μ = value), representing no change or no effect. The alternative hypothesis (H₁: μ > $8.5 million) captures the manager's suspicion. Option 1 is tempting because it mirrors the research question, but the null always uses equality and is what we assume until proven otherwise.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company tests a new drug and sets α = 0.05. What does this significance level mean?",
+    "options": [
+      "There is a 5% probability the drug is ineffective",
+      "There is a 5% probability of rejecting H₀ when H₀ is actually true",
+      "There is a 95% probability the drug works",
+      "There is a 5% probability the sample mean is wrong"
+    ],
+    "correctIndex": 1,
+    "explanation": "α is the probability of a Type I error—rejecting a true null hypothesis. Option 0 is tempting because it sounds like it measures drug effectiveness, but α doesn't tell us about the drug's true state; it only tells us about our decision error rate. Option 2 confuses confidence level with the drug's actual efficacy.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An HR analyst at Google tests whether the average annual salary of software engineers differs from the claimed $185,000. Which test should be used if the population standard deviation is unknown and the sample size is 22?",
+    "options": [
+      "z-test",
+      "t-test",
+      "chi-square test",
+      "ANOVA"
+    ],
+    "correctIndex": 1,
+    "explanation": "When σ is unknown and n < 30, the t-test is appropriate because the sample standard deviation estimates the population standard deviation. The z-test requires σ to be known or n to be large. Option 0 is tempting because many students default to z-tests, but without knowing the population standard deviation, we must use t.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A retailer tests whether the conversion rate on their website has changed from the previously documented 3.2%. The p-value from the test is 0.087. With α = 0.05, what is the correct conclusion?",
+    "options": [
+      "Reject H₀; the conversion rate has significantly changed",
+      "Fail to reject H₀; there is insufficient evidence that the conversion rate has changed",
+      "Accept H₀; the conversion rate is definitely 3.2%",
+      "Reject H₀; the conversion rate is probably lower"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since p-value (0.087) > α (0.05), we fail to reject H₀. This means insufficient evidence to conclude the rate has changed. Option 0 is tempting because 0.087 is close to 0.05, but the rule is strict: p > α means we don't reject. Option 2 is wrong because we never 'accept' H₀; we only fail to reject it.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An operations manager at Toyota collects a sample of 36 vehicles and finds a mean fuel efficiency of 28.4 mpg. The population standard deviation is known to be 2.1 mpg. Which critical value should be used for a two-tailed test at α = 0.05?",
+    "options": [
+      "1.96",
+      "1.645",
+      "2.576",
+      "2.042"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a two-tailed test at α = 0.05, each tail has area 0.025, so the critical z-value is ±1.96. Since σ is known and n = 36, we use the z-table. Option 1 (1.645) is the one-tailed critical value—a common mistake. Option 2 (2.576) is for α = 0.01 two-tailed. Option 3 is a t-value, not applicable here.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Netflix analysts suspect that the average time subscribers spend streaming per week has changed from the historical 12.5 hours. They collect a sample of 45 subscribers with a sample mean of 13.8 hours and a sample standard deviation of 3.2 hours. What is the test statistic for this hypothesis test?",
+    "options": [
+      "t = 2.74",
+      "t = 2.88",
+      "z = 2.74",
+      "t = 1.96"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using t = (x̄ - μ₀) / (s / √n) = (13.8 - 12.5) / (3.2 / √45) = 1.3 / 0.477 ≈ 2.74. Since σ is unknown, we use the t-test formula, not z. Option 1 results from a calculation error. Option 2 uses the z formula incorrectly. Option 3 is a critical value, not a test statistic.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An investment firm tests whether the average daily trading volume at their brokerage firm exceeds 2.3 million shares. They set up H₀: μ = 2.3 million and H₁: μ > 2.3 million. With a sample of 50 days, x̄ = 2.52 million, and s = 0.64 million, they obtain a p-value of 0.019. If α = 0.05, what should they conclude?",
+    "options": [
+      "Fail to reject H₀; insufficient evidence the volume exceeds 2.3 million",
+      "Reject H₀; statistically significant evidence that average volume exceeds 2.3 million",
+      "Reject H₀; the average volume is exactly 2.52 million",
+      "Fail to reject H₀; 2.52 million is only slightly above 2.3 million"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since p-value (0.019) < α (0.05), we reject H₀ in favor of H₁. There is statistically significant evidence that average trading volume exceeds 2.3 million. Option 0 is tempting but incorrect because p = 0.019 < 0.05. Option 3 confuses practical vs. statistical significance—even small differences can be statistically significant with appropriate sample sizes.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A quality control engineer at Ford tests whether the defect rate in their transmission systems has changed from the historical 2.1%. She samples 800 units and finds 18 defects. Using a two-tailed test at α = 0.05, what is her conclusion? (Assume the sample proportion is 0.0225.)",
+    "options": [
+      "Reject H₀; the defect rate has significantly changed from 2.1%",
+      "Fail to reject H₀; insufficient evidence the defect rate has changed",
+      "Reject H₀; the defect rate is now 2.25%",
+      "Accept H₀; the defect rate is definitely still 2.1%"
+    ],
+    "correctIndex": 1,
+    "explanation": "With p̂ = 18/800 = 0.0225 and p₀ = 0.021, the observed difference is 0.0025 (0.25 percentage points), which is very small. The z-statistic would be approximately 0.60, yielding a large p-value, so we fail to reject H₀. Option 0 is tempting because 2.25% ≠ 2.1%, but this small difference is not statistically significant. Option 2 confuses sample proportion with population parameter.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company tests whether the mean order value exceeds $125. With n = 64, x̄ = $131.50, and s = $18.00, they calculate a p-value of 0.0234. A colleague says, 'The p-value of 0.0234 means there is a 2.34% chance the true mean is $125.' What is wrong with this statement?",
+    "options": [
+      "Nothing is wrong; the p-value directly measures the probability the null hypothesis is true",
+      "The p-value measures the probability of observing sample results at least as extreme as observed, assuming H₀ is true; it does not tell us the probability H₀ is true",
+      "The p-value would be larger if the sample size were smaller",
+      "The p-value proves the mean is actually $131.50"
+    ],
+    "correctIndex": 1,
+    "explanation": "A common misconception is interpreting p-value as P(H₀ is true). The correct interpretation is P(data | H₀ is true). The p-value is conditional on H₀ being true. Option 0 is the tempting wrong interpretation that many students make. Option 2 is true but not the main error being tested. Option 3 confuses evidence with proof.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturer claims their light bulbs last a mean of 5,000 hours. A consumer group tests 40 bulbs and gets a p-value of 0.14 with α = 0.05. Which of the following is a valid conclusion?",
+    "options": [
+      "The manufacturer's claim is proven true",
+      "There is insufficient statistical evidence to conclude the mean differs from 5,000 hours",
+      "The probability the manufacturer is lying is 14%",
+      "We reject the claim and conclude the bulbs last a different amount"
+    ],
+    "correctIndex": 1,
+    "explanation": "With p = 0.14 > α = 0.05, we fail to reject H₀. This is not proof the claim is true, only insufficient evidence to refute it. Option 0 is wrong because failing to reject ≠ accepting. Option 2 misinterprets p-value as a probability about the manufacturer's honesty. Option 3 contradicts the decision rule.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bank manager tests whether the mean monthly account balance of customers in the millennial demographic differs from $15,000. Using a t-test with n = 25, x̄ = $16,200, s = $4,500, and α = 0.05, the test yields t = 1.33. What are the degrees of freedom, and should H₀ be rejected?",
+    "options": [
+      "df = 24; fail to reject H₀ (t-critical ≈ ±2.064)",
+      "df = 25; reject H₀ (t-critical ≈ ±2.060)",
+      "df = 24; reject H₀ (the sample mean exceeds $15,000)",
+      "df = 26; fail to reject H₀ (t-critical ≈ ±1.96)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Degrees of freedom = n - 1 = 25 - 1 = 24. For a two-tailed test with df = 24 and α = 0.05, t-critical ≈ ±2.064. Since |1.33| < 2.064, we fail to reject H₀. Option 1 incorrectly uses n instead of n-1 for df. Option 2 makes the same error and incorrectly rejects based on the observed difference alone. Option 3 uses the wrong critical value (z instead of t).",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Starbucks tests whether the mean time to prepare a grande latte differs from 3.5 minutes. They use a sample of 16 stores with x̄ = 3.72 minutes and s = 0.48 minutes. Assuming a two-tailed test at α = 0.05 with t-critical = ±2.131, they calculate t = 1.833. A manager argues, 'The p-value must be less than 0.05 because the sample mean is 0.22 minutes higher than claimed.' Why is this reasoning flawed?",
+    "options": [
+      "The manager is correct; any difference from 3.5 minutes means p < 0.05",
+      "The comparison between the test statistic and critical value, not the size of the difference, determines whether we reject H₀; here |1.833| < 2.131, so p > 0.05",
+      "The p-value is always less than 0.05 when n is small",
+      "The manager forgot to account for sample standard deviation, which is why 0.22 minutes doesn't matter"
+    ],
+    "correctIndex": 1,
+    "explanation": "The decision to reject H₀ depends on whether the test statistic exceeds the critical value (or equivalently, p < α), not on the raw difference between x̄ and μ₀. Here, |t| = 1.833 < 2.131, so we fail to reject H₀ and p > 0.05. Option 0 is a dangerous misconception—practical significance ≠ statistical significance. Option 2 is false; p-values are unrelated to sample size in that manner. Option 3 is partly right but frames it confusingly.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company compares delivery times between two regions. Region A (n=30, x̄=4.2 days, s=1.1 days) and Region B (n=28, x̄=3.8 days, s=1.3 days). They want to test H₀: μ_A = μ_B vs. H₁: μ_A ≠ μ_B at α = 0.05. Which test is most appropriate, and what is the pooled standard deviation (approximately)?",
+    "options": [
+      "Two-sample t-test; s_p ≈ 1.20",
+      "Paired t-test; s_p ≈ 1.20",
+      "Two-sample z-test; s_p ≈ 1.19",
+      "Two-sample t-test; s_p ≈ 1.19"
+    ],
+    "correctIndex": 3,
+    "explanation": "This is an independent-samples comparison (not paired), so use a two-sample t-test. The pooled standard deviation is s_p = √[((n₁-1)s₁² + (n₂-1)s₂²)/(n₁+n₂-2)] = √[(29×1.21 + 27×1.69)/56] ≈ √1.42 ≈ 1.19. Option 1 is wrong because the samples are independent, not paired. Option 2 uses z instead of t (σ is unknown). Option 0 has the wrong s_p calculation.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Microsoft tests a software update's impact on system crash rates. Before the update: 85 crashes in 10,000 hours (p₁ = 0.0085). After the update: 62 crashes in 10,000 hours (p₂ = 0.0062). A data scientist claims, 'The crash rate decreased by 27% (calculated as (0.0085-0.0062)/0.0085 = 0.27), so this is practically significant.' But the hypothesis test yields p = 0.18. What explains the discrepancy?",
+    "options": [
+      "The percentage decrease of 27% guarantees statistical significance, so there is an error in the hypothesis test",
+      "Practical significance (the percentage reduction) and statistical significance (the p-value) are different concepts; a large practical difference may not be statistically significant if variability is high or sample sizes are small",
+      "The p-value of 0.18 means the update made things worse, not better",
+      "The scientist should have used a one-tailed test, which would have given p = 0.09"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 27% relative reduction is practically meaningful, but statistical significance depends on variability and sample size. With large standard errors or inherent randomness, this difference might not be statistically significant (p > 0.05). Option 0 is false; practical significance does not guarantee statistical significance. Option 2 misinterprets p-value. Option 3 speculates about tail choice without justification and the relationship would be different.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A healthcare provider tests whether the mean hospital readmission rate within 30 days has decreased from the previous 11.2%. They conduct a one-tailed test (H₀: μ = 11.2% vs. H₁: μ < 11.2%) with α = 0.05, and obtain a test statistic of z = -1.80. The critical value is z = -1.645. Using both the critical value method and the p-value method, what should be concluded? (Assume p-value ≈ 0.036.)",
+    "options": [
+      "Critical value method: reject H₀; p-value method: fail to reject H₀ (methods conflict)",
+      "Both methods: reject H₀; there is significant evidence the readmission rate has decreased",
+      "Both methods: fail to reject H₀; the observed 1.80 standard deviations is not extreme enough",
+      "Critical value method: fail to reject H₀; p-value method: reject H₀ (contradiction)"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the critical value method, z = -1.80 < -1.645, so we reject H₀. In the p-value method, p = 0.036 < α = 0.05, so we reject H₀. Both methods agree. Option 0 is a trap for students who mistake the relationship. Option 2 is backwards (1.80 SD is extreme in this direction). Option 3 reverses which method gives which decision.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  }
+]

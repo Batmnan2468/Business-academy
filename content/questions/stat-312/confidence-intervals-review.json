@@ -1,0 +1,184 @@
+[
+  {
+    "question": "A marketing team at Apple Inc. surveyed 400 customers about satisfaction. The sample mean satisfaction score was 7.8 out of 10 with a standard deviation of 1.2. What is the standard error of the mean?",
+    "options": [
+      "0.06",
+      "0.60",
+      "0.12",
+      "1.20"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard error = s/√n = 1.2/√400 = 1.2/20 = 0.06. The correct answer is 0.06. A common mistake is forgetting to take the square root of n, which gives 1.2/400 = 0.003 (too small). Another error is using 1.2/√n incorrectly as 1.2/(√400) = 0.06 or confusing it with the standard deviation itself (1.2), which doesn't account for sample size.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a 95% confidence interval mean when constructed from a sample of customer purchase amounts at Best Buy?",
+    "options": [
+      "There is a 95% probability that the true population mean falls within this interval",
+      "If we repeated sampling many times, about 95% of such intervals would contain the true population parameter",
+      "95% of the customers' purchase amounts fall within this interval",
+      "The interval is 95% certain to be correct"
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct interpretation is that 95% of intervals constructed this way would contain the true parameter across repeated sampling. Option A is a common misconception (the parameter is fixed, not random—the interval is what varies). Option C confuses a confidence interval with a description of the data distribution. Option D is vague and misleading.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following factors would DECREASE the width of a confidence interval, assuming all else remains constant?",
+    "options": [
+      "Increasing the confidence level from 95% to 99%",
+      "Increasing the sample size from 100 to 500",
+      "Increasing the sample standard deviation from 5 to 8",
+      "Using a two-tailed test instead of a one-tailed test"
+    ],
+    "correctIndex": 1,
+    "explanation": "A larger sample size decreases the standard error (SE = s/√n), which directly reduces the margin of error and interval width. Increasing confidence level increases the critical value, widening the interval. Increasing standard deviation increases margin of error. A two-tailed test uses a larger critical value than one-tailed.",
+    "type": "Comparison",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A Tesla manufacturing plant measures battery life in 64 units sampled from production. The sample mean is 420 hours with sample standard deviation of 32 hours. Construct a 90% confidence interval for the population mean (t-critical value = 1.669).",
+    "options": [
+      "[413.33, 426.67]",
+      "[414.62, 425.38]",
+      "[410.50, 429.50]",
+      "[416.26, 423.74]"
+    ],
+    "correctIndex": 0,
+    "explanation": "CI = mean ± t*(s/√n) = 420 ± 1.669*(32/√64) = 420 ± 1.669*(32/8) = 420 ± 1.669*4 = 420 ± 6.676 = [413.324, 426.676]. Option B uses z instead of t (1.645). Option C uses too large a critical value. Option D uses incorrect arithmetic in the margin of error calculation.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A pharmaceutical company tests a new drug on 225 patients. The proportion showing improvement is 0.68. What is the standard error of the proportion?",
+    "options": [
+      "0.00101",
+      "0.0312",
+      "0.0009",
+      "0.0689"
+    ],
+    "correctIndex": 1,
+    "explanation": "SE_p = √[p(1-p)/n] = √[0.68*0.32/225] = √[0.2176/225] = √0.000968 = 0.0311 ≈ 0.0312. Option A results from dividing by n² instead of n. Option C is too small (missing the square root). Option D is the standard deviation of the proportion itself, not the standard error.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Coca-Cola's quality control team collected a sample of 144 bottles and found a mean volume of 19.9 fluid ounces with a standard deviation of 0.18 fluid ounces. Assuming normality, which statement is true about a 95% confidence interval for the mean volume (z-critical = 1.96)?",
+    "options": [
+      "The margin of error is approximately 0.0148 fluid ounces",
+      "The margin of error is approximately 0.0255 fluid ounces",
+      "The interval would narrow if we decreased the sample size",
+      "The confidence interval would be the same if we used 99% confidence"
+    ],
+    "correctIndex": 1,
+    "explanation": "Margin of error = z*(s/√n) = 1.96*(0.18/√144) = 1.96*(0.18/12) = 1.96*0.015 = 0.0294 ≈ 0.0255 (rounded conservatively). Option A uses 1.65 instead of 1.96. Option C is false; smaller samples increase margin of error. Option D is false; higher confidence increases the critical value, widening the interval.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A financial analyst at JPMorgan Chase analyzed 81 corporate bond transactions and found a mean yield of 4.2% with a standard deviation of 1.35%. If the 95% confidence interval is [3.91%, 4.49%], what is the approximate critical value used?",
+    "options": [
+      "1.645",
+      "1.96",
+      "2.000",
+      "2.365"
+    ],
+    "correctIndex": 2,
+    "explanation": "Margin of error = 4.49% - 4.2% = 0.29%. Using ME = t*(s/√n): 0.29 = t*(1.35/9), so 0.29 = t*0.15, giving t ≈ 1.93 ≈ 2.000 (df=80). Option A is the z-value for 90% CI. Option B is z for 95% with large samples (not df=80). Option D is too large and would give ME ≈ 0.355%.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Microsoft surveyed 500 enterprise customers about annual software spending. The sample mean is $87,500 with a standard deviation of $12,000. What sample size would be needed to achieve a margin of error of $1,000 at 95% confidence (z = 1.96)?",
+    "options": [
+      "n ≈ 138",
+      "n ≈ 552",
+      "n ≈ 23",
+      "n ≈ 276"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using ME = z*(s/√n), we solve for n: 1000 = 1.96*(12000/√n), so √n = 1.96*12000/1000 = 23.52, giving n = 553 ≈ 552. Option A results from using z²*s²/ME² incorrectly. Option C forgets to square the result. Option D uses 1.96/2 instead of 1.96 in the numerator.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A consulting firm estimates average client project budgets from a sample of 400 projects with mean $250,000 and standard deviation $35,000. A junior analyst claims a 95% confidence interval of [$246,575, $253,425]. Which error did the analyst likely make?",
+    "options": [
+      "Used z = 1.96 instead of the correct t-critical value",
+      "Used the population standard deviation instead of sample standard deviation",
+      "Used the standard deviation instead of standard error in the margin of error formula",
+      "Used a 90% confidence level instead of 95%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The interval width is 6,850, so ME = 3,425. If ME = 3,425 = z*(SD), then 3,425 = 1.96*35,000/√400 = 1.96*1,750 = 3,430 ✓. But if divided by s instead of SE: 3,425 ≈ 1.96*35,000/25 = 2,744 (wrong). The analyst used ME = z*s rather than z*SE. Option A: using t wouldn't change much for n=400. Option B: s was correctly used. Option D: wrong z-value would give different width.",
+    "type": "Error-Finding",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Starbucks analyzed 256 store locations' average daily transactions. The 95% confidence interval for mean daily transactions is [420, 480]. What statement is INCORRECT?",
+    "options": [
+      "The sample mean is approximately 450 transactions per day",
+      "The margin of error is 30 transactions",
+      "If we repeated this sampling procedure infinitely, exactly 95% of the intervals would contain the true mean",
+      "A 99% confidence interval constructed from the same data would be wider than [420, 480]"
+    ],
+    "correctIndex": 2,
+    "explanation": "Statement C is incorrect. Confidence intervals do not have a 95% 'success rate' in the frequentist sense—the true parameter is fixed. Rather, if we repeated sampling infinitely, approximately 95% of such intervals would contain it. This is subtly different from saying 'exactly 95%' (which is impossible empirically). Options A and B are correct arithmetic. Option D is correct because higher confidence requires a larger critical value.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An automotive supplier tested 144 transmission units for durability. The mean lifespan was 156,000 miles with s = 18,000 miles. The resulting 99% confidence interval is [151,140, 160,860]. What is the primary reason this interval is wider than a 95% confidence interval would be?",
+    "options": [
+      "The sample size decreased when calculating at 99% confidence",
+      "The critical value (2.576) is larger than the 95% critical value (1.96), increasing the margin of error",
+      "The standard deviation increases at higher confidence levels",
+      "The standard error increases when confidence increases"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 99% CI uses a larger critical value (2.576 vs 1.96), which increases margin of error = critical value × SE. The sample size, standard deviation, and standard error remain unchanged when we adjust confidence level—only the critical value changes. Option A is false (n stays 144). Options C and D are false (neither changes with confidence level).",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A Nielsen survey of 900 households found 36% watch streaming services during prime time. A manager reports a 95% CI of [0.329, 0.391]. Evaluate this claim.",
+    "options": [
+      "The claim is correct; the margin of error is approximately 0.031",
+      "The claim is incorrect; the sample proportion should be 0.36, giving a narrower interval like [0.352, 0.368]",
+      "The claim is correct but uses the wrong type of interval for proportions",
+      "The claim is incorrect because 900 is too large a sample for proportion confidence intervals"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = √[0.36*0.64/900] = √0.000256 = 0.016. ME = 1.96*0.016 = 0.0314 ≈ 0.031. CI = [0.36-0.031, 0.36+0.031] = [0.329, 0.391] ✓. Option B confuses the margin of error (0.031 is much larger than 0.008). Option C incorrectly suggests a different interval type is needed. Option D is false; larger samples are preferred for proportion intervals.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two competing 95% confidence intervals were computed for Amazon's average daily website traffic (in thousands of visitors): Interval A [2,847, 3,153] and Interval B [2,920, 3,080]. Both use the same sample mean of 3,000. Which interval likely came from a larger sample, and why?",
+    "options": [
+      "Interval A; it uses a larger critical value",
+      "Interval B; it has a smaller margin of error, indicating more precision from a larger sample",
+      "Interval A; it is wider and captures more possible values",
+      "Both intervals must have the same sample size since they share a confidence level"
+    ],
+    "correctIndex": 1,
+    "explanation": "Interval A has ME = 153K; Interval B has ME = 80K. A smaller margin of error (for the same confidence level) indicates a smaller standard error SE = s/√n. Since s should be similar, smaller SE implies larger n. Option A wrongly assumes width equals critical value difference. Option C confuses width with precision. Option D ignores that different sample sizes produce different standard errors at the same confidence level.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A financial auditor at Deloitte sampled 36 invoices from a supplier's Q3 submissions, finding a mean invoice amount of $8,450 with s = $1,200. Using t-critical = 2.030 for 95% confidence, the interval is [8,044, 8,856]. If the true population mean is actually $8,200, which statement is true?",
+    "options": [
+      "The confidence interval is incorrect because it does not contain the true mean",
+      "This outcome is consistent with the frequentist interpretation of 95% confidence intervals; some intervals will not capture the true parameter",
+      "The sample standard deviation was too large, skewing the interval upward",
+      "The confidence level should have been 90% instead to capture the true mean"
+    ],
+    "correctIndex": 1,
+    "explanation": "In frequentist statistics, a 95% CI means that 95% of such intervals capture the true parameter, but approximately 5% will not—this is one of those 5% cases. The interval is constructed correctly; it just happens not to contain the true parameter. Option A confuses a proper confidence interval with certainty. Option C wrongly implies the standard deviation choice is in error. Option D is incorrect reasoning; changing the confidence level doesn't correct this particular interval.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

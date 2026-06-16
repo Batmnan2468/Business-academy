@@ -1,0 +1,197 @@
+[
+  {
+    "question": "According to the Central Limit Theorem, what happens to the shape of the sampling distribution of the sample mean as the sample size increases?",
+    "options": [
+      "It approaches a normal distribution regardless of the population distribution",
+      "It becomes more skewed to match the population",
+      "It flattens and becomes more uniform",
+      "It remains unchanged if the population is not normal"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Central Limit Theorem states that the sampling distribution of the sample mean approaches a normal distribution as n increases, regardless of the underlying population distribution. Option B is tempting because students often think the sampling distribution must match the population shape, but CLT shows this is false.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If a population has a mean of 50 and a standard deviation of 10, what is the standard error of the mean when the sample size is 25?",
+    "options": [
+      "2.0",
+      "0.4",
+      "10",
+      "50"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard error is σ/√n = 10/√25 = 10/5 = 2.0. Option B (0.4) results from incorrectly dividing by n instead of √n; this is a common computational error that students make.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A sampling distribution refers to the distribution of what?",
+    "options": [
+      "Sample statistics (such as the sample mean) computed from many random samples",
+      "Individual data points drawn from a single sample",
+      "The population parameter values across different years",
+      "The raw measurements taken from the original data collection process"
+    ],
+    "correctIndex": 0,
+    "explanation": "A sampling distribution is the probability distribution of a statistic (like the sample mean) calculated from multiple random samples of the same size. Option B is tempting because it confuses the sampling distribution with the sample data itself, which is a common misconception.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The sample mean is an example of what type of statistic?",
+    "options": [
+      "An unbiased estimator of the population mean",
+      "A biased estimator that always overestimates the population mean",
+      "A parameter that describes the population",
+      "A fixed value that does not vary across samples"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sample mean is unbiased because its expected value equals the population mean: E(X̄) = μ. Option B is tempting because students sometimes confuse sampling error (which exists) with bias (which does not exist for the sample mean).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "For a fixed population, as sample size increases, what happens to the standard error of the sample mean?",
+    "options": [
+      "It decreases",
+      "It increases",
+      "It remains constant",
+      "It becomes zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since SE = σ/√n, as n increases, the denominator increases, so the standard error decreases. Option B is tempting because students often confuse standard error with sample variance, which can sometimes increase with sample size.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "TechVenture Inc. manufactures laptop batteries with a mean lifespan of 800 hours and a standard deviation of 120 hours. Quality control takes random samples of 36 batteries. What is the probability that a sample mean lifespan exceeds 840 hours? (Assume the population is approximately normal.)",
+    "options": [
+      "0.0228 (approximately 2.28%)",
+      "0.1587 (approximately 15.87%)",
+      "0.3413 (approximately 34.13%)",
+      "0.5000 (approximately 50%)"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 120/√36 = 20. Z = (840 − 800)/20 = 2.0. P(Z > 2) ≈ 0.0228. Option B (0.1587) results from incorrectly using σ instead of SE in the Z-calculation, yielding Z = 0.33, which is a common error when students forget to divide by √n.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "RetailCorp operates 500 stores nationwide. The average store generates $2.5 million in annual revenue with a standard deviation of $0.4 million. If a sample of 100 stores is randomly selected, what is the standard error of the sample mean revenue?",
+    "options": [
+      "$40,000",
+      "$4,000",
+      "$2,500",
+      "$400,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = σ/√n = 400,000/√100 = 400,000/10 = $40,000. Option B ($4,000) results from dividing by n instead of √n, and Option D results from using the full standard deviation without adjusting for sample size.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "BlueSky Airlines has flight delay times (in minutes) with mean 12 and standard deviation 8. A passenger takes 64 flights in a year. What is the approximate probability that her average delay exceeds 14 minutes?",
+    "options": [
+      "0.0228 (approximately 2.28%)",
+      "0.1587 (approximately 15.87%)",
+      "0.3413 (approximately 34.13%)",
+      "0.6915 (approximately 69.15%)"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 8/√64 = 1. Z = (14 − 12)/1 = 2.0. P(Z > 2) ≈ 0.0228. Option B (0.1587) results from computing Z = (14 − 12)/8 = 0.25, forgetting to apply the standard error formula. This confuses the individual value distribution with the sampling distribution.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "FinanceFirst Bank conducted a study where account holders have a mean account balance of $15,000 and standard deviation of $5,000. Two researchers independently draw samples to estimate the mean: Researcher A draws 25 accounts, Researcher B draws 100 accounts. Which statement is true?",
+    "options": [
+      "Researcher B's sampling distribution has a smaller standard error, making her estimate more precise",
+      "Both researchers have the same standard error because the population parameters are identical",
+      "Researcher A's estimate is more reliable because a smaller sample reduces sampling bias",
+      "Researcher B's sampling distribution is more skewed than Researcher A's"
+    ],
+    "correctIndex": 0,
+    "explanation": "Researcher B has SE = 5000/√100 = 500, while Researcher A has SE = 5000/√25 = 1000. The smaller standard error means B's estimates cluster more tightly around μ. Option B incorrectly assumes standard error is independent of sample size, and Option C confuses sample size with bias (both are unbiased).",
+    "type": "Comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "ConsumerGood Corp surveys customer satisfaction scores (0–100 scale) from a non-normal population with mean 72 and standard deviation 15. The company plans to survey 144 customers. Why can the company use the normal distribution to approximate the sampling distribution of the sample mean?",
+    "options": [
+      "The Central Limit Theorem guarantees that with n = 144, the sampling distribution is approximately normal despite the non-normal population",
+      "The population distribution itself must be normal for the sampling distribution to be normal",
+      "Customer satisfaction scores are always normally distributed in practice",
+      "The sample size is large enough to eliminate all sampling error"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CLT allows use of the normal approximation for the sampling distribution when n is large (n ≥ 30 generally), regardless of population shape. Option B is a common misconception—CLT is powerful precisely because it works for non-normal populations. Option D incorrectly suggests sampling error is eliminated, which never happens.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A statistics instructor claims: 'If I increase my sample size from 50 to 200, the standard error will be cut in half.' Is this statement correct? Why or why not?",
+    "options": [
+      "Incorrect; increasing sample size from 50 to 200 (4×) reduces SE by √4 = 2, cutting it in half.",
+      "Correct; doubling sample size always halves the standard error.",
+      "Incorrect; standard error is unaffected by sample size changes.",
+      "Correct; the relationship between sample size and standard error is linear."
+    ],
+    "correctIndex": 0,
+    "explanation": "SE₅₀ = σ/√50 and SE₂₀₀ = σ/√200. The ratio is √50/√200 = √(50/200) = √0.25 = 0.5, so SE is indeed halved. Option B confuses a doubling of sample size with halving of SE; in fact, you need a 4× increase to halve SE. Option D incorrectly claims linearity when the relationship is actually inverse square root.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "DataDriven Analytics believes the mean processing time for customer complaints is 48 hours with a standard deviation of 12 hours. They compute a 95% confidence interval based on a sample of 36 complaints and get (45.08, 50.92). A colleague suggests taking a sample of 144 complaints instead. How would this change the interval width?",
+    "options": [
+      "The new interval width would be half as wide because √(144/36) = 2, so the margin of error is halved.",
+      "The new interval width would be the same because the confidence level (95%) remains constant.",
+      "The new interval width would be twice as wide because we are using more data.",
+      "The new interval width would be √144 = 12 times narrower, giving nearly a point estimate."
+    ],
+    "correctIndex": 0,
+    "explanation": "Current margin of error ≈ 1.96 × (12/√36) = 1.96 × 2 = 3.92, giving width ≈ 7.84. New margin ≈ 1.96 × (12/√144) = 1.96 × 1 = 1.96, giving width ≈ 3.92 (half the original). Option B incorrectly assumes interval width is independent of sample size. Option D grossly overstates the narrowing effect.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "GrowthCorp observes that individual employee productivity scores are highly right-skewed with mean 75 and standard deviation 18. The company wants to estimate the mean productivity of its entire workforce of 5,000 employees using a sample of 9 employees. Which statement best reflects the validity of using the normal distribution to model the sampling distribution?",
+    "options": [
+      "Using the normal distribution is NOT appropriate because n = 9 is too small; CLT requires larger samples when the population is severely non-normal.",
+      "Using the normal distribution IS appropriate because the population size (5,000) is large.",
+      "Using the normal distribution IS appropriate because the sample mean will always be normally distributed.",
+      "Using the normal distribution depends on whether 9 employees are selected with or without replacement."
+    ],
+    "correctIndex": 0,
+    "explanation": "With severe non-normality and n = 9, CLT has not taken effect; typically n ≥ 30 is recommended for non-normal populations. Option B confuses population size with sample size—population size affects the finite population correction but not CLT applicability. Option C incorrectly asserts the sample mean is always normal. Option D references the replacement method, which has minimal impact here.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "ElectroWorks manufactures circuit boards where defect rates vary by production batch. A quality engineer collects 49 batches and finds the average defect rate is 3.2% with a sample standard deviation of 0.8%. She constructs a 95% confidence interval and gets (2.98%, 3.42%). A consultant later points out that the engineer used the wrong critical value. Which critical value should have been used, and why?",
+    "options": [
+      "t₄₈ ≈ 2.011 instead of z ≈ 1.96, because the population standard deviation is unknown and sample size is moderate.",
+      "z ≈ 1.96 is correct because n = 49 is large enough to use the normal distribution.",
+      "t₄₉ ≈ 2.010 instead of z ≈ 1.96, because sample sizes always require the t-distribution.",
+      "z ≈ 2.576 instead of z ≈ 1.96, because the confidence level requires a higher critical value."
+    ],
+    "correctIndex": 0,
+    "explanation": "When σ is unknown and estimated by s, use t-distribution with df = n − 1 = 48. t₄₈ ≈ 2.011 is slightly larger than z ≈ 1.96, yielding a slightly wider interval. Option B incorrectly applies z when σ is unknown; while n = 49 is reasonably large, using t is still more appropriate. Option D confuses the critical value formula with confidence level; 95% always uses the same critical value regardless of α.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A pharmaceutical company testing a new drug observes side effect duration (in days) from 100 patients with sample mean 6.5 days and sample standard deviation 2.1 days. The company reports that 'the true population mean side effect duration lies between 6.09 and 6.91 days with 95% confidence.' Which interpretation is incorrect?",
+    "options": [
+      "There is a 95% probability that the true population mean falls within this interval.",
+      "If we repeated sampling 100 times, approximately 95 of the intervals constructed would contain the true mean.",
+      "This interval was constructed such that the method captures the true parameter 95% of the time in repeated sampling.",
+      "Before sampling, there was a 95% probability that the procedure would produce an interval containing μ."
+    ],
+    "correctIndex": 0,
+    "explanation": "Once the interval is constructed, the true mean either is or is not in it (probability 0 or 1, not 95%). Option A misinterprets confidence intervals as Bayesian; confidence intervals are frequentist. Options B, C, and D correctly describe the repeated-sampling interpretation of confidence level. This is a subtle but critical distinction often missed by students.",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  }
+]

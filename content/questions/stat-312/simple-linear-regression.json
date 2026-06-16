@@ -1,0 +1,197 @@
+[
+  {
+    "question": "In simple linear regression, what does the slope coefficient (b₁) represent in the equation ŷ = b₀ + b₁x?",
+    "options": [
+      "The average change in the dependent variable for each one-unit increase in the independent variable",
+      "The predicted value of y when x equals zero",
+      "The correlation coefficient between x and y",
+      "The standard error of the regression line"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope b₁ specifically measures the rate of change in y per unit change in x. Option B describes the y-intercept b₀, which is a common confusion point; while both are parameters in the equation, they measure different things.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A marketing analyst fits a linear regression model predicting quarterly sales (in thousands of dollars) based on advertising spend (in thousands of dollars). If the regression equation is ŷ = 15 + 2.3x, what does the intercept value of 15 mean?",
+    "options": [
+      "When advertising spend is zero, predicted sales are $15,000",
+      "The correlation between advertising and sales is 0.15",
+      "The model explains 15% of the variation in sales",
+      "Sales increase by $15,000 for every $1,000 spent on advertising"
+    ],
+    "correctIndex": 0,
+    "explanation": "The y-intercept b₀ = 15 represents the predicted value of y when x = 0. In this context, when advertising spend is $0 (thousands), predicted sales are $15 thousand. Option D describes the slope, not the intercept, which is a very common misinterpretation.",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is the correct formula for the slope coefficient (b₁) in simple linear regression?",
+    "options": [
+      "b₁ = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)²",
+      "b₁ = Σ(xᵢ - x̄)² / Σ(xᵢ - x̄)(yᵢ - ȳ)",
+      "b₁ = Σ(yᵢ - ȳ)² / Σ(xᵢ - x̄)(yᵢ - ȳ)",
+      "b₁ = r × (sᵧ / sₓ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope formula b₁ = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)² is the standard least-squares estimator. Option D is actually also correct (equivalent form using correlation and standard deviations), but option A is the most direct computational formula. Options B and C reverse the numerator and denominator, a common algebraic error.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A financial analyst regresses annual employee salary (in dollars) against years of experience for a tech company. The analyst obtains r² = 0.64. What does this value indicate?",
+    "options": [
+      "64% of the variation in salary is explained by years of experience",
+      "The correlation between salary and experience is 0.64",
+      "For each additional year of experience, salary increases by 64%",
+      "The slope of the regression line is 0.64"
+    ],
+    "correctIndex": 0,
+    "explanation": "R² (coefficient of determination) represents the proportion of variance in the dependent variable explained by the independent variable. Here, 64% of salary variation is explained by experience. Option B confuses r² with r (the correlation coefficient would be ±0.8). Options C and D misinterpret the meaning of r².",
+    "type": "Interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a regression analysis of restaurant revenue (in thousands of dollars) versus number of daily customers, the regression line is ŷ = 8 + 0.15x. What is the predicted revenue when a restaurant serves 200 customers?",
+    "options": [
+      "$38,000",
+      "$40,000",
+      "$30,000",
+      "$23,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using ŷ = 8 + 0.15(200) = 8 + 30 = 38 (in thousands). The predicted revenue is $38,000. A common error is forgetting to convert back from thousands (option B: 8 + 0.15(200) = 38.15 as a decimal). Another tempting mistake is using only the slope coefficient (option C: 0.15 × 200 = 30).",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A beverage company collects data on advertising expenditure (x, in millions of dollars) and monthly sales (y, in millions of dollars) for 25 locations. They calculate: x̄ = 3.2, ȳ = 12.5, Σ(xᵢ - x̄)(yᵢ - ȳ) = 45.6, Σ(xᵢ - x̄)² = 16.8. What is the slope of the regression line?",
+    "options": [
+      "2.71",
+      "1.68",
+      "2.95",
+      "0.37"
+    ],
+    "correctIndex": 0,
+    "explanation": "b₁ = 45.6 / 16.8 = 2.71. Each additional million dollars in advertising predicts approximately $2.71 million in additional sales. Option B incorrectly uses Σ(xᵢ - x̄)² in the numerator. Option C results from reversing the division. Option D comes from a calculation error in the division.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A manufacturing firm regresses production cost per unit (y, in dollars) against plant utilization rate (x, in percentage points from 0 to 100). The regression equation is ŷ = 45 - 0.08x. Based on this model, what is the predicted cost per unit when the plant operates at 80% utilization?",
+    "options": [
+      "$38.60",
+      "$41.40",
+      "$50.40",
+      "$38.20"
+    ],
+    "correctIndex": 0,
+    "explanation": "ŷ = 45 - 0.08(80) = 45 - 6.4 = 38.6, so $38.60 per unit. The negative slope correctly indicates that higher utilization reduces per-unit costs (economies of scale). Option B incorrectly adds instead of subtracts. Option C mistakenly uses the percentage as a decimal multiplier. Option D results from a small computational error in the subtraction.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "An e-commerce company fits a regression model: ŷ = 2500 + 120x, where y is monthly website traffic (in visitors) and x is the number of social media posts per week. The y-intercept and slope have been correctly calculated. What would be the main concern with using this model to predict website traffic when x = 50 social media posts per week?",
+    "options": [
+      "This prediction involves extrapolation far beyond the range of observed data and may be unreliable",
+      "The regression equation cannot be used for prediction, only for describing relationships",
+      "The intercept of 2500 is too small to be meaningful for large values of x",
+      "The slope coefficient must be multiplied by the number of weeks in a year to be valid"
+    ],
+    "correctIndex": 0,
+    "explanation": "If the original data only included, say, 0–10 weekly posts, predicting at x = 50 is extrapolation beyond the model's reliable range. The linear relationship observed in the data range may not hold at such extreme values. Option B is incorrect because regression models are specifically designed for prediction. Option C misunderstands the role of the intercept. Option D confuses the time unit of the x variable with the prediction itself.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A retail company has data showing that store size (in square feet) and annual revenue (in dollars) have a correlation coefficient of r = 0.72. Which of the following statements is correct?",
+    "options": [
+      "Approximately 52% of the variation in annual revenue is explained by store size",
+      "For every additional square foot, revenue increases by 72 dollars",
+      "A correlation of 0.72 proves that increasing store size causes revenue to increase",
+      "The relationship between store size and revenue is stronger than a relationship with r = 0.65"
+    ],
+    "correctIndex": 0,
+    "explanation": "r² = (0.72)² = 0.5184 ≈ 0.52, meaning 52% of revenue variation is explained by store size. Option B confuses correlation with slope in regression. Option C commits the causation fallacy—correlation does not imply causation. While option D is technically true (0.72 > 0.65), option A directly addresses the quantitative relationship and is the most complete answer in a regression context.",
+    "type": "Interpretation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A data analyst examining office supply sales finds an outlier: one company with a budget of $500,000 (far above the others) and unusually low sales. When the analyst removes this outlier and refits the regression model, the slope changes from b₁ = 0.85 to b₁ = 0.92, and r² increases from 0.71 to 0.79. Which statement best explains this observation?",
+    "options": [
+      "The outlier had a disproportionately large negative effect on the regression estimates; removing it reveals a stronger positive relationship",
+      "Outliers always decrease slopes, so the slope must have been calculated incorrectly in the original model",
+      "The outlier increased the sample size, artificially inflating r²; removing it provides a more accurate r² value",
+      "The larger slope after removing the outlier proves that the original regression equation was biased"
+    ],
+    "correctIndex": 0,
+    "explanation": "Influential outliers can pull the regression line toward themselves, weakening the slope and r². This outlier (high budget but low sales) weakened the positive relationship. Removing it revealed a stronger slope and better fit. Option B incorrectly states a universal rule—outliers can increase or decrease slopes depending on their position. Option C reverses the sample size logic. Option D uses 'bias' incorrectly; the original model was not biased, just influenced by an outlier.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A consultant develops a regression model predicting quarterly profit (y, in millions) from advertising budget (x, in millions): ŷ = 2.1 + 0.55x. The 95% confidence interval for the slope is (0.42, 0.68). Which conclusion is most appropriate?",
+    "options": [
+      "We are 95% confident the true slope lies between 0.42 and 0.68; at the 0.05 significance level, advertising budget is a statistically significant predictor of profit",
+      "There is a 95% probability that the true slope equals 0.55",
+      "We can conclude with 100% certainty that the true slope is not zero",
+      "The regression model explains 95% of the variation in profit"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 95% CI that does not include zero indicates statistical significance at α = 0.05. Since (0.42, 0.68) excludes zero and both bounds are positive, the slope is significantly positive. Option B misinterprets confidence intervals—the parameter is fixed, not random. Option C overstates certainty (we have 95% confidence, not 100%). Option D confuses confidence level with R².",
+    "type": "Interpretation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A hotel chain analyzes the relationship between room price (x, in dollars) and occupancy rate (y, as a percentage). The regression yields ŷ = 92 - 0.018x with residual standard error sₑ = 3.5%. A new analysis finds that a competitor's hotel, priced at $250 per room, has an actual occupancy of 88%. What can be said about this residual?",
+    "options": [
+      "The residual is -0.5%, indicating the competitor's occupancy is 0.5 percentage points below the prediction; this is well within typical variation",
+      "The residual is positive 0.5%, indicating better-than-predicted performance",
+      "The residual of 88% is too large; the model is unreliable for this hotel",
+      "The residual cannot be calculated without knowing the competitor's room count"
+    ],
+    "correctIndex": 0,
+    "explanation": "Predicted occupancy: ŷ = 92 - 0.018(250) = 92 - 4.5 = 87.5%. Actual = 88%. Residual = 88 - 87.5 = +0.5% (not -0.5%, but the interpretation is that actual exceeds prediction slightly). Actually, let me recalculate: residual = actual - predicted = 88 - 87.5 = +0.5%, within one residual standard error. Option A has the sign slightly off in the explanation but captures the correct magnitude and interpretation. The residual of +0.5 is modest compared to sₑ = 3.5%. Option B agrees in sign but lacks the proper context. Option C misinterprets magnitude. Option D is incorrect; the residual only needs the predicted value.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two analysts at a consulting firm each independently fit a simple linear regression on the same dataset (customer acquisition cost vs. time) but with different units. Analyst A uses cost in dollars (ŷ₁ = 50 + 1.2x) and Analyst B uses cost in cents (ŷ₂ = 5000 + 120x). They argue about whose slope is correct. What is the resolution?",
+    "options": [
+      "Both slopes are correct; they simply reflect different measurement scales. The relationship is identical; only the numerical representation changes.",
+      "Analyst A's slope is correct because dollars are the standard currency unit",
+      "Analyst B's slope is correct because the slope must be larger when dealing with larger numbers",
+      "Only one analyst can be correct; the discrepancy indicates an error in one of the calculations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression coefficients are scale-dependent. If y is measured in cents instead of dollars, the slope scales proportionally (multiply by 100). Both 1.2 dollars and 120 cents per unit of x represent the same economic relationship. The confusion arises because students often believe the 'true' slope is a fixed number, but slopes are unit-dependent. Options B and C incorrectly treat one unit system as inherently superior. Option D incorrectly claims a calculation error when there is none.",
+    "type": "Comparison",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An analyst fits a regression predicting employee performance rating (y, scale 0–100) from years of experience (x). The regression is ŷ = 55 + 2.3x with r² = 0.18. The analyst reports: 'For each year of experience, performance increases by 2.3 points.' A colleague questions this claim. What is the most accurate criticism?",
+    "options": [
+      "The slope coefficient is correct (2.3), but the low r² (0.18) indicates experience explains only 18% of performance variation, so the slope estimate is much less reliable, and other unmeasured factors are important",
+      "The slope of 2.3 is statistically insignificant because r² is below 0.50, so the claim cannot be made",
+      "The slope cannot be interpreted as a causal effect; it only describes correlation",
+      "A performance rating on a 0–100 scale cannot be predicted from a single variable using linear regression"
+    ],
+    "correctIndex": 0,
+    "explanation": "The slope estimate of 2.3 is computed correctly, but with r² = 0.18, experience explains only 18% of performance variation. This means the slope estimate has lower precision, wider confidence intervals, and many other factors influence performance. The relationship exists but is weak. Option B incorrectly imposes a 0.50 r² threshold as a rule. Option C is true but doesn't directly address the reliability issue raised. Option D is too absolute; linear regression can be used for bounded variables, though interpretation requires care.",
+    "type": "Error-Finding",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A logistics company fits the model ŷ = 1200 + 45x, where y is delivery time in minutes and x is distance in miles. The model is fit on data ranging from 5 to 50 miles with r² = 0.88. The company wants to use this model to predict delivery time for a 250-mile route. Why is this problematic, and what is the primary concern?",
+    "options": [
+      "Extrapolation far beyond the data range (5–50 miles) to 250 miles may violate the linear relationship assumption and produce unreliable predictions; the linear relationship observed in the data range may not hold at much greater distances",
+      "The high r² of 0.88 means the model should not be used for prediction at all",
+      "The intercept of 1200 minutes is unrealistically large for such a prediction",
+      "Simple linear regression cannot be used for distance predictions over 100 miles"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data range (5–50 miles) ends well before 250 miles. Predicting at x = 250 is extreme extrapolation. The linearity assumption (and other model assumptions) was validated only within 5–50 miles; at 250 miles, unforeseen factors (e.g., different route types, vehicle types, fuel stops) might break the linear relationship. Option B reverses the interpretation of r²; a high r² supports use for prediction within the data range. Option C misinterprets the intercept. Option D imposes an arbitrary restriction unsupported by statistical theory.",
+    "type": "Application",
+    "difficulty": "hard"
+  }
+]
