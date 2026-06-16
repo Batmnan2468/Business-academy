@@ -98,6 +98,22 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [selected, question, loading, difficulty, onAnswer])
 
+  // Enter or Space advances to next question after answering
+  useEffect(() => {
+    if (selected === null || !question) return
+
+    const advance = onNext ?? fetchQuestion
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== 'Enter' && e.key !== ' ') return
+      e.preventDefault()
+      advance()
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [selected, question, onNext, fetchQuestion])
+
   function handleSelect(index: number) {
     if (selected !== null || !question) return
     setSelected(index)
@@ -227,7 +243,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
 
       {showKeyboardHint && !answered && (
         <p className="text-xs text-gray-400 dark:text-gray-600 mb-4 pl-1">
-          Tip: press 1–4 to select
+          Tip: press 1–4 to answer, Enter to continue
         </p>
       )}
 

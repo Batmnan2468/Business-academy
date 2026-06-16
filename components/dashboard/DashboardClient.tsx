@@ -7,8 +7,11 @@ import { getTopicState } from '@/lib/topicState'
 import { getLearnState } from '@/lib/learnState'
 import { getTotalSavedCount } from '@/lib/savedQuestions'
 import { getAggregatedMistakeStats } from '@/lib/mistakeTracker'
+import { getStreak, getDailyGoal } from '@/lib/xp'
 import ProgressBar from '@/components/ui/ProgressBar'
 import ProgressBackupWidget from '@/components/ProgressBackupWidget'
+import DailyGoalRing from '@/components/ui/DailyGoalRing'
+import LevelBadge from '@/components/ui/LevelBadge'
 
 export interface CourseData {
   slug: string
@@ -90,6 +93,8 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
   const [lastPracticeVisit, setLastPracticeVisit] = useState<{ courseSlug: string; topicSlug: string } | null>(null)
   const [savedCount, setSavedCount] = useState(0)
   const [totalMastered, setTotalMastered] = useState(0)
+  const [streak, setStreak] = useState({ current: 0, longest: 0 })
+  const [dailyGoal, setDailyGoal] = useState({ todayCount: 0, target: 10, pct: 0 })
 
   useEffect(() => {
     const dueList: DueTopic[] = []
@@ -170,6 +175,8 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
     }
 
     setSavedCount(getTotalSavedCount())
+    setStreak(getStreak())
+    setDailyGoal(getDailyGoal())
     setLoaded(true)
   }, [courses])
 
@@ -193,7 +200,7 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
   return (
     <main className="max-w-4xl mx-auto px-4 pb-8 sm:pb-12">
       {/* ── Header ── */}
-      <div className="mb-10">
+      <div className="mb-6">
         <h1 className="text-3xl font-bold mb-1">Study Dashboard</h1>
         <p className="text-gray-400 text-sm">{today}</p>
         {totalMastered > 0 && (
@@ -201,6 +208,24 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
             {totalMastered} topic{totalMastered !== 1 ? 's' : ''} mastered across all courses
           </p>
         )}
+      </div>
+
+      {/* ── Stats strip ── */}
+      <div className="mb-10 grid grid-cols-3 gap-4 items-start px-2 py-4 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/30">
+        <div className="flex justify-center">
+          <DailyGoalRing todayCount={dailyGoal.todayCount} target={dailyGoal.target} />
+        </div>
+        <div className="flex items-center justify-center h-full">
+          <LevelBadge />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-0.5 text-center">
+          <p className="text-base font-semibold text-gray-900 dark:text-white">
+            🔥 {streak.current} day{streak.current !== 1 ? 's' : ''}
+          </p>
+          <p className="text-xs text-gray-400">
+            Longest: {streak.longest} day{streak.longest !== 1 ? 's' : ''}
+          </p>
+        </div>
       </div>
 
       {/* ── Due for Review ── */}

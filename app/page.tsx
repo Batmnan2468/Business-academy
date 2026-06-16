@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getCourses, getAllTopics } from '@/lib/courses'
 import CourseCard from '@/components/course/CourseCard'
 import EmptyStateBanner from '@/components/EmptyStateBanner'
+import ContinueCard from '@/components/ContinueCard'
 
 export default function HomePage() {
   const courses = getCourses()
@@ -10,6 +11,13 @@ export default function HomePage() {
     courseSlug: c.slug,
     topicSlugs: getAllTopics(c).map((t) => t.slug),
   }))
+
+  const topicMap: Record<string, string> = {}
+  for (const course of courses) {
+    for (const topic of getAllTopics(course)) {
+      topicMap[`${course.slug}__${topic.slug}`] = topic.title
+    }
+  }
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
@@ -41,6 +49,8 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      <ContinueCard topicMap={topicMap} />
 
       <EmptyStateBanner allTopicData={allTopicData} />
 

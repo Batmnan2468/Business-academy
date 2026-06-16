@@ -22,6 +22,7 @@ interface UnitItem {
 
 interface Props {
   courseSlug: string
+  courseTitle?: string
   units?: UnitItem[]
   topics?: TopicItem[]
   totalTopics: number
@@ -205,6 +206,7 @@ function UnitTestSquare({
 
 export default function CourseTopicList({
   courseSlug,
+  courseTitle,
   units,
   topics,
   totalTopics,
@@ -336,6 +338,20 @@ export default function CourseTopicList({
           />
         </div>
       </div>
+
+      {/* Completion badge */}
+      {practicedCount === totalTopics && totalTopics > 0 && (
+        <div className="mb-6 rounded-2xl border border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30 px-5 py-4 text-center relative overflow-hidden">
+          <div className="absolute inset-0 rounded-2xl border-2 border-green-300 dark:border-green-700 animate-pulse pointer-events-none" />
+          <div className="text-3xl mb-2">🏆</div>
+          <p className="font-bold text-green-800 dark:text-green-300 text-sm">
+            {courseTitle ? `${courseTitle} Complete!` : 'Course Complete!'}
+          </p>
+          <p className="text-xs text-green-600 dark:text-green-500 mt-0.5">
+            All {totalTopics} topics practiced
+          </p>
+        </div>
+      )}
 
       {/* Learn / Practice mode selector */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">

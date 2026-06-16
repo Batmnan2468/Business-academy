@@ -6,6 +6,7 @@ import { onTopicCompleted } from '@/lib/mastery'
 import { getTopicState, setTopicState } from '@/lib/topicState'
 import { setLastPracticeVisit } from '@/lib/learnState'
 import { recordAnswer } from '@/lib/mistakeTracker'
+import { getPersonalBests, updatePersonalBests } from '@/lib/xp'
 
 const MASTERY_STREAK = 4
 
@@ -159,6 +160,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           topicTitle={topicTitle}
           correct={session.correct}
           total={session.total}
+          streak={session.streak}
           sessionTime={elapsed}
           courseSlug={courseSlug}
           nextTopic={nextTopic}
@@ -330,6 +332,7 @@ function MasteryScreen({
   topicTitle,
   correct,
   total,
+  streak,
   sessionTime,
   courseSlug,
   nextTopic,
@@ -338,11 +341,19 @@ function MasteryScreen({
   topicTitle: string
   correct: number
   total: number
+  streak: number
   sessionTime: number
   courseSlug: string
   nextTopic?: NextTopic | null
   onKeepPracticing: () => void
 }) {
+  const [prevBests] = useState(() => getPersonalBests())
+
+  useEffect(() => {
+    updatePersonalBests({ streak, correct, total })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
   const emoji = accuracy >= 90 ? '🎯' : accuracy >= 70 ? '⭐' : '📚'
   const bgColor = accuracy >= 90
@@ -350,6 +361,10 @@ function MasteryScreen({
     : accuracy >= 70
     ? 'bg-yellow-100 dark:bg-yellow-900/30'
     : 'bg-blue-100 dark:bg-blue-900/30'
+
+  const showAccuracyBest = total >= 5 && accuracy > prevBests.bestSessionAccuracy
+  const showCountBest = total > prevBests.bestSessionCount
+  const showStreakBest = streak >= prevBests.longestStreak
 
   return (
     <div className="text-center py-6">
@@ -380,7 +395,28 @@ function MasteryScreen({
         </div>
       </div>
 
-      <p className="text-xs text-gray-400 mb-4">Session time: {formatTime(sessionTime)}</p>
+      <p className="text-xs text-gray-400 mb-2">Session time: {formatTime(sessionTime)}</p>
+
+      {/* Personal best badges */}
+      {(showAccuracyBest || showCountBest || showStreakBest) && (
+        <div className="flex flex-col items-center gap-1 mb-4">
+          {showAccuracyBest && (
+            <p className="text-xs font-medium text-green-600 dark:text-green-400">
+              🎉 New personal best accuracy!
+            </p>
+          )}
+          {showCountBest && (
+            <p className="text-xs font-medium text-green-600 dark:text-green-400">
+              🎉 Most questions in a session!
+            </p>
+          )}
+          {showStreakBest && (
+            <p className="text-xs font-medium text-green-600 dark:text-green-400">
+              🎉 Longest streak!
+            </p>
+          )}
+        </div>
+      )}
 
       {accuracy < 70 && (
         <p className="text-xs text-amber-600 dark:text-amber-400 mb-6 px-4">

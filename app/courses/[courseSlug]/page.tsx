@@ -39,6 +39,7 @@ export default async function CoursePage({ params }: Props) {
 
       <CourseTopicList
         courseSlug={courseSlug}
+        courseTitle={course.title}
         units={slimUnits}
         topics={slimTopics}
         totalTopics={allTopics.length}
