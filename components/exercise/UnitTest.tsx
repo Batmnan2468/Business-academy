@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import type { UnitTestQuestion } from '@/types'
 import { getTopicState, setTopicState, setUnitTestState, applyExamResult } from '@/lib/topicState'
+import { addXP } from '@/lib/xp'
 
 interface TopicItem {
   slug: string
@@ -106,6 +107,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
     const testable = results.filter((r) => r.total > 0)
     const allPassed = testable.length > 0 && testable.every((r) => r.correct === r.total)
     setUnitTestState(courseSlug, unitId, allPassed ? 'passed' : 'inProgress')
+    if (allPassed) addXP('unitTestPassed')
 
     setAnswers(allAnswers)
     setTopicResults(results)

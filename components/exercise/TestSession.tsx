@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { applyExamResult } from '@/lib/topicState'
+import { addXP } from '@/lib/xp'
 
 export interface TestQuestion {
   question: string
@@ -74,6 +75,7 @@ export function TestSession({ questions, courseSlug, onRetake }: Props) {
     ])
     setSelected(null)
     if (currentIndex + 1 >= total) {
+      addXP('courseTestCompleted')
       setComplete(true)
     } else {
       setCurrentIndex((i) => i + 1)

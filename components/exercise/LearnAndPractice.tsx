@@ -6,7 +6,8 @@ import { onTopicCompleted } from '@/lib/mastery'
 import { getTopicState, setTopicState } from '@/lib/topicState'
 import { setLastPracticeVisit } from '@/lib/learnState'
 import { recordAnswer } from '@/lib/mistakeTracker'
-import { getPersonalBests, updatePersonalBests } from '@/lib/xp'
+import { addXP, updateStreak, recordDailyActivity, getPersonalBests, updatePersonalBests } from '@/lib/xp'
+import XPToast from '@/components/ui/XPToast'
 
 const MASTERY_STREAK = 4
 
@@ -76,12 +77,26 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
   const [difficulty, setDifficulty] = useState('medium')
   const [elapsed, setElapsed] = useState(0)
+  const [toastVisible, setToastVisible] = useState(false)
+  const [toastXP, setToastXP] = useState(0)
+  const [toastLabel, setToastLabel] = useState('')
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const streakBonusFiredRef = useRef(false)
 
-  // Clear interval on unmount
+  function triggerToast(xp: number, label: string) {
+    if (toastTimerRef.current !== null) clearTimeout(toastTimerRef.current)
+    setToastXP(xp)
+    setToastLabel(label)
+    setToastVisible(true)
+    toastTimerRef.current = setTimeout(() => setToastVisible(false), 2000)
+  }
+
+  // Clear timers on unmount
   useEffect(() => {
     return () => {
       if (timerRef.current !== null) clearInterval(timerRef.current)
+      if (toastTimerRef.current !== null) clearTimeout(toastTimerRef.current)
     }
   }, [])
 
@@ -122,6 +137,22 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   function handleAnswer(isCorrect: boolean, questionType: string, questionDifficulty: string) {
     recordAnswer(courseSlug, topicSlug, questionType, questionDifficulty, isCorrect)
     if (session.total === 0) startTimer()
+
+    const dailyResult = recordDailyActivity()
+    const streakResult = updateStreak()
+
+    if (isCorrect) {
+      const earned = addXP('practiceCorrect')
+      triggerToast(earned, '')
+    }
+    if (dailyResult.justMetGoal) {
+      addXP('dailyGoalMet')
+    }
+    if (streakResult.current > 1 && !streakBonusFiredRef.current) {
+      addXP('streakBonus')
+      streakBonusFiredRef.current = true
+    }
+
     setSession((prev) => {
       const newStreak = isCorrect ? prev.streak + 1 : 0
       return {
@@ -139,6 +170,8 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     markTopicComplete(courseSlug, topicSlug)
     onTopicCompleted(courseSlug, topicSlug)
     setTopicState(courseSlug, topicSlug, 'practiced')
+    addXP('masteryAchieved')
+    triggerToast(25, 'Topic Mastered!')
     setSession((prev) => ({ ...prev, showMastery: true }))
   }
 
@@ -156,16 +189,19 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   if (mode === 'practice' || !learn) {
     if (session.showMastery) {
       return (
-        <MasteryScreen
-          topicTitle={topicTitle}
-          correct={session.correct}
-          total={session.total}
-          streak={session.streak}
-          sessionTime={elapsed}
-          courseSlug={courseSlug}
-          nextTopic={nextTopic}
-          onKeepPracticing={handleKeepPracticing}
-        />
+        <>
+          <MasteryScreen
+            topicTitle={topicTitle}
+            correct={session.correct}
+            total={session.total}
+            streak={session.streak}
+            sessionTime={elapsed}
+            courseSlug={courseSlug}
+            nextTopic={nextTopic}
+            onKeepPracticing={handleKeepPracticing}
+          />
+          <XPToast xp={toastXP} label={toastLabel} visible={toastVisible} />
+        </>
       )
     }
 
@@ -217,6 +253,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           nextLabel={session.masteryPending ? 'See results →' : undefined}
           onNext={session.masteryPending ? handleMasteryTransition : undefined}
         />
+        <XPToast xp={toastXP} label={toastLabel} visible={toastVisible} />
       </div>
     )
   }

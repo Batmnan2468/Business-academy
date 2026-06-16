@@ -13,6 +13,7 @@ import {
   setCheckpointResult,
   setLastLearnVisit,
 } from '@/lib/learnState'
+import { addXP, updateStreak } from '@/lib/xp'
 import type { LearnRating } from '@/lib/learnState'
 import CheckpointQuestions from './CheckpointQuestions'
 
@@ -70,6 +71,8 @@ export function LearnTopicContentLegacy({
       completedAt: new Date().toISOString(),
     })
     setLearnState(courseSlug, topicSlug, 'completed')
+    addXP('learnTopicCompleted')
+    updateStreak()
   }
 
   const hasCheckpoints = checkpointQuestions.length > 0
@@ -204,6 +207,8 @@ export default function LearnTopicContent({
     setRatingSubmitted(true)
     setLearnRating(courseSlug, topicSlug, r)
     setLearnState(courseSlug, topicSlug, 'completed')
+    addXP('learnTopicCompleted')
+    updateStreak()
   }
 
   function handleCheckpointComplete(score: number) {
