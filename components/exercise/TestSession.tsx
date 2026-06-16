@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { applyExamResult } from '@/lib/topicState'
 
 export interface TestQuestion {
   question: string
@@ -58,6 +59,7 @@ export function TestSession({ questions, courseSlug, onRetake }: Props) {
 
   function handleNext() {
     const isCorrect = selected! === q.correctIndex
+    applyExamResult(courseSlug, q.topicSlug, isCorrect)
     setAnswers((prev) => [
       ...prev,
       {

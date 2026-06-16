@@ -80,7 +80,7 @@ function loadUnitTestStateMap(
   return map
 }
 
-// ── State circle icon ────────────────────────────────────────────────────────
+// ── State circle icon (used in flat-topics fallback) ─────────────────────────
 
 function TopicCircle({ state }: { state: TopicState }) {
   if (state === 'mastered') {
@@ -110,7 +110,6 @@ function TopicCircle({ state }: { state: TopicState }) {
       />
     )
   }
-  // untouched
   return (
     <span
       className="w-4 h-4 rounded-full shrink-0 block border-2"
@@ -120,9 +119,56 @@ function TopicCircle({ state }: { state: TopicState }) {
   )
 }
 
-// ── Unit test row ────────────────────────────────────────────────────────────
+// ── Topic square (unit grid) ──────────────────────────────────────────────────
 
-function UnitTestRow({
+function TopicSquare({
+  topic,
+  num,
+  courseSlug,
+  state,
+}: {
+  topic: TopicItem
+  num: number
+  courseSlug: string
+  state: TopicState
+}) {
+  let bgBorder: string
+  if (state === 'mastered') {
+    bgBorder = 'bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800'
+  } else if (state === 'practiced') {
+    bgBorder = 'bg-yellow-50 dark:bg-amber-950 border-yellow-200 dark:border-yellow-800'
+  } else if (state === 'inProgress') {
+    bgBorder = 'bg-red-50 dark:bg-red-950 border-red-200 dark:border-red-800'
+  } else {
+    bgBorder = 'border-gray-300 dark:border-gray-600'
+  }
+
+  const dotColor =
+    state === 'mastered'
+      ? 'bg-green-500'
+      : state === 'practiced'
+        ? 'bg-yellow-400'
+        : state === 'inProgress'
+          ? 'bg-red-500'
+          : null
+
+  return (
+    <Link
+      href={`/courses/${courseSlug}/practice/${topic.slug}`}
+      title={topic.title}
+      className={`relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-lg border text-sm font-semibold text-gray-600 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors ${bgBorder}`}
+    >
+      {num}
+      {dotColor !== null && (
+        <span className={`absolute top-0.5 right-0.5 w-2 h-2 rounded-full ${dotColor}`} />
+      )}
+    </Link>
+  )
+}
+
+// ── Unit test square (unit grid) ──────────────────────────────────────────────
+
+function UnitTestSquare({
   courseSlug,
   unitId,
   moduleNum,
@@ -133,38 +179,37 @@ function UnitTestRow({
   moduleNum: number
   state: UnitTestState
 }) {
-  const badgeClass =
-    state === 'passed'
-      ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-      : state === 'inProgress'
-        ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
-        : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'
-
-  const badgeLabel =
-    state === 'passed' ? '✓ Passed' : state === 'inProgress' ? 'In Progress' : 'Not Started'
-
   return (
-    <li>
-      <Link
-        href={`/courses/${courseSlug}/unit-test/${unitId}`}
-        className="flex items-center gap-4 px-5 py-4 min-h-[48px] rounded-xl border-2 border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/20 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group"
-      >
-        <span className="text-base shrink-0">📋</span>
-        <span className="flex-1 font-semibold text-sm text-gray-700 dark:text-gray-300 group-hover:text-blue-700 dark:group-hover:text-blue-300">
-          Module {moduleNum} Unit Test
+    <Link
+      href={`/courses/${courseSlug}/unit-test/${unitId}`}
+      title={`Module ${moduleNum} Unit Test`}
+      className="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900/20 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-base"
+    >
+      📋
+      {state !== 'notStarted' && (
+        <span
+          className={`absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full text-xs flex items-center justify-center font-bold ${
+            state === 'passed'
+              ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
+              : 'bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300'
+          }`}
+        >
+          {state === 'passed' ? '✓' : '~'}
         </span>
-        <span className={`text-xs font-medium px-2 py-0.5 rounded-full shrink-0 ${badgeClass}`}>
-          {badgeLabel}
-        </span>
-        <span className="text-gray-400 group-hover:text-blue-400 text-sm ml-1">→</span>
-      </Link>
-    </li>
+      )}
+    </Link>
   )
 }
 
 // ── Main component ────────────────────────────────────────────────────────────
 
-export default function CourseTopicList({ courseSlug, units, topics, totalTopics, hasLearnContent = false }: Props) {
+export default function CourseTopicList({
+  courseSlug,
+  units,
+  topics,
+  totalTopics,
+  hasLearnContent = false,
+}: Props) {
   const [masteryMap, setMasteryMap] = useState<Map<string, TopicMastery>>(new Map())
   const [topicStateMap, setTopicStateMap] = useState<Map<string, TopicState>>(new Map())
   const [unitTestStateMap, setUnitTestStateMap] = useState<Map<string, UnitTestState>>(new Map())
@@ -193,12 +238,12 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseSlug])
 
-  // Count topics at practiced or mastered for the top progress bar
   const practicedCount = [...topicStateMap.values()].filter(
     (s) => s === 'practiced' || s === 'mastered',
   ).length
   const pct = totalTopics > 0 ? Math.round((practicedCount / totalTopics) * 100) : 0
 
+  // Flat-topics fallback: full-width topic row (original design)
   function topicRow(topic: TopicItem, num: number) {
     const state = topicStateMap.get(topic.slug) ?? 'untouched'
     const mastery = masteryMap.get(topic.slug)
@@ -206,7 +251,6 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
     const isPerm = mastery?.permanentlyMastered ?? false
     const isDecayed = mastery !== undefined && !isPerm && masteryPct === 0
 
-    // Right badge: spaced-repetition mastery level (unchanged)
     let rightBadge: React.ReactNode = null
     if (isPerm) {
       rightBadge = (
@@ -241,7 +285,6 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
       )
     }
 
-    // Row border color based on topic state
     let borderClass = 'border-gray-200 dark:border-gray-700'
     if (state === 'mastered') borderClass = 'border-green-200 dark:border-green-800'
     else if (state === 'practiced') borderClass = 'border-yellow-200 dark:border-yellow-800'
@@ -253,12 +296,10 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
           href={`/courses/${courseSlug}/${topic.slug}`}
           className={`flex items-center gap-4 px-5 py-4 min-h-[48px] rounded-xl border hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group ${borderClass}`}
         >
-          {/* Left: state circle + topic number */}
           <div className="flex items-center gap-2 shrink-0">
             <TopicCircle state={state} />
             <span className="text-xs text-gray-400 tabular-nums w-5">{num}</span>
           </div>
-
           <span
             className={`flex-1 min-w-0 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 ${
               state !== 'untouched'
@@ -372,53 +413,51 @@ export default function CourseTopicList({ courseSlug, units, topics, totalTopics
         )}
       </div>
 
+      {/* Unit grid (unit-based courses) or flat topic list (fallback) */}
       {units ? (
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {units.map((unit, unitIdx) => {
             const moduleNum = unitIdx + 1
             const unitPracticedCount = unit.topics.filter((t) => {
               const s = topicStateMap.get(t.slug) ?? 'untouched'
               return s === 'practiced' || s === 'mastered'
             }).length
-            const unitPct =
-              unit.topics.length > 0
-                ? Math.round((unitPracticedCount / unit.topics.length) * 100)
-                : 0
             const utState = unitTestStateMap.get(unit.id) ?? 'notStarted'
 
             return (
-              <div key={unit.id}>
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
-                  {unit.title}
-                </h2>
-
-                {/* Module progress bar */}
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex-1 h-1 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full transition-all duration-500"
-                      style={{ width: `${unitPct}%`, backgroundColor: '#eab308' }}
-                    />
-                  </div>
-                  <span className="text-xs text-gray-400 shrink-0 tabular-nums">
+              <div
+                key={unit.id}
+                className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4"
+              >
+                <div className="flex items-start justify-between gap-2 mb-3">
+                  <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 leading-tight">
+                    {unit.title}
+                  </h2>
+                  <span className="text-xs text-gray-400 tabular-nums shrink-0">
                     {unitPracticedCount}/{unit.topics.length}
                   </span>
                 </div>
-
-                <ul className="list-none space-y-2 m-0 p-0">
+                <div className="flex flex-wrap gap-1.5">
                   {unit.topics.map((topic, i) => {
                     const globalNum = getGlobalNum(units, unit.id, i)
-                    return topicRow(topic, globalNum)
+                    const state = topicStateMap.get(topic.slug) ?? 'untouched'
+                    return (
+                      <TopicSquare
+                        key={topic.id}
+                        topic={topic}
+                        num={globalNum}
+                        courseSlug={courseSlug}
+                        state={state}
+                      />
+                    )
                   })}
-
-                  {/* Unit test row */}
-                  <UnitTestRow
+                  <UnitTestSquare
                     courseSlug={courseSlug}
                     unitId={unit.id}
                     moduleNum={moduleNum}
                     state={utState}
                   />
-                </ul>
+                </div>
               </div>
             )
           })}

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { UnitTestQuestion } from '@/types'
-import { getTopicState, setTopicState, setUnitTestState } from '@/lib/topicState'
+import { getTopicState, setTopicState, setUnitTestState, applyExamResult } from '@/lib/topicState'
 
 interface TopicItem {
   slug: string
@@ -61,6 +61,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
   function handleNext() {
     if (selected === null) return
     const isCorrect = selected === currentQuestion.correctIndex
+    applyExamResult(courseSlug, currentQuestion.topicSlug, isCorrect)
     const allAnswers = [...answers, { correct: isCorrect, topicSlug: currentQuestion.topicSlug }]
 
     if (isLastQuestion) {

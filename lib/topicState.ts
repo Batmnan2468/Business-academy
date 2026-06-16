@@ -47,3 +47,22 @@ export function countPracticedTopics(courseSlug: string, topicSlugs: string[]): 
   }
   return count
 }
+
+export function applyExamResult(
+  courseSlug: string,
+  topicSlug: string,
+  isCorrect: boolean,
+): void {
+  const current = getTopicState(courseSlug, topicSlug)
+  if (isCorrect) {
+    if (current !== 'mastered') {
+      setTopicState(courseSlug, topicSlug, 'practiced')
+    }
+  } else {
+    if (current === 'mastered') {
+      setTopicState(courseSlug, topicSlug, 'practiced')
+    } else {
+      setTopicState(courseSlug, topicSlug, 'inProgress')
+    }
+  }
+}
