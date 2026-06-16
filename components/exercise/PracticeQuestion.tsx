@@ -31,7 +31,7 @@ interface Props {
   courseSlug: string
   courseTitle?: string
   difficulty: string
-  onAnswer?: (correct: boolean) => void
+  onAnswer?: (correct: boolean, questionType: string, difficulty: string) => void
   nextLabel?: string
   onNext?: () => void
 }
@@ -43,6 +43,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
   const [selected, setSelected] = useState<number | null>(null)
   const [isSaved, setIsSaved] = useState(false)
   const [showToast, setShowToast] = useState(false)
+  const [showKeyboardHint, setShowKeyboardHint] = useState(true)
 
   const fetchQuestion = useCallback(async () => {
     setLoading(true)
@@ -74,6 +75,39 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
   useEffect(() => {
     fetchQuestion()
   }, [fetchQuestion])
+
+  // Keyboard navigation: 1–4 selects the corresponding option
+  useEffect(() => {
+    if (selected !== null || !question || loading) return
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (!question || selected !== null) return
+      const num = parseInt(e.key)
+      if (isNaN(num) || num < 1 || num > question.options.length) return
+      const index = num - 1
+      setSelected(index)
+      setShowKeyboardHint(false)
+      onAnswer?.(
+        index === question.correctIndex,
+        question.type ?? '',
+        question.difficulty ?? difficulty,
+      )
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [selected, question, loading, difficulty, onAnswer])
+
+  function handleSelect(index: number) {
+    if (selected !== null || !question) return
+    setSelected(index)
+    setShowKeyboardHint(false)
+    onAnswer?.(
+      index === question.correctIndex,
+      question.type ?? '',
+      question.difficulty ?? difficulty,
+    )
+  }
 
   function handleSaveToggle() {
     if (!question) return
@@ -153,7 +187,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
         {question.question}
       </p>
 
-      <ul className="space-y-3 mb-4">
+      <ul className="space-y-3 mb-2">
         {question.options.map((option, i) => {
           const isSelected = selected === i
           const isCorrectChoice = i === question.correctIndex
@@ -180,10 +214,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
             <li key={i}>
               <button
                 disabled={answered}
-                onClick={() => {
-                  setSelected(i)
-                  onAnswer?.(i === question.correctIndex)
-                }}
+                onClick={() => handleSelect(i)}
                 className={className}
               >
                 <span className="mr-3 text-xs opacity-60">{String.fromCharCode(65 + i)}.</span>
@@ -193,6 +224,12 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
           )
         })}
       </ul>
+
+      {showKeyboardHint && !answered && (
+        <p className="text-xs text-gray-400 dark:text-gray-600 mb-4 pl-1">
+          Tip: press 1–4 to select
+        </p>
+      )}
 
       {/* Save for later button */}
       <div className="mb-6">

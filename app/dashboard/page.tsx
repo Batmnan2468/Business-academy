@@ -1,5 +1,6 @@
 import { getCourses, getAllTopics } from '@/lib/courses'
 import DashboardClient, { type CourseData } from '@/components/dashboard/DashboardClient'
+import ExamCountdown from '@/components/ExamCountdown'
 
 export default function DashboardPage() {
   const courses = getCourses()
@@ -16,5 +17,17 @@ export default function DashboardPage() {
     })),
   }))
 
-  return <DashboardClient courses={courseData} />
+  const courseOptions = courses.map((c) => ({
+    slug: c.slug,
+    abbr: c.slug.split('-').map((p) => p.toUpperCase()).join(' '),
+  }))
+
+  return (
+    <>
+      <div className="max-w-4xl mx-auto px-4 pt-8 sm:pt-12 pb-2">
+        <ExamCountdown courses={courseOptions} />
+      </div>
+      <DashboardClient courses={courseData} />
+    </>
+  )
 }

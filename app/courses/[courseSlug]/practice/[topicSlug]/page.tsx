@@ -29,12 +29,17 @@ export default async function PracticeTopicPage({ params }: Props) {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
-      <Link
-        href={`/courses/${courseSlug}/practice`}
-        className="text-sm text-blue-500 hover:underline mb-8 inline-block"
-      >
-        ← Practice Mode
-      </Link>
+      <nav className="flex items-center gap-1.5 text-sm mb-8">
+        <Link href={`/courses/${courseSlug}`} className="text-blue-500 hover:underline">
+          {course.title}
+        </Link>
+        <span className="text-gray-400">›</span>
+        <Link href={`/courses/${courseSlug}/practice`} className="text-blue-500 hover:underline">
+          Practice
+        </Link>
+        <span className="text-gray-400">›</span>
+        <span className="text-gray-600 dark:text-gray-300">{topic.title}</span>
+      </nav>
 
       <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-500">
         {course.subject}

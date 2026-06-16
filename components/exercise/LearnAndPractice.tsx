@@ -5,6 +5,7 @@ import PracticeQuestion from './PracticeQuestion'
 import { onTopicCompleted } from '@/lib/mastery'
 import { getTopicState, setTopicState } from '@/lib/topicState'
 import { setLastPracticeVisit } from '@/lib/learnState'
+import { recordAnswer } from '@/lib/mistakeTracker'
 
 const MASTERY_STREAK = 4
 
@@ -91,7 +92,8 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     setMode('practice')
   }
 
-  function handleAnswer(isCorrect: boolean) {
+  function handleAnswer(isCorrect: boolean, questionType: string, questionDifficulty: string) {
+    recordAnswer(courseSlug, topicSlug, questionType, questionDifficulty, isCorrect)
     setSession((prev) => {
       const newStreak = isCorrect ? prev.streak + 1 : 0
       return {
@@ -228,33 +230,59 @@ function ScoreBar({
   total: number
   streak: number
 }) {
-  return (
-    <div className="flex items-center justify-between mb-6 px-4 py-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-800">
-      <span className="text-sm text-gray-600 dark:text-gray-400">
-        <span className="font-semibold text-gray-900 dark:text-white">{correct}</span>
-        <span className="mx-1 text-gray-300 dark:text-gray-600">/</span>
-        <span>{total}</span>
-        <span className="ml-1">correct</span>
-      </span>
+  const [flashGreen, setFlashGreen] = useState(false)
+  const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
 
-      <div className="flex items-center gap-2">
-        <div className="flex gap-1">
-          {Array.from({ length: MASTERY_STREAK }).map((_, i) => (
-            <div
-              key={i}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                i < streak
-                  ? 'bg-blue-500'
-                  : 'bg-gray-200 dark:bg-gray-700'
-              }`}
-            />
-          ))}
-        </div>
-        {streak > 0 && (
-          <span className="text-xs font-medium text-blue-500 tabular-nums">
-            {streak} in a row
+  useEffect(() => {
+    if (streak === MASTERY_STREAK) {
+      setFlashGreen(true)
+      const t = setTimeout(() => setFlashGreen(false), 700)
+      return () => clearTimeout(t)
+    }
+  }, [streak])
+
+  return (
+    <div className="mb-6">
+      {/* Thin animated progress bar */}
+      <div className="h-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-3 overflow-hidden">
+        <div
+          className="h-full bg-blue-500 rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${accuracy}%` }}
+        />
+      </div>
+
+      <div className="flex items-center justify-between px-4 py-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-800">
+        <span className="text-sm text-gray-600 dark:text-gray-400">
+          <span className="font-semibold text-gray-900 dark:text-white">{correct}</span>
+          <span className="mx-1 text-gray-300 dark:text-gray-600">/</span>
+          <span>{total}</span>
+          <span className="ml-1">correct</span>
+          <span className="ml-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+            ({accuracy}%)
           </span>
-        )}
+        </span>
+
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1">
+            {Array.from({ length: MASTERY_STREAK }).map((_, i) => (
+              <div
+                key={i}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
+                  i < streak
+                    ? flashGreen
+                      ? 'bg-green-500 scale-125'
+                      : 'bg-blue-500'
+                    : 'bg-gray-200 dark:bg-gray-700'
+                }`}
+              />
+            ))}
+          </div>
+          {streak > 0 && (
+            <span className={`text-xs font-medium tabular-nums transition-colors ${flashGreen ? 'text-green-500' : 'text-blue-500'}`}>
+              {streak} in a row
+            </span>
+          )}
+        </div>
       </div>
     </div>
   )
@@ -276,28 +304,52 @@ function MasteryScreen({
   onKeepPracticing: () => void
 }) {
   const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0
+  const emoji = accuracy >= 90 ? '🎯' : accuracy >= 70 ? '⭐' : '📚'
+  const bgColor = accuracy >= 90
+    ? 'bg-green-100 dark:bg-green-900/30'
+    : accuracy >= 70
+    ? 'bg-yellow-100 dark:bg-yellow-900/30'
+    : 'bg-blue-100 dark:bg-blue-900/30'
 
   return (
     <div className="text-center py-6">
-      <div className="w-16 h-16 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-3xl mx-auto mb-5">
-        ⭐
+      <div className={`w-16 h-16 rounded-full ${bgColor} flex items-center justify-center text-3xl mx-auto mb-5`}>
+        {emoji}
       </div>
 
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
         Topic practiced!
       </h2>
-      <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">
+      <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
         4 correct answers in a row on{' '}
         <span className="font-medium text-gray-700 dark:text-gray-300">{topicTitle}</span>.
       </p>
-      <p className="text-gray-400 dark:text-gray-500 text-xs mb-10">
-        {correct}/{total} correct this session · {accuracy}% accuracy
-      </p>
 
-      <div className="flex flex-col gap-3 items-center">
+      {/* Accuracy breakdown */}
+      <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 mb-4">
+        <div className="text-center">
+          <p className="text-2xl font-bold text-gray-900 dark:text-white">{correct}/{total}</p>
+          <p className="text-xs text-gray-400">correct</p>
+        </div>
+        <div className="w-px h-8 bg-gray-200 dark:bg-gray-700" />
+        <div className="text-center">
+          <p className={`text-2xl font-bold ${accuracy >= 70 ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}`}>
+            {accuracy}%
+          </p>
+          <p className="text-xs text-gray-400">accuracy</p>
+        </div>
+      </div>
+
+      {accuracy < 70 && (
+        <p className="text-xs text-amber-600 dark:text-amber-400 mb-6 px-4">
+          Consider reviewing the learn content before moving on.
+        </p>
+      )}
+
+      <div className={`flex flex-col gap-3 items-center ${accuracy >= 70 ? 'mt-6' : ''}`}>
         {nextTopic && (
           <Link
-            href={`/courses/${courseSlug}/${nextTopic.slug}`}
+            href={`/courses/${courseSlug}/practice/${nextTopic.slug}`}
             className="w-full max-w-xs px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
           >
             Next: {nextTopic.title} →

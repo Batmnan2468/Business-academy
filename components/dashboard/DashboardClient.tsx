@@ -6,6 +6,7 @@ import { getMastery, isDueToday, todayStr } from '@/lib/mastery'
 import { getTopicState } from '@/lib/topicState'
 import { getLearnState } from '@/lib/learnState'
 import { getTotalSavedCount } from '@/lib/savedQuestions'
+import { getAggregatedMistakeStats } from '@/lib/mistakeTracker'
 import ProgressBar from '@/components/ui/ProgressBar'
 
 export interface CourseData {
@@ -48,6 +49,12 @@ interface WeakTopic {
   topicTitle: string
 }
 
+interface WeakTypeEntry {
+  type: string
+  accuracy: number
+  count: number
+}
+
 const subjectBorderColors: Record<string, string> = {
   Accounting: '#3b82f6',
   'Information Systems': '#8b5cf6',
@@ -77,6 +84,7 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
   const [dueTopics, setDueTopics] = useState<DueTopic[]>([])
   const [courseStats, setCourseStats] = useState<CourseStat[]>([])
   const [weakAreas, setWeakAreas] = useState<WeakTopic[]>([])
+  const [weakTypes, setWeakTypes] = useState<WeakTypeEntry[]>([])
   const [lastLearnVisit, setLastLearnVisit] = useState<{ courseSlug: string; topicSlug: string } | null>(null)
   const [lastPracticeVisit, setLastPracticeVisit] = useState<{ courseSlug: string; topicSlug: string } | null>(null)
   const [savedCount, setSavedCount] = useState(0)
@@ -148,6 +156,9 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
     setWeakAreas(weak.slice(0, 8))
     setTotalMastered(mastered)
 
+    const { weakestTypes } = getAggregatedMistakeStats(courses.map((c) => c.slug))
+    setWeakTypes(weakestTypes)
+
     try {
       const llv = localStorage.getItem('lastLearnVisit')
       if (llv) setLastLearnVisit(JSON.parse(llv))
@@ -179,7 +190,7 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
   const dueGroups = groupBy(dueTopics, (t) => t.courseSlug)
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+    <main className="max-w-4xl mx-auto px-4 pb-8 sm:pb-12">
       {/* ── Header ── */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold mb-1">Study Dashboard</h1>
@@ -312,6 +323,26 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
                 </div>
                 <span className="text-xs text-blue-500 shrink-0">Practice →</span>
               </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── Weak Spots (question type analysis) ── */}
+      {weakTypes.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-lg font-semibold mb-4">Weak Spots</h2>
+          <div className="flex flex-wrap gap-3">
+            {weakTypes.map((t) => (
+              <div
+                key={t.type}
+                className="px-4 py-3 rounded-xl border border-gray-100 dark:border-gray-800 min-w-[140px]"
+              >
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">{t.type}</p>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  {t.accuracy}% accuracy · {t.count} attempts
+                </p>
+              </div>
             ))}
           </div>
         </section>
