@@ -8,6 +8,7 @@ import { getLearnState } from '@/lib/learnState'
 import { getTotalSavedCount } from '@/lib/savedQuestions'
 import { getAggregatedMistakeStats } from '@/lib/mistakeTracker'
 import ProgressBar from '@/components/ui/ProgressBar'
+import ProgressBackupWidget from '@/components/ProgressBackupWidget'
 
 export interface CourseData {
   slug: string
@@ -349,7 +350,7 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
       )}
 
       {/* ── Quick Actions ── */}
-      <section>
+      <section className="mb-0">
         <h2 className="text-lg font-semibold mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {lastLearnVisit ? (
@@ -422,6 +423,8 @@ export default function DashboardClient({ courses }: { courses: CourseData[] }) 
           </Link>
         </div>
       </section>
+
+      <ProgressBackupWidget />
     </main>
   )
 }

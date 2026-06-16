@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import PracticeQuestion from './PracticeQuestion'
 import { onTopicCompleted } from '@/lib/mastery'
@@ -41,6 +41,12 @@ function markTopicComplete(courseSlug: string, topicSlug: string) {
   }
 }
 
+function formatTime(s: number): string {
+  const m = Math.floor(s / 60)
+  const sec = s % 60
+  return `${m}:${sec.toString().padStart(2, '0')}`
+}
+
 interface Session {
   total: number
   correct: number
@@ -68,6 +74,15 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
   const [difficulty, setDifficulty] = useState('medium')
+  const [elapsed, setElapsed] = useState(0)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  // Clear interval on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) clearInterval(timerRef.current)
+    }
+  }, [])
 
   // Transition topic state on mount
   useEffect(() => {
@@ -75,7 +90,6 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     if (current === 'untouched') {
       setTopicState(courseSlug, topicSlug, 'inProgress')
     } else if (current === 'practiced' && initialMode === 'practice') {
-      // Starting directly in practice mode is a new session — risk of regression
       setTopicState(courseSlug, topicSlug, 'inProgress')
     }
     if (initialMode === 'practice') {
@@ -83,6 +97,18 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  function startTimer() {
+    if (timerRef.current !== null) return
+    timerRef.current = setInterval(() => setElapsed((e) => e + 1), 1000)
+  }
+
+  function stopTimer() {
+    if (timerRef.current !== null) {
+      clearInterval(timerRef.current)
+      timerRef.current = null
+    }
+  }
 
   function startPractice() {
     const current = getTopicState(courseSlug, topicSlug)
@@ -94,6 +120,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
 
   function handleAnswer(isCorrect: boolean, questionType: string, questionDifficulty: string) {
     recordAnswer(courseSlug, topicSlug, questionType, questionDifficulty, isCorrect)
+    if (session.total === 0) startTimer()
     setSession((prev) => {
       const newStreak = isCorrect ? prev.streak + 1 : 0
       return {
@@ -107,6 +134,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   }
 
   function handleMasteryTransition() {
+    stopTimer()
     markTopicComplete(courseSlug, topicSlug)
     onTopicCompleted(courseSlug, topicSlug)
     setTopicState(courseSlug, topicSlug, 'practiced')
@@ -114,6 +142,8 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   }
 
   function handleKeepPracticing() {
+    stopTimer()
+    setElapsed(0)
     const current = getTopicState(courseSlug, topicSlug)
     if (current === 'practiced') {
       setTopicState(courseSlug, topicSlug, 'inProgress')
@@ -129,6 +159,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           topicTitle={topicTitle}
           correct={session.correct}
           total={session.total}
+          sessionTime={elapsed}
           courseSlug={courseSlug}
           nextTopic={nextTopic}
           onKeepPracticing={handleKeepPracticing}
@@ -138,7 +169,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
 
     return (
       <div>
-        {/* Header: back link (left) + session score (right) */}
+        {/* Header: back link (left) + session score + timer (right) */}
         <div className="flex flex-wrap items-center justify-between gap-y-1 mb-6">
           {learn ? (
             <button
@@ -150,11 +181,18 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           ) : (
             <span />
           )}
-          <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">
-            Session:{' '}
-            <span className="font-semibold text-gray-700 dark:text-gray-300">{session.correct}</span>
-            {' '}correct / {session.total} answered
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">
+              Session:{' '}
+              <span className="font-semibold text-gray-700 dark:text-gray-300">{session.correct}</span>
+              {' '}correct / {session.total} answered
+            </span>
+            {session.total > 0 && (
+              <span className="text-xs text-gray-400 tabular-nums">
+                ⏱ {formatTime(elapsed)}
+              </span>
+            )}
+          </div>
         </div>
 
         {session.total > 0 && (
@@ -292,6 +330,7 @@ function MasteryScreen({
   topicTitle,
   correct,
   total,
+  sessionTime,
   courseSlug,
   nextTopic,
   onKeepPracticing,
@@ -299,6 +338,7 @@ function MasteryScreen({
   topicTitle: string
   correct: number
   total: number
+  sessionTime: number
   courseSlug: string
   nextTopic?: NextTopic | null
   onKeepPracticing: () => void
@@ -326,7 +366,7 @@ function MasteryScreen({
       </p>
 
       {/* Accuracy breakdown */}
-      <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 mb-4">
+      <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 mb-2">
         <div className="text-center">
           <p className="text-2xl font-bold text-gray-900 dark:text-white">{correct}/{total}</p>
           <p className="text-xs text-gray-400">correct</p>
@@ -339,6 +379,8 @@ function MasteryScreen({
           <p className="text-xs text-gray-400">accuracy</p>
         </div>
       </div>
+
+      <p className="text-xs text-gray-400 mb-4">Session time: {formatTime(sessionTime)}</p>
 
       {accuracy < 70 && (
         <p className="text-xs text-amber-600 dark:text-amber-400 mb-6 px-4">
