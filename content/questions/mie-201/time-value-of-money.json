@@ -1,0 +1,122 @@
+[
+  {
+    "question": "The time value of money principle states that:",
+    "options": ["Money loses value only due to inflation", "A dollar received today is worth more than a dollar received in the future — because a dollar today can be invested to earn returns, meaning future dollars are worth less in present terms", "Future income is always more valuable because it compounds", "Money has identical value regardless of when it is received"],
+    "correctIndex": 1,
+    "explanation": "TVM is the foundational concept of finance: $1 today can be invested and grow. $1 received one year from now is worth less than $1 today because you could have invested today's $1 and had more than $1 in a year. This preference for present dollars over future dollars drives interest rates, discounting, and every capital allocation decision in finance.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If you invest $1,000 at 8% annual interest, what is the value after 3 years with annual compounding?",
+    "options": ["$1,240 ($1,000 × 1.24 simple interest)", "$1,259.71 ($1,000 × 1.08³)", "$1,080 ($1,000 + 3 × $80)", "$1,300 ($1,000 + 30% total return)"],
+    "correctIndex": 1,
+    "explanation": "Future Value = PV × (1 + r)^n = $1,000 × (1.08)³ = $1,000 × 1.2597 = $1,259.71. Year 1: $1,000 × 1.08 = $1,080. Year 2: $1,080 × 1.08 = $1,166.40. Year 3: $1,166.40 × 1.08 = $1,259.71. Compounding means you earn interest on interest — that's why $1,259.71 exceeds the simple interest result of $1,240.",
+    "type": "Calculation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Present value is the concept of:",
+    "options": ["The current market price of a stock or bond", "The value today of a future cash flow, found by discounting the future amount at an appropriate interest rate — answering 'how much would I need to invest today to grow to that future amount?'", "The book value of a company's assets on its balance sheet", "The total sum of all future cash flows without adjusting for timing"],
+    "correctIndex": 1,
+    "explanation": "PV = FV / (1 + r)^n. It converts future dollars to today's equivalent. PV of $1,000 received in 3 years at 8% = $1,000 / 1.08³ = $793.83. This means if you need $1,000 in 3 years and can earn 8%, you need to invest only $793.83 today. Discounting is the reverse of compounding — both rely on the same (1+r)^n factor.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The discount rate used in present value calculations represents:",
+    "options": ["The inflation rate published by the Federal Reserve", "The opportunity cost of capital — the return you could earn on the next best alternative investment of equivalent risk; it reflects what you give up by choosing this investment", "The interest rate on the company's most recent bank loan", "The GDP growth rate of the country where the business operates"],
+    "correctIndex": 1,
+    "explanation": "The discount rate is the opportunity cost of capital — your 'hurdle rate.' If you can invest in stocks earning 10% annually, then any investment must be discounted at 10% to determine its present value. A higher discount rate (reflecting higher risk or opportunity) produces lower present values — reducing how much you'd pay for future cash flows. This is why risky investments are discounted at higher rates.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "An investment promises to pay $5,000 in 4 years. Your required rate of return is 10%. What is the most you should pay for this investment today?",
+    "options": ["$5,000 — the promised future amount", "$4,500 — $5,000 minus one year's interest", "$3,415.07 — the present value of $5,000 discounted at 10% for 4 years", "$6,000 — future payments are worth more than face value"],
+    "correctIndex": 2,
+    "explanation": "PV = $5,000 / (1.10)⁴ = $5,000 / 1.4641 = $3,415.07. Paying more than $3,415.07 means earning less than 10% — below your required return. Paying less means earning more. At exactly $3,415.07, the investment earns exactly 10%. This is the fundamental logic of bond and asset pricing: price today equals present value of all future cash flows at the appropriate discount rate.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company is evaluating two projects: Project A pays $100,000 at the end of year 1; Project B pays $100,000 at the end of year 5. At a 12% discount rate, what is the present value of each?",
+    "options": ["Both are worth $100,000 — future amounts are identical", "Project A: $89,286; Project B: $56,743 — the same nominal amount is worth significantly less when received further in the future", "Project A: $112,000; Project B: $160,000 — future cash flows are always worth more", "Project A: $100,000; Project B: $60,000 (subtract 8% per year)"],
+    "correctIndex": 1,
+    "explanation": "PV of A = $100,000 / (1.12)¹ = $89,286. PV of B = $100,000 / (1.12)⁵ = $100,000 / 1.7623 = $56,743. The 4-year delay reduces present value by $32,543 — a 36% reduction. This is why investors demand higher returns for longer-dated investments: the further out the cash flow, the more the discount erodes its present value, and the more uncertainty exists about whether you'll receive it.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A bond pays $1,000 at maturity in 5 years and pays $60 annual coupons. If the required return is 6%, what should the bond sell for today?",
+    "options": ["$1,000 — all bonds sell at face value", "$800 — bonds selling below face value always indicate distress", "$1,000 — calculated as: PV of coupons ($60 × 4.212) + PV of face value ($1,000 × 0.747) = $252.72 + $747.26 = $999.98 ≈ $1,000", "$1,300 — adding all cash flows without discounting"],
+    "correctIndex": 2,
+    "explanation": "When coupon rate equals required return (both 6%), the bond prices at par ($1,000). PV of annuity (coupons): $60 × [(1 − 1/1.06⁵) / 0.06] = $60 × 4.212 = $252.73. PV of face value: $1,000 / 1.06⁵ = $747.26. Total PV = $1,000. This is the fundamental bond pricing formula: sum of discounted coupon payments plus discounted face value. Bond prices and yields move inversely.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the present value of a perpetuity that pays $5,000 per year forever, discounted at an 8% rate?",
+    "options": ["$5,000 — the annual payment amount", "$62,500 — calculated as $5,000 / 0.08", "$500,000 — calculated as $5,000 × 100", "Infinite — it never stops paying"],
+    "correctIndex": 1,
+    "explanation": "Perpetuity PV = Cash Flow / Discount Rate = $5,000 / 0.08 = $62,500. Despite paying $5,000 forever, it's only worth $62,500 today because of discounting: early payments are worth full value; later payments are discounted so heavily they contribute almost nothing. Year 100 payment: $5,000 / (1.08)¹⁰⁰ ≈ $0.05 — nearly zero. The perpetuity formula is also the basis for valuing stocks (Gordon Growth Model): V = Dividend / (r − g).",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's CFO presents two payment options for a vendor contract: Option A pays $500,000 upfront; Option B pays $150,000/year for 4 years. At an 8% discount rate, which option is cheaper in PV terms?",
+    "options": ["Option A — upfront payments are always the cheapest", "Option B — paying over time always saves money", "Option B is cheaper: PV of annuity = $150,000 × [(1 − 1/1.08⁴)/0.08] = $150,000 × 3.312 = $496,800 < $500,000; Option B saves $3,200 in PV terms", "Option A is cheaper; the annual payments add up to $600,000"],
+    "correctIndex": 2,
+    "explanation": "PV annuity factor for 4 years at 8% = (1 − 1/1.08⁴) / 0.08 = (1 − 0.7350) / 0.08 = 0.2650 / 0.08 = 3.312. PV of Option B = $150,000 × 3.312 = $496,800. Option B is cheaper by $3,200 in PV terms. Even though nominal payments ($600K) exceed upfront ($500K), the time value of money means delaying payments is worth something — the money can earn returns while waiting. This is the core principle behind all leasing and installment payment decisions.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "An investor buys a bond for $900 today. It pays $50 annually for 3 years and returns $1,000 at maturity. What is the approximate Yield to Maturity (YTM)?",
+    "options": ["5% — the coupon rate on face value", "5.56% — $50 coupon on $900 purchase price", "Approximately 8.4% — solving for r where $900 = $50/(1+r) + $50/(1+r)² + $1,050/(1+r)³", "3.3% — simple interest on price appreciation only"],
+    "correctIndex": 2,
+    "explanation": "YTM requires solving: $900 = $50/(1+r) + $50/(1+r)² + $1,050/(1+r)³. This has no closed-form solution — requires trial and error or financial calculator. At r = 8%: PV = $50/1.08 + $50/1.166 + $1,050/1.260 = $46.30 + $42.88 + $833.33 = $922.51. At r = 9%: PV = $45.87 + $42.10 + $810.49 = $898.46. YTM ≈ 8.9–9%. The discount to par ($900 vs $1,000) drives the YTM above the coupon rate.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A project requires $500,000 today and will generate $120,000 per year for 6 years. At a 10% discount rate, what is the NPV, and should the company invest?",
+    "options": ["NPV = $220,000; invest because total cash flows exceed investment", "NPV = +$22,776; yes, invest — PV of $120K annuity for 6 years at 10% = $522,776 > $500,000 initial investment; the project creates value above the required return", "NPV = −$22,776; do not invest", "NPV = $0; the project exactly meets the required return"],
+    "correctIndex": 1,
+    "explanation": "Annuity PV factor (6 years, 10%) = (1 − 1/1.10⁶) / 0.10 = (1 − 0.5645) / 0.10 = 4.355. PV of cash flows = $120,000 × 4.355 = $522,600. NPV = $522,600 − $500,000 = +$22,600 ≈ $22,776. Positive NPV → invest: the project returns more than the required 10% rate. The NPV directly measures value created: $22,776 is the dollar value added to the firm by accepting this project.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "The Rule of 72 states that money doubles approximately every (72 / interest rate) years. At 6% annual return, money doubles in ~12 years. What does this imply for a 24-year-old who invests $10,000 vs. a 36-year-old who invests $10,000 in the same fund?",
+    "options": ["Both investors have identical outcomes since they invest identical amounts", "The 24-year-old's money doubles 3 more times (3 extra 12-year periods to age 66): $10,000 → $20,000 → $40,000 → $80,000 extra, reaching $160,000 at 66; the 36-year-old's $10,000 only doubles twice (24 years to age 60) = $40,000; the 12-year head start generates 4x the final wealth — this is the compounding power of time", "The 12-year difference is worth exactly 12 × 6% = 72% more wealth", "Both have $80,000 because each doubles twice in 24 years (6% × 24 = 144%)"],
+    "correctIndex": 1,
+    "explanation": "Compounding is exponential, not linear. 24-year-old at 8% to age 66 (42 years): 42/12 = 3.5 doublings → $10,000 × 2^3.5 ≈ $113,000. 36-year-old at age 66 (30 years): 30/12 = 2.5 doublings → $10,000 × 2^2.5 ≈ $56,600. The 12-year difference ≈ 1 extra doubling = double the final wealth. This is why financial advisors emphasize starting early — the last few doublings are the largest in absolute dollars.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Two startup funding options: Option A gives the founder $1M now. Option B gives $1.5M in 3 years (after hitting a milestone). The founder's discount rate is 25% (reflecting startup risk). Which option has higher present value?",
+    "options": ["Option B — $1.5M is always more than $1M", "Option A — PV of Option B = $1.5M / (1.25)³ = $1.5M / 1.953 = $768,000 < $1M; at a 25% discount rate, the $1.5M delayed 3 years is worth only $768K today — less than the immediate $1M", "Both options are equivalent at any discount rate", "Option B because milestone achievements reduce risk, lowering the effective discount rate"],
+    "correctIndex": 1,
+    "explanation": "High discount rates dramatically reduce the value of future payments. At 25% per year: PV = $1.5M / (1.25)³ = $1.5M / 1.9531 = $768,000. The $1M today is worth $232,000 MORE than the $1.5M in 3 years when discounted at 25%. This illustrates why high-risk ventures heavily discount future cash flows — uncertainty increases the discount rate, which slashes the present value of distant payoffs. Option B only wins if the discount rate is below 14.5%.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company can invest in equipment today for $200,000 that saves $45,000 per year in operating costs for 7 years (no salvage value). At a 12% required return, should the company invest?",
+    "options": ["Yes — $45,000 × 7 years = $315,000 exceeds $200,000", "No — NPV is negative: PV of $45K annuity for 7 years at 12% = $45,000 × 4.564 = $205,380; NPV = $205,380 − $200,000 = +$5,380; actually yes — the NPV is slightly positive at +$5,380, meaning the investment earns marginally above 12%", "No — equipment investments are always expensed, not capitalized", "Yes, but only if the savings are guaranteed in writing"],
+    "correctIndex": 1,
+    "explanation": "Annuity factor (7 years, 12%) = (1 − 1/1.12⁷) / 0.12 = (1 − 0.4523) / 0.12 = 4.564. PV of savings = $45,000 × 4.564 = $205,380. NPV = $205,380 − $200,000 = +$5,380. Positive (barely) — the investment earns slightly above 12%. IRR ≈ 12.6%. With such a thin margin, small changes in the 12% hurdle rate or $45K savings assumption would flip the decision. In practice, this marginal case requires sensitivity analysis before committing.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Inflation of 4% per year means $1,000 today will purchase goods worth approximately $675 in today's prices after 10 years (1,000/1.04¹⁰). How does this interact with a nominal 7% investment return?",
+    "options": ["Real return = 7% + 4% = 11% (both rates add)", "Real return ≈ 7% − 4% = 3% (approximately); more precisely (1.07/1.04 − 1) = 2.88%; the $1,000 grows to $1,967 nominally but in real (inflation-adjusted) purchasing power only grows to about $1,330 in today's dollars — investors must consider real returns, not just nominal returns", "Inflation has no effect on investment returns", "Real return = 4% − 7% = negative; inflation always destroys investment value"],
+    "correctIndex": 1,
+    "explanation": "Fisher Equation: Real Return ≈ Nominal Return − Inflation Rate = 7% − 4% = 3% (approximate). Exact: (1.07/1.04) − 1 = 2.88%. $1,000 grows nominally to $1,000 × 1.07¹⁰ = $1,967. In real purchasing power: $1,967 / 1.04¹⁰ = $1,967 / 1.480 = $1,329. This is the real return concept — crucial for retirement planning, bond investing, and any multi-year project evaluation where inflation erodes future purchasing power.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  }
+]

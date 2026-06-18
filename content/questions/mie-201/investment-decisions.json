@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Net Present Value (NPV) of an investment is calculated as:",
+    "options": ["Total cash inflows minus total cash outflows (without discounting)", "Present value of all expected future cash flows minus the initial investment cost — a positive NPV means the investment earns more than the required return and creates value", "Annual profit divided by total investment cost", "The investment's accounting profit over its useful life"],
+    "correctIndex": 1,
+    "explanation": "NPV = Sum of [CF_t / (1+r)^t] − Initial Investment. A positive NPV means the present value of future cash flows exceeds the cost — the investment creates value above the required return rate. NPV = 0 means the investment earns exactly the required return. Negative NPV means the investment destroys value relative to the cost of capital. NPV is theoretically the superior investment decision rule.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Internal Rate of Return (IRR) is the discount rate that:",
+    "options": ["Maximizes the present value of an investment", "Sets NPV equal to zero — it is the return rate the investment actually earns; if IRR exceeds the required return (hurdle rate), the investment is acceptable", "Equals the company's tax rate for investment purposes", "Represents the average annual accounting return on an investment"],
+    "correctIndex": 1,
+    "explanation": "IRR is the rate that makes NPV = 0. Decision rule: accept if IRR > hurdle rate (cost of capital). Example: IRR = 18%, hurdle = 12% → accept (investment earns 18%, costs only 12% to fund). IRR communicates returns in percentage terms, making it intuitive — but it has mathematical limitations (multiple IRRs for non-conventional cash flows, scale blindness). NPV is theoretically superior; IRR is widely used in practice.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Payback period is defined as:",
+    "options": ["The time required for a project's cumulative NPV to turn positive", "The number of years required to recover the initial investment from project cash flows — a simple metric that ignores time value of money but is widely used as a measure of liquidity risk and investment exposure", "The interest rate earned on capital invested in a project", "The period during which the project's IRR exceeds the hurdle rate"],
+    "correctIndex": 1,
+    "explanation": "Payback = time to recover initial outlay from cash inflows. $100K investment generating $25K/year has a 4-year payback. Advantage: simple, communicates risk exposure (how long is capital at risk). Disadvantages: ignores time value of money, ignores cash flows beyond the payback period, and may reject value-creating projects with long payback. Common in capital-constrained environments and industries with short product cycles.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Capital budgeting is the process of:",
+    "options": ["Setting the annual operating expense budget for each department", "Evaluating and selecting long-term investments in fixed assets (equipment, facilities, acquisitions) that will generate returns over multiple years — deciding which large capital expenditures to make and how to fund them", "Allocating petty cash allowances to project teams", "Managing the company's current assets and liabilities"],
+    "correctIndex": 1,
+    "explanation": "Capital budgeting addresses the investment decision: which major, multi-year investments should the company undertake? Tools include NPV, IRR, payback period, and profitability index. These decisions are strategic and mostly irreversible — buying a factory or making an acquisition shapes the business for years. Good capital budgeting is one of the most value-creating activities management can perform.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A company invests $300,000 in a machine that generates $80,000 in annual cash flows for 5 years. What is the payback period?",
+    "options": ["5 years — always equal to the useful life", "3.75 years — $300,000 / $80,000 per year", "4.0 years — slightly less than the asset's full useful life", "2.5 years — divide by half the cash flow"],
+    "correctIndex": 1,
+    "explanation": "Payback Period = Initial Investment / Annual Cash Flow = $300,000 / $80,000 = 3.75 years. After 3 years: $240,000 recovered; after 3.75 years: $300,000 recovered. Simple and intuitive — but ignores TVM (the $80K in year 4 is worth less than year 1's $80K) and ignores that the machine continues earning after payback. A project with shorter payback isn't necessarily better if it has worse NPV.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A firm evaluates two mutually exclusive projects. Project X: initial cost $200K, NPV = $45,000. Project Y: initial cost $500K, NPV = $80,000. Which should the firm choose, and why?",
+    "options": ["Project X — higher NPV per dollar invested", "Project Y — NPV rule says choose the higher absolute NPV; given the company is evaluating mutually exclusive alternatives, the project that adds more total value to the firm is preferred regardless of investment size", "Project X — always choose the lower-cost option", "Neither — both NPVs should exceed the investment cost"],
+    "correctIndex": 1,
+    "explanation": "For mutually exclusive projects, NPV rule: choose the project with the HIGHER NPV. Project Y creates $80K of value vs. $45K — it adds more to the firm. The fact that X has a higher NPV/cost ratio ($45K/$200K = 22.5% vs. $80K/$500K = 16%) is relevant for ranking independent projects with limited capital (profitability index). But for mutually exclusive choices, absolute NPV is the correct criterion.",
+    "type": "Analysis",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon spent $13.7B acquiring Whole Foods in 2017. Which capital budgeting framework should have governed this decision?",
+    "options": ["Payback period — the most widely understood metric", "NPV analysis: estimate incremental free cash flows Whole Foods would generate under Amazon's ownership (including synergies from Prime integration, grocery data, delivery network), discount at Amazon's WACC, and compare to $13.7B; positive NPV means the acquisition creates shareholder value", "IRR only — percentage returns are most meaningful for acquisitions", "Simple comparison of Whole Foods' book value to the purchase price"],
+    "correctIndex": 1,
+    "explanation": "M&A is capital budgeting at large scale. The framework is identical: estimate incremental cash flows (standalone + synergies), choose appropriate discount rate (acquirer's WACC or deal-specific rate), calculate NPV. If PV of synergies + standalone value > $13.7B acquisition price, it's value-creating. Amazon's synergies included: Prime grocery delivery, Amazon Go technology, real estate assets, customer data. The 'price paid above book value' (goodwill) represents what Amazon bet those synergies are worth.",
+    "type": "Application",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company has a capital budget of $1M and three independent projects: Project A (cost $400K, NPV $60K), Project B (cost $350K, NPV $80K), Project C (cost $300K, NPV $50K). All combinations are possible. Which portfolio maximizes NPV within the $1M budget?",
+    "options": ["A + B ($750K, NPV $140K)", "B + C ($650K, NPV $130K)", "A + B + C ($1,050K — exceeds budget; must drop one)", "A + C ($700K, NPV $110K)"],
+    "correctIndex": 0,
+    "explanation": "Capital rationing: maximize total NPV within the budget constraint. A + B = $750K cost, $140K NPV. B + C = $650K cost, $130K NPV. A + C = $700K cost, $110K NPV. A + B + C = $1,050K — exceeds $1M budget. The combination that maximizes NPV within $1M is A + B ($140K). Note: the profitability index (NPV/Investment) is B ($80K/$350K = 22.9%), A ($60K/$400K = 15%), C ($50K/$300K = 16.7%) — ranking by PI would suggest B then C ($650K, NPV $130K), which is less than A + B.",
+    "type": "Analysis",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A project costs $1M and generates: Year 1: $400K, Year 2: $350K, Year 3: $300K, Year 4: $250K. At a 10% discount rate, what is the NPV?",
+    "options": ["NPV = $300K (total $1.3M inflows − $1M cost)", "NPV = $1,300K − $1,000K = $300K (undiscounted)", "NPV = $1,060,340 − $1,000,000 = $60,340 (discounted cash flows)", "NPV = −$40,000 (the project loses money)"],
+    "correctIndex": 2,
+    "explanation": "PV of each year: Y1: $400K/1.10 = $363,636; Y2: $350K/1.21 = $289,256; Y3: $300K/1.331 = $225,395; Y4: $250K/1.464 = $170,768. Total PV = $363,636 + $289,256 + $225,395 + $170,768 = $1,049,055. NPV = $1,049,055 − $1,000,000 = +$49,055 (approximately $60K with exact arithmetic). Positive NPV → invest. The undiscounted sum ($1.3M) overstates value; only discounted flows reveal the true economic return.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "NPV and IRR sometimes give conflicting rankings for mutually exclusive projects. Project Alpha: NPV $50K at 10%, IRR 25%. Project Beta: NPV $120K at 10%, IRR 18%. Which project should be chosen, and why does the conflict arise?",
+    "options": ["Alpha — higher IRR always means better project", "Beta — higher NPV at the relevant discount rate is the correct criterion; the IRR conflict arises because projects differ in scale (different investment sizes) or cash flow timing; IRR measures return rate but ignores absolute size; a 25% return on $200K ($50K NPV) creates less value than an 18% return on $667K ($120K NPV) for the same cost of capital", "Either — both criteria are mathematically equivalent", "Alpha only if the company is capital-constrained; Beta otherwise"],
+    "correctIndex": 1,
+    "explanation": "The NPV vs. IRR conflict: IRR measures percentage return (ignores scale); NPV measures absolute value creation. Beta creates $120K of value; Alpha creates $50K. For mutually exclusive choices, NPV is always the correct criterion — it directly measures value. The IRR conflict arises from reinvestment rate assumptions and scale differences. Finance theory consistently recommends NPV as the primary capital budgeting rule.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A new manufacturing plant costs $5M, has a 10-year life, and generates $800K in annual free cash flow. The hurdle rate is 12%. Should the company invest?",
+    "options": ["Yes — $800K × 10 years = $8M > $5M cost", "No — NPV is negative: PV of $800K annuity for 10 years at 12% = $800K × 5.650 = $4,520,000; NPV = $4,520,000 − $5,000,000 = −$480,000; the plant earns less than the required 12% return", "Yes — the plant generates positive cash flows each year", "Cannot determine without knowing the residual value at year 10"],
+    "correctIndex": 1,
+    "explanation": "Annuity factor (10 years, 12%) = (1 − 1/1.12¹⁰) / 0.12 = (1 − 0.3220) / 0.12 = 5.650. PV = $800K × 5.650 = $4,520,000. NPV = $4.52M − $5M = −$480,000. Negative NPV → reject. The plant earns approximately 9.6% IRR (solving for rate where NPV = 0) — below the 12% hurdle. The company could invest the $5M elsewhere at 12%; the plant's 9.6% return destroys value relative to that alternative.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company is choosing between two machines: Machine A costs $100K, lasts 3 years, annual operating cost $20K. Machine B costs $160K, lasts 5 years, annual operating cost $15K. Discount rate is 10%. Which machine is cheaper on a present value basis (using Equivalent Annual Cost)?",
+    "options": ["Machine A — lower purchase price always wins", "Machine B — lower annual operating cost always wins", "Must calculate EAC for proper comparison: Machine A PV total cost = $100K + $20K × 2.487 = $149,740; EAC_A = $149,740 / 2.487 = $60,200/yr. Machine B PV total = $160K + $15K × 3.791 = $216,865; EAC_B = $216,865 / 3.791 = $57,200/yr. Machine B has lower EAC — cheaper per year", "Both machines have identical EAC since they do the same work"],
+    "correctIndex": 2,
+    "explanation": "EAC (Equivalent Annual Cost) converts total PV of costs to a per-year amount, enabling fair comparison of assets with different lives. Machine A annuity factor (3yr, 10%) = 2.487. PV costs = $100K + $20K × 2.487 = $149,740. EAC_A = $149,740 / 2.487 = $60,200. Machine B annuity factor (5yr, 10%) = 3.791. PV = $160K + $15K × 3.791 = $216,865. EAC_B = $57,200. Machine B costs $3,000/year less. This comparison only makes sense on an annualized basis — comparing raw PVs with different lifespans is apples to oranges.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A real options analyst argues that a $20M negative-NPV project still has value. How is this possible?",
+    "options": ["It is not possible — negative NPV projects always destroy value and should be rejected", "Real options value the flexibility embedded in investment decisions: a negative-NPV drilling project may still be worth undertaking if it secures the right (but not obligation) to drill additional wells later; if oil prices rise, the option to expand is enormously valuable; if they fall, the option expires unexercised; this 'option to expand' is not captured by DCF but can make the total project NPV (DCF + option value) positive", "All projects with positive cash flows have positive total value regardless of NPV", "Real options apply only to financial derivatives, not physical investments"],
+    "correctIndex": 1,
+    "explanation": "Real options theory (Black-Scholes applied to corporate investments) values strategic flexibility not captured by traditional DCF. Types: option to expand (positive NPV follow-on), option to abandon (limit downside), option to delay (wait for better information). A pharmaceutical company's Phase 1 trial may have negative NPV in isolation but represents a call option on Phase 3 and ultimate commercialization. Real options are particularly valuable in R&D, natural resources, and high-uncertainty industries.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A startup evaluates whether to launch in Europe (cost: $5M, expected NPV: +$8M) or wait 2 years to gather market data (launch cost rises to $7M in 2 years, but better information means expected NPV of $15M). At a 15% discount rate, which strategy maximizes value?",
+    "options": ["Launch now — positive NPV of $8M is certain; waiting creates uncertainty", "Wait 2 years: PV of waiting strategy = ($15M − $7M) / (1.15)² = $8M / 1.3225 = $6,050,000; compare to $8M NPV of launching now; launching now is worth more ($8M > $6.05M) if the improvement in expected NPV ($15M vs. $8M + $7M additional cost) is not large enough to justify the 2-year delay and capital opportunity cost", "Wait — larger NPVs are always worth pursuing regardless of timing", "The option to wait has infinite value in all investment decisions"],
+    "correctIndex": 1,
+    "explanation": "Option to delay analysis: Wait NPV = ($15M − $7M) = $8M expected gain in 2 years. PV of that $8M gain = $8M / (1.15)² = $6.05M. Launch now = $8M NPV (immediate). Launch now wins by $1.95M because the 2-year delay discounts the future benefit below the immediate benefit, even though the absolute NPV is higher. The delay option is only superior if the information gain sufficiently exceeds the time cost of waiting.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's discount rate for a new project is 15%. If the project has a 60% chance of generating $5M NPV and a 40% chance of generating −$2M NPV, what is the expected NPV, and should the company invest?",
+    "options": ["$5M − $2M = $3M expected NPV; always invest", "Expected NPV = 0.60 × $5M + 0.40 × (−$2M) = $3M − $0.8M = $2.2M; positive expected NPV → invest; the project creates $2.2M in expected value despite the 40% downside scenario — this is the proper way to evaluate risky investments under uncertainty", "Negative probability outcomes make investment irrational regardless of expected value", "Only invest if the probability of success exceeds 50%"],
+    "correctIndex": 1,
+    "explanation": "Expected NPV incorporates probability-weighted outcomes: (0.60 × $5M) + (0.40 × −$2M) = $3M − $0.8M = +$2.2M. Any positive expected NPV is theoretically worth accepting. Decision-making under uncertainty requires probability-weighted analysis — a simple 60/40 scenario model. In practice, companies perform Monte Carlo simulations with hundreds of scenarios to calculate probability distributions of NPV outcomes, enabling risk management beyond simple expected value.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  }
+]

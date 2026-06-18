@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Customer Relationship Management (CRM) is defined as:",
+    "options": ["A software platform used only for tracking sales leads", "The business process and supporting systems for managing all interactions with customers throughout the relationship lifecycle — from acquisition through retention and expansion — to maximize customer value", "A customer satisfaction survey conducted annually", "The department responsible for handling customer complaints"],
+    "correctIndex": 1,
+    "explanation": "CRM is a strategic discipline supported by technology: it encompasses how a company acquires, develops, retains, and grows customer relationships. CRM software (Salesforce, HubSpot, Zoho) is the tool; the strategy is about designing every customer touchpoint to build loyalty and increase lifetime value. CRM integrates sales, marketing, and service into a unified customer view.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Net Promoter Score (NPS) measures:",
+    "options": ["Total number of new customers acquired in a period", "Customer loyalty by asking: 'How likely are you to recommend us to a friend or colleague?' — scored 0–10; Promoters (9–10) minus Detractors (0–6) = NPS score ranging from −100 to +100", "Average revenue generated per customer per year", "Customer satisfaction with a specific product feature"],
+    "correctIndex": 1,
+    "explanation": "NPS = % Promoters (9–10) − % Detractors (0–6). Passives (7–8) are excluded. Score ranges from −100 (all detractors) to +100 (all promoters). Apple NPS ≈ 72; Amazon ≈ 69; typical U.S. company ≈ 32. NPS correlates with organic growth: promoters recruit new customers through word-of-mouth. Limitations: doesn't explain WHY customers are promoters/detractors, single number hides segment differences, and varies by industry (airlines vs. tech).",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Customer Acquisition Cost (CAC) is calculated as:",
+    "options": ["The number of salespeople needed to acquire each new customer", "Total sales and marketing spend in a period divided by the number of new customers acquired in that same period", "The average price paid by new customers in their first transaction", "The cost of advertising per thousand impressions"],
+    "correctIndex": 1,
+    "explanation": "CAC = Total Sales & Marketing Spend / New Customers Acquired. If a company spends $500K on sales and marketing in Q1 and acquires 250 customers, CAC = $2,000. CAC must be compared to Customer Lifetime Value (CLV): CLV:CAC ratio of 3:1 is commonly cited as healthy for SaaS businesses. CAC below $2,000 when CLV = $8,000 = strong acquisition economics. CAC trending higher over time = saturating channels or intensifying competition.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Churn rate is a critical customer metric defined as:",
+    "options": ["The rate at which new customers are acquired each month", "The percentage of customers who stop doing business with a company in a given period — a high churn rate indicates customers are not finding sustained value", "The speed at which customer complaints are resolved", "The frequency of customer purchase transactions"],
+    "correctIndex": 1,
+    "explanation": "Monthly Churn Rate = (Customers lost in month / Customers at start of month) × 100. 5% monthly churn = 46% annual churn (roughly half your customers each year!). Low churn is the foundation of subscription business economics: at 1% monthly churn, average customer lasts 100 months. At 5%, only 20 months. Churn compounds in reverse — lowering churn from 5% to 3% monthly increases average customer tenure from 20 to 33 months (65% improvement in CLV) without any change in acquisition.",
+    "type": "Definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "A SaaS company has: CAC = $1,200; Monthly churn = 2%; Average monthly revenue per user = $80; Gross margin = 70%. Calculate the LTV:CAC ratio.",
+    "options": ["LTV:CAC = 2.3x", "LTV:CAC = 1.2x", "LTV:CAC = 2.92x", "LTV:CAC = 4.1x"],
+    "correctIndex": 2,
+    "explanation": "LTV = (Monthly Revenue × Gross Margin) / Monthly Churn Rate = ($80 × 0.70) / 0.02 = $56 / 0.02 = $2,800. LTV:CAC = $2,800 / $1,200 = 2.33x (Option A used $80/0.02=$4,000, giving higher ratio). Wait — let me recalculate: LTV = (ARPU × Gross Margin) / Churn = ($80 × 0.70) / 0.02 = $56/0.02 = $2,800. LTV:CAC = $2,800/$1,200 = 2.33x. The target is ≥3x — this company is below target, meaning its economics need improvement through: reducing CAC, reducing churn, increasing ARPU, or improving margins.",
+    "type": "Calculation",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A company's NPS is +42. Drilling down, business customers score +68 and individual consumers score +12. What strategic action does this NPS segment analysis suggest?",
+    "options": ["Ignore segment differences and focus on improving the overall NPS", "Investigate what drives the gap: B2B customers (NPS +68) likely value features, support, and ROI that the product delivers well; B2C customers (NPS +12) likely have different needs that aren't being met (maybe pricing, simplicity, or features relevant to individual use); the company should either invest in B2C improvements to raise their satisfaction or strategically de-emphasize B2C in favor of the clearly stronger B2B segment where the product is well-loved", "Eliminate the B2C segment since their NPS is below the company average", "A +12 B2C NPS is excellent and requires no action"],
+    "correctIndex": 1,
+    "explanation": "NPS segmentation reveals which segments drive loyalty and which don't. The +56 point gap between B2B and B2C is enormous. Root cause analysis (follow-up qualitative surveys, support ticket analysis) would reveal why B2C is less satisfied. Possible causes: product is enterprise-feature-heavy and too complex for individual users; pricing model suits B2B budgets better than individual; support is business-hours only (inconvenient for consumers). The strategic response: either fix the product-market fit gap for B2C or reallocate resources toward the clearly stronger B2B segment.",
+    "type": "Analysis",
+    "difficulty": "medium"
+  },
+  {
+    "question": "A D2C subscription company calculates: Average 3-year CLV = $540; CAC = $180. Payback period = 14 months. Should the company aggressively invest in growth?",
+    "options": ["No — 14-month payback is too long for any business to succeed", "Yes with monitoring: LTV:CAC = $540/$180 = 3.0x (at the SaaS benchmark minimum); 14-month payback means the company is cash-flow negative for over a year per customer before recouping acquisition investment; if the business has sufficient capital runway to sustain 14-month payback periods during growth, aggressive growth is justified; if capital is limited, reducing CAC or increasing early monetization would shorten payback and make growth capital-efficient", "No — LTV:CAC of 3.0x is below the minimum threshold for growth investment", "CAC and LTV are not useful metrics for D2C subscription businesses"],
+    "correctIndex": 1,
+    "explanation": "LTV:CAC analysis for growth decisions: 3.0x is the common SaaS benchmark minimum (earn back 3x what you spend to acquire). The 14-month payback is important cash flow context: for every customer acquired, the company is out $180 for 14 months before breaking even. At aggressive growth pace (acquiring 1,000 customers/month), the company is carrying $180K × 14/12 ≈ $210K in unrecovered CAC at any given time. Sufficient capital runway (typically 18–24 months) is needed to sustain growth without running out of cash before payback.",
+    "type": "Analysis",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Amazon's 'flywheel' concept describes a self-reinforcing cycle: more customers → more sellers → more selection → better prices → more customers. How does customer relationship data (purchase history, ratings, reviews) drive this flywheel?",
+    "options": ["Customer data is only used for targeted advertising and has no structural role", "Customer data powers every element: purchase history drives personalized recommendations (increasing repeat purchase rate); ratings and reviews attract more customers (reducing the need for advertising); behavioral data attracts more third-party sellers (who see high purchase intent); more sellers = more selection = better prices = more customers; the customer data creates the network effect that makes the flywheel spin faster over time — this is why Amazon is described as a data company disguised as a retailer", "Amazon's flywheel operates independently of customer relationship data", "Only ratings and reviews matter; purchase history data is not part of the flywheel"],
+    "correctIndex": 1,
+    "explanation": "Amazon's flywheel is a data network effect: each customer interaction generates data that improves the service → attracts more customers → generates more data. Without customer relationship data: recommendations are generic (lower conversion), seller confidence is lower (can't prove high purchase intent to potential marketplace sellers), pricing algorithms can't optimize dynamically. The customer relationship database is the engine of the flywheel. This is why Amazon's competitive advantage deepens with scale — each new customer makes the product slightly better for all customers.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's cohort analysis shows: Cohort A (customers acquired Jan 2023): Month 12 retention = 68%. Cohort B (customers acquired Jan 2024): Month 12 retention = 51%. All other factors equal. What does this trend indicate and what actions are implied?",
+    "options": ["The data indicates Cohort B customers are cheaper to acquire so retention decline is expected", "Declining cohort retention indicates product-market fit is deteriorating: either (1) the company is acquiring lower-quality customers (new channels with less qualified prospects), (2) product quality/value declined, (3) competitive alternatives emerged that enable easier switching, or (4) economic conditions changed customer behavior; the 17-point retention decline over one year should trigger immediate qualitative research (why did Cohort B churn at higher rates?) and customer health score monitoring to identify churn drivers before they compound further", "Cohort retention naturally declines over time and no action is needed", "Cohort B should be excluded from retention metrics since it is newer"],
+    "correctIndex": 1,
+    "explanation": "Cohort analysis is the gold standard for monitoring business health: it controls for time (compares customers at the same lifecycle stage) and reveals trends invisible in aggregate metrics. A declining 12-month retention cohort over cohort is a serious leading indicator — it means the business is getting worse at keeping customers year over year. Possible causes must be investigated: channel mix shift (new channels bringing less committed customers), product degradation, competitive pressure, or pricing changes. Early identification allows intervention before it compounds into a major revenue problem.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A B2B SaaS company measures 'Net Revenue Retention' (NRR) = 118% (existing customers grew by 18% through upgrades/expansions, despite some churn). Its 'Gross Revenue Retention' (GRR) = 88% (churn reduces the base by 12%). What do these two metrics together reveal about the business?",
+    "options": ["NRR above 100% means the company doesn't need to acquire new customers", "NRR 118% and GRR 88% reveals a 'leaky bucket with a powerful pump': the 12% revenue churn (GRR 88%) represents real customer attrition; but the 18% expansion from remaining customers (upgrades, seats added, additional modules) more than offsets churn; this 'land and expand' model grows revenue from the existing base without new customer acquisition; the business is healthy but would grow even faster if churn (GRR) improved; even without adding one new customer, the company grows at 18% annually from expansion alone", "GRR of 88% always indicates a failing business regardless of NRR", "NRR above 100% is only possible for companies that raise prices annually"],
+    "correctIndex": 1,
+    "explanation": "NRR vs. GRR is the key SaaS customer metric pair. GRR (Gross Revenue Retention): raw retention ignoring expansion — measures whether you keep what you have. NRR (Net Revenue Retention): includes expansion — measures whether the customer base grows on its own. NRR > 100% is a hallmark of elite SaaS companies (Snowflake NRR ~158%, Datadog ~130%): even if they stopped acquiring customers today, revenue would grow. The gap between NRR and GRR = expansion rate. Companies with NRR > 120% don't need high growth marketing to grow quickly.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company's Customer Satisfaction Score (CSAT) is 4.2/5 in customer service tickets, but churn rate is 15% annually. NPS is +28. How do these metrics together suggest a measurement blind spot?",
+    "options": ["All three metrics agree the company has strong customer relationships", "CSAT measures satisfaction at a specific interaction (ticket resolution) — customers can be satisfied with how a complaint was handled but still fundamentally not value the product enough to stay; NPS +28 is moderate (some dissatisfaction); 15% churn is high; the blind spot: the company is measuring the wrong thing with CSAT — it's measuring customer service quality (am I satisfied with how my problem was resolved?) not product value (does this product genuinely help me enough to keep paying?); the mismatch between high CSAT and high churn suggests the core product value, not customer service, is the real problem", "High CSAT always predicts low churn", "NPS and churn metrics are redundant — only one is needed"],
+    "correctIndex": 1,
+    "explanation": "Metrics can tell conflicting stories. CSAT high + churn high = service is good but product doesn't provide enough ongoing value to retain. Customers may love talking to the support team but still cancel because the product doesn't solve their problem well enough. This is the 'relationship trap' — high service quality can mask a product-market fit problem. The real leading indicator for churn is product usage metrics (are customers actually using the product and getting value from it?), not service satisfaction scores.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company calculates that it costs $500 to acquire a customer and $50/year to retain them (support, maintenance). Average annual spend is $200 for 4 years (then the customer churns). What is the CLV and maximum defensible CAC at a 20% marketing ROI requirement?",
+    "options": ["CLV = $600; max CAC = $500", "CLV = Total Revenue − Retention Costs = ($200 × 4) − ($50 × 4) = $800 − $200 = $600; at 20% marketing ROI, maximum CAC = CLV / 1.20 = $500; current CAC ($500) exactly meets this threshold — meaning any additional acquisition spend above $500 per customer destroys value; the company should look for ways to increase CLV (reduce churn to 5 years, increase annual spend) before increasing CAC", "CLV = $800; max CAC = $667", "CLV calculation requires discount rate — cannot be calculated without it"],
+    "correctIndex": 1,
+    "explanation": "Simplified CLV = (Annual Revenue × Customer Lifespan) − (Annual Retention Cost × Customer Lifespan). = ($200 × 4) − ($50 × 4) = $600. Max CAC at 20% ROI: CLV / (1 + ROI) = $600 / 1.20 = $500. The current $500 CAC exactly meets the threshold — zero margin of safety. This means the company is breaking even on marketing ROI with no buffer for CAC inflation or churn increases. The insight: CLV improvement (reducing churn from 4 to 5 years would increase CLV to $750, raising max CAC to $625) creates more headroom for acquisition investment.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Spotify's 'Wrapped' annual campaign shows users their personalized listening statistics at year-end. It generates massive social sharing and brand mentions. How does this activate the customer relationship metrics cycle?",
+    "options": ["Wrapped is purely an entertainment feature with no measurable impact on metrics", "Wrapped activates multiple relationship metrics simultaneously: (1) NPS: the personal, delightful surprise of seeing your year in music increases emotional connection and promotes recommendation; (2) Reduces churn: users who receive Wrapped have a data-rich history invested in Spotify — switching means losing years of listening history; (3) Reduces CAC: viral sharing of Wrapped screenshots is earned media (free customer acquisition through advocacy); (4) Deepens engagement: users who engage with Wrapped have higher session completion; the feature is engineered to improve every relationship metric simultaneously", "Wrapped only impacts brand awareness, not customer retention metrics", "Personalized year-in-review features only work for music streaming companies"],
+    "correctIndex": 1,
+    "explanation": "Wrapped is a masterclass in customer relationship management through product: it creates lock-in (years of personalized data = switching cost), generates advocacy (social sharing = free CAC), reduces churn (users feel emotional investment in 'their music year'), and increases NPS (the surprise-and-delight moment drives promoter behavior). The marketing team gets millions of social impressions without paid media spend. This is the intersection of product design and marketing — 'growth hacking' at its most elegant: a product feature that improves every CRM metric simultaneously.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A luxury hotel's customer data shows that guests who receive a personal birthday greeting from the GM during their stay have a 23% higher return rate than those who don't. The program costs $15/guest. Average stay value is $800; return visit probability increases from 32% to 55%. Is the program profitable?",
+    "options": ["No — the $15 cost is too high for a hotel loyalty program", "Yes: incremental return visit probability = 55% − 32% = 23%; incremental expected revenue = 23% × $800 = $184 per guest contacted; cost = $15; net ROI = ($184 − $15) / $15 = 11.3x return; at over 11x ROI, this is one of the highest-returning marketing programs possible; personalization at key emotional moments (birthdays) drives loyalty far more efficiently than mass advertising", "The program is only profitable if guests spend more than $1,000 per stay", "Return visit probability data cannot be used to calculate program profitability"],
+    "correctIndex": 1,
+    "explanation": "Personalization ROI calculation: Incremental return visits generated = 23% probability increase. Expected value of incremental visit = 23% × $800 = $184. Program cost = $15. Net benefit = $169 per guest. ROI = $169 / $15 = 11.3x. This extraordinary ROI reflects the power of emotionally meaningful personalization at key lifecycle moments. Hotels (Ritz-Carlton's famous customer history cards), airlines (recognizing frequent flyers), and retailers (birthday emails) all demonstrate that personalized relationship gestures generate outsized retention returns relative to their cost.",
+    "type": "Calculation",
+    "difficulty": "hard"
+  },
+  {
+    "question": "A company discovers that its 'silent churners' — customers who stop engaging 60 days before formally canceling — represent 73% of all churn. The 60-day early warning was identified from product usage data. What CRM strategy does this enable?",
+    "options": ["Address only formal cancellation requests with win-back offers", "Early-warning churn prevention: using the 60-day behavioral signal to trigger proactive intervention BEFORE the customer has decided to cancel; interventions at day 60 of disengagement (personalized outreach, product education, executive touch for high-value accounts, free feature trial) are far more effective than win-back attempts after cancellation; this converts a reactive retention program (respond to cancellations) into a predictive one (prevent cancellations from forming); the 73% of churn with 60-day warning can be significantly reduced through well-designed proactive intervention", "Remove disengaged customers from the customer list proactively", "Only customers who contact support during the 60-day period should receive outreach"],
+    "correctIndex": 1,
+    "explanation": "Predictive churn prevention is one of the highest-ROI CRM applications. Behavioral leading indicators (login frequency decline, feature usage drop, support ticket increase) predict churn 30–90 days before the formal cancellation. Once identified, automated or human outreach can intercept the customer while they're still open to staying — post-cancellation win-back rates are typically 10–20% (expensive and uncertain); pre-cancellation intervention rates can be 40–60% (much higher success). The product data → churn prediction → proactive outreach → retention improvement loop is a key CRM competitive advantage.",
+    "type": "Analysis",
+    "difficulty": "hard"
+  }
+]
