@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import { isQuestionSaved, saveQuestion, removeQuestion } from '@/lib/savedQuestions'
 
 interface Question {
@@ -34,9 +35,10 @@ interface Props {
   onAnswer?: (correct: boolean, questionType: string, difficulty: string) => void
   nextLabel?: string
   onNext?: () => void
+  hasLearnContent?: boolean
 }
 
-export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty, onAnswer, nextLabel, onNext }: Props) {
+export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty, onAnswer, nextLabel, onNext, hasLearnContent }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -278,6 +280,15 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
             <p className="font-semibold mb-1">{isCorrect ? '✓ Correct!' : '✗ Not quite.'}</p>
             <p>{question.explanation}</p>
           </div>
+
+          {!isCorrect && hasLearnContent && (
+            <Link
+              href={`/courses/${courseSlug}/learn/${topicSlug}`}
+              className="block mt-3 mb-4 text-sm text-blue-500 hover:underline"
+            >
+              📖 Review this topic in Learn Mode →
+            </Link>
+          )}
 
           <button
             onClick={onNext ?? fetchQuestion}

@@ -27,6 +27,10 @@ export default async function PracticeTopicPage({ params }: Props) {
   const legacyLearn =
     topic.learn && 'explanation' in topic.learn ? topic.learn : undefined
 
+  const hasLearnContent =
+    topic.learn != null &&
+    ('openingQuestion' in topic.learn || 'explanation' in topic.learn)
+
   return (
     <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
       <nav className="flex items-center gap-1.5 text-sm mb-8">
@@ -54,6 +58,7 @@ export default async function PracticeTopicPage({ params }: Props) {
         courseSlug={courseSlug}
         courseTitle={course.title}
         nextTopic={nextTopic}
+        hasLearnContent={hasLearnContent}
       />
     </main>
   )

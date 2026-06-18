@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import type { UnitTestQuestion } from '@/types'
 import { getTopicState, setTopicState, setUnitTestState, applyExamResult } from '@/lib/topicState'
 import { addXP } from '@/lib/xp'
+import { getUnitBest, saveUnitBest, formatTime, formatBestDate } from '@/lib/timedBests'
 
 interface TopicItem {
   slug: string
@@ -40,14 +41,79 @@ interface TopicResult {
   stateChange: 'mastered' | 'regressed' | null
 }
 
+type Phase = 'start' | 'quiz' | 'results'
+
+const LIMIT_OPTIONS = [5, 10, 15, 20] as const
+
 export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, topics }: Props) {
-  // Shuffle options client-side on first render
   const [questions] = useState(() => rawQuestions.map(shuffleOptions))
+  const [phase, setPhase] = useState<Phase>('start')
   const [currentIdx, setCurrentIdx] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [answers, setAnswers] = useState<{ correct: boolean; topicSlug: string }[]>([])
-  const [phase, setPhase] = useState<'quiz' | 'results'>('quiz')
   const [topicResults, setTopicResults] = useState<TopicResult[]>([])
+
+  // Timed mode
+  const [timedMode, setTimedMode] = useState(false)
+  const [timeLimitMinutes, setTimeLimitMinutes] = useState(10)
+  const [secondsRemaining, setSecondsRemaining] = useState(0)
+  const [elapsedSeconds, setElapsedSeconds] = useState<number | null>(null)
+  const [isTimedOut, setIsTimedOut] = useState(false)
+  const [isNewBest, setIsNewBest] = useState(false)
+
+  // Snapshot of best before this run (stable — read once at mount)
+  const [unitBest] = useState(() => getUnitBest(courseSlug, unitId))
+
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const finishedRef = useRef(false)
+
+  // Callback ref: always holds the latest time-up handler (avoids stale closure)
+  const handleTimeUpRef = useRef<() => void>(() => {})
+  handleTimeUpRef.current = () => {
+    const timeLimitSeconds = timeLimitMinutes * 60
+    const allAnswers = [...answers]
+    if (currentIdx < questions.length) {
+      const curQ = questions[currentIdx]
+      const isCorrect = selected !== null && selected === curQ.correctIndex
+      applyExamResult(courseSlug, curQ.topicSlug, isCorrect)
+      allAnswers.push({ correct: isCorrect, topicSlug: curQ.topicSlug })
+      for (let i = currentIdx + 1; i < questions.length; i++) {
+        applyExamResult(courseSlug, questions[i].topicSlug, false)
+        allAnswers.push({ correct: false, topicSlug: questions[i].topicSlug })
+      }
+    }
+    setIsTimedOut(true)
+    finishTest(allAnswers, timeLimitSeconds)
+  }
+
+  // Start countdown when quiz phase begins
+  useEffect(() => {
+    if (phase !== 'quiz' || !timedMode) return
+    const timeLimitSeconds = timeLimitMinutes * 60
+    setSecondsRemaining(timeLimitSeconds)
+
+    const id = setInterval(() => {
+      setSecondsRemaining((prev) => {
+        if (prev <= 1) {
+          if (timerRef.current) {
+            clearInterval(timerRef.current)
+            timerRef.current = null
+          }
+          // Schedule after this state update commits
+          setTimeout(() => handleTimeUpRef.current(), 0)
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+    timerRef.current = id
+
+    return () => {
+      clearInterval(id)
+      timerRef.current = null
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, timedMode])
 
   const total = questions.length
   const currentQuestion = questions[currentIdx]
@@ -66,7 +132,12 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
     const allAnswers = [...answers, { correct: isCorrect, topicSlug: currentQuestion.topicSlug }]
 
     if (isLastQuestion) {
-      finishTest(allAnswers)
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+        timerRef.current = null
+      }
+      const elapsed = timedMode ? timeLimitMinutes * 60 - secondsRemaining : null
+      finishTest(allAnswers, elapsed)
     } else {
       setAnswers(allAnswers)
       setCurrentIdx((idx) => idx + 1)
@@ -74,8 +145,13 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
     }
   }
 
-  function finishTest(allAnswers: { correct: boolean; topicSlug: string }[]) {
-    // Tally per-topic scores
+  function finishTest(
+    allAnswers: { correct: boolean; topicSlug: string }[],
+    elapsed: number | null = null,
+  ) {
+    if (finishedRef.current) return
+    finishedRef.current = true
+
     const tally: Record<string, { correct: number; total: number }> = {}
     for (const a of allAnswers) {
       if (!tally[a.topicSlug]) tally[a.topicSlug] = { correct: 0, total: 0 }
@@ -83,7 +159,6 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
       if (a.correct) tally[a.topicSlug].correct++
     }
 
-    // Update topic states and build results array
     const results: TopicResult[] = topics.map((topic) => {
       const r = tally[topic.slug]
       if (!r) return { slug: topic.slug, title: topic.title, correct: 0, total: 0, stateChange: null }
@@ -103,23 +178,107 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
       return { slug: topic.slug, title: topic.title, correct: r.correct, total: r.total, stateChange }
     })
 
-    // Determine unit test pass/fail: all testable topics scored 3/3
     const testable = results.filter((r) => r.total > 0)
     const allPassed = testable.length > 0 && testable.every((r) => r.correct === r.total)
     setUnitTestState(courseSlug, unitId, allPassed ? 'passed' : 'inProgress')
     if (allPassed) addXP('unitTestPassed')
 
+    if (elapsed !== null) {
+      const totalCorrect = allAnswers.filter((a) => a.correct).length
+      const prevBest = getUnitBest(courseSlug, unitId)
+      saveUnitBest(courseSlug, unitId, elapsed, totalCorrect, allAnswers.length)
+      setIsNewBest(!prevBest || elapsed < prevBest.timeSeconds)
+    }
+
+    setElapsedSeconds(elapsed)
     setAnswers(allAnswers)
     setTopicResults(results)
     setPhase('results')
   }
 
   function retake() {
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
+      timerRef.current = null
+    }
+    finishedRef.current = false
     setCurrentIdx(0)
     setSelected(null)
     setAnswers([])
-    setPhase('quiz')
     setTopicResults([])
+    setElapsedSeconds(null)
+    setIsTimedOut(false)
+    setIsNewBest(false)
+    setSecondsRemaining(0)
+    setPhase('start')
+  }
+
+  // ── Start screen ───────────────────────────────────────────────────────────
+  if (phase === 'start') {
+    return (
+      <div>
+        <div className="mb-8 border border-gray-100 dark:border-gray-800 rounded-2xl p-6">
+          <h2 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
+            ⏱ Timed Challenge
+          </h2>
+
+          {/* Toggle */}
+          <label className="flex items-center gap-3 cursor-pointer mb-4">
+            <div
+              role="checkbox"
+              aria-checked={timedMode}
+              tabIndex={0}
+              onClick={() => setTimedMode((v) => !v)}
+              onKeyDown={(e) => e.key === 'Enter' && setTimedMode((v) => !v)}
+              className={`relative w-10 h-6 rounded-full transition-colors cursor-pointer select-none ${
+                timedMode ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'
+              }`}
+            >
+              <div
+                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
+                  timedMode ? 'translate-x-4' : ''
+                }`}
+              />
+            </div>
+            <span className="text-sm text-gray-700 dark:text-gray-300">Enable timer</span>
+          </label>
+
+          {timedMode && (
+            <>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Time limit</p>
+              <div className="flex gap-2 mb-4 flex-wrap">
+                {LIMIT_OPTIONS.map((min) => (
+                  <button
+                    key={min}
+                    onClick={() => setTimeLimitMinutes(min)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                      timeLimitMinutes === min
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    }`}
+                  >
+                    {min} min
+                  </button>
+                ))}
+              </div>
+              {unitBest && (
+                <p className="text-xs text-gray-400 dark:text-gray-500">
+                  Your best: {formatTime(unitBest.timeSeconds)} · {unitBest.score}/{unitBest.total}{' '}
+                  correct · {formatBestDate(unitBest.date)}
+                </p>
+              )}
+            </>
+          )}
+        </div>
+
+        <button
+          onClick={() => setPhase('quiz')}
+          className="w-full px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+        >
+          Start test →
+        </button>
+      </div>
+    )
   }
 
   // ── Results screen ─────────────────────────────────────────────────────────
@@ -139,6 +298,11 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
               : 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800'
           }`}
         >
+          {isTimedOut && (
+            <p className="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2">
+              ⏱ Time&apos;s up!
+            </p>
+          )}
           <div className="text-4xl mb-3">{allPassed ? '🎉' : '📊'}</div>
           <h2 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
             {allPassed ? 'All topics mastered!' : 'Unit test complete'}
@@ -146,6 +310,26 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
           <p className="text-sm text-gray-500 dark:text-gray-400">
             {totalCorrect} / {totalQ} correct
           </p>
+
+          {/* Timed result */}
+          {elapsedSeconds !== null && (
+            <div className="mt-3 space-y-1">
+              {!isTimedOut && (
+                <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  Completed in {formatTime(elapsedSeconds)}
+                </p>
+              )}
+              {isNewBest ? (
+                <p className="text-sm font-semibold text-green-600 dark:text-green-400">
+                  🏆 New personal best!
+                </p>
+              ) : unitBest ? (
+                <p className="text-xs text-gray-400 dark:text-gray-500">
+                  Personal best: {formatTime(unitBest.timeSeconds)}
+                </p>
+              ) : null}
+            </div>
+          )}
         </div>
 
         {/* Per-topic breakdown */}
@@ -225,6 +409,12 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
 
   // ── Quiz screen ────────────────────────────────────────────────────────────
   const correctSoFar = answers.filter((a) => a.correct).length
+  const timerColor =
+    secondsRemaining < 30
+      ? 'text-red-500 dark:text-red-400'
+      : secondsRemaining < 60
+        ? 'text-amber-500 dark:text-amber-400'
+        : 'text-gray-400 dark:text-gray-500'
 
   return (
     <div>
@@ -233,9 +423,16 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
         <span className="text-sm text-gray-500 dark:text-gray-400">
           Question {currentIdx + 1} of {total}
         </span>
-        <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">
-          {correctSoFar} correct
-        </span>
+        <div className="flex items-center gap-4">
+          {timedMode && (
+            <span className={`text-sm font-medium tabular-nums ${timerColor}`}>
+              ⏱ {formatTime(secondsRemaining)} remaining
+            </span>
+          )}
+          <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">
+            {correctSoFar} correct
+          </span>
+        </div>
       </div>
       <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden mb-8">
         <div

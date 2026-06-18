@@ -8,6 +8,7 @@ import { setLastPracticeVisit } from '@/lib/learnState'
 import { recordAnswer } from '@/lib/mistakeTracker'
 import { addXP, updateStreak, recordDailyActivity, getPersonalBests, updatePersonalBests } from '@/lib/xp'
 import XPToast from '@/components/ui/XPToast'
+import { useConfetti } from '@/lib/useConfetti'
 
 const MASTERY_STREAK = 4
 
@@ -29,6 +30,7 @@ interface Props {
   courseSlug: string
   courseTitle?: string
   nextTopic?: NextTopic | null
+  hasLearnContent?: boolean
 }
 
 function markTopicComplete(courseSlug: string, topicSlug: string) {
@@ -71,7 +73,8 @@ const DIFFICULTIES = [
   { value: 'hard', label: 'Hard' },
 ]
 
-export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic }: Props) {
+export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic, hasLearnContent }: Props) {
+  const fireConfetti = useConfetti()
   const initialMode = learn ? 'learn' : 'practice'
   const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
@@ -166,6 +169,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
   }
 
   function handleMasteryTransition() {
+    fireConfetti()
     stopTimer()
     markTopicComplete(courseSlug, topicSlug)
     onTopicCompleted(courseSlug, topicSlug)
@@ -252,6 +256,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           onAnswer={handleAnswer}
           nextLabel={session.masteryPending ? 'See results →' : undefined}
           onNext={session.masteryPending ? handleMasteryTransition : undefined}
+          hasLearnContent={hasLearnContent}
         />
         <XPToast xp={toastXP} label={toastLabel} visible={toastVisible} />
       </div>
