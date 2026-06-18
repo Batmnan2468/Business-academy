@@ -3,40 +3,154 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
-model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
+// One row per user — stores XP, streak, daily goal
+model UserProfile {
+  id              String   @id // Clerk userId
+  totalXP         Int      @default(0)
+  streakCurrent   Int      @default(0)
+  streakLongest   Int      @default(0)
+  lastActiveDate  String   @default("")
+  dailyGoalTarget Int      @default(10)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
-  enrollments Enrollment[]
-  progress    LessonProgress[]
+  topicStates     TopicState[]
+  learnStates     LearnState[]
+  masteryRecords  MasteryRecord[]
+  unitTestStates  UnitTestState[]
+  xpEvents        XPEvent[]
+  timedBests      TimedBest[]
+  savedQuestions  SavedQuestion[]
+  checkpoints     CheckpointResult[]
 }
 
-model Enrollment {
-  id         String   @id @default(cuid())
+// topicState_${courseSlug}_${topicSlug}
+model TopicState {
+  id         String      @id @default(cuid())
   userId     String
-  courseId   String
-  enrolledAt DateTime @default(now())
+  courseSlug String
+  topicSlug  String
+  state      String      @default("untouched")
+  updatedAt  DateTime    @updatedAt
+  user       UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  user User @relation(fields: [userId], references: [id])
-
-  @@unique([userId, courseId])
+  @@unique([userId, courseSlug, topicSlug])
+  @@index([userId, courseSlug])
 }
 
-model LessonProgress {
-  id          String    @id @default(cuid())
+// learnState_${courseSlug}_${topicSlug}
+model LearnState {
+  id         String      @id @default(cuid())
+  userId     String
+  courseSlug String
+  topicSlug  String
+  state      String      @default("unread")
+  thought    String? // learnThought
+  rating     String? // learnRating: nailed|partial|missed
+  updatedAt  DateTime    @updatedAt
+  user       UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseSlug, topicSlug])
+  @@index([userId, courseSlug])
+}
+
+// mastery:${courseSlug}:${topicSlug}
+model MasteryRecord {
+  id                  String      @id @default(cuid())
+  userId              String
+  courseSlug          String
+  topicSlug           String
+  masteryLevel        Int         @default(0)
+  nextReviewDate      String      @default("")
+  lastReviewedDate    String      @default("")
+  permanentlyMastered Boolean     @default(false)
+  easeFactor          Float       @default(2.5)
+  intervalDays        Int         @default(1)
+  updatedAt           DateTime    @updatedAt
+  user                UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseSlug, topicSlug])
+  @@index([userId, courseSlug])
+}
+
+// unitTestState_${courseSlug}_${unitId}
+model UnitTestState {
+  id         String      @id @default(cuid())
+  userId     String
+  courseSlug String
+  unitId     String
+  state      String      @default("notStarted")
+  updatedAt  DateTime    @updatedAt
+  user       UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseSlug, unitId])
+  @@index([userId, courseSlug])
+}
+
+// checkpointResult_${courseSlug}_${topicSlug}
+model CheckpointResult {
+  id          String      @id @default(cuid())
   userId      String
-  lessonId    String
-  courseId    String
-  completedAt DateTime?
-  score       Int?
+  courseSlug  String
+  topicSlug   String
+  score       Int
+  total       Int
+  completedAt String
+  updatedAt   DateTime    @updatedAt
+  user        UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  user User @relation(fields: [userId], references: [id])
+  @@unique([userId, courseSlug, topicSlug])
+}
 
-  @@unique([userId, lessonId])
+// XP history events
+model XPEvent {
+  id        String      @id @default(cuid())
+  userId    String
+  event     String
+  amount    Int
+  createdAt DateTime    @default(now())
+  user      UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// timedBest:unit:${courseSlug}:${unitId} and timedBest:course:${courseSlug}
+model TimedBest {
+  id          String      @id @default(cuid())
+  userId      String
+  type        String // "unit" or "course"
+  courseSlug  String
+  unitId      String? // null for course-level bests
+  timeSeconds Int
+  score       Int
+  total       Int
+  achievedAt  String
+  updatedAt   DateTime    @updatedAt
+  user        UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type, courseSlug, unitId])
+  @@index([userId])
+}
+
+// savedQuestions_${courseSlug}
+model SavedQuestion {
+  id           String      @id @default(cuid())
+  userId       String
+  courseSlug   String
+  topicSlug    String
+  question     String
+  options      Json
+  correctIndex Int
+  explanation  String
+  type         String
+  difficulty   String
+  savedAt      DateTime    @default(now())
+  user         UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, courseSlug])
 }

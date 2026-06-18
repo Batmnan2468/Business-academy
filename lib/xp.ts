@@ -1,4 +1,5 @@
 import { todayStr } from './mastery'
+import { syncToDatabase } from './syncProgress'
 
 export const XP_VALUES = {
   learnTopicCompleted: 10,
@@ -80,6 +81,8 @@ export function addXP(event: keyof typeof XP_VALUES, multiplier = 1): number {
   if (history.length > 200) history.splice(0, history.length - 200)
   safeSet('xp:history', history)
 
+  syncToDatabase('xpEvent', { event, amount })
+
   return amount
 }
 
@@ -140,6 +143,14 @@ export function updateStreak(): { current: number; longest: number } {
   const newLongest = Math.max(data.longest, newCurrent)
 
   safeSet('xp:streak', { current: newCurrent, longest: newLongest, lastActiveDate: today } satisfies StreakData)
+
+  syncToDatabase('profile', {
+    streakCurrent: newCurrent,
+    streakLongest: newLongest,
+    lastActiveDate: today,
+    totalXP: getTotalXP(),
+    dailyGoalTarget: getDailyGoal().target,
+  })
 
   return { current: newCurrent, longest: newLongest }
 }

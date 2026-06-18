@@ -1,6 +1,8 @@
 // 4-state topic mastery system stored in localStorage.
 // All access is guarded by typeof window so this is safe to import in server-rendered components.
 
+import { syncToDatabase } from './syncProgress'
+
 export type TopicState = 'untouched' | 'inProgress' | 'practiced' | 'mastered'
 export type UnitTestState = 'notStarted' | 'inProgress' | 'passed'
 
@@ -19,6 +21,7 @@ export function setTopicState(courseSlug: string, topicSlug: string, state: Topi
   try {
     localStorage.setItem(`topicState_${courseSlug}_${topicSlug}`, state)
   } catch { /* quota exceeded */ }
+  syncToDatabase('topicState', { courseSlug, topicSlug, state })
 }
 
 export function getUnitTestState(courseSlug: string, unitId: string): UnitTestState {
@@ -36,6 +39,7 @@ export function setUnitTestState(courseSlug: string, unitId: string, state: Unit
   try {
     localStorage.setItem(`unitTestState_${courseSlug}_${unitId}`, state)
   } catch { /* quota exceeded */ }
+  syncToDatabase('unitTestState', { courseSlug, unitId, state })
 }
 
 export function countPracticedTopics(courseSlug: string, topicSlugs: string[]): number {

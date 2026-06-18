@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { UserButton } from '@clerk/nextjs'
 import { getTotalSavedCount } from '@/lib/savedQuestions'
 
 export default function NavBar() {
@@ -54,6 +55,7 @@ export default function NavBar() {
               </span>
             )}
           </Link>
+          <UserButton />
         </div>
       </div>
     </nav>

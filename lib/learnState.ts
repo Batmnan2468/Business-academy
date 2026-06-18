@@ -1,3 +1,5 @@
+import { syncToDatabase } from './syncProgress'
+
 export type LearnState = 'unread' | 'reading' | 'completed'
 export type LearnRating = 'nailed' | 'partial' | 'missed'
 
@@ -20,6 +22,7 @@ export function getLearnState(courseSlug: string, topicSlug: string): LearnState
 export function setLearnState(courseSlug: string, topicSlug: string, state: LearnState): void {
   safe(() => {
     localStorage.setItem(`learnState_${courseSlug}_${topicSlug}`, state)
+    syncToDatabase('learnState', { courseSlug, topicSlug, state })
   }, undefined)
 }
 
@@ -30,6 +33,7 @@ export function getLearnThought(courseSlug: string, topicSlug: string): string {
 export function setLearnThought(courseSlug: string, topicSlug: string, thought: string): void {
   safe(() => {
     localStorage.setItem(`learnThought_${courseSlug}_${topicSlug}`, thought)
+    syncToDatabase('learnState', { courseSlug, topicSlug, thought })
   }, undefined)
 }
 
@@ -43,6 +47,7 @@ export function getLearnRating(courseSlug: string, topicSlug: string): LearnRati
 export function setLearnRating(courseSlug: string, topicSlug: string, rating: LearnRating): void {
   safe(() => {
     localStorage.setItem(`learnRating_${courseSlug}_${topicSlug}`, rating)
+    syncToDatabase('learnState', { courseSlug, topicSlug, rating })
   }, undefined)
 }
 
