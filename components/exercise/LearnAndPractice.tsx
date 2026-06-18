@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PracticeQuestion from './PracticeQuestion'
 import { onTopicCompleted } from '@/lib/mastery'
 import { getTopicState, setTopicState } from '@/lib/topicState'
-import { setLastPracticeVisit } from '@/lib/learnState'
+import { setLastPracticeVisit, getLearnState } from '@/lib/learnState'
 import { recordAnswer } from '@/lib/mistakeTracker'
 import { addXP, updateStreak, recordDailyActivity, getPersonalBests, updatePersonalBests } from '@/lib/xp'
 import XPToast from '@/components/ui/XPToast'
@@ -31,6 +31,7 @@ interface Props {
   courseTitle?: string
   nextTopic?: NextTopic | null
   hasLearnContent?: boolean
+  nextTopicHasLearn?: boolean
 }
 
 function markTopicComplete(courseSlug: string, topicSlug: string) {
@@ -73,7 +74,7 @@ const DIFFICULTIES = [
   { value: 'hard', label: 'Hard' },
 ]
 
-export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic, hasLearnContent }: Props) {
+export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic, hasLearnContent, nextTopicHasLearn }: Props) {
   const fireConfetti = useConfetti()
   const initialMode = learn ? 'learn' : 'practice'
   const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
@@ -202,6 +203,7 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
             sessionTime={elapsed}
             courseSlug={courseSlug}
             nextTopic={nextTopic}
+            nextTopicHasLearn={nextTopicHasLearn}
             onKeepPracticing={handleKeepPracticing}
           />
           <XPToast xp={toastXP} label={toastLabel} visible={toastVisible} />
@@ -378,6 +380,7 @@ function MasteryScreen({
   sessionTime,
   courseSlug,
   nextTopic,
+  nextTopicHasLearn,
   onKeepPracticing,
 }: {
   topicTitle: string
@@ -387,9 +390,14 @@ function MasteryScreen({
   sessionTime: number
   courseSlug: string
   nextTopic?: NextTopic | null
+  nextTopicHasLearn?: boolean
   onKeepPracticing: () => void
 }) {
   const [prevBests] = useState(() => getPersonalBests())
+  const [nextTopicLearnCompleted] = useState(() => {
+    if (!nextTopic || !nextTopicHasLearn) return false
+    return getLearnState(courseSlug, nextTopic.slug) === 'completed'
+  })
 
   useEffect(() => {
     updatePersonalBests({ streak, correct, total })
@@ -407,6 +415,18 @@ function MasteryScreen({
   const showAccuracyBest = total >= 5 && accuracy > prevBests.bestSessionAccuracy
   const showCountBest = total > prevBests.bestSessionCount
   const showStreakBest = streak >= prevBests.longestStreak
+
+  const shouldGoToLearn = nextTopicHasLearn && !nextTopicLearnCompleted
+  const nextTopicHref = nextTopic
+    ? shouldGoToLearn
+      ? `/courses/${courseSlug}/learn/${nextTopic.slug}`
+      : `/courses/${courseSlug}/practice/${nextTopic.slug}`
+    : null
+  const nextTopicLabel = nextTopic
+    ? shouldGoToLearn
+      ? `Next: Learn ${nextTopic.title} →`
+      : `Next: Practice ${nextTopic.title} →`
+    : null
 
   return (
     <div className="text-center py-6">
@@ -467,12 +487,12 @@ function MasteryScreen({
       )}
 
       <div className={`flex flex-col gap-3 items-center ${accuracy >= 70 ? 'mt-6' : ''}`}>
-        {nextTopic && (
+        {nextTopic && nextTopicHref && nextTopicLabel && (
           <Link
-            href={`/courses/${courseSlug}/practice/${nextTopic.slug}`}
+            href={nextTopicHref}
             className="w-full max-w-xs px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
           >
-            Next: {nextTopic.title} →
+            {nextTopicLabel}
           </Link>
         )}
 

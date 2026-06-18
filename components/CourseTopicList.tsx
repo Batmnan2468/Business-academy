@@ -1,11 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { getMastery, getMasteryPct, isDueToday } from '@/lib/mastery'
 import type { TopicMastery } from '@/lib/mastery'
 import { getTopicState, getUnitTestState } from '@/lib/topicState'
 import type { TopicState, UnitTestState } from '@/lib/topicState'
+import { getLearnState } from '@/lib/learnState'
+import type { LearnState } from '@/lib/learnState'
 import { getSavedCountForCourse } from '@/lib/savedQuestions'
 
 interface TopicItem {
@@ -70,6 +72,22 @@ function loadTopicStateMap(
   return map
 }
 
+function loadLearnStateMap(
+  courseSlug: string,
+  units: UnitItem[] | undefined,
+  topics: TopicItem[] | undefined,
+): Map<string, LearnState> {
+  const allSlugs = [
+    ...(units?.flatMap((u) => u.topics.map((t) => t.slug)) ?? []),
+    ...(topics?.map((t) => t.slug) ?? []),
+  ]
+  const map = new Map<string, LearnState>()
+  for (const slug of allSlugs) {
+    map.set(slug, getLearnState(courseSlug, slug))
+  }
+  return map
+}
+
 function loadUnitTestStateMap(
   courseSlug: string,
   units: UnitItem[] | undefined,
@@ -79,6 +97,48 @@ function loadUnitTestStateMap(
     map.set(unit.id, getUnitTestState(courseSlug, unit.id))
   }
   return map
+}
+
+// ── Guided-flow next-step logic ───────────────────────────────────────────────
+
+type NextStep =
+  | { type: 'learn'; topicSlug: string; topicTitle: string }
+  | { type: 'practice'; topicSlug: string; topicTitle: string }
+  | { type: 'unit-test'; unitId: string; unitNum: number }
+  | { type: 'done' }
+
+function computeNextStep(
+  units: UnitItem[],
+  topicStateMap: Map<string, TopicState>,
+  learnStateMap: Map<string, LearnState>,
+  unitTestStateMap: Map<string, UnitTestState>,
+  hasLearnContent: boolean,
+): NextStep {
+  for (let ui = 0; ui < units.length; ui++) {
+    const unit = units[ui]
+    let unitFullyPracticed = true
+
+    for (const topic of unit.topics) {
+      const ts = topicStateMap.get(topic.slug) ?? 'untouched'
+      if (ts !== 'practiced' && ts !== 'mastered') {
+        unitFullyPracticed = false
+        const ls = learnStateMap.get(topic.slug) ?? 'unread'
+        if (hasLearnContent && ls !== 'completed') {
+          return { type: 'learn', topicSlug: topic.slug, topicTitle: topic.title }
+        }
+        return { type: 'practice', topicSlug: topic.slug, topicTitle: topic.title }
+      }
+    }
+
+    if (unitFullyPracticed) {
+      const utState = unitTestStateMap.get(unit.id) ?? 'notStarted'
+      if (utState === 'notStarted') {
+        return { type: 'unit-test', unitId: unit.id, unitNum: ui + 1 }
+      }
+    }
+  }
+
+  return { type: 'done' }
 }
 
 // ── State circle icon (used in flat-topics fallback) ─────────────────────────
@@ -214,19 +274,28 @@ export default function CourseTopicList({
 }: Props) {
   const [masteryMap, setMasteryMap] = useState<Map<string, TopicMastery>>(new Map())
   const [topicStateMap, setTopicStateMap] = useState<Map<string, TopicState>>(new Map())
+  const [learnStateMap, setLearnStateMap] = useState<Map<string, LearnState>>(new Map())
   const [unitTestStateMap, setUnitTestStateMap] = useState<Map<string, UnitTestState>>(new Map())
   const [dueCount, setDueCount] = useState(0)
   const [masteredCount, setMasteredCount] = useState(0)
   const [savedCount, setSavedCount] = useState(0)
+  const [nextStep, setNextStep] = useState<NextStep | null>(null)
 
   function refresh() {
     const { map, dueCount: due, masteredCount: mc } = loadMasteryMap(courseSlug, units, topics)
     setMasteryMap(map)
     setDueCount(due)
     setMasteredCount(mc)
-    setTopicStateMap(loadTopicStateMap(courseSlug, units, topics))
-    setUnitTestStateMap(loadUnitTestStateMap(courseSlug, units))
+    const topicMap = loadTopicStateMap(courseSlug, units, topics)
+    setTopicStateMap(topicMap)
+    const learnMap = loadLearnStateMap(courseSlug, units, topics)
+    setLearnStateMap(learnMap)
+    const utMap = loadUnitTestStateMap(courseSlug, units)
+    setUnitTestStateMap(utMap)
     setSavedCount(getSavedCountForCourse(courseSlug))
+    if (units) {
+      setNextStep(computeNextStep(units, topicMap, learnMap, utMap, hasLearnContent))
+    }
   }
 
   useEffect(() => {
@@ -244,6 +313,34 @@ export default function CourseTopicList({
     (s) => s === 'practiced' || s === 'mastered',
   ).length
   const pct = totalTopics > 0 ? Math.round((practicedCount / totalTopics) * 100) : 0
+
+  const anyTouched = useMemo(() => {
+    for (const s of topicStateMap.values()) if (s !== 'untouched') return true
+    for (const s of learnStateMap.values()) if (s !== 'unread') return true
+    return false
+  }, [topicStateMap, learnStateMap])
+
+  const nextStepLabel = useMemo(() => {
+    if (!nextStep) return ''
+    if (nextStep.type === 'done') return "You're done! Review any topic above ✓"
+    if (nextStep.type === 'unit-test') return `Unit Test: Unit ${nextStep.unitNum}`
+    const title =
+      nextStep.topicTitle.length > 35
+        ? nextStep.topicTitle.slice(0, 35) + '…'
+        : nextStep.topicTitle
+    if (!anyTouched) return `Start: ${title}`
+    if (nextStep.type === 'learn') return `Learn: ${title}`
+    return `Practice: ${title}`
+  }, [nextStep, anyTouched])
+
+  const nextStepHref = useMemo((): string | null => {
+    if (!nextStep || nextStep.type === 'done') return null
+    if (nextStep.type === 'unit-test')
+      return `/courses/${courseSlug}/unit-test/${nextStep.unitId}`
+    if (nextStep.type === 'learn')
+      return `/courses/${courseSlug}/learn/${nextStep.topicSlug}`
+    return `/courses/${courseSlug}/practice/${nextStep.topicSlug}`
+  }, [nextStep, courseSlug])
 
   // Flat-topics fallback: full-width topic row (original design)
   function topicRow(topic: TopicItem, num: number) {
@@ -354,7 +451,7 @@ export default function CourseTopicList({
       )}
 
       {/* Learn / Practice mode selector */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
         {hasLearnContent ? (
           <Link
             href={`/courses/${courseSlug}/learn`}
@@ -384,6 +481,24 @@ export default function CourseTopicList({
           </span>
         </Link>
       </div>
+
+      {/* Continue studying button (unit-based courses only) */}
+      {units && nextStep !== null && (
+        <div className="mb-4">
+          {nextStep.type === 'done' ? (
+            <div className="w-full py-3 px-5 rounded-xl bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 font-medium text-sm text-center">
+              {nextStepLabel}
+            </div>
+          ) : (
+            <Link
+              href={nextStepHref!}
+              className="block w-full py-3 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm text-center transition-colors"
+            >
+              {nextStepLabel}
+            </Link>
+          )}
+        </div>
+      )}
 
       {/* Saved questions link */}
       {savedCount > 0 && (

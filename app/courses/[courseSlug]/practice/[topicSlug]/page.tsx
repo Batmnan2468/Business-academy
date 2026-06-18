@@ -22,6 +22,8 @@ export default async function PracticeTopicPage({ params }: Props) {
       ? { slug: allTopics[currentIndex + 1].slug, title: allTopics[currentIndex + 1].title }
       : null
 
+  const nextTopicHasLearn = nextTopic != null && allTopics[currentIndex + 1].learn != null
+
   // LearnAndPractice only understands the old LearnContent format.
   // For V2 learn content, skip the learn pane — it's handled by the /learn route.
   const legacyLearn =
@@ -59,6 +61,7 @@ export default async function PracticeTopicPage({ params }: Props) {
         courseTitle={course.title}
         nextTopic={nextTopic}
         hasLearnContent={hasLearnContent}
+        nextTopicHasLearn={nextTopicHasLearn}
       />
     </main>
   )

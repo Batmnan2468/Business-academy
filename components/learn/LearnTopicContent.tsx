@@ -130,21 +130,30 @@ export function LearnTopicContentLegacy({
               topicSlug={topicSlug}
             />
           )}
-          <div className="flex gap-3 flex-wrap mt-4">
+          <div className="flex flex-col gap-3 mt-4">
+            <Link
+              href={`/courses/${courseSlug}/practice/${topicSlug}`}
+              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
+            >
+              Practice this topic →
+            </Link>
             {nextTopic && (
               <Link
                 href={`/courses/${courseSlug}/learn/${nextTopic.slug}`}
-                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
               >
                 Next: {nextTopic.title} →
               </Link>
             )}
-            <Link
-              href={`/courses/${courseSlug}/practice/${topicSlug}`}
-              className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
-            >
-              Start Practicing →
-            </Link>
+            <p className="text-sm text-gray-400 dark:text-gray-500 text-center">
+              or{' '}
+              <Link
+                href={`/courses/${courseSlug}`}
+                className="hover:underline hover:text-blue-500 dark:hover:text-blue-400"
+              >
+                go back to the topic list
+              </Link>
+            </p>
           </div>
         </>
       )}
@@ -521,21 +530,21 @@ function PracticeNav({
   lowScore: boolean
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-3">
+    <div className="flex flex-col gap-3">
+      <Link
+        href={`/courses/${courseSlug}/practice/${topicSlug}`}
+        className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
+      >
+        Practice this topic →
+      </Link>
       {nextTopic && (
         <Link
           href={`/courses/${courseSlug}/learn/${nextTopic.slug}`}
-          className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
+          className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
         >
-          Next Topic → {nextTopic.title}
+          Next: {nextTopic.title} →
         </Link>
       )}
-      <Link
-        href={`/courses/${courseSlug}/practice/${topicSlug}`}
-        className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
-      >
-        Start Practicing →
-      </Link>
       {lowScore && (
         <Link
           href={`/courses/${courseSlug}/learn/${topicSlug}`}
@@ -544,6 +553,15 @@ function PracticeNav({
           Re-read Topic
         </Link>
       )}
+      <p className="text-sm text-gray-400 dark:text-gray-500 text-center">
+        or{' '}
+        <Link
+          href={`/courses/${courseSlug}`}
+          className="hover:underline hover:text-blue-500 dark:hover:text-blue-400"
+        >
+          go back to the topic list
+        </Link>
+      </p>
     </div>
   )
 }
