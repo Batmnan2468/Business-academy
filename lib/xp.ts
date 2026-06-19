@@ -9,6 +9,9 @@ export const XP_VALUES = {
   courseTestCompleted: 30,
   dailyGoalMet: 20,
   streakBonus: 5,
+  flashcardGotIt: 3,
+  flashcardMastered: 8,
+  flashcardSessionComplete: 15,
 } as const
 
 export const LEVELS = [

@@ -4,6 +4,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import NavBar from '@/components/NavBar'
 import ProgressHydrator from '@/components/ProgressHydrator'
+import FlashcardFAB from '@/components/flashcards/FlashcardFAB'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ProgressHydrator />
           <NavBar />
           {children}
+          <FlashcardFAB />
         </body>
       </html>
     </ClerkProvider>

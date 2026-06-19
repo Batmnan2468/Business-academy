@@ -43,6 +43,10 @@ export default function NavBar() {
           <Link href="/dashboard" className={navClass('/dashboard')}>
             Dashboard
           </Link>
+          <Link href="/flashcards" className={`${navClass('/flashcards')} flex items-center gap-1`}>
+            <span className="hidden sm:inline">Flashcards</span>
+            <span className="sm:hidden">🃏</span>
+          </Link>
           <Link
             href="/saved-questions"
             className={`${navClass('/saved-questions')} flex items-center gap-1.5`}

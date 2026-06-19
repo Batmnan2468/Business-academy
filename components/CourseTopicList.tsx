@@ -450,8 +450,8 @@ export default function CourseTopicList({
         </div>
       )}
 
-      {/* Learn / Practice mode selector */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+      {/* Learn / Practice / Flashcards mode selector */}
+      <div className="grid grid-cols-3 gap-3 mb-4">
         {hasLearnContent ? (
           <Link
             href={`/courses/${courseSlug}/learn`}
@@ -478,6 +478,15 @@ export default function CourseTopicList({
           <span className="text-2xl">✏️</span>
           <span className="font-semibold text-sm text-amber-700 dark:text-amber-300 group-hover:text-amber-800">
             Practice Mode
+          </span>
+        </Link>
+        <Link
+          href={`/courses/${courseSlug}/flashcards`}
+          className="flex flex-col items-center gap-1.5 px-4 py-5 rounded-2xl border-2 border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-950 hover:border-purple-400 transition-colors group"
+        >
+          <span className="text-2xl">🃏</span>
+          <span className="font-semibold text-sm text-purple-700 dark:text-purple-300 group-hover:text-purple-800">
+            Flashcards
           </span>
         </Link>
       </div>
