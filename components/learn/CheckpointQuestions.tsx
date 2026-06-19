@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import type { PracticeQuestion } from '@/types'
+import SaveAsFlashcardButton from '@/components/flashcards/SaveAsFlashcardButton'
 
 interface Props {
   questions: PracticeQuestion[]
@@ -117,6 +118,13 @@ export default function CheckpointQuestions({ questions, onComplete }: Props) {
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
               {current.explanation}
             </p>
+          </div>
+
+          <div className="mb-3">
+            <SaveAsFlashcardButton
+              defaultFront={current.question}
+              defaultBack={current.options[current.correctIndex]}
+            />
           </div>
 
           <button

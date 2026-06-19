@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { isQuestionSaved, saveQuestion, removeQuestion } from '@/lib/savedQuestions'
+import SaveAsFlashcardButton from '@/components/flashcards/SaveAsFlashcardButton'
 
 interface Question {
   question: string
@@ -295,6 +296,13 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
               </p>
             </div>
           )}
+
+          <div className="mb-4">
+            <SaveAsFlashcardButton
+              defaultFront={question.question}
+              defaultBack={question.options[question.correctIndex]}
+            />
+          </div>
 
           <button
             onClick={onNext ?? fetchQuestion}
