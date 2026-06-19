@@ -43,8 +43,6 @@ interface TopicResult {
 
 type Phase = 'start' | 'quiz' | 'results'
 
-const LIMIT_OPTIONS = [5, 10, 15, 20] as const
-
 export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, topics }: Props) {
   const [questions] = useState(() => rawQuestions.map(shuffleOptions))
   const [phase, setPhase] = useState<Phase>('start')
@@ -55,14 +53,17 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
 
   // Timed mode
   const [timedMode, setTimedMode] = useState(false)
+  const [stopwatchMode, setStopwatchMode] = useState(false)
   const [timeLimitMinutes, setTimeLimitMinutes] = useState(10)
   const [secondsRemaining, setSecondsRemaining] = useState(0)
+  // elapsedSeconds: null during countdown quiz, counts up during stopwatch quiz, final value in results
   const [elapsedSeconds, setElapsedSeconds] = useState<number | null>(null)
   const [isTimedOut, setIsTimedOut] = useState(false)
   const [isNewBest, setIsNewBest] = useState(false)
 
-  // Snapshot of best before this run (stable — read once at mount)
-  const [unitBest] = useState(() => getUnitBest(courseSlug, unitId))
+  // Snapshot of bests before this run (stable — read once at mount)
+  const [unitBestCountdown] = useState(() => getUnitBest(courseSlug, unitId, 'countdown'))
+  const [unitBestStopwatch] = useState(() => getUnitBest(courseSlug, unitId, 'stopwatch'))
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const finishedRef = useRef(false)
@@ -83,15 +84,25 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
       }
     }
     setIsTimedOut(true)
-    finishTest(allAnswers, timeLimitSeconds)
+    finishTest(allAnswers, timeLimitSeconds, 'countdown')
   }
 
-  // Start countdown when quiz phase begins
+  // Start timer when quiz phase begins
   useEffect(() => {
     if (phase !== 'quiz' || !timedMode) return
+
+    if (stopwatchMode) {
+      setElapsedSeconds(0)
+      const id = setInterval(() => setElapsedSeconds((p) => (p ?? 0) + 1), 1000)
+      timerRef.current = id
+      return () => {
+        clearInterval(id)
+        timerRef.current = null
+      }
+    }
+
     const timeLimitSeconds = timeLimitMinutes * 60
     setSecondsRemaining(timeLimitSeconds)
-
     const id = setInterval(() => {
       setSecondsRemaining((prev) => {
         if (prev <= 1) {
@@ -99,7 +110,6 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
             clearInterval(timerRef.current)
             timerRef.current = null
           }
-          // Schedule after this state update commits
           setTimeout(() => handleTimeUpRef.current(), 0)
           return 0
         }
@@ -113,7 +123,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
       timerRef.current = null
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, timedMode])
+  }, [phase, timedMode, stopwatchMode])
 
   const total = questions.length
   const currentQuestion = questions[currentIdx]
@@ -136,8 +146,13 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
         clearInterval(timerRef.current)
         timerRef.current = null
       }
-      const elapsed = timedMode ? timeLimitMinutes * 60 - secondsRemaining : null
-      finishTest(allAnswers, elapsed)
+      const mode: 'countdown' | 'stopwatch' = stopwatchMode ? 'stopwatch' : 'countdown'
+      const elapsed = timedMode
+        ? stopwatchMode
+          ? elapsedSeconds ?? 0
+          : timeLimitMinutes * 60 - secondsRemaining
+        : null
+      finishTest(allAnswers, elapsed, mode)
     } else {
       setAnswers(allAnswers)
       setCurrentIdx((idx) => idx + 1)
@@ -148,6 +163,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
   function finishTest(
     allAnswers: { correct: boolean; topicSlug: string }[],
     elapsed: number | null = null,
+    mode: 'countdown' | 'stopwatch' = 'countdown',
   ) {
     if (finishedRef.current) return
     finishedRef.current = true
@@ -185,12 +201,12 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
 
     if (elapsed !== null) {
       const totalCorrect = allAnswers.filter((a) => a.correct).length
-      const prevBest = getUnitBest(courseSlug, unitId)
-      saveUnitBest(courseSlug, unitId, elapsed, totalCorrect, allAnswers.length)
+      const prevBest = getUnitBest(courseSlug, unitId, mode)
+      saveUnitBest(courseSlug, unitId, elapsed, totalCorrect, allAnswers.length, mode)
       setIsNewBest(!prevBest || elapsed < prevBest.timeSeconds)
     }
 
-    setElapsedSeconds(elapsed)
+    if (!stopwatchMode) setElapsedSeconds(elapsed)
     setAnswers(allAnswers)
     setTopicResults(results)
     setPhase('results')
@@ -215,6 +231,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
 
   // ── Start screen ───────────────────────────────────────────────────────────
   if (phase === 'start') {
+    const relevantBest = stopwatchMode ? unitBestStopwatch : unitBestCountdown
     return (
       <div>
         <div className="mb-8 border border-gray-100 dark:border-gray-800 rounded-2xl p-6">
@@ -222,7 +239,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
             ⏱ Timed Challenge
           </h2>
 
-          {/* Toggle */}
+          {/* Timed mode toggle */}
           <label className="flex items-center gap-3 cursor-pointer mb-4">
             <div
               role="checkbox"
@@ -245,26 +262,56 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
 
           {timedMode && (
             <>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Time limit</p>
-              <div className="flex gap-2 mb-4 flex-wrap">
-                {LIMIT_OPTIONS.map((min) => (
-                  <button
-                    key={min}
-                    onClick={() => setTimeLimitMinutes(min)}
-                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                      timeLimitMinutes === min
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+              {/* Duration input — hidden in stopwatch mode */}
+              {!stopwatchMode && (
+                <div className="mb-4">
+                  <label className="block text-xs text-gray-500 dark:text-gray-400 mb-2">
+                    Time limit (minutes)
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={60}
+                    step={1}
+                    value={timeLimitMinutes}
+                    onChange={(e) =>
+                      setTimeLimitMinutes(
+                        Math.max(1, Math.min(60, parseInt(e.target.value) || 1)),
+                      )
+                    }
+                    className="w-full text-center border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2 text-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              )}
+
+              {/* Stopwatch mode toggle */}
+              <label className="flex items-center gap-3 cursor-pointer mb-4">
+                <div
+                  role="checkbox"
+                  aria-checked={stopwatchMode}
+                  tabIndex={0}
+                  onClick={() => setStopwatchMode((v) => !v)}
+                  onKeyDown={(e) => e.key === 'Enter' && setStopwatchMode((v) => !v)}
+                  className={`relative w-10 h-6 rounded-full transition-colors cursor-pointer select-none ${
+                    stopwatchMode ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'
+                  }`}
+                >
+                  <div
+                    className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 ${
+                      stopwatchMode ? 'translate-x-4' : ''
                     }`}
-                  >
-                    {min} min
-                  </button>
-                ))}
-              </div>
-              {unitBest && (
+                  />
+                </div>
+                <span className="text-sm text-gray-700 dark:text-gray-300">
+                  Stopwatch mode (no limit — race yourself)
+                </span>
+              </label>
+
+              {relevantBest && (
                 <p className="text-xs text-gray-400 dark:text-gray-500">
-                  Your best: {formatTime(unitBest.timeSeconds)} · {unitBest.score}/{unitBest.total}{' '}
-                  correct · {formatBestDate(unitBest.date)}
+                  Your best: {formatTime(relevantBest.timeSeconds)} · {relevantBest.score}/
+                  {relevantBest.total} correct · {formatBestDate(relevantBest.date)} (
+                  {relevantBest.mode})
                 </p>
               )}
             </>
@@ -287,6 +334,7 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
     const totalCorrect = testable.reduce((s, r) => s + r.correct, 0)
     const totalQ = testable.reduce((s, r) => s + r.total, 0)
     const allPassed = testable.every((r) => r.correct === r.total)
+    const relevantBest = stopwatchMode ? unitBestStopwatch : unitBestCountdown
 
     return (
       <div>
@@ -316,16 +364,16 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
             <div className="mt-3 space-y-1">
               {!isTimedOut && (
                 <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Completed in {formatTime(elapsedSeconds)}
+                  Completed in {formatTime(elapsedSeconds)} ({stopwatchMode ? 'stopwatch' : 'countdown'})
                 </p>
               )}
               {isNewBest ? (
                 <p className="text-sm font-semibold text-green-600 dark:text-green-400">
                   🏆 New personal best!
                 </p>
-              ) : unitBest ? (
+              ) : relevantBest ? (
                 <p className="text-xs text-gray-400 dark:text-gray-500">
-                  Personal best: {formatTime(unitBest.timeSeconds)}
+                  Personal best: {formatTime(relevantBest.timeSeconds)}
                 </p>
               ) : null}
             </div>
@@ -410,9 +458,9 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
   // ── Quiz screen ────────────────────────────────────────────────────────────
   const correctSoFar = answers.filter((a) => a.correct).length
   const timerColor =
-    secondsRemaining < 30
+    !stopwatchMode && secondsRemaining < 30
       ? 'text-red-500 dark:text-red-400'
-      : secondsRemaining < 60
+      : !stopwatchMode && secondsRemaining < 60
         ? 'text-amber-500 dark:text-amber-400'
         : 'text-gray-400 dark:text-gray-500'
 
@@ -426,7 +474,10 @@ export default function UnitTest({ courseSlug, unitId, questions: rawQuestions, 
         <div className="flex items-center gap-4">
           {timedMode && (
             <span className={`text-sm font-medium tabular-nums ${timerColor}`}>
-              ⏱ {formatTime(secondsRemaining)} remaining
+              ⏱{' '}
+              {stopwatchMode
+                ? formatTime(elapsedSeconds ?? 0)
+                : `${formatTime(secondsRemaining)} remaining`}
             </span>
           )}
           <span className="text-sm text-gray-400 dark:text-gray-500 tabular-nums">

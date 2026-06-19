@@ -3,6 +3,7 @@ export interface TimedBest {
   score: number
   total: number
   date: string
+  mode: 'countdown' | 'stopwatch'
 }
 
 function safeGet<T>(key: string): T | null {
@@ -22,8 +23,12 @@ function safeSet(key: string, value: unknown): void {
   } catch { /* quota exceeded */ }
 }
 
-export function getUnitBest(courseSlug: string, unitId: string): TimedBest | null {
-  return safeGet<TimedBest>(`timedBest:unit:${courseSlug}:${unitId}`)
+export function getUnitBest(
+  courseSlug: string,
+  unitId: string,
+  mode: 'countdown' | 'stopwatch',
+): TimedBest | null {
+  return safeGet<TimedBest>(`timedBest:unit:${mode}:${courseSlug}:${unitId}`)
 }
 
 export function saveUnitBest(
@@ -32,15 +37,19 @@ export function saveUnitBest(
   timeSeconds: number,
   score: number,
   total: number,
+  mode: 'countdown' | 'stopwatch',
 ): void {
-  const key = `timedBest:unit:${courseSlug}:${unitId}`
+  const key = `timedBest:unit:${mode}:${courseSlug}:${unitId}`
   const existing = safeGet<TimedBest>(key)
   if (existing && existing.timeSeconds <= timeSeconds) return
-  safeSet(key, { timeSeconds, score, total, date: new Date().toISOString() } satisfies TimedBest)
+  safeSet(key, { timeSeconds, score, total, date: new Date().toISOString(), mode } satisfies TimedBest)
 }
 
-export function getCourseBest(courseSlug: string): TimedBest | null {
-  return safeGet<TimedBest>(`timedBest:course:${courseSlug}`)
+export function getCourseBest(
+  courseSlug: string,
+  mode: 'countdown' | 'stopwatch',
+): TimedBest | null {
+  return safeGet<TimedBest>(`timedBest:course:${mode}:${courseSlug}`)
 }
 
 export function saveCourseBest(
@@ -48,11 +57,12 @@ export function saveCourseBest(
   timeSeconds: number,
   score: number,
   total: number,
+  mode: 'countdown' | 'stopwatch',
 ): void {
-  const key = `timedBest:course:${courseSlug}`
+  const key = `timedBest:course:${mode}:${courseSlug}`
   const existing = safeGet<TimedBest>(key)
   if (existing && existing.timeSeconds <= timeSeconds) return
-  safeSet(key, { timeSeconds, score, total, date: new Date().toISOString() } satisfies TimedBest)
+  safeSet(key, { timeSeconds, score, total, date: new Date().toISOString(), mode } satisfies TimedBest)
 }
 
 export function formatTime(seconds: number): string {

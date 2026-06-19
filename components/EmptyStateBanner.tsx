@@ -36,7 +36,7 @@ export default function EmptyStateBanner({ allTopicData }: Props) {
       <p className="text-sm text-blue-800">
         New here? Start with{' '}
         <Link
-          href="/courses/accounting-101"
+          href="/courses/acc-210"
           className="font-semibold underline underline-offset-2 hover:text-blue-600"
         >
           ACC 210

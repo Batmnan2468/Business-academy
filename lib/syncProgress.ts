@@ -70,10 +70,27 @@ export function syncToDatabase(type: string, data: Record<string, unknown>): voi
   }
 }
 
+function migrateAccountingSlug(): void {
+  if (typeof window === 'undefined') return
+  if (localStorage.getItem('slugMigrated:accounting')) return
+  const keys = Object.keys(localStorage)
+  for (const key of keys) {
+    if (key.includes('accounting-101')) {
+      const newKey = key.replace('accounting-101', 'acc-210')
+      const value = localStorage.getItem(key)
+      if (value !== null) {
+        localStorage.setItem(newKey, value)
+      }
+    }
+  }
+  localStorage.setItem('slugMigrated:accounting', 'true')
+}
+
 // Call once on mount when the user is authenticated.
 // Overwrites localStorage with the authoritative database values.
 export async function hydrateFromDatabase(): Promise<void> {
   if (typeof window === 'undefined') return
+  migrateAccountingSlug()
   try {
     const res = await fetch('/api/progress')
     if (!res.ok) return
