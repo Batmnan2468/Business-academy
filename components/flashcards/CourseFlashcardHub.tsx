@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import type { Course } from '@/types'
 import { buildCourseCards, buildCourseCardsForUnit } from '@/lib/courseFlashcards'
-import type { CourseCard } from '@/lib/courseFlashcards'
+import type { CourseCard, TermCard } from '@/lib/courseFlashcards'
 import {
   getCustomCards,
   getDeckCounter,
@@ -18,6 +18,7 @@ import type { SessionStats, AnyCard } from './FlashcardSession'
 interface Props {
   course: Course
   courseSlug: string
+  termCards: TermCard[]
 }
 
 interface ActiveSession {
@@ -25,7 +26,7 @@ interface ActiveSession {
   deckId: string
 }
 
-export default function CourseFlashcardHub({ course, courseSlug }: Props) {
+export default function CourseFlashcardHub({ course, courseSlug, termCards }: Props) {
   const [activeSession, setActiveSession] = useState<ActiveSession | null>(null)
   const [createOpen, setCreateOpen] = useState(false)
   const [customCount, setCustomCount] = useState(0)
@@ -34,7 +35,8 @@ export default function CourseFlashcardHub({ course, courseSlug }: Props) {
   const [unitMastered, setUnitMastered] = useState<Record<string, number>>({})
   const [lastStats, setLastStats] = useState<SessionStats | null>(null)
 
-  const allCourseCards = useMemo(() => buildCourseCards(course), [course])
+  const conceptCards = useMemo(() => buildCourseCards(course), [course])
+  const allCourseCards = useMemo(() => [...conceptCards, ...termCards], [conceptCards, termCards])
 
   function refresh() {
     const customCards = getCustomCards()
@@ -104,7 +106,10 @@ export default function CourseFlashcardHub({ course, courseSlug }: Props) {
       <h1 className="text-2xl font-bold mb-1 text-gray-900 dark:text-white">
         {course.title}
       </h1>
-      <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-6">Flashcards</p>
+      <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-1">Flashcards</p>
+      <p className="text-xs text-gray-400 dark:text-gray-500 mb-6">
+        {conceptCards.length} concept card{conceptCards.length !== 1 ? 's' : ''} · {termCards.length} term card{termCards.length !== 1 ? 's' : ''}
+      </p>
 
       {/* Stats strip */}
       {hasCards && (
