@@ -282,12 +282,18 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
           </div>
 
           {!isCorrect && hasLearnContent && (
-            <Link
-              href={`/courses/${courseSlug}/learn/${topicSlug}`}
-              className="block mt-3 mb-4 text-sm text-blue-500 hover:underline"
-            >
-              📖 Review this topic in Learn Mode →
-            </Link>
+            <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+              <Link
+                href={`/courses/${courseSlug}/learn/${topicSlug}`}
+                className="inline-flex items-center gap-2 text-sm text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors"
+              >
+                <span>📖</span>
+                <span>Review this topic in Learn Mode →</span>
+              </Link>
+              <p className="text-xs text-gray-400 mt-1">
+                The learn content covers exactly what this question tests.
+              </p>
+            </div>
           )}
 
           <button
