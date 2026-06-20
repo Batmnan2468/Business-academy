@@ -1,0 +1,135 @@
+{
+  "topic": "Game Theory Basics",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two coffee shops choose whether to Advertise or Not Advertise. If both advertise, each earns 4. If one advertises while the other does not, the advertiser earns 8 and the non-advertiser earns 2. If neither advertises, each earns 6. For Shop A, what is the best response to each possible action by Shop B, and what does this imply?",
+      "choices": {
+        "A": "Advertise if B advertises and Advertise if B does not; Advertise is a dominant strategy for A.",
+        "B": "Do Not Advertise if B advertises and Advertise if B does not; A has no dominant strategy.",
+        "C": "Advertise if B advertises and Do Not Advertise if B does not; A has no dominant strategy.",
+        "D": "Do Not Advertise regardless of B's action; Not Advertise is dominant."
+      },
+      "correct": "A",
+      "explanation": "A is correct because if B advertises, A gets 4 from advertising versus 2 from not; if B does not advertise, A gets 8 from advertising versus 6 from not. B and C each reverse one best response. D ignores that advertising gives A a higher payoff in both cases."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A two-player simultaneous game has Player 1 strategies Up and Down and Player 2 strategies Left and Right. Payoffs are: (Up, Left) = (5, 3), (Up, Right) = (1, 4), (Down, Left) = (2, 2), (Down, Right) = (4, 1). Which statement correctly identifies Player 1's best responses and the relevant game-theory object being computed?",
+      "choices": {
+        "A": "Player 1's best response is Up to Left and Down to Right; this computes best responses from a normal-form payoff matrix.",
+        "B": "Player 1's best response is Left to Up and Right to Down; this computes strategies from an extensive-form tree.",
+        "C": "Player 1's best response is Up to both choices; this computes a dominant-strategy equilibrium.",
+        "D": "Player 1's best response is Down to both choices; this computes backward induction."
+      },
+      "correct": "A",
+      "explanation": "A is correct: against Left, Player 1 compares 5 versus 2 and chooses Up; against Right, Player 1 compares 1 versus 4 and chooses Down. B mixes Player 2's strategy labels into Player 1's choices and confuses normal form with extensive form. C incorrectly claims Up dominates. D incorrectly claims Down dominates and invokes a sequential-game method."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a normal-form game between two firms, Firm A's payoff from choosing High Output when Firm B chooses Low Output rises from 7 to 10 because of a new production technology. All other payoffs remain unchanged. What is the direct comparative-statics effect in game-theory terms?",
+      "choices": {
+        "A": "Firm A's strategy set expands because payoffs changed.",
+        "B": "Firm A's payoff function changes, which may change its best-response correspondence.",
+        "C": "Firm B is removed as a player because technology is not strategic.",
+        "D": "The game automatically becomes sequential rather than simultaneous."
+      },
+      "correct": "B",
+      "explanation": "B is correct. A change in technology changes payoffs, and best responses depend on payoff comparisons. A is wrong because the available strategies did not change. C is wrong because Firm B's actions still affect outcomes. D confuses payoff changes with timing changes."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A pricing game initially has two strategies for each firm: High Price and Low Price. A regulation adds a third legal strategy, Medium Price, for each firm, while payoffs for the original strategy pairs are unchanged. What changes in the formal description of the game?",
+      "choices": {
+        "A": "Only the payoff numbers change; the strategy sets are fixed by the players' identities.",
+        "B": "The strategy sets change, so the normal-form matrix gains rows and columns and the solution concept must be applied to the enlarged game.",
+        "C": "The game stops being strategic because there are more than two actions.",
+        "D": "The game must now be represented only in extensive form."
+      },
+      "correct": "B",
+      "explanation": "B is correct because adding Medium Price changes each firm's strategy set, expanding the normal-form representation. A reverses the change: payoffs for old cells are unchanged, but strategy sets expand. C is false; games can have many strategies. D is false; simultaneous games with multiple strategies can still be represented in normal form."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A 2-by-2 normal-form game is shown as a payoff matrix. Rows are Player 1's strategies and columns are Player 2's strategies. In each cell, the first number is Player 1's payoff and the second number is Player 2's payoff. To find Player 1's best response to Player 2 choosing Column R, what comparison should be made?",
+      "choices": {
+        "A": "Compare the first payoff numbers down Column R.",
+        "B": "Compare the second payoff numbers across Row R.",
+        "C": "Compare the sum of both players' payoffs in all four cells.",
+        "D": "Compare Player 1's payoffs only along the main diagonal."
+      },
+      "correct": "A",
+      "explanation": "A is correct because Player 2's choice fixes the column, and Player 1 chooses among rows by comparing Player 1's payoffs in that column. B uses Player 2's payoffs and an invalid row label. C computes joint surplus, not a best response. D arbitrarily restricts attention to diagonal cells."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "An extensive-form game tree begins with Entrant choosing Enter or Stay Out. If Entrant enters, Incumbent chooses Fight or Accommodate. Payoffs are written at terminal nodes. What feature of the diagram distinguishes this from a normal-form representation?",
+      "choices": {
+        "A": "The tree shows the order of moves and decision nodes, while normal form lists strategies and payoffs without explicitly drawing timing.",
+        "B": "The tree can represent only games with identical payoffs for both players.",
+        "C": "The tree eliminates the need to specify strategies.",
+        "D": "The tree shows only dominant strategies, while normal form shows all strategies."
+      },
+      "correct": "A",
+      "explanation": "A is correct because extensive form represents sequence, decision nodes, and terminal payoffs. B is false; extensive form can represent conflicting interests. C is wrong because strategies still matter: a complete contingent plan is required. D confuses representation with solution concepts."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does game theory require specifying players, strategies, and payoffs before applying a solution concept such as Nash equilibrium?",
+      "choices": {
+        "A": "Because the solution concept is a substitute for knowing what choices are available.",
+        "B": "Because strategic predictions depend on who chooses, what they can choose, and how each outcome is valued.",
+        "C": "Because payoffs are always monetary profits and must be converted to dollars first.",
+        "D": "Because every game must have exactly two players and two strategies."
+      },
+      "correct": "B",
+      "explanation": "B is correct because a game is defined by players, strategy sets, and payoff functions; solution concepts operate on that structure. A is backwards: solution concepts require the game to be specified. C is too narrow because payoffs may represent utility, profit, votes, or other objectives. D imposes a false restriction."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two airlines simultaneously decide whether to cut fares on the Raleigh-to-New York route. Each airline's profit depends both on its own fare and the rival's fare. Which framework should be used first to model this situation?",
+      "choices": {
+        "A": "A single-agent utility maximization problem with one budget constraint.",
+        "B": "A normal-form game with airlines as players, fare choices as strategies, and profits as payoffs.",
+        "C": "A perfectly competitive supply curve because each airline is a price taker.",
+        "D": "A pure exchange Edgeworth box because the airlines trade endowments."
+      },
+      "correct": "B",
+      "explanation": "B is correct because the firms choose simultaneously and each payoff depends on both firms' choices. A ignores strategic interaction. C assumes price-taking rather than strategic pricing. D applies a consumer exchange model unrelated to airline fare competition."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a strategy from an action in game theory?",
+      "choices": {
+        "A": "A strategy is a complete contingent plan; an action is a move taken at a particular decision point.",
+        "B": "An action is a complete contingent plan; a strategy is the payoff from that plan.",
+        "C": "A strategy exists only in simultaneous games, while an action exists only in sequential games.",
+        "D": "A strategy is chosen by nature, while an action is chosen by a player."
+      },
+      "correct": "A",
+      "explanation": "A is correct. A strategy specifies what a player would do in every relevant contingency, while an action is a particular move. B confuses strategies with payoffs. C is false because strategies and actions can be discussed in both simultaneous and sequential games. D confuses player choices with chance moves."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A simultaneous game between two firms has no welfare or surplus calculation because payoffs are ordinal utility scores, not dollar profits. A new law removes one of Firm 2's strategies from the game. What type of question replaces welfare analysis here, and what is the correct effect?",
+      "choices": {
+        "A": "A Type 2 comparative-statics question replaces Type 7; removing a strategy changes Firm 2's strategy set and may change equilibrium predictions.",
+        "B": "A Type 7 welfare question still applies; removing a strategy always increases total surplus.",
+        "C": "A Type 1 constrained-optimization question applies; Firm 1 now maximizes subject to Firm 2's budget line.",
+        "D": "A Type 3 graph question applies; removing a strategy changes only the slope of an indifference curve."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Welfare analysis is not directly applicable because the topic concerns basic game structure with ordinal payoffs, so this question uses a second Type 2 comparative-statics item. Removing a strategy changes the game form and may change best responses and equilibria. B invents a welfare conclusion. C imports consumer optimization. D imports consumer graph language."
+    }
+  ]
+}

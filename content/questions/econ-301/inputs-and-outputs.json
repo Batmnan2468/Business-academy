@@ -1,0 +1,135 @@
+{
+  "topic": "Inputs and Outputs",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A food truck produces meals with Q = 20L when its grill capacity is fixed at K = 1 in the short run. Each worker-hour costs $15. If the truck must produce 300 meals, how many worker-hours should it hire and what is the short-run interpretation?",
+      "choices": {
+        "A": "L = 20; fixed capital means labor cannot affect output.",
+        "B": "L = 15; labor is the variable input adjusted to meet output while capital is fixed.",
+        "C": "L = 300; each meal requires one worker-hour.",
+        "D": "L = 1; the fixed grill determines all output."
+      },
+      "correct": "B",
+      "explanation": "With Q=20L, producing 300 meals requires L=15. The short-run interpretation is that labor varies while grill capacity is fixed. A miscalculates and denies labor's role. C ignores labor productivity. D confuses fixed input with sole determinant of output."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A manufacturer uses Q = min{4L, 8M}, where L is labor-hours and M is material units. Labor costs $10 per hour and materials cost $6 per unit. To produce Q = 80 units at minimum cost, what input bundle is required and why?",
+      "choices": {
+        "A": "L = 20, M = 10 because fixed-proportions technology requires 4L = 8M = 80.",
+        "B": "L = 10, M = 20 because cheaper materials should be used more intensively.",
+        "C": "L = 20, M = 20 because equal input quantities avoid bottlenecks.",
+        "D": "L = 0, M = 10 because materials alone can produce output."
+      },
+      "correct": "A",
+      "explanation": "For Q=80, both 4L and 8M must be at least 80, so L=20 and M=10 minimize cost. B reverses the input requirements. C overuses materials. D ignores that output is limited by the minimum of both terms."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A call center has output Q = 12L when office space is fixed. If labor increases from L = 30 to L = 35, what happens to output and why?",
+      "choices": {
+        "A": "Output rises by 60 calls because labor is variable and has marginal product 12.",
+        "B": "Output rises by 5 calls because each extra worker-hour adds one call.",
+        "C": "Output is unchanged because office space is fixed.",
+        "D": "Output falls because fixed space causes congestion immediately."
+      },
+      "correct": "A",
+      "explanation": "The change in output is 12(35-30)=60. A fixed input does not mean output is fixed; it means only that input cannot be adjusted. B ignores the marginal product. C confuses fixed capital with fixed output. D assumes congestion not present in the function."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm has Q = 5L + 2R, where R is raw materials. If a supply disruption reduces R from 40 to 25 while L remains 10, what is the output change and mechanism?",
+      "choices": {
+        "A": "Output falls from 130 to 100 because raw materials are productive variable inputs.",
+        "B": "Output falls from 250 to 125 because raw materials are cut nearly in half.",
+        "C": "Output remains 130 because labor is unchanged.",
+        "D": "Output rises because scarce materials are used more efficiently."
+      },
+      "correct": "A",
+      "explanation": "Initial Q=5(10)+2(40)=130; new Q=5(10)+2(25)=100. The mechanism is reduced availability of a productive input. B uses the wrong formula. C ignores materials. D invents efficiency gains not in the model."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph with labor L on the horizontal axis and output Q on the vertical axis, the short-run production function Q = 10sqrt(L) with capital fixed has what shape?",
+      "choices": {
+        "A": "Upward sloping and getting flatter because output rises with labor but marginal product diminishes.",
+        "B": "Downward sloping because extra labor reduces output.",
+        "C": "A vertical line because capital is fixed.",
+        "D": "A straight line through the origin because each worker adds the same output."
+      },
+      "correct": "A",
+      "explanation": "Q=10sqrt(L) is increasing and concave, so the graph rises but flattens. B contradicts positive marginal product. C confuses fixed capital with the labor-output graph. D describes constant marginal product."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A production table shows output for different amounts of labor while capital is held at K = 5 machines. If output rises from 100 to 135 to 160 as labor rises from 4 to 5 to 6, what graphical feature is shown?",
+      "choices": {
+        "A": "Increasing marginal product because total output rises.",
+        "B": "Diminishing marginal product because the slope of the total product curve falls from 35 to 25.",
+        "C": "Constant returns to scale because labor rises by equal amounts.",
+        "D": "Fixed-proportions production because capital is held fixed."
+      },
+      "correct": "B",
+      "explanation": "The slope of the total product curve equals marginal product. It falls from 35 to 25, showing diminishing marginal product. A confuses rising total output with rising marginal product. C is about scaling all inputs, not changing labor alone. D does not follow from holding capital fixed."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "For a local landscaping company, which input is most clearly variable in the short run over a single week?",
+      "choices": {
+        "A": "The number of rented mower-hours used this week.",
+        "B": "The size of the company's permanent storage facility.",
+        "C": "The long-term lease on its office building.",
+        "D": "The owner’s accumulated industry experience."
+      },
+      "correct": "A",
+      "explanation": "Rented mower-hours can be adjusted within the week, making them variable. B and C are fixed over that horizon. D is not a standard flow input choice in the weekly production function."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A university dining hall must serve more students tonight. Its kitchen size and ovens cannot be changed until next semester, but it can schedule more workers and buy more ingredients today. Which framework best describes tonight's production decision?",
+      "choices": {
+        "A": "Long-run production with all inputs variable.",
+        "B": "Short-run production with kitchen capital fixed and labor/materials variable.",
+        "C": "Consumer utility maximization over meals and study time.",
+        "D": "Perfect-substitutes production between ovens and ingredients."
+      },
+      "correct": "B",
+      "explanation": "The kitchen and ovens are fixed in the short run, while labor and materials can vary. A contradicts the fixed kitchen. C is a consumer model. D imposes a technology not described in the scenario."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a fixed input from a variable input for a brewery?",
+      "choices": {
+        "A": "A fixed input has zero marginal product; a variable input has positive marginal product.",
+        "B": "A fixed input cannot be changed over the time horizon considered; a variable input can be changed over that horizon.",
+        "C": "A fixed input is always capital; a variable input is always labor.",
+        "D": "A fixed input is technologically unnecessary; a variable input is technologically necessary."
+      },
+      "correct": "B",
+      "explanation": "Fixed versus variable depends on adjustability over the relevant time horizon. A is false because fixed inputs can be productive. C is too rigid; capital can be variable in the long run. D confuses fixity with usefulness."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A warehouse has Q = 30min{L, F}, where F is forklift units fixed at 8 per day. If labor rises from 6 to 10, what happens to daily output? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "Output rises from 180 to 240 and then stops increasing after L reaches 8 because forklifts become the binding input.",
+        "B": "Output rises from 180 to 300 because labor alone determines output.",
+        "C": "Output remains 180 because forklifts are fixed.",
+        "D": "Output falls because labor exceeds forklifts."
+      },
+      "correct": "A",
+      "explanation": "At L=6, Q=30min(6,8)=180. At L=10, Q=30min(10,8)=240. The mechanism is a bottleneck: once labor exceeds fixed forklifts, forklifts limit output. B ignores the minimum function. C ignores initial unused forklift capacity. D invents negative productivity."
+    }
+  ]
+}

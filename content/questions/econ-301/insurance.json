@@ -1,0 +1,135 @@
+{
+  "topic": "Insurance",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Liam has initial wealth $100, faces a 0.25 probability of a $40 loss, and has u(w)=ln(w). Insurance pays $1 in the loss state for each unit bought. The premium is actuarially fair at $0.25 per dollar of coverage. How much coverage should Liam buy, and what does it mean?",
+      "choices": {
+        "A": "$0, because actuarially fair insurance has zero expected profit.",
+        "B": "$20, because he should insure half the possible loss.",
+        "C": "$40, because actuarially fair insurance lets him fully smooth wealth across states.",
+        "D": "$60, because he should buy enough coverage to make loss-state wealth exceed no-loss wealth."
+      },
+      "correct": "C",
+      "explanation": "With fair insurance and risk aversion, full insurance is optimal. Buying 40 gives no-loss wealth 100-0.25(40)=90 and loss-state wealth 100-40+40-0.25(40)=90. A confuses insurer profit with consumer value. B is arbitrary partial insurance. D overinsures and creates unequal wealth."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Emma has wealth $200 and faces a 0.5 probability of losing $80. She has u(w)=sqrt(w). Insurance costs $0.50 per dollar of coverage and pays only in the loss state. What coverage maximizes expected utility?",
+      "choices": {
+        "A": "$80, because actuarially fair insurance leads a risk-averse person to full insurance.",
+        "B": "$40, because she should split the loss between herself and the insurer.",
+        "C": "$0, because fair insurance has no expected monetary gain.",
+        "D": "$160, because she should buy twice the loss to offset risk aversion."
+      },
+      "correct": "A",
+      "explanation": "The premium equals the loss probability, so insurance is actuarially fair. Full coverage equalizes final wealth: 200-40=160 in no-loss and 200-80+80-40=160 in loss. B is underinsurance. C ignores risk aversion. D overinsures."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A risk-averse homeowner faces a 0.2 probability of a $100 loss. Insurance price rises from $0.20 to $0.30 per dollar of coverage. What happens to optimal coverage, and what is the mechanism?",
+      "choices": {
+        "A": "Coverage rises because insurance companies now charge more, making insurance more valuable.",
+        "B": "Coverage falls below full insurance because coverage is now less than actuarially fair, so the price of transferring wealth into the loss state has increased.",
+        "C": "Coverage remains full because risk aversion always implies full insurance.",
+        "D": "Coverage falls to zero for every risk-averse consumer."
+      },
+      "correct": "B",
+      "explanation": "When insurance is loaded above the fair premium, the consumer trades off risk smoothing against the higher cost; optimal coverage is generally partial. A reverses the price effect. C is true only for actuarially fair insurance. D is too extreme."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Sophia faces a 0.1 probability of a $50 loss and can buy actuarially fair insurance. If the loss probability rises to 0.2 and the premium rises actuarially fairly from $0.10 to $0.20 per dollar, what happens to the optimal coverage amount?",
+      "choices": {
+        "A": "It remains full coverage of $50 because insurance is still actuarially fair and full smoothing is optimal.",
+        "B": "It falls to $25 because the probability doubled.",
+        "C": "It rises to $100 because expected loss doubled.",
+        "D": "It becomes zero because higher probability makes insurance too expensive."
+      },
+      "correct": "A",
+      "explanation": "With actuarially fair insurance, a risk-averse consumer fully insures the loss regardless of the probability, as long as the premium adjusts fairly. B and C confuse expected loss with coverage amount. D ignores that the price remains fair."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a state-contingent graph with no-loss wealth on the horizontal axis and loss-state wealth on the vertical axis, what does actuarially fair insurance do to the budget line for a person with loss probability 0.25?",
+      "choices": {
+        "A": "It creates a budget line whose slope reflects the odds ratio, allowing the consumer to move toward the 45-degree full-insurance line.",
+        "B": "It creates a vertical budget line because only loss-state wealth can change.",
+        "C": "It creates an upward-sloping budget line because more insurance raises wealth in both states.",
+        "D": "It makes the budget line tangent to every indifference curve."
+      },
+      "correct": "A",
+      "explanation": "Fair insurance lets the consumer trade no-loss wealth for loss-state wealth at actuarially fair odds, moving toward equal state wealth. B ignores the premium paid in both states. C ignores the tradeoff. D is impossible."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A homeowner's endowment point has wealth $200 if no fire occurs and $100 if a fire occurs. On a contingent wealth diagram, where is the full-insurance point?",
+      "choices": {
+        "A": "At the original endowment point because full insurance preserves state differences.",
+        "B": "On the 45-degree line where no-fire wealth equals fire-state wealth.",
+        "C": "Above the 45-degree line because fire-state wealth must exceed no-fire wealth.",
+        "D": "On the horizontal intercept because no-fire wealth is spent entirely on premiums."
+      },
+      "correct": "B",
+      "explanation": "Full insurance equalizes wealth across states, so it lies on the 45-degree line. A describes no insurance. C describes overinsurance. D misunderstands premiums and intercepts."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is full insurance optimal for a risk-averse consumer when insurance is actuarially fair?",
+      "choices": {
+        "A": "Because fair insurance increases expected wealth.",
+        "B": "Because it transfers wealth from high-wealth states to low-wealth states without lowering expected wealth, and concavity rewards smoothing.",
+        "C": "Because risk-averse consumers maximize expected value rather than expected utility.",
+        "D": "Because insurance companies subsidize all losses."
+      },
+      "correct": "B",
+      "explanation": "Fair insurance preserves expected wealth while reducing dispersion, which raises expected utility for concave utility. A is false: expected wealth is unchanged. C is risk neutrality. D is not implied by actuarially fair pricing."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A bike courier has a 5% chance of a $1,000 theft loss. A policy costs $50 and fully reimburses theft. The courier is risk-averse. Which model and conclusion fit best?",
+      "choices": {
+        "A": "Insurance under uncertainty; the policy is actuarially fair, so full insurance is optimal if coverage exactly equals the loss.",
+        "B": "Monopoly pricing; the courier should buy only if the insurer has zero marginal cost.",
+        "C": "Adverse selection; the courier should never buy insurance because only high-risk people insure.",
+        "D": "Intertemporal choice; the courier should compare today's premium with next year's income growth."
+      },
+      "correct": "A",
+      "explanation": "Expected loss is 0.05(1000)=50, matching the premium, so the policy is actuarially fair. B uses the wrong framework. C identifies a possible market problem but not the individual's coverage decision. D treats uncertainty as time preference."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes actuarially fair insurance from loaded insurance?",
+      "choices": {
+        "A": "Actuarially fair insurance has premium equal to expected payout; loaded insurance charges more than expected payout.",
+        "B": "Actuarially fair insurance is free; loaded insurance has a positive price.",
+        "C": "Actuarially fair insurance covers only small losses; loaded insurance covers large losses.",
+        "D": "Actuarially fair insurance is bought after the loss; loaded insurance is bought before the loss."
+      },
+      "correct": "A",
+      "explanation": "Fair pricing means premium equals expected payout; a loading raises price above expected payout. B is false because fair insurance usually has a positive premium. C confuses pricing with loss size. D misunderstands insurance timing."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Noah has u(w)=sqrt(w), wealth $100, and faces a 0.5 probability of losing $64. Without insurance, wealth is $100 or $36. Fair full insurance gives wealth $68 for sure. What is the welfare gain measured in certainty-equivalent dollars?",
+      "choices": {
+        "A": "$0, because fair insurance does not change expected wealth.",
+        "B": "$4, because the no-insurance CE is $64 and insured wealth is $68.",
+        "C": "$32, because insurance removes half of the $64 loss.",
+        "D": "$68, because full insurance guarantees $68."
+      },
+      "correct": "B",
+      "explanation": "Without insurance, EU=0.5(10)+0.5(6)=8, so CE=64. Full insurance gives CE=68. The CE welfare gain is 4. A uses expected wealth instead of utility. C measures expected loss reduction incorrectly. D gives the insured wealth level, not the gain."
+    }
+  ]
+}

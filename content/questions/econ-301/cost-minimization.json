@@ -1,0 +1,135 @@
+{
+  "topic": "Cost Minimization",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm produces widgets with q=K^{1/2}L^{1/2}. It must produce q=20, with wage w=4 and rental rate r=1. What cost-minimizing input bundle should it choose, and why?",
+      "choices": {
+        "A": "K=20, L=20 because Cobb-Douglas always uses equal inputs.",
+        "B": "K=40, L=10 because TRS equals w/r and KL=400.",
+        "C": "K=10, L=40 because labor is more expensive, so use more labor.",
+        "D": "K=80, L=5 because capital is cheaper, so use only capital."
+      },
+      "correct": "B",
+      "explanation": "TRS=MP_L/MP_K=K/L. Set K/L=w/r=4 and KL=400, giving L=10 and K=40. A ignores prices. C reverses substitution. D violates the tangency condition."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has production function q=min{K,2L}. It must produce 30 units. Input prices are r=6 for capital and w=3 for labor. What is the minimum-cost bundle?",
+      "choices": {
+        "A": "K=30, L=15, because inputs must be used in the fixed proportion K=2L.",
+        "B": "K=15, L=30, because labor is cheaper than capital.",
+        "C": "K=30, L=30, because Leontief production requires equal inputs.",
+        "D": "K=0, L=15, because labor alone can produce output."
+      },
+      "correct": "A",
+      "explanation": "For q=min{K,2L}=30, need K=30 and 2L=30, so L=15. A is correct. B reverses the fixed proportion. C confuses min{K,L} with min{K,2L}. D ignores the need for capital."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For q=K^{1/2}L^{1/2}, target q=24, and initial prices w=2, r=2, the wage rises to w=8 while r stays 2. What happens to the cost-minimizing capital-labor ratio, and why?",
+      "choices": {
+        "A": "K/L falls from 1 to 1/4 because labor became more expensive.",
+        "B": "K/L rises from 1 to 4 because the firm substitutes toward relatively cheaper capital.",
+        "C": "K/L stays at 1 because output is fixed.",
+        "D": "K/L rises from 1 to 16 because the wage quadruples and output is 24."
+      },
+      "correct": "B",
+      "explanation": "TRS=K/L=w/r. Initially K/L=1; after the wage increase K/L=4. The mechanism is substitution away from labor. A reverses the ratio. C ignores relative prices. D squares the price change incorrectly."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm with production q=K^{1/3}L^{2/3} minimizes cost for a fixed output. If the rental rate r rises while wage w is unchanged, what happens to the cost-minimizing input mix?",
+      "choices": {
+        "A": "The firm uses relatively less capital because the isocost slope changes and capital becomes more expensive.",
+        "B": "The firm uses relatively more capital because capital has diminishing marginal product.",
+        "C": "The input mix is unchanged because the production function is unchanged.",
+        "D": "Both inputs fall because target output is fixed."
+      },
+      "correct": "A",
+      "explanation": "Higher r lowers w/r and makes capital relatively expensive, so the tangency requires less K relative to L. B misuses diminishing marginal product. C ignores input prices. D cannot hold output fixed unless productivity changes."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a graph with labor L on the horizontal axis and capital K on the vertical axis, a target isoquant is convex to the origin. The isocost line has slope -w/r. What graphical condition identifies the interior cost-minimizing point?",
+      "choices": {
+        "A": "The lowest isocost line tangent to the isoquant, where the isoquant slope equals -w/r.",
+        "B": "The highest isocost line tangent to the isoquant, where output is maximized.",
+        "C": "The point where the isoquant crosses the K-axis intercept.",
+        "D": "The point where the isocost line is steepest."
+      },
+      "correct": "A",
+      "explanation": "Cost minimization finds the lowest-cost line reaching the target isoquant. B describes output maximization with a budget. C ignores need for both inputs under smooth technology. D slope is fixed by prices, not chosen."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A cost-minimization diagram shows the firm initially tangent to isoquant q=100. Then the wage rises, making the isocost line steeper in absolute value with L on the horizontal axis. What movement should appear on the same isoquant?",
+      "choices": {
+        "A": "A movement down and right toward more labor and less capital.",
+        "B": "A movement up and left toward more capital and less labor.",
+        "C": "A parallel outward shift to a higher isoquant.",
+        "D": "No movement because the isoquant has not changed."
+      },
+      "correct": "B",
+      "explanation": "Higher w makes labor relatively costly, so the firm substitutes toward capital along the same target isoquant. A reverses substitution. C changes output rather than holding it fixed. D ignores price-induced tangency changes."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "At a candidate bundle for producing 50 chairs, MP_L=12, MP_K=6, wage w=6, and rental rate r=6. What does this imply economically?",
+      "choices": {
+        "A": "The firm is cost minimizing because input prices are equal.",
+        "B": "The firm should use more labor and less capital because labor gives more marginal product per dollar.",
+        "C": "The firm should use more capital and less labor because capital has lower marginal product.",
+        "D": "The firm should increase both inputs because output is too low."
+      },
+      "correct": "B",
+      "explanation": "MP_L/w=2 and MP_K/r=1, so labor yields more output per dollar. Cost can fall by substituting labor for capital while holding output fixed. A ignores marginal products. C reverses the adjustment. D ignores the fixed-output problem."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A furniture maker must fill a fixed order of 200 tables. It can combine machine-hours and labor-hours, and the hourly wage has doubled while machine rental is unchanged. Which framework should it use to choose inputs?",
+      "choices": {
+        "A": "Profit maximization by choosing output where p=MC.",
+        "B": "Utility maximization with a budget line.",
+        "C": "Cost minimization for a target output, using the new input price ratio.",
+        "D": "Shutdown analysis using price and average variable cost."
+      },
+      "correct": "C",
+      "explanation": "The order fixes output, so the firm minimizes cost subject to producing 200 tables. A chooses output, not inputs for fixed output. B is the consumer analog. D concerns whether to produce at all."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes cost minimization from profit maximization?",
+      "choices": {
+        "A": "Cost minimization chooses output; profit maximization chooses only input prices.",
+        "B": "Cost minimization holds output fixed and chooses inputs; profit maximization chooses output by comparing marginal revenue and marginal cost.",
+        "C": "Cost minimization applies only in the long run; profit maximization applies only in the short run.",
+        "D": "Cost minimization ignores input prices; profit maximization ignores production technology."
+      },
+      "correct": "B",
+      "explanation": "Cost minimization derives least-cost input choices for a target output; profit maximization chooses scale. A reverses roles. C is false in both horizons. D falsely removes key ingredients from both problems."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has q=K^{1/2}L^{1/2}, w=4, r=1, and target q=10. If the target output doubles to 20 with prices fixed, what happens to the optimal input ratio K/L?",
+      "choices": {
+        "A": "It doubles because output doubles.",
+        "B": "It falls because larger scale requires more labor.",
+        "C": "It remains 4 because relative input prices are unchanged.",
+        "D": "It rises to 16 because both inputs must rise."
+      },
+      "correct": "C",
+      "explanation": "TRS=K/L=w/r=4 regardless of target output. Output changes scale, not the price-determined ratio for Cobb-Douglas. A confuses levels with ratios. B invents labor bias. D squares the ratio without reason."
+    }
+  ]
+}

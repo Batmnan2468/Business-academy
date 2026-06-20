@@ -1,0 +1,135 @@
+{
+  "topic": "Borrowing and Lending",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Sofia has m1 = 150 and m2 = 66. The interest rate is r = 0.10. Her utility is U(c1,c2)=ln(c1)+ln(c2). What is her optimal choice, and is she a borrower or lender?",
+      "choices": {
+        "A": "c1 = 105, c2 = 115.5; she is a lender because c1 < m1.",
+        "B": "c1 = 150, c2 = 66; she neither borrows nor lends because income is already feasible.",
+        "C": "c1 = 120, c2 = 120; she is a lender because she smooths consumption exactly.",
+        "D": "c1 = 115.5, c2 = 105; she is a borrower because future consumption is lower."
+      },
+      "correct": "A",
+      "explanation": "Present wealth is 150 + 66/1.1 = 210. Log utility implies c2/c1 = 1.1, so c1 = 105 and c2 = 115.5. Since c1 < 150, Sofia lends 45. B confuses feasibility with optimality, C equalizes physical consumption instead of marginal conditions, and D reverses the optimal ratio and borrowing test."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Trevor has m1 = 80 and m2 = 120. The interest rate is r = 0.20. His utility is U(c1,c2)=c1c2. What is his optimal bundle and period-1 financial position?",
+      "choices": {
+        "A": "c1 = 80, c2 = 120; he does not trade because the endowment is on the budget line.",
+        "B": "c1 = 90, c2 = 108; he borrows 10 because c1 exceeds m1.",
+        "C": "c1 = 100, c2 = 100; he borrows 20 because Cobb-Douglas equalizes quantities.",
+        "D": "c1 = 90, c2 = 120; he borrows 10 and leaves period-2 income unchanged."
+      },
+      "correct": "B",
+      "explanation": "Present wealth is 80 + 120/1.2 = 180. For U = c1c2, c2 = 1.2c1 and c1 + c2/1.2 = 2c1 = 180, so c1 = 90 and c2 = 108. Trevor borrows 10. A treats the endowment as optimal, C ignores the relative price, and D violates the budget constraint."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "At r = 0.10, Nina chooses c1 = 130 when m1 = 100, so she is a borrower. If r rises to 0.25 and she remains a borrower, what is the direct substitution effect on her desired current consumption?",
+      "choices": {
+        "A": "It increases c1 because borrowing allows more present consumption.",
+        "B": "It has no effect because borrowers only care about current income.",
+        "C": "It decreases c1 because present consumption has become more expensive in terms of future consumption.",
+        "D": "It increases c1 because future consumption is now discounted more heavily."
+      },
+      "correct": "C",
+      "explanation": "A higher interest rate raises the price of c1 in terms of c2, so the substitution effect pushes the borrower away from present consumption. A confuses borrowing availability with borrowing cost, B ignores relative prices, and D describes a present-value calculation but not the substitution mechanism."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Carlos has m1 = 200 and m2 = 55 and chooses c1 = 150 at r = 0.10, making him a lender. If r rises and he remains a lender, which mechanism tends to increase his future consumption?",
+      "choices": {
+        "A": "The interest income effect: each dollar saved earns more future consumption, making the lender wealthier in future-value terms.",
+        "B": "The default effect: higher rates eliminate repayment obligations.",
+        "C": "The insurance effect: higher rates reduce uncertainty across periods.",
+        "D": "The rationing effect: higher rates prevent saving and force higher c2."
+      },
+      "correct": "A",
+      "explanation": "A lender benefits from a higher return on saving, so future consumption possibilities expand. B is unrelated to the model, C confuses intertemporal choice with uncertainty, and D wrongly says higher rates prevent saving."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "In a two-period diagram, Dana's endowment is (100,100). Her chosen bundle is visually to the right of the endowment point on the same budget line. What does this imply?",
+      "choices": {
+        "A": "She is lending because she consumes more in period 1.",
+        "B": "She is borrowing because c1 exceeds m1, and repayment reduces feasible c2 relative to what she could have had by not borrowing.",
+        "C": "She is neither borrowing nor lending because every point on the budget line has the same wealth.",
+        "D": "She is saving because moving right on the graph always means moving toward higher utility."
+      },
+      "correct": "B",
+      "explanation": "A point to the right of the endowment has c1 > m1, so Dana borrows against future resources. A reverses borrowing and lending, C confuses equal wealth with no trade, and D interprets graph direction as saving rather than comparing c1 to m1."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A budget line with slope -1.2 passes through endowment (80,160). Marcus chooses a point to the left of the endowment. Which graph-based interpretation is correct?",
+      "choices": {
+        "A": "Marcus is lending; the horizontal distance from 80 to his chosen c1 is saving, and the slope shows each saved unit becomes 1.2 units of future consumption.",
+        "B": "Marcus is borrowing; the horizontal distance measures the amount borrowed.",
+        "C": "Marcus is lending only if his chosen c2 is below 160.",
+        "D": "Marcus is neither borrowing nor lending because his bundle is on the same line as the endowment."
+      },
+      "correct": "A",
+      "explanation": "Choosing left of the endowment means c1 < m1, so the difference is saving. The slope -1.2 shows the future payoff per unit saved. B reverses left/right, C misstates the c2 implication, and D ignores movement away from the endowment along the budget line."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can two students with the same endowment (m1,m2) and interest rate choose different borrowing or lending positions?",
+      "choices": {
+        "A": "Because the intertemporal budget line has different slopes for different consumers.",
+        "B": "Because preferences determine the tangency point, so a more impatient student may borrow while a more patient student may lend.",
+        "C": "Because only income determines borrowing or lending, not preferences.",
+        "D": "Because the lender must have higher lifetime wealth than the borrower."
+      },
+      "correct": "B",
+      "explanation": "The same budget constraint can support different optimal choices because indifference curves differ. A wrongly changes the market interest rate across consumers, C ignores preferences, and D confuses financial position with lifetime wealth."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A medical student has $20,000 income this year and expects $90,000 income next year. At a 10% interest rate, she chooses c1 = $35,000 this year. Which model classification and calculation are correct?",
+      "choices": {
+        "A": "She is a lender because her future income is higher than present income.",
+        "B": "She is a borrower because c1 exceeds m1 by $15,000.",
+        "C": "She is neither borrower nor lender because total income is positive in both periods.",
+        "D": "She is a lender because c1 is less than next year's income."
+      },
+      "correct": "B",
+      "explanation": "Borrowing or lending is determined by comparing c1 with m1, not by comparing incomes across periods. Since 35,000 > 20,000, she borrows 15,000. A and D compare the wrong quantities, and C ignores intertemporal trade."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a borrower from a person with low current income?",
+      "choices": {
+        "A": "A borrower has c1 > m1; low current income alone does not imply borrowing unless current consumption exceeds current income.",
+        "B": "A borrower always has m1 < m2, regardless of consumption.",
+        "C": "A borrower has c2 > m2 because borrowing raises future consumption.",
+        "D": "A borrower is anyone whose lifetime wealth is negative."
+      },
+      "correct": "A",
+      "explanation": "Borrowing is defined by current consumption exceeding current income. B confuses income timing with financial choice, C gets the repayment direction wrong, and D invents a negative-wealth requirement."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "At r = 0.10, Blake's endowment is (100,110). He chooses (120,88). Relative to consuming the endowment, how large is the loan in period 1 and how much future consumption does repayment cost?",
+      "choices": {
+        "A": "Loan = 20; future repayment cost = 20 because dollars transfer one-for-one.",
+        "B": "Loan = 22; future repayment cost = 20 because the interest rate discounts the loan.",
+        "C": "Loan = 20; future repayment cost = 22 because each borrowed unit costs 1.1 future units.",
+        "D": "Loan = 10; future repayment cost = 11 because only the interest is counted."
+      },
+      "correct": "C",
+      "explanation": "Blake borrows c1 - m1 = 20. At r = 0.10, repayment costs 20(1.1) = 22 units of future consumption, reducing c2 from 110 to 88. A ignores interest, B reverses loan and repayment, and D counts only half the loan."
+    }
+  ]
+}

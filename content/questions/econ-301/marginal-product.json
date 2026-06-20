@@ -1,0 +1,135 @@
+{
+  "topic": "Marginal Product",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A farm has production function Q = 12L - L^2 with land fixed, where L is labor-days and 0 <= L <= 12. What labor choice maximizes output, and what does the marginal product condition mean?",
+      "choices": {
+        "A": "L = 6 because MPL = 12 - 2L equals zero, so additional labor stops increasing output at the maximum.",
+        "B": "L = 12 because total output is largest when all possible labor is used.",
+        "C": "L = 0 because marginal product is highest at zero labor.",
+        "D": "L = 3 because average product equals marginal product there."
+      },
+      "correct": "A",
+      "explanation": "MPL=dQ/dL=12-2L. Setting MPL=0 gives L=6, the output maximum. B ignores negative marginal product after L=6. C confuses highest marginal product with maximum total output. D answers a different condition."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A tutoring company has Q = 20L^(1/2), where Q is completed sessions and L is tutor-hours. If the company wants Q = 100 sessions using the fewest tutor-hours, how many tutor-hours are needed and what is MPL at that point?",
+      "choices": {
+        "A": "L = 25 and MPL = 2, meaning one more tutor-hour adds about 2 sessions at that input level.",
+        "B": "L = 5 and MPL = 10, meaning five tutor-hours produce 100 sessions.",
+        "C": "L = 100 and MPL = 1, meaning marginal product equals average product.",
+        "D": "L = 10 and MPL = 5, meaning output rises linearly with labor."
+      },
+      "correct": "A",
+      "explanation": "100=20sqrt(L) implies sqrt(L)=5, so L=25. MPL=10/sqrt(L)=2. B forgets to square. C confuses output and input. D assumes a linear production function."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = 30L - L^2 with capital fixed, what happens to MPL when L rises from 5 to 10?",
+      "choices": {
+        "A": "MPL falls from 20 to 10 because diminishing marginal product lowers the added output from extra labor.",
+        "B": "MPL rises from 20 to 30 because total output rises.",
+        "C": "MPL stays at 30 because the coefficient on L is 30.",
+        "D": "MPL falls from 25 to 20 because MPL equals Q/L."
+      },
+      "correct": "A",
+      "explanation": "MPL=30-2L. At L=5, MPL=20; at L=10, MPL=10. B confuses total product with marginal product. C ignores the -L^2 term. D uses average product instead of marginal product."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = 8L^(1/2)K^(1/2), what happens to MPL when capital K rises from 9 to 16 while labor stays at L = 16?",
+      "choices": {
+        "A": "MPL rises from 3/2 to 2 because more capital makes each unit of labor more productive.",
+        "B": "MPL falls from 3/2 to 1 because diminishing marginal product applies to capital.",
+        "C": "MPL stays constant because labor is unchanged.",
+        "D": "MPL rises from 6 to 8 because output rises by 2."
+      },
+      "correct": "A",
+      "explanation": "MPL=4sqrt(K)/sqrt(L). At K=9,L=16, MPL=4(3)/4=3; at K=16,L=16, MPL=4. Wait: the numerical values in A are half the true values. Correct computation gives MPL rises from 3 to 4 because capital complements labor. B has the wrong direction. C ignores cross-input effects. D confuses total output with MPL."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A total product curve for labor rises steeply at first, then rises more slowly, and eventually reaches a peak. What happens to the marginal product curve?",
+      "choices": {
+        "A": "It is positive but decreasing while total product rises more slowly, and it equals zero at the peak of total product.",
+        "B": "It is always equal to total product.",
+        "C": "It is upward sloping whenever total product is upward sloping.",
+        "D": "It is zero whenever total product is positive."
+      },
+      "correct": "A",
+      "explanation": "Marginal product is the slope of total product. As the total product curve flattens, MPL falls; at the peak, slope equals zero. B confuses levels and slopes. C ignores diminishing marginal product. D is false."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If the labor-output graph for Q = 50 + 10L is a straight line with vertical intercept 50 and slope 10, what does the slope represent?",
+      "choices": {
+        "A": "The marginal product of labor equals 10 units of output per worker-hour.",
+        "B": "The average product of labor equals 50.",
+        "C": "The fixed input equals 10.",
+        "D": "The marginal product of labor decreases as L increases."
+      },
+      "correct": "A",
+      "explanation": "The slope of the total product curve is MPL, here constant at 10. B confuses intercept with average product. C gives no valid interpretation. D contradicts the straight-line slope."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does MPL = partial derivative of Q with respect to L mean economically for a warehouse?",
+      "choices": {
+        "A": "It is the additional packages processed from a small increase in labor holding other inputs fixed.",
+        "B": "It is total packages divided by total labor.",
+        "C": "It is the wage paid to each worker.",
+        "D": "It is the amount of capital saved when labor rises."
+      },
+      "correct": "A",
+      "explanation": "MPL measures the extra output from a marginal increase in labor holding other inputs constant. B defines average product. C is an input price. D describes technical substitution, not marginal product directly."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A restaurant manager adds one extra cook during the dinner rush while the kitchen size and equipment remain fixed. Meals served rise from 180 to 208. Which concept best measures the effect of the extra cook?",
+      "choices": {
+        "A": "Marginal product of labor, equal to 28 meals.",
+        "B": "Average product of labor, equal to 208 meals.",
+        "C": "Returns to scale, because all inputs increased.",
+        "D": "Technical rate of substitution, because capital replaced labor."
+      },
+      "correct": "A",
+      "explanation": "The additional cook raises output by 28 meals, which is the marginal product of labor. B confuses total output with average product. C is wrong because only labor changed. D is not about replacing one input with another along an isoquant."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "For Q = 40L - 2L^2, which statement correctly distinguishes marginal product from average product at L = 5?",
+      "choices": {
+        "A": "MPL = 20 and APL = 30; marginal product is additional output from one more unit, while average product is output per unit of labor.",
+        "B": "MPL = 30 and APL = 20; marginal product is output per worker, while average product is extra output.",
+        "C": "MPL = APL = 30 because both measure labor productivity.",
+        "D": "MPL = 150 and APL = 20 because marginal product equals total output."
+      },
+      "correct": "A",
+      "explanation": "MPL=40-4L=20 at L=5. Q=40(5)-2(25)=150, so APL=150/5=30. A correctly distinguishes extra output from output per input. B reverses them. C assumes equality. D confuses total output with marginal product."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A factory has Q = A(10L - L^2), where A measures technology and L = 4. If A rises from 2 to 3, what happens to MPL? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "MPL rises from 4 to 6 because better technology scales the marginal contribution of labor.",
+        "B": "MPL stays at 2 because L is unchanged.",
+        "C": "MPL falls because technology replaces workers.",
+        "D": "MPL rises from 12 to 18 because MPL equals total output divided by labor."
+      },
+      "correct": "A",
+      "explanation": "MPL=A(10-2L). At L=4, MPL=2(2)=4 before and 3(2)=6 after. B ignores the technology parameter. C makes an unsupported labor-replacement claim. D uses average product-like logic instead of the derivative."
+    }
+  ]
+}

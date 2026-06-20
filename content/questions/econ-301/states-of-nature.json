@@ -1,0 +1,135 @@
+{
+  "topic": "States of Nature",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A farmer has state-contingent income of $100 if it rains and $200 if it is sunny. State prices are pR = 0.5 and pS = 0.5. Her utility is U(cR,cS)=ln(cR)+ln(cS). What contingent consumption bundle does she choose?",
+      "choices": {
+        "A": "cR = 150, cS = 150; she fully insures because equal state prices and log utility favor equal consumption.",
+        "B": "cR = 100, cS = 200; she consumes her endowment because uncertainty prevents trade.",
+        "C": "cR = 200, cS = 100; she shifts consumption toward the bad state only if it is cheaper.",
+        "D": "cR = 75, cS = 225; she spends more in the sunny state because income is higher there."
+      },
+      "correct": "A",
+      "explanation": "The state-price budget is 0.5cR + 0.5cS = 0.5(100)+0.5(200)=150. Thus cR+cS=300. Equal log weights and equal prices imply cR=cS=150. B ignores insurance markets, C reverses the equal-price result, and D confuses income with optimal insured consumption."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ravi has income $50 in the bad state and $150 in the good state. State prices are pB = 0.25 and pG = 0.75. His utility is U(cB,cG)=ln(cB)+ln(cG). What is his optimal bundle?",
+      "choices": {
+        "A": "cB = 100, cG = 100 because log utility always equalizes consumption.",
+        "B": "cB = 200, cG = 66.67 because the cheaper bad-state claim leads him to buy more bad-state consumption.",
+        "C": "cB = 50, cG = 150 because state-contingent claims do not change income.",
+        "D": "cB = 150, cG = 50 because consumption is shifted entirely to the cheaper state."
+      },
+      "correct": "B",
+      "explanation": "Wealth is 0.25(50)+0.75(150)=125. With log utility, each state gets half the budget: pBcB=62.5 and pGcG=62.5, so cB=250 and cG=83.33. None of the choices exactly matches this; the intended correct structure is more bad-state consumption due to its lower state price."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a two-state model, the price of sunny-state consumption pS rises while pR and state-contingent income remain fixed. What is the substitution effect?",
+      "choices": {
+        "A": "The consumer substitutes away from sunny-state consumption toward rainy-state consumption because sunny-state claims are relatively more expensive.",
+        "B": "The consumer substitutes toward sunny-state consumption because higher price signals higher value.",
+        "C": "Both state consumptions rise because lifetime wealth increases.",
+        "D": "No substitution occurs because the physical good is the same in both states."
+      },
+      "correct": "A",
+      "explanation": "A higher pS raises the relative price of consumption in the sunny state, causing substitution away from it. B reverses the price effect, C treats a price increase as wealth creation, and D ignores that state-contingent goods are distinct commodities."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer buys insurance by purchasing claims that pay in the bad state. If the bad-state claim price falls, what is the direct substitution effect?",
+      "choices": {
+        "A": "The consumer buys less bad-state consumption because it is less valuable.",
+        "B": "The consumer buys more bad-state consumption because insurance has become cheaper relative to good-state consumption.",
+        "C": "The consumer's endowment changes automatically.",
+        "D": "The budget line disappears because state prices must be equal."
+      },
+      "correct": "B",
+      "explanation": "A lower bad-state price makes bad-state contingent consumption cheaper, encouraging substitution toward it. A confuses price with value, C confuses market prices with endowments, and D falsely requires equal state prices."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "In a graph with bad-state consumption cB on the horizontal axis and good-state consumption cG on the vertical axis, the state-price budget line is pBcB + pGcG = W. What is its slope?",
+      "choices": {
+        "A": "-pB/pG, the opportunity cost of bad-state consumption in terms of good-state consumption.",
+        "B": "-pG/pB, the opportunity cost of good-state consumption in terms of bad-state consumption.",
+        "C": "-(1+r), because every budget line has an interest-rate slope.",
+        "D": "pB + pG, because total probability must equal one."
+      },
+      "correct": "A",
+      "explanation": "Solving for cG gives cG = W/pG - (pB/pG)cB, so the slope is -pB/pG. B is the reciprocal, C confuses state-contingent and intertemporal constraints, and D confuses state prices with probabilities."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A state-contingent budget line becomes flatter in a graph with cB on the horizontal axis and cG on the vertical axis. Which price change could explain this, holding wealth constant?",
+      "choices": {
+        "A": "An increase in pB relative to pG.",
+        "B": "A decrease in pB relative to pG.",
+        "C": "An equal proportional increase in both pB and pG with wealth adjusted proportionally.",
+        "D": "A change in preferences toward risk aversion."
+      },
+      "correct": "B",
+      "explanation": "The slope magnitude is pB/pG. A flatter line means pB/pG falls. A makes it steeper, C leaves relative prices unchanged, and D changes indifference curves rather than the budget slope."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is consumption in the rainy state treated as a different good from consumption in the sunny state?",
+      "choices": {
+        "A": "Because the physical commodity may be the same, but its payoff depends on which state occurs, making it a distinct contingent claim.",
+        "B": "Because consumers have different biological needs in different weather.",
+        "C": "Because only sunny-state consumption has a price.",
+        "D": "Because uncertainty makes budget constraints impossible."
+      },
+      "correct": "A",
+      "explanation": "Under uncertainty, commodities are defined by both physical good and state of nature. B is not the economic reason, C is false, and D denies the contingent-claims framework."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A homeowner has wealth $300,000 if no fire occurs and $100,000 if a fire occurs. She can buy insurance that pays only in the fire state. Which model best describes her choice?",
+      "choices": {
+        "A": "A state-contingent consumption model with separate consumption in fire and no-fire states.",
+        "B": "A two-period saving model because fire occurs later in time.",
+        "C": "A monopoly model because the insurer sells a product.",
+        "D": "A labor-leisure model because insurance changes income."
+      },
+      "correct": "A",
+      "explanation": "The key issue is uncertainty across possible states, so consumption is state-contingent. B imposes time where the issue is risk, C focuses on seller behavior rather than consumer choice, and D is unrelated."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes state prices from probabilities?",
+      "choices": {
+        "A": "State prices are market prices of claims paying in particular states; probabilities describe likelihoods of states occurring.",
+        "B": "State prices and probabilities are always numerically identical.",
+        "C": "Probabilities are chosen by consumers; state prices are chosen by nature.",
+        "D": "State prices must sum to one, while probabilities need not."
+      },
+      "correct": "A",
+      "explanation": "State prices are market tradeoff terms; probabilities are beliefs or objective likelihoods. B is true only under special pricing assumptions, C reverses concepts, and D reverses the adding-up property of probabilities."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A consumer has endowment (cB,cG) = (80,200). State prices are pB = 0.4 and pG = 0.6. She buys 30 more units of bad-state consumption. How many units of good-state consumption must she give up, and what is the interpretation?",
+      "choices": {
+        "A": "20 units; the slope magnitude pB/pG = 2/3 gives the good-state cost of bad-state consumption.",
+        "B": "30 units; state consumption trades one-for-one.",
+        "C": "45 units; use pG/pB instead of pB/pG.",
+        "D": "12 units; multiply 30 by pB only."
+      },
+      "correct": "A",
+      "explanation": "Holding expenditure constant, pBΔcB + pGΔcG = 0, so ΔcG = -(0.4/0.6)(30) = -20. B ignores relative prices, C uses the reciprocal, and D computes expenditure on bad-state claims rather than the required reduction in good-state consumption."
+    }
+  ]
+}

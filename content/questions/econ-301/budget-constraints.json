@@ -1,0 +1,135 @@
+{
+  "topic": "Budget Constraints",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A student has income M = $60 to spend on tacos T at $3 each and smoothies S at $6 each. Utility is U(T,S) = T^0.5S^0.5. What bundle maximizes utility, and what is the interpretation?",
+      "choices": {
+        "A": "T = 10, S = 5; the student spends equal shares of income on each good and reaches a tangency on the budget constraint.",
+        "B": "T = 20, S = 0; tacos are cheaper, so all income goes to tacos.",
+        "C": "T = 5, S = 10; the student buys equal dollar prices of the goods.",
+        "D": "T = 10, S = 10; the student equalizes quantities of both goods."
+      },
+      "correct": "A",
+      "explanation": "With equal Cobb-Douglas exponents, the student spends $30 on each good: T = 10 and S = 5. B ignores preference for both goods, C reverses quantities, and D violates the budget."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer has M = $48, Px = $4, Py = $8, and utility U(x,y) = xy. What bundle maximizes utility, and what does the budget constraint require?",
+      "choices": {
+        "A": "x = 6, y = 3; the consumer spends all income and equalizes expenditure shares.",
+        "B": "x = 12, y = 0; the consumer buys only the cheaper good.",
+        "C": "x = 4, y = 4; the consumer equalizes quantities and spends all income.",
+        "D": "x = 8, y = 2; the consumer sets prices equal."
+      },
+      "correct": "A",
+      "explanation": "For U = xy, spend half income on each good: $24 on x gives x = 6, and $24 on y gives y = 3. B gives zero utility, C spends $48 but is not tangency, and D spends only $48 but has lower utility than the optimum."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A budget constraint is 4x + 2y = 40. If income rises to 60 with prices unchanged, what happens to the budget line?",
+      "choices": {
+        "A": "It shifts outward in parallel because both intercepts rise while slope -Px/Py remains -2.",
+        "B": "It rotates inward around the x-intercept because only y becomes more affordable.",
+        "C": "It becomes flatter because income affects slope.",
+        "D": "It shifts inward because higher income raises spending."
+      },
+      "correct": "A",
+      "explanation": "Initial intercepts are x = 10 and y = 20; new intercepts are x = 15 and y = 30. The slope remains -4/2 = -2. B and C misstate geometry, and D reverses the income effect."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A budget constraint is 5x + 10y = 100. If Px falls from 5 to 4 while M and Py stay fixed, what happens to the budget line, and what mechanism explains it?",
+      "choices": {
+        "A": "The x-intercept rises from 20 to 25 and the line becomes flatter because x becomes cheaper relative to y.",
+        "B": "The y-intercept rises from 10 to 25 because x is cheaper.",
+        "C": "Both intercepts rise because a price decrease is like higher income for every good.",
+        "D": "The line shifts inward in parallel because lower prices reduce spending."
+      },
+      "correct": "A",
+      "explanation": "The x-intercept changes from 100/5 = 20 to 100/4 = 25; y-intercept stays 10; slope changes from -0.5 to -0.4. B changes the wrong intercept, C treats a relative price change as pure income, and D reverses the effect."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For the budget line 3x + 6y = 36 with x on the horizontal axis and y on the vertical axis, which graph description is correct?",
+      "choices": {
+        "A": "The x-intercept is 12, the y-intercept is 6, and the slope is -1/2.",
+        "B": "The x-intercept is 6, the y-intercept is 12, and the slope is -2.",
+        "C": "Both intercepts are 36 because income is 36.",
+        "D": "The slope is +1/2 because prices are positive."
+      },
+      "correct": "A",
+      "explanation": "Set y = 0 to get x = 12; set x = 0 to get y = 6; slope is -Px/Py = -3/6 = -1/2. B reverses intercepts and slope, C confuses income with intercepts, and D misses the tradeoff sign."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer has M = 120, Px = 10, and Py = 5. With x on the horizontal axis, what does the budget line's slope indicate?",
+      "choices": {
+        "A": "Slope = -2, meaning one more unit of x requires giving up 2 units of y.",
+        "B": "Slope = -1/2, meaning one more unit of x requires giving up half a unit of y.",
+        "C": "Slope = 2, meaning x and y can both increase together.",
+        "D": "Slope = -24, meaning all income is spent on y."
+      },
+      "correct": "A",
+      "explanation": "Slope is -Px/Py = -10/5 = -2. It is the opportunity cost of x in units of y. B uses the inverse ratio, C misses the negative tradeoff, and D confuses slope with an intercept."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean for a bundle (x,y) to satisfy 4x + 8y < 80 in a two-good budget model?",
+      "choices": {
+        "A": "The bundle is unaffordable because spending is below income.",
+        "B": "The bundle is affordable and leaves unspent income.",
+        "C": "The bundle is exactly on the budget line.",
+        "D": "The bundle must be optimal because cheaper bundles are always preferred."
+      },
+      "correct": "B",
+      "explanation": "Strict inequality means total spending is less than income, so the bundle is inside the budget set. A reverses affordability, C requires equality, and D confuses feasibility with optimality."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A student has $100 for dining hall meals at $10 each and coffee drinks at $5 each. The student asks which combinations are affordable. Which model applies?",
+      "choices": {
+        "A": "A budget constraint and budget set model, because the question is about feasible bundles given income and prices.",
+        "B": "A supply curve model, because meals and coffee are sold by firms.",
+        "C": "A production function, because meals are produced.",
+        "D": "A market equilibrium model, because two goods exist."
+      },
+      "correct": "A",
+      "explanation": "The scenario is about affordability given income and prices, so the budget model applies. B and C focus on sellers, and D requires market demand and supply."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes income from prices in a budget constraint Px x + Py y = M?",
+      "choices": {
+        "A": "Income determines the slope; prices determine only the intercepts.",
+        "B": "Prices determine the tradeoff slope and intercepts together with income; income determines the overall purchasing power holding prices fixed.",
+        "C": "Income and prices both affect only preferences.",
+        "D": "Prices matter only if the consumer buys both goods; income matters only at corner solutions."
+      },
+      "correct": "B",
+      "explanation": "Prices determine relative tradeoffs and, with income, intercepts; income scales the feasible set. A reverses slope logic, C confuses constraints with preferences, and D adds false restrictions."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A budget line is 2x + 4y = 40. Then both prices double to Px = 4 and Py = 8 while income stays 40. What happens to the budget set? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+      "choices": {
+        "A": "The budget set shrinks inward in parallel because both intercepts are cut in half while the slope remains -1/2.",
+        "B": "The budget set expands because higher prices make the goods more valuable.",
+        "C": "The line rotates around the y-intercept because only x becomes relatively expensive.",
+        "D": "The budget set is unchanged because the price ratio is unchanged."
+      },
+      "correct": "A",
+      "explanation": "Old intercepts are x = 20 and y = 10; new intercepts are x = 10 and y = 5. The slope remains -4/8 = -1/2. B reverses the effect, C ignores both prices changing proportionally, and D ignores reduced real income."
+    }
+  ]
+}

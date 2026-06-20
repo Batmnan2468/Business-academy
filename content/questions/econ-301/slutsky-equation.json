@@ -1,0 +1,135 @@
+{
+  "topic": "Slutsky Equation",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Lena has Marshallian demand for rice x given by x(p_x,m)=m/(2p_x). Initially p_x=2 and m=80. The price rises to p_x=4. Using the Slutsky compensation that keeps the initial bundle affordable, what compensated income m' should be used, and what is the substitution-effect demand for x at the new price?",
+      "choices": {
+        "A": "m'=160 and x=20.",
+        "B": "m'=120 and x=15.",
+        "C": "m'=80 and x=10.",
+        "D": "m'=100 and x=12.5."
+      },
+      "correct": "B",
+      "explanation": "Initial x=80/(22)=20. For this Cobb-Douglas-style demand, initial y spending is 40; the old bundle costs 4(20)+40=120 at the new price, so Slutsky compensated income is 120. Demand at new p_x and m'=120 is x=120/(24)=15. A overcompensates by replacing all old spending at the new price. C uses uncompensated income. D uses an arbitrary midpoint."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For Priya, ordinary demand for x is x=0.5m/p_x. Initially p_x=5, p_y=1, m=100, and the chosen bundle is x=10, y=50. If p_x falls to 4, what are the Slutsky substitution effect, income effect, and total effect on x?",
+      "choices": {
+        "A": "Substitution effect +2.5, income effect 0, total effect +2.5.",
+        "B": "Substitution effect +1.25, income effect +1.25, total effect +2.5.",
+        "C": "Substitution effect 0, income effect +2.5, total effect +2.5.",
+        "D": "Substitution effect -1.25, income effect +3.75, total effect +2.5."
+      },
+      "correct": "B",
+      "explanation": "Initial x=10. New uncompensated demand is 0.5(100)/4=12.5. Slutsky compensated income makes the old bundle affordable at the new price: m'=4(10)+1(50)=90. Compensated demand is 0.5(90)/4=11.25. Substitution effect is 11.25-10=1.25; income effect is 12.5-11.25=1.25. A ignores the income effect. C ignores substitution. D has the wrong sign for substitution."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For a normal good x, the own-price Slutsky substitution effect of a price increase is -4 units and the income effect is -2 units. What is the total change in ordinary demand, and what mechanism explains it?",
+      "choices": {
+        "A": "-2 units; the income effect offsets the substitution effect.",
+        "B": "-6 units; the higher relative price reduces x through substitution, and lower real purchasing power further reduces demand because x is normal.",
+        "C": "+2 units; normal goods rise when real income falls.",
+        "D": "+6 units; higher prices increase demand through scarcity."
+      },
+      "correct": "B",
+      "explanation": "The Slutsky equation adds substitution and income effects: -4 + -2 = -6. For a normal good, a price increase lowers real purchasing power, reducing demand further. A reverses the income effect. C misstates normality. D confuses scarcity with demand response."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For an inferior good x, a price decrease creates a Slutsky substitution effect of +5 and an income effect of -2. What is the total effect, and why?",
+      "choices": {
+        "A": "+7 because both effects increase demand for inferior goods.",
+        "B": "-7 because inferior goods always violate the law of demand.",
+        "C": "+3 because the lower relative price raises x, while the increase in real purchasing power reduces demand for inferior x.",
+        "D": "-3 because the income effect dominates the substitution effect."
+      },
+      "correct": "C",
+      "explanation": "The total effect is +5-2=+3. The substitution effect from a price decrease increases own demand; because x is inferior, the real-income increase reduces demand. A gives the wrong sign for the income effect. B overstates inferiority. D incorrectly says the smaller income effect dominates."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph with x horizontal and y vertical, p_x rises. The budget line pivots inward around the y-intercept. A compensated budget line is then drawn parallel to the new budget line and passing through the original bundle. What movement does this compensated pivot isolate?",
+      "choices": {
+        "A": "The Slutsky substitution effect, because it changes relative prices while preserving the ability to buy the original bundle.",
+        "B": "The income effect, because it shifts the budget line parallel to the original line.",
+        "C": "The total effect, because it moves directly from old optimum to new ordinary optimum.",
+        "D": "The Engel effect, because income changes while prices are fixed."
+      },
+      "correct": "A",
+      "explanation": "The Slutsky compensated budget has the new slope but enough income to buy the original bundle, isolating the substitution effect. B describes a parallel shift after relative prices are fixed. C skips the compensated step. D describes income variation at fixed prices."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "After the price of x falls, a graph shows movement from old optimum A to compensated optimum B along a budget line with the new flatter slope, then from B to ordinary optimum C by a parallel outward shift. What are the two movements?",
+      "choices": {
+        "A": "A to B is the income effect; B to C is the substitution effect.",
+        "B": "A to B is the substitution effect; B to C is the income effect.",
+        "C": "Both movements are substitution effects because the price changed.",
+        "D": "Both movements are income effects because purchasing power changed."
+      },
+      "correct": "B",
+      "explanation": "The compensated movement A to B uses the new relative price while controlling purchasing power, so it is substitution. The parallel movement B to C keeps prices fixed and changes purchasing power, so it is income. A reverses them. C and D collapse the decomposition."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is the own-price Slutsky substitution effect always nonpositive for good x when p_x rises?",
+      "choices": {
+        "A": "Because after compensation, the consumer can still afford the original bundle, and the higher relative price of x makes substituting away from x weakly optimal.",
+        "B": "Because income always falls when price rises.",
+        "C": "Because all goods are normal under utility maximization.",
+        "D": "Because the consumer must buy less of every good after any price increase."
+      },
+      "correct": "A",
+      "explanation": "The compensated budget preserves purchasing power for the original bundle while changing relative prices. A higher p_x makes x relatively more expensive, so compensated demand for x cannot rise under standard convex preferences. B describes an income effect. C is false. D is too strong and ignores substitution among goods."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A city raises the price of bus passes from 40 to 50. Low-income riders reduce bus use because passes are relatively more expensive, but some also reduce restaurant spending because their real purchasing power falls. Which framework separates these two forces?",
+      "choices": {
+        "A": "The Slutsky equation, separating the substitution effect from the income effect.",
+        "B": "The income offer curve only, because the price increase is equivalent to lower income.",
+        "C": "WARP, because choices must be consistent.",
+        "D": "Perfect complements, because bus passes and restaurants are consumed together."
+      },
+      "correct": "A",
+      "explanation": "The Slutsky equation decomposes the total price effect into substitution caused by relative price changes and income caused by real purchasing power changes. B ignores the relative-price effect. C is a consistency test, not a decomposition. D assumes a specific utility form without evidence."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes the Slutsky substitution effect from the Slutsky income effect?",
+      "choices": {
+        "A": "The substitution effect changes relative prices while compensating income to keep the original bundle affordable; the income effect then changes purchasing power at the new prices.",
+        "B": "The substitution effect changes income while holding prices fixed; the income effect changes prices while holding utility fixed.",
+        "C": "The substitution effect applies only to inferior goods; the income effect applies only to normal goods.",
+        "D": "The substitution effect measures consumer surplus; the income effect measures producer surplus."
+      },
+      "correct": "A",
+      "explanation": "Slutsky substitution uses a compensated budget with the new prices and enough income to afford the old bundle. The income effect is the movement from compensated to actual income at new prices. B reverses the logic. C invents restrictions. D confuses decomposition with welfare areas."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand for train rides is x=100-2p. Price rises from 20 to 30. Ignoring income effects and treating this demand curve as the relevant willingness-to-pay curve, what is the loss in consumer surplus?",
+      "choices": {
+        "A": "500; old quantity is 60 and new quantity is 40, so loss is 10(40)+0.5(10)(20).",
+        "B": "600; old quantity is 60 and price rises by 10.",
+        "C": "100; quantity falls by 20 and half the price change is 5.",
+        "D": "400; new quantity is 40 and price rises by 10."
+      },
+      "correct": "A",
+      "explanation": "At p=20, x=60; at p=30, x=40. Consumer surplus loss is the rectangle on units still bought, 1040=400, plus the triangle on lost units, 0.51020=100, totaling 500. B ignores the triangle/rectangle distinction. C uses only the triangle. D ignores surplus lost on units no longer purchased."
+    }
+  ]
+}

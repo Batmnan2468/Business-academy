@@ -1,0 +1,135 @@
+{
+  "topic": "Two-Part Tariffs",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A club can charge a fixed membership fee F and a per-visit price p. A representative member has demand P = 30 - Q and the club's marginal cost is 6. If all members are identical, what two-part tariff maximizes profit while inducing efficient usage?",
+      "choices": {
+        "A": "p = 6, F = 288",
+        "B": "p = 18, F = 72",
+        "C": "p = 6, F = 144",
+        "D": "p = 30, F = 0"
+      },
+      "correct": "A",
+      "explanation": "Set the per-unit price equal to MC: p = 6, so Q = 24. Consumer surplus at p = 6 is 0.5(30 - 6)(24) = 288, which can be extracted as the fixed fee. B uses the uniform monopoly price. C halves the surplus incorrectly. D sets the choke price and sells no visits."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A streaming platform offers a fixed subscription fee plus a per-movie rental price. A user's monthly demand is P = 20 - 0.5Q and MC = 4. For identical users, what per-movie price and fixed fee extract all surplus efficiently?",
+      "choices": {
+        "A": "p = 8, F = 144",
+        "B": "p = 4, F = 256",
+        "C": "p = 4, F = 128",
+        "D": "p = 20, F = 0"
+      },
+      "correct": "B",
+      "explanation": "Set p = MC = 4. Demand gives 20 - 0.5Q = 4, so Q = 32. Consumer surplus is 0.5(20 - 4)(32) = 256. A uses a monopoly-like per-unit price. C halves the surplus. D prices at the choke price."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A gym uses a two-part tariff for identical consumers with demand P = 40 - Q. Marginal cost rises from 10 to 20. What happens to the efficient per-visit price and maximum fixed fee?",
+      "choices": {
+        "A": "Per-visit price rises from 10 to 20, and the fixed fee falls from 450 to 200 because consumer surplus at marginal-cost pricing shrinks.",
+        "B": "Per-visit price stays at 10, and fixed fee rises because costs are higher.",
+        "C": "Per-visit price rises from 10 to 20, and fixed fee rises from 450 to 800.",
+        "D": "Per-visit price falls because higher MC reduces quantity demanded."
+      },
+      "correct": "A",
+      "explanation": "With p = MC = 10, Q = 30 and CS = 0.5(30)(30) = 450. With p = 20, Q = 20 and CS = 0.5(20)(20) = 200. Higher MC raises the usage price and lowers extractable surplus. B ignores MC pricing. C reverses the fixed fee effect. D reverses the usage price effect."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A two-part tariff seller faces identical consumers. Demand shifts upward from P = 30 - Q to P = 40 - Q, while MC remains 10. What happens to the optimal fixed fee and usage quantity?",
+      "choices": {
+        "A": "Quantity rises from 20 to 30 and the fixed fee rises from 200 to 450 because consumer surplus at p = MC increases.",
+        "B": "Quantity stays at 20 and the fixed fee rises from 200 to 400 because only willingness to pay changes.",
+        "C": "Quantity rises from 10 to 15 and the fixed fee falls because demand is higher.",
+        "D": "Quantity falls because a higher fixed fee discourages all usage after entry."
+      },
+      "correct": "A",
+      "explanation": "The per-unit price remains p = MC = 10. Initially Q = 20 and CS = 0.5(20)(20) = 200. After demand rises, Q = 30 and CS = 0.5(30)(30) = 450. B ignores the quantity effect. C uses monopoly quantities. D confuses the entry fee with marginal usage price after joining."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "On a two-part tariff diagram for identical consumers, the usage price is set equal to MC. What does the area between demand and MC up to the chosen quantity represent?",
+      "choices": {
+        "A": "The maximum fixed fee the firm can charge without making the consumer decline membership.",
+        "B": "Deadweight loss caused by the two-part tariff.",
+        "C": "The marginal cost of access.",
+        "D": "The monopolist's lost revenue from setting p = MC."
+      },
+      "correct": "A",
+      "explanation": "At p = MC, usage is efficient and the consumer surplus triangle can be extracted through the fixed fee. B is wrong because efficient usage creates no DWL. C confuses fixed access pricing with marginal cost. D ignores that the fixed fee recovers surplus."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A two-part tariff has a high fixed fee and a low per-unit price. On the consumer's graph, how does the fixed fee appear relative to the marginal consumption decision?",
+      "choices": {
+        "A": "It shifts total surplus division but does not change the marginal condition P = p for usage after the consumer joins.",
+        "B": "It changes the slope of the demand curve.",
+        "C": "It raises marginal cost for every unit consumed.",
+        "D": "It makes the consumer choose the quantity where total expenditure is minimized."
+      },
+      "correct": "A",
+      "explanation": "The fixed fee affects participation, not the marginal price of additional units after joining. Usage depends on the per-unit price. B and C incorrectly make the fixed fee marginal. D is not the consumer's choice rule."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can a two-part tariff be more profitable than a single monopoly price when consumers are identical?",
+      "choices": {
+        "A": "It can set the usage price at marginal cost to maximize total surplus, then extract that surplus with the fixed fee.",
+        "B": "It creates deadweight loss and converts that deadweight loss into profit.",
+        "C": "It forces marginal cost to fall below zero.",
+        "D": "It prevents consumers from responding to marginal prices."
+      },
+      "correct": "A",
+      "explanation": "A two-part tariff separates efficient usage pricing from surplus extraction. The firm can avoid the output restriction of uniform monopoly pricing while using the access fee to capture surplus. B is wrong because deadweight loss is not captured by anyone. C is impossible from pricing alone. D is false because consumers still respond to the per-unit price."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A warehouse store charges $80 per year for membership and then sells groceries at low per-unit markups close to marginal cost. Which model best explains this pricing strategy?",
+      "choices": {
+        "A": "Two-part tariff: an access fee plus low usage prices.",
+        "B": "First-degree price discrimination: each item is priced at each shopper's willingness to pay.",
+        "C": "Third-degree price discrimination: different observable groups face different grocery prices.",
+        "D": "Peak-load pricing: prices differ only by time of day."
+      },
+      "correct": "A",
+      "explanation": "The membership fee plus low per-unit price is a two-part tariff. B requires individualized willingness-to-pay pricing. C requires group-specific prices. D requires time-based scarcity pricing."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a two-part tariff from a standard uniform monopoly price?",
+      "choices": {
+        "A": "A two-part tariff uses both a fixed fee and a per-unit price; a uniform monopoly price uses a single per-unit price for all units.",
+        "B": "A two-part tariff always charges every consumer a different personalized price; a uniform monopoly price charges a fixed fee only.",
+        "C": "A two-part tariff cannot create profit; a uniform monopoly price always extracts all surplus.",
+        "D": "A two-part tariff requires P = ATC; a uniform monopoly price requires P = MC."
+      },
+      "correct": "A",
+      "explanation": "The defining feature of a two-part tariff is the combination of an access fee and a usage price. B confuses it with first-degree price discrimination. C reverses the surplus-extraction logic. D confuses tariff design with regulatory pricing rules."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A consumer has demand P = 60 - Q and MC = 20. Compare a uniform monopoly price with an efficient two-part tariff for identical consumers. By how much does total surplus increase under the two-part tariff?",
+      "choices": {
+        "A": "200",
+        "B": "400",
+        "C": "800",
+        "D": "1,600"
+      },
+      "correct": "A",
+      "explanation": "Uniform monopoly: MR = 60 - 2Q = 20 gives Qm = 20 and Pm = 40. Efficient quantity under two-part tariff with p = MC is Qc = 40. The increase in total surplus equals the eliminated DWL: 0.5(40 - 20)(40 - 20) = 200. B uses the full rectangle. C and D overstate the welfare gain."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Signaling",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "There are high-productivity and low-productivity workers. A high-productivity worker produces $120,000 of output, and a low-productivity worker produces $60,000. Education years e do not raise productivity, but they cost high-productivity workers $4,000e and low-productivity workers $12,000e. Firms pay $120,000 to workers with e >= e* and $60,000 otherwise. Which value of e* can support a separating equilibrium in which only high-productivity workers get education?",
+      "choices": {
+        "A": "e* = 3, because high types gain $60,000 at cost $12,000, while low types would pay $36,000 to gain $60,000.",
+        "B": "e* = 5, because high types gain $60,000 at cost $20,000, while low types would pay $60,000 and are just indifferent.",
+        "C": "e* = 7, because high types pay $84,000, making the signal too costly for low types.",
+        "D": "e* = 16, because any very high education requirement guarantees separation."
+      },
+      "correct": "B",
+      "explanation": "For separation, high types must want to signal: 120000 - 4000e >= 60000, so e <= 15. Low types must not want to mimic: 120000 - 12000e <= 60000, so e >= 5. Thus e* = 5 works. A fails because low types would mimic when e = 3. C incorrectly calculates high-type cost as low-type cost; e = 7 actually works, but the explanation is wrong, and the question asks for the value with the stated valid reasoning. D fails because e = 16 is too costly for high types."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Firms cannot observe worker type. High-type workers produce $90 per hour, low-type workers produce $50 per hour. A certification level s costs high types 5s and low types 15s. Firms pay $90 if s >= s* and $50 otherwise. What interval of s* supports separation, assuming workers choose the lowest signal that qualifies?",
+      "choices": {
+        "A": "0 <= s* <= 8",
+        "B": "8 <= s* <= 40",
+        "C": "8/3 <= s* <= 8",
+        "D": "s* >= 8 only"
+      },
+      "correct": "C",
+      "explanation": "High types signal if 90 - 5s* >= 50, so s* <= 8. Low types do not mimic if 90 - 15s* <= 50, so s* >= 40/15 = 8/3. Therefore separation requires 8/3 <= s* <= 8. A omits the low-type incentive constraint. B uses the wage difference as if it were the upper bound directly. D gives only the low-type no-mimic threshold and ignores high-type participation."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a Spence signaling model, high-type workers' cost of education falls from 4e to 2e, while low-type cost remains 10e. The wage gap between high and low jobs remains $40,000. What happens to the range of education thresholds that can support separation?",
+      "choices": {
+        "A": "The upper bound rises because high types are willing to acquire more education for the same wage gain.",
+        "B": "The lower bound rises because low types find education more attractive.",
+        "C": "The separating range disappears because education is cheaper for high types.",
+        "D": "Nothing changes because education does not affect productivity."
+      },
+      "correct": "A",
+      "explanation": "The high-type incentive constraint is cost_H(e) <= wage gap. When high-type education cost falls, the maximum education threshold high types are willing to bear rises. The low-type no-mimic constraint is unchanged. B is wrong because low-type costs did not change. C reverses the effect. D ignores that signaling depends on costs, not productivity effects."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Suppose the productivity gap between high-type and low-type workers rises from $30,000 to $60,000, while education costs remain c_H(e) = $5,000e and c_L(e) = $15,000e. What happens to the separating-signal interval?",
+      "choices": {
+        "A": "It shifts down entirely because a larger wage gap makes signaling unnecessary.",
+        "B": "It expands: the low-type no-mimic lower bound rises, but the high-type willingness-to-signal upper bound also rises by more in absolute years.",
+        "C": "It shrinks to zero because low types are always willing to mimic when the wage gap rises.",
+        "D": "It remains unchanged because the cost functions are unchanged."
+      },
+      "correct": "B",
+      "explanation": "Separation requires wage gap / c_L per unit <= e* <= wage gap / c_H per unit. When the wage gap doubles, both bounds double: from [2, 6] to [4, 12]. The interval expands in length from 4 years to 8 years. A incorrectly says a larger gap removes the need for signaling. C ignores that high types also become willing to signal more. D ignores the role of the wage gain."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a signaling diagram, education e is on the horizontal axis and net payoff is on the vertical axis. The high-type net payoff from taking the high-wage job is 100 - 2e, and the low-type net payoff from mimicking is 100 - 8e. Both types receive 60 if they do not signal. Which graph feature creates the possibility of separation?",
+      "choices": {
+        "A": "The low-type mimicking payoff line is flatter than the high-type signaling payoff line.",
+        "B": "The high-type signaling payoff line is flatter, so there are education levels where high types prefer signaling but low types do not.",
+        "C": "Both payoff lines have the same intercept, so separation is impossible at every e.",
+        "D": "The no-signal payoff line slopes upward with education."
+      },
+      "correct": "B",
+      "explanation": "The high-type payoff line has slope -2 while the low-type line has slope -8, so signaling is less costly for high types. This single-crossing property allows an education threshold that high types accept and low types reject. A reverses the slopes. C ignores different slopes. D incorrectly describes the no-signal payoff as depending on education."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A graph shows signal level s on the horizontal axis and total signaling cost on the vertical axis. The high-type cost line is C_H = 3s, and the low-type cost line is C_L = 9s. The wage gain from being believed high type is $36. How should the separating range appear on the graph?",
+      "choices": {
+        "A": "It is the interval from s = 4 to s = 12, where the low-type cost is at least $36 and the high-type cost is at most $36.",
+        "B": "It is the interval from s = 0 to s = 4, where low types find it cheapest to mimic.",
+        "C": "It is the interval from s = 12 upward, where both types refuse to signal.",
+        "D": "It is a single point at s = 6 because the average cost slope is 6."
+      },
+      "correct": "A",
+      "explanation": "Low types do not mimic when 9s >= 36, so s >= 4. High types are willing to signal when 3s <= 36, so s <= 12. The graph therefore shows a separating interval [4, 12]. B ignores low-type mimicry. C violates the high-type incentive constraint. D incorrectly uses the average of the slopes."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "In Spence's job-market signaling model, why can education be privately valuable even if it does not increase productivity?",
+      "choices": {
+        "A": "Because it can credibly reveal high productivity when education is less costly for high-productivity workers than for low-productivity workers.",
+        "B": "Because firms irrationally prefer educated workers even when education is equally costly for all types.",
+        "C": "Because education always raises output by exactly its tuition cost.",
+        "D": "Because low-productivity workers are legally prohibited from acquiring education."
+      },
+      "correct": "A",
+      "explanation": "A signal can be privately valuable because it changes beliefs and wages, not necessarily because it changes productivity. Credibility comes from differential signaling costs. B removes the incentive logic and relies on irrationality. C contradicts the assumption that education is nonproductive in the signaling model. D invents a legal restriction."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A freelance platform lets programmers buy a difficult verified exam badge. Skilled programmers can pass with 10 hours of study; unskilled programmers need 80 hours. Clients cannot observe skill directly and pay much more to freelancers with the badge. Which model best fits this situation?",
+      "choices": {
+        "A": "Screening, because clients are the informed party choosing their type.",
+        "B": "Moral hazard, because programmers change effort after being hired.",
+        "C": "Adverse selection only, with no possible solution because skill is hidden.",
+        "D": "Signaling, because informed programmers take a costly action that is cheaper for skilled types and changes client beliefs."
+      },
+      "correct": "D",
+      "explanation": "The informed party, the programmer, chooses a costly badge to communicate hidden skill. The signal is credible because it is less costly for skilled programmers. A confuses signaling with screening by the uninformed party. B concerns post-contract hidden action. C identifies hidden type but ignores the signaling mechanism."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes signaling from human-capital investment?",
+      "choices": {
+        "A": "Signaling is costly but may not increase productivity; human-capital investment raises productivity directly.",
+        "B": "Signaling is always socially efficient; human-capital investment is always wasteful.",
+        "C": "Signaling is chosen by the uninformed party; human capital is chosen by the informed party.",
+        "D": "Signaling occurs after the employer observes productivity; human capital occurs before productivity exists."
+      },
+      "correct": "A",
+      "explanation": "Signaling communicates private information and can be valuable even without productivity effects. Human-capital investment directly increases productivity. B reverses the welfare ambiguity of signaling. C confuses signaling with screening. D misstates the timing and observability problem."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "There are 100 high-type workers and 100 low-type workers. High types produce $100,000, low types produce $60,000. Education used as a signal does not raise productivity. In a separating equilibrium, each high type obtains 5 units of education at a cost of $4,000 per unit; low types obtain none. Compared with full information where firms observe types without education, what is the social cost of signaling?",
+      "choices": {
+        "A": "$0, because education changes wages but not output.",
+        "B": "$2,000,000, equal to the total resource cost of high types' education.",
+        "C": "$4,000,000, equal to the productivity gap times the number of high types.",
+        "D": "$10,000,000, equal to high-type output times the number of high types."
+      },
+      "correct": "B",
+      "explanation": "Since education does not raise productivity, its social cost is the real resource cost spent on the signal: 100 high types times 5 units times $4,000 = $2,000,000. A ignores real signaling costs. C calculates the wage/productivity gap rather than the signal cost. D uses total high-type output, not welfare loss."
+    }
+  ]
+}

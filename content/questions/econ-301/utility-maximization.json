@@ -1,0 +1,135 @@
+{
+  "topic": "Utility Maximization",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Maya has utility U(x,y)=x^{1/2}y^{1/2}, income m=120, price of coffee x is p_x=4, and price of sandwiches y is p_y=6. Using the Lagrangian method, what bundle maximizes utility and what is the economic interpretation of the first-order conditions?",
+      "choices": {
+        "A": "x*=15, y*=10; the consumer spends equal dollar amounts on both goods because the Cobb-Douglas exponents are equal.",
+        "B": "x*=20, y*=6.67; the consumer equates marginal utilities MU_x=MU_y.",
+        "C": "x*=30, y*=0; coffee is cheaper, so all income should be spent on coffee.",
+        "D": "x*=12, y*=12; equal quantities maximize utility because the exponents are equal."
+      },
+      "correct": "A",
+      "explanation": "For U=x^{1/2}y^{1/2}, MRS=MU_x/MU_y=y/x. The FOC gives y/x=p_x/p_y=4/6, so y=(2/3)x. With 4x+6y=120, x=15 and y=10. B incorrectly equates marginal utilities instead of marginal utility per dollar. C is a wrong corner setup. D confuses equal exponents with equal quantities rather than equal expenditure shares."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Noah has utility U(x,y)=x^{1/3}y^{2/3}, income m=180, p_x=3, and p_y=6. Which Lagrangian solution is correct, and what does it imply about spending on x and y?",
+      "choices": {
+        "A": "x*=30, y*=15; spending is equal across goods.",
+        "B": "x*=20, y*=20; quantities are equal because utility is multiplicative.",
+        "C": "x*=20, y*=20; spending on y is twice spending on x.",
+        "D": "x*=60, y*=0; y is too expensive, so the optimum is a corner."
+      },
+      "correct": "C",
+      "explanation": "Cobb-Douglas demands are x*=a/(a+b)m/p_x=(1/3)(180)/3=20 and y*=b/(a+b)m/p_y=(2/3)(180)/6=20. Spending is 60 on x and 120 on y, so y receives twice the expenditure share. A uses equal spending. B has the right quantities but wrong interpretation. D wrongly treats a standard Cobb-Douglas problem as a corner solution."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x^{1/2}y^{1/2}, income m=100, p_x=5, and p_y=5. If p_x rises to 10 while income and p_y stay fixed, what happens to x* and why?",
+      "choices": {
+        "A": "x* stays at 10 because the utility exponents are unchanged.",
+        "B": "x* falls from 10 to 5 because the fixed one-half expenditure share is now divided by a higher price of x.",
+        "C": "x* rises from 10 to 20 because a higher price makes x more valuable.",
+        "D": "x* falls from 10 to 0 because a price increase always creates a corner solution."
+      },
+      "correct": "B",
+      "explanation": "For equal-exponent Cobb-Douglas, x*=m/(2p_x). Initially x=100/(25)=10; after p_x=10, x=100/(210)=5. The mechanism is the fixed expenditure share combined with a higher price per unit. A ignores price effects. C reverses the law of demand. D incorrectly assumes any price increase causes a corner."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Lena maximizes U(x,y)=x^{1/4}y^{3/4}. Initially m=160, p_x=4, p_y=8. Her income rises to m=240 with prices unchanged. What happens to her demand for y, and what is the mechanism?",
+      "choices": {
+        "A": "y* rises from 15 to 22.5 because y keeps a constant 3/4 income share while income rises.",
+        "B": "y* rises from 20 to 30 because y keeps a constant 1/2 income share.",
+        "C": "y* stays at 15 because Cobb-Douglas demands depend only on prices.",
+        "D": "y* falls from 15 to 10 because higher income reduces marginal utility."
+      },
+      "correct": "A",
+      "explanation": "y*=3/4m/p_y. Initially y=(3/4)(160)/8=15; after income rises, y=(3/4)(240)/8=22.5. The mechanism is constant expenditure shares in Cobb-Douglas preferences. B uses the wrong expenditure share. C describes quasilinear-style demand, not Cobb-Douglas. D confuses diminishing marginal utility with a negative income effect."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer has smooth, strictly convex indifference curves over burritos x and smoothies y. The budget line is 2x+4y=40. At bundle (8,6), the indifference curve has slope -1 while the budget line has slope -1/2. Which statement best describes the graph and the direction of utility improvement?",
+      "choices": {
+        "A": "The consumer is at a tangency because both slopes are negative.",
+        "B": "The consumer should move toward more smoothies and fewer burritos because the indifference curve is steeper than the budget line.",
+        "C": "The consumer should move toward more burritos and fewer smoothies because the MRS exceeds the market trade-off.",
+        "D": "The consumer should stay at (8,6) because it lies on the budget line."
+      },
+      "correct": "C",
+      "explanation": "The budget slope is -p_x/p_y=-2/4=-1/2. The indifference curve slope is -MRS=-1, so MRS=1 exceeds p_x/p_y=1/2. The consumer values burritos more than the market requires, so moving toward more x and less y raises utility. A ignores slope magnitudes. B reverses the direction. D ignores that affordable bundles on the budget line need not be optimal."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A budget line for tickets x and snacks y has intercepts x=12 and y=8. At a proposed interior optimum, the indifference curve through the bundle is flatter than the budget line. What does this imply?",
+      "choices": {
+        "A": "The proposed bundle is optimal because any intersection with an indifference curve is optimal.",
+        "B": "The consumer should choose more x and less y because the market gives up too little y per x.",
+        "C": "The consumer should choose less x and more y because MRS is below p_x/p_y.",
+        "D": "The budget line must be tangent because the intercepts are positive."
+      },
+      "correct": "C",
+      "explanation": "If the indifference curve is flatter than the budget line, then MRS<p_x/p_y. The consumer is willing to give up less y for x than the market requires, so she should move toward less x and more y. A treats any feasible bundle as optimal. B reverses the implication. D confuses positive intercepts with tangency."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "In the Lagrangian for maximizing U(x,y)=ln x+ln y subject to 5x+10y=100, the multiplier at the optimum is lambda=0.02. What is the best economic interpretation of lambda?",
+      "choices": {
+        "A": "It is the ratio of prices, p_x/p_y.",
+        "B": "It is the marginal utility of x at the optimum.",
+        "C": "It is the approximate increase in maximized utility from one more dollar of income.",
+        "D": "It is the quantity of y purchased per dollar."
+      },
+      "correct": "C",
+      "explanation": "The Lagrange multiplier on the budget constraint measures the marginal utility of income: the increase in indirect utility from relaxing the budget by one dollar. A confuses lambda with the price ratio. B confuses lambda with MU_x; actually MU_x=lambda p_x. D gives no correct interpretation of the multiplier."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A meal-kit company wants to predict how a student allocates a $90 weekly food budget between frozen meals x and restaurant meals y. The student has U(x,y)=x^{2/3}y^{1/3}, frozen meals cost $5, and restaurant meals cost $15. Which model should be used and what prediction follows?",
+      "choices": {
+        "A": "Use utility maximization with a budget constraint; x=12 and y*=2 because the student spends two-thirds of income on frozen meals and one-third on restaurant meals.",
+        "B": "Use profit maximization; x*=18 and y*=0 because frozen meals have the lower cost.",
+        "C": "Use utility maximization without a budget constraint; choose infinite quantities because utility is increasing.",
+        "D": "Use expenditure minimization for a fixed utility level; x*=6 and y*=4 because quantities should sum to 10."
+      },
+      "correct": "A",
+      "explanation": "The scenario asks for predicted consumption from income, prices, and preferences, so Marshallian utility maximization is the correct model. x=(2/3)(90)/5=12 and y=(1/3)(90)/15=2. B applies a producer model. C ignores scarcity. D uses the wrong dual problem and an arbitrary quantity sum."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes the budget constraint from the utility function in the consumer's optimization problem for books x and coffee y?",
+      "choices": {
+        "A": "The budget constraint describes preferences, while the utility function describes prices and income.",
+        "B": "The budget constraint gives feasible bundles from prices and income, while the utility function ranks those feasible bundles.",
+        "C": "Both the budget constraint and utility function rank bundles, but the budget constraint ranks them in dollars.",
+        "D": "The utility function determines which bundles are affordable, while the budget constraint determines marginal utility."
+      },
+      "correct": "B",
+      "explanation": "The budget constraint defines the feasible set using prices and income; the utility function ranks bundles by preference. A reverses the roles. C incorrectly says the budget ranks bundles. D incorrectly assigns affordability to utility and marginal utility to the budget."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Jamal's indirect utility from maximizing U(x,y)=x^{1/2}y^{1/2} with p_x=4, p_y=4, and income m is V=m/(2sqrt(p_xp_y)). Initially m=80. A scholarship increases income to 100. What is the change in maximized utility, and how should it be evaluated?",
+      "choices": {
+        "A": "Utility rises by 2.5, showing the welfare gain from relaxing the budget constraint.",
+        "B": "Utility rises by 20, because income rises by 20 dollars.",
+        "C": "Utility is unchanged because prices did not change.",
+        "D": "Utility falls by 2.5 because marginal utility diminishes."
+      },
+      "correct": "A",
+      "explanation": "With p_x=p_y=4, V=m/(24)=m/8. Utility rises from 80/8=10 to 100/8=12.5, a gain of 2.5. B confuses dollars with utility. C ignores that higher income expands the budget set. D reverses the welfare effect of more income."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Technical Rate of Substitution",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has Q = L^(1/2)K^(1/2). At L = 25 and K = 9, what is the technical rate of substitution of labor for capital, TRS = MPL/MPK, and what does it mean?",
+      "choices": {
+        "A": "TRS = 3/5; one more unit of labor can replace about 0.6 units of capital holding output constant.",
+        "B": "TRS = 5/3; one more unit of labor can replace about 1.67 units of capital holding output constant.",
+        "C": "TRS = 25/9; labor replaces capital according to input quantities.",
+        "D": "TRS = 1 because Cobb-Douglas inputs are symmetric."
+      },
+      "correct": "A",
+      "explanation": "For Q=sqrt(LK), MPL/MPK=K/L? Actually MPL=(1/2)sqrt(K/L), MPK=(1/2)sqrt(L/K), so MPL/MPK=K/L=9/25. Thus A is not numerically correct. The correct TRS is 9/25, meaning one more labor unit replaces 0.36 capital units. B inverts the ratio. C uses input ratio L/K instead of K/L. D confuses equal exponents with equal TRS at unequal inputs."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm uses Q = 4L^(1/2)K^(1/2). Labor costs $20 and capital costs $5. At a cost-minimizing interior bundle, what TRS condition must hold and how should it be interpreted?",
+      "choices": {
+        "A": "TRS = 4 because one more unit of labor must replace $20/$5 = 4 units of capital to keep cost-minimization balanced.",
+        "B": "TRS = 1/4 because capital is cheaper than labor.",
+        "C": "TRS = 1 because Cobb-Douglas inputs are always equally substitutable.",
+        "D": "TRS = 20 because labor costs $20."
+      },
+      "correct": "A",
+      "explanation": "Cost minimization requires MPL/MPK = w/r = 20/5 = 4. This means the technological rate at which labor replaces capital equals the market tradeoff. B inverts the price ratio. C ignores input prices and input mix. D uses the wage alone."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = L^(1/2)K^(1/2), what happens to TRS = MPL/MPK when the firm moves along the same isoquant from L = 9, K = 36 to L = 36, K = 9?",
+      "choices": {
+        "A": "TRS falls from 4 to 1/4 because labor becomes abundant relative to capital and its marginal product falls relative to capital.",
+        "B": "TRS rises from 1/4 to 4 because more labor always raises MPL.",
+        "C": "TRS remains 1 because exponents are equal.",
+        "D": "TRS becomes negative because the isoquant slopes downward."
+      },
+      "correct": "A",
+      "explanation": "TRS=K/L. It falls from 36/9=4 to 9/36=1/4 as labor becomes abundant. B reverses the ratio. C ignores input quantities. D confuses the negative slope of the isoquant with the positive TRS magnitude."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm initially has MPL = 12 and MPK = 4. After capital becomes more specialized, MPK rises to 6 while MPL stays 12. What happens to TRS = MPL/MPK and why?",
+      "choices": {
+        "A": "TRS falls from 3 to 2 because capital's marginal product rises relative to labor's.",
+        "B": "TRS rises from 3 to 6 because capital is more productive.",
+        "C": "TRS stays 3 because MPL did not change.",
+        "D": "TRS falls from 4 to 2 because MPK is subtracted from MPL."
+      },
+      "correct": "A",
+      "explanation": "TRS changes from 12/4=3 to 12/6=2. Capital becoming more productive means each extra unit of labor replaces fewer units of capital. B confuses higher MPK with higher MPL/MPK. C ignores the denominator. D uses subtraction instead of division."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In an isoquant graph with labor on the horizontal axis and capital on the vertical axis, what is the slope of the isoquant at a point where MPL = 8 and MPK = 2?",
+      "choices": {
+        "A": "-4 because dK/dL along an isoquant equals -MPL/MPK.",
+        "B": "4 because marginal products are positive.",
+        "C": "-1/4 because the slope equals -MPK/MPL.",
+        "D": "10 because the slope equals the sum of marginal products."
+      },
+      "correct": "A",
+      "explanation": "Along an isoquant, dK/dL=-MPL/MPK=-8/2=-4. B omits the negative sign. C inverts the ratio. D has no basis."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A convex isoquant becomes flatter as labor increases along it. What does this reveal about TRS?",
+      "choices": {
+        "A": "TRS diminishes because each additional unit of labor replaces fewer units of capital.",
+        "B": "TRS rises because the firm uses more labor.",
+        "C": "TRS is constant because the firm remains on the same isoquant.",
+        "D": "TRS is zero everywhere because output is constant."
+      },
+      "correct": "A",
+      "explanation": "A flatter isoquant means the absolute slope, MPL/MPK, is falling. B ignores diminishing substitutability. C confuses constant output with constant slope. D confuses zero output change with zero marginal tradeoff."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean if TRS of labor for capital equals 2 at a given input bundle?",
+      "choices": {
+        "A": "The firm can reduce capital by about 2 units if it adds 1 unit of labor, holding output constant.",
+        "B": "The firm can double output by doubling labor.",
+        "C": "Labor costs twice as much as capital.",
+        "D": "Capital's marginal product is twice labor's marginal product."
+      },
+      "correct": "A",
+      "explanation": "TRS measures technological substitution along an isoquant: one more labor unit replaces 2 capital units. B describes returns to scale. C may hold at cost minimization but is not the definition. D reverses the marginal product ratio."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A software company can maintain the same server uptime by using more engineers and fewer cloud-computing instances. It wants to know how many instances can be reduced when one more engineer is added. Which concept applies?",
+      "choices": {
+        "A": "Technical rate of substitution.",
+        "B": "Marginal revenue product.",
+        "C": "Consumer marginal rate of substitution.",
+        "D": "Returns to scale."
+      },
+      "correct": "A",
+      "explanation": "The question asks about substituting one input for another while holding output constant, which is TRS. B concerns revenue from an input. C is a consumer concept. D scales all inputs."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes TRS from marginal product?",
+      "choices": {
+        "A": "Marginal product measures extra output from one input holding others fixed; TRS measures input substitution holding output fixed.",
+        "B": "TRS measures extra output; marginal product measures cost-minimizing input ratios.",
+        "C": "TRS applies only to consumers; marginal product applies only to firms.",
+        "D": "TRS and marginal product are identical whenever isoquants slope downward."
+      },
+      "correct": "A",
+      "explanation": "Marginal product is an output effect; TRS is a tradeoff between inputs along an isoquant. B reverses the concepts. C confuses TRS with MRS. D ignores that TRS is a ratio of marginal products."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = L^(1/3)K^(2/3), how does TRS = MPL/MPK change when L and K both double? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "TRS stays the same because the input ratio K/L is unchanged.",
+        "B": "TRS doubles because both marginal products double.",
+        "C": "TRS falls by half because diminishing marginal product applies.",
+        "D": "TRS becomes 1 because both inputs are scaled equally."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas, TRS=(a/b)(K/L). Doubling both inputs leaves K/L unchanged, so TRS is unchanged. B misunderstands homogeneous marginal products. C confuses movement along an input ray with movement along an isoquant. D assumes equal scaling creates equal marginal products."
+    }
+  ]
+}

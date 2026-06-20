@@ -1,0 +1,135 @@
+{
+  "topic": "Certainty Equivalents",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Olivia has u(w)=sqrt(w). A lottery pays $100 with probability 0.5 and $36 with probability 0.5. What is the certainty equivalent, and what does it mean?",
+      "choices": {
+        "A": "$68; it is the expected monetary value of the lottery.",
+        "B": "$64; it is the certain amount whose utility equals the lottery's expected utility.",
+        "C": "$8; it is the expected utility of the lottery.",
+        "D": "$32; it is half the difference between the high and low outcomes."
+      },
+      "correct": "B",
+      "explanation": "EU=0.5(10)+0.5(6)=8, so sqrt(CE)=8 and CE=64. A gives expected value. C gives utility units rather than dollars. D gives a spread measure, not a certainty equivalent."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Caleb has u(w)=ln(w). A lottery pays $200 with probability 0.5 and $50 with probability 0.5. What is the certainty equivalent?",
+      "choices": {
+        "A": "$100, because ln(CE)=0.5ln(200)+0.5ln(50)=ln(100).",
+        "B": "$125, because the expected value is 0.5(200)+0.5(50).",
+        "C": "$150, because the high payoff is weighted more under log utility.",
+        "D": "$75, because the low payoff receives more weight for a risk-averse person."
+      },
+      "correct": "A",
+      "explanation": "The certainty equivalent solves ln(CE)=ln(sqrt(200·50))=ln(100), so CE=100. B gives expected value. C invents extra weight on the high payoff. D confuses risk aversion with changing probabilities."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Mia has u(w)=sqrt(w). Lottery L pays $100 or $36 with equal probability. Lottery M pays $144 or $16 with equal probability. Both have expected value $68? What happens to the certainty equivalent when moving from L to M, and why?",
+      "choices": {
+        "A": "It rises because the high payoff rises from $100 to $144.",
+        "B": "It falls because M is a mean-preserving spread of L and concavity lowers expected utility.",
+        "C": "It stays constant because both lotteries have the same expected value.",
+        "D": "It cannot be compared because certainty equivalents require risk neutrality."
+      },
+      "correct": "B",
+      "explanation": "L has EV=68. M has EV=80, so it is not a mean-preserving spread of L. The intended mean-preserving comparison is not valid with these numbers. A focuses only on the upside. C is false because the EVs differ and CE depends on utility. D is false because CEs are especially useful under risk aversion."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For the same lottery paying $100 or $36 with equal probability, compare Person A with u_A(w)=sqrt(w) and Person B with u_B(w)=w. How do their certainty equivalents differ?",
+      "choices": {
+        "A": "A's CE is $68 and B's CE is $64 because risk aversion raises the value of certainty.",
+        "B": "A's CE is $64 and B's CE is $68 because concavity makes A value the risky lottery below its expected value.",
+        "C": "Both have CE=$64 because the outcomes are the same.",
+        "D": "Both have CE=$68 because probabilities are equal."
+      },
+      "correct": "B",
+      "explanation": "A has EU=8, so CE=64. B is risk neutral, so CE=EV=68. A reverses the effects. C ignores different utility curvature. D ignores risk aversion for Person A."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a graph of u(w)=sqrt(w), a lottery pays $36 and $100 with equal probability. How is the certainty equivalent shown?",
+      "choices": {
+        "A": "It is the x-coordinate of the point on the utility curve whose height equals the midpoint of the chord between u(36) and u(100).",
+        "B": "It is the y-coordinate of the midpoint of the chord between u(36) and u(100).",
+        "C": "It is the x-coordinate of the expected wealth point, $68, on the utility curve.",
+        "D": "It is the slope of the chord connecting the two outcome utilities."
+      },
+      "correct": "A",
+      "explanation": "The certainty equivalent is a wealth amount, found by moving horizontally from expected utility to the utility curve and reading the x-value. B gives utility, not wealth. C gives expected value, not CE. D gives average marginal utility over the interval."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For a concave utility function, where does the certainty equivalent of a non-degenerate lottery appear relative to expected wealth on the horizontal axis?",
+      "choices": {
+        "A": "To the right of expected wealth because risk raises the value of high outcomes.",
+        "B": "At expected wealth because probabilities average outcomes.",
+        "C": "To the left of expected wealth because expected utility lies below utility at expected wealth.",
+        "D": "It cannot be placed on the wealth axis because it is measured in utility units."
+      },
+      "correct": "C",
+      "explanation": "For risk aversion, CE<EV because u(E[w])>E[u(w)]. A reverses the result. B describes risk neutrality. D confuses certainty equivalent with expected utility."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "If a person's certainty equivalent for a lottery with expected value $500 is $420, what does this mean?",
+      "choices": {
+        "A": "The person would be indifferent between receiving $420 for sure and taking the lottery.",
+        "B": "The person expects to lose $80 if taking the lottery.",
+        "C": "The lottery pays $420 in its worst state.",
+        "D": "The person is risk neutral because $420 is positive."
+      },
+      "correct": "A",
+      "explanation": "The CE is the sure amount giving the same utility as the risky prospect. B confuses risk premium with actual expected loss. C confuses CE with a state payoff. D ignores that CE below EV indicates risk aversion."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A minor league baseball player is offered either a guaranteed $80,000 contract or a performance contract with uncertain pay. He says he would be exactly indifferent between the performance contract and $72,000 guaranteed. Which concept is he revealing?",
+      "choices": {
+        "A": "Expected value of the performance contract.",
+        "B": "Certainty equivalent of the performance contract.",
+        "C": "Actuarially fair premium of the performance contract.",
+        "D": "Marginal rate of substitution between leisure and income."
+      },
+      "correct": "B",
+      "explanation": "The guaranteed amount that makes him indifferent to the risky contract is the certainty equivalent. A would be probability-weighted dollars. C applies to insurance pricing. D applies to labor-leisure choice."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes certainty equivalent from expected value?",
+      "choices": {
+        "A": "Certainty equivalent is probability-weighted dollars; expected value is probability-weighted utility.",
+        "B": "Certainty equivalent is the sure dollar amount equally preferred to the lottery; expected value is the probability-weighted average dollar payoff.",
+        "C": "Certainty equivalent always exceeds expected value for risk-averse consumers.",
+        "D": "Certainty equivalent can be calculated only for fair lotteries; expected value can be calculated for any lottery."
+      },
+      "correct": "B",
+      "explanation": "CE is preference-based; EV is payoff-based. A reverses expected value and expected utility. C reverses the risk-averse relation. D is false because both can be calculated for any well-defined lottery."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Grace has u(w)=sqrt(w). A safety regulation changes her risky income from a lottery paying $121 or $49 with equal probability to a certain payment of $81. What is the welfare change in certainty-equivalent dollars?",
+      "choices": {
+        "A": "$4 gain, because the original CE is $77 and the new certain amount is $81.",
+        "B": "$0, because both options have expected value $85.",
+        "C": "$81 gain, because risk is eliminated completely.",
+        "D": "$-4 loss, because the original expected value was $85 and the new payment is $81."
+      },
+      "correct": "A",
+      "explanation": "Original EU=0.5(11)+0.5(7)=9, so CE=81, not 77. Thus the CE welfare change is $0. A uses an incorrect CE calculation. B gives the wrong reason because expected values differ: original EV=85 and new EV=81. C counts the whole payment as a gain. D uses expected dollars rather than CE welfare."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Principal-Agent Problems",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A salesperson chooses effort e. Expected revenue is R(e) = 200e - 5e^2, and effort cost is c(e) = 5e^2. The firm cannot observe effort. If the salesperson receives commission rate b on revenue plus a fixed payment, she chooses e to maximize bR(e) - c(e). What commission rate b implements the efficient effort?",
+      "choices": {
+        "A": "b = 0, because fixed wages avoid inefficient risk-bearing.",
+        "B": "b = 1/2, because the agent and principal should split revenue equally.",
+        "C": "b = 1, because the agent must internalize the full marginal revenue product of effort.",
+        "D": "b = 2, because the agent's cost function has coefficient 5."
+      },
+      "correct": "C",
+      "explanation": "Efficient effort maximizes R(e) - c(e), so 200 - 10e - 10e = 0, giving e = 10. The agent chooses effort from b(200 - 10e) - 10e = 0. At e = 10, this requires 100b - 100 = 0, so b = 1. A would generally induce too little effort. B is an unsupported sharing rule. D confuses effort cost curvature with the commission rate."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A manager can exert high effort or low effort. High effort raises expected firm profit by $50,000 relative to low effort and costs the manager $8,000. The manager is risk neutral. The firm can pay a bonus B only if a verifiable performance target is met, and high effort increases the probability of meeting the target from 0.30 to 0.70. What is the minimum bonus that induces high effort?",
+      "choices": {
+        "A": "$8,000",
+        "B": "$10,000",
+        "C": "$20,000",
+        "D": "$50,000"
+      },
+      "correct": "C",
+      "explanation": "High effort raises the probability of receiving the bonus by 0.70 - 0.30 = 0.40. The incentive constraint is 0.40B >= 8000, so B >= $20,000. A ignores the probability difference. B uses an incorrect probability difference of 0.80. D confuses the firm's profit gain with the required bonus."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a principal-agent model, high effort raises the probability of success from 0.40 to 0.70. A new monitoring technology raises the success probability under high effort to 0.80 while leaving the low-effort probability at 0.40. The agent's effort cost remains $12,000. What happens to the minimum success bonus needed to induce high effort?",
+      "choices": {
+        "A": "It falls because the probability difference associated with effort rises.",
+        "B": "It rises because high effort now produces more value for the principal.",
+        "C": "It stays the same because the effort cost is unchanged.",
+        "D": "It becomes zero because monitoring eliminates the need for incentives."
+      },
+      "correct": "A",
+      "explanation": "The incentive constraint is (p_H - p_L)B >= effort cost. The probability difference rises from 0.30 to 0.40, so the required bonus falls from 12000/.30 = $40,000 to 12000/.40 = $30,000. B confuses total value with incentive cost. C ignores the informativeness of performance. D overstates monitoring unless effort becomes directly observable."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm pays a worker with a commission contract. The worker becomes more risk averse, while output remains noisy and effort is still unobservable. What is the likely effect on the optimal contract?",
+      "choices": {
+        "A": "The firm will generally use stronger performance pay because risk-averse workers enjoy variable income.",
+        "B": "The firm faces a sharper tradeoff between incentives and insurance, so optimal performance pay usually becomes weaker and fixed pay more important.",
+        "C": "The firm can switch to a pure fixed wage with no efficiency loss.",
+        "D": "The principal-agent problem disappears because risk aversion reveals effort."
+      },
+      "correct": "B",
+      "explanation": "When agents are more risk averse, performance pay imposes greater risk-bearing costs. The principal must trade off incentive provision against insurance more carefully, often reducing incentive intensity. A reverses risk preferences. C ignores hidden action. D incorrectly says risk aversion makes effort observable."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Imagine a graph with effort on the horizontal axis and dollars on the vertical axis. The firm's marginal revenue product of effort slopes downward, while the agent's marginal cost of effort slopes upward. Under a fixed wage, the agent's private marginal benefit of effort is a horizontal line at zero. What does the graph show?",
+      "choices": {
+        "A": "The fixed wage implements the efficient effort where marginal revenue product equals marginal cost.",
+        "B": "The agent chooses zero effort under the fixed wage even though positive effort may be efficient.",
+        "C": "The efficient effort is always zero because the agent dislikes effort.",
+        "D": "The principal-agent problem is solved because the wage does not vary with output."
+      },
+      "correct": "B",
+      "explanation": "With a fixed wage and unobservable effort, the agent receives no private marginal benefit from effort but bears effort cost, so the agent chooses zero effort. The efficient effort may be positive where marginal revenue product equals marginal cost. A ignores private incentives. C ignores the firm's benefit from effort. D confuses insurance with incentive alignment."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a contract-design graph, the horizontal axis measures incentive intensity and the vertical axis measures expected total cost to the principal. One curve shows agency cost from low effort falling as incentives strengthen; another shows risk-bearing cost rising as incentives strengthen. Where is the optimal contract represented?",
+      "choices": {
+        "A": "At zero incentive intensity because risk-bearing cost is minimized there.",
+        "B": "At maximum incentive intensity because agency cost is minimized there.",
+        "C": "Where the marginal reduction in agency cost equals the marginal increase in risk-bearing cost.",
+        "D": "Where both costs are individually zero."
+      },
+      "correct": "C",
+      "explanation": "The optimal incentive intensity balances the marginal benefit of stronger incentives against the marginal cost of shifting risk to the agent. A ignores agency costs. B ignores risk-bearing costs. D is generally impossible when effort is hidden and output is noisy."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does a principal-agent problem arise when a firm hires a manager to run a store?",
+      "choices": {
+        "A": "Because the manager's effort affects profits, but the owner cannot perfectly observe effort and the manager does not receive the full marginal profit created by effort.",
+        "B": "Because the owner always has less information about the store's revenue than customers do.",
+        "C": "Because the manager and owner must have identical objectives by law.",
+        "D": "Because competitive labor markets eliminate all incentive problems."
+      },
+      "correct": "A",
+      "explanation": "The principal-agent problem combines delegation, conflicting objectives, and hidden action. The manager bears effort cost but may not capture the full profit benefit. B is not the relevant relationship. C states the opposite of the conflict. D incorrectly assumes competition eliminates hidden action."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A restaurant owner cannot observe how carefully a hired manager schedules workers. The manager prefers easier scheduling even if it creates long customer wait times. The owner considers tying part of pay to customer wait-time metrics. Which framework best applies?",
+      "choices": {
+        "A": "Principal-agent problem, because the owner delegates a task and must design incentives for unobservable managerial effort.",
+        "B": "Adverse selection, because customers know food quality before entering.",
+        "C": "Signaling, because the owner is sending a costly message to the manager.",
+        "D": "Public goods, because restaurant meals are nonrival."
+      },
+      "correct": "A",
+      "explanation": "The owner is the principal, the manager is the agent, and the problem is hidden action after delegation. Performance metrics can partially align incentives. B concerns hidden type before contracting and is not described. C misidentifies who is informed and what is being signaled. D is false because restaurant meals are rival and excludable."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a principal-agent problem from adverse selection?",
+      "choices": {
+        "A": "A principal-agent problem is hidden action after delegation; adverse selection is hidden type before contracting.",
+        "B": "A principal-agent problem is hidden type before delegation; adverse selection is hidden action after contracting.",
+        "C": "Principal-agent problems occur only in labor markets; adverse selection occurs only in insurance markets.",
+        "D": "Principal-agent problems are solved by pooling contracts; adverse selection is solved by fixed wages."
+      },
+      "correct": "A",
+      "explanation": "Principal-agent problems usually involve hidden action by an agent after a task is delegated. Adverse selection involves hidden information about type or quality before the transaction. B reverses the concepts. C falsely restricts each model to one setting. D mismatches solutions."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A consultant can exert low effort or high effort. High effort costs the consultant $5,000 and increases the client's expected project value from $70,000 to $90,000. Under a fixed-fee contract, the consultant chooses low effort. If high effort is socially efficient, what is the welfare loss from the principal-agent problem under the fixed-fee contract?",
+      "choices": {
+        "A": "$5,000, equal to the consultant's effort cost.",
+        "B": "$15,000, equal to the net surplus lost from not inducing high effort.",
+        "C": "$20,000, equal to the gross increase in project value.",
+        "D": "$70,000, equal to the low-effort project value."
+      },
+      "correct": "B",
+      "explanation": "High effort adds $20,000 of expected project value at a cost of $5,000, so the net surplus gain from high effort is $15,000. If the fixed-fee contract induces low effort, that surplus is lost. A counts only cost, not benefit. C ignores the effort cost. D uses total value rather than incremental welfare loss."
+    }
+  ]
+}

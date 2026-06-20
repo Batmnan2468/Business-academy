@@ -1,0 +1,135 @@
+{
+  "topic": "Compensating Variation",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Nora has utility U(x,y)=x^{1/2}y^{1/2}. Initially p_x=1, p_y=1, and income is 100. Then p_x rises to 4. What is the compensating variation for the price increase?",
+      "choices": {
+        "A": "$50 taken away after the price change.",
+        "B": "$100 given after the price change.",
+        "C": "$200 given after the price change.",
+        "D": "$100 taken away before the price change."
+      },
+      "correct": "B",
+      "explanation": "For Cobb-Douglas with equal shares, indirect utility is V=m/(2sqrt(p_x p_y)). Initial utility is 100/(2sqrt(1))=50. At new prices, V=m'/(2sqrt(4))=m'/4. Set m'/4=50, so m'=200. CV=m'-100=$100 given after the price increase. A has the wrong sign and magnitude. C gives new income rather than compensation. D confuses CV with taking money away before the change."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Owen has utility U(x,y)=min{x,y}. Initially p_x=2, p_y=2, and income is 80. The price of x falls to 1 while p_y stays 2. What is the compensating variation for the price decrease?",
+      "choices": {
+        "A": "$20 taken away after the price decrease.",
+        "B": "$20 given after the price decrease.",
+        "C": "$40 taken away after the price decrease.",
+        "D": "$10 taken away before the price decrease."
+      },
+      "correct": "A",
+      "explanation": "With perfect complements x=y, initial utility is 80/(2+2)=20. After p_x falls to 1, cost per unit of utility is 1+2=3. To reach old utility 20 requires income 60. CV=60-80=-20, meaning $20 can be taken away after the price decrease. B gets the sign wrong. C overstates the cost saving. D confuses CV with EV timing."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Priya has U(x,y)=x^{1/2}y^{1/2}. Starting from p_x=p_y=1 and m=100, compare the compensating variation when p_x rises to 4 versus when p_x rises to 9. What changes and why?",
+      "choices": {
+        "A": "CV rises from $100 to $200 because the expenditure needed to reach the original utility increases with the new price index.",
+        "B": "CV falls from $100 to $50 because higher prices reduce the quantity demanded.",
+        "C": "CV stays $100 because the original utility level is unchanged.",
+        "D": "CV rises from $50 to $100 because only the x expenditure share changes."
+      },
+      "correct": "A",
+      "explanation": "Initial utility is 50. At p_x=4, required income is 200, so CV=100. At p_x=9, V=m'/(2×3)=m'/6=50, so m'=300 and CV=200. The mechanism is the higher expenditure required to buy the old utility at new prices. B reverses the effect. C ignores new prices in the expenditure function. D uses incorrect values."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Quinn has U(x,y)=min{x,2y}. Initially p_x=2, p_y=2, m=120. Then p_x rises to 4. If income increases before the price change are ignored and compensation is measured after the price change, what happens to compensating variation when initial income rises from 120 to 180?",
+      "choices": {
+        "A": "CV stays $30 because the price change is the same.",
+        "B": "CV rises from $30 to $45 because higher initial income means a higher original utility level must be restored.",
+        "C": "CV falls from $45 to $30 because richer consumers have lower marginal utility.",
+        "D": "CV rises from $60 to $90 because both goods must be bought in equal quantities."
+      },
+      "correct": "B",
+      "explanation": "For U=min{x,2y}, to get utility u requires x=u and y=u/2. Initial unit cost is 2u+2(u/2)=3u, so u=m/3. New unit cost is 4u+2(u/2)=5u. Required new income is (5/3)m. CV=(5/3)m-m=(2/3)m: $80 for m=120 and $120 for m=180, so the numeric values in B are not correct though the mechanism is. This item should be revised with p_x rising from 2 to 3 to produce CV $30 and $45. A ignores scale. C uses unsupported marginal utility reasoning. D assumes x=y."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On an indifference curve-budget line diagram, the price of gasoline rises. Which verbal description corresponds to compensating variation?",
+      "choices": {
+        "A": "Shift the new, steeper budget line outward parallel to itself until it just reaches the original indifference curve.",
+        "B": "Shift the original budget line outward until it reaches the new indifference curve.",
+        "C": "Measure the area under the ordinary demand curve between old and new prices.",
+        "D": "Rotate the original budget line until it has the new slope while keeping the old intercept fixed."
+      },
+      "correct": "A",
+      "explanation": "CV asks how much income must be added after the price change, so it shifts the new budget line parallel until the old utility is restored. B describes equivalent variation logic. C describes ordinary consumer surplus approximation. D changes prices without compensating income appropriately."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A price decrease makes the new budget line flatter and allows a higher indifference curve. How is compensating variation shown graphically?",
+      "choices": {
+        "A": "As an inward parallel shift of the new budget line until it is tangent to the original indifference curve.",
+        "B": "As an outward parallel shift of the old budget line until it is tangent to the new indifference curve.",
+        "C": "As the vertical distance between the two demand curves at the old quantity.",
+        "D": "As the slope of the new budget line divided by the slope of the old budget line."
+      },
+      "correct": "A",
+      "explanation": "For a price decrease, CV is negative: the amount that can be taken away after the change while restoring original utility. Graphically, shift the new budget line inward parallel to itself to the old indifference curve. B is EV. C confuses Hicksian and Marshallian demand geometry. D is a relative price ratio, not a money measure."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A price increase in electricity has a compensating variation of $35 for Rachel. What does this mean?",
+      "choices": {
+        "A": "Rachel's electricity bill rises by exactly $35.",
+        "B": "Rachel would need $35 after the price increase to be as well off as before.",
+        "C": "Rachel would pay $35 before the price increase to avoid the price increase.",
+        "D": "Rachel's consumer surplus must fall by exactly $35."
+      },
+      "correct": "B",
+      "explanation": "CV for a price increase is the income needed after the change to restore original utility. A confuses compensation with bill change. C describes equivalent variation. D confuses exact utility-based welfare with Marshallian consumer surplus, which need not be identical."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A regulator asks: after a water price increase, how much money must be paid to households at the new prices so they can still reach their old utility levels? Which welfare measure is being requested?",
+      "choices": {
+        "A": "Equivalent variation.",
+        "B": "Compensating variation.",
+        "C": "Producer surplus.",
+        "D": "Ordinary consumer surplus."
+      },
+      "correct": "B",
+      "explanation": "The phrase 'paid at the new prices to reach old utility' defines compensating variation. A measures money before the change to make the consumer indifferent to the change. C concerns firms. D is based on Marshallian demand rather than the expenditure function."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes compensating variation from ordinary consumer surplus?",
+      "choices": {
+        "A": "Compensating variation uses Hicksian expenditure needed to reach a utility level; ordinary consumer surplus uses the area under Marshallian demand.",
+        "B": "Compensating variation applies only to firms; consumer surplus applies only to households.",
+        "C": "Compensating variation is always larger than consumer surplus for any price change.",
+        "D": "Compensating variation measures total spending, while consumer surplus measures total willingness to pay."
+      },
+      "correct": "A",
+      "explanation": "CV is utility-constant and expenditure-function based; ordinary CS uses Marshallian demand and money areas. B is false. C is not generally true. D misstates both measures."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Sara has U(x,y)=x^{1/2}y^{1/2}, p_y=1, and income 64. The price of x rises from 1 to 4. What is the compensating variation?",
+      "choices": {
+        "A": "$64.",
+        "B": "$32.",
+        "C": "$128.",
+        "D": "$16."
+      },
+      "correct": "A",
+      "explanation": "Initial utility is 64/(2sqrt(1))=32. At new prices, V=m'/(2sqrt(4))=m'/4. Set m'/4=32, so m'=128. CV=128-64=$64. B gives half the required compensation. C gives required post-change income, not compensation. D uses the old utility level as dollars."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Interior Solutions",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A student has U(x,y)=x^{1/2}y^{1/2}, income m=96, p_x=4, and p_y=8. Assuming an interior solution, what bundle satisfies the tangency condition and the budget constraint?",
+      "choices": {
+        "A": "x=12, y*=6; MRS=p_x/p_y and all income is spent.",
+        "B": "x*=8, y*=8; equal utility exponents imply equal quantities.",
+        "C": "x*=24, y*=0; x is cheaper, so the optimum cannot be interior.",
+        "D": "x*=6, y*=12; the price ratio implies y/x=2."
+      },
+      "correct": "A",
+      "explanation": "MRS=y/x. Tangency gives y/x=4/8=1/2, so y=x/2. Budget 4x+8y=96 gives x=12, y=6. B confuses equal exponents with equal quantities. C wrongly chooses a corner despite strictly convex monotonic preferences. D inverts the price ratio."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Priya maximizes U(x,y)=x^{3/4}y^{1/4} with income m=200, p_x=10, and p_y=5. Which interior bundle is optimal, and what expenditure pattern does it imply?",
+      "choices": {
+        "A": "x*=10, y*=20; spending is equal because both goods are essential.",
+        "B": "x*=15, y*=10; three-fourths of income is spent on x and one-fourth on y.",
+        "C": "x*=20, y*=0; the higher exponent on x implies a corner on x.",
+        "D": "x*=5, y*=30; one-fourth of income is spent on x."
+      },
+      "correct": "B",
+      "explanation": "Cobb-Douglas demands give x=(3/4)(200)/10=15 and y=(1/4)(200)/5=10. Spending is 150 on x and 50 on y. A uses equal spending incorrectly. C falsely treats a high exponent as a corner. D reverses the expenditure shares."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x^{1/2}y^{1/2}, m=120, p_x=4, p_y=6. Suppose p_y falls to 3. What happens to the interior optimum and why?",
+      "choices": {
+        "A": "x* falls from 15 to 7.5 because y became cheaper.",
+        "B": "y* rises from 10 to 20 because the fixed one-half expenditure share buys more y at the lower price.",
+        "C": "y* stays at 10 because interior solutions always keep quantities fixed.",
+        "D": "x* rises from 15 to 30 because the consumer substitutes toward x."
+      },
+      "correct": "B",
+      "explanation": "With equal Cobb-Douglas exponents, y*=m/(2p_y). Initially y=120/(12)=10; after p_y=3, y=120/6=20. The mechanism is a lower own price increasing quantity purchased for the same expenditure share. A reports the change in x incorrectly; x remains 15. C ignores price effects. D reverses substitution toward the cheaper good."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer with smooth strictly convex preferences has an interior optimum for apples x and bananas y. At current prices p_x=2 and p_y=4, MRS=1/2 at the optimum. If p_x rises to 4 while p_y and income stay fixed, what must happen at the new interior optimum?",
+      "choices": {
+        "A": "MRS must rise to 1 because the market trade-off p_x/p_y rises; the consumer moves to a bundle where apples are relatively scarcer.",
+        "B": "MRS must fall to 1/4 because apples are now more expensive.",
+        "C": "MRS stays at 1/2 because preferences do not change.",
+        "D": "The consumer must buy only bananas because any price increase rules out an interior optimum."
+      },
+      "correct": "A",
+      "explanation": "Interior optimality requires MRS=p_x/p_y. The ratio rises from 2/4=1/2 to 4/4=1. With convex preferences, this means moving to a bundle where x is lower relative to y, raising MRS. B inverts the price ratio. C ignores that the chosen bundle changes. D incorrectly turns a possible interior solution into a necessary corner."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer's indifference curves for tea x and cookies y are smooth and strictly convex. The budget line has slope -2. At the chosen bundle, the indifference curve is tangent to the budget line in the positive quadrant. What must be true?",
+      "choices": {
+        "A": "The MRS equals 2, and the bundle has positive quantities of both goods.",
+        "B": "The MRS equals -2, and utility is minimized.",
+        "C": "The price of tea must equal the price of cookies.",
+        "D": "The consumer must be at a corner because the budget line is downward sloping."
+      },
+      "correct": "A",
+      "explanation": "The indifference curve slope is -MRS, so tangency to a budget line with slope -2 implies MRS=2. Since the tangency occurs in the positive quadrant, both goods are consumed. B gives the slope rather than the positive MRS and says minimization. C assumes equal prices despite slope -2. D ignores the stated interior tangency."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For concert tickets x and parking passes y, a consumer has monotonic, convex preferences. Her budget line shifts outward parallel after income rises. If the original optimum and new optimum are both interior, which graphical feature remains unchanged?",
+      "choices": {
+        "A": "The intercepts remain unchanged.",
+        "B": "The slope of the budget line remains unchanged, so the tangency condition uses the same price ratio.",
+        "C": "The chosen quantities remain unchanged.",
+        "D": "The indifference curve through the optimum remains the same."
+      },
+      "correct": "B",
+      "explanation": "A parallel outward budget shift changes intercepts but keeps slope -p_x/p_y unchanged. At an interior optimum, MRS still equals the same price ratio. A is wrong because income changes intercepts. C is wrong because higher income changes the chosen bundle for normal goods. D is wrong because the consumer reaches a higher indifference curve."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "At an interior optimum for U(x,y), the condition MU_x/p_x=MU_y/p_y holds. What does this mean economically?",
+      "choices": {
+        "A": "The consumer receives the same total utility from x and y.",
+        "B": "The consumer spends the same number of dollars on each good.",
+        "C": "The last dollar spent on each good yields the same marginal utility, so no budget reallocation can raise utility.",
+        "D": "The marginal utilities of the two goods must be numerically equal."
+      },
+      "correct": "C",
+      "explanation": "Interior optimality equalizes marginal utility per dollar across goods. If one were higher, shifting a dollar toward that good would raise utility. A confuses marginal and total utility. B is true only for special utility forms. D ignores prices."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A researcher observes that Emma buys positive amounts of both streaming subscriptions x and gym visits y. Prices are p_x=12 and p_y=6, and her preferences are smooth, monotonic, and strictly convex. Which model condition should the researcher test at Emma's optimum?",
+      "choices": {
+        "A": "MU_x=MU_y because both goods are consumed.",
+        "B": "MRS=p_x/p_y=2 because the solution is interior.",
+        "C": "MRS=p_y/p_x=1/2 because y is cheaper.",
+        "D": "x=0 or y=0 because strict convexity implies a corner."
+      },
+      "correct": "B",
+      "explanation": "Positive consumption of both goods with smooth convex preferences indicates an interior solution, so the tangency condition is MRS=p_x/p_y=12/6=2. A omits prices. C inverts the price ratio. D reverses the implication of strict convexity."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an interior solution from a corner solution in a two-good consumer problem?",
+      "choices": {
+        "A": "An interior solution has positive quantities of both goods and usually satisfies tangency; a corner solution has zero consumption of at least one good and may not satisfy tangency.",
+        "B": "An interior solution means the consumer spends less than income; a corner solution means the consumer spends all income.",
+        "C": "An interior solution occurs only when prices are equal; a corner solution occurs only when prices differ.",
+        "D": "An interior solution maximizes utility; a corner solution does not maximize utility."
+      },
+      "correct": "A",
+      "explanation": "Interior solutions involve strictly positive quantities and are characterized by MRS=p_x/p_y when differentiable. Corner solutions are still utility-maximizing but occur at the boundary. B is wrong because monotonic preferences imply full spending in both cases. C invents a price-equality requirement. D wrongly says corners are not optima."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Sara has U(x,y)=x^{1/2}y^{1/2}. Initially p_x=5, p_y=5, and m=100. A campus grant raises income to 120 with prices unchanged. Using the maximized utility value from the optimal interior bundle, what is the welfare gain?",
+      "choices": {
+        "A": "0, because prices are unchanged.",
+        "B": "2, because the optimal bundle changes from (10,10) to (12,12), raising utility from 10 to 12.",
+        "C": "20, because income rises by 20 dollars.",
+        "D": "4, because both goods rise by 2 units."
+      },
+      "correct": "B",
+      "explanation": "Initially x=y=100/(25)=10 and U=10. After income rises, x=y=120/(25)=12 and U=12. Welfare measured by maximized utility rises by 2. A ignores income effects. C confuses dollars with utility. D adds quantity changes rather than computing utility."
+    }
+  ]
+}

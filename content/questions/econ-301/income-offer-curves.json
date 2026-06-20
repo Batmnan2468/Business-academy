@@ -1,0 +1,135 @@
+{
+  "topic": "Income Offer Curves",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Maya consumes coffee x and sandwiches y with utility U(x,y)=x^{1/2}y^{1/2}. Prices are p_x=4 and p_y=8. If income is m=96, what is her optimal bundle and what point does this add to the income offer curve?",
+      "choices": {
+        "A": "x=12, y=6; this point lies on the income offer curve because it is optimal at income 96 with prices fixed.",
+        "B": "x=24, y=12; this point lies on the income offer curve because both goods rise proportionally with income.",
+        "C": "x=6, y=9; this point lies on the income offer curve because it equalizes spending per unit of price.",
+        "D": "x=16, y=4; this point lies on the income offer curve because it satisfies the budget constraint."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas U=x^{1/2}y^{1/2}, Maya spends half of income on each good, so x=48/4=12 and y=48/8=6. B incorrectly doubles the bundle without respecting income 96. C uses a wrong marginal condition. D is affordable but not utility-maximizing because MRS does not equal p_x/p_y."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Eli consumes bus rides x and streaming hours y with utility U(x,y)=min{x,2y}. Prices are p_x=3 and p_y=6. Income is m=72. What is the optimal bundle and how should it be interpreted on the income offer curve?",
+      "choices": {
+        "A": "x=12, y=6; the income offer curve follows the ray x=2y because goods must be consumed in that fixed ratio.",
+        "B": "x=8, y=8; the income offer curve is a 45-degree line because prices enter symmetrically.",
+        "C": "x=24, y=0; the income offer curve lies on the x-axis because bus rides are cheaper.",
+        "D": "x=0, y=12; the income offer curve lies on the y-axis because streaming has the larger coefficient in utility."
+      },
+      "correct": "A",
+      "explanation": "Perfect complements require x=2y. The budget gives 3(2y)+6y=72, so y=6 and x=12. B confuses equal quantities with fixed proportions. C treats complements as substitutes. D misreads the utility coefficient as meaning only y matters."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Nora has Cobb-Douglas preferences U(x,y)=x^{0.25}y^{0.75}. Prices are p_x=2 and p_y=6. When income rises from 120 to 180, what happens to her optimal x and y, and what mechanism explains the movement along the income offer curve?",
+      "choices": {
+        "A": "x rises from 15 to 22.5 and y rises from 15 to 22.5; both goods are normal because fixed expenditure shares scale consumption proportionally with income.",
+        "B": "x rises from 15 to 30 and y stays at 15; only x changes because it is cheaper.",
+        "C": "x stays at 15 and y rises from 15 to 30; only y changes because it has the larger exponent.",
+        "D": "x falls from 15 to 10 while y rises from 15 to 25; x is inferior because its exponent is smaller."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas demands are x=0.25m/2 and y=0.75m/6. At m=120, x=15 and y=15; at m=180, x=22.5 and y=22.5. B and C confuse expenditure shares with all adjustment going to one good. D incorrectly treats a smaller exponent as inferiority."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A student's optimal bundles at prices p_x=1 and p_y=2 are (x,y)=(10,15) when income is 40 and (x,y)=(6,22) when income is 50. What does this imply about good x over this income range, and what mechanism explains the income offer curve's direction?",
+      "choices": {
+        "A": "x is normal because income rose and total spending rose.",
+        "B": "x is inferior because income increased while the optimal quantity of x decreased, so extra purchasing power is shifted away from x toward y.",
+        "C": "x is Giffen because demand for x fell when income rose.",
+        "D": "x is a complement to y because y rose when x fell."
+      },
+      "correct": "B",
+      "explanation": "Holding prices fixed, income rises from 40 to 50 while x falls from 10 to 6, so x is inferior over this range. A confuses total spending with demand for x. C applies a price-effect concept to an income change. D infers complementarity from income movements, which is not valid."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a graph with concert tickets x on the horizontal axis and restaurant meals y on the vertical axis, prices are fixed at p_x=20 and p_y=10. As income rises, the income offer curve bends backward toward the y-axis after income reaches 200. What does this shape imply?",
+      "choices": {
+        "A": "Concert tickets become cheaper at high income because the budget line gets flatter.",
+        "B": "Restaurant meals become inferior at high income because y is on the vertical axis.",
+        "C": "Concert tickets are inferior over the backward-bending range because optimal x falls as the budget line shifts outward in parallel.",
+        "D": "Both goods are normal because the budget line's intercepts increase with income."
+      },
+      "correct": "C",
+      "explanation": "With fixed prices, income changes shift the budget line outward in parallel, leaving slope unchanged. If the income offer curve bends backward toward the y-axis, x falls as income rises, so x is inferior over that range. A incorrectly says relative prices changed. B misidentifies the inferior good. D ignores the backward movement in x."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For Olivia, the income offer curve for textbooks x and snacks y is a straight ray from the origin with slope 3 in a diagram where y is vertical and x is horizontal. Prices are fixed at p_x=6 and p_y=2. Which statement best interprets this graph?",
+      "choices": {
+        "A": "As income rises, Olivia keeps y=3x, so both goods are normal and the ratio of quantities is constant.",
+        "B": "As income rises, Olivia keeps spending equal on both goods because the slope is 3.",
+        "C": "Textbooks are inferior because the income offer curve is steeper than the budget line.",
+        "D": "Snacks are inferior because the vertical quantity rises faster than the horizontal quantity."
+      },
+      "correct": "A",
+      "explanation": "A ray from the origin with slope 3 means y=3x at every income, so both quantities rise proportionally as income rises. B confuses quantity ratio with expenditure shares. C compares the offer curve slope to the budget line without a valid inference about inferiority. D mistakes faster quantity growth for inferiority."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A consumer's income offer curve for groceries x and movie tickets y slopes upward at low incomes but eventually turns left as income rises, with prices held fixed. What is the best economic interpretation?",
+      "choices": {
+        "A": "Both goods are inferior at all income levels because the curve is nonlinear.",
+        "B": "Groceries become inferior over the range where x decreases as income increases, while movie tickets remain normal over that range if y increases.",
+        "C": "Movie tickets must be inferior because the curve turns left rather than right.",
+        "D": "The consumer violates utility maximization because income offer curves cannot bend."
+      },
+      "correct": "B",
+      "explanation": "An income offer curve records optimal bundles as income varies with prices fixed. If x falls while income rises, x is inferior over that range; if y rises, y is normal there. A incorrectly says nonlinearity implies inferiority. C misidentifies the good that falls. D falsely rules out bending income offer curves."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A meal-kit company observes that when households move from annual income 40000 to 80000, holding meal-kit and grocery prices roughly fixed, they buy fewer budget frozen dinners and more fresh meal kits. Which model should the company use to represent the path of optimal bundles, and what would it likely show?",
+      "choices": {
+        "A": "A price offer curve; it would show substitution away from frozen dinners as their relative price rises.",
+        "B": "An income offer curve; it would show frozen dinners as inferior and meal kits as normal over the observed income range.",
+        "C": "A demand curve for meal kits; it would show both goods as substitutes because income changed.",
+        "D": "An Edgeworth box; it would show whether the households can trade frozen dinners for meal kits."
+      },
+      "correct": "B",
+      "explanation": "The observed variation is income while prices are held roughly fixed, so the income offer curve is the appropriate model. Frozen dinners fall with income, so they are inferior over this range, while meal kits rise and are normal. A incorrectly changes prices. C uses a single-good demand curve rather than a bundle path. D applies an exchange model not needed here."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an income offer curve from an Engel curve for gasoline x when prices are fixed at p_x=4 and p_y=8?",
+      "choices": {
+        "A": "The income offer curve plots optimal bundles (x,y) as income changes; the Engel curve plots optimal x against income.",
+        "B": "The income offer curve plots x against p_x; the Engel curve plots y against p_y.",
+        "C": "The income offer curve holds utility fixed; the Engel curve holds income fixed.",
+        "D": "The income offer curve is only for inferior goods; the Engel curve is only for normal goods."
+      },
+      "correct": "A",
+      "explanation": "An income offer curve is a locus of optimal bundles in goods space as income changes, while an Engel curve maps income to the quantity demanded of one good. B confuses both with demand curves. C confuses income offer curves with compensated demand. D falsely restricts each curve to one type of good."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A policy analyst uses the inverse Engel relation for bus rides x as m=20+4x over the relevant income range, with prices fixed. If a student's income rises from 60 to 100, what is the change in optimal bus rides, and why is this not a welfare-surplus calculation?",
+      "choices": {
+        "A": "Bus rides rise by 10, and this is not welfare surplus because the curve relates income to quantity demanded, not willingness to pay over units.",
+        "B": "Bus rides rise by 20, and this is consumer surplus because it is the area under the Engel curve.",
+        "C": "Bus rides fall by 10, and this is deadweight loss because income changed without a price change.",
+        "D": "Bus rides rise by 5, and this is producer surplus because bus rides are supplied by firms."
+      },
+      "correct": "A",
+      "explanation": "From m=20+4x, x=(m-20)/4. At m=60, x=10; at m=100, x=20, so the change is 10. This topic does not directly use numerical welfare analysis; the question uses the Type 7 slot to test a numerical income-demand calculation and explicitly notes that Engel/income offer curves do not measure surplus areas. B incorrectly treats Engel-curve area as consumer surplus. C invents deadweight loss. D calculates incorrectly and mislabels the surplus concept."
+    }
+  ]
+}

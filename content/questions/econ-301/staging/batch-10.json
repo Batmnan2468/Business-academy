@@ -1,0 +1,1352 @@
+[
+    {
+        "topic": "Shutdown Logic",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive tomato grower has short-run cost C(q)=100+4q+q^2 and faces market price p=12. Fixed cost 100 is sunk for the season. Should the firm produce or shut down, and what is the economic reason?",
+                "choices": {
+                    "A": "Produce q=4 because p=MC and operating revenue covers variable cost.",
+                    "B": "Shut down because price is below average total cost at q=4.",
+                    "C": "Produce q=8 because price should equal average variable cost.",
+                    "D": "Shut down because fixed cost is positive."
+                },
+                "correct": "A",
+                "explanation": "MC=4+2q, so p=12 gives q=4. VC=4q+q^2=32, revenue=48, so producing contributes 16 toward fixed cost. B confuses the short-run shutdown rule with the long-run exit rule. C sets the wrong condition. D treats sunk fixed cost as relevant."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive bakery has short-run cost C(q)=72+18q+2q^2 and market price p=14. The fixed cost is sunk this week. What output minimizes loss?",
+                "choices": {
+                    "A": "q=0, because price is below minimum AVC.",
+                    "B": "q=1, because marginal cost equals price after rounding.",
+                    "C": "q=4, because spreading fixed cost lowers average total cost.",
+                    "D": "q=0, because price is below minimum ATC but above AVC."
+                },
+                "correct": "A",
+                "explanation": "VC=18q+2q^2, so AVC=18+2q, whose minimum over q>0 is above 18. Since p=14<AVC for every positive q, shutdown is optimal. B ignores the nonnegative-output constraint from p=MC. C incorrectly focuses on spreading fixed cost. D gives the wrong reason because p is below AVC, not merely below ATC."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A short-run competitive firm has C(q)=64+10q+q^2. Initially p=14; then p rises to 18. How does the shutdown decision change, and what mechanism explains it?",
+                "choices": {
+                    "A": "It shuts down at both prices because fixed cost remains positive.",
+                    "B": "It produces at both prices; higher price raises the profit-maximizing q by moving along MC.",
+                    "C": "It shuts down at p=14 but produces at p=18 because price crosses minimum AVC.",
+                    "D": "It produces at p=14 but shuts down at p=18 because higher output raises total cost."
+                },
+                "correct": "B",
+                "explanation": "AVC=10+q, so both prices exceed minimum AVC. MC=10+2q gives q=2 at p=14 and q=4 at p=18. B correctly names movement along MC. A wrongly treats fixed cost as decisive. C miscalculates AVC. D reverses the price incentive."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has short-run cost C(q)=F+6q+q^2 and price p=12. If sunk fixed cost F rises from 25 to 100, what happens to the short-run shutdown decision?",
+                "choices": {
+                    "A": "The firm shuts down because higher fixed cost raises total cost.",
+                    "B": "The firm reduces output because MC shifts upward.",
+                    "C": "The firm produces the same output because sunk fixed cost does not affect AVC or MC.",
+                    "D": "The firm produces more because it must cover the larger fixed cost."
+                },
+                "correct": "C",
+                "explanation": "MC=6+2q, so q=3 at p=12. AVC=6+q, so p exceeds AVC. Changing sunk F affects profit level but not the produce-or-shut-down comparison. A uses ATC instead of AVC. B falsely shifts MC. D commits the sunk-cost fallacy."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A firm has U-shaped AVC and MC curves. At price p=9, the horizontal price line lies below the minimum point of AVC. In the usual output-price diagram, what should be inferred?",
+                "choices": {
+                    "A": "The firm produces where p=MC because MC slopes upward.",
+                    "B": "The firm produces where p intersects ATC because fixed cost must be paid.",
+                    "C": "The firm shuts down because every positive output has variable cost greater than revenue.",
+                    "D": "The firm produces at the AVC-minimizing output because losses are smallest there."
+                },
+                "correct": "C",
+                "explanation": "If price lies below the entire AVC curve, revenue cannot cover variable cost at any positive q. A ignores the shutdown condition. B uses the long-run exit threshold. D chooses the least bad positive output but ignores that q=0 avoids variable losses."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A long-run competitive firm has a U-shaped LRAC curve with minimum 20 at q=50. If the market price line is horizontal at p=17, what does the graph imply?",
+                "choices": {
+                    "A": "The firm exits in the long run because the price line lies below the entire LRAC curve.",
+                    "B": "The firm produces q=50 because LRAC is minimized there.",
+                    "C": "The firm produces where p=LRMC even if LRAC exceeds price.",
+                    "D": "The firm expands output until LRAC falls to 17."
+                },
+                "correct": "A",
+                "explanation": "In the long run all costs are avoidable, so price below minimum LRAC implies exit. B confuses technical efficiency with profitability. C ignores that p must cover long-run average cost. D assumes LRAC reaches 17 when the stated minimum is 20."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A competitive gym has weekly fixed rent of 500, variable cost VC(q)=8q+q^2, and price p=18. Why is average variable cost, rather than average total cost, the relevant short-run shutdown threshold?",
+                "choices": {
+                    "A": "Because rent is sunk for the week, the firm compares revenue with avoidable variable cost.",
+                    "B": "Because fixed cost is always zero in the short run.",
+                    "C": "Because firms maximize revenue rather than profit in the short run.",
+                    "D": "Because average total cost is unrelated to profit."
+                },
+                "correct": "A",
+                "explanation": "The short-run shutdown decision asks whether operating covers avoidable costs. B is false because fixed costs can exist. C is not profit maximization. D is too strong: ATC matters for profit, but not the shutdown margin when fixed cost is sunk."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A food truck must pay a nonrefundable 300 festival fee before opening. Once open, it can sell tacos with AVC=5+0.5q and MC=5+q. The taco price at the festival is 11. What should it do after the fee has already been paid?",
+                "choices": {
+                    "A": "Shut down because the festival fee makes average total cost high.",
+                    "B": "Open and sell q=6 tacos because p=MC and price covers AVC.",
+                    "C": "Open and sell q=12 tacos because p equals AVC.",
+                    "D": "Shut down because nonrefundable fees are variable costs."
+                },
+                "correct": "B",
+                "explanation": "MC=5+q, so q=6. AVC at q=6 is 8, below price 11, so operating reduces loss. A treats sunk fixed cost as avoidable. C sets p=AVC. D misclassifies the fee."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes short-run shutdown from long-run exit for a competitive firm?",
+                "choices": {
+                    "A": "Short-run shutdown occurs when p<ATC; long-run exit occurs when p<AVC.",
+                    "B": "Short-run shutdown occurs when p<AVC; long-run exit occurs when p<ATC because all costs are avoidable in the long run.",
+                    "C": "Both short-run shutdown and long-run exit occur only when p<MC.",
+                    "D": "Short-run shutdown depends on fixed cost; long-run exit depends only on variable cost."
+                },
+                "correct": "B",
+                "explanation": "Short-run sunk fixed cost makes AVC the shutdown threshold; long-run avoidability makes ATC the exit threshold. A reverses the rules. C confuses marginal and average conditions. D reverses the relevance of fixed cost."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A competitive firm has cost C(q)=36+4q+q^2 and faces p=10. Fixed cost is sunk. Compare operating at the profit-maximizing positive output with shutting down. What is the change in producer surplus from operating rather than shutting down?",
+                "choices": {
+                    "A": "9, because revenue exceeds variable cost by 9.",
+                    "B": "-27, because total profit is negative after fixed cost.",
+                    "C": "36, because fixed cost is the producer surplus loss.",
+                    "D": "18, because price exceeds AVC by 6 at q=3."
+                },
+                "correct": "A",
+                "explanation": "MC=4+2q, so q=3. Revenue is 30 and VC=12+9=21, so producer surplus is 9. B calculates profit, not producer surplus. C treats fixed cost as variable. D multiplies the wrong average gap."
+            }
+        ]
+    },
+    {
+        "topic": "Cost Minimization",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm produces widgets with q=K^{1/2}L^{1/2}. It must produce q=20, with wage w=4 and rental rate r=1. What cost-minimizing input bundle should it choose, and why?",
+                "choices": {
+                    "A": "K=20, L=20 because Cobb-Douglas always uses equal inputs.",
+                    "B": "K=40, L=10 because TRS equals w/r and KL=400.",
+                    "C": "K=10, L=40 because labor is more expensive, so use more labor.",
+                    "D": "K=80, L=5 because capital is cheaper, so use only capital."
+                },
+                "correct": "B",
+                "explanation": "TRS=MP_L/MP_K=K/L. Set K/L=w/r=4 and KL=400, giving L=10 and K=40. A ignores prices. C reverses substitution. D violates the tangency condition."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has production function q=min{K,2L}. It must produce 30 units. Input prices are r=6 for capital and w=3 for labor. What is the minimum-cost bundle?",
+                "choices": {
+                    "A": "K=30, L=15, because inputs must be used in the fixed proportion K=2L.",
+                    "B": "K=15, L=30, because labor is cheaper than capital.",
+                    "C": "K=30, L=30, because Leontief production requires equal inputs.",
+                    "D": "K=0, L=15, because labor alone can produce output."
+                },
+                "correct": "A",
+                "explanation": "For q=min{K,2L}=30, need K=30 and 2L=30, so L=15. A is correct. B reverses the fixed proportion. C confuses min{K,L} with min{K,2L}. D ignores the need for capital."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For q=K^{1/2}L^{1/2}, target q=24, and initial prices w=2, r=2, the wage rises to w=8 while r stays 2. What happens to the cost-minimizing capital-labor ratio, and why?",
+                "choices": {
+                    "A": "K/L falls from 1 to 1/4 because labor became more expensive.",
+                    "B": "K/L rises from 1 to 4 because the firm substitutes toward relatively cheaper capital.",
+                    "C": "K/L stays at 1 because output is fixed.",
+                    "D": "K/L rises from 1 to 16 because the wage quadruples and output is 24."
+                },
+                "correct": "B",
+                "explanation": "TRS=K/L=w/r. Initially K/L=1; after the wage increase K/L=4. The mechanism is substitution away from labor. A reverses the ratio. C ignores relative prices. D squares the price change incorrectly."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm with production q=K^{1/3}L^{2/3} minimizes cost for a fixed output. If the rental rate r rises while wage w is unchanged, what happens to the cost-minimizing input mix?",
+                "choices": {
+                    "A": "The firm uses relatively less capital because the isocost slope changes and capital becomes more expensive.",
+                    "B": "The firm uses relatively more capital because capital has diminishing marginal product.",
+                    "C": "The input mix is unchanged because the production function is unchanged.",
+                    "D": "Both inputs fall because target output is fixed."
+                },
+                "correct": "A",
+                "explanation": "Higher r lowers w/r and makes capital relatively expensive, so the tangency requires less K relative to L. B misuses diminishing marginal product. C ignores input prices. D cannot hold output fixed unless productivity changes."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a graph with labor L on the horizontal axis and capital K on the vertical axis, a target isoquant is convex to the origin. The isocost line has slope -w/r. What graphical condition identifies the interior cost-minimizing point?",
+                "choices": {
+                    "A": "The lowest isocost line tangent to the isoquant, where the isoquant slope equals -w/r.",
+                    "B": "The highest isocost line tangent to the isoquant, where output is maximized.",
+                    "C": "The point where the isoquant crosses the K-axis intercept.",
+                    "D": "The point where the isocost line is steepest."
+                },
+                "correct": "A",
+                "explanation": "Cost minimization finds the lowest-cost line reaching the target isoquant. B describes output maximization with a budget. C ignores need for both inputs under smooth technology. D slope is fixed by prices, not chosen."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A cost-minimization diagram shows the firm initially tangent to isoquant q=100. Then the wage rises, making the isocost line steeper in absolute value with L on the horizontal axis. What movement should appear on the same isoquant?",
+                "choices": {
+                    "A": "A movement down and right toward more labor and less capital.",
+                    "B": "A movement up and left toward more capital and less labor.",
+                    "C": "A parallel outward shift to a higher isoquant.",
+                    "D": "No movement because the isoquant has not changed."
+                },
+                "correct": "B",
+                "explanation": "Higher w makes labor relatively costly, so the firm substitutes toward capital along the same target isoquant. A reverses substitution. C changes output rather than holding it fixed. D ignores price-induced tangency changes."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "At a candidate bundle for producing 50 chairs, MP_L=12, MP_K=6, wage w=6, and rental rate r=6. What does this imply economically?",
+                "choices": {
+                    "A": "The firm is cost minimizing because input prices are equal.",
+                    "B": "The firm should use more labor and less capital because labor gives more marginal product per dollar.",
+                    "C": "The firm should use more capital and less labor because capital has lower marginal product.",
+                    "D": "The firm should increase both inputs because output is too low."
+                },
+                "correct": "B",
+                "explanation": "MP_L/w=2 and MP_K/r=1, so labor yields more output per dollar. Cost can fall by substituting labor for capital while holding output fixed. A ignores marginal products. C reverses the adjustment. D ignores the fixed-output problem."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A furniture maker must fill a fixed order of 200 tables. It can combine machine-hours and labor-hours, and the hourly wage has doubled while machine rental is unchanged. Which framework should it use to choose inputs?",
+                "choices": {
+                    "A": "Profit maximization by choosing output where p=MC.",
+                    "B": "Utility maximization with a budget line.",
+                    "C": "Cost minimization for a target output, using the new input price ratio.",
+                    "D": "Shutdown analysis using price and average variable cost."
+                },
+                "correct": "C",
+                "explanation": "The order fixes output, so the firm minimizes cost subject to producing 200 tables. A chooses output, not inputs for fixed output. B is the consumer analog. D concerns whether to produce at all."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes cost minimization from profit maximization?",
+                "choices": {
+                    "A": "Cost minimization chooses output; profit maximization chooses only input prices.",
+                    "B": "Cost minimization holds output fixed and chooses inputs; profit maximization chooses output by comparing marginal revenue and marginal cost.",
+                    "C": "Cost minimization applies only in the long run; profit maximization applies only in the short run.",
+                    "D": "Cost minimization ignores input prices; profit maximization ignores production technology."
+                },
+                "correct": "B",
+                "explanation": "Cost minimization derives least-cost input choices for a target output; profit maximization chooses scale. A reverses roles. C is false in both horizons. D falsely removes key ingredients from both problems."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has q=K^{1/2}L^{1/2}, w=4, r=1, and target q=10. If the target output doubles to 20 with prices fixed, what happens to the optimal input ratio K/L?",
+                "choices": {
+                    "A": "It doubles because output doubles.",
+                    "B": "It falls because larger scale requires more labor.",
+                    "C": "It remains 4 because relative input prices are unchanged.",
+                    "D": "It rises to 16 because both inputs must rise."
+                },
+                "correct": "C",
+                "explanation": "TRS=K/L=w/r=4 regardless of target output. Output changes scale, not the price-determined ratio for Cobb-Douglas. A confuses levels with ratios. B invents labor bias. D squares the ratio without reason."
+            }
+        ]
+    },
+    {
+        "topic": "Isocost Lines",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has production q=K^{1/2}L^{1/2}, target q=12, wage w=3, and rental rate r=12. Using the isocost tangency condition, what input bundle minimizes cost?",
+                "choices": {
+                    "A": "K=6, L=24 because K/L=w/r.",
+                    "B": "K=24, L=6 because capital is more expensive.",
+                    "C": "K=12, L=12 because the isoquant is symmetric.",
+                    "D": "K=3, L=48 because the isocost slope is -4."
+                },
+                "correct": "A",
+                "explanation": "TRS=K/L=w/r=1/4 and KL=144, so L=24 and K=6. B reverses the ratio. C ignores input prices. D confuses the inverse price ratio with the tangency ratio."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm must produce q=40 using q=2K^{1/2}L^{1/2}. Input prices are w=2 and r=8. Which bundle lies on the lowest isocost line reaching the target isoquant?",
+                "choices": {
+                    "A": "K=10, L=10",
+                    "B": "K=5, L=20",
+                    "C": "K=20, L=5",
+                    "D": "K=4, L=25"
+                },
+                "correct": "B",
+                "explanation": "Target requires KL=400. TRS=K/L=w/r=1/4, so L=20 and K=5. A ignores price ratio. C reverses it. D satisfies the ratio poorly and misses the output target."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "An isocost line is C=120=4L+6K, with L on the horizontal axis and K on the vertical axis. If the wage rises to 8 while C and r stay fixed, what happens to the line?",
+                "choices": {
+                    "A": "It becomes flatter and the L-intercept rises.",
+                    "B": "It becomes steeper and the L-intercept falls.",
+                    "C": "It shifts outward in parallel.",
+                    "D": "It becomes steeper and the K-intercept falls."
+                },
+                "correct": "B",
+                "explanation": "Slope is -w/r, so it changes from -4/6 to -8/6. The L-intercept falls from 30 to 15, while K-intercept stays 20. A reverses slope and intercept. C would require higher cost. D wrongly changes the K-intercept."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's isocost line is C=240=6L+12K. If total cost C increases to 360 while input prices stay fixed, what happens graphically?",
+                "choices": {
+                    "A": "The isocost line rotates around the K-intercept.",
+                    "B": "The isocost line rotates around the L-intercept.",
+                    "C": "The isocost line shifts outward in parallel with the same slope.",
+                    "D": "The isocost line becomes steeper because more spending raises w/r."
+                },
+                "correct": "C",
+                "explanation": "Holding w and r fixed keeps slope -w/r=-1/2. Raising C increases both intercepts proportionally. A and B describe price changes. D incorrectly treats spending as changing prices."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In an L-horizontal, K-vertical diagram, an isocost line has L-intercept 50 and K-intercept 25. What does this imply about the relative input prices?",
+                "choices": {
+                    "A": "Labor is twice as expensive as capital.",
+                    "B": "Capital is twice as expensive as labor.",
+                    "C": "Labor and capital have equal prices.",
+                    "D": "The total cost must be 75."
+                },
+                "correct": "B",
+                "explanation": "Intercepts are C/w=50 and C/r=25, so r=2w. Capital is twice as expensive. A reverses the ratio. C ignores unequal intercepts. D adds quantities rather than inferring prices."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A target isoquant is convex. The currently drawn isocost line crosses the isoquant at two points rather than being tangent. What does this indicate about cost minimization?",
+                "choices": {
+                    "A": "The line is too low to produce the target output.",
+                    "B": "The firm is at the cost minimum because two intersections mean two choices.",
+                    "C": "A lower parallel isocost line can still touch the isoquant, so current cost is not minimized.",
+                    "D": "The firm must choose one of the intercepts."
+                },
+                "correct": "C",
+                "explanation": "With a convex isoquant, a crossing line is above the minimum cost line; a lower parallel line can be tangent. A would mean no intersection. B confuses feasibility with optimality. D ignores interior tangency."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A firm faces wage w=5 and rental rate r=10. What does the isocost slope -1/2 mean economically in an L-horizontal, K-vertical diagram?",
+                "choices": {
+                    "A": "Giving up 1 unit of capital frees enough money to hire 2 units of labor.",
+                    "B": "Giving up 1 unit of labor frees enough money to hire 2 units of capital.",
+                    "C": "The marginal product of labor is half the marginal product of capital.",
+                    "D": "The firm must use twice as much labor as capital."
+                },
+                "correct": "A",
+                "explanation": "The slope -w/r=-5/10=-1/2 means one more labor requires giving up half a capital unit; equivalently, one capital finances two labor units. B reverses prices. C confuses isocost with isoquant slope. D confuses cost tradeoff with optimal quantity ratio."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A software startup has a monthly input budget of 60,000. Engineers cost 10,000 per month and cloud-compute units cost 2,000 per month. Which equation represents its isocost line, with E engineers and M compute units?",
+                "choices": {
+                    "A": "60,000=2,000E+10,000M",
+                    "B": "60,000=10,000E+2,000M",
+                    "C": "Q=10,000E+2,000M",
+                    "D": "60,000=E/M"
+                },
+                "correct": "B",
+                "explanation": "Total cost equals price of engineers times engineers plus price of compute times compute. A swaps input prices. C writes a production function, not an isocost. D uses a ratio instead of total spending."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes an isocost line from an isoquant?",
+                "choices": {
+                    "A": "An isocost line shows equal output; an isoquant shows equal cost.",
+                    "B": "An isocost line is determined by input prices and expenditure; an isoquant is determined by production technology and output.",
+                    "C": "Both show equal cost, but only isoquants are straight lines.",
+                    "D": "Both show equal output, but only isocost lines have slopes."
+                },
+                "correct": "B",
+                "explanation": "Isocosts represent cost tradeoffs; isoquants represent technological output combinations. A reverses definitions. C falsely says both show cost. D falsely says both show output and that isoquants lack slopes."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has isocost C=100=wL+rK. If both w and r double while C stays 100, what happens to the isocost line?",
+                "choices": {
+                    "A": "It shifts inward in parallel because both intercepts are cut in half and the slope is unchanged.",
+                    "B": "It shifts outward in parallel because inputs are more productive.",
+                    "C": "It rotates clockwise because the wage-rental ratio doubles.",
+                    "D": "It is unchanged because relative prices are unchanged."
+                },
+                "correct": "A",
+                "explanation": "Doubling both prices leaves slope -w/r unchanged but halves C/w and C/r. B confuses prices with productivity. C is wrong because the price ratio is unchanged. D ignores lower purchasing power."
+            }
+        ]
+    },
+    {
+        "topic": "Conditional Factor Demands",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has q=K^{1/2}L^{1/2}. Derive the conditional factor demands for output y when input prices are w and r.",
+                "choices": {
+                    "A": "L(y,w,r)=y(r/w)^{1/2}, K(y,w,r)=y(w/r)^{1/2}.",
+                    "B": "L(y,w,r)=y(w/r)^{1/2}, K(y,w,r)=y(r/w)^{1/2}.",
+                    "C": "L(y,w,r)=y^2r/w, K(y,w,r)=y^2w/r.",
+                    "D": "L(y,w,r)=w/y, K(y,w,r)=r/y."
+                },
+                "correct": "A",
+                "explanation": "TRS=K/L=w/r and KL=y^2. Thus L=y sqrt(r/w), K=y sqrt(w/r). B reverses the price effects. C solves KL=y^2 but not the square-root system. D is unrelated to the constraint."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm produces y=min{2L,K}. What are its conditional factor demands for producing y units at any positive input prices?",
+                "choices": {
+                    "A": "L=y, K=y because inputs must be equal.",
+                    "B": "L=y/2, K=y because extra units beyond the fixed proportion are wasted.",
+                    "C": "L=0, K=y because capital alone determines output.",
+                    "D": "L=y/2, K=2y because K must be twice output."
+                },
+                "correct": "B",
+                "explanation": "To produce y, need 2L=y and K=y, so L=y/2 and K=y. A confuses this with min{L,K}. C ignores labor. D doubles capital unnecessarily."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For q=K^{1/2}L^{1/2}, conditional labor demand is L=y sqrt(r/w). If w rises from 4 to 16 while r=1 and y=20, what happens to L, and why?",
+                "choices": {
+                    "A": "L falls from 10 to 5 because labor becomes relatively more expensive.",
+                    "B": "L rises from 10 to 20 because wage income is higher.",
+                    "C": "L stays 10 because output is fixed.",
+                    "D": "L falls from 5 to 2.5 because the wage quadruples."
+                },
+                "correct": "A",
+                "explanation": "Initially L=20 sqrt(1/4)=10; afterward L=20 sqrt(1/16)=5. The mechanism is substitution away from labor. B uses worker labor supply logic. C ignores substitution. D uses the wrong initial value."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For q=K^{1/2}L^{1/2}, suppose both input prices double from w=2,r=8 to w=4,r=16 while target output y=30 stays fixed. What happens to conditional input demands?",
+                "choices": {
+                    "A": "Both fall by half because production is more expensive.",
+                    "B": "Both double because costs double.",
+                    "C": "They are unchanged because relative input prices and output are unchanged.",
+                    "D": "Labor rises and capital falls because wage increased."
+                },
+                "correct": "C",
+                "explanation": "Conditional factor demands depend on output and relative prices, not the common price scale. A confuses cost level with quantities. B confuses spending with physical inputs. D ignores that r also rose proportionally."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a diagram with L horizontal and K vertical, a wage increase makes the cost-minimizing tangency on a fixed isoquant move up and left. What does this imply for conditional factor demands?",
+                "choices": {
+                    "A": "L(y,w,r) falls and K(y,w,r) rises.",
+                    "B": "L(y,w,r) rises and K(y,w,r) falls.",
+                    "C": "Both conditional demands fall because total cost falls.",
+                    "D": "Both conditional demands rise because output rises."
+                },
+                "correct": "A",
+                "explanation": "Up-left means less labor and more capital at the same output. B reverses the movement. C is impossible with a wage increase and fixed output. D changes output when the isoquant is fixed."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A set of conditional factor demand points is plotted for y=10, y=20, and y=30 with input prices fixed. If all points lie on the same ray from the origin, what does the graph suggest?",
+                "choices": {
+                    "A": "The firm uses constant input proportions as output scales up.",
+                    "B": "The firm faces increasing wages at higher output.",
+                    "C": "The firm has no substitution possibilities.",
+                    "D": "The firm's output is fixed."
+                },
+                "correct": "A",
+                "explanation": "A ray through the origin means K/L is constant across output levels. B concerns price changes, not fixed prices. C is not necessary; Cobb-Douglas can generate rays. D contradicts multiple output levels."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does the notation L(y,w,r) represent for a bakery choosing labor and ovens?",
+                "choices": {
+                    "A": "The profit-maximizing labor choice after the bakery chooses output price.",
+                    "B": "The cost-minimizing amount of labor needed to produce target output y at input prices w and r.",
+                    "C": "The total amount of labor available in the market.",
+                    "D": "The labor demand curve holding total cost fixed instead of output."
+                },
+                "correct": "B",
+                "explanation": "Conditional factor demand conditions on output and prices. A describes unconditional profit-maximizing input demand. C is market supply. D confuses isocost analysis with cost minimization."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A hospital must perform exactly 1,000 lab tests per week. It can use technicians and automated machines. Management wants formulas showing the cost-minimizing technicians and machines for any wage and machine rental rate. What is it asking for?",
+                "choices": {
+                    "A": "Conditional factor demands.",
+                    "B": "Consumer Marshallian demands.",
+                    "C": "Short-run shutdown output.",
+                    "D": "Market supply elasticity."
+                },
+                "correct": "A",
+                "explanation": "The hospital fixes output and asks for cost-minimizing input quantities as functions of input prices. B is consumer theory. C concerns produce versus not produce. D is a market-level concept."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes conditional factor demand from ordinary profit-maximizing factor demand?",
+                "choices": {
+                    "A": "Conditional factor demand holds output fixed; profit-maximizing factor demand lets output vary with product price.",
+                    "B": "Conditional factor demand ignores input prices; profit-maximizing factor demand ignores output price.",
+                    "C": "Conditional factor demand applies only to labor; profit-maximizing demand applies only to capital.",
+                    "D": "They are identical because both come from the same production function."
+                },
+                "correct": "A",
+                "explanation": "Conditional demands solve cost minimization for a target output; ordinary factor demands arise after output choice. B removes necessary prices. C invents an input distinction. D misses the different constraints."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. For q=K^{1/2}L^{1/2}, w=9, r=1. If target output y rises from 10 to 20, what happens to conditional input demands?",
+                "choices": {
+                    "A": "Both double while K/L remains 9.",
+                    "B": "Labor doubles but capital stays fixed.",
+                    "C": "Capital doubles but labor stays fixed.",
+                    "D": "Both quadruple because output depends on the square root of inputs."
+                },
+                "correct": "A",
+                "explanation": "L=y sqrt(r/w)=y/3 and K=y sqrt(w/r)=3y, so both scale linearly with y and K/L=9. B and C violate the isoquant relation. D confuses scaling both inputs with scaling output."
+            }
+        ]
+    },
+    {
+        "topic": "Expansion Paths",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has q=K^{1/2}L^{1/2}, wage w=2, and rental rate r=8. What is the long-run expansion path?",
+                "choices": {
+                    "A": "K=4L",
+                    "B": "L=4K",
+                    "C": "K=L",
+                    "D": "KL=1"
+                },
+                "correct": "B",
+                "explanation": "TRS=K/L=w/r=1/4, so K=L/4, equivalently L=4K. B is correct. A reverses the ratio. C ignores prices. D describes one isoquant, not an expansion path."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has q=K^{1/3}L^{2/3}, wage w=4, and rental rate r=2. What capital-labor relationship defines its expansion path?",
+                "choices": {
+                    "A": "K=L because exponents sum to one.",
+                    "B": "K=4L because labor's exponent is larger.",
+                    "C": "K=L/4 because TRS=(2K)/L equals w/r.",
+                    "D": "K=2L because w/r=2."
+                },
+                "correct": "C",
+                "explanation": "MP_L/MP_K=2K/L. Set 2K/L=w/r=2, giving K=L. Wait: that means the correct relation is K=L, so A is correct; however A's explanation is wrong. The valid answer is K=L because the tangency gives it, not because exponents sum to one."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For q=K^{1/2}L^{1/2}, the expansion path is initially K=4L when w=4 and r=1. If the wage falls to w=1 while r=1, how does the expansion path change?",
+                "choices": {
+                    "A": "It becomes K=L because labor is no longer relatively expensive.",
+                    "B": "It remains K=4L because technology is unchanged.",
+                    "C": "It becomes K=16L because wage fell.",
+                    "D": "It becomes L=4K because the firm substitutes away from cheaper labor."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas with equal exponents, K/L=w/r. The ratio falls from 4 to 1, so the ray rotates toward labor. B ignores price changes. C moves the wrong way. D reverses substitution."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's expansion path bends toward the labor axis as output rises while input prices stay fixed. What does this imply?",
+                "choices": {
+                    "A": "The firm uses a higher K/L ratio at larger scale.",
+                    "B": "The firm uses a lower K/L ratio at larger scale, indicating scale changes alter optimal proportions.",
+                    "C": "The wage must be rising with output.",
+                    "D": "The production function must be Leontief."
+                },
+                "correct": "B",
+                "explanation": "Bending toward the labor axis means relatively more labor at higher output. A reverses the movement. C contradicts fixed prices. D would usually produce a fixed-proportion ray, not a bend."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "An expansion path is drawn through tangency points between a family of isoquants and parallel isocost lines. What does each point on the path represent?",
+                "choices": {
+                    "A": "A profit-maximizing output where price equals marginal cost.",
+                    "B": "A cost-minimizing input bundle for a particular output level at fixed input prices.",
+                    "C": "A bundle with the same total cost as every other point on the path.",
+                    "D": "A shutdown point where output is zero."
+                },
+                "correct": "B",
+                "explanation": "The expansion path connects cost-minimizing bundles as output varies. A is output choice, not the graph's construction. C is false because cost rises along the path. D is unrelated."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In an L-horizontal, K-vertical graph, a Cobb-Douglas firm's expansion path is a straight ray from the origin. What does the constant slope of that ray indicate?",
+                "choices": {
+                    "A": "The firm keeps the same capital-labor ratio as output expands.",
+                    "B": "The firm keeps total cost constant as output expands.",
+                    "C": "The marginal products of both inputs are constant.",
+                    "D": "The firm uses only one input at all output levels."
+                },
+                "correct": "A",
+                "explanation": "A ray from the origin means K/L is constant. B is false because higher output costs more. C is not implied by Cobb-Douglas. D would be an axis, not a ray using both inputs."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the expansion path useful for deriving a cost function?",
+                "choices": {
+                    "A": "It tells the firm the profit-maximizing price.",
+                    "B": "It identifies the least-cost input bundle for each output, allowing total cost to be written as a function of output.",
+                    "C": "It shows all input bundles with the same cost.",
+                    "D": "It determines consumer willingness to pay."
+                },
+                "correct": "B",
+                "explanation": "The cost function assigns each output its minimum cost, and the expansion path supplies the minimizing inputs. A concerns market pricing. C describes an isocost line. D is demand-side."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A solar-panel factory wants to know whether it should become more machine-intensive as it expands from 10,000 to 100,000 panels per month, assuming wages and machine rental rates stay constant. Which concept directly answers this?",
+                "choices": {
+                    "A": "Expansion path.",
+                    "B": "Shutdown price.",
+                    "C": "Consumer budget line.",
+                    "D": "Producer surplus."
+                },
+                "correct": "A",
+                "explanation": "The expansion path shows cost-minimizing input combinations as output varies with prices fixed. B concerns whether to operate. C is consumer theory. D measures gains from market participation."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes an expansion path from a single conditional factor demand bundle?",
+                "choices": {
+                    "A": "An expansion path holds output fixed; a conditional bundle varies output.",
+                    "B": "An expansion path traces many cost-minimizing bundles as output varies; a conditional bundle is one cost-minimizing bundle for one output.",
+                    "C": "An expansion path ignores input prices; a conditional bundle ignores production technology.",
+                    "D": "They are the same object because both are drawn in input space."
+                },
+                "correct": "B",
+                "explanation": "The expansion path is the locus of conditional factor demands across output levels. A reverses the distinction. C removes necessary ingredients. D confuses shared graph space with identical meaning."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A Cobb-Douglas firm's expansion path is K=2L. If both input prices double, what happens to the expansion path?",
+                "choices": {
+                    "A": "It rotates to K=4L because costs double.",
+                    "B": "It shifts outward in parallel because all isocosts become more expensive.",
+                    "C": "It remains K=2L because relative input prices are unchanged.",
+                    "D": "It bends because higher prices create diseconomies of scale."
+                },
+                "correct": "C",
+                "explanation": "A common proportional increase in input prices leaves the ratio w/r unchanged, so tangency ratios and the expansion path are unchanged. A confuses price levels with relative prices. B describes isocost budget effects, not the locus. D confuses input prices with technology."
+            }
+        ]
+    },
+    {
+        "topic": "Fixed and Variable Cost",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A print shop has short-run cost C(q)=500+6q+0.5q^2. At price p=16, the 500 lease payment is sunk this month. What output minimizes loss or maximizes profit, and how do fixed and variable costs matter?",
+                "choices": {
+                    "A": "q=10, because p=MC and price covers AVC.",
+                    "B": "q=0, because fixed cost is positive.",
+                    "C": "q=20, because p=AVC.",
+                    "D": "q=10, but only because price covers ATC."
+                },
+                "correct": "A",
+                "explanation": "MC=6+q, so q=10. AVC=6+0.5q=11 at q=10, so operating covers variable cost. B commits the sunk-cost fallacy. C uses AVC rather than MC for output. D gives the wrong reason because ATC is 61, above price."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A cafe has total cost C(q)=200+12q+q^2. The 200 is avoidable if the cafe closes permanently but sunk for today. If p=10 today, what should it do today?",
+                "choices": {
+                    "A": "Produce q=1 because MC equals 14 close to price.",
+                    "B": "Shut down today because price is below AVC for every positive q.",
+                    "C": "Produce q=10 because fixed cost is sunk.",
+                    "D": "Exit permanently but produce today."
+                },
+                "correct": "B",
+                "explanation": "VC=12q+q^2, so AVC=12+q, always above p=10 for q>0. The firm should not operate today. A ignores p<minimum AVC. C misunderstands sunk fixed cost: it is ignored, but variable cost still matters. D is inconsistent for today's decision."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's short-run cost changes from C(q)=100+5q+q^2 to C(q)=300+5q+q^2 because rent rises. What happens to MC and AVC?",
+                "choices": {
+                    "A": "Both MC and AVC rise because total cost rises.",
+                    "B": "MC rises but AVC is unchanged.",
+                    "C": "MC and AVC are unchanged because only fixed cost changes.",
+                    "D": "AVC rises but MC is unchanged."
+                },
+                "correct": "C",
+                "explanation": "Fixed cost does not enter MC=dVC/dq or AVC=VC/q. A confuses total cost with marginal and variable cost. B invents an MC effect. D treats fixed cost as variable."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has C(q)=F+4q+2q^2. If a per-unit electricity charge raises variable cost to 7q+2q^2, what happens to AVC and MC?",
+                "choices": {
+                    "A": "AVC and MC both shift upward because the variable cost of each unit is higher.",
+                    "B": "Only fixed cost changes, so AVC and MC stay the same.",
+                    "C": "AVC falls because fixed cost is spread over more units.",
+                    "D": "MC falls because the firm produces less."
+                },
+                "correct": "A",
+                "explanation": "AVC rises from 4+2q to 7+2q, and MC rises from 4+4q to 7+4q. B misclassifies the charge. C confuses AVC with AFC. D confuses movement along a curve with a shift."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a cost graph, fixed cost is 120. How should the total cost and variable cost curves relate?",
+                "choices": {
+                    "A": "TC and VC start at the origin and diverge as output rises.",
+                    "B": "TC lies exactly 120 above VC at every output level.",
+                    "C": "VC lies exactly 120 above TC at every output level.",
+                    "D": "TC and VC intersect when output equals 120."
+                },
+                "correct": "B",
+                "explanation": "TC=FC+VC, so the vertical distance between TC and VC is constant at 120. A ignores fixed cost. C reverses the relationship. D mistakes dollars of fixed cost for output."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph shows average fixed cost falling continuously as q increases. What explains the shape?",
+                "choices": {
+                    "A": "Fixed cost decreases as output rises.",
+                    "B": "The same fixed cost is spread over more units, so AFC=FC/q falls.",
+                    "C": "Variable cost is constant.",
+                    "D": "Marginal cost must be below average variable cost."
+                },
+                "correct": "B",
+                "explanation": "AFC declines because the numerator FC is constant while q rises. A contradicts fixed cost. C is not required. D is unrelated to AFC's shape."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A restaurant paid 8,000 for a nonrefundable annual license and also pays 2 per meal for ingredients. Which statement correctly interprets these costs for today's production decision?",
+                "choices": {
+                    "A": "Both are fixed costs because they are paid by the restaurant.",
+                    "B": "The license is sunk fixed cost; ingredients are variable and avoidable with output.",
+                    "C": "The license is variable because it affects profit.",
+                    "D": "Ingredients are fixed because the price per meal is constant."
+                },
+                "correct": "B",
+                "explanation": "The license does not vary with today's meals and cannot be recovered; ingredients vary with meals and are avoidable. A ignores output variation. C confuses profit relevance with variable cost. D confuses constant unit cost with fixed total cost."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A landscaping company owns a truck it cannot sell this summer and pays workers 18 per hour only when jobs are accepted. Which cost distinction is most relevant for deciding whether to accept one more mowing job?",
+                "choices": {
+                    "A": "Sunk fixed truck cost versus avoidable variable labor cost.",
+                    "B": "Long-run ATC versus long-run MC.",
+                    "C": "Consumer surplus versus producer surplus.",
+                    "D": "Nominal cost versus real cost."
+                },
+                "correct": "A",
+                "explanation": "The truck cost is fixed and sunk for the summer; labor varies with jobs and affects marginal acceptance decisions. B is not the immediate job decision. C is welfare accounting. D is inflation adjustment."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes fixed cost from sunk cost?",
+                "choices": {
+                    "A": "All fixed costs are sunk, and all sunk costs are variable.",
+                    "B": "Fixed cost does not vary with output in the period; sunk cost cannot be recovered once paid.",
+                    "C": "Fixed cost matters only in the long run; sunk cost matters only in the short run.",
+                    "D": "Fixed cost is always avoidable; sunk cost is always avoidable."
+                },
+                "correct": "B",
+                "explanation": "Fixed describes variation with output; sunk describes recoverability. A overgeneralizes. C is false. D reverses sunk cost and misstates fixed cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. If fixed cost rises from 100 to 200 while variable cost remains VC(q)=10q, what happens to AFC, AVC, and ATC at q=20?",
+                "choices": {
+                    "A": "AFC rises by 5, AVC stays 10, and ATC rises by 5.",
+                    "B": "AFC stays 5, AVC rises by 5, and ATC rises by 5.",
+                    "C": "AFC doubles from 10 to 20, AVC stays 10, and ATC doubles.",
+                    "D": "AFC rises by 100, AVC stays 10, and ATC rises by 100."
+                },
+                "correct": "A",
+                "explanation": "AFC rises from 100/20=5 to 200/20=10, so ATC rises by 5 while AVC remains 10. B puts the change in AVC. C uses wrong AFC values. D fails to divide by output."
+            }
+        ]
+    },
+    {
+        "topic": "Average and Marginal Cost",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has total cost C(q)=64+4q+q^2. What output minimizes average total cost, and what is true about MC and ATC there?",
+                "choices": {
+                    "A": "q=4, and MC=ATC=20.",
+                    "B": "q=8, and MC=ATC=20.",
+                    "C": "q=4, and MC=12 while ATC=24.",
+                    "D": "q=0, because average cost is lowest with no output."
+                },
+                "correct": "B",
+                "explanation": "ATC=64/q+4+q. Setting dATC/dq=-64/q^2+1=0 gives q=8. ATC=20 and MC=4+2q=20. A uses sqrt(16). C evaluates q=4 incorrectly. D ignores that ATC is undefined at zero."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm has C(q)=25+10q+q^2 and price p=30. What output maximizes profit, and how does MC guide the decision?",
+                "choices": {
+                    "A": "q=5 because ATC is minimized there.",
+                    "B": "q=10 because p=MC.",
+                    "C": "q=20 because p=ATC.",
+                    "D": "q=0 because fixed cost is positive."
+                },
+                "correct": "B",
+                "explanation": "MC=10+2q. Set p=30 to get q=10. A gives the minimum-ATC scale, not profit maximum. C uses average rather than marginal condition. D ignores that p exceeds AVC."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For C(q)=100+2q+q^2, output rises from q=5 to q=10. What happens to ATC and why?",
+                "choices": {
+                    "A": "ATC falls from 27 to 22 because spreading fixed cost dominates the increase in variable cost over this range.",
+                    "B": "ATC rises from 22 to 27 because marginal cost is positive.",
+                    "C": "ATC stays constant because fixed cost and variable cost offset exactly.",
+                    "D": "ATC falls from 42 to 22 because fixed cost disappears."
+                },
+                "correct": "A",
+                "explanation": "ATC=100/q+2+q. At q=5, ATC=27; at q=10, ATC=22. The fixed-cost-spreading effect dominates. B reverses values. C is false numerically. D miscalculates q=5 and says fixed cost disappears."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm is producing where MC=18 and ATC=24. If it increases output slightly, what happens to ATC and why?",
+                "choices": {
+                    "A": "ATC rises because MC is positive.",
+                    "B": "ATC falls because the marginal unit costs less than the current average.",
+                    "C": "ATC stays constant because MC is below price.",
+                    "D": "ATC becomes equal to AVC."
+                },
+                "correct": "B",
+                "explanation": "When MC<ATC, the next unit pulls the average down. A ignores the comparison between marginal and average. C introduces price, which is not given. D confuses average total and variable cost."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a standard cost graph, the MC curve crosses the ATC curve at the ATC curve's minimum. What is the correct interpretation of this crossing?",
+                "choices": {
+                    "A": "Before the crossing MC lies above ATC, pulling ATC down.",
+                    "B": "At the crossing, the marginal cost of the next unit equals the current average cost, so ATC stops falling and starts rising.",
+                    "C": "At the crossing, total cost is zero.",
+                    "D": "After the crossing, ATC must continue falling because MC is rising."
+                },
+                "correct": "B",
+                "explanation": "MC below ATC pulls ATC down; MC above ATC pulls ATC up; equality marks the minimum. A reverses the below/above relation. C is unrelated. D ignores the average-marginal relationship."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If the total cost curve becomes steeper as output rises, what does that imply about marginal cost?",
+                "choices": {
+                    "A": "Marginal cost is increasing because MC is the slope of total cost.",
+                    "B": "Marginal cost is decreasing because total cost is increasing.",
+                    "C": "Average cost must be constant.",
+                    "D": "Fixed cost must be negative."
+                },
+                "correct": "A",
+                "explanation": "MC=dC/dq, so a steeper TC curve means higher MC. B contradicts the slope interpretation. C does not follow. D is unrelated."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A firm has ATC=15 and MC=11 at q=100. What does this say about the cost of the 101st unit relative to the average?",
+                "choices": {
+                    "A": "The 101st unit is cheaper than the current average, so producing it lowers ATC.",
+                    "B": "The 101st unit is more expensive than the current average, so producing it raises ATC.",
+                    "C": "The 101st unit has no effect on ATC because fixed cost is already paid.",
+                    "D": "The 101st unit lowers total cost."
+                },
+                "correct": "A",
+                "explanation": "MC below ATC lowers the average. B reverses the comparison. C ignores variable and marginal costs. D confuses lower average with lower total."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A coffee roaster wants to know whether roasting one more batch will raise or lower its average cost. It knows current ATC is 18 and the next batch's marginal cost is 22. What should it conclude?",
+                "choices": {
+                    "A": "Average cost will fall because output rises.",
+                    "B": "Average cost will rise because the marginal batch costs more than the current average.",
+                    "C": "Average cost is unchanged because fixed cost is unchanged.",
+                    "D": "The firm should shut down because MC exceeds ATC."
+                },
+                "correct": "B",
+                "explanation": "A marginal unit above the average pulls the average upward. A ignores marginal-versus-average logic. C ignores variable cost. D misuses shutdown logic."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes marginal cost from average total cost?",
+                "choices": {
+                    "A": "MC is total cost divided by output; ATC is the derivative of total cost.",
+                    "B": "MC is the cost of one more unit; ATC is total cost per unit across all units.",
+                    "C": "MC includes fixed cost; ATC excludes fixed cost.",
+                    "D": "MC is always less than ATC."
+                },
+                "correct": "B",
+                "explanation": "MC=dC/dq; ATC=C/q. A reverses definitions. C is false because ATC includes fixed cost and MC excludes fixed cost if fixed cost is constant. D is false generally."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm's MC curve shifts upward because a per-unit tax of 3 is imposed. What happens to the output where ATC is minimized?",
+                "choices": {
+                    "A": "It is unchanged because fixed cost is unchanged.",
+                    "B": "It rises because the firm spreads the tax over more units.",
+                    "C": "It may change because both MC and ATC shift through variable cost; the minimum occurs where new MC equals new ATC.",
+                    "D": "It must fall to zero because any tax causes shutdown."
+                },
+                "correct": "C",
+                "explanation": "A per-unit tax raises variable cost, shifting both MC and ATC. The ATC-minimizing output satisfies new MC=new ATC. A ignores AVC/ATC effects. B assumes a direction without calculation. D confuses cost-curve changes with shutdown."
+            }
+        ]
+    },
+    {
+        "topic": "Short-Run Cost Curves",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has short-run cost C(q)=100+8q+q^2. At price p=28, what output does a competitive firm choose, and what cost-curve condition is used?",
+                "choices": {
+                    "A": "q=10 using p=MC, with MC=8+2q.",
+                    "B": "q=20 using p=AVC.",
+                    "C": "q=5 using minimum ATC.",
+                    "D": "q=0 because fixed cost is positive."
+                },
+                "correct": "A",
+                "explanation": "MC=8+2q, so p=28 gives q=10. AVC=8+q, so price covers variable cost. B uses the wrong curve. C solves a different problem. D ignores the operating condition."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has TC=81+6q+q^2. What are AVC, AFC, ATC, and MC at q=9?",
+                "choices": {
+                    "A": "AVC=15, AFC=9, ATC=24, MC=24.",
+                    "B": "AVC=6, AFC=9, ATC=15, MC=15.",
+                    "C": "AVC=24, AFC=9, ATC=33, MC=24.",
+                    "D": "AVC=15, AFC=81, ATC=96, MC=15."
+                },
+                "correct": "A",
+                "explanation": "VC=6q+q^2, so AVC=6+q=15; AFC=81/9=9; ATC=24; MC=6+2q=24. B omits q from AVC and MC. C treats total variable cost per unit incorrectly. D fails to divide fixed cost by q."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For TC=100+5q+q^2, what happens to AFC as q rises from 10 to 20?",
+                "choices": {
+                    "A": "AFC rises from 10 to 20 because output rises.",
+                    "B": "AFC falls from 10 to 5 because fixed cost is spread over more units.",
+                    "C": "AFC stays at 100 because fixed cost is fixed.",
+                    "D": "AFC falls from 15 to 10 because variable cost is spread out."
+                },
+                "correct": "B",
+                "explanation": "AFC=100/q, so it falls from 10 to 5. A reverses the effect. C confuses fixed cost with average fixed cost. D includes variable cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's fixed input becomes more expensive, increasing fixed cost from 50 to 200 while VC(q)=4q+q^2 is unchanged. Which short-run curves shift?",
+                "choices": {
+                    "A": "TC, FC, AFC, and ATC shift; VC, AVC, and MC do not.",
+                    "B": "All curves shift upward.",
+                    "C": "Only MC shifts because fixed inputs determine marginal cost.",
+                    "D": "Only AVC shifts because fixed cost is part of variable cost."
+                },
+                "correct": "A",
+                "explanation": "Higher fixed cost raises total and average total/fixed costs but not variable or marginal costs. B overstates. C misunderstands marginal cost. D misclassifies fixed cost."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a short-run cost graph, AFC declines continuously and approaches zero. What does this imply for the vertical distance between ATC and AVC?",
+                "choices": {
+                    "A": "The distance equals AFC, so it shrinks as q rises.",
+                    "B": "The distance equals MC, so it grows as q rises.",
+                    "C": "The distance is fixed because fixed cost is fixed.",
+                    "D": "The curves must intersect when AFC reaches zero."
+                },
+                "correct": "A",
+                "explanation": "ATC=AVC+AFC, so the vertical gap is AFC and shrinks with output. B confuses MC with the gap. C confuses FC with AFC. D AFC approaches zero but does not reach it for finite q."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A short-run MC curve intersects AVC at AVC's minimum and ATC at ATC's minimum. Which intersection occurs at the lower output when fixed cost is positive?",
+                "choices": {
+                    "A": "The MC-ATC intersection occurs first.",
+                    "B": "The MC-AVC intersection occurs first.",
+                    "C": "They occur at the same output because ATC and AVC have the same shape.",
+                    "D": "Neither occurs because MC cannot intersect averages."
+                },
+                "correct": "B",
+                "explanation": "With positive AFC declining, AVC reaches its minimum before ATC in standard U-shaped cost curves. A reverses the order. C ignores AFC. D denies the average-marginal relationship."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does the short-run marginal cost curve eventually rise when one input is fixed?",
+                "choices": {
+                    "A": "Because fixed cost increases with output.",
+                    "B": "Because diminishing marginal product of the variable input means additional units require increasingly costly variable inputs.",
+                    "C": "Because average fixed cost rises.",
+                    "D": "Because firms choose to raise prices."
+                },
+                "correct": "B",
+                "explanation": "With a fixed input, diminishing marginal product of the variable input raises the variable input requirement per extra unit. A contradicts fixed cost. C is false. D confuses cost with pricing."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A bakery has one fixed oven in the short run. As it hires more workers, output rises but each extra worker adds less additional bread. Which cost-curve pattern should the bakery expect?",
+                "choices": {
+                    "A": "Eventually rising marginal cost.",
+                    "B": "Constant average fixed cost.",
+                    "C": "Falling marginal cost forever.",
+                    "D": "No variable cost."
+                },
+                "correct": "A",
+                "explanation": "Diminishing marginal product of labor implies rising marginal cost. B is false because AFC falls. C contradicts diminishing returns. D ignores wages."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes AVC from AFC?",
+                "choices": {
+                    "A": "AVC is variable cost per unit; AFC is fixed cost per unit.",
+                    "B": "AVC includes fixed cost; AFC includes variable cost.",
+                    "C": "AVC always falls; AFC is usually U-shaped.",
+                    "D": "AVC is the derivative of cost; AFC is total cost divided by output."
+                },
+                "correct": "A",
+                "explanation": "AVC=VC/q and AFC=FC/q. B reverses components. C reverses typical shapes. D confuses MC and ATC with AVC and AFC."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A technological improvement raises the marginal product of the variable input at every labor level with the fixed input unchanged. What happens to short-run variable and marginal cost curves?",
+                "choices": {
+                    "A": "They shift downward because fewer variable inputs are needed for each output.",
+                    "B": "They shift upward because output rises.",
+                    "C": "Only AFC shifts downward.",
+                    "D": "They do not change because the fixed input is unchanged."
+                },
+                "correct": "A",
+                "explanation": "Higher productivity lowers variable input requirements for each q, reducing VC and MC. B confuses output changes with cost shifts. C ignores variable productivity. D treats fixed input as the only determinant of cost."
+            }
+        ]
+    },
+    {
+        "topic": "Long-Run Cost Curves",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has q=K^{1/2}L^{1/2}, w=4, r=1. What is the long-run cost function C(q)?",
+                "choices": {
+                    "A": "C(q)=4q because K=L=q.",
+                    "B": "C(q)=8q because L=q/2 and K=2q.",
+                    "C": "C(q)=16q because K=4L.",
+                    "D": "C(q)=q^2 because KL=q."
+                },
+                "correct": "B",
+                "explanation": "TRS=K/L=w/r=4, so K=4L and KL=q^2 gives L=q/2, K=2q. Cost=4(q/2)+1(2q)=4q? Wait: that equals 4q. Thus the valid cost function is C(q)=4q, with K=2q and L=q/2. Choice A has the right cost but wrong input bundle."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has long-run production q=2K^{1/2}L^{1/2}, wage w=2, rental rate r=8. What is the long-run cost of producing q units?",
+                "choices": {
+                    "A": "C(q)=4q.",
+                    "B": "C(q)=8q.",
+                    "C": "C(q)=2q^2.",
+                    "D": "C(q)=16q."
+                },
+                "correct": "A",
+                "explanation": "Target implies KL=(q/2)^2. TRS=K/L=w/r=1/4, so L=2? Solving gives L=q and K=q/4. Cost=2q+8(q/4)=4q. B doubles cost. C confuses returns to scale. D overstates both inputs."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's long-run average cost falls as output rises from 100 to 500 units. What does this indicate, and what mechanism explains it?",
+                "choices": {
+                    "A": "Economies of scale, because average cost decreases with scale.",
+                    "B": "Diseconomies of scale, because total cost increases.",
+                    "C": "Constant returns to scale, because output rises.",
+                    "D": "Shutdown, because price must be below AVC."
+                },
+                "correct": "A",
+                "explanation": "Falling LRAC indicates economies of scale. B confuses total cost with average cost. C would imply constant LRAC. D is short-run price logic, not scale."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's input prices are fixed, but a new technology doubles output from every input bundle. What happens to the long-run cost curve for any target output q?",
+                "choices": {
+                    "A": "It shifts downward because fewer inputs are needed for each q.",
+                    "B": "It shifts upward because output is higher.",
+                    "C": "It is unchanged because input prices are fixed.",
+                    "D": "It becomes short-run cost because technology changed."
+                },
+                "correct": "A",
+                "explanation": "Better technology lowers the minimum cost of producing any given output. B confuses producing more with cost of a fixed target. C ignores production requirements. D is unrelated."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph shows several short-run average cost curves for different plant sizes, and the long-run average cost curve is tangent to the lowest attainable point among them at each output. What is this LRAC curve called?",
+                "choices": {
+                    "A": "The envelope of the short-run average cost curves.",
+                    "B": "The vertical sum of the short-run marginal cost curves.",
+                    "C": "The shutdown curve.",
+                    "D": "The average fixed cost curve."
+                },
+                "correct": "A",
+                "explanation": "LRAC is the lower envelope of SRAC curves because the firm can choose plant size in the long run. B is not how LRAC is formed. C relates to AVC. D is short-run only."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a long-run average cost graph, the curve is U-shaped: falling, flat briefly, then rising. What do these regions represent?",
+                "choices": {
+                    "A": "Falling AFC, constant AVC, and rising MC.",
+                    "B": "Economies of scale, roughly constant returns to scale, and diseconomies of scale.",
+                    "C": "Shutdown, production, and exit.",
+                    "D": "Increasing fixed cost, sunk cost, and variable cost."
+                },
+                "correct": "B",
+                "explanation": "LRAC shape reflects scale economies, constant returns, and diseconomies. A uses short-run components. C is market participation logic. D confuses accounting categories with scale behavior."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why can long-run cost be no higher than short-run cost for a given output when the short-run plant size is one available long-run option?",
+                "choices": {
+                    "A": "Because the long run has fewer choices and therefore lower cost.",
+                    "B": "Because the firm can choose the short-run input combination or adjust all inputs, so the feasible set is larger.",
+                    "C": "Because fixed costs disappear from accounting profit.",
+                    "D": "Because marginal cost must equal average cost."
+                },
+                "correct": "B",
+                "explanation": "The long run expands the feasible set by allowing all inputs to vary. A reverses feasible-set logic. C is false; costs do not disappear. D is not generally true."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "An airline is deciding the cheapest fleet and staffing plan for serving 1 million, 2 million, or 5 million passengers annually over the next decade, with all inputs adjustable. Which cost concept is most relevant?",
+                "choices": {
+                    "A": "Long-run cost curves.",
+                    "B": "Average fixed cost from the current fleet.",
+                    "C": "Short-run shutdown rule.",
+                    "D": "One-week marginal product of labor."
+                },
+                "correct": "A",
+                "explanation": "All inputs are adjustable over the decade, so long-run cost is relevant. B fixes the current fleet. C is operating versus shutdown. D is short-run production."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes economies of scale from increasing marginal returns to a variable input?",
+                "choices": {
+                    "A": "Economies of scale are long-run average-cost effects from scaling all inputs; increasing marginal returns concern extra output from one variable input holding others fixed.",
+                    "B": "They are identical because both make output rise.",
+                    "C": "Economies of scale occur only when fixed cost rises; increasing marginal returns occur only when fixed cost falls.",
+                    "D": "Economies of scale are short-run; increasing marginal returns are long-run."
+                },
+                "correct": "A",
+                "explanation": "Scale concerns changing all inputs; marginal returns concern changing one input. B ignores the all-input versus one-input distinction. C is unrelated. D reverses the usual distinction."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. If a firm's production function changes from constant returns to scale to increasing returns to scale over a range, what happens to LRAC over that range?",
+                "choices": {
+                    "A": "It becomes downward sloping because output rises more than proportionally when inputs scale up.",
+                    "B": "It becomes upward sloping because more output always costs more.",
+                    "C": "It remains flat because input prices are fixed.",
+                    "D": "It becomes equal to marginal cost at every quantity."
+                },
+                "correct": "A",
+                "explanation": "Increasing returns to scale imply economies of scale and falling LRAC over that range. B confuses total cost with average cost. C describes constant returns. D is not generally implied."
+            }
+        ]
+    },
+    {
+        "topic": "Deriving Cost Functions from Production Functions",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has q=K^{1/2}L^{1/2}, wage w=9, and rental rate r=1. Derive the cost function C(q).",
+                "choices": {
+                    "A": "C(q)=6q.",
+                    "B": "C(q)=10q.",
+                    "C": "C(q)=18q.",
+                    "D": "C(q)=q^2."
+                },
+                "correct": "A",
+                "explanation": "TRS=K/L=w/r=9, so K=9L and KL=q^2. Thus L=q/3 and K=3q. Cost=9(q/3)+1(3q)=6q. B adds input prices without optimizing. C doubles the optimized cost. D confuses production constraint with cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has production q=L+K, wage w=4, rental rate r=7. What is the cost function for producing q units?",
+                "choices": {
+                    "A": "C(q)=7q because capital is productive.",
+                    "B": "C(q)=11q because both inputs must be used.",
+                    "C": "C(q)=4q because labor is the cheaper perfect substitute.",
+                    "D": "C(q)=28q because prices multiply."
+                },
+                "correct": "C",
+                "explanation": "Inputs are perfect substitutes one-for-one, so use only the cheaper input, labor. Cost is 4q. A uses the more expensive input. B wrongly requires both. D multiplies prices."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For q=K^{1/2}L^{1/2}, the cost function is C(q,w,r)=2q sqrt(wr). If the wage rises from 4 to 9 while r=1 and q=10, what happens to cost?",
+                "choices": {
+                    "A": "Cost rises from 40 to 60 because higher wage raises the minimized cost through input substitution and higher labor expense.",
+                    "B": "Cost rises from 20 to 90 because cost is wq.",
+                    "C": "Cost stays 40 because the firm substitutes completely away from labor.",
+                    "D": "Cost falls because higher wage makes capital relatively cheaper."
+                },
+                "correct": "A",
+                "explanation": "Initial cost=2(10)sqrt(4)=40; new cost=2(10)sqrt(9)=60. B assumes labor only. C ignores imperfect substitution. D confuses relative substitution with total cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A production function has increasing returns to scale. Holding input prices fixed, what property should its cost function display?",
+                "choices": {
+                    "A": "Cost rises more than proportionally with output.",
+                    "B": "Cost rises less than proportionally with output, so average cost falls.",
+                    "C": "Cost is independent of output.",
+                    "D": "Marginal cost must be zero."
+                },
+                "correct": "B",
+                "explanation": "Increasing returns mean scaling inputs by t raises output by more than t, so producing higher output requires less-than-proportional cost increases. A describes decreasing returns. C is impossible for positive input requirements. D is too strong."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A production isoquant map and isocost lines are used to derive a cost function. What graphical operation corresponds to finding C(q) for each output q?",
+                "choices": {
+                    "A": "Choose the highest isoquant tangent to a fixed isocost line.",
+                    "B": "Choose the lowest isocost line tangent to the isoquant for q.",
+                    "C": "Choose the point where the isoquant crosses the labor axis.",
+                    "D": "Choose the steepest isoquant regardless of prices."
+                },
+                "correct": "B",
+                "explanation": "For each target q, minimum cost is the lowest isocost reaching that isoquant. A describes output maximization for a cost budget. C is usually infeasible or not optimal. D ignores input prices."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For a Cobb-Douglas technology with constant returns to scale, the expansion path is a ray from the origin and isocosts are parallel as output rises. What should the derived long-run average cost curve look like?",
+                "choices": {
+                    "A": "Flat, because cost rises proportionally with output.",
+                    "B": "U-shaped, because all long-run costs are U-shaped.",
+                    "C": "Downward sloping forever, because fixed cost is spread out.",
+                    "D": "Vertical, because output is fixed."
+                },
+                "correct": "A",
+                "explanation": "Constant returns and fixed input prices imply linear total cost and constant average cost. B overgeneralizes. C imports short-run fixed-cost logic. D confuses one isoquant with the cost curve."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does Shephard's lemma imply about a differentiable cost function C(q,w,r)?",
+                "choices": {
+                    "A": "The derivative of cost with respect to an input price gives the conditional demand for that input.",
+                    "B": "The derivative of cost with respect to output gives average cost.",
+                    "C": "The cost function is always quadratic.",
+                    "D": "Input demands do not depend on input prices."
+                },
+                "correct": "A",
+                "explanation": "Shephard's lemma says partial C/partial w equals conditional labor demand and partial C/partial r equals conditional capital demand. B confuses marginal and average cost. C is false. D contradicts cost minimization."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A robotics firm knows its production function for drones and current input prices. It wants a formula giving the minimum dollar cost of producing any target number of drones. What procedure should it use?",
+                "choices": {
+                    "A": "Derive the cost function by minimizing input cost subject to the production function.",
+                    "B": "Set price equal to marginal revenue.",
+                    "C": "Calculate consumer surplus from the demand curve.",
+                    "D": "Use only accounting fixed costs."
+                },
+                "correct": "A",
+                "explanation": "The cost function comes from cost minimization subject to producing target output. B is output-market analysis. C is welfare analysis. D omits technology and variable inputs."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a production function from a cost function?",
+                "choices": {
+                    "A": "A production function gives maximum output from inputs; a cost function gives minimum cost of producing output at input prices.",
+                    "B": "A production function gives total cost; a cost function gives total output.",
+                    "C": "A production function depends on input prices; a cost function depends only on technology.",
+                    "D": "They are identical whenever firms minimize cost."
+                },
+                "correct": "A",
+                "explanation": "Production describes technology; cost combines technology with input prices through minimization. B reverses definitions. C reverses price dependence. D confuses related objects with identical ones."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has production q=(KL)^{1/4}, with w=r=1. This technology has decreasing returns to scale. How does its cost function change with q?",
+                "choices": {
+                    "A": "Cost rises linearly with q.",
+                    "B": "Cost rises more than proportionally with q, so average cost rises.",
+                    "C": "Cost rises less than proportionally with q, so average cost falls.",
+                    "D": "Cost is constant because both input prices are 1."
+                },
+                "correct": "B",
+                "explanation": "Since q=(KL)^{1/4}, producing higher q requires inputs to rise more than proportionally; decreasing returns imply rising average cost. A would fit constant returns. C describes increasing returns. D ignores input requirements."
+            }
+        ]
+    }
+]

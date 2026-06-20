@@ -1,0 +1,135 @@
+{
+  "topic": "Risk Premiums",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Henry has u(w)=sqrt(w). A lottery pays $100 with probability 0.5 and $36 with probability 0.5. What is the risk premium, and what does it mean?",
+      "choices": {
+        "A": "$4; it is the maximum amount Henry would give up from the lottery's expected value to receive a sure payment.",
+        "B": "$64; it is the certainty equivalent of the lottery.",
+        "C": "$68; it is the expected value of the lottery.",
+        "D": "$32; it is the distance from the certainty equivalent to the low payoff."
+      },
+      "correct": "A",
+      "explanation": "EV=68 and CE=64, so the risk premium is 4. B gives CE. C gives EV. D is unrelated to the definition of the risk premium."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Isabella has u(w)=ln(w). A project pays $180 with probability 0.5 and $20 with probability 0.5. What is the risk premium?",
+      "choices": {
+        "A": "$100, because that is the expected value.",
+        "B": "$60, because the certainty equivalent is sqrt(180·20)=60, so EV-CE=40.",
+        "C": "$40, because EV=100 and CE=60.",
+        "D": "$80, because the low payoff is $80 below expected value."
+      },
+      "correct": "C",
+      "explanation": "With log utility, CE is the geometric mean sqrt(180·20)=60. EV=100, so risk premium=40. A gives EV. B contains the correct CE but subtracts incorrectly in the displayed answer. D measures downside from the mean, not willingness to pay to avoid risk."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For u(w)=sqrt(w), compare lottery A paying $81 or $49 with equal probability and lottery B paying $100 or $36 with equal probability. What happens to the risk premium moving from A to B?",
+      "choices": {
+        "A": "It rises because B has a larger spread around its mean, increasing the Jensen gap from concavity.",
+        "B": "It falls because B has a higher high payoff.",
+        "C": "It stays the same because both lotteries have two equally likely outcomes.",
+        "D": "It becomes negative because B's expected value is higher."
+      },
+      "correct": "A",
+      "explanation": "A has EV=65 and CE=(0.5(9)+0.5(7))^2=64, risk premium 1. B has EV=68 and CE=64, risk premium 4. The larger spread raises the risk premium. B focuses only on upside. C ignores spread. D confuses higher EV with negative risk premium."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A lottery pays $144 or $64 with equal probability. Person A has u_A(w)=sqrt(w); Person B has u_B(w)=w. How does the risk premium differ?",
+      "choices": {
+        "A": "Person A's risk premium is positive; Person B's is zero because linear utility makes CE equal EV.",
+        "B": "Person A's risk premium is zero; Person B's is positive because linear utility values dollars directly.",
+        "C": "Both risk premiums are positive because both face the same risky payoffs.",
+        "D": "Both risk premiums are zero because the lottery is symmetric."
+      },
+      "correct": "A",
+      "explanation": "Risk-averse concave utility implies CE<EV and a positive risk premium. Linear utility implies risk neutrality and CE=EV. B reverses the relationship. C ignores risk neutrality. D confuses symmetry with absence of risk."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a concave utility graph, how is the risk premium for a lottery represented along the wealth axis?",
+      "choices": {
+        "A": "The horizontal distance between expected wealth and the certainty equivalent.",
+        "B": "The vertical distance between expected utility and zero utility.",
+        "C": "The slope of the utility curve at the low outcome.",
+        "D": "The horizontal distance between the high and low outcomes."
+      },
+      "correct": "A",
+      "explanation": "The risk premium is EV minus CE, measured in dollars on the horizontal axis. B is not a dollar premium. C is marginal utility. D is the payoff spread, not the premium."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Two concave utility curves pass through the same utility level at wealth $100, but curve A is more sharply curved than curve B. For the same small fair gamble around $100, what does the graph imply about risk premiums?",
+      "choices": {
+        "A": "A has a smaller risk premium because higher curvature means higher marginal utility.",
+        "B": "A has a larger risk premium because the chord lies farther below the utility curve at expected wealth.",
+        "C": "Both have the same risk premium because the gamble has the same expected value.",
+        "D": "B has a larger risk premium because flatter curves imply stronger dislike of risk."
+      },
+      "correct": "B",
+      "explanation": "Greater concavity increases the gap between u(E[w]) and expected utility, lowering CE and raising the risk premium. A confuses marginal utility with curvature. C ignores different risk preferences. D reverses the curvature interpretation."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A risk premium is positive for a lottery with expected value $1,000 and certainty equivalent $920. What does the $80 represent?",
+      "choices": {
+        "A": "The expected monetary loss from taking the lottery.",
+        "B": "The maximum amount the person would pay to replace the lottery with its expected value for sure.",
+        "C": "The probability of the bad state multiplied by the loss.",
+        "D": "The insurance company's profit from selling actuarially fair insurance."
+      },
+      "correct": "B",
+      "explanation": "The risk premium EV-CE is willingness to pay to eliminate risk while keeping expected wealth. A is false because expected value already accounts for expected payoffs. C may be a downside measure but not generally the premium. D is false under actuarially fair insurance."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A freelance photographer faces uncertain annual income with expected value $70,000. She says she would accept a guaranteed salary of $62,000 instead. Which calculation captures her risk premium?",
+      "choices": {
+        "A": "$132,000, the sum of expected income and guaranteed salary.",
+        "B": "$70,000, the expected value of freelancing.",
+        "C": "$62,000, the certainty equivalent of freelancing.",
+        "D": "$8,000, the expected income she is willing to give up to avoid freelancing risk."
+      },
+      "correct": "D",
+      "explanation": "Risk premium equals EV-CE=70,000-62,000=8,000. A is meaningless here. B gives EV. C gives CE."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes risk premium from certainty equivalent?",
+      "choices": {
+        "A": "Risk premium is a utility number; certainty equivalent is a probability.",
+        "B": "Risk premium is the difference between expected value and certainty equivalent; certainty equivalent is the sure payment equally preferred to the lottery.",
+        "C": "Risk premium is always larger than expected value; certainty equivalent is always negative for risky lotteries.",
+        "D": "Risk premium is calculated before preferences are known; certainty equivalent is calculated using only expected value."
+      },
+      "correct": "B",
+      "explanation": "The risk premium measures EV minus CE; CE is the preference-equivalent sure amount. A gives wrong units. C is false. D reverses the role of preferences."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A consumer has u(w)=sqrt(w). A regulation converts a risky income of $225 with probability 0.5 and $25 with probability 0.5 into a sure income of $100. What is the welfare change measured in certainty-equivalent dollars?",
+      "choices": {
+        "A": "$25 gain, because the risky income has EV=$125 and the sure income is $100.",
+        "B": "$0, because the risky income's CE is $100 and the new certain income is $100.",
+        "C": "$50 gain, because the high-low spread is cut from $200 to $0.",
+        "D": "$100 gain, because the bad state is eliminated."
+      },
+      "correct": "B",
+      "explanation": "EU of the risky income is 0.5(15)+0.5(5)=10, so CE=100. The sure income also has CE=100, so welfare is unchanged in CE dollars. A uses expected value rather than CE. C uses spread reduction. D counts elimination of the bad state without accounting for the lost high state."
+    }
+  ]
+}

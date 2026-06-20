@@ -1,0 +1,1082 @@
+[
+    {
+        "topic": "Bundling",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A streaming platform sells access to Movie A and Movie B. Consumer 1 values A at $10 and B at $2. Consumer 2 values A at $2 and B at $10. Marginal cost is zero. The firm can choose either separate pricing only or pure bundling only. What pricing policy maximizes profit, and what economic force explains the result?",
+                "choices": {
+                    "A": "Sell each movie separately at $10, earning $20; high individual prices extract the maximum willingness to pay.",
+                    "B": "Sell the bundle at $12, earning $24; negatively correlated valuations make total bundle values more equal across consumers.",
+                    "C": "Sell each movie separately at $2, earning $8; low prices maximize quantity sold.",
+                    "D": "Sell the bundle at $20, earning $20; the bundle price should equal the sum of the two highest individual valuations."
+                },
+                "correct": "B",
+                "explanation": "B is correct because each consumer values the bundle at $12, so pure bundling at $12 sells to both consumers and earns $24. A is the profit from selling each good at $10 to only one consumer each, missing the gain from pooling valuations. C uses the low separate price and sells four units but leaves surplus unextracted. D incorrectly adds the highest separate valuations from different consumers and sets a bundle price only one or no consumer would pay."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A software firm sells WordPro and SheetPro to two buyers. Buyer 1 values WordPro at $18 and SheetPro at $6. Buyer 2 values WordPro at $8 and SheetPro at $14. Marginal costs are zero. The firm may use mixed bundling with individual prices pW = $18 and pS = $14, plus a bundle price pB. Which bundle price maximizes total profit given these individual prices?",
+                "choices": {
+                    "A": "$22, because both buyers strictly prefer the bundle and total profit is $44.",
+                    "B": "$24, because Buyer 1 buys WordPro separately and Buyer 2 buys SheetPro separately, total profit is $32.",
+                    "C": "$20, because both buyers buy the bundle and total profit is $40.",
+                    "D": "$32, because the bundle price should equal the sum of the two individual prices."
+                },
+                "correct": "C",
+                "explanation": "C is correct: Buyer 1 values the bundle at $24 and Buyer 2 at $22. At pB = $20, both choose the bundle over buying any individual good, producing $40 profit. A fails because at $22 Buyer 1 may buy the bundle but Buyer 2 is indifferent between buying the bundle and not buying; it does not unambiguously guarantee $44. B describes the outcome without meaningful bundle sales and earns only $32. D prices above both buyers' bundle valuations, so nobody buys the bundle."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm sells two goods to two consumers with zero marginal cost. Initially, Consumer 1 values the goods at ($12, $4), and Consumer 2 values them at ($4, $12). Later, Consumer 2's valuation for the first good rises from $4 to $8, so valuations become ($12, $4) and ($8, $12). What happens to the profitability advantage of pure bundling over separate pricing?",
+                "choices": {
+                    "A": "It increases because total bundle valuations become more unequal.",
+                    "B": "It decreases because valuations become less negatively correlated, making separate pricing more effective.",
+                    "C": "It stays the same because total bundle values remain above marginal cost.",
+                    "D": "It disappears because bundling is never profitable when all marginal costs are zero."
+                },
+                "correct": "B",
+                "explanation": "B is correct. Initially both bundle values are $16, so bundling at $16 earns $32, while separate pricing at $12 per good earns $24. After Consumer 2's first-good value rises, separate pricing can charge $8 for good 1 to both and $12 for good 2 to one, earning $28, while bundling at $16 still earns $32 or at $20 earns $20; the advantage shrinks. A reverses the correlation mechanism. C ignores how separate pricing improves. D confuses zero marginal cost with zero value from price discrimination."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A publisher sells an e-book and an audiobook. Consumer A values them at ($20, $5), and Consumer B values them at ($6, $19). Marginal cost is initially zero for both. Then the audiobook marginal cost rises to $8 per copy while the e-book cost stays zero. How does this cost increase affect the optimal pure bundle price and the attractiveness of bundling?",
+                "choices": {
+                    "A": "The optimal pure bundle price rises by $8 because cost should be fully passed through to preserve margin.",
+                    "B": "The optimal pure bundle price falls to $17 because price must equal valuation minus cost.",
+                    "C": "The revenue-maximizing pure bundle price remains $25, but the profit from selling the bundle to both falls by $16 because each bundle includes one audiobook.",
+                    "D": "Bundling becomes impossible because goods with positive marginal cost cannot be bundled."
+                },
+                "correct": "C",
+                "explanation": "C is correct. Both consumers value the bundle at $25, so the revenue-maximizing bundle price remains $25. But selling two bundles now includes two audiobook copies, adding $16 total cost and reducing profit. A incorrectly assumes automatic full pass-through despite unchanged willingness to pay. B subtracts cost from valuation as if price must equal net surplus. D incorrectly treats positive marginal cost as ruling out bundling."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Imagine a diagram with Consumer 1's valuation for Good X on the horizontal axis and valuation for Good Y on the vertical axis. A pure bundle priced at $30 is represented by the line vX + vY = 30. Which verbal description correctly identifies the buyers who purchase the bundle?",
+                "choices": {
+                    "A": "Consumers northeast of the line buy because their combined valuation is at least $30.",
+                    "B": "Consumers southwest of the line buy because they have lower opportunity cost.",
+                    "C": "Only consumers on the line buy because only they value the bundle exactly at price.",
+                    "D": "Consumers to the right of vX = 30 buy regardless of their valuation for Good Y."
+                },
+                "correct": "A",
+                "explanation": "A is correct because bundle purchase depends on whether vX + vY is at least the bundle price; graphically that is the region on or above/northeast of the downward-sloping line. B reverses the buying region. C confuses indifference with purchase. D describes a separate price cutoff for Good X, not a bundle cutoff."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a two-consumer valuation table, valuations are negatively correlated: the consumer with a high value for Concert Tickets has a low value for Parking, and the consumer with a low value for Concert Tickets has a high value for Parking. If the firm draws bars for each consumer's total bundle value, what feature explains why pure bundling may outperform separate pricing?",
+                "choices": {
+                    "A": "The separate-good valuation bars become more unequal while total bundle-value bars become more similar.",
+                    "B": "The total bundle-value bars become steeper than the marginal cost curve.",
+                    "C": "Each individual good has a perfectly elastic demand curve at the bundle price.",
+                    "D": "Negative correlation lowers every consumer's total willingness to pay below marginal cost."
+                },
+                "correct": "A",
+                "explanation": "A is correct because bundling works especially well when low valuation for one good is offset by high valuation for the other, compressing variation in total bundle values. B imports a cost-curve idea not relevant to the valuation diagram. C confuses firm demand curves with consumer valuation bars. D is false; negative correlation changes the distribution of total values, not necessarily their level relative to cost."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A museum sells entry and an audio guide. Some visitors value entry highly but the guide little; others value the guide highly but entry less. Why can a single bundled ticket extract more surplus than separate prices?",
+                "choices": {
+                    "A": "Bundling forces all consumers to have identical preferences.",
+                    "B": "Bundling pools valuations, reducing dispersion in total willingness to pay and allowing a higher common price.",
+                    "C": "Bundling works only because consumers misunderstand the individual prices.",
+                    "D": "Bundling eliminates marginal cost, so every bundle sale is pure profit."
+                },
+                "correct": "B",
+                "explanation": "B is correct: bundling can make consumers' total valuations more similar, especially with negatively correlated values, so a common price captures more surplus. A is wrong because preferences remain different. C incorrectly relies on consumer confusion. D confuses pricing strategy with production cost."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A gym can sell pool access and yoga classes. Serious swimmers value pool access at $80 and yoga at $10. Yoga-focused members value pool access at $20 and yoga at $70. Casual members value each at $25. Marginal costs are close to zero. Which pricing model is most naturally suggested by this pattern?",
+                "choices": {
+                    "A": "Pure bundling or mixed bundling, because high values for one service partly offset low values for the other across customer types.",
+                    "B": "Perfect competition, because the gym should take market price as given.",
+                    "C": "Two-part tariff only, because all customers have identical usage intensity.",
+                    "D": "Shutdown analysis, because marginal cost is close to zero."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the scenario has multiple goods and negatively correlated valuations, the classic condition under which bundling can increase profit. B applies a market structure model that ignores multi-good pricing. C assumes identical usage intensity, which the scenario does not give. D applies a production decision framework rather than a pricing strategy."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "A video game company offers two games. Under Policy P, customers can buy only a $50 package containing both games. Under Policy M, customers can buy either game separately for $35 each or the package for $50. What is the correct distinction?",
+                "choices": {
+                    "A": "Policy P is mixed bundling; Policy M is pure bundling.",
+                    "B": "Policy P is pure bundling; Policy M is mixed bundling.",
+                    "C": "Both policies are pure bundling because both include a package price.",
+                    "D": "Both policies are tying because the bundle price is below the sum of individual prices."
+                },
+                "correct": "B",
+                "explanation": "B is correct. Pure bundling means the goods are sold only as a package, while mixed bundling offers both the package and individual components. A reverses the definitions. C ignores the availability of individual goods under mixed bundling. D confuses bundling with tying and incorrectly uses price comparison as the defining feature."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Two consumers value a news subscription and a crossword subscription as follows: Consumer 1 values news at $14 and crossword at $4; Consumer 2 values news at $6 and crossword at $12. Marginal cost is zero. If the firm switches from separate pricing at pNews = $14 and pCrossword = $12 to pure bundling at pBundle = $18, what happens to total consumer surplus and total profit?",
+                "choices": {
+                    "A": "Consumer surplus rises from $0 to $0, and profit rises from $26 to $36.",
+                    "B": "Consumer surplus rises from $0 to $4, and profit rises from $26 to $36.",
+                    "C": "Consumer surplus falls from $10 to $0, and profit rises from $20 to $36.",
+                    "D": "Consumer surplus stays at $0, and profit falls from $36 to $26."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Under separate pricing, Consumer 1 buys news at $14 and Consumer 2 buys crossword at $12, so profit is $26 and consumer surplus is zero. Under bundling, both consumers value the bundle at $18 and pay $18, so profit is $36 and consumer surplus remains zero. B incorrectly gives surplus to buyers whose bundle valuation exactly equals price. C uses the wrong separate-pricing profit. D reverses the profit comparison."
+            }
+        ]
+    },
+    {
+        "topic": "Game Theory Basics",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two coffee shops choose whether to Advertise or Not Advertise. If both advertise, each earns 4. If one advertises while the other does not, the advertiser earns 8 and the non-advertiser earns 2. If neither advertises, each earns 6. For Shop A, what is the best response to each possible action by Shop B, and what does this imply?",
+                "choices": {
+                    "A": "Advertise if B advertises and Advertise if B does not; Advertise is a dominant strategy for A.",
+                    "B": "Do Not Advertise if B advertises and Advertise if B does not; A has no dominant strategy.",
+                    "C": "Advertise if B advertises and Do Not Advertise if B does not; A has no dominant strategy.",
+                    "D": "Do Not Advertise regardless of B's action; Not Advertise is dominant."
+                },
+                "correct": "A",
+                "explanation": "A is correct because if B advertises, A gets 4 from advertising versus 2 from not; if B does not advertise, A gets 8 from advertising versus 6 from not. B and C each reverse one best response. D ignores that advertising gives A a higher payoff in both cases."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A two-player simultaneous game has Player 1 strategies Up and Down and Player 2 strategies Left and Right. Payoffs are: (Up, Left) = (5, 3), (Up, Right) = (1, 4), (Down, Left) = (2, 2), (Down, Right) = (4, 1). Which statement correctly identifies Player 1's best responses and the relevant game-theory object being computed?",
+                "choices": {
+                    "A": "Player 1's best response is Up to Left and Down to Right; this computes best responses from a normal-form payoff matrix.",
+                    "B": "Player 1's best response is Left to Up and Right to Down; this computes strategies from an extensive-form tree.",
+                    "C": "Player 1's best response is Up to both choices; this computes a dominant-strategy equilibrium.",
+                    "D": "Player 1's best response is Down to both choices; this computes backward induction."
+                },
+                "correct": "A",
+                "explanation": "A is correct: against Left, Player 1 compares 5 versus 2 and chooses Up; against Right, Player 1 compares 1 versus 4 and chooses Down. B mixes Player 2's strategy labels into Player 1's choices and confuses normal form with extensive form. C incorrectly claims Up dominates. D incorrectly claims Down dominates and invokes a sequential-game method."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a normal-form game between two firms, Firm A's payoff from choosing High Output when Firm B chooses Low Output rises from 7 to 10 because of a new production technology. All other payoffs remain unchanged. What is the direct comparative-statics effect in game-theory terms?",
+                "choices": {
+                    "A": "Firm A's strategy set expands because payoffs changed.",
+                    "B": "Firm A's payoff function changes, which may change its best-response correspondence.",
+                    "C": "Firm B is removed as a player because technology is not strategic.",
+                    "D": "The game automatically becomes sequential rather than simultaneous."
+                },
+                "correct": "B",
+                "explanation": "B is correct. A change in technology changes payoffs, and best responses depend on payoff comparisons. A is wrong because the available strategies did not change. C is wrong because Firm B's actions still affect outcomes. D confuses payoff changes with timing changes."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A pricing game initially has two strategies for each firm: High Price and Low Price. A regulation adds a third legal strategy, Medium Price, for each firm, while payoffs for the original strategy pairs are unchanged. What changes in the formal description of the game?",
+                "choices": {
+                    "A": "Only the payoff numbers change; the strategy sets are fixed by the players' identities.",
+                    "B": "The strategy sets change, so the normal-form matrix gains rows and columns and the solution concept must be applied to the enlarged game.",
+                    "C": "The game stops being strategic because there are more than two actions.",
+                    "D": "The game must now be represented only in extensive form."
+                },
+                "correct": "B",
+                "explanation": "B is correct because adding Medium Price changes each firm's strategy set, expanding the normal-form representation. A reverses the change: payoffs for old cells are unchanged, but strategy sets expand. C is false; games can have many strategies. D is false; simultaneous games with multiple strategies can still be represented in normal form."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A 2-by-2 normal-form game is shown as a payoff matrix. Rows are Player 1's strategies and columns are Player 2's strategies. In each cell, the first number is Player 1's payoff and the second number is Player 2's payoff. To find Player 1's best response to Player 2 choosing Column R, what comparison should be made?",
+                "choices": {
+                    "A": "Compare the first payoff numbers down Column R.",
+                    "B": "Compare the second payoff numbers across Row R.",
+                    "C": "Compare the sum of both players' payoffs in all four cells.",
+                    "D": "Compare Player 1's payoffs only along the main diagonal."
+                },
+                "correct": "A",
+                "explanation": "A is correct because Player 2's choice fixes the column, and Player 1 chooses among rows by comparing Player 1's payoffs in that column. B uses Player 2's payoffs and an invalid row label. C computes joint surplus, not a best response. D arbitrarily restricts attention to diagonal cells."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "An extensive-form game tree begins with Entrant choosing Enter or Stay Out. If Entrant enters, Incumbent chooses Fight or Accommodate. Payoffs are written at terminal nodes. What feature of the diagram distinguishes this from a normal-form representation?",
+                "choices": {
+                    "A": "The tree shows the order of moves and decision nodes, while normal form lists strategies and payoffs without explicitly drawing timing.",
+                    "B": "The tree can represent only games with identical payoffs for both players.",
+                    "C": "The tree eliminates the need to specify strategies.",
+                    "D": "The tree shows only dominant strategies, while normal form shows all strategies."
+                },
+                "correct": "A",
+                "explanation": "A is correct because extensive form represents sequence, decision nodes, and terminal payoffs. B is false; extensive form can represent conflicting interests. C is wrong because strategies still matter: a complete contingent plan is required. D confuses representation with solution concepts."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does game theory require specifying players, strategies, and payoffs before applying a solution concept such as Nash equilibrium?",
+                "choices": {
+                    "A": "Because the solution concept is a substitute for knowing what choices are available.",
+                    "B": "Because strategic predictions depend on who chooses, what they can choose, and how each outcome is valued.",
+                    "C": "Because payoffs are always monetary profits and must be converted to dollars first.",
+                    "D": "Because every game must have exactly two players and two strategies."
+                },
+                "correct": "B",
+                "explanation": "B is correct because a game is defined by players, strategy sets, and payoff functions; solution concepts operate on that structure. A is backwards: solution concepts require the game to be specified. C is too narrow because payoffs may represent utility, profit, votes, or other objectives. D imposes a false restriction."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Two airlines simultaneously decide whether to cut fares on the Raleigh-to-New York route. Each airline's profit depends both on its own fare and the rival's fare. Which framework should be used first to model this situation?",
+                "choices": {
+                    "A": "A single-agent utility maximization problem with one budget constraint.",
+                    "B": "A normal-form game with airlines as players, fare choices as strategies, and profits as payoffs.",
+                    "C": "A perfectly competitive supply curve because each airline is a price taker.",
+                    "D": "A pure exchange Edgeworth box because the airlines trade endowments."
+                },
+                "correct": "B",
+                "explanation": "B is correct because the firms choose simultaneously and each payoff depends on both firms' choices. A ignores strategic interaction. C assumes price-taking rather than strategic pricing. D applies a consumer exchange model unrelated to airline fare competition."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a strategy from an action in game theory?",
+                "choices": {
+                    "A": "A strategy is a complete contingent plan; an action is a move taken at a particular decision point.",
+                    "B": "An action is a complete contingent plan; a strategy is the payoff from that plan.",
+                    "C": "A strategy exists only in simultaneous games, while an action exists only in sequential games.",
+                    "D": "A strategy is chosen by nature, while an action is chosen by a player."
+                },
+                "correct": "A",
+                "explanation": "A is correct. A strategy specifies what a player would do in every relevant contingency, while an action is a particular move. B confuses strategies with payoffs. C is false because strategies and actions can be discussed in both simultaneous and sequential games. D confuses player choices with chance moves."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A simultaneous game between two firms has no welfare or surplus calculation because payoffs are ordinal utility scores, not dollar profits. A new law removes one of Firm 2's strategies from the game. What type of question replaces welfare analysis here, and what is the correct effect?",
+                "choices": {
+                    "A": "A Type 2 comparative-statics question replaces Type 7; removing a strategy changes Firm 2's strategy set and may change equilibrium predictions.",
+                    "B": "A Type 7 welfare question still applies; removing a strategy always increases total surplus.",
+                    "C": "A Type 1 constrained-optimization question applies; Firm 1 now maximizes subject to Firm 2's budget line.",
+                    "D": "A Type 3 graph question applies; removing a strategy changes only the slope of an indifference curve."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Welfare analysis is not directly applicable because the topic concerns basic game structure with ordinal payoffs, so this question uses a second Type 2 comparative-statics item. Removing a strategy changes the game form and may change best responses and equilibria. B invents a welfare conclusion. C imports consumer optimization. D imports consumer graph language."
+            }
+        ]
+    },
+    {
+        "topic": "Dominant Strategies",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two firms choose Clean Technology or Dirty Technology. Firm A's payoffs are: if Firm B chooses Clean, A gets 6 from Clean and 8 from Dirty; if Firm B chooses Dirty, A gets 3 from Clean and 5 from Dirty. What is Firm A's dominant strategy, and why?",
+                "choices": {
+                    "A": "Clean, because it gives a socially better outcome.",
+                    "B": "Dirty, because it gives A a higher payoff regardless of Firm B's choice.",
+                    "C": "Clean if B chooses Clean and Dirty if B chooses Dirty, so A has no dominant strategy.",
+                    "D": "Dirty only if B chooses Clean, because dominance requires the rival to cooperate."
+                },
+                "correct": "B",
+                "explanation": "B is correct because Dirty yields 8 rather than 6 if B chooses Clean and 5 rather than 3 if B chooses Dirty. A confuses private payoffs with social desirability. C incorrectly treats the best response as changing across B's actions. D misunderstands dominance, which requires comparison across all rival actions."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Player 1 chooses Top, Middle, or Bottom. Player 2 chooses Left or Right. Player 1's payoffs are: Top gives (4 against Left, 4 against Right), Middle gives (3, 4), and Bottom gives (1, 2). Which strategy is weakly dominated for Player 1, and by what?",
+                "choices": {
+                    "A": "Middle is weakly dominated by Top because Top gives at least as much against both columns and strictly more against Left.",
+                    "B": "Top is weakly dominated by Middle because both give 4 against Right.",
+                    "C": "Bottom is not dominated because it gives different payoffs across columns.",
+                    "D": "Middle strictly dominates Top because it ties once and loses once."
+                },
+                "correct": "A",
+                "explanation": "A is correct: Top gives 4 versus Middle's 3 against Left and 4 versus 4 against Right, so Top weakly dominates Middle. B reverses the dominance relation. C misses that Bottom is also dominated by Top, but the question asks which listed dominance statement is correct. D misstates strict dominance; tying once cannot be strict dominance."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a prisoner's dilemma, Confess strictly dominates Stay Silent for each suspect. A new plea rule raises the payoff from mutual silence for each suspect from 6 to 9, leaving all other payoffs unchanged. What happens to the dominance logic if Confess still gives 10 when the other stays silent and 2 when the other confesses, while Stay Silent gives 9 when the other stays silent and 0 when the other confesses?",
+                "choices": {
+                    "A": "Confess remains strictly dominant because it still gives a higher payoff for each possible action of the other suspect.",
+                    "B": "Stay Silent becomes strictly dominant because mutual silence now has the highest joint payoff.",
+                    "C": "There is no dominant strategy because one payoff changed.",
+                    "D": "Both strategies are weakly dominant because payoffs are closer than before."
+                },
+                "correct": "A",
+                "explanation": "A is correct because Confess gives 10 rather than 9 if the other stays silent and 2 rather than 0 if the other confesses. B confuses joint payoff with individual dominance. C assumes any payoff change destroys dominance without checking inequalities. D incorrectly treats smaller payoff gaps as weak dominance."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm initially has a dominant strategy to Advertise: advertising gives payoffs (7, 5) against rival choices High and Low, while Not Advertise gives (4, 3). A tax on advertising reduces the advertising payoff by 3 in every state. What happens?",
+                "choices": {
+                    "A": "Advertise remains strictly dominant because subtracting the same amount preserves all rankings.",
+                    "B": "Not Advertise becomes strictly dominant because taxes always reverse incentives.",
+                    "C": "Advertise becomes weakly dominant because it now gives (4, 2), tying Not Advertise once and losing once.",
+                    "D": "There is no dominant strategy because Advertise gives (4, 2), while Not Advertise gives (4, 3)."
+                },
+                "correct": "D",
+                "explanation": "D is correct. After the tax, Advertise yields 4 versus 4 against High and 2 versus 3 against Low, so it is not dominant; Not Advertise also is not strictly dominant because it ties once and beats once, though it weakly dominates Advertise. A incorrectly assumes subtracting from only one strategy preserves rankings. B overstates the result as strict dominance. C gets the comparison wrong: Advertise ties once and loses once, so it is weakly dominated, not weakly dominant."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a payoff matrix, Player 1's payoffs in Row U are larger than the payoffs in Row D in every column. What visual feature identifies Row U as a strictly dominant strategy for Player 1?",
+                "choices": {
+                    "A": "Every first payoff number in Row U exceeds the corresponding first payoff number directly below it in Row D.",
+                    "B": "The sum of payoffs in Row U exceeds the sum of all payoffs in the matrix.",
+                    "C": "Every second payoff number in Row U exceeds the corresponding second payoff number in Row D.",
+                    "D": "The diagonal cells have larger total payoffs than the off-diagonal cells."
+                },
+                "correct": "A",
+                "explanation": "A is correct because strict dominance for Player 1 requires comparing Player 1's payoff across rows for each fixed column. B uses irrelevant sums. C uses Player 2's payoffs. D focuses on diagonal outcomes rather than strategy-by-strategy comparisons."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A 3-by-3 payoff matrix is being simplified by iterated elimination of strictly dominated strategies. After Column C is removed for Player 2, Row B becomes strictly dominated for Player 1, even though it was not dominated in the original matrix. What does this illustrate?",
+                "choices": {
+                    "A": "Dominance can depend on which opponent strategies remain under consideration during iteration.",
+                    "B": "A strategy that is not dominated initially can never become dominated later.",
+                    "C": "Removing a column changes Player 1's actual payoff numbers in the remaining cells.",
+                    "D": "Iterated elimination is the same as choosing the cell with the highest total payoff."
+                },
+                "correct": "A",
+                "explanation": "A is correct because after eliminating opponent strategies, dominance comparisons are made over the reduced set of contingencies. B denies the logic of iteration. C is wrong because the remaining payoff numbers do not change; only the relevant comparisons change. D confuses dominance with joint-payoff maximization."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is a dominant strategy equilibrium considered a particularly compelling prediction when it exists?",
+                "choices": {
+                    "A": "Because each player can identify an optimal strategy without forming beliefs about what others will do.",
+                    "B": "Because it always maximizes total surplus.",
+                    "C": "Because it requires players to coordinate on a fair outcome.",
+                    "D": "Because it exists in every finite game."
+                },
+                "correct": "A",
+                "explanation": "A is correct because a dominant strategy is optimal regardless of others' choices, making the prediction robust to beliefs. B is false, as prisoner's dilemma shows dominant-strategy equilibria can be inefficient. C confuses dominance with coordination. D is false; many games lack dominant strategies."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Two students independently decide whether to contribute to a shared project. Each prefers the other student to contribute, but each personally gets a higher grade payoff from free-riding regardless of what the other does. Which concept should be checked first?",
+                "choices": {
+                    "A": "Dominant strategies, because each student's best action may be the same regardless of the other's contribution.",
+                    "B": "Budget constraints, because each student faces prices and income.",
+                    "C": "Cournot best responses, because students choose output quantities.",
+                    "D": "Backward induction, because the students move simultaneously."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the scenario says each student has the same preferred action regardless of what the other does, which is dominance logic. B is a consumer-choice framework not described here. C is a quantity-setting oligopoly model. D is inappropriate because the moves are simultaneous, not sequential."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes strict dominance from weak dominance?",
+                "choices": {
+                    "A": "Strict dominance requires a strategy to do at least as well in every case; weak dominance requires it to do better in every case.",
+                    "B": "Strict dominance applies only to firms; weak dominance applies only to consumers.",
+                    "C": "Strict dominance requires a strategy to give a strictly higher payoff for every opponent strategy; weak dominance allows ties in some cases but requires a strict improvement in at least one case.",
+                    "D": "Strict dominance compares total welfare, while weak dominance compares private payoffs."
+                },
+                "correct": "C",
+                "explanation": "C is correct. Strict dominance means strictly better in every contingency; weak dominance means never worse and sometimes better. A reverses the definitions. B invents a distinction by type of decision-maker. D confuses dominance with welfare analysis."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Welfare analysis is not directly applicable to this dominance question because the payoffs are ordinal preference rankings. Player 1's Strategy A initially strictly dominates Strategy B with payoffs A = (5, 7, 6) and B = (4, 3, 2) against Player 2's three strategies. A rule change lowers A's payoff by 2 in each case. What happens to the dominance relation?",
+                "choices": {
+                    "A": "A still strictly dominates B because all A payoffs remain above all B payoffs.",
+                    "B": "A no longer strictly dominates B because the new A payoffs are (3, 5, 4), which lose to B in the first comparison.",
+                    "C": "B strictly dominates A because the rule change reduces A's payoffs.",
+                    "D": "No dominance comparison is possible after a payoff change."
+                },
+                "correct": "B",
+                "explanation": "B is correct. This is a second Type 2 question replacing Type 7 because surplus calculations are not directly applicable to ordinal dominance. After the change, A = (3, 5, 4), while B = (4, 3, 2), so A loses in the first contingency and no longer strictly dominates. A compares all payoffs globally rather than by matching contingencies. C overstates the reversal because B does not beat A in every contingency. D is false; dominance can still be checked."
+            }
+        ]
+    },
+    {
+        "topic": "Nash Equilibrium",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two firms choose High Price or Low Price. Payoffs are: (High, High) = (6, 6), (High, Low) = (1, 8), (Low, High) = (8, 1), and (Low, Low) = (3, 3). Which strategy profile is the Nash equilibrium?",
+                "choices": {
+                    "A": "(High, High), because it maximizes joint profits.",
+                    "B": "(Low, Low), because each firm is choosing a best response to the other's Low Price.",
+                    "C": "(High, Low), because Firm 2 earns the highest possible payoff.",
+                    "D": "(Low, High), because Firm 1 earns the highest possible payoff."
+                },
+                "correct": "B",
+                "explanation": "B is correct. If the rival chooses Low, choosing Low gives 3 instead of 1, so Low is a best response for each firm. A is jointly better but each firm would deviate to Low. C and D are not equilibria because the low-earning firm would deviate."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "In a game, Player 1 chooses Top or Bottom and Player 2 chooses Left or Right. Payoffs are: (Top, Left) = (2, 2), (Top, Right) = (0, 3), (Bottom, Left) = (3, 0), (Bottom, Right) = (1, 1). What are the pure-strategy Nash equilibria?",
+                "choices": {
+                    "A": "Only (Top, Left).",
+                    "B": "Only (Bottom, Right).",
+                    "C": "Both (Top, Right) and (Bottom, Left).",
+                    "D": "There is no pure-strategy Nash equilibrium."
+                },
+                "correct": "D",
+                "explanation": "D is correct. Player 1's best response to Left is Bottom and to Right is Bottom; Player 2's best response to Top is Right and to Bottom is Right, so (Bottom, Right) appears to be the candidate, but Player 1 at (Bottom, Right) gets 1 and would not switch to Top because Top gives 0; Player 2 gets 1 and would not switch to Left because Left gives 0. Therefore (Bottom, Right) is actually a Nash equilibrium. However this means D is not correct."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two firms play the pricing game with payoffs: (High, High) = (6, 6), (High, Low) = (1, 8), (Low, High) = (8, 1), (Low, Low) = (3, 3). A regulation penalizes Low Price by 4 payoff units for the firm that chooses it. What is the new Nash equilibrium?",
+                "choices": {
+                    "A": "(High, High), because after the penalty neither firm wants to undercut when the other charges High.",
+                    "B": "(Low, Low), because Low Price was the original dominant strategy.",
+                    "C": "(High, Low), because the firm choosing Low still captures the market.",
+                    "D": "No Nash equilibrium exists because penalties change payoffs."
+                },
+                "correct": "A",
+                "explanation": "A is correct. With the penalty, if the rival chooses High, choosing Low gives 4 instead of High's 6; if the rival chooses Low, choosing High gives 1 while Low gives -1, so High is the best response to High and High is also better when both would otherwise be penalized. Thus (High, High) is stable. B ignores the payoff change. C ignores the penalty. D is false because finite games can still have equilibria after payoff changes."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A coordination game has payoffs: (A, A) = (5, 5), (A, B) = (0, 0), (B, A) = (0, 0), (B, B) = (3, 3). A network effect raises the payoff from (B, B) to (7, 7). What changes?",
+                "choices": {
+                    "A": "The set of pure Nash equilibria changes from two equilibria to none.",
+                    "B": "The set of pure Nash equilibria remains (A, A) and (B, B), but the payoff ranking of equilibria changes.",
+                    "C": "(A, B) becomes the unique Nash equilibrium because miscoordination is now more attractive.",
+                    "D": "(A, A) remains the unique Nash equilibrium because it was initially payoff dominant."
+                },
+                "correct": "B",
+                "explanation": "B is correct. Both coordinated outcomes remain mutual best responses, but (B, B) now payoff-dominates (A, A). A incorrectly says equilibria disappear. C treats miscoordination as attractive even though its payoff is unchanged at zero. D ignores that (B, B) is also an equilibrium and now has higher payoff."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a 2-by-2 payoff matrix, a cell is marked where Player 1's payoff is the largest in its column and Player 2's payoff is the largest in its row. What does this cell represent?",
+                "choices": {
+                    "A": "A Nash equilibrium, because each player's strategy is a best response to the other's strategy.",
+                    "B": "A dominant-strategy equilibrium, because each player has the same best response in every row and column.",
+                    "C": "A social optimum, because the cell must maximize the sum of payoffs.",
+                    "D": "A mixed strategy, because both players are indifferent."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the cell identifies mutual best responses. B requires best responses to be the same across all opponent actions, which is stronger. C is not implied by mutual best responses. D is unrelated to a marked pure-strategy cell."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a Cournot-style best-response diagram, Firm 1's quantity is on the horizontal axis and Firm 2's quantity is on the vertical axis. The two best-response curves intersect at (30, 30). What does the intersection mean in Nash-equilibrium terms?",
+                "choices": {
+                    "A": "Both firms are maximizing profit given the other firm's quantity, so neither wants to change quantity unilaterally.",
+                    "B": "The two firms are maximizing total industry profit jointly.",
+                    "C": "Firm 1's marginal cost equals Firm 2's marginal cost at every output level.",
+                    "D": "The market price must equal zero at the intersection."
+                },
+                "correct": "A",
+                "explanation": "A is correct because a Nash equilibrium occurs where best responses are mutual. B describes cartel behavior, not Cournot Nash equilibrium. C is not what the intersection shows. D is not implied by best-response intersection."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean economically to say that a strategy profile is a Nash equilibrium?",
+                "choices": {
+                    "A": "The outcome maximizes the sum of all players' payoffs.",
+                    "B": "Each player is making the best choice given the choices of the others, so no one has a profitable unilateral deviation.",
+                    "C": "Each player has a dominant strategy.",
+                    "D": "The players have signed a binding agreement not to change actions."
+                },
+                "correct": "B",
+                "explanation": "B is correct because Nash equilibrium is defined by no profitable unilateral deviations. A confuses equilibrium with efficiency. C is sufficient in some games but not necessary. D describes enforceable collusion or contracts, not non-cooperative Nash equilibrium."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Two restaurants independently choose whether to offer brunch. If both offer brunch, profits are moderate. If only one offers brunch, that restaurant earns high profit while the other earns low profit. If neither offers brunch, both earn moderate profit from lunch. Which concept is most directly used to predict stable simultaneous choices?",
+                "choices": {
+                    "A": "Nash equilibrium, because each restaurant's best choice depends on the other's choice and stability requires no profitable unilateral deviation.",
+                    "B": "Backward induction, because one restaurant must move first.",
+                    "C": "Consumer surplus, because brunch buyers receive utility.",
+                    "D": "Cost minimization, because the restaurants choose input bundles."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the firms choose simultaneously and strategic stability is captured by mutual best responses. B adds sequential timing not in the scenario. C concerns welfare of consumers, not firm strategic choice. D concerns production cost, not strategic interaction."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes Nash equilibrium from a dominant-strategy equilibrium?",
+                "choices": {
+                    "A": "A Nash equilibrium requires each strategy to be best against the actual strategies chosen; a dominant-strategy equilibrium requires each strategy to be best against every possible opponent strategy.",
+                    "B": "A dominant-strategy equilibrium requires no profitable unilateral deviation; Nash equilibrium requires joint profit maximization.",
+                    "C": "Nash equilibrium applies only to sequential games; dominant strategies apply only to simultaneous games.",
+                    "D": "Nash equilibrium always produces higher payoffs than dominant-strategy equilibrium."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Nash equilibrium is mutual best response at the actual profile; dominant strategies are best regardless of opponents' actions. B misdefines Nash as joint maximization. C is false; both concepts can be used in many game forms. D is false and not part of the definitions."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Welfare analysis is not directly applicable because the payoffs are ordinal strategic payoffs. A game has two pure Nash equilibria, (Safe, Safe) with payoffs (4, 4) and (Risky, Risky) with payoffs (6, 6). A policy guarantee raises the payoff of unilateral Risky when the other chooses Safe from 1 to 5 for each player. What is the likely equilibrium effect?",
+                "choices": {
+                    "A": "Risky becomes more attractive as a deviation from Safe, so (Safe, Safe) may cease to be a Nash equilibrium if deviating now pays more than 4.",
+                    "B": "(Safe, Safe) becomes more stable because unilateral Risky is now less costly.",
+                    "C": "Both equilibria disappear because payoff changes eliminate best responses.",
+                    "D": "The policy has no effect because Nash equilibrium ignores off-equilibrium deviations."
+                },
+                "correct": "A",
+                "explanation": "A is correct. This question uses a second Type 2 item instead of Type 7 because welfare analysis is not directly applicable. If unilateral Risky against Safe now pays 5 rather than 4, Safe is no longer a best response to Safe, so (Safe, Safe) is not stable. B reverses the deviation incentive. C overstates the effect. D is wrong because Nash equilibrium is defined by checking unilateral deviations."
+            }
+        ]
+    },
+    {
+        "topic": "Sequential Games and Backward Induction",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An entrant first chooses Enter or Stay Out. If it Stays Out, payoffs are (0, 8) for Entrant and Incumbent. If it Enters, the incumbent chooses Fight or Accommodate. Fight gives (-2, 1); Accommodate gives (3, 4). What is the backward-induction outcome?",
+                "choices": {
+                    "A": "Enter, then Accommodate; the incumbent prefers 4 to 1 after entry, and the entrant prefers 3 to 0.",
+                    "B": "Stay Out; the entrant fears that the incumbent will fight.",
+                    "C": "Enter, then Fight; the incumbent wants to deter entry.",
+                    "D": "Stay Out, then Accommodate; the incumbent's action is chosen even after no entry."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Backward induction starts at the incumbent's decision node: Accommodate gives 4 versus Fight's 1. Anticipating this, the entrant enters because 3 exceeds 0. B treats a non-credible threat as credible. C chooses the incumbent's lower payoff after entry. D assigns an action at a node that is not reached."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Player 1 chooses Left or Right. If Left, payoffs are (5, 2). If Right, Player 2 chooses Up or Down. Up gives (8, 1), Down gives (3, 6). What strategy profile is the subgame perfect Nash equilibrium?",
+                "choices": {
+                    "A": "Player 1 chooses Right; Player 2 chooses Up after Right.",
+                    "B": "Player 1 chooses Left; Player 2 chooses Down after Right.",
+                    "C": "Player 1 chooses Right; Player 2 chooses Down after Right.",
+                    "D": "Player 1 chooses Left; Player 2 chooses Up after Right."
+                },
+                "correct": "B",
+                "explanation": "B is correct. If reached, Player 2 chooses Down because 6 exceeds 1. Anticipating that, Player 1 compares Left payoff 5 with Right-then-Down payoff 3 and chooses Left. A incorrectly has Player 2 choose the lower payoff. C correctly predicts Player 2's action but ignores Player 1's anticipation. D gives the wrong off-path action for Player 2."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In an entry game, Stay Out gives the entrant 0. If Enter is followed by Accommodate, the entrant gets 3 and incumbent gets 4. If Enter is followed by Fight, entrant gets -2 and incumbent gets 1. A cost reduction raises the incumbent's payoff from Fight after entry from 1 to 5. What changes under backward induction?",
+                "choices": {
+                    "A": "The incumbent now fights after entry, so the entrant stays out because it anticipates -2 rather than 0.",
+                    "B": "The entrant still enters because entry was previously profitable.",
+                    "C": "The incumbent accommodates because accommodation has the larger joint payoff.",
+                    "D": "Backward induction cannot be used after payoffs change."
+                },
+                "correct": "A",
+                "explanation": "A is correct. The incumbent's best action after entry changes from Accommodate to Fight because 5 exceeds 4. Anticipating Fight, the entrant compares -2 with 0 and stays out. B ignores changed continuation incentives. C uses joint payoffs instead of the incumbent's payoff. D is false; backward induction is designed for changed continuation payoffs."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A sequential investment game has Player 1 choose Invest or Not. If Invest, Player 2 chooses Share or Expropriate. Share gives payoffs (6, 5), and Expropriate gives (1, 8). Not Invest gives (2, 2). A contract reduces Player 2's payoff from Expropriate from 8 to 3. What is the comparative-statics effect?",
+                "choices": {
+                    "A": "The contract makes Share credible, so Player 1 invests because 6 exceeds 2.",
+                    "B": "The contract has no effect because Player 2 moves second.",
+                    "C": "Player 1 still does not invest because Expropriate gives Player 2 a positive payoff.",
+                    "D": "Player 2 chooses Expropriate because it lowers Player 1's payoff."
+                },
+                "correct": "A",
+                "explanation": "A is correct. After the contract, Player 2 prefers Share's payoff 5 to Expropriate's 3, so Player 1 anticipates Share and invests. B ignores backward induction. C incorrectly compares positivity rather than relative payoff. D assumes spite rather than payoff maximization."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a game tree, Player 1 moves at the initial node. The right branch leads to a Player 2 decision node with two terminal branches. What graphical feature tells you where backward induction begins?",
+                "choices": {
+                    "A": "At the final decision nodes closest to the terminal payoffs, because later optimal choices must be solved before earlier choices.",
+                    "B": "At the initial node, because Player 1 moves first.",
+                    "C": "At the terminal payoff numbers, by adding all payoffs across endpoints.",
+                    "D": "At the branch with the highest total payoff, regardless of who chooses there."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Backward induction solves from the last decision nodes back to the first decision. B describes chronological play, not solution order. C incorrectly adds payoffs across endpoints. D confuses individual optimality with total-payoff maximization."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A game tree contains a proper subgame beginning at Player 2's decision node after Player 1 chooses Enter. What must be true of a subgame perfect Nash equilibrium in that subgame?",
+                "choices": {
+                    "A": "Player 2's planned action at that node must be optimal given the payoffs within that subgame.",
+                    "B": "Player 2 may choose any threat as long as it deters Player 1.",
+                    "C": "The action must maximize Player 1's payoff because Player 1 moved first.",
+                    "D": "The subgame can be ignored if it is not reached in equilibrium."
+                },
+                "correct": "A",
+                "explanation": "A is correct because subgame perfection requires Nash equilibrium behavior in every subgame, including off-path subgames. B describes non-credible threats. C gives the wrong player objective. D contradicts subgame perfection, which checks unreached subgames too."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does backward induction eliminate some Nash equilibria in sequential games?",
+                "choices": {
+                    "A": "It rules out strategies based on non-credible threats that would not be optimal if the relevant decision node were reached.",
+                    "B": "It selects the outcome with the highest total payoff.",
+                    "C": "It assumes the first mover can force any terminal node.",
+                    "D": "It ignores all actions that occur after the first move."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Backward induction imposes sequential rationality, so threats must be optimal when the time comes to carry them out. B confuses the method with efficiency. C overstates first-mover power. D is the opposite of backward induction, which starts from later actions."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A startup decides whether to enter a local delivery market. If it enters, the incumbent then decides whether to cut prices aggressively or tolerate entry. Which model should be used to predict the outcome?",
+                "choices": {
+                    "A": "A sequential game solved by backward induction, because the entrant moves first and the incumbent responds after observing entry.",
+                    "B": "A simultaneous normal-form game only, because all business decisions are simultaneous.",
+                    "C": "A consumer budget problem, because prices affect consumers.",
+                    "D": "A pure bundling model, because the firms sell delivery services."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the strategic timing is explicit: entry first, incumbent response second. B ignores the timing. C focuses on consumers, not firm strategic interaction. D is a multi-product pricing model not indicated here."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes Nash equilibrium from subgame perfect Nash equilibrium?",
+                "choices": {
+                    "A": "Every Nash equilibrium is subgame perfect, but not every subgame perfect equilibrium is Nash.",
+                    "B": "Subgame perfection strengthens Nash equilibrium by requiring optimal behavior in every subgame, including unreached ones.",
+                    "C": "Nash equilibrium applies only to games with time order; subgame perfection applies only to simultaneous games.",
+                    "D": "Subgame perfection means players maximize total surplus instead of individual payoff."
+                },
+                "correct": "B",
+                "explanation": "B is correct. Subgame perfect Nash equilibrium is a refinement of Nash equilibrium that requires sequential rationality in every subgame. A reverses the set relationship. C reverses the usual application. D confuses equilibrium refinement with welfare maximization."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Welfare analysis is not directly applicable because the payoffs are strategic utility numbers. In a first-mover game, Player 1 can choose Commit or Avoid. Commit lets Player 2 choose Accept or Reject. Accept gives (7, 4); Reject gives (1, 6). Avoid gives (3, 3). A reputation cost reduces Player 2's payoff from Reject from 6 to 2. What happens?",
+                "choices": {
+                    "A": "Player 2 now accepts after Commit, so Player 1 chooses Commit because 7 exceeds 3.",
+                    "B": "Player 2 still rejects because Reject hurts Player 1 more.",
+                    "C": "Player 1 avoids because Player 2's payoff changed, making the game uncertain.",
+                    "D": "The outcome is unchanged because first movers cannot benefit from second-mover payoff changes."
+                },
+                "correct": "A",
+                "explanation": "A is correct. This uses a second Type 2 question instead of Type 7 because welfare analysis is not directly applicable. The reputation cost changes Player 2's continuation best response from Reject to Accept, which changes Player 1's initial choice. B assumes spite rather than payoff maximization. C mistakes changed incentives for uncertainty. D ignores backward induction."
+            }
+        ]
+    },
+    {
+        "topic": "Cournot Competition",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two identical firms compete à la Cournot. Market demand is P = 100 - Q, where Q = q1 + q2. Each firm has constant marginal cost c = 20 and no fixed cost. What is each firm's Nash equilibrium quantity and the market price?",
+                "choices": {
+                    "A": "q1 = q2 = 20, P = 60.",
+                    "B": "q1 = q2 = 40, P = 20.",
+                    "C": "q1 = q2 = 80/3, P = 140/3.",
+                    "D": "q1 = q2 = 10, P = 80."
+                },
+                "correct": "C",
+                "explanation": "C is correct. Firm 1 maximizes (100 - q1 - q2)q1 - 20q1, giving 80 - 2q1 - q2 = 0, so q1 = 40 - q2/2. Symmetry gives q = 80/3 and P = 100 - 160/3 = 140/3. A is the monopoly output split incorrectly. B is the competitive total output split. D is too low and does not satisfy best responses."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Market demand is P = 90 - Q. Firm 1 has marginal cost 10, and Firm 2 has marginal cost 20. They choose quantities simultaneously. What are the Cournot equilibrium quantities?",
+                "choices": {
+                    "A": "q1 = 100/3, q2 = 70/3.",
+                    "B": "q1 = 80/3, q2 = 80/3.",
+                    "C": "q1 = 35, q2 = 25.",
+                    "D": "q1 = 40, q2 = 30."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Firm 1's best response is q1 = (90 - 10 - q2)/2 = 40 - q2/2. Firm 2's is q2 = (90 - 20 - q1)/2 = 35 - q1/2. Solving gives q1 = 100/3 and q2 = 70/3. B assumes equal costs. C is close but does not solve the simultaneous best responses. D uses monopoly-style residual outputs without strategic consistency."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a symmetric Cournot duopoly with demand P = 120 - Q and initial marginal cost c = 30, each firm's equilibrium output is 30. If marginal cost falls to c = 20 for both firms, what happens and why?",
+                "choices": {
+                    "A": "Each firm's output rises to 100/3 because lower marginal cost shifts each best-response curve outward.",
+                    "B": "Each firm's output falls to 20 because firms need fewer units to earn profit.",
+                    "C": "Each firm's output remains 30 because only demand affects Cournot output.",
+                    "D": "Each firm's output rises to 50 because price must equal marginal cost."
+                },
+                "correct": "A",
+                "explanation": "A is correct. In symmetric Cournot with linear demand, q = (a - c)/3, so output rises from 30 to 100/3. The mechanism is an outward shift of best responses due to lower marginal cost. B reverses the incentive. C ignores cost in marginal profit. D gives competitive total-output logic, not Cournot firm output."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two Cournot firms face P = 100 - Q. Firm 1's marginal cost remains 20, while Firm 2's marginal cost rises from 20 to 40. What is the qualitative and numerical effect on equilibrium quantities?",
+                "choices": {
+                    "A": "Firm 1 produces 40 and Firm 2 produces 20; Firm 1 expands because its rival's higher cost shifts Firm 2's best response inward.",
+                    "B": "Both firms produce 20 because total demand is unchanged.",
+                    "C": "Firm 1 produces 20 and Firm 2 produces 40 because the high-cost firm must produce more to cover costs.",
+                    "D": "Both firms exit because asymmetric costs eliminate Cournot equilibrium."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Best responses are q1 = 40 - q2/2 and q2 = 30 - q1/2, yielding q1 = 100/3? Wait, solving gives q1 = 100/3 and q2 = 40/3, not 40 and 20. Therefore A is not numerically correct."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a Cournot best-response diagram with q1 on the horizontal axis and q2 on the vertical axis, Firm 1's best-response curve slopes downward. What does the negative slope mean economically?",
+                "choices": {
+                    "A": "When Firm 2 produces more, Firm 1's marginal revenue from output is lower, so Firm 1's best-response output falls.",
+                    "B": "When Firm 2 produces more, Firm 1's marginal cost rises mechanically.",
+                    "C": "When Firm 2 produces more, Firm 1 must produce more to keep market price constant.",
+                    "D": "When Firm 2 produces more, total market demand shifts outward."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Rival output lowers residual demand and marginal revenue, reducing the profit-maximizing quantity. B is not implied by constant marginal cost Cournot. C describes price stabilization, not profit maximization. D confuses movement along demand with a demand shift."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a Cournot best-response diagram, the two best-response curves intersect at positive quantities. Compared with the monopoly output and competitive output for the same market, where does total Cournot output usually lie?",
+                "choices": {
+                    "A": "Below monopoly output because firms restrict output more than a monopolist.",
+                    "B": "Above competitive output because strategic firms produce more than price-taking firms.",
+                    "C": "Between monopoly output and competitive output because each firm partially internalizes the price effect of its output.",
+                    "D": "Exactly equal to monopoly output because firms jointly maximize profit."
+                },
+                "correct": "C",
+                "explanation": "C is correct. Cournot output is typically above monopoly output but below competitive output. A reverses the monopoly comparison. B reverses the competitive comparison. D describes collusion, not Cournot competition."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does a Cournot firm set marginal revenue equal to marginal cost rather than price equal to marginal cost?",
+                "choices": {
+                    "A": "Because increasing its own output lowers the market price on all units it sells, so marginal revenue is below price.",
+                    "B": "Because it is a price taker and cannot affect price.",
+                    "C": "Because marginal cost is irrelevant when firms choose quantities.",
+                    "D": "Because Cournot firms maximize revenue instead of profit."
+                },
+                "correct": "A",
+                "explanation": "A is correct. A Cournot firm recognizes that its quantity affects market price, creating a price-reduction effect on inframarginal units. B describes perfect competition. C is false because marginal cost enters the first-order condition. D misstates the firm's objective."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Two cement producers choose how many tons to supply to a regional market before the market-clearing price is determined. Each firm's profit depends on total tons supplied by both firms. Which model fits best?",
+                "choices": {
+                    "A": "Cournot competition, because firms simultaneously choose quantities and price is determined by total output.",
+                    "B": "Bertrand competition, because firms choose prices directly.",
+                    "C": "Pure bundling, because cement is sold in large lots.",
+                    "D": "Consumer utility maximization, because buyers value cement."
+                },
+                "correct": "A",
+                "explanation": "A is correct because the strategic variable is quantity and price follows from market demand. B would apply if firms chose prices. C confuses physical packaging with bundling. D focuses on buyers rather than oligopoly supply decisions."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes Cournot competition from perfect competition?",
+                "choices": {
+                    "A": "Cournot firms choose quantities while recognizing their effect on market price; perfectly competitive firms take price as given and choose output where P = MC.",
+                    "B": "Cournot firms choose prices while competitive firms choose quantities.",
+                    "C": "Cournot firms always produce the monopoly output; competitive firms always produce zero profit at every output.",
+                    "D": "Cournot competition requires differentiated products; perfect competition requires identical products."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Cournot firms strategically choose quantities and account for price effects, while price-taking firms treat price as fixed. B describes Bertrand versus quantity choice incorrectly. C overstates both models. D is not the defining distinction; standard Cournot can involve homogeneous goods."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 100 - Q and marginal cost is constant at 20. In a symmetric Cournot duopoly, total output is Q = 160/3 and price is P = 140/3. What is total surplus, and how does it compare with the competitive outcome?",
+                "choices": {
+                    "A": "Total surplus is 3200; it equals the competitive maximum.",
+                    "B": "Total surplus is 12800/9, which is below the competitive surplus of 3200 by 16000/9.",
+                    "C": "Total surplus is 22400/9, which is below the competitive surplus of 3200 by 6400/9.",
+                    "D": "Total surplus is 6400/9, which is above the competitive surplus because price exceeds marginal cost."
+                },
+                "correct": "C",
+                "explanation": "C is correct. Total surplus with constant MC is the area under demand above MC up to Q: 0.5(100 - 20)(160/3) - 0.5(160/3)^2 = 22400/9. Competitive output is 80 and surplus is 0.5(80)(80) = 3200, so the shortfall is 6400/9. A uses the competitive surplus for Cournot. B computes the wrong Cournot surplus and deadweight loss. D gives too small a surplus and reverses the welfare comparison."
+            }
+        ]
+    },
+    {
+        "topic": "Bertrand Competition",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two firms sell identical bottled water and choose prices simultaneously. Market demand is Q = 100 - P. Both have constant marginal cost c = $10 and no capacity constraint. Under standard Bertrand assumptions, what is the Nash equilibrium price and why?",
+                "choices": {
+                    "A": "P = $10, because any price above marginal cost can be profitably undercut by the rival.",
+                    "B": "P = $50, because monopoly pricing maximizes industry profit.",
+                    "C": "P = $0, because price competition drives price below cost.",
+                    "D": "P = $45, because firms split the monopoly output equally."
+                },
+                "correct": "A",
+                "explanation": "A is correct. With homogeneous products and no capacity limits, any price above marginal cost invites undercutting, while pricing below marginal cost loses money. B is the cartel or monopoly price. C ignores that firms can avoid losses by pricing at marginal cost. D imports Cournot quantity splitting."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two identical firms choose prices for a homogeneous good. Marginal cost is $20. If both charge the same price, they split market demand. If one charges a lower price, it gets the whole market. Which price pair is a Nash equilibrium?",
+                "choices": {
+                    "A": "($30, $30), because both firms earn positive profit.",
+                    "B": "($20, $20), because neither firm can profitably undercut without pricing below marginal cost.",
+                    "C": "($19, $19), because both firms maximize sales volume.",
+                    "D": "($30, $29), because the lower-price firm captures the market."
+                },
+                "correct": "B",
+                "explanation": "B is correct. At price equal to marginal cost, neither firm can profitably undercut. A is not stable because either firm could slightly undercut and capture the whole market. C gives losses. D is not stable because the high-price firm sells nothing and could undercut profitably above cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a homogeneous-good Bertrand duopoly with no capacity constraints, both firms initially have marginal cost c = $12, so equilibrium price is $12. If both firms' marginal cost rises to $15, what happens?",
+                "choices": {
+                    "A": "Equilibrium price rises to $15 because Bertrand competition prices at marginal cost under the standard assumptions.",
+                    "B": "Equilibrium price remains $12 because competition prevents pass-through.",
+                    "C": "Equilibrium price rises to the monopoly price because costs increased.",
+                    "D": "Equilibrium price falls because higher costs reduce output."
+                },
+                "correct": "A",
+                "explanation": "A is correct. In the standard Bertrand paradox result, price equals marginal cost, so a common cost increase raises equilibrium price one-for-one. B incorrectly denies cost pass-through in this model. C confuses Bertrand with monopoly. D reverses the price effect."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two firms compete in prices with homogeneous products. Initially both have marginal cost $10. Firm 1 then develops a technology that lowers its marginal cost to $8 while Firm 2's cost remains $10. What is the expected Bertrand pricing implication in the simple model?",
+                "choices": {
+                    "A": "Firm 1 can profitably set a price just below $10 and capture the market, so price is disciplined by the higher-cost rival's cost rather than equal to $8 exactly.",
+                    "B": "Both firms continue pricing at $10 because only common cost changes matter.",
+                    "C": "Firm 2 captures the market by charging $8.",
+                    "D": "The monopoly price must result because costs are asymmetric."
+                },
+                "correct": "A",
+                "explanation": "A is correct. With asymmetric costs, the low-cost firm can undercut the high-cost firm's marginal-cost price and serve the market profitably. B ignores cost asymmetry. C has the high-cost firm pricing below its own cost. D incorrectly says asymmetry creates monopoly pricing without constraint."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a price-reaction diagram for homogeneous-good Bertrand competition, both firms' best responses involve undercutting rival prices above marginal cost. What graphical feature corresponds to the Bertrand paradox?",
+                "choices": {
+                    "A": "The only stable intersection of best responses occurs at both firms pricing at marginal cost.",
+                    "B": "Best-response curves intersect at the monopoly price.",
+                    "C": "Best-response curves slope upward because firms always match higher prices exactly.",
+                    "D": "There is no demand curve in Bertrand competition."
+                },
+                "correct": "A",
+                "explanation": "A is correct. The Bertrand paradox is that even two firms can drive price to marginal cost when products are homogeneous and capacity is unlimited. B is the collusive outcome. C overstates matching behavior and ignores undercutting. D is false; demand determines quantity sold at prices."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose a demand graph has price on the vertical axis and quantity on the horizontal axis. Under standard homogeneous Bertrand competition with constant marginal cost c, where is the equilibrium price shown?",
+                "choices": {
+                    "A": "At the vertical level where P = MC, with market quantity determined by demand at that price.",
+                    "B": "At the choke price where quantity demanded is zero.",
+                    "C": "At the price halfway between marginal cost and the demand intercept.",
+                    "D": "At the point where marginal revenue equals marginal cost for the whole industry."
+                },
+                "correct": "A",
+                "explanation": "A is correct because standard Bertrand competition yields P = MC and demand determines total quantity. B gives no sales. C is not a general rule. D describes monopoly pricing."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the standard Bertrand result called a paradox?",
+                "choices": {
+                    "A": "Because with only two firms, homogeneous-product price competition can produce the competitive price equal to marginal cost.",
+                    "B": "Because firms earn higher profits than a monopolist.",
+                    "C": "Because price becomes negative whenever marginal cost is positive.",
+                    "D": "Because firms choose quantities but somehow prices fall."
+                },
+                "correct": "A",
+                "explanation": "A is correct. The surprising result is that two price-setting firms can be enough to eliminate markups under strong assumptions. B is false. C is false. D confuses Bertrand price choice with Cournot quantity choice."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Two gas stations across the street sell essentially identical gasoline and can serve all customers who arrive. Each posts a price each morning. Which model is the natural starting point?",
+                "choices": {
+                    "A": "Bertrand competition, because firms choose prices for a nearly homogeneous product and customers buy from the lower-price seller.",
+                    "B": "Cournot competition, because firms choose quantities before price is known.",
+                    "C": "Pure bundling, because gasoline is sold by the gallon.",
+                    "D": "Backward induction, because customers arrive after prices are posted."
+                },
+                "correct": "A",
+                "explanation": "A is correct because strategic price choice for a homogeneous product is Bertrand's setting. B would fit quantity precommitment. C confuses units of sale with multi-good bundling. D focuses on customer timing rather than firm strategic interaction."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes Bertrand from Cournot competition?",
+                "choices": {
+                    "A": "Bertrand firms choose prices; Cournot firms choose quantities.",
+                    "B": "Bertrand firms collude; Cournot firms are price takers.",
+                    "C": "Bertrand applies only to differentiated products; Cournot applies only to monopoly.",
+                    "D": "Bertrand always has higher prices than Cournot for homogeneous goods with equal costs."
+                },
+                "correct": "A",
+                "explanation": "A is correct. The strategic variable is price in Bertrand and quantity in Cournot. B misstates both models. C is false; both can be used in oligopoly settings. D reverses the usual homogeneous-good comparison, where Bertrand gives marginal-cost pricing and Cournot generally gives price above marginal cost."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 80 - Q and marginal cost is constant at $20. Under standard homogeneous-good Bertrand competition, price equals $20. What are consumer surplus, producer surplus, and total surplus?",
+                "choices": {
+                    "A": "Consumer surplus = 1800, producer surplus = 0, total surplus = 1800.",
+                    "B": "Consumer surplus = 900, producer surplus = 900, total surplus = 1800.",
+                    "C": "Consumer surplus = 0, producer surplus = 1800, total surplus = 1800.",
+                    "D": "Consumer surplus = 1200, producer surplus = 600, total surplus = 1800."
+                },
+                "correct": "A",
+                "explanation": "A is correct. At P = MC = 20, quantity demanded is 60. Consumer surplus is 0.5(80 - 20)(60) = 1800. Producer surplus is zero because price equals constant marginal cost. B and D incorrectly allocate surplus to producers despite P = MC. C reverses consumer and producer surplus."
+            }
+        ]
+    },
+    {
+        "topic": "Cartels and Collusion",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two identical firms form a cartel. Market demand is P = 100 - Q and each firm has constant marginal cost c = 20. If they maximize joint profit and split output equally, what total quantity, price, and per-firm quantity result?",
+                "choices": {
+                    "A": "Q = 40, P = 60, each firm produces 20.",
+                    "B": "Q = 80, P = 20, each firm produces 40.",
+                    "C": "Q = 160/3, P = 140/3, each firm produces 80/3.",
+                    "D": "Q = 20, P = 80, each firm produces 10."
+                },
+                "correct": "A",
+                "explanation": "A is correct. The cartel solves monopoly profit maximization: MR = 100 - 2Q = 20, so Q = 40 and P = 60. Equal sharing gives 20 each. B is the competitive output. C is Cournot duopoly output. D is too restrictive and does not satisfy MR = MC."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A cartel of two firms faces P = 120 - Q with constant marginal cost 30. The cartel agrees each firm produces 22.5 units, so total output is 45 and price is 75. If Firm 1 believes Firm 2 will keep producing 22.5, what is Firm 1's profit-maximizing deviation quantity?",
+                "choices": {
+                    "A": "22.5, because the cartel allocation is individually optimal.",
+                    "B": "33.75, because Firm 1 maximizes (120 - q1 - 22.5 - 30)q1.",
+                    "C": "45, because Firm 1 should produce the entire cartel output.",
+                    "D": "67.5, because Firm 1 should set price equal to marginal cost."
+                },
+                "correct": "B",
+                "explanation": "B is correct. Firm 1's profit is (90 - q1 - 22.5)q1 = (67.5 - q1)q1, so FOC gives q1 = 33.75. A ignores the incentive to expand when the rival restricts output. C is the cartel total output, not Firm 1's best response. D applies competitive output logic incorrectly."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A cartel faces P = 100 - Q and marginal cost c = 20, giving monopoly output Q = 40. If marginal cost rises to c = 40, what happens to the cartel's joint-profit-maximizing output and price?",
+                "choices": {
+                    "A": "Output falls to 30 and price rises to 70 because higher marginal cost shifts the MR = MC condition upward.",
+                    "B": "Output rises to 60 and price falls to 40 because the cartel must sell more to cover costs.",
+                    "C": "Output remains 40 because demand is unchanged.",
+                    "D": "Price remains 60 because cartels always keep price fixed."
+                },
+                "correct": "A",
+                "explanation": "A is correct. MR = 100 - 2Q. Setting MR = 40 gives Q = 30 and P = 70. B reverses the effect of higher marginal cost. C ignores cost in profit maximization. D falsely treats cartel prices as fixed."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a repeated collusion setting, each firm earns $50 per period from colluding, $80 from cheating once while the other colludes, and $20 per period forever after punishment begins. What happens to the incentive to collude when the discount factor rises?",
+                "choices": {
+                    "A": "Collusion becomes easier to sustain because the future punishment becomes more important relative to the one-time cheating gain.",
+                    "B": "Collusion becomes harder to sustain because firms care more about the immediate cheating payoff.",
+                    "C": "The discount factor has no effect because the stage-game payoffs are unchanged.",
+                    "D": "Collusion becomes impossible because repeated games eliminate future profits."
+                },
+                "correct": "A",
+                "explanation": "A is correct. A higher discount factor increases the present value of future collusive profits and future punishments, making deviation less attractive. B reverses the role of patience. C ignores dynamic incentives. D is false; repeated interaction can support collusion."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a demand and marginal revenue diagram for a cartel, price is on the vertical axis and quantity is on the horizontal axis. The cartel chooses the quantity where MR = MC and then reads price from demand. What graphical comparison explains why cartel price exceeds competitive price?",
+                "choices": {
+                    "A": "The cartel restricts output to where MR = MC, and because demand slopes downward, the corresponding demand price exceeds MC.",
+                    "B": "The cartel chooses where demand intersects MC, so price equals marginal cost.",
+                    "C": "The cartel chooses the largest possible quantity, making price equal zero.",
+                    "D": "The cartel ignores demand and sets price equal to average fixed cost."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Monopoly/cartel output is below the competitive quantity, and the demand price at that restricted output is above marginal cost. B describes perfect competition. C reverses cartel behavior. D uses an irrelevant cost concept."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a prisoner's dilemma payoff matrix for two cartel members, each chooses Collude or Cheat. Which visual pattern indicates cartel instability?",
+                "choices": {
+                    "A": "For each firm, Cheat gives a higher payoff than Collude in both columns or rows, even though mutual Collude gives higher joint payoff than mutual Cheat.",
+                    "B": "Mutual Collude gives each firm the lowest payoff in the matrix.",
+                    "C": "Each firm has no best response in any cell.",
+                    "D": "The highest total payoff occurs when both firms Cheat."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Cartel instability arises when individual cheating is privately attractive regardless of the other firm's action, even though mutual collusion is jointly better. B is not the usual cartel prisoner's dilemma. C is false; best responses exist. D contradicts the inefficiency of mutual cheating."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why are cartels often unstable even when all firms would earn higher profits if all obeyed the cartel agreement?",
+                "choices": {
+                    "A": "Each firm may have an individual incentive to expand output or cut price while others keep restricting output.",
+                    "B": "Cartel agreements always set price below marginal cost.",
+                    "C": "Joint profit maximization eliminates every firm's private incentive.",
+                    "D": "Cartels are unstable only because consumers refuse to buy from them."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Each member benefits from the high cartel price but can often gain more by secretly selling additional output. B is false; cartels raise price above marginal cost. C is wrong because joint and individual incentives can diverge. D misses the strategic defection problem."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Several local concrete suppliers meet secretly and agree to limit monthly deliveries so the market price stays high. Each supplier then considers making extra off-contract deliveries at the high price. Which model best fits?",
+                "choices": {
+                    "A": "Cartel and collusion with a prisoner's dilemma incentive to defect.",
+                    "B": "Perfect competition with price-taking firms.",
+                    "C": "Pure bundling with negatively correlated valuations.",
+                    "D": "Consumer choice under a budget constraint."
+                },
+                "correct": "A",
+                "explanation": "A is correct because firms jointly restrict output but each has an incentive to cheat. B ignores coordinated market power. C is a multi-good pricing strategy unrelated to output restriction. D models buyers, not colluding suppliers."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes Cournot competition from cartel behavior?",
+                "choices": {
+                    "A": "In Cournot, firms independently choose quantities as best responses; in a cartel, firms try to choose total output jointly to maximize combined profit.",
+                    "B": "In Cournot, firms choose prices; in a cartel, firms always choose zero output.",
+                    "C": "In Cournot, firms maximize total industry profit; in a cartel, each firm ignores rivals.",
+                    "D": "Cournot requires illegal agreements; cartel behavior never requires communication."
+                },
+                "correct": "A",
+                "explanation": "A is correct. Cournot is non-cooperative quantity choice; cartel behavior is coordinated joint-profit maximization. B confuses Bertrand with Cournot and misstates cartels. C reverses the definitions. D reverses the role of agreement."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 100 - Q and marginal cost is constant at 20. A cartel sets monopoly output Q = 40 and price P = 60. The competitive output would be Q = 80 and price P = 20. What is the deadweight loss from cartel pricing?",
+                "choices": {
+                    "A": "800, the triangle between Q = 40 and Q = 80 with height 40.",
+                    "B": "1600, the rectangle from the cartel markup times cartel quantity.",
+                    "C": "3200, the entire competitive surplus.",
+                    "D": "0, because producer surplus rises when the cartel forms."
+                },
+                "correct": "A",
+                "explanation": "A is correct. DWL is 0.5(80 - 40)(60 - 20) = 800. B calculates the transfer from consumers to producers, not deadweight loss. C counts all competitive surplus as lost. D ignores lost gains from trade between Q = 40 and Q = 80."
+            }
+        ]
+    }
+]

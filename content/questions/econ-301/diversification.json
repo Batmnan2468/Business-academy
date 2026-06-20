@@ -1,0 +1,135 @@
+{
+  "topic": "Diversification",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ava invests $100 across two independent projects. Project A returns +20% in state 1 and -20% in state 2. Project B returns -20% in state 1 and +20% in state 2. The states are equally likely. If x is the amount invested in A and 100-x in B, what x minimizes portfolio risk while preserving expected return?",
+      "choices": {
+        "A": "x=100, because putting everything in one project maximizes upside.",
+        "B": "x=0, because Project B is safer.",
+        "C": "x=50, because equal investment makes final wealth $100 in both states.",
+        "D": "x=80, because more money should go to the project with the first-state high return."
+      },
+      "correct": "C",
+      "explanation": "Each project has expected return 0, and equal investment offsets state-specific returns: final wealth is 1.2(50)+0.8(50)=100 in either state. A and D leave risk. B is symmetric to A and not safer."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ben can invest in two assets. Asset X returns 10% for sure. Asset Y returns 30% with probability 0.5 and -10% with probability 0.5. Ben has u(w)=ln(w), initial wealth $100, and invests share s in Y and 1-s in X. Final wealth is 110+20s in the good state and 110-20s in the bad state. What s maximizes expected utility?",
+      "choices": {
+        "A": "s=0, because the risky asset has the same expected return as the safe asset and only adds risk.",
+        "B": "s=0.5, because diversification means splitting equally.",
+        "C": "s=1, because Asset Y has a higher upside.",
+        "D": "s=-1, because risk aversion requires shorting risky assets."
+      },
+      "correct": "A",
+      "explanation": "Asset Y has expected return 10%, equal to the safe return, so risk-averse log utility chooses no exposure to Y. The FOC for 0.5ln(110+20s)+0.5ln(110-20s) gives s=0. B is a naive diversification rule. C ignores risk. D creates risk without return benefit."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A portfolio contains two assets with the same expected return and same variance. Their correlation rises from -1 to +1. What happens to the benefit of diversification?",
+      "choices": {
+        "A": "It increases because the assets now move together.",
+        "B": "It decreases because positively correlated returns offset each other less.",
+        "C": "It stays the same because expected returns are unchanged.",
+        "D": "It becomes infinite because correlation +1 eliminates all risk."
+      },
+      "correct": "B",
+      "explanation": "Diversification reduces risk most when assets are less than perfectly positively correlated. As correlation rises, risk reduction falls. A reverses the effect. C ignores variance. D reverses the meaning of +1 correlation."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A student currently holds only one local restaurant stock. She adds 20 unrelated national stocks with similar expected returns. What happens to portfolio risk, and what is the mechanism?",
+      "choices": {
+        "A": "Total risk generally falls because idiosyncratic firm-specific shocks partly cancel across assets.",
+        "B": "Total risk rises because each new stock adds its own risk one-for-one.",
+        "C": "Expected return must fall because diversification always sacrifices return.",
+        "D": "All risk disappears because 20 stocks remove market-wide risk."
+      },
+      "correct": "A",
+      "explanation": "Diversification reduces idiosyncratic risk when returns are not perfectly correlated. B ignores covariance offsets. C falsely claims diversification necessarily lowers expected return. D ignores systematic risk."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph with portfolio standard deviation on the horizontal axis and expected return on the vertical axis, what does moving from a single risky stock to a diversified portfolio of imperfectly correlated stocks usually do?",
+      "choices": {
+        "A": "It shifts the portfolio left for a similar expected return, showing lower risk without necessarily lower expected return.",
+        "B": "It shifts the portfolio downward with no change in risk, showing lower expected return.",
+        "C": "It shifts the portfolio right and upward because risk and return always rise together.",
+        "D": "It places the portfolio on the vertical axis because diversification eliminates all risk."
+      },
+      "correct": "A",
+      "explanation": "Diversification can reduce standard deviation while maintaining similar expected return. B wrongly assumes return must fall. C treats all risk increases as return increases. D ignores systematic risk and imperfect correlation."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Suppose two assets have returns that are perfectly negatively correlated. In a risk-return diagram, what is special about combining them?",
+      "choices": {
+        "A": "Some portfolio may reach zero risk if weights are chosen so return fluctuations exactly offset.",
+        "B": "Every portfolio must have the same risk as the riskier asset.",
+        "C": "Diversification fails because negative correlation means assets move unpredictably.",
+        "D": "The expected return of the portfolio is always zero."
+      },
+      "correct": "A",
+      "explanation": "Perfect negative correlation can allow risk to be fully hedged at the right weights. B ignores offsetting movements. C reverses the value of negative correlation. D confuses return correlation with expected return level."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can diversification reduce risk without reducing expected return?",
+      "choices": {
+        "A": "Because expected return is a weighted average of asset expected returns, while variance also depends on covariances that can offset.",
+        "B": "Because adding more assets mechanically increases every asset's expected return.",
+        "C": "Because investors stop caring about risk once they own more than one asset.",
+        "D": "Because diversification changes historical returns after the fact."
+      },
+      "correct": "A",
+      "explanation": "Portfolio expected return is linear in weights, but risk depends on variances and covariances; imperfect correlation allows risk reduction. B is false. C confuses preference with risk measurement. D is impossible."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A family owns a beach rental, a surf shop, and shares in a sunscreen company. All three do badly during unusually cold summers. Which concept is most relevant?",
+      "choices": {
+        "A": "Diversification failure due to positively correlated returns across assets exposed to the same weather shock.",
+        "B": "Full insurance because owning three assets guarantees constant income.",
+        "C": "Risk neutrality because all assets are businesses.",
+        "D": "Price discrimination because customers differ in willingness to pay."
+      },
+      "correct": "A",
+      "explanation": "The assets share a common risk factor, so diversification benefits are limited by positive correlation. B incorrectly assumes multiple assets eliminate risk. C has nothing to do with business ownership. D is unrelated."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes idiosyncratic risk from systematic risk?",
+      "choices": {
+        "A": "Idiosyncratic risk is firm-specific and can be reduced by diversification; systematic risk is market-wide and cannot be diversified away within the market portfolio.",
+        "B": "Idiosyncratic risk affects all assets; systematic risk affects only one firm.",
+        "C": "Idiosyncratic risk has a higher expected return; systematic risk has zero expected return.",
+        "D": "Idiosyncratic risk exists only for bonds; systematic risk exists only for stocks."
+      },
+      "correct": "A",
+      "explanation": "Firm-specific shocks can cancel in a diversified portfolio, while common market shocks remain. B reverses the definitions. C confuses risk type with compensation. D incorrectly assigns risk types to asset classes."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A portfolio has two equally weighted assets. Each has variance 0.04. If their correlation is 0, what is the portfolio variance, and what does it show about diversification?",
+      "choices": {
+        "A": "0.04, showing diversification does not reduce risk when variances are equal.",
+        "B": "0.02, showing imperfect correlation reduces variance below the average individual variance.",
+        "C": "0, showing uncorrelated assets eliminate all risk.",
+        "D": "0.08, showing adding assets adds variances together."
+      },
+      "correct": "B",
+      "explanation": "Variance=(0.5^2)(0.04)+(0.5^2)(0.04)+2(0.5)(0.5)(0)(0.2)(0.2)=0.02. A ignores weights and covariance. C confuses zero correlation with perfect negative correlation. D adds variances without weights."
+    }
+  ]
+}

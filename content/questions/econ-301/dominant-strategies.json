@@ -1,0 +1,135 @@
+{
+  "topic": "Dominant Strategies",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two firms choose Clean Technology or Dirty Technology. Firm A's payoffs are: if Firm B chooses Clean, A gets 6 from Clean and 8 from Dirty; if Firm B chooses Dirty, A gets 3 from Clean and 5 from Dirty. What is Firm A's dominant strategy, and why?",
+      "choices": {
+        "A": "Clean, because it gives a socially better outcome.",
+        "B": "Dirty, because it gives A a higher payoff regardless of Firm B's choice.",
+        "C": "Clean if B chooses Clean and Dirty if B chooses Dirty, so A has no dominant strategy.",
+        "D": "Dirty only if B chooses Clean, because dominance requires the rival to cooperate."
+      },
+      "correct": "B",
+      "explanation": "B is correct because Dirty yields 8 rather than 6 if B chooses Clean and 5 rather than 3 if B chooses Dirty. A confuses private payoffs with social desirability. C incorrectly treats the best response as changing across B's actions. D misunderstands dominance, which requires comparison across all rival actions."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Player 1 chooses Top, Middle, or Bottom. Player 2 chooses Left or Right. Player 1's payoffs are: Top gives (4 against Left, 4 against Right), Middle gives (3, 4), and Bottom gives (1, 2). Which strategy is weakly dominated for Player 1, and by what?",
+      "choices": {
+        "A": "Middle is weakly dominated by Top because Top gives at least as much against both columns and strictly more against Left.",
+        "B": "Top is weakly dominated by Middle because both give 4 against Right.",
+        "C": "Bottom is not dominated because it gives different payoffs across columns.",
+        "D": "Middle strictly dominates Top because it ties once and loses once."
+      },
+      "correct": "A",
+      "explanation": "A is correct: Top gives 4 versus Middle's 3 against Left and 4 versus 4 against Right, so Top weakly dominates Middle. B reverses the dominance relation. C misses that Bottom is also dominated by Top, but the question asks which listed dominance statement is correct. D misstates strict dominance; tying once cannot be strict dominance."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a prisoner's dilemma, Confess strictly dominates Stay Silent for each suspect. A new plea rule raises the payoff from mutual silence for each suspect from 6 to 9, leaving all other payoffs unchanged. What happens to the dominance logic if Confess still gives 10 when the other stays silent and 2 when the other confesses, while Stay Silent gives 9 when the other stays silent and 0 when the other confesses?",
+      "choices": {
+        "A": "Confess remains strictly dominant because it still gives a higher payoff for each possible action of the other suspect.",
+        "B": "Stay Silent becomes strictly dominant because mutual silence now has the highest joint payoff.",
+        "C": "There is no dominant strategy because one payoff changed.",
+        "D": "Both strategies are weakly dominant because payoffs are closer than before."
+      },
+      "correct": "A",
+      "explanation": "A is correct because Confess gives 10 rather than 9 if the other stays silent and 2 rather than 0 if the other confesses. B confuses joint payoff with individual dominance. C assumes any payoff change destroys dominance without checking inequalities. D incorrectly treats smaller payoff gaps as weak dominance."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm initially has a dominant strategy to Advertise: advertising gives payoffs (7, 5) against rival choices High and Low, while Not Advertise gives (4, 3). A tax on advertising reduces the advertising payoff by 3 in every state. What happens?",
+      "choices": {
+        "A": "Advertise remains strictly dominant because subtracting the same amount preserves all rankings.",
+        "B": "Not Advertise becomes strictly dominant because taxes always reverse incentives.",
+        "C": "Advertise becomes weakly dominant because it now gives (4, 2), tying Not Advertise once and losing once.",
+        "D": "There is no dominant strategy because Advertise gives (4, 2), while Not Advertise gives (4, 3)."
+      },
+      "correct": "D",
+      "explanation": "D is correct. After the tax, Advertise yields 4 versus 4 against High and 2 versus 3 against Low, so it is not dominant; Not Advertise also is not strictly dominant because it ties once and beats once, though it weakly dominates Advertise. A incorrectly assumes subtracting from only one strategy preserves rankings. B overstates the result as strict dominance. C gets the comparison wrong: Advertise ties once and loses once, so it is weakly dominated, not weakly dominant."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a payoff matrix, Player 1's payoffs in Row U are larger than the payoffs in Row D in every column. What visual feature identifies Row U as a strictly dominant strategy for Player 1?",
+      "choices": {
+        "A": "Every first payoff number in Row U exceeds the corresponding first payoff number directly below it in Row D.",
+        "B": "The sum of payoffs in Row U exceeds the sum of all payoffs in the matrix.",
+        "C": "Every second payoff number in Row U exceeds the corresponding second payoff number in Row D.",
+        "D": "The diagonal cells have larger total payoffs than the off-diagonal cells."
+      },
+      "correct": "A",
+      "explanation": "A is correct because strict dominance for Player 1 requires comparing Player 1's payoff across rows for each fixed column. B uses irrelevant sums. C uses Player 2's payoffs. D focuses on diagonal outcomes rather than strategy-by-strategy comparisons."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A 3-by-3 payoff matrix is being simplified by iterated elimination of strictly dominated strategies. After Column C is removed for Player 2, Row B becomes strictly dominated for Player 1, even though it was not dominated in the original matrix. What does this illustrate?",
+      "choices": {
+        "A": "Dominance can depend on which opponent strategies remain under consideration during iteration.",
+        "B": "A strategy that is not dominated initially can never become dominated later.",
+        "C": "Removing a column changes Player 1's actual payoff numbers in the remaining cells.",
+        "D": "Iterated elimination is the same as choosing the cell with the highest total payoff."
+      },
+      "correct": "A",
+      "explanation": "A is correct because after eliminating opponent strategies, dominance comparisons are made over the reduced set of contingencies. B denies the logic of iteration. C is wrong because the remaining payoff numbers do not change; only the relevant comparisons change. D confuses dominance with joint-payoff maximization."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is a dominant strategy equilibrium considered a particularly compelling prediction when it exists?",
+      "choices": {
+        "A": "Because each player can identify an optimal strategy without forming beliefs about what others will do.",
+        "B": "Because it always maximizes total surplus.",
+        "C": "Because it requires players to coordinate on a fair outcome.",
+        "D": "Because it exists in every finite game."
+      },
+      "correct": "A",
+      "explanation": "A is correct because a dominant strategy is optimal regardless of others' choices, making the prediction robust to beliefs. B is false, as prisoner's dilemma shows dominant-strategy equilibria can be inefficient. C confuses dominance with coordination. D is false; many games lack dominant strategies."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two students independently decide whether to contribute to a shared project. Each prefers the other student to contribute, but each personally gets a higher grade payoff from free-riding regardless of what the other does. Which concept should be checked first?",
+      "choices": {
+        "A": "Dominant strategies, because each student's best action may be the same regardless of the other's contribution.",
+        "B": "Budget constraints, because each student faces prices and income.",
+        "C": "Cournot best responses, because students choose output quantities.",
+        "D": "Backward induction, because the students move simultaneously."
+      },
+      "correct": "A",
+      "explanation": "A is correct because the scenario says each student has the same preferred action regardless of what the other does, which is dominance logic. B is a consumer-choice framework not described here. C is a quantity-setting oligopoly model. D is inappropriate because the moves are simultaneous, not sequential."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes strict dominance from weak dominance?",
+      "choices": {
+        "A": "Strict dominance requires a strategy to do at least as well in every case; weak dominance requires it to do better in every case.",
+        "B": "Strict dominance applies only to firms; weak dominance applies only to consumers.",
+        "C": "Strict dominance requires a strategy to give a strictly higher payoff for every opponent strategy; weak dominance allows ties in some cases but requires a strict improvement in at least one case.",
+        "D": "Strict dominance compares total welfare, while weak dominance compares private payoffs."
+      },
+      "correct": "C",
+      "explanation": "C is correct. Strict dominance means strictly better in every contingency; weak dominance means never worse and sometimes better. A reverses the definitions. B invents a distinction by type of decision-maker. D confuses dominance with welfare analysis."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Welfare analysis is not directly applicable to this dominance question because the payoffs are ordinal preference rankings. Player 1's Strategy A initially strictly dominates Strategy B with payoffs A = (5, 7, 6) and B = (4, 3, 2) against Player 2's three strategies. A rule change lowers A's payoff by 2 in each case. What happens to the dominance relation?",
+      "choices": {
+        "A": "A still strictly dominates B because all A payoffs remain above all B payoffs.",
+        "B": "A no longer strictly dominates B because the new A payoffs are (3, 5, 4), which lose to B in the first comparison.",
+        "C": "B strictly dominates A because the rule change reduces A's payoffs.",
+        "D": "No dominance comparison is possible after a payoff change."
+      },
+      "correct": "B",
+      "explanation": "B is correct. This is a second Type 2 question replacing Type 7 because surplus calculations are not directly applicable to ordinal dominance. After the change, A = (3, 5, 4), while B = (4, 3, 2), so A loses in the first contingency and no longer strictly dominates. A compares all payoffs globally rather than by matching contingencies. C overstates the reversal because B does not beat A in every contingency. D is false; dominance can still be checked."
+    }
+  ]
+}

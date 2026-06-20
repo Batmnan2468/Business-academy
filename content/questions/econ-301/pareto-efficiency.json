@@ -1,0 +1,135 @@
+{
+  "topic": "Pareto Efficiency",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two students, Maya and Leo, divide 10 hours of tutoring between economics E and accounting A. Maya's utility is UM=E, Leo's utility is UL=A, and E+A=10. If the planner must keep Leo at utility at least 4, what allocation maximizes Maya's utility, and is it Pareto efficient?",
+      "choices": {
+        "A": "E=6, A=4; it is Pareto efficient because improving Maya further would reduce Leo below 4.",
+        "B": "E=10, A=0; it is Pareto efficient because Maya is maximized.",
+        "C": "E=5, A=5; it is the only Pareto efficient equal split.",
+        "D": "E=4, A=6; it is inefficient because Leo gets more."
+      },
+      "correct": "A",
+      "explanation": "The constraint UL=A>=4 means A must be at least 4. To maximize Maya's E, set A=4 and E=6. A is correct and Pareto efficient given the frontier. B violates Leo's constraint, C is feasible but not Maya-maximizing under the constraint, and D gives Maya less without necessity."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two people allocate 12 units of a private good x. Anna's utility is UA=xA and Ben's is UB=xB, with xA+xB=12. If Ben must receive utility at least 7, which allocation solves the Pareto problem of maximizing Anna's utility subject to Ben's constraint?",
+      "choices": {
+        "A": "xA=12, xB=0.",
+        "B": "xA=6, xB=6.",
+        "C": "xA=5, xB=7.",
+        "D": "xA=7, xB=5."
+      },
+      "correct": "C",
+      "explanation": "Ben's constraint requires xB>=7. To maximize Anna, set xB=7 and xA=5. C is correct. A and D violate Ben's constraint, while B satisfies it? B gives Ben 6, so it violates the constraint."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In the previous allocation problem with 12 units, Ben's required utility rises from 7 to 9. What happens to Anna's maximum attainable utility?",
+      "choices": {
+        "A": "It falls from 5 to 3 because more of the fixed resource must go to Ben.",
+        "B": "It rises from 5 to 9 because Ben values the good more.",
+        "C": "It stays 5 because Pareto efficiency is unchanged.",
+        "D": "It falls from 7 to 3 because Anna initially had 7."
+      },
+      "correct": "A",
+      "explanation": "With xB>=7, Anna can get 5; with xB>=9, Anna can get 3. A is correct because the resource constraint creates a tradeoff. B reverses the tradeoff, C ignores the changed constraint, and D uses the wrong initial allocation."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A market allocation becomes affected by pollution from production. Compared with the no-externality case, what happens to the link between competitive equilibrium and Pareto efficiency?",
+      "choices": {
+        "A": "It weakens because private marginal cost understates social marginal cost, so competitive output may exceed the Pareto efficient level.",
+        "B": "It strengthens because pollution makes prices more informative automatically.",
+        "C": "It is unchanged because Pareto efficiency ignores costs.",
+        "D": "It implies zero production is always Pareto efficient."
+      },
+      "correct": "A",
+      "explanation": "A is correct. A negative externality creates a wedge between private and social marginal cost, so competitive equilibrium need not be Pareto efficient. B falsely assumes prices internalize pollution, C misdefines Pareto efficiency, and D overstates the implication."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a utility possibility frontier between Ava and Noah, what does a point inside the frontier indicate?",
+      "choices": {
+        "A": "The allocation is Pareto inefficient because at least one person can be made better off without making the other worse off.",
+        "B": "The allocation is Pareto efficient because utilities are positive.",
+        "C": "The allocation is unfair but always efficient.",
+        "D": "The allocation maximizes total surplus automatically."
+      },
+      "correct": "A",
+      "explanation": "A point inside the frontier leaves feasible gains unexploited, so it is Pareto inefficient. A is correct. B ignores feasible improvements, C confuses fairness and efficiency, and D is unsupported."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a production possibilities frontier for apples and oranges, what does a point on the frontier represent in Pareto-efficiency terms if consumers value both goods?",
+      "choices": {
+        "A": "Productive efficiency, and possibly Pareto efficiency if the mix also matches consumers' marginal valuations.",
+        "B": "Pareto inefficiency because one good could be increased only by reducing the other.",
+        "C": "Guaranteed fairness between all consumers.",
+        "D": "Zero opportunity cost."
+      },
+      "correct": "A",
+      "explanation": "Being on the PPF means no more of one good can be produced without less of another. With appropriate consumption allocation and marginal valuation conditions, it can be Pareto efficient. A is correct. B mistakes tradeoff for inefficiency, C confuses efficiency with equity, and D denies opportunity cost."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What is the key limitation of Pareto efficiency as a welfare criterion?",
+      "choices": {
+        "A": "It does not rank distributions when helping one person requires hurting another, so highly unequal allocations can be Pareto efficient.",
+        "B": "It requires everyone to have equal income.",
+        "C": "It says only monopoly markets are efficient.",
+        "D": "It ignores whether resources are scarce."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Pareto efficiency rules out waste but does not address fairness or distribution. B is the opposite of the limitation, C is false, and D is false because scarcity is central to the concept."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A school assigns all 20 pizza slices to one club while another club gets none. There is no way to give the second club a slice without taking one from the first. Which statement is correct?",
+      "choices": {
+        "A": "The allocation can be Pareto efficient even though it may seem unfair.",
+        "B": "The allocation is Pareto inefficient because it is unequal.",
+        "C": "The allocation is Pareto efficient only if both clubs receive 10 slices.",
+        "D": "The allocation is impossible because Pareto efficiency requires equality."
+      },
+      "correct": "A",
+      "explanation": "A is correct. If all slices are allocated and transferring one slice helps one club only by hurting the other, the allocation can be Pareto efficient despite inequality. B, C, and D confuse efficiency with fairness."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes Pareto efficiency from equity?",
+      "choices": {
+        "A": "Pareto efficiency asks whether gains without losses are possible; equity asks whether the distribution is fair.",
+        "B": "Pareto efficiency and equity are identical concepts.",
+        "C": "Pareto efficiency requires equal outcomes; equity requires marginal cost pricing.",
+        "D": "Equity ignores distribution, while Pareto efficiency measures fairness."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Pareto efficiency is about absence of unexploited mutual gains, while equity concerns fairness. B collapses distinct ideas, C reverses them, and D reverses them."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand is P=50-Q and social marginal cost is MC=10+Q. A policy sets Q=10. What deadweight loss exists relative to the Pareto efficient quantity?",
+      "choices": {
+        "A": "$100.",
+        "B": "$200.",
+        "C": "$400.",
+        "D": "$0."
+      },
+      "correct": "A",
+      "explanation": "Efficient quantity solves 50-Q=10+Q, so Q*=20. At Q=10, MB=40 and MC=20, so the lost surplus triangle from 10 to 20 has base 10 and height 20: DWL=100. A is correct. B uses a rectangle, C doubles the rectangle, and D ignores underproduction."
+    }
+  ]
+}

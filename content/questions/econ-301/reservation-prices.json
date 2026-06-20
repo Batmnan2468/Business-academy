@@ -1,0 +1,135 @@
+{
+  "topic": "Reservation Prices",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Maya values one used textbook at $70 and a second copy at $20. The bookstore price is $45 per copy, and Maya can buy 0, 1, or 2 copies. What quantity maximizes her net surplus, and what does it imply about reservation prices?",
+      "choices": {
+        "A": "0 copies, because the second reservation price is below price.",
+        "B": "1 copy, because the first reservation price exceeds price but the second does not.",
+        "C": "2 copies, because total value $90 exceeds total cost $90.",
+        "D": "2 copies, because any positive reservation price means the good should be bought."
+      },
+      "correct": "B",
+      "explanation": "The first copy gives 70 - 45 = 25 surplus; the second gives 20 - 45 = -25, so she buys one. A ignores positive surplus on the first unit, C uses equality of total value and total cost while missing marginal choice, and D ignores price."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A seller has one concert ticket with a minimum acceptable price of $55. A buyer has a maximum willingness to pay of $80. If bargaining can choose any price P between them, which transaction price maximizes total surplus, and what does that reveal?",
+      "choices": {
+        "A": "P = $55 only, because total surplus is maximized when the seller receives exactly cost.",
+        "B": "P = $80 only, because total surplus is maximized when the buyer pays exactly value.",
+        "C": "Any P from $55 to $80, because total surplus is $25 whenever the trade occurs; price only divides the surplus.",
+        "D": "No price, because buyer and seller reservation prices are different."
+      },
+      "correct": "C",
+      "explanation": "Total surplus is buyer value minus seller cost, 80 - 55 = 25, for any mutually acceptable price. A and B confuse surplus division with surplus size, and D wrongly treats different reservation prices as preventing trade."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A buyer's reservation price for a used bike is $120. After the buyer learns the bike needs a $35 repair, the buyer subtracts the repair cost from willingness to pay. What happens to the reservation price, and why?",
+      "choices": {
+        "A": "It rises to $155 because repairs make the bike more valuable.",
+        "B": "It falls to $85 because the repair cost reduces the net benefit of ownership.",
+        "C": "It falls to $35 because repair cost becomes the new reservation price.",
+        "D": "It stays $120 because reservation prices are fixed by definition."
+      },
+      "correct": "B",
+      "explanation": "The buyer's maximum willingness to pay falls by the repair cost: 120 - 35 = 85. A reverses the effect, C confuses cost with value, and D ignores that reservation prices can change with information."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A seller's reservation price for mowing a lawn is $40 when the job takes 2 hours and their opportunity cost is $20 per hour. If the job now takes 3 hours, what happens to the seller's reservation price, and what mechanism explains it?",
+      "choices": {
+        "A": "It rises to $60 because the seller's opportunity cost of accepting the job increases.",
+        "B": "It falls to $20 because more hours spread the cost over time.",
+        "C": "It stays $40 because reservation prices are based only on buyer value.",
+        "D": "It rises to $80 because both price and hours double."
+      },
+      "correct": "A",
+      "explanation": "Reservation price equals minimum compensation for opportunity cost: 3 x $20 = $60. B averages incorrectly, C confuses seller and buyer reservation prices, and D doubles without basis."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Four buyers have reservation prices for one parking pass: $100, $80, $50, and $30. In a step demand schedule with price on the vertical axis and quantity on the horizontal axis, what graph feature is correct?",
+      "choices": {
+        "A": "The demand curve is upward sloping because more buyers enter at higher prices.",
+        "B": "The step height from Q = 1 to Q = 2 is $80, reflecting the second-highest reservation price.",
+        "C": "The horizontal intercept is $100 because that is the highest reservation price.",
+        "D": "The curve is smooth and linear because reservation prices are individual values."
+      },
+      "correct": "B",
+      "explanation": "The second unit's marginal buyer has reservation price $80, so the step for the second pass is at $80. A gets the slope logic backward, C confuses vertical and horizontal intercepts, and D ignores discreteness."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Three sellers have reservation prices for selling one used calculator: $15, $25, and $40. In a step supply schedule, which verbal graph description is correct?",
+      "choices": {
+        "A": "Supply has steps at $15, $25, and $40, with the lowest-cost seller entering first.",
+        "B": "Supply has steps at $40, $25, and $15, with the highest-cost seller entering first.",
+        "C": "Supply is downward sloping because sellers with low reservation prices sell less.",
+        "D": "Supply is vertical at Q = 3 for all prices above zero."
+      },
+      "correct": "A",
+      "explanation": "Sellers enter in ascending order of minimum acceptable price. B reverses the order, C gets supply slope wrong, and D ignores reservation prices below which sellers will not sell."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A buyer's reservation price for a laptop is $900 and the posted price is $950. What does the reservation price condition imply?",
+      "choices": {
+        "A": "The buyer should purchase because $900 is close to $950.",
+        "B": "The buyer should not purchase because willingness to pay is below the price.",
+        "C": "The seller must lower price to exactly $900 because reservation prices are legally binding.",
+        "D": "The buyer is indifferent because reservation price is not related to surplus."
+      },
+      "correct": "B",
+      "explanation": "Buying would give surplus 900 - 950 = -50, so the buyer refuses. A uses closeness rather than sign, C invents a legal rule, and D ignores surplus."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A student will sell a football ticket only if paid at least $65. Another student would pay up to $90. They agree on $75. Which model best explains why trade occurs?",
+      "choices": {
+        "A": "Reservation price model, because the buyer's maximum willingness to pay exceeds the seller's minimum acceptable price.",
+        "B": "Budget constraint model, because both students have income limits.",
+        "C": "Production function model, because the ticket must be produced.",
+        "D": "Price ceiling model, because the agreed price is below $90."
+      },
+      "correct": "A",
+      "explanation": "Trade occurs because 90 >= 75 >= 65 and total surplus is positive. B may be background but not the central model, C is irrelevant, and D misidentifies a voluntary price as a ceiling."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a buyer's reservation price from a seller's reservation price?",
+      "choices": {
+        "A": "A buyer's reservation price is the minimum they accept; a seller's is the maximum they pay.",
+        "B": "A buyer's reservation price is the maximum willingness to pay; a seller's is the minimum willingness to accept.",
+        "C": "A buyer's reservation price is always market price; a seller's is always marginal cost plus profit.",
+        "D": "A buyer's reservation price measures income; a seller's measures revenue."
+      },
+      "correct": "B",
+      "explanation": "Buyer reservation price is maximum WTP; seller reservation price is minimum WTA. A reverses them, C confuses reservation prices with market outcomes, and D confuses valuation with budget/accounting variables."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A buyer's reservation price for a desk is $140 and a seller's reservation price is $95. They trade at $110. What are buyer surplus, seller surplus, and total surplus?",
+      "choices": {
+        "A": "Buyer surplus $30, seller surplus $15, total surplus $45.",
+        "B": "Buyer surplus $45, seller surplus $0, total surplus $45.",
+        "C": "Buyer surplus $30, seller surplus $45, total surplus $75.",
+        "D": "Buyer surplus $110, seller surplus $95, total surplus $205."
+      },
+      "correct": "A",
+      "explanation": "Buyer surplus is 140 - 110 = 30; seller surplus is 110 - 95 = 15; total surplus is 45. B treats seller surplus as zero, C uses seller cost incorrectly, and D confuses price and cost with surplus."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Bonds and Perpetuities",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A one-year bond pays a $60 coupon plus $1,000 face value in one year. The market interest rate is 6%. What is the bond's price?",
+      "choices": {
+        "A": "$1,000 because the coupon rate equals the market interest rate.",
+        "B": "$1,060 because coupon and face value are both paid next year.",
+        "C": "$943.40 because only the face value is discounted.",
+        "D": "$1,123.60 because the payoff is compounded."
+      },
+      "correct": "A",
+      "explanation": "Price = 1,060/1.06 = 1,000. A is correct because the coupon rate equals the market rate. B ignores discounting, C omits the coupon, and D compounds instead of discounts."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A two-year bond pays $50 coupon after year 1 and $1,050 after year 2. The market interest rate is 5%. What is its price?",
+      "choices": {
+        "A": "$952.38",
+        "B": "$1,000.00",
+        "C": "$1,050.00",
+        "D": "$1,100.00"
+      },
+      "correct": "B",
+      "explanation": "Price = 50/1.05 + 1050/1.05^2 = 47.62 + 952.38 = 1,000. A ignores the first coupon, C fails to discount properly, and D adds nominal payments."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A bond promises fixed payments of $50 next year and $1,050 in two years. What happens to its price if the market interest rate rises from 5% to 10%?",
+      "choices": {
+        "A": "Price rises because investors earn a higher yield.",
+        "B": "Price falls because fixed future payments are discounted more heavily.",
+        "C": "Price is unchanged because promised payments are fixed.",
+        "D": "Price rises only for the coupon and falls only for the face value."
+      },
+      "correct": "B",
+      "explanation": "Bond price is the PDV of fixed payments, so a higher discount rate lowers price. A confuses yield and price, C ignores discounting, and D incorrectly separates coupon and principal effects."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A perpetuity pays $100 per year forever. What happens to its value when r falls from 10% to 5%?",
+      "choices": {
+        "A": "Its value doubles from $1,000 to $2,000 because the annual payment is divided by a smaller interest rate.",
+        "B": "Its value halves from $1,000 to $500 because rates are lower.",
+        "C": "Its value stays $1,000 because the payment is unchanged.",
+        "D": "Its value rises by only $50 because the interest rate falls by 5 percentage points."
+      },
+      "correct": "A",
+      "explanation": "A perpetuity's value is C/r. It rises from 100/0.10 = 1,000 to 100/0.05 = 2,000. B reverses the effect, C ignores the denominator, and D treats the rate change as a dollar change."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A graph plots bond price on the vertical axis and market interest rate on the horizontal axis for a fixed-coupon bond. Which description is correct?",
+      "choices": {
+        "A": "The curve slopes upward because higher rates increase coupon payments.",
+        "B": "The curve slopes downward because fixed payments have lower present discounted value at higher rates.",
+        "C": "The curve is horizontal because coupon and face value are fixed.",
+        "D": "The curve is vertical because bond prices cannot adjust."
+      },
+      "correct": "B",
+      "explanation": "Fixed future payments are discounted by the market rate, producing an inverse price-rate relationship. A wrongly changes coupon payments, C ignores discounting, and D denies market price adjustment."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "On a timeline for a standard coupon bond, there are coupon payments at years 1, 2, and 3, plus face value at year 3. Which verbal pricing rule is correct?",
+      "choices": {
+        "A": "Discount each coupon and the face value by the appropriate power of 1+r, then add them.",
+        "B": "Discount only the face value because coupons are interest.",
+        "C": "Add all payments and divide once by 1+r.",
+        "D": "Use the perpetuity formula because every bond pays coupons."
+      },
+      "correct": "A",
+      "explanation": "Bond price is the sum of PDVs of all promised payments. B omits coupons, C discounts all payments as one-year cash flows, and D ignores maturity and face value."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why do bond prices and market interest rates move inversely?",
+      "choices": {
+        "A": "Because a bond's promised payments are usually fixed, so a higher market return requires a lower current price.",
+        "B": "Because higher interest rates reduce the bond's face value.",
+        "C": "Because coupons automatically rise when market rates rise.",
+        "D": "Because investors ignore old bonds when rates change."
+      },
+      "correct": "A",
+      "explanation": "For fixed cash flows, the current price must fall to make the yield competitive when market rates rise. B and C incorrectly change promised payments, and D does not explain pricing."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A university endowment receives a promise of $40,000 per year forever, starting one year from now. The interest rate is 8%. Which model and value apply?",
+      "choices": {
+        "A": "Coupon bond model with face value; value = $40,000 + face value.",
+        "B": "Perpetuity model; value = $40,000/0.08 = $500,000.",
+        "C": "One-period present value; value = $40,000/1.08 = $37,037.",
+        "D": "Future value model; value = $40,000(1.08)."
+      },
+      "correct": "B",
+      "explanation": "A constant payment forever is a perpetuity valued at C/r. A invents face value, C counts only one payment, and D compounds instead of discounting."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a coupon bond from a perpetuity?",
+      "choices": {
+        "A": "A coupon bond has scheduled coupon payments and usually a face-value repayment at maturity; a perpetuity pays a fixed amount forever with no maturity.",
+        "B": "A coupon bond lasts forever; a perpetuity ends at maturity.",
+        "C": "A coupon bond is priced without discounting; a perpetuity is priced with discounting.",
+        "D": "A coupon bond has no future payments; a perpetuity has one future payment."
+      },
+      "correct": "A",
+      "explanation": "Coupon bonds have finite promised payments including maturity value; perpetuities have infinite payments. B reverses the definitions, C falsely separates pricing methods, and D is incorrect for both assets."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A perpetuity pays $120 per year forever. The market interest rate is 6%, but it sells for $1,800. What is its no-arbitrage value and present-value profit from buying one unit?",
+      "choices": {
+        "A": "Value = $2,000; profit = $200 because 120/0.06 = 2,000.",
+        "B": "Value = $1,800; profit = $0 because price is always fair.",
+        "C": "Value = $127.20; profit = -$1,672.80 because only next year's payment matters.",
+        "D": "Value = $720; profit = -$1,080 because 120 × 6 = 720."
+      },
+      "correct": "A",
+      "explanation": "The perpetuity value is C/r = 120/0.06 = 2,000. Buying at 1,800 gives $200 present-value profit. B assumes market price is correct, C values only one payment, and D misuses the interest rate as a multiplier."
+    }
+  ]
+}

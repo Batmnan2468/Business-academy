@@ -1,0 +1,135 @@
+{
+  "topic": "Shutdown Logic",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A competitive tomato grower has short-run cost C(q)=100+4q+q^2 and faces market price p=12. Fixed cost 100 is sunk for the season. Should the firm produce or shut down, and what is the economic reason?",
+      "choices": {
+        "A": "Produce q=4 because p=MC and operating revenue covers variable cost.",
+        "B": "Shut down because price is below average total cost at q=4.",
+        "C": "Produce q=8 because price should equal average variable cost.",
+        "D": "Shut down because fixed cost is positive."
+      },
+      "correct": "A",
+      "explanation": "MC=4+2q, so p=12 gives q=4. VC=4q+q^2=32, revenue=48, so producing contributes 16 toward fixed cost. B confuses the short-run shutdown rule with the long-run exit rule. C sets the wrong condition. D treats sunk fixed cost as relevant."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A competitive bakery has short-run cost C(q)=72+18q+2q^2 and market price p=14. The fixed cost is sunk this week. What output minimizes loss?",
+      "choices": {
+        "A": "q=0, because price is below minimum AVC.",
+        "B": "q=1, because marginal cost equals price after rounding.",
+        "C": "q=4, because spreading fixed cost lowers average total cost.",
+        "D": "q=0, because price is below minimum ATC but above AVC."
+      },
+      "correct": "A",
+      "explanation": "VC=18q+2q^2, so AVC=18+2q, whose minimum over q>0 is above 18. Since p=14<AVC for every positive q, shutdown is optimal. B ignores the nonnegative-output constraint from p=MC. C incorrectly focuses on spreading fixed cost. D gives the wrong reason because p is below AVC, not merely below ATC."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A short-run competitive firm has C(q)=64+10q+q^2. Initially p=14; then p rises to 18. How does the shutdown decision change, and what mechanism explains it?",
+      "choices": {
+        "A": "It shuts down at both prices because fixed cost remains positive.",
+        "B": "It produces at both prices; higher price raises the profit-maximizing q by moving along MC.",
+        "C": "It shuts down at p=14 but produces at p=18 because price crosses minimum AVC.",
+        "D": "It produces at p=14 but shuts down at p=18 because higher output raises total cost."
+      },
+      "correct": "B",
+      "explanation": "AVC=10+q, so both prices exceed minimum AVC. MC=10+2q gives q=2 at p=14 and q=4 at p=18. B correctly names movement along MC. A wrongly treats fixed cost as decisive. C miscalculates AVC. D reverses the price incentive."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm has short-run cost C(q)=F+6q+q^2 and price p=12. If sunk fixed cost F rises from 25 to 100, what happens to the short-run shutdown decision?",
+      "choices": {
+        "A": "The firm shuts down because higher fixed cost raises total cost.",
+        "B": "The firm reduces output because MC shifts upward.",
+        "C": "The firm produces the same output because sunk fixed cost does not affect AVC or MC.",
+        "D": "The firm produces more because it must cover the larger fixed cost."
+      },
+      "correct": "C",
+      "explanation": "MC=6+2q, so q=3 at p=12. AVC=6+q, so p exceeds AVC. Changing sunk F affects profit level but not the produce-or-shut-down comparison. A uses ATC instead of AVC. B falsely shifts MC. D commits the sunk-cost fallacy."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A firm has U-shaped AVC and MC curves. At price p=9, the horizontal price line lies below the minimum point of AVC. In the usual output-price diagram, what should be inferred?",
+      "choices": {
+        "A": "The firm produces where p=MC because MC slopes upward.",
+        "B": "The firm produces where p intersects ATC because fixed cost must be paid.",
+        "C": "The firm shuts down because every positive output has variable cost greater than revenue.",
+        "D": "The firm produces at the AVC-minimizing output because losses are smallest there."
+      },
+      "correct": "C",
+      "explanation": "If price lies below the entire AVC curve, revenue cannot cover variable cost at any positive q. A ignores the shutdown condition. B uses the long-run exit threshold. D chooses the least bad positive output but ignores that q=0 avoids variable losses."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A long-run competitive firm has a U-shaped LRAC curve with minimum 20 at q=50. If the market price line is horizontal at p=17, what does the graph imply?",
+      "choices": {
+        "A": "The firm exits in the long run because the price line lies below the entire LRAC curve.",
+        "B": "The firm produces q=50 because LRAC is minimized there.",
+        "C": "The firm produces where p=LRMC even if LRAC exceeds price.",
+        "D": "The firm expands output until LRAC falls to 17."
+      },
+      "correct": "A",
+      "explanation": "In the long run all costs are avoidable, so price below minimum LRAC implies exit. B confuses technical efficiency with profitability. C ignores that p must cover long-run average cost. D assumes LRAC reaches 17 when the stated minimum is 20."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A competitive gym has weekly fixed rent of 500, variable cost VC(q)=8q+q^2, and price p=18. Why is average variable cost, rather than average total cost, the relevant short-run shutdown threshold?",
+      "choices": {
+        "A": "Because rent is sunk for the week, the firm compares revenue with avoidable variable cost.",
+        "B": "Because fixed cost is always zero in the short run.",
+        "C": "Because firms maximize revenue rather than profit in the short run.",
+        "D": "Because average total cost is unrelated to profit."
+      },
+      "correct": "A",
+      "explanation": "The short-run shutdown decision asks whether operating covers avoidable costs. B is false because fixed costs can exist. C is not profit maximization. D is too strong: ATC matters for profit, but not the shutdown margin when fixed cost is sunk."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A food truck must pay a nonrefundable 300 festival fee before opening. Once open, it can sell tacos with AVC=5+0.5q and MC=5+q. The taco price at the festival is 11. What should it do after the fee has already been paid?",
+      "choices": {
+        "A": "Shut down because the festival fee makes average total cost high.",
+        "B": "Open and sell q=6 tacos because p=MC and price covers AVC.",
+        "C": "Open and sell q=12 tacos because p equals AVC.",
+        "D": "Shut down because nonrefundable fees are variable costs."
+      },
+      "correct": "B",
+      "explanation": "MC=5+q, so q=6. AVC at q=6 is 8, below price 11, so operating reduces loss. A treats sunk fixed cost as avoidable. C sets p=AVC. D misclassifies the fee."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes short-run shutdown from long-run exit for a competitive firm?",
+      "choices": {
+        "A": "Short-run shutdown occurs when p<ATC; long-run exit occurs when p<AVC.",
+        "B": "Short-run shutdown occurs when p<AVC; long-run exit occurs when p<ATC because all costs are avoidable in the long run.",
+        "C": "Both short-run shutdown and long-run exit occur only when p<MC.",
+        "D": "Short-run shutdown depends on fixed cost; long-run exit depends only on variable cost."
+      },
+      "correct": "B",
+      "explanation": "Short-run sunk fixed cost makes AVC the shutdown threshold; long-run avoidability makes ATC the exit threshold. A reverses the rules. C confuses marginal and average conditions. D reverses the relevance of fixed cost."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A competitive firm has cost C(q)=36+4q+q^2 and faces p=10. Fixed cost is sunk. Compare operating at the profit-maximizing positive output with shutting down. What is the change in producer surplus from operating rather than shutting down?",
+      "choices": {
+        "A": "9, because revenue exceeds variable cost by 9.",
+        "B": "-27, because total profit is negative after fixed cost.",
+        "C": "36, because fixed cost is the producer surplus loss.",
+        "D": "18, because price exceeds AVC by 6 at q=3."
+      },
+      "correct": "A",
+      "explanation": "MC=4+2q, so q=3. Revenue is 30 and VC=12+9=21, so producer surplus is 9. B calculates profit, not producer surplus. C treats fixed cost as variable. D multiplies the wrong average gap."
+    }
+  ]
+}

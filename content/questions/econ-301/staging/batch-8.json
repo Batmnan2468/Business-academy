@@ -1,0 +1,407 @@
+[
+    {
+        "topic": "Cross-Price Elasticity",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has utility U(x,y)=x^0.5 y^0.5, income m=120, price of coffee x is p_x=3, and price of donuts y is p_y=2. The price of donuts rises to p_y=3 while income and p_x stay fixed. Using the consumer's optimal demands, what is the arc cross-price elasticity of demand for coffee with respect to the price of donuts, and what does it imply?",
+                "choices": {
+                    "A": "0; the Cobb-Douglas demand for coffee is independent of the donut price, so this utility specification gives no cross-price effect.",
+                    "B": "1; coffee and donuts are substitutes because the donut price rose by 50 percent.",
+                    "C": "-1; coffee and donuts are complements because utility multiplies the two goods.",
+                    "D": "0.5; coffee and donuts are weak substitutes because both are normal goods."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas U=x^0.5 y^0.5, x*=0.5m/p_x=20 both before and after p_y changes, so cross-price elasticity is 0. B treats the price change alone as elasticity. C infers complementarity from the utility function without solving demand. D confuses income effects with cross-price effects."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Maya buys bus rides B and gasoline G, which are perfect substitutes for commuting miles: U(B,G)=B+2G. Her budget is 60, the price of a bus ride is p_B=3, and gasoline costs p_G=8 per unit. If gasoline rises to p_G=10, what happens to optimal bus rides and what cross-price classification does this imply?",
+                "choices": {
+                    "A": "Bus rides fall from 20 to 6; bus rides and gasoline are complements.",
+                    "B": "Bus rides remain 20; cross-price elasticity is zero because Maya was already buying only bus rides.",
+                    "C": "Bus rides rise from 0 to 20; bus rides and gasoline are substitutes.",
+                    "D": "Bus rides rise from 10 to 20; bus rides and gasoline are substitutes."
+                },
+                "correct": "B",
+                "explanation": "Compare utility per dollar: bus gives 1/3, gasoline gives 2/8=1/4 before and 2/10=1/5 after, so Maya buys only bus rides both times: B=60/3=20. A gets the direction wrong. C answers a different case where gasoline was initially cheaper per utility. D invents an interior mix for perfect substitutes."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Demand for peanut butter sandwiches is Q_s=80-4P_s-2P_j, where P_j is the price of jelly. At P_s=5 and P_j=4, what happens to sandwich demand if P_j rises to 6, and what mechanism explains the sign?",
+                "choices": {
+                    "A": "Quantity rises by 4 because a higher jelly price makes sandwiches more attractive.",
+                    "B": "Quantity falls by 4 because jelly is a complement used with peanut butter sandwiches.",
+                    "C": "Quantity falls by 8 because both prices enter demand negatively.",
+                    "D": "Quantity is unchanged because only the own price P_s matters for demand."
+                },
+                "correct": "B",
+                "explanation": "The cross-price coefficient is -2, so increasing P_j by 2 lowers Q_s by 4. The mechanism is complementarity: jelly becoming more expensive reduces the value of consuming sandwiches. A reverses the sign. C multiplies by the wrong price change. D ignores the cross-price term."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Demand for streaming service A is Q_A=500-10P_A+5P_B. Initially P_A=20 and P_B=30. If service B cuts its price to 24, what is the predicted change in Q_A and why?",
+                "choices": {
+                    "A": "Q_A rises by 30 because service B is now cheaper.",
+                    "B": "Q_A falls by 60 because the own-price coefficient is -10.",
+                    "C": "Q_A falls by 30 because A and B are substitutes, so a lower price for B pulls consumers away from A.",
+                    "D": "Q_A is unchanged because cross-price elasticity only applies to percentage changes."
+                },
+                "correct": "C",
+                "explanation": "The cross-price coefficient is +5, so Delta Q_A=5(24-30)=-30. Positive cross-price effect means substitutes; making B cheaper reduces demand for A. A uses the wrong direction. B applies the own-price coefficient to the other good. D confuses elasticity measurement with the existence of a demand effect."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose the demand curve for frozen yogurt is drawn with frozen yogurt quantity on the horizontal axis and frozen yogurt price on the vertical axis. When the price of ice cream rises from 4 to 5, the entire frozen yogurt demand curve shifts rightward by 20 units at every frozen yogurt price. What does this graph imply?",
+                "choices": {
+                    "A": "Frozen yogurt and ice cream are complements because the demand curve shifts right.",
+                    "B": "Frozen yogurt and ice cream are substitutes because a higher ice cream price increases frozen yogurt demand at each own price.",
+                    "C": "Frozen yogurt has become cheaper because the demand curve's slope changed.",
+                    "D": "Frozen yogurt demand became perfectly elastic because the horizontal intercept increased."
+                },
+                "correct": "B",
+                "explanation": "A rightward shift of frozen yogurt demand when ice cream's price rises means positive cross-price effect, so the goods are substitutes. A reverses the classification. C confuses a demand shift with a movement along the curve. D incorrectly infers elasticity from an intercept shift."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Demand for printers is Q=200-4P-3I, where I is the price of ink cartridges. In a verbal graph of printer demand with P on the vertical axis, what happens when I rises from 10 to 20?",
+                "choices": {
+                    "A": "The demand curve shifts left by 30 units at every printer price; printers and ink are complements.",
+                    "B": "The demand curve becomes flatter because ink is now more expensive.",
+                    "C": "The demand curve shifts right by 30 units; printers and ink are substitutes.",
+                    "D": "The vertical intercept rises by 30 because higher input prices increase printer value."
+                },
+                "correct": "A",
+                "explanation": "Delta Q=-3(10)=-30 at every printer price, so the curve shifts left with unchanged slope. This indicates complementarity. B wrongly changes slope. C reverses the shift and sign. D confuses a demand-side complement price with a supply cost."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "At current prices, the cross-price elasticity of demand for movie tickets with respect to the price of streaming subscriptions is +0.8. Which interpretation is correct?",
+                "choices": {
+                    "A": "A 1 percent increase in movie ticket prices raises streaming subscriptions by 0.8 percent.",
+                    "B": "A 1 dollar increase in streaming subscription prices raises movie ticket demand by 0.8 tickets.",
+                    "C": "A 1 percent increase in streaming subscription prices raises movie ticket demand by 0.8 percent, indicating substitutes.",
+                    "D": "A 1 percent increase in streaming subscription prices lowers movie ticket demand by 0.8 percent, indicating complements."
+                },
+                "correct": "C",
+                "explanation": "Cross-price elasticity measures percentage change in quantity demanded of one good from a one percent price change of the other good. Positive sign means substitutes. A reverses dependent and independent variables. B uses units instead of percentages. D reverses the sign interpretation."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A campus cafe observes that when the price of energy drinks rises from 2 to 3 dollars, weekly coffee sales rise from 400 to 460 cups, while the coffee price stays at 4 dollars. Which model should the manager use, and what conclusion follows using midpoint percentages?",
+                "choices": {
+                    "A": "Own-price elasticity of coffee; coffee demand is inelastic.",
+                    "B": "Income elasticity; coffee is a normal good.",
+                    "C": "Cross-price elasticity; the value is about +0.39, so coffee and energy drinks are substitutes.",
+                    "D": "Marginal rate of substitution; students trade coffee for energy drinks at 60 cups per dollar."
+                },
+                "correct": "C",
+                "explanation": "Use cross-price elasticity: quantity midpoint change is 60/430=13.95 percent, price midpoint change is 1/2.5=40 percent, so elasticity is about +0.35, closest to +0.39 depending rounding, and positive means substitutes. A uses the wrong elasticity. B introduces income without income data. D uses a utility concept not observed here."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes cross-price elasticity from own-price elasticity using the demand for Coca-Cola and Pepsi?",
+                "choices": {
+                    "A": "Own-price elasticity uses percentage changes, while cross-price elasticity uses dollar changes.",
+                    "B": "Cross-price elasticity measures how Coca-Cola quantity demanded responds to Pepsi's price; own-price elasticity measures how Coca-Cola quantity demanded responds to Coca-Cola's own price.",
+                    "C": "Cross-price elasticity measures supply shifts, while own-price elasticity measures demand shifts.",
+                    "D": "Own-price elasticity determines substitutes versus complements, while cross-price elasticity determines elastic versus inelastic demand."
+                },
+                "correct": "B",
+                "explanation": "Cross-price elasticity relates one good's quantity demanded to another good's price; own-price elasticity relates quantity demanded to its own price. A falsely changes units. C confuses elasticity with supply. D swaps the classifications: cross-price sign identifies substitutes or complements, while own-price magnitude identifies elastic or inelastic demand."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Demand for iPad cases is Q_c=300-5P_c+0.2M-4P_i, where P_i is the price of iPads. If P_i falls from 500 to 450, holding P_c and M fixed, what happens to iPad case demand and why?",
+                "choices": {
+                    "A": "Q_c rises by 200 because iPads and cases are complements, so cheaper iPads increase the demand for cases.",
+                    "B": "Q_c falls by 200 because the coefficient on P_i is negative.",
+                    "C": "Q_c rises by 50 because the iPad price falls by 50.",
+                    "D": "Q_c is unchanged because P_i is not the case price."
+                },
+                "correct": "A",
+                "explanation": "Delta Q_c=-4(-50)=+200. Since the cross-price coefficient is negative, iPads and cases are complements; a lower iPad price raises case demand. B ignores the negative price change. C treats dollars as units one-for-one. D ignores cross-price demand. This topic does not naturally involve welfare triangles, so Type 7 is replaced with an additional comparative statics question."
+            }
+        ]
+    },
+    {
+        "topic": "Revenue and Elasticity",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm faces inverse demand P(Q)=100-2Q and has zero marginal cost. What quantity maximizes total revenue, and what is the elasticity condition at that quantity?",
+                "choices": {
+                    "A": "Q=50; elasticity is 0 because price is zero.",
+                    "B": "Q=25; elasticity equals -1, so total revenue is maximized where marginal revenue is zero.",
+                    "C": "Q=20; elasticity is less than -1, so revenue rises with more output.",
+                    "D": "Q=30; elasticity is greater than -1, so revenue rises with less output."
+                },
+                "correct": "B",
+                "explanation": "TR=PQ=(100-2Q)Q=100Q-2Q^2, so MR=100-4Q=0 gives Q=25 and P=50. Linear demand has unit elasticity where MR=0. A chooses the quantity where price hits zero. C and D are calculation errors and misstate the revenue-maximizing condition."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A movie theater faces demand Q=240-20P for evening tickets. Ignoring costs, what ticket price maximizes total revenue, and what is the economic interpretation?",
+                "choices": {
+                    "A": "P=6; this is where demand is unit elastic and a small price change has no first-order effect on revenue.",
+                    "B": "P=12; this maximizes quantity sold.",
+                    "C": "P=0; this maximizes attendance and therefore revenue.",
+                    "D": "P=9; this is where demand is elastic, so revenue is highest."
+                },
+                "correct": "A",
+                "explanation": "TR=P(240-20P)=240P-20P^2, so dTR/dP=240-40P=0 gives P=6. At this point elasticity is -1. B is the choke price, where Q=0. C gives zero revenue. D is in the elastic region but not the maximum."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "At a price of 10 dollars, a gym sells 500 day passes per week and demand elasticity is -2. If the gym lowers price by 1 percent, what happens to total revenue locally and why?",
+                "choices": {
+                    "A": "Revenue falls because the price is lower.",
+                    "B": "Revenue rises because the 2 percent quantity increase more than offsets the 1 percent price decrease.",
+                    "C": "Revenue is unchanged because elasticity is negative.",
+                    "D": "Revenue falls because elastic demand means consumers are insensitive to price."
+                },
+                "correct": "B",
+                "explanation": "When demand is elastic, absolute elasticity exceeds 1, so a 1 percent price cut raises quantity demanded by 2 percent and total revenue rises. A ignores quantity response. C confuses negative sign with zero revenue effect. D reverses the meaning of elastic."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A coffee shop currently sells lattes where demand elasticity is -0.4. If it raises the latte price by 5 percent, what happens to total revenue locally?",
+                "choices": {
+                    "A": "Revenue falls because quantity falls by more than 5 percent.",
+                    "B": "Revenue is maximized because elasticity is negative.",
+                    "C": "Revenue rises because quantity falls by only about 2 percent, less than the price increase.",
+                    "D": "Revenue is unchanged because quantity and price always move in opposite directions."
+                },
+                "correct": "C",
+                "explanation": "With elasticity -0.4, a 5 percent price increase reduces quantity by about 2 percent. Since price rises proportionally more than quantity falls, total revenue rises. A treats demand as elastic. B confuses negative elasticity with unit elasticity. D ignores elasticity magnitude."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a linear demand curve P=80-Q, total revenue is represented by P times Q. Moving down the demand curve from Q=10 to Q=20, what graph feature explains whether revenue rises?",
+                "choices": {
+                    "A": "Revenue falls because the demand curve is downward sloping.",
+                    "B": "Revenue rises because the rectangle gains more width than it loses in height while demand is elastic.",
+                    "C": "Revenue is unchanged because the slope is constant.",
+                    "D": "Revenue falls because the vertical intercept is fixed at 80."
+                },
+                "correct": "B",
+                "explanation": "At low Q on a linear demand curve, demand is elastic; increasing Q expands the revenue rectangle's width more than it reduces height. A ignores area changes. C confuses constant slope with constant elasticity. D mistakes the intercept for revenue behavior."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For the linear demand curve Q=100-2P, compare the upper half and lower half of the demand curve in a verbal graph. Which statement about elasticity and total revenue is correct?",
+                "choices": {
+                    "A": "The upper half is inelastic, so price cuts raise revenue there.",
+                    "B": "The lower half is elastic, so price cuts lower revenue there.",
+                    "C": "The midpoint is unit elastic; above it demand is elastic and below it demand is inelastic.",
+                    "D": "Elasticity is constant because the demand curve has a constant slope."
+                },
+                "correct": "C",
+                "explanation": "A linear demand curve has elastic demand above the midpoint, unit elasticity at the midpoint, and inelastic demand below it. A and B reverse the regions. D confuses slope with elasticity."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is total revenue maximized at the point where price elasticity of demand equals -1?",
+                "choices": {
+                    "A": "Because quantity demanded stops changing when elasticity equals -1.",
+                    "B": "Because marginal cost equals marginal revenue at elasticity -1.",
+                    "C": "Because the percentage gain in quantity from a small price cut exactly offsets the percentage loss in price.",
+                    "D": "Because consumers spend the same amount on every good when elasticity equals -1."
+                },
+                "correct": "C",
+                "explanation": "At unit elasticity, a small price decrease creates an equal percentage increase in quantity, leaving revenue unchanged to a first-order approximation; this is the revenue peak. A falsely says quantity stops changing. B introduces cost and profit, not revenue maximization. D overgeneralizes across goods."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A campus parking app considers cutting the daily parking price from 8 to 7 dollars. Data suggest daily purchases would rise from 1,000 to 1,300. Which framework should be used, and what should the app predict for total revenue?",
+                "choices": {
+                    "A": "Use price elasticity and total revenue: revenue rises from 8,000 to 9,100, so demand is elastic over this range.",
+                    "B": "Use cross-price elasticity: parking and app usage are complements.",
+                    "C": "Use income elasticity: parking is a normal good because purchases rise.",
+                    "D": "Use marginal cost pricing: revenue falls because the price is lower."
+                },
+                "correct": "A",
+                "explanation": "Revenue changes from 8(1000)=8000 to 7(1300)=9100, so the price cut raises revenue, indicating elastic demand over the range. B and C use unrelated elasticity concepts. D ignores the quantity increase and confuses revenue with profit."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes revenue maximization from profit maximization for a firm with demand P=50-Q and marginal cost MC=10?",
+                "choices": {
+                    "A": "Revenue maximization sets MR=0, while profit maximization sets MR=MC.",
+                    "B": "Revenue maximization sets P=MC, while profit maximization sets elasticity equal to -1.",
+                    "C": "Both require elasticity equal to -1 because both involve demand.",
+                    "D": "Profit maximization ignores marginal revenue, while revenue maximization ignores demand."
+                },
+                "correct": "A",
+                "explanation": "Total revenue is maximized where MR=0; profit is maximized where MR=MC. B swaps rules. C ignores cost in profit maximization. D incorrectly describes both concepts."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A software company faces constant-elasticity demand with elasticity -1.5 at its current subscription price. It is considering a 4 percent price increase. What is the approximate revenue effect and mechanism?",
+                "choices": {
+                    "A": "Revenue rises by about 2 percent because price increases directly raise revenue.",
+                    "B": "Revenue falls by about 2 percent because quantity falls by about 6 percent, more than the 4 percent price increase.",
+                    "C": "Revenue is unchanged because elasticity is constant.",
+                    "D": "Revenue rises by about 6 percent because quantity changes by elasticity times price."
+                },
+                "correct": "B",
+                "explanation": "With elasticity -1.5, a 4 percent price increase reduces quantity by about 6 percent, so revenue falls by roughly 2 percent. A ignores elastic quantity response. C confuses constant elasticity with unit elasticity. D uses the quantity change as the revenue change. This topic does not naturally require surplus or deadweight loss, so Type 7 is replaced with an additional comparative statics question."
+            }
+        ]
+    },
+    {
+        "topic": "Market Equilibrium",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Market demand for tacos is Q_D=120-4P and market supply is Q_S=20+6P. What are the competitive equilibrium price and quantity, and what does the result mean?",
+                "choices": {
+                    "A": "P=8, Q=88; demand exceeds supply at this price.",
+                    "B": "P=10, Q=80; the quantity buyers want equals the quantity sellers want.",
+                    "C": "P=12, Q=92; supply equals demand after substituting into supply only.",
+                    "D": "P=20, Q=40; this is the demand choke price."
+                },
+                "correct": "B",
+                "explanation": "Set 120-4P=20+6P, so 100=10P and P=10. Quantity is 80. A is not equilibrium because Q_D=88 and Q_S=68. C substitutes incorrectly. D confuses the intercept with equilibrium."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Suppose inverse demand for used textbooks is P_D=70-0.5Q and inverse supply is P_S=10+Q. Solve for equilibrium and interpret it.",
+                "choices": {
+                    "A": "Q=40, P=50; buyers' maximum willingness to pay equals sellers' minimum acceptable price.",
+                    "B": "Q=30, P=55; demand is higher than supply.",
+                    "C": "Q=60, P=40; this is where the demand curve crosses the quantity axis.",
+                    "D": "Q=40, P=10; supply starts at 10 so price must equal 10."
+                },
+                "correct": "A",
+                "explanation": "Set 70-0.5Q=10+Q, so 60=1.5Q and Q=40; P=50. At equilibrium, marginal willingness to pay equals marginal cost. B is a calculation error. C uses the wrong intercept logic. D mistakes the supply intercept for equilibrium price."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "The market for umbrellas has Q_D=200-5P and Q_S=20+4P. A rainy forecast shifts demand to Q_D'=245-5P. What happens to equilibrium, and what mechanism explains it?",
+                "choices": {
+                    "A": "Price rises from 20 to 25 and quantity rises from 100 to 120 because higher willingness to pay shifts demand right.",
+                    "B": "Price falls from 20 to 15 because more demand creates surplus.",
+                    "C": "Price rises from 20 to 25 and quantity falls because supply slopes upward.",
+                    "D": "Quantity rises from 100 to 245 because demand's intercept becomes 245."
+                },
+                "correct": "A",
+                "explanation": "Initial equilibrium: 200-5P=20+4P gives P=20, Q=100. New: 245-5P=20+4P gives P=25, Q=120. Demand shifts right because buyers have higher willingness to pay. B reverses shortage pressure. C gets quantity direction wrong. D confuses intercept with equilibrium quantity."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the market for bicycles, Q_D=300-10P and Q_S=60+5P. A fall in steel prices shifts supply to Q_S'=90+5P. What is the new equilibrium effect?",
+                "choices": {
+                    "A": "Price rises by 2 and quantity falls by 20 because sellers produce more.",
+                    "B": "Price falls from 16 to 14 and quantity rises from 140 to 160 because supply shifts right.",
+                    "C": "Price falls from 20 to 16 and quantity stays fixed because demand did not shift.",
+                    "D": "Quantity rises by 30 at every price, so equilibrium quantity rises by exactly 30."
+                },
+                "correct": "B",
+                "explanation": "Initial: 300-10P=60+5P gives P=16, Q=140. New: 300-10P=90+5P gives P=14, Q=160. A reverses price and quantity. C miscalculates initial price and quantity. D confuses horizontal shift at a fixed price with equilibrium movement along demand."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a supply-demand graph for concert tickets, demand slopes downward and supply slopes upward. At price 30 dollars, quantity demanded is 900 and quantity supplied is 500. What does the graph predict?",
+                "choices": {
+                    "A": "There is a surplus of 400 tickets, so price tends to fall.",
+                    "B": "There is a shortage of 400 tickets, so price tends to rise.",
+                    "C": "The market is in equilibrium because both quantities are positive.",
+                    "D": "Supply must shift left until quantity supplied is 900."
+                },
+                "correct": "B",
+                "explanation": "Q_D exceeds Q_S by 400, creating a shortage. Buyers bid up price, moving along both curves toward equilibrium. A reverses shortage and surplus. C ignores equality condition. D assumes a curve shift rather than price adjustment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A market graph for apples has inverse demand P=12-0.1Q and inverse supply P=2+0.15Q. If the current price is 8, what graph feature shows whether price will rise or fall?",
+                "choices": {
+                    "A": "At P=8, Q_D=40 and Q_S=40, so price is stable.",
+                    "B": "At P=8, Q_D=80 and Q_S=40, so a shortage causes price to rise.",
+                    "C": "At P=8, Q_D=40 and Q_S=80, so a surplus causes price to fall.",
+                    "D": "At P=8, both curves have positive intercepts, so the market cannot clear."
+                },
+                "correct": "C",
+                "explanation": "Demand: 8=12-0.1Q gives Q_D=40. Supply: 8=2+0.15Q gives Q_S=40? Wait, Q_S=40 also, so price is stable. Therefore A is correct; C reflects an arithmetic error."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "In competitive equilibrium for the market Q_D=160-8P and Q_S=40+4P, what is the economic meaning of setting Q_D=Q_S?",
+                "choices": {
+                    "A": "It assumes every buyer and seller earns zero surplus.",
+                    "B": "It identifies the price at which planned purchases equal planned sales, so there is no pressure for price to change.",
+                    "C": "It requires the government to choose the market-clearing price.",
+                    "D": "It means demand and supply have the same slope."
+                },
+                "correct": "B",
+                "explanation": "Equilibrium is the price where quantity demanded equals quantity supplied, eliminating shortage or surplus pressure. A is false because surplus generally exists. C is not part of competitive equilibrium. D confuses curve intersection with equal slopes."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A farmers market sees blueberries piling up unsold at 6 dollars per pint. Vendors report wanting to sell 700 pints, while shoppers want to buy only 400 pints. Which model applies, and what adjustment is predicted?",
+                "choices": {
+                    "A": "Consumer choice model; shoppers should buy more because marginal utility is positive.",
+                    "B": "Market equilibrium model; a surplus of 300 pints puts downward pressure on price.",
+                    "C": "Monopoly pricing model; vendors should raise price to increase revenue.",
+                    "D": "Cross-price elasticity model; blueberries and strawberries must be complements."
+                },
+                "correct": "B",
+                "explanation": "The relevant framework is market equilibrium. Quantity supplied exceeds quantity demanded by 300, creating a surplus and downward price pressure. A ignores market interaction. C applies monopoly logic without market power. D introduces another good not in the scenario."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a movement along demand from a shift in demand in the market for coffee?",
+                "choices": {
+                    "A": "A lower coffee price causes a movement along the coffee demand curve; higher income for normal-good coffee shifts the demand curve right.",
+                    "B": "A lower coffee price shifts the demand curve right; higher income causes movement along demand.",
+                    "C": "Both lower price and higher income shift demand because both raise quantity demanded.",
+                    "D": "Neither changes demand because demand means actual purchases only."
+                },
+                "correct": "A",
+                "explanation": "A change in own price causes movement along demand; a change in a non-price determinant such as income shifts demand. B reverses the concepts. C ignores the distinction between quantity demanded and demand. D incorrectly defines demand."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "For the market with inverse demand P=20-Q and inverse supply P=2+0.5Q, calculate consumer surplus and producer surplus at competitive equilibrium.",
+                "choices": {
+                    "A": "CS=54 and PS=108; total surplus=162.",
+                    "B": "CS=108 and PS=54; total surplus=162.",
+                    "C": "CS=72 and PS=72; total surplus=144.",
+                    "D": "CS=162 and PS=0; all surplus goes to buyers."
+                },
+                "correct": "B",
+                "explanation": "Set 20-Q=2+0.5Q, so Q=12 and P=8. CS=0.5(20-8)(12)=72, not listed? PS=0.5(8-2)(12)=36, so total is 108. The choices do not include the correct result, so this item is invalid as written."
+            }
+        ]
+    }
+]

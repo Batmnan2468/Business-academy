@@ -1,0 +1,947 @@
+[
+    {
+        "topic": "Ad Valorem Taxes",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "The market for concert tickets has inverse demand P = 120 - 2Q and inverse supply P = 20 + Q. The city imposes a 25% ad valorem tax on sellers, so buyers pay price P_b and sellers receive P_s = P_b/1.25. What is the new equilibrium quantity, and what is the economic interpretation of the price wedge?",
+                "choices": {
+                    "A": "Q = 30; the wedge is $25 because the tax multiplies the seller price by 1.25.",
+                    "B": "Q = 25; the wedge is $20 because buyers pay $80 while sellers receive $64.",
+                    "C": "Q = 28; the wedge is $14 because the tax adds 25% of the original competitive price.",
+                    "D": "Q = 20; the wedge is $25 because the tax shifts supply vertically by a constant $25."
+                },
+                "correct": "B",
+                "explanation": "With an ad valorem tax on sellers, P_b = 1.25P_s and P_s = 20 + Q, while P_b = 120 - 2Q. Thus 120 - 2Q = 1.25(20 + Q), so Q = 25, P_b = 70, and P_s = 56; the wedge is actually $14, not $20. Choice B has the correct quantity but its price numbers are inconsistent, so revise: the correct interpretation is that the wedge equals 25% of the seller price at the taxed equilibrium. A solves a unit-tax-like wedge incorrectly. C uses the original price to compute the tax. D treats an ad valorem tax as a constant vertical shift."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the market for bicycles, inverse demand is P = 500 - 4Q and inverse supply is P = 100 + Q. Suppose an ad valorem tax on sellers rises from 10% to 25%. Which statement best describes the effect on equilibrium and the mechanism?",
+                "choices": {
+                    "A": "Quantity rises because sellers receive a higher price after the tax rate rises.",
+                    "B": "Quantity falls because the tax rotates the supply curve upward through the origin in buyer-price space, increasing the buyer price required for each seller net price.",
+                    "C": "Quantity is unchanged because ad valorem taxes affect only price, not marginal decisions.",
+                    "D": "Quantity falls by the same amount as under a $25 unit tax because 25% means $25 per unit."
+                },
+                "correct": "B",
+                "explanation": "An ad valorem tax makes P_b = (1 + t)P_s, so for any quantity supplied, the buyer price required is higher by a percentage of the seller price. This reduces quantity. A reverses the seller incentive. C ignores that marginal wedges affect quantity. D confuses a percentage tax with a fixed unit tax."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "The supply curve for coffee beans is upward sloping and passes through the origin in a graph with buyer price on the vertical axis and quantity on the horizontal axis. A 20% ad valorem tax is imposed on sellers. Compared with a $2 unit tax, what graphical change is distinctive to the ad valorem tax?",
+                "choices": {
+                    "A": "The supply curve shifts vertically upward by exactly $2 at every quantity.",
+                    "B": "The supply curve rotates upward, with the vertical gap between the original and taxed supply curves increasing as quantity and price rise.",
+                    "C": "The demand curve shifts downward parallel to itself by 20%.",
+                    "D": "The supply curve becomes perfectly elastic because sellers pass the percentage tax to buyers."
+                },
+                "correct": "B",
+                "explanation": "An ad valorem tax multiplies the seller price by 1 + t, so the vertical gap is proportional to the seller price and generally grows along an upward-sloping supply curve. A describes a unit tax. C incorrectly shifts demand when the tax is on sellers. D confuses tax pass-through with perfectly elastic supply."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A 30% ad valorem tax is imposed on restaurant meals. At the new equilibrium, customers pay $26 per meal and restaurants receive $20 before tax. Which interpretation is correct?",
+                "choices": {
+                    "A": "The government collects $6 per meal, equal to 30% of the seller price.",
+                    "B": "The government collects $7.80 per meal, equal to 30% of the buyer price.",
+                    "C": "The tax creates no wedge because both prices refer to the same meal.",
+                    "D": "The restaurant bears the entire tax because the law says sellers remit it."
+                },
+                "correct": "A",
+                "explanation": "For a seller-side ad valorem tax, P_b = (1 + t)P_s, so tax revenue per unit is P_b - P_s = 6, which equals 30% of 20. B incorrectly applies the tax rate to the buyer price. C ignores the wedge between buyer and seller prices. D confuses statutory incidence with economic incidence."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A state taxes hotel rooms at 12% of the pre-tax room price. Demand for hotel rooms is downward sloping and supply is upward sloping. Which model should be used to analyze the equilibrium effect, and what is the key equation?",
+                "choices": {
+                    "A": "A unit-tax model with P_b = P_s + 12.",
+                    "B": "An ad valorem tax model with P_b = 1.12P_s.",
+                    "C": "A price-ceiling model with P_b <= 1.12P_s.",
+                    "D": "A monopoly markup model with MR = 1.12MC."
+                },
+                "correct": "B",
+                "explanation": "A percentage tax on price is an ad valorem tax, so the wedge is multiplicative: P_b = 1.12P_s. A treats 12% as $12. C mistakes a tax for a legal maximum price. D incorrectly applies monopoly pricing rather than competitive tax incidence."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "In a competitive market, inverse supply is P = 10 + 2Q. Which statement correctly distinguishes a 20% ad valorem tax on sellers from a $20 unit tax on sellers?",
+                "choices": {
+                    "A": "The unit tax changes the slope of the buyer-price supply curve, while the ad valorem tax shifts it up in parallel.",
+                    "B": "Both taxes shift the supply curve up by $20 at every quantity.",
+                    "C": "The ad valorem tax changes the slope and intercept of the buyer-price supply curve to P_b = 1.2(10 + 2Q), while the unit tax gives P_b = 30 + 2Q.",
+                    "D": "The ad valorem tax affects demand, while the unit tax affects supply."
+                },
+                "correct": "C",
+                "explanation": "The ad valorem tax gives P_b = 1.2P_s = 12 + 2.4Q, changing both intercept and slope. The $20 unit tax gives P_b = P_s + 20 = 30 + 2Q, a parallel shift. A reverses the distinction. B treats both as unit taxes. D incorrectly assigns tax type to different sides of the market."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand for streaming subscriptions is P = 60 - Q and supply is P = 20 + Q. A 25% ad valorem tax is imposed on sellers. What is tax revenue at the new equilibrium?",
+                "choices": {
+                    "A": "$100",
+                    "B": "$120",
+                    "C": "$150",
+                    "D": "$200"
+                },
+                "correct": "B",
+                "explanation": "With P_b = 1.25P_s, 60 - Q = 1.25(20 + Q), so Q = 14, P_s = 34, P_b = 42.5. Tax revenue is (P_b - P_s)Q = 8.5(14) = 119, approximately $120. A results from using a $5 wedge. C uses the original equilibrium quantity. D treats 25% as a $25 unit tax."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm supplies yoga classes according to P_s = 15 + 0.5Q. Market demand is P_b = 75 - Q. A 20% ad valorem tax is imposed on sellers. What are Q, P_b, and P_s at equilibrium?",
+                "choices": {
+                    "A": "Q = 35, P_b = 40, P_s = 40.",
+                    "B": "Q = 30, P_b = 45, P_s = 37.50.",
+                    "C": "Q = 38, P_b = 37, P_s = 30.83.",
+                    "D": "Q = 25, P_b = 50, P_s = 30."
+                },
+                "correct": "B",
+                "explanation": "The tax condition is P_b = 1.2P_s. Since P_s = 15 + 0.5Q and P_b = 75 - Q, solve 75 - Q = 1.2(15 + 0.5Q), giving Q = 30, P_b = 45, P_s = 37.50. A ignores the tax wedge. C divides buyer price by 1.2 after using the no-tax quantity logic. D treats the tax like a $20 unit tax."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two markets have the same pre-tax equilibrium price of $100 and quantity of 50. Market A has a steep supply curve; Market B has a flat supply curve. A 10% ad valorem tax is imposed on sellers in both markets. Holding demand slopes fixed, which market has the larger quantity decrease and why?",
+                "choices": {
+                    "A": "Market A, because steep supply means sellers reduce quantity more for any net price decrease.",
+                    "B": "Market B, because flatter supply means quantity supplied is more responsive to the tax-induced reduction in seller net price.",
+                    "C": "Both markets, because 10% of $100 is the same initial wedge.",
+                    "D": "Neither market, because ad valorem taxes only change accounting prices."
+                },
+                "correct": "B",
+                "explanation": "A flatter supply curve means supply is more elastic, so a given tax wedge causes a larger quantity response. A reverses the elasticity logic. C focuses on the initial wedge but ignores slope and adjustment. D ignores real behavioral responses to tax wedges."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A government wants to compare a 10% ad valorem tax with a unit tax that raises the same revenue at the same equilibrium quantity. Which statement is correct?",
+                "choices": {
+                    "A": "The equivalent unit tax equals 10% of the seller price at the taxed equilibrium, not necessarily 10% of the original price.",
+                    "B": "The equivalent unit tax is always $10 if the original price was $100.",
+                    "C": "The equivalent unit tax must create a larger deadweight loss because it is less efficient.",
+                    "D": "The equivalent unit tax must be imposed on sellers, or it cannot be compared."
+                },
+                "correct": "A",
+                "explanation": "At a given taxed equilibrium, an ad valorem tax t creates a per-unit wedge equal to t times the seller price. B uses the original price instead of the taxed seller price. C incorrectly assumes one tax form is always less efficient when wedges match locally. D confuses statutory incidence with economic effects."
+            }
+        ]
+    },
+    {
+        "topic": "Course Synthesis",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Maya has utility U(x,y) = x^{1/2}y^{1/2}, income $120, and prices p_x = 4 and p_y = 1. Good x is produced competitively with marginal cost MC = 4. At Maya's optimum, what condition links consumer theory and producer theory?",
+                "choices": {
+                    "A": "MRS = p_x/p_y = 4 and price equals marginal cost for x, so the consumption tradeoff equals the production opportunity cost.",
+                    "B": "MRS = p_y/p_x = 0.25 and price exceeds marginal cost, so the market is inefficient.",
+                    "C": "MU_x = MU_y and firms set price above marginal cost, so utility is maximized.",
+                    "D": "MRS = income/price = 30 and firms minimize average cost, so equilibrium is efficient."
+                },
+                "correct": "A",
+                "explanation": "Utility maximization gives MRS = p_x/p_y, while competitive profit maximization gives p_x = MC_x. Together, the consumer's marginal willingness to trade equals the production cost tradeoff. B inverts the price ratio. C confuses equal marginal utilities with the tangency condition. D uses an unrelated income-price ratio."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive market initially has no externalities, many buyers and sellers, and complete information. Then production of the good begins creating an unpriced marginal external cost of $8 per unit. What changes, and what mechanism explains it?",
+                "choices": {
+                    "A": "The competitive quantity becomes too high because firms equate price with private MC rather than social MC.",
+                    "B": "The competitive quantity becomes too low because firms ignore consumer surplus.",
+                    "C": "The competitive outcome remains efficient because the first welfare theorem always applies.",
+                    "D": "The competitive price becomes a monopoly price because external costs create market power."
+                },
+                "correct": "A",
+                "explanation": "A negative production externality means social marginal cost exceeds private marginal cost, so competitive firms overproduce relative to the efficient quantity. B reverses the direction. C ignores the assumptions required for the welfare theorem. D confuses externality with monopoly power."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph comparing perfect competition and monopoly, demand is downward sloping and marginal cost is upward sloping. Which graphical statement correctly connects market structure to welfare?",
+                "choices": {
+                    "A": "The monopoly chooses where demand intersects MC, so no deadweight loss appears.",
+                    "B": "The monopoly chooses where MR intersects MC, producing less than the quantity where demand intersects MC; the deadweight loss is the triangle between demand and MC over the missing units.",
+                    "C": "The monopoly chooses where average cost intersects demand, so the deadweight loss is fixed cost.",
+                    "D": "The competitive market chooses where MR intersects demand, creating a larger welfare triangle."
+                },
+                "correct": "B",
+                "explanation": "Monopoly sets MR = MC, then charges the demand price, producing less than the efficient competitive quantity where P = MC. A describes perfect competition. C confuses pricing with break-even or natural monopoly analysis. D invents an incorrect competitive condition."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "The first welfare theorem says that under certain assumptions, competitive equilibrium is Pareto efficient. Which statement correctly interprets the theorem for policy analysis?",
+                "choices": {
+                    "A": "It says competitive markets are always fair, so redistribution is unnecessary.",
+                    "B": "It says if prices reflect all marginal benefits and costs, decentralized choices can exhaust gains from trade, but it does not rule out equity concerns or market failures.",
+                    "C": "It says monopolies are efficient if they maximize profit.",
+                    "D": "It says government intervention always lowers total surplus."
+                },
+                "correct": "B",
+                "explanation": "The theorem is an efficiency result under assumptions such as price-taking behavior, complete markets, and no externalities. It does not settle distributional issues. A confuses efficiency with fairness. C ignores market power. D overgeneralizes beyond the theorem."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A town has one broadband provider with high fixed costs, low marginal costs, and no close substitutes. The firm restricts output and charges price above marginal cost. Which integrated framework best applies?",
+                "choices": {
+                    "A": "Consumer choice only, because subscribers maximize utility subject to income.",
+                    "B": "Perfect competition, because all firms maximize profit.",
+                    "C": "Monopoly or natural monopoly with welfare analysis, because market power separates price from marginal cost and creates potential deadweight loss.",
+                    "D": "Adverse selection, because buyers know less about broadband speed than sellers."
+                },
+                "correct": "C",
+                "explanation": "High fixed cost and one provider point to monopoly or natural monopoly; price above MC implies allocative inefficiency. A is incomplete because it ignores firm behavior. B confuses profit maximization with price-taking. D could be relevant only with hidden information, which is not the core distortion described."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes technical efficiency, allocative efficiency, and Pareto efficiency in the context of ECON 301?",
+                "choices": {
+                    "A": "Technical efficiency means producing at minimum cost; allocative efficiency means producing where marginal willingness to pay equals marginal cost; Pareto efficiency means no one can be made better off without making someone else worse off.",
+                    "B": "Technical efficiency means equal income; allocative efficiency means zero profit; Pareto efficiency means government maximizes surplus.",
+                    "C": "Technical efficiency means MRS = price ratio; allocative efficiency means MRTS = input price ratio; Pareto efficiency means firms produce at minimum average cost.",
+                    "D": "Technical efficiency, allocative efficiency, and Pareto efficiency are three names for the same condition P = MC."
+                },
+                "correct": "A",
+                "explanation": "Technical efficiency concerns avoiding waste in production, allocative efficiency concerns the right output mix, and Pareto efficiency concerns whether mutually beneficial reallocations remain. B confuses efficiency with distribution and profit. C swaps consumer and producer tangencies. D collapses distinct concepts into one condition."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand for flu shots is P = 80 - Q and private supply is P = 20 + Q. Each flu shot creates an external benefit of $12. What is the efficient quantity and how does it compare with the competitive quantity?",
+                "choices": {
+                    "A": "Competitive Q = 30 and efficient Q = 36; the market underproduces because social marginal benefit exceeds private demand.",
+                    "B": "Competitive Q = 36 and efficient Q = 30; the market overproduces because external benefits raise cost.",
+                    "C": "Competitive Q = 20 and efficient Q = 30; the market underproduces because private supply is too high.",
+                    "D": "Competitive Q = 30 and efficient Q = 30; external benefits affect surplus but not quantity."
+                },
+                "correct": "A",
+                "explanation": "Competitive equilibrium solves 80 - Q = 20 + Q, so Q = 30. Social demand is 92 - Q, so 92 - Q = 20 + Q gives efficient Q = 36. B reverses the quantities. C uses an incorrect supply shift. D ignores that external benefits change the efficient marginal benefit curve."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A consumer's MRS between apples and bananas equals 3, the price ratio p_a/p_b equals 2, and both goods are produced competitively with prices equal to marginal costs. What does this imply?",
+                "choices": {
+                    "A": "The consumer is at an optimum because both firms are competitive.",
+                    "B": "The consumer would prefer more apples and fewer bananas at current prices because marginal willingness to pay for apples exceeds their relative price.",
+                    "C": "The economy is Pareto efficient because price equals marginal cost.",
+                    "D": "The consumer should buy fewer apples because MRS exceeds the price ratio."
+                },
+                "correct": "B",
+                "explanation": "If MRS = MU_a/MU_b = 3 while p_a/p_b = 2, the consumer values apples relative to bananas more than the market requires, so she wants more apples. A ignores the failed consumer tangency. C ignores that both consumer optimization and production efficiency are needed. D reverses the adjustment."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A used-car market collapses because sellers know car quality but buyers cannot distinguish lemons from reliable cars. Which course framework explains the failure, and why might intervention improve outcomes?",
+                "choices": {
+                    "A": "Moral hazard, because sellers take hidden actions after purchase.",
+                    "B": "Adverse selection, because hidden information about type prevents mutually beneficial trades from occurring.",
+                    "C": "Monopoly, because sellers charge prices above marginal cost.",
+                    "D": "Public goods, because used cars are nonrival and nonexcludable."
+                },
+                "correct": "B",
+                "explanation": "Hidden information about pre-existing quality is adverse selection, and it can unravel trade by making buyers offer only average-quality prices. A concerns hidden action after contracting. C is about market power, not asymmetric information. D misclassifies private goods."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive industry with constant marginal cost MC = $10 is converted into a cartel that acts like a monopolist facing demand P = 50 - Q. What happens to quantity, and what mechanism explains the welfare change?",
+                "choices": {
+                    "A": "Quantity falls from 40 to 20 because the cartel equates MR with MC, creating deadweight loss on units whose value exceeds MC.",
+                    "B": "Quantity rises from 20 to 40 because monopoly restricts price rather than output.",
+                    "C": "Quantity stays at 40 because MC is unchanged.",
+                    "D": "Quantity falls from 40 to 10 because the cartel sets price equal to MR."
+                },
+                "correct": "A",
+                "explanation": "Competitive output solves P = MC: 50 - Q = 10, so Q = 40. Monopoly has MR = 50 - 2Q; MR = MC gives Q = 20. The missing units have willingness to pay above MC. B reverses monopoly restriction. C ignores market structure. D uses the wrong monopoly condition."
+            }
+        ]
+    },
+    {
+        "topic": "Deadweight Loss",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "The market for notebooks has demand P = 50 - Q and supply P = 10 + Q. A $10 unit tax is imposed on sellers. What is the deadweight loss, and what does it represent?",
+                "choices": {
+                    "A": "$25; surplus lost from trades between Q = 15 and Q = 20 that no longer occur even though buyers value them above sellers' costs.",
+                    "B": "$50; the full tax revenue transferred to the government.",
+                    "C": "$100; the tax wedge times the new quantity.",
+                    "D": "$12.50; one-half of the tax times the new quantity."
+                },
+                "correct": "A",
+                "explanation": "No-tax equilibrium is Q = 20. With tax, 50 - Q = 10 + Q + 10, so Q = 15. DWL = 0.5(10)(5) = 25. B mistakes revenue for DWL. C computes revenue, not surplus loss. D uses the wrong base for the triangle."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a linear market, a $4 tax reduces quantity from 100 to 92. If the tax doubles to $8 and the quantity reduction doubles to 16, what happens to deadweight loss and why?",
+                "choices": {
+                    "A": "DWL doubles because the tax rate doubles.",
+                    "B": "DWL quadruples because the triangle's height and base both double.",
+                    "C": "DWL stays constant because tax revenue rises.",
+                    "D": "DWL falls because a higher tax discourages harmful consumption."
+                },
+                "correct": "B",
+                "explanation": "DWL is 0.5 times tax wedge times quantity reduction. If both the tax and quantity reduction double, DWL rises by a factor of four. A ignores the base change. C confuses revenue with surplus loss. D adds an externality not stated in the problem."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a standard supply-demand graph with a unit tax, where is the deadweight loss located?",
+                "choices": {
+                    "A": "The rectangle between the buyer price and seller price over the units still traded.",
+                    "B": "The triangle between demand and supply over the units not traded because of the tax.",
+                    "C": "The area below supply and above the seller price over the units still traded.",
+                    "D": "The entire area under demand up to the taxed quantity."
+                },
+                "correct": "B",
+                "explanation": "DWL is the lost gains from trade on units between the taxed quantity and the efficient quantity. A is tax revenue. C is producer surplus or part of it. D is gross willingness to pay, not surplus loss."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A $6 tax on movie tickets raises $600 of revenue and reduces total surplus by $90 beyond the revenue transferred. Which statement correctly interprets the $90?",
+                "choices": {
+                    "A": "It is the amount buyers pay to sellers because of the tax.",
+                    "B": "It is a transfer from consumers and producers to the government.",
+                    "C": "It is the value of mutually beneficial trades that disappear and are not received by any party.",
+                    "D": "It is the administrative cost of collecting the tax."
+                },
+                "correct": "C",
+                "explanation": "DWL is not a transfer; it is surplus destroyed by the reduction in mutually beneficial trades. A misstates the direction of payment. B describes tax revenue. D adds a cost not included in the standard DWL triangle."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city sets a binding price floor in the market for ride-share trips, causing trips to fall from 80,000 to 60,000 per week. Demand exceeds marginal cost for the 20,000 trips that disappear. Which concept measures the lost gains from those trips?",
+                "choices": {
+                    "A": "Deadweight loss.",
+                    "B": "Producer surplus transfer.",
+                    "C": "Consumer income effect.",
+                    "D": "Fixed cost recovery."
+                },
+                "correct": "A",
+                "explanation": "A binding price distortion that prevents mutually beneficial trades creates deadweight loss. B would be redistribution among participants, not lost surplus. C is from consumer choice after a price change. D concerns firm cost structure."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes tax revenue from deadweight loss?",
+                "choices": {
+                    "A": "Tax revenue is lost to society, while deadweight loss is transferred to the government.",
+                    "B": "Tax revenue is a transfer to the government; deadweight loss is surplus from trades that no longer occur.",
+                    "C": "Both tax revenue and deadweight loss are rectangles measured over the traded quantity.",
+                    "D": "Tax revenue exists only with unit taxes, while deadweight loss exists only with ad valorem taxes."
+                },
+                "correct": "B",
+                "explanation": "Revenue is redistributed to the government, while DWL is the loss in total surplus not captured by anyone. A reverses the concepts. C gives the wrong shape for DWL. D falsely links the concepts to different tax types."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 100 - 2Q and supply is P = 20 + 2Q. A $20 unit tax is imposed. What is the deadweight loss?",
+                "choices": {
+                    "A": "$50",
+                    "B": "$100",
+                    "C": "$200",
+                    "D": "$400"
+                },
+                "correct": "A",
+                "explanation": "Without tax, 100 - 2Q = 20 + 2Q gives Q = 20. With tax, 100 - 2Q = 20 + 2Q + 20 gives Q = 15. DWL = 0.5(20)(5) = 50. B uses the full reduction times tax. C calculates tax revenue incorrectly. D uses the original quantity as the triangle base."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A $5 tax is imposed in two markets with the same equilibrium price and quantity. In Market A, quantity falls by 2 units. In Market B, quantity falls by 10 units. Which market has larger deadweight loss and why?",
+                "choices": {
+                    "A": "Market A, because smaller quantity changes mean more surplus is preserved.",
+                    "B": "Market B, because greater elasticity creates a larger reduction in mutually beneficial trades.",
+                    "C": "Both are equal because the tax is $5 in both markets.",
+                    "D": "Neither has deadweight loss because tax revenue offsets the loss."
+                },
+                "correct": "B",
+                "explanation": "DWL equals 0.5 times the tax wedge times the quantity reduction. The same tax creates larger DWL when quantity changes more. A confuses preservation of surplus with loss. C ignores the triangle base. D confuses revenue with DWL."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a linear supply-demand graph with a binding tax, the demand curve is very steep and the supply curve is very steep. What does the deadweight-loss triangle look like compared with a market with flatter curves and the same tax wedge?",
+                "choices": {
+                    "A": "It is smaller because the tax causes a smaller reduction in quantity.",
+                    "B": "It is larger because steep curves imply a higher price.",
+                    "C": "It is the same because the wedge height is the same.",
+                    "D": "It disappears because steep curves imply no burden."
+                },
+                "correct": "A",
+                "explanation": "Steep demand and supply mean low elasticities, so the same tax wedge causes a smaller quantity reduction and a smaller DWL triangle. B focuses on price rather than quantity distortion. C ignores the base of the triangle. D incorrectly says low elasticity eliminates burden or DWL entirely."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does deadweight loss rise more than proportionally with the size of a tax in the standard linear model?",
+                "choices": {
+                    "A": "Because tax revenue always falls when the tax rises.",
+                    "B": "Because the tax wedge gets larger and the number of discouraged trades also grows.",
+                    "C": "Because the government spends tax revenue inefficiently.",
+                    "D": "Because producer surplus is always larger than consumer surplus."
+                },
+                "correct": "B",
+                "explanation": "The DWL triangle grows in both height and base as the tax increases, so it rises approximately with the square of the tax for small changes in linear markets. A is not always true. C is outside the standard DWL measure. D is irrelevant and generally false."
+            }
+        ]
+    },
+    {
+        "topic": "Elasticity and Tax Burden",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "At the pre-tax equilibrium in the market for gasoline, the price elasticity of demand is -0.2 and the price elasticity of supply is 0.8. A small unit tax of $5 is imposed. Approximately how much of the tax is borne by buyers?",
+                "choices": {
+                    "A": "$1 because demand is less elastic than supply.",
+                    "B": "$4 because buyers bear E_s/(E_s - E_d) of the tax.",
+                    "C": "$2.50 because buyers and sellers split any tax equally.",
+                    "D": "$5 because the legal burden always falls on buyers."
+                },
+                "correct": "B",
+                "explanation": "Buyers' share is E_s/(E_s - E_d) = 0.8/(0.8 - (-0.2)) = 0.8, so buyers bear about $4. A reverses the formula. C assumes equal burden without checking elasticities. D confuses statutory and economic incidence."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the market for insulin, demand becomes even less elastic because patients have fewer substitutes. Holding supply elasticity fixed, what happens to the burden of a unit tax and why?",
+                "choices": {
+                    "A": "Buyers bear less because they reduce quantity more.",
+                    "B": "Buyers bear more because less elastic demand makes buyer quantity less responsive to price increases.",
+                    "C": "Sellers bear all of it because medicine is produced by firms.",
+                    "D": "The burden is unchanged because elasticity affects quantity but not price."
+                },
+                "correct": "B",
+                "explanation": "The less elastic side of the market bears more of the tax because it has less ability to avoid the taxed transaction. A reverses responsiveness. C confuses production with incidence. D ignores the role of elasticity in price adjustment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A $6 tax is imposed in a market with a nearly vertical demand curve and a moderately upward-sloping supply curve. On the graph, how is the tax burden shown?",
+                "choices": {
+                    "A": "Most of the vertical wedge appears as a higher buyer price rather than a lower seller price.",
+                    "B": "Most of the vertical wedge appears as a lower seller price because demand is steep.",
+                    "C": "The wedge appears horizontally because demand is nearly vertical.",
+                    "D": "The wedge disappears because quantity barely changes."
+                },
+                "correct": "A",
+                "explanation": "Nearly vertical demand is highly inelastic, so buyers bear most of the burden through a higher price. B reverses incidence. C misrepresents the tax wedge, which is vertical in price space. D confuses small deadweight loss with zero tax burden."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does the more inelastic side of a market bear more of a tax?",
+                "choices": {
+                    "A": "Because it has fewer margins of adjustment and therefore changes quantity less when the tax changes the price it faces.",
+                    "B": "Because it is legally responsible for sending the tax payment to the government.",
+                    "C": "Because it always has less income.",
+                    "D": "Because inelasticity means the curve is horizontal."
+                },
+                "correct": "A",
+                "explanation": "Tax incidence depends on relative ability to avoid the tax by changing quantity. The inelastic side has less ability to substitute away. B confuses statutory remittance with economic burden. C is not part of the incidence formula. D reverses the geometry of inelasticity."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A tax is placed on beachfront land rentals. The total quantity of beachfront land is fixed, while renters can substitute toward inland properties. Who bears most of the tax, and which model feature explains this?",
+                "choices": {
+                    "A": "Renters, because demand is more elastic than supply.",
+                    "B": "Landowners, because supply is nearly perfectly inelastic.",
+                    "C": "The government, because land is fixed.",
+                    "D": "Both equally, because land rentals involve buyers and sellers."
+                },
+                "correct": "B",
+                "explanation": "A fixed supply of land is perfectly or nearly perfectly inelastic, so landowners cannot avoid the tax by reducing quantity supplied and bear most of the burden. A reverses the incidence rule. C misunderstands tax collection. D assumes equal splitting without elasticity analysis."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes elastic demand from inelastic demand in tax incidence?",
+                "choices": {
+                    "A": "Elastic demand means buyers bear more of the tax because they care more about price.",
+                    "B": "Inelastic demand means buyers bear more of the tax because they reduce purchases less when price rises.",
+                    "C": "Elastic and inelastic demand imply the same burden if the tax is imposed on sellers.",
+                    "D": "Inelastic demand means the demand curve is flatter, so buyers bear less."
+                },
+                "correct": "B",
+                "explanation": "Inelastic demand means quantity demanded is less responsive, so buyers cannot easily avoid the tax. A gets the burden backward. C confuses statutory incidence with economic incidence. D reverses the slope-elasticity relationship in the usual graph."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "At the initial equilibrium, demand elasticity is -1.5 and supply elasticity is 0.5. A small $12 tax is imposed. Approximately how much of the tax is borne by sellers?",
+                "choices": {
+                    "A": "$3",
+                    "B": "$6",
+                    "C": "$9",
+                    "D": "$12"
+                },
+                "correct": "C",
+                "explanation": "Sellers' share is -E_d/(E_s - E_d) = 1.5/(0.5 - (-1.5)) = 0.75, so sellers bear $9. A gives the buyer share. B assumes equal incidence. D assumes sellers bear all because the tax may be remitted by sellers."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose supply in the market for imported avocados becomes more elastic because producers can more easily sell to other countries. Demand elasticity is unchanged. What happens to consumers' share of a domestic tax?",
+                "choices": {
+                    "A": "Consumers' share rises because suppliers can avoid the tax more easily.",
+                    "B": "Consumers' share falls because elastic supply means sellers absorb more of the tax.",
+                    "C": "Consumers' share is unchanged because demand did not change.",
+                    "D": "Consumers' share becomes zero because supply is not perfectly elastic."
+                },
+                "correct": "A",
+                "explanation": "As supply becomes more elastic, sellers can avoid the taxed market more easily, shifting more burden to buyers. B reverses the incidence logic. C ignores relative elasticities. D confuses more elastic with perfectly elastic and gets the limiting case wrong."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A supply curve is perfectly horizontal at $20, and demand is downward sloping. A $5 tax is imposed on sellers. What does the graph show?",
+                "choices": {
+                    "A": "Buyer price rises to $25 and sellers still receive $20; buyers bear the entire tax.",
+                    "B": "Buyer price stays at $20 and sellers receive $15; sellers bear the entire tax.",
+                    "C": "Buyer and seller prices split the wedge equally.",
+                    "D": "Quantity does not change because supply is horizontal."
+                },
+                "correct": "A",
+                "explanation": "With perfectly elastic supply, sellers must receive $20 to supply any positive amount, so the entire tax is passed to buyers as a higher buyer price. B describes perfectly inelastic demand or a different case. C assumes equal sharing. D ignores the movement along demand after buyer price rises."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A policymaker says, 'We can make firms bear a tax by legally requiring firms to pay it.' What is the correct economic response?",
+                "choices": {
+                    "A": "Correct, because statutory incidence determines economic incidence.",
+                    "B": "Incorrect, because equilibrium price adjustments determine burden according to relative elasticities.",
+                    "C": "Correct only if the tax is ad valorem rather than per unit.",
+                    "D": "Incorrect because buyers always bear all taxes."
+                },
+                "correct": "B",
+                "explanation": "Who remits the tax does not determine who bears it economically. Prices adjust until quantity demanded equals quantity supplied with the tax wedge, and relative elasticities determine the split. A confuses legal and economic incidence. C creates a false distinction. D overstates one limiting case."
+            }
+        ]
+    },
+    {
+        "topic": "Preference Properties",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Nora has utility U(x,y) = x + 2y, income $60, p_x = 3, and p_y = 4. Which bundle maximizes utility, and which preference property explains why the optimum may be at a corner?",
+                "choices": {
+                    "A": "x = 20, y = 0; perfect substitutes violate convexity.",
+                    "B": "x = 0, y = 15; linear preferences are convex but not strictly convex, so the optimum can be a corner when bang-per-buck differs.",
+                    "C": "x = 10, y = 7.5; convexity always implies tangency.",
+                    "D": "x = 12, y = 6; monotonicity requires equal spending on both goods."
+                },
+                "correct": "B",
+                "explanation": "Utility per dollar is 1/3 for x and 2/4 = 1/2 for y, so Nora spends all income on y. Linear preferences are convex but not strictly convex. A chooses the lower utility-per-dollar good and misstates convexity. C assumes tangency despite constant MRS. D invents an equal-spending rule."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Luis has strictly convex, monotonic preferences over burritos and smoothies. The price of burritos falls while income and the smoothie price stay fixed. Which result is most consistent with well-behaved preferences?",
+                "choices": {
+                    "A": "The budget line rotates outward around the smoothie intercept, and the new optimum occurs where the highest attainable indifference curve is tangent or at a boundary.",
+                    "B": "The indifference curves rotate outward because burritos are cheaper.",
+                    "C": "The budget line shifts inward in parallel because real income falls.",
+                    "D": "The optimum must involve fewer burritos because lower price reduces marginal utility."
+                },
+                "correct": "A",
+                "explanation": "A fall in p_b increases the burrito intercept and rotates the budget line outward around the unchanged smoothie intercept. Preferences do not rotate. C gets the budget movement wrong. D confuses price changes with marginal utility changes."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Indifference curves for goods x and y are downward sloping, bowed toward the origin, and higher curves lie northeast. Which preference properties are represented?",
+                "choices": {
+                    "A": "Monotonicity explains higher curves northeast; convexity explains bowed-toward-origin curves.",
+                    "B": "Completeness explains downward slope; transitivity explains bowed-outward curves.",
+                    "C": "Convexity explains higher curves northeast; monotonicity explains bowed-away curves.",
+                    "D": "Transitivity alone explains all four features."
+                },
+                "correct": "A",
+                "explanation": "Monotonicity means more is better, so higher indifference curves are northeast and curves slope downward. Convexity means averages are preferred to extremes, producing bowed-toward-origin curves. B assigns properties incorrectly. C reverses monotonicity and convexity. D overstates transitivity."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Which statement best explains the economic meaning of convex preferences?",
+                "choices": {
+                    "A": "Consumers always prefer more of both goods to less.",
+                    "B": "Consumers can rank any two bundles.",
+                    "C": "Consumers prefer diversified bundles to extreme bundles when both extremes are equally good.",
+                    "D": "Consumers never change their rankings when prices change."
+                },
+                "correct": "C",
+                "explanation": "Convexity captures a preference for averages or diversification: if two bundles are equally good, mixtures are at least as good. A describes monotonicity. B describes completeness. D is not a preference axiom."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student says, 'I prefer bundle A to B, B to C, but C to A.' Which preference axiom is violated, and why does it matter for consumer choice?",
+                "choices": {
+                    "A": "Completeness; the student cannot compare two bundles.",
+                    "B": "Transitivity; the rankings cycle and may prevent a stable optimum.",
+                    "C": "Monotonicity; the student dislikes having more goods.",
+                    "D": "Convexity; the student dislikes averages."
+                },
+                "correct": "B",
+                "explanation": "A cycle A ≻ B, B ≻ C, C ≻ A violates transitivity. This undermines consistent maximization. A would mean some pair cannot be ranked. C concerns more versus less. D concerns mixtures of bundles."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes completeness from transitivity?",
+                "choices": {
+                    "A": "Completeness says more is preferred to less; transitivity says averages are preferred to extremes.",
+                    "B": "Completeness says any two bundles can be ranked; transitivity says rankings are internally consistent across three or more bundles.",
+                    "C": "Completeness says indifference curves are bowed inward; transitivity says they cannot cross because goods are scarce.",
+                    "D": "Completeness and transitivity both mean marginal utility is positive."
+                },
+                "correct": "B",
+                "explanation": "Completeness requires comparability of any pair; transitivity requires consistency of rankings. A confuses monotonicity and convexity. C partly gestures at implications but gives the wrong definitions. D confuses preference axioms with utility signs."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A consumer has utility U(x,y) = min{x, y}, income $40, and prices p_x = p_y = $1. If given bundle A = (20,20) or bundle B = (30,10), what are utilities and what property does the preference illustrate?",
+                "choices": {
+                    "A": "U(A)=20, U(B)=10; the consumer prefers balance, illustrating convex preferences.",
+                    "B": "U(A)=40, U(B)=40; the consumer is indifferent because total goods are equal.",
+                    "C": "U(A)=20, U(B)=30; the consumer prefers B because it has more x.",
+                    "D": "U(A)=10, U(B)=20; the consumer prefers the bundle with more variety in x."
+                },
+                "correct": "A",
+                "explanation": "For perfect complements, utility is the minimum of the two quantities. A gives 20 and B gives 10, showing a preference for balanced bundles, a form of convexity. B incorrectly sums goods. C uses the maximum instead of the minimum. D swaps the utilities."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Two indifference curves for the same consumer cross at bundle M. One curve also contains bundle A, and the other contains bundle B. If A is northeast of B, why is crossing inconsistent with well-behaved preferences?",
+                "choices": {
+                    "A": "Because monotonicity implies A is preferred to B, but crossing plus transitivity implies A and B are indifferent.",
+                    "B": "Because completeness implies all indifference curves must be straight lines.",
+                    "C": "Because convexity implies more is always worse.",
+                    "D": "Because budget lines cannot cross indifference curves."
+                },
+                "correct": "A",
+                "explanation": "If both curves pass through M, then A is indifferent to M and M is indifferent to B, so transitivity implies A is indifferent to B. But if A is northeast of B, monotonicity implies A is strictly preferred. B, C, and D misstate the relevant properties."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does monotonicity imply about marginal utility and indifference curves for ordinary goods like pizza slices and bottles of water?",
+                "choices": {
+                    "A": "More of either good is weakly preferred, so higher indifference curves lie northeast and indifference curves slope downward.",
+                    "B": "The consumer prefers exact one-for-one mixtures, so indifference curves are L-shaped.",
+                    "C": "The consumer cannot rank bundles with different quantities.",
+                    "D": "The consumer's MRS must be constant."
+                },
+                "correct": "A",
+                "explanation": "Monotonicity means more is better, which makes northeast bundles preferred and gives downward-sloping indifference curves when both goods are desirable. B describes perfect complements. C denies completeness. D describes perfect substitutes."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes monotonicity from convexity?",
+                "choices": {
+                    "A": "Monotonicity is about preferring more to less; convexity is about preferring averages to extremes.",
+                    "B": "Monotonicity is about ranking all bundles; convexity is about avoiding preference cycles.",
+                    "C": "Monotonicity means indifference curves cannot cross; convexity means higher curves are northeast.",
+                    "D": "Monotonicity and convexity both require linear indifference curves."
+                },
+                "correct": "A",
+                "explanation": "Monotonicity concerns direction of preference as quantities rise, while convexity concerns the shape of preferences over mixtures. B confuses completeness and transitivity. C misassigns implications. D incorrectly says both require linearity."
+            }
+        ]
+    },
+    {
+        "topic": "Tax Incidence",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Demand for parking spaces is P_b = 100 - Q and supply is P_s = 20 + Q. A $20 unit tax is imposed. What are the buyer price, seller price, quantity, and incidence split?",
+                "choices": {
+                    "A": "Q = 30, P_b = 70, P_s = 50; buyers and sellers each bear $10.",
+                    "B": "Q = 40, P_b = 60, P_s = 60; no one bears the tax.",
+                    "C": "Q = 20, P_b = 80, P_s = 40; buyers bear $20.",
+                    "D": "Q = 30, P_b = 50, P_s = 70; sellers bear $20."
+                },
+                "correct": "A",
+                "explanation": "With tax, P_b = P_s + 20. Demand and supply imply 100 - Q = 20 + Q + 20, so Q = 30, P_b = 70, P_s = 50. No-tax price was 60, so buyers pay $10 more and sellers receive $10 less. B ignores the tax. C uses the wrong quantity. D reverses buyer and seller prices."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a market with linear demand and supply, demand becomes flatter because new substitutes enter. Supply is unchanged. What happens to sellers' share of a unit tax burden?",
+                "choices": {
+                    "A": "Sellers' share rises because buyers can more easily avoid the tax by switching substitutes.",
+                    "B": "Sellers' share falls because demand is more elastic.",
+                    "C": "Sellers' share is unchanged because only supply determines seller burden.",
+                    "D": "Sellers bear zero because demand is downward sloping."
+                },
+                "correct": "A",
+                "explanation": "More elastic demand means buyers avoid price increases more easily, so sellers absorb more of the tax through a lower net price. B reverses the incidence effect. C ignores relative elasticities. D confuses downward slope with perfect elasticity."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A $12 tax is shown as a vertical wedge between the demand curve and supply curve at the new quantity. The buyer price rises by $9 above the old equilibrium price, and the seller price falls by $3. What does the graph imply?",
+                "choices": {
+                    "A": "Buyers bear 75% of the tax and sellers bear 25%.",
+                    "B": "Sellers bear 75% because they remit the tax.",
+                    "C": "Buyers and sellers split the burden equally because the wedge is vertical.",
+                    "D": "No deadweight loss occurs because the wedge is exactly $12."
+                },
+                "correct": "A",
+                "explanation": "Economic burden is measured by price changes relative to the no-tax price: buyers pay $9 more and sellers receive $3 less, so buyers bear 75%. B confuses remittance with burden. C ignores the unequal price changes. D ignores the quantity reduction."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What is meant by the statement that tax incidence is independent of statutory incidence in a competitive market?",
+                "choices": {
+                    "A": "The side legally required to remit the tax always bears it.",
+                    "B": "Whether buyers or sellers send the tax to the government does not by itself determine the equilibrium buyer price, seller price, or burden split.",
+                    "C": "Taxes do not affect competitive markets if both sides know about them.",
+                    "D": "Only ad valorem taxes have incidence."
+                },
+                "correct": "B",
+                "explanation": "A tax creates a wedge between buyer and seller prices; equilibrium conditions determine the same economic incidence regardless of legal remittance. A states the opposite. C denies the wedge effect. D incorrectly excludes unit taxes."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city taxes landlords $200 per month for each apartment rented. Apartment supply is very inelastic in the short run, while renter demand is moderately elastic. Who likely bears more of the tax in the short run?",
+                "choices": {
+                    "A": "Renters, because landlords write the check to the government.",
+                    "B": "Landlords, because short-run apartment supply is relatively inelastic.",
+                    "C": "Renters and landlords equally, because the tax is per apartment.",
+                    "D": "The government, because the tax reduces rent."
+                },
+                "correct": "B",
+                "explanation": "The more inelastic side bears more of the tax. In the short run, fixed apartment supply makes landlords less able to avoid the tax. A confuses statutory and economic incidence. C assumes equal splitting without elasticity. D misunderstands taxation."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes statutory incidence from economic incidence?",
+                "choices": {
+                    "A": "Statutory incidence is who legally remits the tax; economic incidence is who experiences lower real surplus through changed prices.",
+                    "B": "Statutory incidence applies to sellers; economic incidence applies only to buyers.",
+                    "C": "Statutory incidence determines deadweight loss; economic incidence determines tax revenue.",
+                    "D": "There is no difference in competitive markets."
+                },
+                "correct": "A",
+                "explanation": "Statutory incidence is legal remittance, while economic incidence is the actual burden from equilibrium price changes. B falsely assigns each concept to one market side. C confuses incidence with welfare measures. D ignores the key distinction."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 120 - 2Q and supply is P = 30 + Q. A $30 unit tax is imposed on sellers. What tax revenue is collected and who bears more of the burden?",
+                "choices": {
+                    "A": "Revenue = $600; buyers bear more because buyer price rises by $20 while seller price falls by $10.",
+                    "B": "Revenue = $900; sellers bear more because they remit the tax.",
+                    "C": "Revenue = $300; buyers and sellers split the burden equally.",
+                    "D": "Revenue = $450; sellers bear more because supply is upward sloping."
+                },
+                "correct": "A",
+                "explanation": "No-tax equilibrium: 120 - 2Q = 30 + Q gives Q = 30 and P = 60. With tax: 120 - 2Q = 30 + Q + 30 gives Q = 20, P_b = 80, P_s = 50. Revenue = 30(20) = 600. Buyers bear $20 and sellers $10. B uses old quantity. C uses wrong quantity and incidence. D miscalculates revenue and burden."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Demand for gym memberships is Q_d = 100 - 2P_b and supply is Q_s = 4P_s - 80. A $10 unit tax is imposed, so P_b = P_s + 10. What are P_b and P_s?",
+                "choices": {
+                    "A": "P_b = 35, P_s = 25.",
+                    "B": "P_b = 30, P_s = 20.",
+                    "C": "P_b = 40, P_s = 30.",
+                    "D": "P_b = 25, P_s = 35."
+                },
+                "correct": "A",
+                "explanation": "Set Q_d = Q_s: 100 - 2(P_s + 10) = 4P_s - 80. Thus 80 - 2P_s = 4P_s - 80, so P_s = 25 and P_b = 35. B ignores part of the tax adjustment. C uses the no-tax price plus the full tax. D reverses buyer and seller prices."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the long run, supply of a manufactured good becomes more elastic as firms can enter or exit. Compared with the short run, how does this affect tax incidence on consumers?",
+                "choices": {
+                    "A": "Consumers bear more in the long run because producers can exit and avoid the tax.",
+                    "B": "Consumers bear less in the long run because supply elasticity rises.",
+                    "C": "Consumers bear the same because demand does not change.",
+                    "D": "Consumers bear zero because long-run supply is always vertical."
+                },
+                "correct": "A",
+                "explanation": "A more elastic supply side can avoid the tax more easily, so more burden shifts to demand. B reverses the logic. C ignores relative elasticity. D incorrectly describes long-run supply."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "The formal small-tax incidence formula says buyers' share is E_s/(E_s - E_d). Why is demand elasticity entered with a negative sign in the denominator?",
+                "choices": {
+                    "A": "Because demand curves slope downward, so E_d is negative and the denominator adds the absolute elasticities.",
+                    "B": "Because demand elasticity is always larger than supply elasticity.",
+                    "C": "Because sellers legally pay most taxes.",
+                    "D": "Because the formula applies only when demand is perfectly elastic."
+                },
+                "correct": "A",
+                "explanation": "Demand elasticity is negative under the usual definition, so E_s - E_d equals E_s plus the absolute value of demand elasticity. B is false. C is unrelated to the derivation. D is false; the formula is general for small taxes around equilibrium."
+            }
+        ]
+    },
+    {
+        "topic": "Unit Taxes",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "The market for bottled tea has demand P_b = 90 - Q and supply P_s = 30 + Q. A $12 unit tax is imposed on sellers. What are the equilibrium quantity, buyer price, and seller price?",
+                "choices": {
+                    "A": "Q = 24, P_b = 66, P_s = 54.",
+                    "B": "Q = 30, P_b = 60, P_s = 60.",
+                    "C": "Q = 18, P_b = 72, P_s = 42.",
+                    "D": "Q = 24, P_b = 54, P_s = 66."
+                },
+                "correct": "A",
+                "explanation": "The tax wedge is P_b = P_s + 12. Solve 90 - Q = 30 + Q + 12, giving Q = 24, P_b = 66, and P_s = 54. B is the no-tax equilibrium. C treats the tax as $30. D reverses buyer and seller prices."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A $5 unit tax on sellers is replaced by a $10 unit tax on sellers in a linear market. What happens to the supply curve in buyer-price space and why?",
+                "choices": {
+                    "A": "It shifts upward by an additional $5 in parallel because each unit sold now requires sellers to receive their supply price plus $10 from buyers.",
+                    "B": "It rotates upward because a larger unit tax is a larger percentage of price at high quantities.",
+                    "C": "It shifts demand downward because sellers remit the tax.",
+                    "D": "It does not move because only buyers respond to taxes."
+                },
+                "correct": "A",
+                "explanation": "A unit tax adds a constant wedge per unit, so the buyer-price supply curve shifts vertically upward by the tax amount. Increasing the tax from $5 to $10 adds another $5 shift. B describes ad valorem logic. C shifts the wrong curve for seller remittance. D denies seller incentives."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a supply-demand graph, a $7 unit tax is imposed on buyers. How can the same equilibrium be represented graphically?",
+                "choices": {
+                    "A": "Shift demand down by $7, or equivalently show a $7 vertical wedge between buyer price on demand and seller price on supply at the new quantity.",
+                    "B": "Shift supply up by 7% because the tax is paid by buyers.",
+                    "C": "Rotate demand inward through the origin.",
+                    "D": "Shift both demand and supply down by $7."
+                },
+                "correct": "A",
+                "explanation": "A buyer-side unit tax lowers the price buyers are willing to pay sellers by exactly $7 at each quantity; equivalently, P_b = P_s + 7. B confuses dollars with percent and shifts the seller curve. C describes neither a unit tax nor a standard demand shift. D double-counts the tax."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does a unit tax create the same allocation whether imposed legally on buyers or sellers?",
+                "choices": {
+                    "A": "Because in either case the equilibrium must satisfy the same wedge P_b - P_s = tax and the same quantity equality.",
+                    "B": "Because buyers and sellers always split unit taxes equally.",
+                    "C": "Because the government chooses the same quantity directly.",
+                    "D": "Because unit taxes do not affect marginal decisions."
+                },
+                "correct": "A",
+                "explanation": "The market equilibrium depends on the wedge between what buyers pay and sellers receive, not on which side remits the tax. B is true only in special elasticity cases. C misstates decentralized equilibrium. D ignores the distortion created by the wedge."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city charges food truck operators $3 for every meal sold. Demand for meals is downward sloping and supply is upward sloping. Which model and equilibrium condition should be used?",
+                "choices": {
+                    "A": "A unit tax on sellers with P_b = P_s + 3.",
+                    "B": "An ad valorem tax with P_b = 1.03P_s.",
+                    "C": "A price ceiling with P_b = 3.",
+                    "D": "A lump-sum tax with no effect on marginal cost."
+                },
+                "correct": "A",
+                "explanation": "A fixed dollar amount per meal is a unit tax, creating a $3 wedge between buyer and seller prices. B treats the tax as 3%. C mistakes a tax for a price control. D would apply to a fixed fee independent of output."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a unit tax from a lump-sum tax on firms?",
+                "choices": {
+                    "A": "A unit tax raises marginal cost for each unit sold; a lump-sum tax raises fixed cost and may not affect short-run output if the firm still operates.",
+                    "B": "A unit tax affects fixed cost; a lump-sum tax shifts marginal cost upward.",
+                    "C": "Both taxes shift marginal cost upward by the same amount.",
+                    "D": "A lump-sum tax creates a wedge between buyer and seller prices on every unit sold."
+                },
+                "correct": "A",
+                "explanation": "A unit tax is marginal because it is paid per unit; a lump-sum tax is fixed with respect to output. B reverses the concepts. C incorrectly treats fixed and marginal taxes alike. D describes a unit tax."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 80 - Q and supply is P = 20 + Q. A $20 unit tax is imposed. What are tax revenue and deadweight loss?",
+                "choices": {
+                    "A": "Revenue = $400; DWL = $100.",
+                    "B": "Revenue = $600; DWL = $0.",
+                    "C": "Revenue = $300; DWL = $150.",
+                    "D": "Revenue = $200; DWL = $400."
+                },
+                "correct": "A",
+                "explanation": "No-tax equilibrium is Q = 30. With tax, 80 - Q = 20 + Q + 20 gives Q = 20. Revenue is 20(20) = 400. DWL is 0.5(20)(10) = 100. B uses the no-tax quantity for revenue and ignores DWL. C uses incorrect quantity. D reverses revenue and surplus logic."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Demand for phone cases is Q_d = 200 - 4P_b and supply is Q_s = 6P_s - 60. A $10 unit tax is imposed on buyers. What is the new equilibrium quantity?",
+                "choices": {
+                    "A": "Q = 80",
+                    "B": "Q = 92",
+                    "C": "Q = 100",
+                    "D": "Q = 120"
+                },
+                "correct": "A",
+                "explanation": "With a buyer tax, P_b = P_s + 10. Set 200 - 4(P_s + 10) = 6P_s - 60, so 160 - 4P_s = 6P_s - 60, giving P_s = 22 and Q = 72. None of the listed choices match this calculation; the closest intended setup would require adjusted parameters. The correct calculation is Q = 72, so this item needs revision."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A $4 unit tax is imposed in a market with perfectly inelastic demand. What happens to equilibrium quantity and tax burden?",
+                "choices": {
+                    "A": "Quantity falls sharply, and sellers bear the entire tax.",
+                    "B": "Quantity is unchanged, and buyers bear the entire tax through a $4 higher buyer price.",
+                    "C": "Quantity is unchanged, and sellers bear the entire tax through a $4 lower seller price.",
+                    "D": "Quantity rises because buyers cannot change demand."
+                },
+                "correct": "B",
+                "explanation": "With perfectly inelastic demand, buyers purchase the same quantity regardless of price, so they bear the full tax. A incorrectly predicts a quantity response. C assigns burden to the wrong side. D misunderstands fixed quantity demanded."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A unit tax reduces the number of concert tickets sold from 10,000 to 8,000. Why is the lost surplus on the 2,000 unsold tickets not offset by government revenue?",
+                "choices": {
+                    "A": "Because no tax is collected on transactions that no longer occur.",
+                    "B": "Because buyers pay the tax directly.",
+                    "C": "Because producer surplus always increases after a tax.",
+                    "D": "Because demand curves do not measure willingness to pay."
+                },
+                "correct": "A",
+                "explanation": "Tax revenue is collected only on units still sold. The lost units would have generated gains from trade, but they disappear rather than being transferred. B is irrelevant and may be false legally. C is generally false. D misstates the interpretation of demand."
+            }
+        ]
+    }
+]

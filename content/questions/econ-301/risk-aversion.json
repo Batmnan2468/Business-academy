@@ -1,0 +1,135 @@
+{
+  "topic": "Risk Aversion",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ava has u(w)=sqrt(w). She can choose a sure $81 or a lottery paying $144 with probability 0.5 and $36 with probability 0.5. Which does she choose, and what does this reveal about risk aversion?",
+      "choices": {
+        "A": "The lottery, because its expected value is $90, greater than $81.",
+        "B": "The sure $81, because u(81)=9 while EU(lottery)=0.5(12)+0.5(6)=9, so she strictly prefers certainty.",
+        "C": "She is indifferent because u(81)=9 and EU(lottery)=9; concavity means she would prefer certainty only against a lottery with the same expected value as $81.",
+        "D": "The lottery, because concavity makes high outcomes more valuable."
+      },
+      "correct": "C",
+      "explanation": "The sure option and lottery both give expected utility 9, so she is indifferent. The lottery's expected value is 90, so this still reflects risk aversion: she accepts a lower certain amount than the lottery's expected value. A compares expected dollars. B says strictly prefers when utilities are equal. D reverses the implication of concavity."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ben has u(w)=ln(w) and initial wealth $100. He can take a gamble that adds $50 with probability 0.5 or subtracts $40 with probability 0.5. Should he take it?",
+      "choices": {
+        "A": "Yes, because expected final wealth is $105.",
+        "B": "No, because EU(gamble)=0.5ln(150)+0.5ln(60), which is less than ln(100).",
+        "C": "Yes, because the gain $50 is larger than the loss $40.",
+        "D": "No, because all risk-averse consumers reject every risky gamble."
+      },
+      "correct": "B",
+      "explanation": "Compare ln(100) with 0.5ln(150)+0.5ln(60)=ln(sqrt(9000))=ln(94.87), so he rejects the gamble. A uses expected wealth. C ignores diminishing marginal utility and probabilities. D is too strong; risk-averse consumers may accept favorable gambles."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Cara's utility changes from u(w)=w to u(w)=sqrt(w), while she compares the same lottery paying $100 or $0 with equal probability against a sure $50. What changes, and why?",
+      "choices": {
+        "A": "She moves from indifference to preferring the sure $50 because concavity makes utility gained from the high outcome smaller than utility lost from the low outcome.",
+        "B": "She moves from preferring the lottery to preferring the sure $50 because expected value falls.",
+        "C": "She moves from preferring the sure $50 to preferring the lottery because marginal utility rises with wealth.",
+        "D": "Nothing changes because both utility functions are increasing."
+      },
+      "correct": "A",
+      "explanation": "With u(w)=w, EU=50 equals the sure payoff. With sqrt(w), EU=5 while u(50)=sqrt(50)>5, so she prefers certainty. B incorrectly says expected value changes. C reverses diminishing marginal utility. D ignores curvature."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Diego has u(w)=w^a for 0<a<1 and faces a mean-preserving spread around $100: either $100 for sure or $100+x with probability 0.5 and $100-x with probability 0.5. As x increases from 10 to 40, what happens to the appeal of the risky option?",
+      "choices": {
+        "A": "It increases because the upside becomes larger.",
+        "B": "It is unchanged because expected wealth remains $100.",
+        "C": "It decreases because the mean-preserving spread increases risk, and concavity penalizes dispersion around the same mean.",
+        "D": "It increases only if a<0.5 because lower a means less risk aversion."
+      },
+      "correct": "C",
+      "explanation": "A larger mean-preserving spread lowers expected utility for a concave utility function. A considers only the upside. B ignores risk aversion. D reverses the relation: lower a in w^a indicates more curvature and more risk aversion."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph of u(w)=sqrt(w), a lottery pays $36 and $100 with equal probability. How does the utility at expected wealth compare with expected utility on the chord?",
+      "choices": {
+        "A": "u(68) lies above 0.5u(36)+0.5u(100), showing risk aversion.",
+        "B": "u(68) lies below 0.5u(36)+0.5u(100), showing risk loving.",
+        "C": "u(68) equals 0.5u(36)+0.5u(100), showing risk neutrality.",
+        "D": "The comparison depends only on whether $68 is closer to $36 or $100."
+      },
+      "correct": "A",
+      "explanation": "Concavity implies u(E[w])>E[u(w)] for risky prospects. B reverses the concavity result. C would require linear utility. D ignores curvature and probability weighting."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Two utility functions are graphed against wealth. u_A(w)=sqrt(w) is more curved than u_B(w)=w. For the same fair gamble around $100, what does the graph imply?",
+      "choices": {
+        "A": "Person A has a smaller vertical gap between u(E[w]) and E[u(w)] because sqrt(w) is increasing.",
+        "B": "Person B has a positive risk premium because linear utility has constant marginal utility.",
+        "C": "Person A has a larger vertical gap between utility of expected wealth and expected utility, indicating stronger risk aversion.",
+        "D": "Both people have identical risk attitudes because both prefer more wealth to less."
+      },
+      "correct": "C",
+      "explanation": "More concavity creates a larger Jensen gap for the same risk, indicating more risk aversion. A confuses increasingness with curvature. B is false; linear utility implies risk neutrality and zero risk premium. D ignores curvature."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does diminishing marginal utility of wealth explain about risk aversion?",
+      "choices": {
+        "A": "A dollar lost in a low-wealth state hurts more than a dollar gained in a high-wealth state helps, so fair risk lowers expected utility.",
+        "B": "People dislike risk because they always underestimate probabilities of good outcomes.",
+        "C": "Risk aversion means people care only about expected wealth.",
+        "D": "Diminishing marginal utility means people prefer lower wealth to higher wealth."
+      },
+      "correct": "A",
+      "explanation": "Concavity makes losses at low wealth utility-costly relative to gains at high wealth, explaining rejection of fair gambles. B is behavioral probability distortion, not expected utility risk aversion. C describes risk neutrality. D confuses diminishing marginal utility with negative marginal utility."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two graduates both face a job offer: Startup pays $140,000 with probability 0.5 and $60,000 with probability 0.5; Corporate pays $95,000 for sure. Taylor chooses Corporate, while Jordan chooses Startup. Which model distinction best explains this?",
+      "choices": {
+        "A": "Taylor has stronger risk aversion or more concave utility over wealth than Jordan.",
+        "B": "Taylor must have lower expected utility from all jobs than Jordan.",
+        "C": "Jordan must believe the startup has zero risk.",
+        "D": "Taylor is maximizing expected salary, while Jordan is maximizing marginal product."
+      },
+      "correct": "A",
+      "explanation": "Different curvature of utility can lead people to make different choices over the same risky prospect. B compares utility levels across people without basis. C is unnecessary; Jordan may accept risk because of lower risk aversion. D mixes labor demand concepts into a risky choice problem."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes risk aversion from risk neutrality?",
+      "choices": {
+        "A": "Risk aversion means rejecting every gamble; risk neutrality means accepting every gamble.",
+        "B": "Risk aversion means having concave utility and preferring the expected value for sure to a fair gamble; risk neutrality means linear utility and indifference to fair gambles.",
+        "C": "Risk aversion means low income; risk neutrality means high income.",
+        "D": "Risk aversion means probabilities are ignored; risk neutrality means probabilities are weighted."
+      },
+      "correct": "B",
+      "explanation": "Risk aversion is represented by concave utility; risk neutrality by linear utility. A is too extreme because risk-averse people may accept favorable gambles. C confuses wealth level with preference curvature. D is false because both use probabilities in expected utility."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Elena has u(w)=sqrt(w). Compare $64 for sure with a fair lottery paying $100 or $28 with equal probability. What is the expected-utility welfare effect of replacing the sure $64 with the lottery?",
+      "choices": {
+        "A": "Expected utility falls by 0.5 because u(64)=8 and EU(lottery)=0.5(10)+0.5sqrt(28)≈7.65.",
+        "B": "Expected utility rises by 0 because the lottery is fair with expected value $64.",
+        "C": "Expected utility rises by 36 because the high payoff is $36 above $64.",
+        "D": "Expected utility falls by 8 because the low payoff has utility below the sure payoff."
+      },
+      "correct": "A",
+      "explanation": "EU of the lottery is about 5+2.65=7.65, below 8, so the welfare loss is about 0.35 utility units, not 0.5 exactly. A has the correct direction and method but approximate arithmetic is loose. B confuses expected value with expected utility. C measures only the upside in dollars. D uses only the low state and ignores probability and high-state utility."
+    }
+  ]
+}

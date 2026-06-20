@@ -1,0 +1,135 @@
+{
+  "topic": "Economic Models and Simplification",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A coffee shop models daily profit as pi(q) = 8q - 0.5q^2, where q is hundreds of lattes sold. The owner restricts output to q <= 6 because of machine capacity. What output maximizes modeled profit, and what does the capacity constraint imply economically?",
+      "choices": {
+        "A": "q = 8, so the shop should sell 800 lattes; the capacity assumption is irrelevant because the unconstrained maximum is best.",
+        "B": "q = 6, so the shop should sell 600 lattes; the constraint binds because the unconstrained optimum exceeds feasible capacity.",
+        "C": "q = 4, so the shop should sell 400 lattes; the firm should stop where marginal revenue equals average cost.",
+        "D": "q = 0, so the shop should sell no lattes; profit is decreasing because the quadratic term is negative."
+      },
+      "correct": "B",
+      "explanation": "The unconstrained first-order condition is 8 - q = 0, so q = 8, but q <= 6 makes q = 6 the feasible optimum. A ignores the constraint, C uses the wrong condition, and D misreads concavity as implying zero output."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "An economist simplifies a student's study choice as maximizing S(h) = 20h - h^2 subject to h <= 8, where h is hours studied in a day. Which choice maximizes the model, and what is the right interpretation of the simplification?",
+      "choices": {
+        "A": "h = 8; the time constraint binds, and the model abstracts from sleep, fatigue, and other details to isolate the study tradeoff.",
+        "B": "h = 10; the first-order condition gives the true best choice, so the constraint should be ignored.",
+        "C": "h = 5; the student should choose half of the unconstrained optimum because real life is more complicated than the model.",
+        "D": "h = 0; because the model omits many real factors, it cannot imply any positive study time."
+      },
+      "correct": "A",
+      "explanation": "The unconstrained optimum is h = 10, but h <= 8 binds, so h = 8. B ignores feasibility, C invents an adjustment not in the model, and D confuses simplification with uselessness."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A model of weekly gym visits is v* = (B - c)/2, where B is the perceived benefit parameter and c is the travel cost. If c rises from 4 to 6 while B stays at 16, what happens to v*, and what mechanism explains it?",
+      "choices": {
+        "A": "v* rises from 6 to 7 because higher travel cost signals higher gym quality.",
+        "B": "v* falls from 6 to 5 because the opportunity cost of each visit rises.",
+        "C": "v* stays at 6 because only income changes affect choices in simplified models.",
+        "D": "v* falls from 8 to 6 because the entire benefit parameter shifts down by 2."
+      },
+      "correct": "B",
+      "explanation": "At c = 4, v* = 6; at c = 6, v* = 5. The mechanism is a higher opportunity cost of gym visits. A adds an unsupported signaling story, C falsely freezes the endogenous choice, and D changes the wrong parameter."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A simplified demand model for campus burritos is Qd = 120 - 4P + 2I, where I is student income measured in tens of dollars. If I rises from 10 to 15 at P = 8, what happens to Qd, and what modeling lesson does this illustrate?",
+      "choices": {
+        "A": "Qd rises by 10 because the model isolates the income effect while holding price fixed.",
+        "B": "Qd falls by 20 because higher income raises the price students are willing to pay.",
+        "C": "Qd rises by 5 because the income variable rose by 5.",
+        "D": "Qd is unchanged because the model is simplified and therefore cannot analyze real income changes."
+      },
+      "correct": "A",
+      "explanation": "The change is 2(15 - 10) = 10. The model's simplification lets us isolate the income effect. B confuses income with price, C ignores the coefficient 2, and D misunderstands comparative statics."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A model compares two linear demand curves for NC State basketball tickets: D1: Q = 100 - 2P and D2: Q = 160 - 2P. Without drawing the graph, which verbal description is correct?",
+      "choices": {
+        "A": "D2 is flatter than D1 because its quantity intercept is larger.",
+        "B": "D2 is parallel to D1 and lies to the right because both have slope -2 in Q-on-P form but D2 has a larger intercept.",
+        "C": "D2 is steeper than D1 because it reaches a higher quantity at P = 0.",
+        "D": "D2 crosses D1 at P = 30 because the intercept difference eventually disappears."
+      },
+      "correct": "B",
+      "explanation": "Both equations have the same coefficient on P, so they are parallel in Q-on-P space; D2 has a larger quantity intercept. A and C confuse intercepts with slope, and D invents an intersection despite equal slopes."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A simplified production possibilities frontier is y = 100 - x^2, where x is hours spent on finance practice and y is hours-equivalent performance in economics. What feature would its graph have?",
+      "choices": {
+        "A": "A constant slope of -1, showing the opportunity cost of finance practice never changes.",
+        "B": "A positive slope that becomes steeper as x rises, showing both skills increase together.",
+        "C": "A vertical intercept at y = 100 and a slope of -2x, so the opportunity cost of x rises in magnitude as x increases.",
+        "D": "A horizontal intercept at x = 100 and a slope of -x^2, so the opportunity cost falls as x increases."
+      },
+      "correct": "C",
+      "explanation": "At x = 0, y = 100, and dy/dx = -2x, so the frontier becomes steeper as x rises. A assumes linearity, B gets the sign wrong, and D misstates both the intercept and derivative."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "In a model of ride-share demand, Qd = 500 - 20P is used instead of a complex machine-learning forecast with weather, traffic, events, and driver ratings. What is the best economic justification for using the simple model in an introductory comparative statics exercise?",
+      "choices": {
+        "A": "The simple model is better because it is always more realistic than a complex model.",
+        "B": "The simple model is useful because it isolates the price-quantity relationship and makes the mechanism transparent.",
+        "C": "The simple model proves that weather and traffic have no effect on ride-share demand.",
+        "D": "The simple model should be rejected because omitting variables always makes a model false and unusable."
+      },
+      "correct": "B",
+      "explanation": "Simplification is useful when it isolates the mechanism being studied. A overclaims realism, C confuses omission with proof of irrelevance, and D treats all abstraction as fatal."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A startup wants to understand whether lowering the price of its $12 meal subscription will increase signups enough to raise revenue. Which simplified model is most appropriate for a first-pass microeconomic analysis?",
+      "choices": {
+        "A": "A production function relating kitchen labor to meals cooked, because the decision is mainly about input substitution.",
+        "B": "A demand model Q = a - bP and revenue R = P(Q), because the central issue is how quantity demanded responds to price.",
+        "C": "A macroeconomic model of GDP growth, because subscriptions are part of aggregate consumption.",
+        "D": "A model with no assumptions, because assumptions would bias the analysis."
+      },
+      "correct": "B",
+      "explanation": "The scenario asks about price, quantity demanded, and revenue, so a demand-and-revenue model fits. A answers a production question, C uses the wrong level of analysis, and D ignores that models require assumptions."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a simplifying assumption from an unrealistic mistake in an economic model?",
+      "choices": {
+        "A": "A simplifying assumption deliberately abstracts from details to isolate a mechanism; an unrealistic mistake distorts the mechanism the model is meant to analyze.",
+        "B": "A simplifying assumption is always numerically true; an unrealistic mistake is always mathematically false.",
+        "C": "A simplifying assumption removes all variables; an unrealistic mistake includes too many variables.",
+        "D": "There is no distinction because any unrealistic assumption makes a model invalid."
+      },
+      "correct": "A",
+      "explanation": "The key distinction is whether the abstraction helps isolate the intended mechanism or corrupts it. B wrongly requires literal truth, C misdefines simplification, and D rejects useful abstraction."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A simplified model of demand for tutoring is Q = 80 - 5P + 3A, where A is advertising intensity. If A rises from 4 to 8 while P is fixed at 10, what changes, and why? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+      "choices": {
+        "A": "Q rises by 12 because the exogenous advertising parameter shifts demand outward.",
+        "B": "Q rises by 4 because advertising rises by 4 units.",
+        "C": "Q falls by 20 because price is multiplied by the advertising increase.",
+        "D": "Q does not change because advertising is outside the model."
+      },
+      "correct": "A",
+      "explanation": "Delta Q = 3(8 - 4) = 12, caused by an outward demand shift from a higher exogenous advertising parameter. B ignores the coefficient, C mixes unrelated terms, and D falsely says A is outside the model."
+    }
+  ]
+}

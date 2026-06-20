@@ -1,0 +1,135 @@
+{
+  "topic": "Cobb-Douglas Utility",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Carlos has U(x,y)=x^{2/5}y^{3/5}, income m=250, p_x=10, and p_y=5. What is the utility-maximizing bundle, and how should the result be interpreted?",
+      "choices": {
+        "A": "x*=10, y*=30; the consumer spends 2/5 of income on x and 3/5 on y.",
+        "B": "x*=25, y*=0; the lower price of y is irrelevant because x has positive utility.",
+        "C": "x*=12.5, y*=25; the consumer spends equal amounts because both goods enter utility.",
+        "D": "x*=15, y*=20; the exponents determine quantities directly."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas demands are x=(2/5)(250)/10=10 and y=(3/5)(250)/5=30. Exponents are expenditure shares when they sum to one. B is a wrong corner. C uses equal spending. D treats exponents as quantity shares."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Dana maximizes U(x,y)=x^2y subject to 6x+3y=180. Which bundle solves the problem, and what expenditure shares does it imply?",
+      "choices": {
+        "A": "x*=15, y*=30; spending is split evenly.",
+        "B": "x*=20, y*=20; spending on x is twice spending on y.",
+        "C": "x*=30, y*=0; the exponent on x is larger, so y is not consumed.",
+        "D": "x*=10, y*=40; spending on y is twice spending on x."
+      },
+      "correct": "B",
+      "explanation": "For U=x^2y, total exponent is 3. x gets 2/3 of income: x=(2/3)(180)/6=20. y gets 1/3: y=(1/3)(180)/3=20. Spending is 120 on x and 60 on y. A uses equal expenditure. C incorrectly creates a corner. D reverses shares."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x^{1/3}y^{2/3}, p_x=4, p_y=8, and m=240. If income falls to 180, what happens to x* and why?",
+      "choices": {
+        "A": "x* falls from 20 to 15 because x receives a fixed one-third expenditure share and income falls.",
+        "B": "x* stays at 20 because Cobb-Douglas demand depends only on prices.",
+        "C": "x* rises from 20 to 30 because lower income raises marginal utility.",
+        "D": "x* falls from 30 to 22.5 because x receives two-thirds of income."
+      },
+      "correct": "A",
+      "explanation": "x=(1/3)m/p_x. Initially x=(1/3)(240)/4=20; after income falls, x=(1/3)(180)/4=15. The mechanism is proportional income response under fixed expenditure shares. B describes quasilinear demand. C reverses the income effect. D uses the wrong exponent share."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x^{3/4}y^{1/4}, m=160, p_x=4, and p_y=4. If p_x doubles to 8, what happens to x*?",
+      "choices": {
+        "A": "x* remains 30 because the expenditure share on x is unchanged.",
+        "B": "x* falls from 30 to 15 because the same three-fourths expenditure share buys half as many units.",
+        "C": "x* rises from 30 to 60 because x is more valuable after its price rises.",
+        "D": "x* falls from 10 to 5 because x receives only one-fourth of income."
+      },
+      "correct": "B",
+      "explanation": "x=(3/4)m/p_x. Initially x=(3/4)(160)/4=30; after p_x=8, x=15. The mechanism is constant expenditure share divided by a higher price. A ignores quantity effects. C reverses price response. D uses y's exponent."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For Cobb-Douglas preferences U(x,y)=x^{1/2}y^{1/2}, what graphical feature helps guarantee an interior solution when prices and income are positive?",
+      "choices": {
+        "A": "Indifference curves are L-shaped with kinks on a fixed-proportion ray.",
+        "B": "Indifference curves are straight lines, so the optimum is normally at an intercept.",
+        "C": "Indifference curves approach the axes without touching them and have diminishing MRS, so tangency occurs in the positive quadrant.",
+        "D": "Indifference curves are upward sloping, so more of both goods lowers utility."
+      },
+      "correct": "C",
+      "explanation": "Cobb-Douglas preferences are smooth, monotonic, strictly convex, and have indifference curves asymptotic to the axes, producing positive demand for both goods. A describes perfect complements. B describes perfect substitutes. D contradicts monotonicity."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A Cobb-Douglas consumer faces a budget line that shifts outward in parallel after income increases. With x on the horizontal axis, what happens to the optimal point graphically?",
+      "choices": {
+        "A": "It moves to a higher indifference curve along an income expansion path through the origin if preferences are homothetic.",
+        "B": "It stays on the same indifference curve because prices did not change.",
+        "C": "It moves to the x-intercept because more income eliminates the need for y.",
+        "D": "It moves to a lower indifference curve because the budget set expands."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas preferences are homothetic, so income expansion paths are rays through the origin when prices are fixed. Higher income reaches a higher indifference curve. B ignores the expanded budget. C wrongly predicts a corner. D reverses welfare."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "For U(x,y)=x^ay^b with a,b>0, why does the consumer spend a constant share of income on each good?",
+      "choices": {
+        "A": "Because the marginal utility of each good is constant.",
+        "B": "Because the first-order conditions imply expenditure ratios proportional to the exponents: p_xx/p_yy=a/b.",
+        "C": "Because prices do not affect Cobb-Douglas demand.",
+        "D": "Because the consumer always buys equal quantities of both goods."
+      },
+      "correct": "B",
+      "explanation": "The FOCs imply a y/(b x)=p_x/p_y, which rearranges to p_xx/p_yy=a/b. Thus expenditure shares are a/(a+b) and b/(a+b). A is false because marginal utilities diminish. C is false because prices affect quantities. D is true only in special cases."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A grocery analyst estimates that households allocate a stable 30 percent of their snack budget to chips x and 70 percent to salsa y over a wide range of incomes and prices. Which utility model best matches this pattern, and what demand for chips follows when m=200 and p_x=4?",
+      "choices": {
+        "A": "Perfect substitutes; x*=50 because chips are bought exclusively.",
+        "B": "Perfect complements; x*=30 because quantities must be fixed.",
+        "C": "Cobb-Douglas U=x^{0.3}y^{0.7}; x*=15 because chips receive 30 percent of expenditure.",
+        "D": "Quasilinear utility; x*=30 because income does not matter."
+      },
+      "correct": "C",
+      "explanation": "Constant expenditure shares are the signature of Cobb-Douglas demand. Chips demand is x=0.3(200)/4=15. A predicts corners. B predicts fixed proportions, not expenditure shares. D predicts income-independent x demand, not constant budget shares."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes Cobb-Douglas utility from perfect substitutes utility?",
+      "choices": {
+        "A": "Cobb-Douglas normally yields interior solutions with diminishing MRS; perfect substitutes have constant MRS and typically yield corner solutions.",
+        "B": "Cobb-Douglas has constant MRS; perfect substitutes have diminishing MRS.",
+        "C": "Cobb-Douglas always yields corner solutions; perfect substitutes always yield interior solutions.",
+        "D": "Both always generate the same demand functions when prices are positive."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas has diminishing MRS and positive demand for both goods when exponents are positive. Perfect substitutes have linear indifference curves and constant MRS, giving corners except when slopes match. B reverses properties. C reverses typical outcomes. D ignores distinct preference structures."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Eli has U(x,y)=x^{1/2}y^{1/2}, m=100, and initially p_x=p_y=5. Then p_x falls to 2 while p_y remains 5. What is the change in maximized utility?",
+      "choices": {
+        "A": "Utility rises from 10 to approximately 15.81 because the lower price of x expands feasible consumption.",
+        "B": "Utility rises from 20 to 50 because x demand rises.",
+        "C": "Utility stays at 10 because income and p_y are unchanged.",
+        "D": "Utility falls from 15.81 to 10 because the budget line rotates outward."
+      },
+      "correct": "A",
+      "explanation": "Initially x=y=10 and U=10. After p_x=2, x=100/(22)=25 and y=100/(25)=10, so U=sqrt(250)=15.81. B confuses quantity with utility. C ignores the price fall. D reverses the direction of welfare change."
+    }
+  ]
+}

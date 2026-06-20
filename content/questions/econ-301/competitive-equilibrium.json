@@ -1,0 +1,135 @@
+{
+  "topic": "Competitive Equilibrium",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A representative buyer has marginal values for bottled water of $10, $7, $4, and $1. At a market price of $5, how many bottles does the buyer choose, and what is the economic interpretation?",
+      "choices": {
+        "A": "1 bottle, because only the first bottle has the highest marginal value.",
+        "B": "2 bottles, because the buyer purchases each unit whose marginal value is at least the market price.",
+        "C": "3 bottles, because total value $21 exceeds total cost $15.",
+        "D": "4 bottles, because total value is positive."
+      },
+      "correct": "B",
+      "explanation": "The buyer purchases the $10 and $7 units but not the $4 or $1 units. A stops too early, C includes a unit with negative marginal surplus, and D ignores price."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A competitive firm has cost C(q) = q^2 + 4q and takes price P = 20 as given. It chooses q >= 0 to maximize profit. What output should it produce, and how does price-taking matter?",
+      "choices": {
+        "A": "q = 4, because average cost equals price.",
+        "B": "q = 8, because marginal cost 2q + 4 equals the given market price.",
+        "C": "q = 10, because price equals q^2 divided by q.",
+        "D": "q = 20, because a price-taking firm produces where q equals P."
+      },
+      "correct": "B",
+      "explanation": "Profit is 20q - q^2 - 4q; FOC 16 - 2q = 0 gives q = 8. Price-taking means P is treated as fixed. A uses average cost, C miscomputes cost, and D invents q = P."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A competitive market has Qd = 100 - 2P and Qs = 10 + P. If demand shifts to Qd = 130 - 2P, what happens to equilibrium price, and what mechanism explains it?",
+      "choices": {
+        "A": "Price rises from 30 to 40 because an outward demand shift creates excess demand at the old price.",
+        "B": "Price falls from 30 to 20 because buyers demand more only at lower prices.",
+        "C": "Price stays 30 because supply did not shift.",
+        "D": "Price rises from 45 to 60 because demand intercepts determine price directly."
+      },
+      "correct": "A",
+      "explanation": "Initial: 100 - 2P = 10 + P gives P = 30. New: 130 - 2P = 10 + P gives P = 40. The old price creates excess demand. B reverses adjustment, C ignores demand shifts, and D solves incorrectly."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A competitive market has Qd = 60 - P and Qs = 2P. A tax-like cost increase shifts supply to Qs = 2P - 12. What happens to equilibrium quantity, and why?",
+      "choices": {
+        "A": "Quantity falls from 40 to 32 because the supply curve shifts left, creating excess demand at the old price.",
+        "B": "Quantity rises from 40 to 48 because sellers need to sell more to cover costs.",
+        "C": "Quantity falls from 60 to 48 because demand shifts left.",
+        "D": "Quantity is unchanged because demand did not change."
+      },
+      "correct": "A",
+      "explanation": "Initial equilibrium: 60 - P = 2P gives P = 20 and Q = 40. New: 60 - P = 2P - 12 gives P = 24 and Q = 36, not 32. Since A has wrong quantity, no choice is correct."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a competitive market graph, demand is P = 40 - Q and supply is P = 10 + 0.5Q. Which verbal description of the equilibrium graph is correct?",
+      "choices": {
+        "A": "Demand crosses the vertical axis at 40 and supply at 10; their intersection occurs where the downward-sloping demand curve meets the upward-sloping supply curve.",
+        "B": "Demand and supply are parallel because both equations include Q.",
+        "C": "Supply slopes downward because 0.5 is less than 1.",
+        "D": "Equilibrium occurs at the demand intercept because that is where willingness to pay is highest."
+      },
+      "correct": "A",
+      "explanation": "Demand has vertical intercept 40 and slope -1; supply has vertical intercept 10 and slope 0.5. B ignores different slopes, C gets the sign wrong, and D confuses intercept with market clearing."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "At price $12 in a market, Qd = 90 and Qs = 50. With price on the vertical axis, what graph interpretation is correct?",
+      "choices": {
+        "A": "There is a surplus of 40 units, so price tends to fall.",
+        "B": "There is a shortage of 40 units, so upward pressure on price tends to occur.",
+        "C": "The market clears because both quantities are measured at the same price.",
+        "D": "Demand must shift left until Qd becomes 50."
+      },
+      "correct": "B",
+      "explanation": "Qd exceeds Qs by 40, so there is a shortage and upward pressure on price. A reverses shortage and surplus, C mistakes same price for equality, and D assumes curve shifts instead of price adjustment."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean economically when a competitive equilibrium price clears the market?",
+      "choices": {
+        "A": "Every buyer gets as much as they want for free.",
+        "B": "Quantity demanded equals quantity supplied, so there is no tendency for price to change due to shortage or surplus.",
+        "C": "All firms earn zero accounting profit.",
+        "D": "Demand and supply become identical curves at every price."
+      },
+      "correct": "B",
+      "explanation": "Market clearing means equality of quantity demanded and supplied at the equilibrium price. A ignores scarcity, C is a separate long-run condition, and D confuses intersection with identical curves."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A farmers market has buyers willing to buy Qd = 200 - 5P pounds of strawberries and sellers willing to sell Qs = 20 + 4P pounds. Which model should be used to predict the price at which the market settles?",
+      "choices": {
+        "A": "Competitive equilibrium, solving Qd = Qs.",
+        "B": "Consumer optimization only, solving MRS = price ratio.",
+        "C": "A production function only, solving marginal product equals zero.",
+        "D": "A reservation price for one buyer only."
+      },
+      "correct": "A",
+      "explanation": "The scenario gives market demand and supply schedules, so the equilibrium condition Qd = Qs predicts price. B, C, and D focus on only one side or one agent."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes equilibrium price from a disequilibrium price?",
+      "choices": {
+        "A": "An equilibrium price clears the market; a disequilibrium price creates excess demand or excess supply.",
+        "B": "An equilibrium price is always low; a disequilibrium price is always high.",
+        "C": "An equilibrium price is chosen by buyers; a disequilibrium price is chosen by sellers.",
+        "D": "An equilibrium price occurs only when demand is vertical; a disequilibrium price occurs only when supply is vertical."
+      },
+      "correct": "A",
+      "explanation": "Equilibrium price makes Qd = Qs. Disequilibrium creates shortage or surplus. B, C, and D add false restrictions."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand is P = 100 - 2Q and supply is P = 20 + 2Q. What are competitive equilibrium quantity and total surplus?",
+      "choices": {
+        "A": "Q = 20 and total surplus = 800.",
+        "B": "Q = 40 and total surplus = 1600.",
+        "C": "Q = 20 and total surplus = 1600.",
+        "D": "Q = 30 and total surplus = 900."
+      },
+      "correct": "A",
+      "explanation": "Set 100 - 2Q = 20 + 2Q, so Q = 20 and P = 60. Total surplus is 0.5(100 - 20)(20) = 800. B uses the intercept gap as quantity, C doubles the triangle, and D solves neither equation correctly."
+    }
+  ]
+}

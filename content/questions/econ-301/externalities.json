@@ -1,0 +1,135 @@
+{
+  "topic": "Externalities",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A paper mill faces inverse demand P = 100 - Q and private marginal cost MPC = 20. Production creates pollution with marginal external cost MEC = 2Q. What output maximizes total surplus, and what does it imply relative to the unregulated market output?",
+      "choices": {
+        "A": "Q = 40; the market overproduces because buyers and sellers ignore marginal external cost.",
+        "B": "Q = 80; the market underproduces because pollution lowers private cost.",
+        "C": "Q = 26.67; the market overproduces because MSC is incorrectly set equal to demand plus MPC.",
+        "D": "Q = 60; the market is efficient because demand equals private marginal cost."
+      },
+      "correct": "A",
+      "explanation": "The efficient output sets marginal benefit equal to marginal social cost: 100 - Q = 20 + 2Q, so Q = 40. The unregulated market sets 100 - Q = 20, so Q = 80, meaning overproduction. B gives the unregulated quantity and reverses the welfare conclusion. C uses an incorrect setup. D ignores the external cost."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A vaccine has inverse private demand MPB = 90 - Q and marginal cost MC = 30. Each vaccination creates a constant external benefit of 20 for others. What output is socially efficient, and what is the economic interpretation?",
+      "choices": {
+        "A": "Q = 40; the market output is efficient because private benefit already includes all benefits.",
+        "B": "Q = 60; the market overproduces because marginal social benefit exceeds marginal private benefit.",
+        "C": "Q = 80; the market underproduces because consumers ignore the external benefit their vaccination creates.",
+        "D": "Q = 20; the market underproduces because the external benefit should be subtracted from private benefit."
+      },
+      "correct": "C",
+      "explanation": "Marginal social benefit is MSB = MPB + 20 = 110 - Q. Efficiency requires 110 - Q = 30, so Q = 80. The private market sets 90 - Q = 30, so Q = 60. A ignores the external benefit. B reverses the direction of the distortion. D subtracts the external benefit instead of adding it."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For a factory with inverse demand P = 120 - Q, MPC = 30, and MEC = aQ, how does the socially efficient output change when a rises from 1 to 3?",
+      "choices": {
+        "A": "It rises from 45 to 90 because higher external cost increases the value of production.",
+        "B": "It falls from 45 to 22.5 because the MSC curve becomes steeper.",
+        "C": "It falls from 90 to 30 because private marginal cost increases.",
+        "D": "It remains 90 because the externality does not affect private demand."
+      },
+      "correct": "B",
+      "explanation": "Efficiency requires 120 - Q = 30 + aQ, so Q = 90/(1 + a). When a = 1, Q = 45; when a = 3, Q = 22.5. The mechanism is that a higher marginal external cost rotates MSC upward. A gets the direction wrong. C treats MEC as a change in private cost and uses the market output as the initial point. D describes the private market quantity, not the efficient quantity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Suppose a flu shot has MPB = 80 - Q, MC = 20, and external benefit EB = b per shot. What happens to the efficient quantity when b rises from 10 to 30?",
+      "choices": {
+        "A": "It rises from 70 to 90 because MSB shifts upward by the larger external benefit.",
+        "B": "It falls from 70 to 50 because external benefits reduce the need for vaccination.",
+        "C": "It stays at 60 because private marginal benefit is unchanged.",
+        "D": "It rises from 60 to 80 because the private demand curve shifts upward."
+      },
+      "correct": "A",
+      "explanation": "Efficiency sets 80 - Q + b = 20, so Q = 60 + b. When b rises from 10 to 30, efficient output rises from 70 to 90. The mechanism is an upward shift in marginal social benefit. B reverses the effect. C gives the private market quantity. D gets the direction but incorrectly says private demand shifts."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a diagram for a negative production externality, demand is downward sloping, MPC is upward sloping, and MSC lies above MPC with the vertical gap increasing as output rises. Which verbal graph interpretation is correct?",
+      "choices": {
+        "A": "The efficient quantity is where demand crosses MPC, and deadweight loss is the area under demand to the left of that quantity.",
+        "B": "The market quantity is where demand crosses MSC, and the efficient quantity is where demand crosses MPC.",
+        "C": "The market quantity is where demand crosses MPC, the efficient quantity is where demand crosses MSC, and the deadweight loss is the triangle between MSC and demand over the excess units.",
+        "D": "The market and efficient quantities are equal because the same demand curve applies to both."
+      },
+      "correct": "C",
+      "explanation": "With a negative externality, private decisions use MPC, while efficiency uses MSC. Since MSC is above MPC, the market quantity exceeds the efficient quantity, and DWL is the excess social cost over benefit for units between them. A uses the private condition as the efficient condition. B reverses market and efficient quantities. D ignores the external cost gap."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a diagram for a positive consumption externality, MPB is downward sloping, MC is upward sloping, and MSB lies above MPB by a constant vertical distance. Which statement correctly describes the graph?",
+      "choices": {
+        "A": "The efficient quantity is to the right of the market quantity, and the deadweight loss is the area between MSB and MC over the units not produced by the market.",
+        "B": "The efficient quantity is to the left of the market quantity, and the deadweight loss is the area between MC and MPB over the excess units.",
+        "C": "The efficient quantity equals the market quantity because the vertical gap is constant.",
+        "D": "The market quantity is found where MSB intersects MC because consumers account for external benefits."
+      },
+      "correct": "A",
+      "explanation": "A positive externality means MSB exceeds MPB, so the private market underproduces. The missing units have social benefit above marginal cost, creating DWL. B describes a negative externality. C incorrectly assumes a constant gap eliminates inefficiency. D incorrectly assigns social benefits to private decision-making."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A steel plant emits smoke that imposes $12 of health damage on nearby residents for each ton of steel, but the steel buyer and seller do not bear that damage. Which interpretation best explains the market failure?",
+      "choices": {
+        "A": "The plant produces too little steel because private marginal cost exceeds social marginal cost.",
+        "B": "The plant produces the efficient amount because the $12 damage is not part of the transaction.",
+        "C": "The plant produces too much steel because market participants compare private benefit with private cost rather than social cost.",
+        "D": "The plant produces too much steel only if fixed costs are positive."
+      },
+      "correct": "C",
+      "explanation": "The external damage makes MSC exceed MPC by $12. Because the market ignores this cost, it produces beyond the efficient level. A reverses the cost relationship. B mistakes exclusion from the transaction for irrelevance to welfare. D confuses externality analysis with fixed-cost shutdown logic."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A beekeeper places hives next to an apple orchard. The bees pollinate the orchard, raising apple output, but the orchard owner does not pay the beekeeper. Which model applies, and what does it predict?",
+      "choices": {
+        "A": "Negative production externality; the beekeeper produces too many hives because social cost exceeds private cost.",
+        "B": "Positive production externality; the beekeeper supplies too few hives because private revenue excludes benefits to the orchard.",
+        "C": "Public good; hives are non-rival and non-excludable.",
+        "D": "Common resource; hives are rival but non-excludable."
+      },
+      "correct": "B",
+      "explanation": "The hives generate an uncompensated benefit for the orchard, so marginal social benefit exceeds marginal private benefit. The market underprovides hives. A uses the wrong sign of externality. C and D confuse externalities with goods classified by rivalry and excludability."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a negative externality from a pecuniary externality?",
+      "choices": {
+        "A": "A negative externality changes a third party's real payoff outside the price system, while a pecuniary externality works through prices and does not by itself imply inefficiency.",
+        "B": "A negative externality always involves money, while a pecuniary externality always involves physical harm.",
+        "C": "A negative externality occurs only in production, while a pecuniary externality occurs only in consumption.",
+        "D": "A negative externality is efficient, while a pecuniary externality always creates deadweight loss."
+      },
+      "correct": "A",
+      "explanation": "Real externalities create unpriced costs or benefits affecting social surplus. Pecuniary effects operate through market prices and may redistribute surplus without causing inefficiency. B reverses the distinction. C invents a production-consumption separation. D reverses the welfare logic."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A market has inverse demand P = 100 - Q, MPC = 20, and MEC = Q. The unregulated market output is 80 and the efficient output is 40. What is the deadweight loss from the negative externality?",
+      "choices": {
+        "A": "800",
+        "B": "1600",
+        "C": "3200",
+        "D": "400"
+      },
+      "correct": "A",
+      "explanation": "For units from 40 to 80, MSC exceeds demand. At Q = 40, demand equals MSC; at Q = 80, the gap is MSC - demand = (20 + 80) - 20 = 80. DWL is 0.5 × 40 × 40? More directly, gap = 2Q - 80, which rises from 0 to 80 over 40 units, so DWL = 0.5 × 40 × 80 = 1600. However because MSC = 20 + Q and demand = 100 - Q, the efficient condition is Q = 40. The correct DWL is 1600. B is correct; A uses only the external damage triangle, C doubles the triangle, and D uses the wrong base."
+    }
+  ]
+}

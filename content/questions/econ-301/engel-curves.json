@@ -1,0 +1,135 @@
+{
+  "topic": "Engel Curves",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Jada has utility U(x,y)=x^{0.4}y^{0.6}, where x is tacos and y is smoothies. Prices are p_x=5 and p_y=3. Derive the Engel curve for tacos x as a function of income m, and interpret its slope.",
+      "choices": {
+        "A": "x=m/5; tacos are normal because x rises one-for-one with real income measured in tacos.",
+        "B": "x=0.4m/5=0.08m; tacos are normal because the Engel curve has positive slope.",
+        "C": "x=0.6m/5=0.12m; tacos are normal because smoothies have the larger exponent.",
+        "D": "x=5/(0.4m); tacos are inferior because the curve slopes downward."
+      },
+      "correct": "B",
+      "explanation": "Cobb-Douglas demand spends share 0.4 of income on tacos, so x=0.4m/5=0.08m. The positive slope means tacos are normal. A ignores the expenditure share. C uses the exponent on y. D inverts the demand relationship incorrectly."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Leo has utility U(x,y)=min{x,3y}, where x is printer pages and y is ink cartridges. Prices are p_x=1 and p_y=6. What is the Engel curve for printer pages x, and what does it imply?",
+      "choices": {
+        "A": "x=m/7, so printer pages are normal but rise slowly with income.",
+        "B": "x=3m/9=m/3, so printer pages are normal and consumed in fixed proportion to cartridges.",
+        "C": "x=m, so all income is spent on printer pages because they are cheaper.",
+        "D": "x=0 for all m below 6, so printer pages are inferior at low income."
+      },
+      "correct": "B",
+      "explanation": "The complementarity condition is x=3y. The budget is x+6y=3y+6y=9y=m, so y=m/9 and x=m/3. A uses x=y rather than x=3y. C treats complements as perfect substitutes. D invents a threshold not implied by divisible goods."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For a consumer with Engel curve for frozen meals x given by x=30-0.1m over incomes from 100 to 250, what happens when income rises from 120 to 180, and what mechanism explains it?",
+      "choices": {
+        "A": "x rises from 18 to 24 because higher income relaxes the budget constraint.",
+        "B": "x falls from 18 to 12 because frozen meals are inferior over this range, so extra income is reallocated toward preferred alternatives.",
+        "C": "x stays at 30 because prices are fixed.",
+        "D": "x falls from 12 to 18 because the price of frozen meals must have risen."
+      },
+      "correct": "B",
+      "explanation": "At m=120, x=30-12=18; at m=180, x=30-18=12. The negative Engel slope indicates inferiority: higher purchasing power leads the consumer away from frozen meals. A has the direction wrong. C ignores the income term. D incorrectly attributes the movement to a price change."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Sophia's Engel curve for app subscriptions x is x=2+0.04m. What is the income elasticity of x at m=200, and what does it imply?",
+      "choices": {
+        "A": "0.8; subscriptions are a necessity at this income because demand rises less than proportionally with income.",
+        "B": "1.25; subscriptions are a luxury because demand rises more than proportionally with income.",
+        "C": "0.04; subscriptions are inferior because the slope is less than 1.",
+        "D": "5; subscriptions are normal because income is five times quantity."
+      },
+      "correct": "A",
+      "explanation": "At m=200, x=2+8=10. Income elasticity is (dx/dm)(m/x)=0.04(200/10)=0.8, so the good is normal but income-inelastic, often called a necessity. B uses an incorrect quantity. C confuses slope less than 1 with inferiority. D uses m/x rather than elasticity."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "An Engel curve has income m on the vertical axis and quantity of thrift-store shirts x on the horizontal axis. Over the range x=8 to x=5 as m rises from 80 to 140, the curve bends left as it moves upward. What does this graph imply?",
+      "choices": {
+        "A": "Thrift-store shirts are normal because income is on the vertical axis and the curve rises.",
+        "B": "Thrift-store shirts are inferior over this range because higher income corresponds to lower optimal x.",
+        "C": "The price of thrift-store shirts must be rising because quantity falls.",
+        "D": "The curve is a demand curve because price is omitted from the axes."
+      },
+      "correct": "B",
+      "explanation": "Even with income on the vertical axis, moving upward to higher income corresponds to lower x, so the Engel relationship is negative over this range and the good is inferior. A reads only the vertical movement. C adds a price change not shown. D confuses Engel curves with demand curves."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A graph plots income m vertically and organic berries x horizontally. The Engel curve starts steep at low x and becomes flatter as x increases. Prices are fixed. What does the flattening mean if the graph is read as m as a function of x?",
+      "choices": {
+        "A": "Each extra unit of berries requires a smaller increase in income than before, so x rises more rapidly with income at higher incomes.",
+        "B": "Berries are inferior because a flatter curve always means lower demand.",
+        "C": "The price of berries is falling because the slope falls.",
+        "D": "The consumer's utility is constant along the Engel curve."
+      },
+      "correct": "A",
+      "explanation": "With m on the vertical axis, a flatter Engel curve means lower dm/dx, or equivalently higher dx/dm, so quantity becomes more responsive to income. B wrongly treats flattening as inferiority. C confuses Engel slope with price. D confuses Engel curves with indifference curves."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "For Diego, the Engel curve for ramen cups is x=50-0.05m over the relevant income range. What does the negative slope mean economically?",
+      "choices": {
+        "A": "Ramen has a negative price elasticity of demand.",
+        "B": "Ramen is inferior over this income range because higher income reduces the quantity chosen at fixed prices.",
+        "C": "Ramen violates transitivity because more income leads to less consumption.",
+        "D": "Ramen must be a Giffen good because its demand curve slopes upward."
+      },
+      "correct": "B",
+      "explanation": "An Engel curve relates income to quantity demanded at fixed prices. A negative slope means the good is inferior over that range. A talks about price elasticity, not income response. C invents a preference inconsistency. D confuses inferiority with the stronger Giffen condition."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A grocery chain wants to forecast how many pounds of store-brand rice households buy as household income varies, holding local rice and meat prices fixed. Which tool is most appropriate?",
+      "choices": {
+        "A": "A price offer curve, because it traces how rice demand changes when rice prices change.",
+        "B": "A contract curve, because households exchange rice and meat.",
+        "C": "An Engel curve for store-brand rice, because it relates income to the optimal quantity of one good at fixed prices.",
+        "D": "A compensated demand curve, because household utility must be held constant."
+      },
+      "correct": "C",
+      "explanation": "The question asks for the quantity of one good as income varies with prices fixed, which is exactly an Engel curve. A changes price instead of income. B applies exchange theory incorrectly. D holds utility fixed, which is not the described forecast."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes an Engel curve from a demand curve for gym visits x?",
+      "choices": {
+        "A": "An Engel curve varies income holding prices fixed; a demand curve varies the price of x holding income and other prices fixed.",
+        "B": "An Engel curve varies utility holding prices fixed; a demand curve varies income holding utility fixed.",
+        "C": "An Engel curve is only for necessities; a demand curve is only for luxuries.",
+        "D": "An Engel curve gives total spending, while a demand curve gives marginal utility."
+      },
+      "correct": "A",
+      "explanation": "The Engel curve shows x as income changes with prices fixed, while the ordinary demand curve shows x as own price changes with income and other prices fixed. B reverses compensated-demand concepts. C invents restrictions. D confuses behavioral relationships with spending and utility measures."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A researcher estimates the Engel curve for public transit rides x as x=5+0.05m. If income rises from 300 to 500, what is the change in rides, and why should the area under this curve not be interpreted as consumer surplus?",
+      "choices": {
+        "A": "Rides rise by 15; area under an Engel curve is consumer surplus because income is measured in dollars.",
+        "B": "Rides rise by 10; area under an Engel curve is not consumer surplus because the vertical variable is income, not willingness to pay for marginal units at a fixed income.",
+        "C": "Rides fall by 10; the curve is downward sloping in price.",
+        "D": "Rides rise by 25; the area is deadweight loss from higher income."
+      },
+      "correct": "B",
+      "explanation": "At m=300, x=20; at m=500, x=30, so rides rise by 10. This topic does not directly call for welfare analysis; the Type 7 slot is used to test a numerical Engel calculation and distinguish it from surplus measurement. A gives the wrong change and wrong welfare interpretation. C confuses income with price. D miscalculates and invents deadweight loss."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Market Demand",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ann has demand q_A=20-2P for P≤10 and 0 otherwise. Ben has demand q_B=12-P for P≤12 and 0 otherwise. What is market demand at P=$6, and what does this quantity represent?",
+      "choices": {
+        "A": "14 units; the average of Ann's and Ben's individual demands.",
+        "B": "20 units; the horizontal sum of individual quantities demanded at $6.",
+        "C": "18 units; the vertical sum of their willingness to pay.",
+        "D": "26 units; total willingness to pay at $6."
+      },
+      "correct": "B",
+      "explanation": "At P=6, Ann demands 20-12=8 and Ben demands 12-6=6, so market demand is 14, not 20. The correct answer should be '14 units; the horizontal sum.' A has the right number but wrong interpretation. C uses a wrong quantity and vertical aggregation. D confuses quantity with willingness to pay."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Three students have demands for notebooks: q_1=10-P, q_2=8-P, and q_3=6-P, each truncated at zero. At P=$4, what is market demand, and how should it be interpreted?",
+      "choices": {
+        "A": "12 notebooks; the sum of quantities each student wants at $4.",
+        "B": "8 notebooks; the demand of the highest-WTP student.",
+        "C": "18 notebooks; the sum of intercepts minus price once.",
+        "D": "4 notebooks; the average quantity demanded."
+      },
+      "correct": "A",
+      "explanation": "At P=4, demands are 6, 4, and 2, so market demand is 12. B ignores two consumers. C subtracts price only once instead of for each demand. D averages or confuses price with quantity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "At every price, 100 identical new consumers enter a market. Each new consumer has demand q=5-0.5P for P≤10. What happens to market demand at P=$4, and what is the mechanism?",
+      "choices": {
+        "A": "It increases by 300 units because market demand horizontally adds the new consumers' quantities at that price.",
+        "B": "It increases by 100 units because each new consumer counts as one unit.",
+        "C": "It decreases by 300 units because more consumers make goods scarce.",
+        "D": "It increases by 500 units because each consumer's intercept is 5."
+      },
+      "correct": "A",
+      "explanation": "Each new consumer demands 5-0.5(4)=3 units, so 100 consumers add 300 units. The mechanism is horizontal aggregation across consumers. B counts people rather than quantities. C invents a supply effect. D uses zero-price demand rather than demand at P=4."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Individual demand for an app is q=12-P. There are initially 50 identical users. After an update, each user's demand becomes q=16-P. At P=$8, how does market demand change, and why?",
+      "choices": {
+        "A": "It rises by 200 units because each user's marginal willingness to pay shifts outward, increasing quantity by 4 at the same price.",
+        "B": "It rises by 4 units because only individual demand changes.",
+        "C": "It stays the same because the number of users is unchanged.",
+        "D": "It rises by 400 units because price is subtracted from the market intercept once."
+      },
+      "correct": "A",
+      "explanation": "Old individual demand is 4, new is 8, so each user demands 4 more. Across 50 users, market demand rises by 200. B forgets aggregation. C ignores the individual demand shift. D uses an incorrect aggregation formula."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Two consumers have downward-sloping individual demand curves. At a price of $10, consumer A demands 3 units and consumer B demands 5 units. What point must lie on the market demand curve?",
+      "choices": {
+        "A": "P=$20, Q=8 because prices are added vertically.",
+        "B": "P=$10, Q=8 because quantities are added horizontally at the same price.",
+        "C": "P=$10, Q=2 because the difference in quantities measures market demand.",
+        "D": "P=$15, Q=4 because market demand averages individual demand curves."
+      },
+      "correct": "B",
+      "explanation": "Market demand horizontally sums quantities at each price, so at P=$10 total Q=3+5=8. A vertically adds prices. C subtracts quantities. D averages instead of summing."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Market demand has a kink at P=$12 because one group of consumers stops buying above $12 while another continues up to $20. What does the kink represent?",
+      "choices": {
+        "A": "A change in the number of active buyers contributing to the horizontal sum.",
+        "B": "A violation of downward-sloping demand.",
+        "C": "A point where market price must remain fixed.",
+        "D": "A vertical summation of consumer willingness to pay."
+      },
+      "correct": "A",
+      "explanation": "Kinks arise when some individual demands hit zero and stop contributing to market quantity. B is false; kinked demand can still be downward sloping. C confuses a curve feature with price rigidity. D describes the wrong aggregation direction."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is market demand found by adding quantities rather than adding prices?",
+      "choices": {
+        "A": "Because at a common market price, total quantity demanded is the number of units all buyers collectively want to purchase.",
+        "B": "Because all consumers must have identical willingness to pay.",
+        "C": "Because adding prices gives consumer surplus.",
+        "D": "Because firms choose quantities before consumers choose prices."
+      },
+      "correct": "A",
+      "explanation": "A competitive market faces one price, and each consumer chooses a quantity at that price; market quantity is the sum. B is unnecessary and false. C misstates consumer surplus. D is not the reason for horizontal aggregation."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A campus bookstore wants to forecast total demand for calculators at each possible price using survey responses from freshmen, sophomores, juniors, and seniors. Which model should it use?",
+      "choices": {
+        "A": "Horizontal aggregation of individual or group demand curves at each price.",
+        "B": "Vertical aggregation of prices at each quantity.",
+        "C": "Equivalent variation for each class year.",
+        "D": "Marginal revenue from the bookstore's supply curve."
+      },
+      "correct": "A",
+      "explanation": "Forecasting total quantity demanded at each price requires market demand, obtained by horizontal aggregation. B is not market demand. C is a welfare measure. D concerns seller revenue, not buyer demand aggregation."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes individual demand from market demand?",
+      "choices": {
+        "A": "Individual demand gives one buyer's quantity at each price; market demand sums all buyers' quantities at each price.",
+        "B": "Individual demand is always linear; market demand is always nonlinear.",
+        "C": "Individual demand is measured in dollars; market demand is measured in utility.",
+        "D": "Individual demand applies to consumers; market demand applies only to firms."
+      },
+      "correct": "A",
+      "explanation": "Market demand is the horizontal sum of individual demands. B is not generally true. C gives wrong units. D confuses demand with supply or firm behavior."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Market demand for smoothies is Q=100-5P. The market price is $12. What is total consumer surplus in the market?",
+      "choices": {
+        "A": "$160.",
+        "B": "$320.",
+        "C": "$640.",
+        "D": "$400."
+      },
+      "correct": "A",
+      "explanation": "Inverse demand is P=20-0.2Q. At P=12, Q=40. Consumer surplus is 0.5×40×(20-12)=$160. B doubles the triangle. C uses quantity 80 from a wrong substitution. D uses price times quantity minus an incorrect area."
+    }
+  ]
+}

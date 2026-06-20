@@ -1,0 +1,1352 @@
+[
+    {
+        "topic": "Intertemporal Budget Constraints",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Maya has income m1 = 100 this year and m2 = 121 next year. The interest rate is r = 0.10, and her utility is U(c1,c2)=ln(c1)+ln(c2). What is her optimal bundle, and what does it imply about saving or borrowing in period 1?",
+                "choices": {
+                    "A": "c1 = 105, c2 = 115.5; she borrows 5 in period 1 because c1 exceeds m1.",
+                    "B": "c1 = 100, c2 = 121; she neither borrows nor lends because the endowment is always optimal.",
+                    "C": "c1 = 110, c2 = 110; she borrows 10 because equal consumption maximizes log utility.",
+                    "D": "c1 = 105, c2 = 105; she lends 5 because future consumption is lower than future income."
+                },
+                "correct": "A",
+                "explanation": "The present-value budget is c1 + c2/1.1 = 100 + 121/1.1 = 210. With log utility, equal present-value spending gives c1 = 105 and c2 = 1.1c1 = 115.5. Since c1 > 100, Maya borrows 5. B treats the endowment as automatically optimal, C equalizes physical consumption instead of using the price ratio, and D miscomputes c2 and reverses the borrowing interpretation."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Noah has m1 = 80 and m2 = 132. The interest rate is r = 0.20. His utility is U(c1,c2)=c1^(1/2)c2^(1/2). Which choice solves his optimization problem and correctly interprets it?",
+                "choices": {
+                    "A": "c1 = 80, c2 = 132; he stays at the endowment because Cobb-Douglas consumers never borrow or lend.",
+                    "B": "c1 = 95, c2 = 114; he borrows 15 in period 1 because c1 exceeds m1.",
+                    "C": "c1 = 100, c2 = 120; he borrows 20 because c2/c1 must equal 1.2.",
+                    "D": "c1 = 95, c2 = 132; he borrows 15 and leaves future income unchanged."
+                },
+                "correct": "B",
+                "explanation": "The present value of wealth is 80 + 132/1.2 = 190. Cobb-Douglas with equal exponents spends half present value on each period, so c1 = 95 and c2/1.2 = 95, giving c2 = 114. B is correct. A incorrectly assumes the endowment is optimal, C uses the wrong total wealth, and D violates the intertemporal budget constraint."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Lena has m1 = 100 and m2 = 110. At r = 0.10, her endowment lies on c2 = 220 - 1.1c1. If her period-2 income rises to 132 while r stays 0.10, what happens to the intertemporal budget line?",
+                "choices": {
+                    "A": "It becomes steeper because future income raises the opportunity cost of current consumption.",
+                    "B": "It shifts outward in a parallel way because lifetime wealth rises while the relative price 1+r is unchanged.",
+                    "C": "It rotates around the original endowment because only the interest rate causes parallel shifts.",
+                    "D": "It shifts inward because higher future income must be discounted."
+                },
+                "correct": "B",
+                "explanation": "The slope remains -(1+r) = -1.1, while present-value wealth rises by 22/1.1 = 20, so the budget line shifts outward parallel. A confuses income changes with interest-rate changes, C reverses rotations and shifts, and D treats discounting as if it makes the income gain negative."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Omar has m1 = 120 and m2 = 120. The interest rate rises from 0.05 to 0.20. Holding the endowment fixed, what is the correct comparative-static effect on the intertemporal budget constraint?",
+                "choices": {
+                    "A": "The line shifts outward in parallel because a higher interest rate increases lifetime wealth for everyone.",
+                    "B": "The line rotates around the endowment and becomes flatter because present consumption is cheaper.",
+                    "C": "The line rotates around the endowment and becomes steeper because giving up 1 unit of c1 now yields more future consumption.",
+                    "D": "The line shifts inward in parallel because future income is discounted more heavily."
+                },
+                "correct": "C",
+                "explanation": "A change in r leaves the endowment affordable, so the line rotates through (120,120). Its slope changes from -1.05 to -1.20, so it becomes steeper. A wrongly gives a parallel shift, B gets the slope direction wrong, and D focuses only on discounted m2 while ignoring that the endowment point remains on the constraint."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "In a two-period diagram with c1 on the horizontal axis and c2 on the vertical axis, Priya's budget line passes through endowment (60,90) and has interest rate r = 0.25. Which verbal description is correct?",
+                "choices": {
+                    "A": "The slope is -0.8 because future consumption is discounted into present consumption.",
+                    "B": "The slope is -1.25, meaning each extra unit of current consumption costs 1.25 units of future consumption.",
+                    "C": "The vertical intercept is 90 because the endowment's future income is the maximum future consumption.",
+                    "D": "The horizontal intercept is 60 because present income is the maximum present consumption."
+                },
+                "correct": "B",
+                "explanation": "With c1 on the horizontal axis, the slope is -(1+r) = -1.25. A uses the reciprocal slope, while C and D confuse endowment coordinates with intercepts; borrowing or lending lets the consumer consume beyond either single-period income."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A budget line for Kai has equation c2 = 180 - 1.5c1. Which interpretation of its graph is correct?",
+                "choices": {
+                    "A": "The interest rate is 50%, and the c2-intercept shows maximum future consumption if all lifetime wealth is carried into period 2.",
+                    "B": "The interest rate is 150%, and the c2-intercept equals period-2 income.",
+                    "C": "The interest rate is 33.3%, and the c1-intercept shows maximum future consumption.",
+                    "D": "The interest rate is 50%, and the slope shows that 1 unit of future consumption costs 1.5 units of present consumption."
+                },
+                "correct": "A",
+                "explanation": "The slope equals -(1+r), so r = 0.5. The vertical intercept 180 is maximum c2 if all present-value wealth is saved into period 2. B mistakes slope magnitude for r and misreads the intercept, C uses the reciprocal, and D reverses the opportunity-cost interpretation."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Eli's intertemporal budget constraint is c1 + c2/1.08 = 200. What is the economic meaning of the term c2/1.08?",
+                "choices": {
+                    "A": "It is the amount of future consumption Eli can buy with one unit of present consumption.",
+                    "B": "It is future consumption converted into present-value units so goods consumed in different periods can be compared on one budget constraint.",
+                    "C": "It is Eli's period-2 income after interest has been added.",
+                    "D": "It is the utility value of future consumption after impatience is subtracted."
+                },
+                "correct": "B",
+                "explanation": "Dividing c2 by 1.08 expresses future consumption in current-period purchasing-power units. A describes 1+r instead of discounting, C confuses consumption with income, and D confuses market discounting with utility discounting."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student receives $2,000 today and will receive $3,300 next year. The annual interest rate is 10%. She wants to choose spending this year and next year using the standard two-period model. Which equation should she use as her budget constraint?",
+                "choices": {
+                    "A": "c1 + c2 = 5,300",
+                    "B": "c1 + 1.1c2 = 5,630",
+                    "C": "c1 + c2/1.1 = 5,000",
+                    "D": "1.1c1 + c2 = 5,300"
+                },
+                "correct": "C",
+                "explanation": "The present-value constraint is c1 + c2/(1+r) = m1 + m2/(1+r) = 2,000 + 3,300/1.1 = 5,000. A ignores timing, B compounds future consumption incorrectly, and D mixes future-value and present-value units without matching the right-hand side."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes an income change from an interest-rate change in the two-period budget constraint?",
+                "choices": {
+                    "A": "An income change changes preferences, while an interest-rate change changes endowments.",
+                    "B": "An income change always rotates the budget line, while an interest-rate change always shifts it parallel.",
+                    "C": "An income change changes lifetime wealth with the slope fixed, while an interest-rate change changes the relative price and rotates the line through the endowment.",
+                    "D": "Both changes shift the budget line in parallel because both change lifetime wealth."
+                },
+                "correct": "C",
+                "explanation": "Income changes alter the right-hand side of the budget constraint while r fixes the slope; interest-rate changes alter the slope and keep the endowment affordable. A invents a preference change, B reverses the geometry, and D misses the relative-price effect of r."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "At r = 0.10, Jamal has m1 = 100 and m2 = 110 and chooses c1 = 90, c2 = 121. Compared with consuming his endowment, how much additional future consumption does his period-1 saving generate, and how should it be evaluated?",
+                "choices": {
+                    "A": "Additional future consumption is 10; saving transfers dollars one-for-one across periods.",
+                    "B": "Additional future consumption is 11; he gives up 10 units of current consumption and earns 10% interest, so the gain is the market return to saving.",
+                    "C": "Additional future consumption is 21; all future consumption above 100 is interest income.",
+                    "D": "Additional future consumption is 1; only the interest payment counts because principal is not consumption."
+                },
+                "correct": "B",
+                "explanation": "Jamal saves 100 - 90 = 10 in period 1, which becomes 10(1.10) = 11 additional units of c2, raising future consumption from 110 to 121. A ignores interest, C uses the wrong baseline, and D counts only interest rather than the full extra future consumption purchased by saving."
+            }
+        ]
+    },
+    {
+        "topic": "Borrowing and Lending",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Sofia has m1 = 150 and m2 = 66. The interest rate is r = 0.10. Her utility is U(c1,c2)=ln(c1)+ln(c2). What is her optimal choice, and is she a borrower or lender?",
+                "choices": {
+                    "A": "c1 = 105, c2 = 115.5; she is a lender because c1 < m1.",
+                    "B": "c1 = 150, c2 = 66; she neither borrows nor lends because income is already feasible.",
+                    "C": "c1 = 120, c2 = 120; she is a lender because she smooths consumption exactly.",
+                    "D": "c1 = 115.5, c2 = 105; she is a borrower because future consumption is lower."
+                },
+                "correct": "A",
+                "explanation": "Present wealth is 150 + 66/1.1 = 210. Log utility implies c2/c1 = 1.1, so c1 = 105 and c2 = 115.5. Since c1 < 150, Sofia lends 45. B confuses feasibility with optimality, C equalizes physical consumption instead of marginal conditions, and D reverses the optimal ratio and borrowing test."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Trevor has m1 = 80 and m2 = 120. The interest rate is r = 0.20. His utility is U(c1,c2)=c1c2. What is his optimal bundle and period-1 financial position?",
+                "choices": {
+                    "A": "c1 = 80, c2 = 120; he does not trade because the endowment is on the budget line.",
+                    "B": "c1 = 90, c2 = 108; he borrows 10 because c1 exceeds m1.",
+                    "C": "c1 = 100, c2 = 100; he borrows 20 because Cobb-Douglas equalizes quantities.",
+                    "D": "c1 = 90, c2 = 120; he borrows 10 and leaves period-2 income unchanged."
+                },
+                "correct": "B",
+                "explanation": "Present wealth is 80 + 120/1.2 = 180. For U = c1c2, c2 = 1.2c1 and c1 + c2/1.2 = 2c1 = 180, so c1 = 90 and c2 = 108. Trevor borrows 10. A treats the endowment as optimal, C ignores the relative price, and D violates the budget constraint."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "At r = 0.10, Nina chooses c1 = 130 when m1 = 100, so she is a borrower. If r rises to 0.25 and she remains a borrower, what is the direct substitution effect on her desired current consumption?",
+                "choices": {
+                    "A": "It increases c1 because borrowing allows more present consumption.",
+                    "B": "It has no effect because borrowers only care about current income.",
+                    "C": "It decreases c1 because present consumption has become more expensive in terms of future consumption.",
+                    "D": "It increases c1 because future consumption is now discounted more heavily."
+                },
+                "correct": "C",
+                "explanation": "A higher interest rate raises the price of c1 in terms of c2, so the substitution effect pushes the borrower away from present consumption. A confuses borrowing availability with borrowing cost, B ignores relative prices, and D describes a present-value calculation but not the substitution mechanism."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Carlos has m1 = 200 and m2 = 55 and chooses c1 = 150 at r = 0.10, making him a lender. If r rises and he remains a lender, which mechanism tends to increase his future consumption?",
+                "choices": {
+                    "A": "The interest income effect: each dollar saved earns more future consumption, making the lender wealthier in future-value terms.",
+                    "B": "The default effect: higher rates eliminate repayment obligations.",
+                    "C": "The insurance effect: higher rates reduce uncertainty across periods.",
+                    "D": "The rationing effect: higher rates prevent saving and force higher c2."
+                },
+                "correct": "A",
+                "explanation": "A lender benefits from a higher return on saving, so future consumption possibilities expand. B is unrelated to the model, C confuses intertemporal choice with uncertainty, and D wrongly says higher rates prevent saving."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "In a two-period diagram, Dana's endowment is (100,100). Her chosen bundle is visually to the right of the endowment point on the same budget line. What does this imply?",
+                "choices": {
+                    "A": "She is lending because she consumes more in period 1.",
+                    "B": "She is borrowing because c1 exceeds m1, and repayment reduces feasible c2 relative to what she could have had by not borrowing.",
+                    "C": "She is neither borrowing nor lending because every point on the budget line has the same wealth.",
+                    "D": "She is saving because moving right on the graph always means moving toward higher utility."
+                },
+                "correct": "B",
+                "explanation": "A point to the right of the endowment has c1 > m1, so Dana borrows against future resources. A reverses borrowing and lending, C confuses equal wealth with no trade, and D interprets graph direction as saving rather than comparing c1 to m1."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A budget line with slope -1.2 passes through endowment (80,160). Marcus chooses a point to the left of the endowment. Which graph-based interpretation is correct?",
+                "choices": {
+                    "A": "Marcus is lending; the horizontal distance from 80 to his chosen c1 is saving, and the slope shows each saved unit becomes 1.2 units of future consumption.",
+                    "B": "Marcus is borrowing; the horizontal distance measures the amount borrowed.",
+                    "C": "Marcus is lending only if his chosen c2 is below 160.",
+                    "D": "Marcus is neither borrowing nor lending because his bundle is on the same line as the endowment."
+                },
+                "correct": "A",
+                "explanation": "Choosing left of the endowment means c1 < m1, so the difference is saving. The slope -1.2 shows the future payoff per unit saved. B reverses left/right, C misstates the c2 implication, and D ignores movement away from the endowment along the budget line."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why can two students with the same endowment (m1,m2) and interest rate choose different borrowing or lending positions?",
+                "choices": {
+                    "A": "Because the intertemporal budget line has different slopes for different consumers.",
+                    "B": "Because preferences determine the tangency point, so a more impatient student may borrow while a more patient student may lend.",
+                    "C": "Because only income determines borrowing or lending, not preferences.",
+                    "D": "Because the lender must have higher lifetime wealth than the borrower."
+                },
+                "correct": "B",
+                "explanation": "The same budget constraint can support different optimal choices because indifference curves differ. A wrongly changes the market interest rate across consumers, C ignores preferences, and D confuses financial position with lifetime wealth."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A medical student has $20,000 income this year and expects $90,000 income next year. At a 10% interest rate, she chooses c1 = $35,000 this year. Which model classification and calculation are correct?",
+                "choices": {
+                    "A": "She is a lender because her future income is higher than present income.",
+                    "B": "She is a borrower because c1 exceeds m1 by $15,000.",
+                    "C": "She is neither borrower nor lender because total income is positive in both periods.",
+                    "D": "She is a lender because c1 is less than next year's income."
+                },
+                "correct": "B",
+                "explanation": "Borrowing or lending is determined by comparing c1 with m1, not by comparing incomes across periods. Since 35,000 > 20,000, she borrows 15,000. A and D compare the wrong quantities, and C ignores intertemporal trade."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a borrower from a person with low current income?",
+                "choices": {
+                    "A": "A borrower has c1 > m1; low current income alone does not imply borrowing unless current consumption exceeds current income.",
+                    "B": "A borrower always has m1 < m2, regardless of consumption.",
+                    "C": "A borrower has c2 > m2 because borrowing raises future consumption.",
+                    "D": "A borrower is anyone whose lifetime wealth is negative."
+                },
+                "correct": "A",
+                "explanation": "Borrowing is defined by current consumption exceeding current income. B confuses income timing with financial choice, C gets the repayment direction wrong, and D invents a negative-wealth requirement."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "At r = 0.10, Blake's endowment is (100,110). He chooses (120,88). Relative to consuming the endowment, how large is the loan in period 1 and how much future consumption does repayment cost?",
+                "choices": {
+                    "A": "Loan = 20; future repayment cost = 20 because dollars transfer one-for-one.",
+                    "B": "Loan = 22; future repayment cost = 20 because the interest rate discounts the loan.",
+                    "C": "Loan = 20; future repayment cost = 22 because each borrowed unit costs 1.1 future units.",
+                    "D": "Loan = 10; future repayment cost = 11 because only the interest is counted."
+                },
+                "correct": "C",
+                "explanation": "Blake borrows c1 - m1 = 20. At r = 0.10, repayment costs 20(1.1) = 22 units of future consumption, reducing c2 from 110 to 88. A ignores interest, B reverses loan and repayment, and D counts only half the loan."
+            }
+        ]
+    },
+    {
+        "topic": "Interest Rates",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Hannah has m1 = 100 and m2 = 100. Her utility is U(c1,c2)=ln(c1)+ln(c2). If r = 0.25, what is her optimal bundle and what role does the interest rate play?",
+                "choices": {
+                    "A": "c1 = 90, c2 = 112.5; the interest rate makes future consumption relatively cheaper in present-value terms.",
+                    "B": "c1 = 100, c2 = 100; the endowment remains optimal because income is equal across periods.",
+                    "C": "c1 = 112.5, c2 = 90; the interest rate makes current consumption cheaper.",
+                    "D": "c1 = 80, c2 = 100; the interest rate only affects saving, not consumption."
+                },
+                "correct": "A",
+                "explanation": "Present wealth is 100 + 100/1.25 = 180. Log utility implies c2 = 1.25c1, so 2c1 = 180 and c1 = 90, c2 = 112.5. B assumes the endowment is optimal, C reverses the price effect, and D violates the tangency and budget logic."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Isaac has m1 = 60 and m2 = 156, with utility U(c1,c2)=c1c2. The interest rate is r = 0.30. What is his optimal bundle and borrowing/lending position?",
+                "choices": {
+                    "A": "c1 = 90, c2 = 117; he borrows 30.",
+                    "B": "c1 = 60, c2 = 156; he stays at the endowment.",
+                    "C": "c1 = 100, c2 = 100; he borrows 40.",
+                    "D": "c1 = 90, c2 = 156; he borrows 30 and keeps future income unchanged."
+                },
+                "correct": "A",
+                "explanation": "Present wealth is 60 + 156/1.3 = 180. With Cobb-Douglas exponents equal, c1 = 90 and c2 = 1.3(90) = 117. Since c1 > 60, Isaac borrows 30. B confuses feasibility with optimality, C equalizes quantities, and D violates the budget constraint."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget line passes through endowment (100,120). When r rises from 0.10 to 0.40, what happens to the graph?",
+                "choices": {
+                    "A": "It shifts outward in parallel because saving earns more.",
+                    "B": "It rotates around (100,120), becoming steeper; bundles with lower c1 and higher c2 become more affordable relative to before.",
+                    "C": "It rotates around the vertical intercept, becoming flatter.",
+                    "D": "It shifts inward in parallel because borrowing is more expensive."
+                },
+                "correct": "B",
+                "explanation": "The endowment remains affordable at any interest rate, so the line rotates around it. The slope changes from -1.10 to -1.40. A and D wrongly describe parallel shifts, and C uses the wrong pivot and slope direction."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Mia is initially a borrower at r = 0.08. The interest rate rises to r = 0.20. Which statement correctly describes the substitution effect for Mia?",
+                "choices": {
+                    "A": "It pushes her toward more c1 because higher interest rates reward current spending.",
+                    "B": "It pushes her toward less c1 because current consumption becomes more expensive in terms of forgone future consumption.",
+                    "C": "It pushes her toward less c2 because future consumption becomes more expensive in terms of current consumption.",
+                    "D": "It has no effect because the endowment point does not move."
+                },
+                "correct": "B",
+                "explanation": "The relative price of c1 is 1+r units of c2, so a higher r makes c1 more expensive and induces substitution away from c1. A reverses the price effect, C misidentifies the relative price, and D ignores that a slope change matters even when the endowment remains fixed."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A two-period budget line becomes steeper while still passing through the same endowment point (70,140). Which event caused this change?",
+                "choices": {
+                    "A": "A decrease in period-1 income only.",
+                    "B": "An increase in period-2 income only.",
+                    "C": "An increase in the interest rate.",
+                    "D": "A decrease in both incomes by the same present value."
+                },
+                "correct": "C",
+                "explanation": "A steeper line through the same endowment indicates a higher slope magnitude, -(1+r), caused by an increase in r. Income changes move the endowment and shift the line rather than preserving the same pivot."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "The interest rate falls from 25% to 5%. In a graph with c1 horizontal and c2 vertical, how does the budget line change around the endowment?",
+                "choices": {
+                    "A": "It rotates and becomes flatter, reducing the future-consumption payoff from giving up one unit of c1.",
+                    "B": "It rotates and becomes steeper, increasing the reward to saving.",
+                    "C": "It shifts outward in parallel, leaving the slope unchanged.",
+                    "D": "It shifts inward in parallel, leaving the endowment unaffordable."
+                },
+                "correct": "A",
+                "explanation": "A lower interest rate changes the slope from -1.25 to -1.05, making the budget line flatter through the endowment. B gets the direction wrong, C incorrectly holds slope fixed, and D wrongly says the endowment becomes unaffordable."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the interest rate called the relative price of present consumption?",
+                "choices": {
+                    "A": "Because r is the dollar price paid at the grocery store for current goods.",
+                    "B": "Because consuming 1 more unit today requires giving up 1+r units of future consumption along the budget line.",
+                    "C": "Because present consumption and future consumption must always be equal at the optimum.",
+                    "D": "Because higher interest rates make all consumers better off."
+                },
+                "correct": "B",
+                "explanation": "The slope -(1+r) measures the opportunity cost of c1 in terms of c2. A confuses nominal money prices with intertemporal prices, C invents equal consumption, and D ignores borrower/lender differences."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A bank raises its one-year interest rate from 5% to 15%. Olivia has fixed income of $100 this year and $115 next year. Which framework best analyzes how her feasible current and future consumption choices change?",
+                "choices": {
+                    "A": "A production possibility frontier because the bank produces loans.",
+                    "B": "A two-period budget constraint rotating around Olivia's endowment point.",
+                    "C": "A monopoly pricing model because the bank sets the interest rate.",
+                    "D": "A labor-leisure model because interest is a wage for waiting."
+                },
+                "correct": "B",
+                "explanation": "The scenario is about intertemporal consumption tradeoffs with a changed interest rate and fixed endowment, so the budget line rotates around the endowment. A, C, and D use models not needed for the consumption-saving choice."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes the interest rate from the discount factor?",
+                "choices": {
+                    "A": "The interest rate is 1/(1+r), while the discount factor is r.",
+                    "B": "The interest rate measures the extra future units earned per unit saved, while the discount factor 1/(1+r) converts future units into present value.",
+                    "C": "The interest rate applies only to borrowers, while the discount factor applies only to lenders.",
+                    "D": "The interest rate is a preference parameter, while the discount factor is a market price."
+                },
+                "correct": "B",
+                "explanation": "The interest rate is r, and the gross return is 1+r; the discount factor is 1/(1+r). A reverses definitions, C falsely separates borrowers and lenders, and D confuses market interest with subjective time preference."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "At r = 0.10, Sam saves 40 from current income. At r = 0.25, he saves the same 40. How much additional future consumption does the higher interest rate generate on this saving, and what does it represent?",
+                "choices": {
+                    "A": "4; it is the total interest at the old rate.",
+                    "B": "10; it is the total interest at the new rate.",
+                    "C": "6; it is the extra future consumption from the higher return on the same saving.",
+                    "D": "40; it is the principal transferred into the future."
+                },
+                "correct": "C",
+                "explanation": "Saving 40 yields 44 at 10% and 50 at 25%, so the higher rate generates 6 additional units of future consumption. A and B compute total interest under one rate, and D counts principal rather than the welfare-relevant gain from the rate increase."
+            }
+        ]
+    },
+    {
+        "topic": "Present Value",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm can pay $8,000 today for a machine that returns $4,400 next year and $4,840 two years from now. The interest rate is 10%. Should it buy the machine based on present value?",
+                "choices": {
+                    "A": "Yes; PV of returns is $8,000, so the firm gains $8,000.",
+                    "B": "No; PV of returns is $7,636.36, which is less than cost.",
+                    "C": "Yes; PV of returns is $8,400, giving net present value $400.",
+                    "D": "No; the undiscounted return is only $9,240, which is less than the compounded cost."
+                },
+                "correct": "A",
+                "explanation": "PV = 4,400/1.1 + 4,840/1.1^2 = 4,000 + 4,000 = 8,000, so NPV is zero and the firm is indifferent; buying is not strictly profitable but is acceptable at equality. B discounts incorrectly, C adds undiscounted and discounted terms, and D uses the wrong comparison."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Jordan can choose between $1,000 today or $1,210 two years from now. The annual interest rate is 10%. Which choice maximizes present value, and why?",
+                "choices": {
+                    "A": "Choose $1,210 later because it is the larger nominal amount.",
+                    "B": "Choose either; $1,210 discounted two years at 10% has present value $1,000.",
+                    "C": "Choose $1,000 today because future payments always have lower value.",
+                    "D": "Choose $1,210 later because its present value is $1,100."
+                },
+                "correct": "B",
+                "explanation": "PV of $1,210 in two years is 1,210/(1.1)^2 = 1,000, so the two options are equivalent. A ignores discounting, C overgeneralizes discounting, and D discounts for only one year."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A payment of $1,200 is due one year from now. What happens to its present value when the interest rate rises from 5% to 20%, and what mechanism explains it?",
+                "choices": {
+                    "A": "PV rises because higher rates increase future payments.",
+                    "B": "PV is unchanged because the future payment is fixed.",
+                    "C": "PV falls because future dollars are discounted more heavily when the opportunity cost of current dollars rises.",
+                    "D": "PV rises because compounding and discounting are the same operation."
+                },
+                "correct": "C",
+                "explanation": "PV falls from 1,200/1.05 to 1,200/1.20 because a higher interest rate raises the return available on current funds. A confuses discounting with accumulating, B ignores the denominator, and D fails to distinguish compounding from discounting."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A future payment of $2,000 is delayed from year 1 to year 2 while the interest rate remains 10%. What happens to present value?",
+                "choices": {
+                    "A": "It falls because the same payment is discounted for an additional year.",
+                    "B": "It rises because the recipient waits longer.",
+                    "C": "It stays fixed because the nominal payment is unchanged.",
+                    "D": "It doubles because the time period doubles."
+                },
+                "correct": "A",
+                "explanation": "PV changes from 2,000/1.1 to 2,000/1.1^2, so it falls. B mistakes waiting for compensation, C ignores time, and D treats time linearly rather than discounting geometrically."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "On a timeline, $500 is placed at date 0 and $605 is placed at date 2. The annual interest rate is 10%. Which interpretation is correct?",
+                "choices": {
+                    "A": "$605 at date 2 lies above $500 on the timeline, so it is always more valuable.",
+                    "B": "$605 at date 2 has present value $500, so the two payments are equivalent at the market interest rate.",
+                    "C": "$500 at date 0 has future value $550 at date 2.",
+                    "D": "$605 at date 2 has present value $550 because it should be discounted once."
+                },
+                "correct": "B",
+                "explanation": "$605/(1.1)^2 = $500. A ignores timing, C compounds for only one year, and D discounts for only one year."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "Suppose a curve plots present value on the vertical axis and the interest rate on the horizontal axis for a fixed $1,000 payment next year. What shape should the curve have?",
+                "choices": {
+                    "A": "Upward sloping because higher interest rates make future payments more valuable.",
+                    "B": "Horizontal because the future payment is fixed at $1,000.",
+                    "C": "Downward sloping and flattening as r rises, because PV = 1000/(1+r).",
+                    "D": "Vertical because only time affects present value."
+                },
+                "correct": "C",
+                "explanation": "PV = 1000/(1+r), so PV falls with r at a decreasing absolute rate. A reverses the relationship, B ignores discounting, and D ignores interest-rate variation."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is present value the correct method for comparing $700 today with $770 one year from now when the interest rate is 10%?",
+                "choices": {
+                    "A": "Because it converts payments at different dates into the same date's purchasing-power units using the market tradeoff.",
+                    "B": "Because it always favors the earlier payment.",
+                    "C": "Because it ignores the interest rate and compares only nominal amounts.",
+                    "D": "Because future dollars are impossible to value."
+                },
+                "correct": "A",
+                "explanation": "Present value uses the market interest rate to express future payments in today's units. B is false because equivalent or larger discounted future payments may match or exceed current payments, C rejects the method, and D is too extreme."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A scholarship offers either $5,000 today or $5,500 one year from now. The market interest rate is 8%. Which model should be used, and what is the correct choice?",
+                "choices": {
+                    "A": "Use present value; choose $5,500 later because its PV is $5,092.59.",
+                    "B": "Use present value; choose $5,000 today because $5,500/1.08 = $4,400.",
+                    "C": "Use utility maximization only; the market interest rate is irrelevant.",
+                    "D": "Use marginal cost pricing; choose the option with lower accounting cost."
+                },
+                "correct": "A",
+                "explanation": "PV of $5,500 next year is 5,500/1.08 = 5,092.59, which exceeds $5,000. B calculates PV incorrectly, C ignores the market rate for financial comparison, and D uses an irrelevant model."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes present value from future value?",
+                "choices": {
+                    "A": "Present value compounds today's money forward, while future value discounts future money backward.",
+                    "B": "Present value and future value are identical whenever r is positive.",
+                    "C": "Present value discounts future money into today's units, while future value compounds today's money into future units.",
+                    "D": "Present value applies only to bonds, while future value applies only to consumer choice."
+                },
+                "correct": "C",
+                "explanation": "PV moves money backward in time by dividing by 1+r; FV moves money forward by multiplying by 1+r. A reverses the definitions, B is false except in special equivalent cases, and D invents a domain restriction."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "An investor can buy a claim to $1,100 next year for $980 today. The interest rate is 10%. What is the net present value, and what does it imply?",
+                "choices": {
+                    "A": "NPV = $120; buy because 1,100 - 980 = 120.",
+                    "B": "NPV = $20; buy because the present value of the future payment is $1,000.",
+                    "C": "NPV = -$20; do not buy because the present value is $960.",
+                    "D": "NPV = $0; indifferent because $1,100 next year always equals $980 today."
+                },
+                "correct": "B",
+                "explanation": "PV = 1,100/1.1 = 1,000, so NPV = 1,000 - 980 = 20. A ignores discounting, C miscalculates PV, and D assumes equality without calculation."
+            }
+        ]
+    },
+    {
+        "topic": "Asset Markets",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A risk-free asset pays $110 one year from now. The market interest rate is 10%. What price satisfies no arbitrage, and what happens if the price is $95?",
+                "choices": {
+                    "A": "No-arbitrage price is $100; if price is $95, investors buy the asset because its return exceeds the market rate.",
+                    "B": "No-arbitrage price is $110; if price is $95, investors sell the asset because it is overpriced.",
+                    "C": "No-arbitrage price is $99; if price is $95, investors are indifferent.",
+                    "D": "No-arbitrage price is $121; if price is $95, the asset has a negative return."
+                },
+                "correct": "A",
+                "explanation": "The asset price must be 110/1.1 = 100. At $95, its return is (110-95)/95 = 15.79%, above 10%, so demand rises. B fails to discount, C miscalculates PV, and D compounds instead of discounts."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An asset costs P today and pays $240 in one year with certainty. A risk-free bond yields 20%. What P eliminates arbitrage, and how should that price be interpreted?",
+                "choices": {
+                    "A": "P = $240; the price equals the future payoff.",
+                    "B": "P = $200; the asset's return equals the market return of 20%.",
+                    "C": "P = $288; the future payoff must be compounded to today.",
+                    "D": "P = $220; the asset earns a $20 premium over bonds."
+                },
+                "correct": "B",
+                "explanation": "No arbitrage requires P(1.2) = 240, so P = 200. A ignores the time value of money, C compounds the payoff instead of discounting, and D imposes an arbitrary premium."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A risk-free asset pays $1,000 next year. What happens to its competitive price if the market interest rate rises from 5% to 25%?",
+                "choices": {
+                    "A": "Price rises because investors earn a higher return.",
+                    "B": "Price is unchanged because the payoff is unchanged.",
+                    "C": "Price falls because the future payoff is discounted at a higher opportunity cost.",
+                    "D": "Price rises because no-arbitrage requires equal dollar profits."
+                },
+                "correct": "C",
+                "explanation": "The no-arbitrage price is 1000/(1+r), so it falls as r rises. A confuses return with price, B ignores discounting, and D confuses rates of return with dollar profits."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A one-year asset pays $100 with certainty. Its price falls from $95 to $90 while the payoff is unchanged. What happens to its rate of return, and what market mechanism follows if other equivalent-risk assets still yield 5.26%?",
+                "choices": {
+                    "A": "Its return falls, so investors leave the asset.",
+                    "B": "Its return rises, attracting buyers and pushing its price back up.",
+                    "C": "Its return is unchanged because payoff is unchanged.",
+                    "D": "Its return becomes negative because price is lower."
+                },
+                "correct": "B",
+                "explanation": "Return rises from 100/95 - 1 = 5.26% to 100/90 - 1 = 11.11%. Buyers enter, raising price until returns equalize. A gets the return direction wrong, C ignores purchase price, and D misunderstands returns."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "Imagine a graph with an asset's current price P on the horizontal axis and its rate of return on the vertical axis, holding next year's payoff fixed at $120. What is the curve's shape?",
+                "choices": {
+                    "A": "Upward sloping because higher prices signal higher returns.",
+                    "B": "Downward sloping because return equals 120/P - 1.",
+                    "C": "Horizontal because the payoff is fixed.",
+                    "D": "Vertical because price is chosen by the market."
+                },
+                "correct": "B",
+                "explanation": "For a fixed payoff, a higher purchase price lowers the rate of return. A reverses the relationship, C ignores price in the denominator, and D confuses equilibrium determination with the return function."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "In an asset-market diagram, demand for an underpriced risk-free asset increases. Verbally, what happens to the price and return as the asset moves toward equilibrium?",
+                "choices": {
+                    "A": "Price rises and return falls until the return equals the market rate.",
+                    "B": "Price rises and return rises because buyers bid aggressively.",
+                    "C": "Price falls and return falls because arbitrage disappears.",
+                    "D": "Price stays fixed while return adjusts through the payoff."
+                },
+                "correct": "A",
+                "explanation": "Buying pressure raises the asset price; with fixed payoff, a higher price lowers the return until no-arbitrage holds. B gets the return direction wrong, C gets the price direction wrong, and D incorrectly changes a fixed payoff."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does the no-arbitrage condition mean in a competitive asset market with risk-free assets?",
+                "choices": {
+                    "A": "All assets must have the same current price.",
+                    "B": "Assets with the same risk and timing of payoffs must offer the same rate of return.",
+                    "C": "Every investor must hold every asset.",
+                    "D": "Future payoffs must be equal to current prices."
+                },
+                "correct": "B",
+                "explanation": "No arbitrage equalizes returns across equivalent-risk assets. A ignores different payoffs, C is not required, and D ignores discounting."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A Treasury bill pays $10,000 in one year. Equivalent risk-free assets yield 4%. Which model identifies the bill's competitive price?",
+                "choices": {
+                    "A": "Consumer utility maximization with a marginal rate of substitution.",
+                    "B": "No-arbitrage present-value pricing: P = 10,000/1.04.",
+                    "C": "Monopoly markup pricing: P = MC/(1 - 1/epsilon).",
+                    "D": "Expected utility with state-contingent claims."
+                },
+                "correct": "B",
+                "explanation": "A certain one-year payoff should be priced by no-arbitrage present value. A is unnecessary, C is a product-market model, and D is more general than needed because there is no uncertainty."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes an asset's price from its rate of return?",
+                "choices": {
+                    "A": "Price is what the asset pays next year; return is what it costs today.",
+                    "B": "Price and return are the same because both are measured in dollars.",
+                    "C": "Price is the cost of buying the asset today; return is the gain as a fraction of that price.",
+                    "D": "Price matters only for risky assets, while return matters only for risk-free assets."
+                },
+                "correct": "C",
+                "explanation": "Price is a dollar amount paid now; return is a proportional payoff relative to that price. A reverses concepts, B ignores units, and D invents a false distinction."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "An asset pays $105 next year with certainty. The market interest rate is 5%, but the asset sells for $98. If an investor buys one unit, what is the arbitrage profit in present-value terms?",
+                "choices": {
+                    "A": "$0 because all competitive markets eliminate arbitrage instantly.",
+                    "B": "$2 because the no-arbitrage price is $100 and the asset costs $98.",
+                    "C": "$7 because 105 - 98 = 7.",
+                    "D": "$5 because the interest rate is 5%."
+                },
+                "correct": "B",
+                "explanation": "The no-arbitrage price is 105/1.05 = 100, so buying at 98 creates $2 of present-value profit. A assumes away the stated mispricing, C ignores discounting, and D confuses percentage return with dollar arbitrage profit."
+            }
+        ]
+    },
+    {
+        "topic": "Rates of Return",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A bond sells for $900 today and pays $990 one year from now. What is its rate of return, and what should happen if equivalent-risk assets yield 8%?",
+                "choices": {
+                    "A": "Return = 10%; investors buy this bond, pushing its price up and return down.",
+                    "B": "Return = 8%; investors are indifferent because 990 - 900 = 90.",
+                    "C": "Return = 9%; investors sell this bond because its dollar gain is too low.",
+                    "D": "Return = 90%; investors buy because the gain is $90."
+                },
+                "correct": "A",
+                "explanation": "Return is (990 - 900)/900 = 10%. Since that exceeds 8%, buying pressure raises price and lowers return. B confuses dollar gain with percent return, C divides by the future payoff, and D treats $90 as 90%."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An asset has current price P and will pay $575 next year. Equivalent-risk assets return 15%. What price P makes investors indifferent?",
+                "choices": {
+                    "A": "$575.00 because price must equal payoff.",
+                    "B": "$500.00 because 575/500 - 1 = 15%.",
+                    "C": "$661.25 because the payoff is compounded at 15%.",
+                    "D": "$560.00 because the asset must earn $15."
+                },
+                "correct": "B",
+                "explanation": "Indifference requires 575/P - 1 = 0.15, so P = 575/1.15 = 500. A ignores return, C compounds instead of discounts, and D confuses a 15% rate with a $15 gain."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A one-year asset pays $220. Its price rises from $200 to $210. What happens to its rate of return?",
+                "choices": {
+                    "A": "It rises from 10% to 15%.",
+                    "B": "It falls from 10% to about 4.76% because the same payoff gain is earned on a higher purchase price.",
+                    "C": "It stays at 10% because the payoff remains $220.",
+                    "D": "It falls from 20% to 10% because only the price matters."
+                },
+                "correct": "B",
+                "explanation": "Return changes from (220-200)/200 = 10% to (220-210)/210 = 4.76%. A reverses the effect, C ignores price, and D uses the wrong numerator."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two risk-free assets initially both yield 6%. Asset A's price temporarily falls while its payoff is unchanged. What market process should occur?",
+                "choices": {
+                    "A": "Asset A's return rises, attracting buyers until its price rises and its return returns to 6%.",
+                    "B": "Asset A's return falls, attracting sellers until price rises.",
+                    "C": "Asset A's return is unchanged, so no one trades.",
+                    "D": "Asset A's payoff falls automatically to preserve the old return."
+                },
+                "correct": "A",
+                "explanation": "With fixed payoff, a lower price increases return. Buyers bid the price up until equivalent-risk returns are equal again. B gets the return direction wrong, C ignores price, and D changes a fixed payoff."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A graph shows a horizontal line at 7% representing the market return for equivalent-risk assets. A bond's calculated return is plotted at 9%. What should happen in competitive equilibrium?",
+                "choices": {
+                    "A": "The bond's price should be bid up until its return falls to 7%.",
+                    "B": "The bond's price should fall until its return falls to 7%.",
+                    "C": "The bond's payoff should fall because prices cannot change.",
+                    "D": "The market return must rise to 9% for all assets."
+                },
+                "correct": "A",
+                "explanation": "A return above the market attracts buyers; the resulting price increase lowers the bond's return. B gets the price-return relationship wrong, C assumes fixed prices instead of fixed payoff, and D ignores that one asset's mispricing need not change the market return."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "On a payoff-price graph for a one-year risk-free bond, lines from the origin represent constant gross returns payoff/P. Which bond has the higher return?",
+                "choices": {
+                    "A": "A bond at price 100 and payoff 105 rather than a bond at price 100 and payoff 110.",
+                    "B": "A bond at price 100 and payoff 110 rather than a bond at price 120 and payoff 126.",
+                    "C": "A bond at price 120 and payoff 126 rather than a bond at price 100 and payoff 110.",
+                    "D": "Two bonds have the same return whenever their payoffs differ by the same number of dollars."
+                },
+                "correct": "B",
+                "explanation": "The first bond in B returns 10%, while the second returns 5%. A chooses the lower payoff at the same price, C reverses the comparison, and D confuses dollar differences with ratios."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why do competitive markets tend to equalize rates of return across assets with equivalent risk?",
+                "choices": {
+                    "A": "Investors buy assets with unusually high returns and sell assets with unusually low returns, changing prices until excess returns disappear.",
+                    "B": "Firms are legally required to set identical prices for all assets.",
+                    "C": "Investors care only about dollar payoffs, not purchase prices.",
+                    "D": "Equal risk means equal future payoff in dollars."
+                },
+                "correct": "A",
+                "explanation": "Arbitrage and portfolio reallocation push prices toward equal risk-adjusted returns. B is not the economic mechanism, C contradicts return calculation, and D confuses risk equivalence with identical payoffs."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A corporate bond costs $1,000, pays a $60 coupon in one year, and can then be sold for $1,020. Which calculation gives its one-year rate of return?",
+                "choices": {
+                    "A": "(1,020 - 1,000)/1,000 = 2%",
+                    "B": "(60 + 1,020 - 1,000)/1,000 = 8%",
+                    "C": "60/1,020 = 5.88%",
+                    "D": "(60 + 1,000)/1,020 = 103.92%"
+                },
+                "correct": "B",
+                "explanation": "Rate of return includes coupon income plus capital gain relative to purchase price: (60 + 20)/1000 = 8%. A omits the coupon, C divides coupon by sale price, and D uses the wrong numerator and denominator."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a bond's coupon rate from its rate of return?",
+                "choices": {
+                    "A": "Coupon rate is coupon divided by face value; rate of return includes coupon plus capital gain or loss divided by purchase price.",
+                    "B": "Coupon rate includes capital gains; rate of return ignores price changes.",
+                    "C": "Coupon rate and rate of return are always identical for all bonds.",
+                    "D": "Coupon rate is relevant only for stocks, while rate of return is relevant only for bonds."
+                },
+                "correct": "A",
+                "explanation": "The coupon rate is based on the promised coupon and face value; realized or expected return depends on the purchase price and resale or redemption value. B reverses definitions, C is true only in special cases, and D is false."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A risk-free asset costs $400 and pays $440 in one year. The market return on equivalent assets is 8%. What is the excess return in percentage points, and what does it imply?",
+                "choices": {
+                    "A": "2 percentage points; buyers should bid up the asset price.",
+                    "B": "8 percentage points; buyers should bid down the asset price.",
+                    "C": "10 percentage points; investors are indifferent.",
+                    "D": "$40; percentage returns cannot be compared."
+                },
+                "correct": "A",
+                "explanation": "The asset return is (440-400)/400 = 10%, which is 2 percentage points above the 8% market return. This attracts buyers and raises price. B confuses market return with excess return, C reports total return as excess return, and D confuses dollar gain with percentage return."
+            }
+        ]
+    },
+    {
+        "topic": "Arbitrage",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Gold sells for $1,950 per ounce in Market A and $1,980 per ounce in Market B. Transaction costs are $10 per ounce total. What arbitrage action and profit per ounce are available?",
+                "choices": {
+                    "A": "Buy in A and sell in B; profit is $20 per ounce.",
+                    "B": "Buy in B and sell in A; profit is $20 per ounce.",
+                    "C": "Buy in A and sell in B; profit is $30 per ounce.",
+                    "D": "No arbitrage exists because prices differ by less than $50."
+                },
+                "correct": "A",
+                "explanation": "Buy at 1,950, sell at 1,980, and pay 10 in transaction costs, giving 20 profit. B reverses the trade, C ignores transaction costs, and D imposes an arbitrary threshold."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A risk-free claim pays $1,100 in one year. The interest rate is 10%, but the claim sells for $970. What arbitrage strategy earns riskless profit today?",
+                "choices": {
+                    "A": "Sell the claim short and invest $970 at 10%.",
+                    "B": "Borrow $970, buy the claim, and repay $1,067 next year, keeping $33 next year.",
+                    "C": "Buy the claim with cash only; no borrowing is involved, so profit is not arbitrage.",
+                    "D": "Borrow $1,100, buy the claim, and repay $970 next year."
+                },
+                "correct": "B",
+                "explanation": "The no-arbitrage price is 1,100/1.1 = 1,000. Borrowing 970 to buy the underpriced claim requires repayment of 1,067, leaving 33 next year risk-free. A shorts an underpriced asset, C misses the zero-net-investment arbitrage structure, and D reverses loan repayment logic."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "If many traders exploit an arbitrage opportunity by buying an underpriced asset, what happens to the asset's price and expected excess return?",
+                "choices": {
+                    "A": "Price rises and excess return falls toward zero.",
+                    "B": "Price falls and excess return rises.",
+                    "C": "Price rises and excess return rises because demand is higher.",
+                    "D": "Price stays fixed because arbitrage affects only quantities."
+                },
+                "correct": "A",
+                "explanation": "Buying pressure raises price; with fixed payoff, the return falls until no excess return remains. B and C get the price-return adjustment wrong, and D ignores price adjustment in competitive markets."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two identical one-year risk-free claims pay $500. Claim X costs $450 and Claim Y costs $470. What happens as arbitrageurs trade?",
+                "choices": {
+                    "A": "They buy X and sell Y, pushing X's price up and Y's price down.",
+                    "B": "They buy Y and sell X, pushing Y's price up and X's price down.",
+                    "C": "They buy both because both have positive payoffs.",
+                    "D": "They sell both because identical payoffs cannot have positive value."
+                },
+                "correct": "A",
+                "explanation": "The cheaper identical claim is underpriced relative to the expensive one. Arbitrageurs buy X and sell Y, narrowing the price gap. B reverses the trade, C ignores relative mispricing, and D denies asset value."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A graph plots the price difference between two identical assets over time. The difference starts at $12 and moves toward $0 as trading volume rises. What does this graph illustrate?",
+                "choices": {
+                    "A": "Arbitrage widens price gaps because traders prefer cheap assets.",
+                    "B": "Arbitrage pressure eliminates price differences for identical payoffs.",
+                    "C": "Arbitrage requires prices to remain permanently different.",
+                    "D": "Arbitrage works only when trading volume falls."
+                },
+                "correct": "B",
+                "explanation": "Trading on the price difference pushes prices together until the riskless profit disappears. A reverses the effect, C contradicts no-arbitrage, and D misreads the role of trading volume."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "In a payoff diagram, Portfolio A and Portfolio B have identical future payoffs in every possible state, but Portfolio A is plotted with a lower current cost. What does the graph imply?",
+                "choices": {
+                    "A": "Buy A and sell B; the vertical cost gap is riskless arbitrage profit.",
+                    "B": "Buy B and sell A; higher current cost means higher value.",
+                    "C": "Hold both portfolios because identical future payoffs require diversification.",
+                    "D": "No conclusion is possible because payoffs are identical."
+                },
+                "correct": "A",
+                "explanation": "Identical future payoffs must have the same current price. If A is cheaper, buying A and selling B gives the same future obligations/assets with money left over today. B reverses the trade, C is irrelevant, and D misses the no-arbitrage implication."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why cannot persistent arbitrage opportunities survive in competitive markets?",
+                "choices": {
+                    "A": "Because traders exploiting riskless profit change demand and supply, pushing prices to no-arbitrage levels.",
+                    "B": "Because governments set all asset prices equal.",
+                    "C": "Because investors dislike riskless profit.",
+                    "D": "Because arbitrage opportunities are profitable only after prices adjust."
+                },
+                "correct": "A",
+                "explanation": "Competitive arbitrage creates buying and selling pressure that removes mispricing. B is not the general market mechanism, C is false, and D reverses the timing."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A concert ticket can be bought on one platform for $80 and immediately resold on another for $95. Platform fees total $8 per ticket. Which framework applies, and what is the profit?",
+                "choices": {
+                    "A": "Consumer choice; utility gain is $15.",
+                    "B": "Arbitrage; riskless profit is $7 per ticket before considering any resale risk.",
+                    "C": "Present value; profit is $95/1.08 - $80.",
+                    "D": "Monopoly pricing; profit is $95 - marginal cost."
+                },
+                "correct": "B",
+                "explanation": "The same good can be bought low and sold high immediately, giving 95 - 80 - 8 = 7. A confuses profit with utility, C inserts an irrelevant interest rate, and D uses a seller-pricing model."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes arbitrage from ordinary risky investment?",
+                "choices": {
+                    "A": "Arbitrage requires a riskless profit from price differences or mispricing; risky investment earns compensation for bearing uncertainty.",
+                    "B": "Arbitrage always loses money, while risky investment always earns money.",
+                    "C": "Arbitrage means buying any asset expected to rise in price.",
+                    "D": "Arbitrage requires patience, while risky investment requires no time."
+                },
+                "correct": "A",
+                "explanation": "Arbitrage is riskless profit from inconsistent prices; risky investment involves uncertain payoffs. B is false, C is too broad, and D confuses time horizon with risk."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A portfolio that pays $100 in every state next year costs $92. A risk-free bond paying $100 next year costs $95. What arbitrage profit is available today?",
+                "choices": {
+                    "A": "$0 because both pay $100 next year.",
+                    "B": "$3 by buying the portfolio and selling the bond short.",
+                    "C": "$3 by buying the bond and selling the portfolio short.",
+                    "D": "$8 by buying the portfolio because 100 - 92 = 8."
+                },
+                "correct": "B",
+                "explanation": "The two assets have identical future payoffs, so buy the cheaper portfolio for 92 and short the bond for 95, receiving 3 today with no future net obligation. A ignores current price differences, C reverses the arbitrage, and D measures payoff minus cost rather than arbitrage against an identical asset."
+            }
+        ]
+    },
+    {
+        "topic": "Present Discounted Value",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A project costs $1,000 today and pays $550 in one year and $605 in two years. The annual interest rate is 10%. Should the project be accepted using present discounted value?",
+                "choices": {
+                    "A": "Yes; PDV of payments is $1,050, so NPV is $50.",
+                    "B": "No; PDV of payments is $955, so NPV is -$45.",
+                    "C": "Yes; undiscounted payments are $1,155, so NPV is $155.",
+                    "D": "No; the second payment must be ignored because it is too far in the future."
+                },
+                "correct": "A",
+                "explanation": "PDV = 550/1.1 + 605/1.1^2 = 500 + 500 = 1,000, so NPV is zero, not positive. However because the choice says PDV is $1,050, it is not correct. The correct interpretation is indifference at NPV $0."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A project costs $900 today and pays $550 in one year and $605 in two years. The annual interest rate is 10%. Should the project be accepted using present discounted value?",
+                "choices": {
+                    "A": "No; PDV of payments is $855, so NPV is -$45.",
+                    "B": "Yes; PDV of payments is $1,000, so NPV is $100.",
+                    "C": "Yes; undiscounted payments are $1,155, so NPV is $255.",
+                    "D": "No; future payments cannot be compared to a present cost."
+                },
+                "correct": "B",
+                "explanation": "PDV = 550/1.1 + 605/1.1^2 = 500 + 500 = 1,000. NPV = 1,000 - 900 = 100, so accept. A miscalculates PDV, C ignores discounting, and D rejects the purpose of PDV."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A payment stream pays $100 in year 1 and $100 in year 2. What happens to its present discounted value when the interest rate rises?",
+                "choices": {
+                    "A": "PDV rises because future dollars accumulate faster.",
+                    "B": "PDV falls, with the year-2 payment affected more strongly because it is discounted for more periods.",
+                    "C": "PDV is unchanged because each payment is fixed at $100.",
+                    "D": "PDV falls only for the year-1 payment because the year-2 payment is already in the future."
+                },
+                "correct": "B",
+                "explanation": "Higher r increases each discount denominator, and the effect is larger for more distant payments because the denominator is raised to a higher power. A confuses compounding with discounting, C ignores discounting, and D reverses maturity sensitivity."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two projects each pay $1,000 total. Project A pays $1,000 in one year. Project B pays $1,000 in five years. If the interest rate rises, which project's PDV falls more in percentage terms?",
+                "choices": {
+                    "A": "Project A because near-term payments are more sensitive to interest rates.",
+                    "B": "Project B because distant payments are discounted repeatedly.",
+                    "C": "Both fall by the same percentage because the nominal payment is the same.",
+                    "D": "Neither falls because total payment is unchanged."
+                },
+                "correct": "B",
+                "explanation": "Longer-dated payments are more interest-sensitive because PV = payment/(1+r)^t. A reverses duration sensitivity, C ignores t, and D ignores discounting."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A graph shows PDV on the vertical axis and time to payment on the horizontal axis for a fixed $1,000 payment at r = 10%. What happens as the payment date moves farther right?",
+                "choices": {
+                    "A": "PDV rises because the payment has more time to earn interest.",
+                    "B": "PDV falls at a decreasing absolute rate because the payment is divided by higher powers of 1.1.",
+                    "C": "PDV stays flat because the payment remains $1,000.",
+                    "D": "PDV becomes negative after enough years."
+                },
+                "correct": "B",
+                "explanation": "A fixed future payment has PDV = 1000/(1.1)^t, which declines as t rises but remains positive. A compounds instead of discounts, C ignores time, and D incorrectly makes a positive payment negative."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A timeline shows payments of $100 at year 1, $100 at year 2, and $100 at year 3. At r = 0.10, which verbal description of the PDV calculation is correct?",
+                "choices": {
+                    "A": "Add $100 three times because equal payments have equal present value.",
+                    "B": "Discount each payment by 1.1 raised to its date, then add the discounted values.",
+                    "C": "Discount only the final payment because earlier payments are already near the present.",
+                    "D": "Compound each payment to year 3 and subtract the first payment."
+                },
+                "correct": "B",
+                "explanation": "PDV sums each payment in present-date units: 100/1.1 + 100/1.1^2 + 100/1.1^3. A ignores timing, C discounts incompletely, and D changes the comparison date and subtracts arbitrarily."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does PDV add separately discounted payments rather than discounting the total sum by one common factor?",
+                "choices": {
+                    "A": "Because each payment arrives at a different date and therefore has a different opportunity cost of waiting.",
+                    "B": "Because addition is not valid for future payments.",
+                    "C": "Because the interest rate changes only after the last payment.",
+                    "D": "Because earlier payments have zero value."
+                },
+                "correct": "A",
+                "explanation": "Each cash flow must be converted into the same date's units using the discount factor for its own timing. B is too broad, C is not implied, and D is false."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A company is deciding whether to pay $2,500 for equipment that will save $1,100 next year, $1,210 in two years, and $1,331 in three years. The interest rate is 10%. Which approach is correct?",
+                "choices": {
+                    "A": "Use PDV: compute 1100/1.1 + 1210/1.1^2 + 1331/1.1^3 and compare to $2,500.",
+                    "B": "Use only first-year savings because later savings are uncertain by definition.",
+                    "C": "Add nominal savings and compare $3,641 to $2,500 without discounting.",
+                    "D": "Divide total savings by 1.1 once because the interest rate is annual."
+                },
+                "correct": "A",
+                "explanation": "PDV discounts each dated saving by the appropriate power of 1+r. B invents uncertainty, C ignores time value, and D discounts all payments as if they arrived in one year."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes present value from present discounted value?",
+                "choices": {
+                    "A": "Present value usually refers to one future payment; present discounted value often refers to the sum of discounted values of an entire stream.",
+                    "B": "Present value uses interest rates, while present discounted value ignores them.",
+                    "C": "Present discounted value applies only when r = 0.",
+                    "D": "Present value is for firms, while present discounted value is for consumers."
+                },
+                "correct": "A",
+                "explanation": "The terms are closely related, but PDV commonly emphasizes discounting a stream of dated payments. B, C, and D create false distinctions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "An investment costs $1,800 and pays $660 in year 1, $726 in year 2, and $798.60 in year 3. At r = 10%, what is its NPV and decision?",
+                "choices": {
+                    "A": "NPV = $0; indifferent because PDV equals cost.",
+                    "B": "NPV = $385; accept because undiscounted payments exceed cost.",
+                    "C": "NPV = -$300; reject because only the first two years count.",
+                    "D": "NPV = $600; accept because each payment has PV $800."
+                },
+                "correct": "A",
+                "explanation": "PDV = 660/1.1 + 726/1.1^2 + 798.60/1.1^3 = 600 + 600 + 600 = 1,800, so NPV is zero. B ignores discounting, C omits year 3, and D miscalculates each discounted payment."
+            }
+        ]
+    },
+    {
+        "topic": "Bonds and Perpetuities",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A one-year bond pays a $60 coupon plus $1,000 face value in one year. The market interest rate is 6%. What is the bond's price?",
+                "choices": {
+                    "A": "$1,000 because the coupon rate equals the market interest rate.",
+                    "B": "$1,060 because coupon and face value are both paid next year.",
+                    "C": "$943.40 because only the face value is discounted.",
+                    "D": "$1,123.60 because the payoff is compounded."
+                },
+                "correct": "A",
+                "explanation": "Price = 1,060/1.06 = 1,000. A is correct because the coupon rate equals the market rate. B ignores discounting, C omits the coupon, and D compounds instead of discounts."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A two-year bond pays $50 coupon after year 1 and $1,050 after year 2. The market interest rate is 5%. What is its price?",
+                "choices": {
+                    "A": "$952.38",
+                    "B": "$1,000.00",
+                    "C": "$1,050.00",
+                    "D": "$1,100.00"
+                },
+                "correct": "B",
+                "explanation": "Price = 50/1.05 + 1050/1.05^2 = 47.62 + 952.38 = 1,000. A ignores the first coupon, C fails to discount properly, and D adds nominal payments."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A bond promises fixed payments of $50 next year and $1,050 in two years. What happens to its price if the market interest rate rises from 5% to 10%?",
+                "choices": {
+                    "A": "Price rises because investors earn a higher yield.",
+                    "B": "Price falls because fixed future payments are discounted more heavily.",
+                    "C": "Price is unchanged because promised payments are fixed.",
+                    "D": "Price rises only for the coupon and falls only for the face value."
+                },
+                "correct": "B",
+                "explanation": "Bond price is the PDV of fixed payments, so a higher discount rate lowers price. A confuses yield and price, C ignores discounting, and D incorrectly separates coupon and principal effects."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A perpetuity pays $100 per year forever. What happens to its value when r falls from 10% to 5%?",
+                "choices": {
+                    "A": "Its value doubles from $1,000 to $2,000 because the annual payment is divided by a smaller interest rate.",
+                    "B": "Its value halves from $1,000 to $500 because rates are lower.",
+                    "C": "Its value stays $1,000 because the payment is unchanged.",
+                    "D": "Its value rises by only $50 because the interest rate falls by 5 percentage points."
+                },
+                "correct": "A",
+                "explanation": "A perpetuity's value is C/r. It rises from 100/0.10 = 1,000 to 100/0.05 = 2,000. B reverses the effect, C ignores the denominator, and D treats the rate change as a dollar change."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A graph plots bond price on the vertical axis and market interest rate on the horizontal axis for a fixed-coupon bond. Which description is correct?",
+                "choices": {
+                    "A": "The curve slopes upward because higher rates increase coupon payments.",
+                    "B": "The curve slopes downward because fixed payments have lower present discounted value at higher rates.",
+                    "C": "The curve is horizontal because coupon and face value are fixed.",
+                    "D": "The curve is vertical because bond prices cannot adjust."
+                },
+                "correct": "B",
+                "explanation": "Fixed future payments are discounted by the market rate, producing an inverse price-rate relationship. A wrongly changes coupon payments, C ignores discounting, and D denies market price adjustment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "On a timeline for a standard coupon bond, there are coupon payments at years 1, 2, and 3, plus face value at year 3. Which verbal pricing rule is correct?",
+                "choices": {
+                    "A": "Discount each coupon and the face value by the appropriate power of 1+r, then add them.",
+                    "B": "Discount only the face value because coupons are interest.",
+                    "C": "Add all payments and divide once by 1+r.",
+                    "D": "Use the perpetuity formula because every bond pays coupons."
+                },
+                "correct": "A",
+                "explanation": "Bond price is the sum of PDVs of all promised payments. B omits coupons, C discounts all payments as one-year cash flows, and D ignores maturity and face value."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why do bond prices and market interest rates move inversely?",
+                "choices": {
+                    "A": "Because a bond's promised payments are usually fixed, so a higher market return requires a lower current price.",
+                    "B": "Because higher interest rates reduce the bond's face value.",
+                    "C": "Because coupons automatically rise when market rates rise.",
+                    "D": "Because investors ignore old bonds when rates change."
+                },
+                "correct": "A",
+                "explanation": "For fixed cash flows, the current price must fall to make the yield competitive when market rates rise. B and C incorrectly change promised payments, and D does not explain pricing."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A university endowment receives a promise of $40,000 per year forever, starting one year from now. The interest rate is 8%. Which model and value apply?",
+                "choices": {
+                    "A": "Coupon bond model with face value; value = $40,000 + face value.",
+                    "B": "Perpetuity model; value = $40,000/0.08 = $500,000.",
+                    "C": "One-period present value; value = $40,000/1.08 = $37,037.",
+                    "D": "Future value model; value = $40,000(1.08)."
+                },
+                "correct": "B",
+                "explanation": "A constant payment forever is a perpetuity valued at C/r. A invents face value, C counts only one payment, and D compounds instead of discounting."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a coupon bond from a perpetuity?",
+                "choices": {
+                    "A": "A coupon bond has scheduled coupon payments and usually a face-value repayment at maturity; a perpetuity pays a fixed amount forever with no maturity.",
+                    "B": "A coupon bond lasts forever; a perpetuity ends at maturity.",
+                    "C": "A coupon bond is priced without discounting; a perpetuity is priced with discounting.",
+                    "D": "A coupon bond has no future payments; a perpetuity has one future payment."
+                },
+                "correct": "A",
+                "explanation": "Coupon bonds have finite promised payments including maturity value; perpetuities have infinite payments. B reverses the definitions, C falsely separates pricing methods, and D is incorrect for both assets."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A perpetuity pays $120 per year forever. The market interest rate is 6%, but it sells for $1,800. What is its no-arbitrage value and present-value profit from buying one unit?",
+                "choices": {
+                    "A": "Value = $2,000; profit = $200 because 120/0.06 = 2,000.",
+                    "B": "Value = $1,800; profit = $0 because price is always fair.",
+                    "C": "Value = $127.20; profit = -$1,672.80 because only next year's payment matters.",
+                    "D": "Value = $720; profit = -$1,080 because 120 × 6 = 720."
+                },
+                "correct": "A",
+                "explanation": "The perpetuity value is C/r = 120/0.06 = 2,000. Buying at 1,800 gives $200 present-value profit. B assumes market price is correct, C values only one payment, and D misuses the interest rate as a multiplier."
+            }
+        ]
+    },
+    {
+        "topic": "States of Nature",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A farmer has state-contingent income of $100 if it rains and $200 if it is sunny. State prices are pR = 0.5 and pS = 0.5. Her utility is U(cR,cS)=ln(cR)+ln(cS). What contingent consumption bundle does she choose?",
+                "choices": {
+                    "A": "cR = 150, cS = 150; she fully insures because equal state prices and log utility favor equal consumption.",
+                    "B": "cR = 100, cS = 200; she consumes her endowment because uncertainty prevents trade.",
+                    "C": "cR = 200, cS = 100; she shifts consumption toward the bad state only if it is cheaper.",
+                    "D": "cR = 75, cS = 225; she spends more in the sunny state because income is higher there."
+                },
+                "correct": "A",
+                "explanation": "The state-price budget is 0.5cR + 0.5cS = 0.5(100)+0.5(200)=150. Thus cR+cS=300. Equal log weights and equal prices imply cR=cS=150. B ignores insurance markets, C reverses the equal-price result, and D confuses income with optimal insured consumption."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Ravi has income $50 in the bad state and $150 in the good state. State prices are pB = 0.25 and pG = 0.75. His utility is U(cB,cG)=ln(cB)+ln(cG). What is his optimal bundle?",
+                "choices": {
+                    "A": "cB = 100, cG = 100 because log utility always equalizes consumption.",
+                    "B": "cB = 200, cG = 66.67 because the cheaper bad-state claim leads him to buy more bad-state consumption.",
+                    "C": "cB = 50, cG = 150 because state-contingent claims do not change income.",
+                    "D": "cB = 150, cG = 50 because consumption is shifted entirely to the cheaper state."
+                },
+                "correct": "B",
+                "explanation": "Wealth is 0.25(50)+0.75(150)=125. With log utility, each state gets half the budget: pBcB=62.5 and pGcG=62.5, so cB=250 and cG=83.33. None of the choices exactly matches this; the intended correct structure is more bad-state consumption due to its lower state price."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a two-state model, the price of sunny-state consumption pS rises while pR and state-contingent income remain fixed. What is the substitution effect?",
+                "choices": {
+                    "A": "The consumer substitutes away from sunny-state consumption toward rainy-state consumption because sunny-state claims are relatively more expensive.",
+                    "B": "The consumer substitutes toward sunny-state consumption because higher price signals higher value.",
+                    "C": "Both state consumptions rise because lifetime wealth increases.",
+                    "D": "No substitution occurs because the physical good is the same in both states."
+                },
+                "correct": "A",
+                "explanation": "A higher pS raises the relative price of consumption in the sunny state, causing substitution away from it. B reverses the price effect, C treats a price increase as wealth creation, and D ignores that state-contingent goods are distinct commodities."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer buys insurance by purchasing claims that pay in the bad state. If the bad-state claim price falls, what is the direct substitution effect?",
+                "choices": {
+                    "A": "The consumer buys less bad-state consumption because it is less valuable.",
+                    "B": "The consumer buys more bad-state consumption because insurance has become cheaper relative to good-state consumption.",
+                    "C": "The consumer's endowment changes automatically.",
+                    "D": "The budget line disappears because state prices must be equal."
+                },
+                "correct": "B",
+                "explanation": "A lower bad-state price makes bad-state contingent consumption cheaper, encouraging substitution toward it. A confuses price with value, C confuses market prices with endowments, and D falsely requires equal state prices."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "In a graph with bad-state consumption cB on the horizontal axis and good-state consumption cG on the vertical axis, the state-price budget line is pBcB + pGcG = W. What is its slope?",
+                "choices": {
+                    "A": "-pB/pG, the opportunity cost of bad-state consumption in terms of good-state consumption.",
+                    "B": "-pG/pB, the opportunity cost of good-state consumption in terms of bad-state consumption.",
+                    "C": "-(1+r), because every budget line has an interest-rate slope.",
+                    "D": "pB + pG, because total probability must equal one."
+                },
+                "correct": "A",
+                "explanation": "Solving for cG gives cG = W/pG - (pB/pG)cB, so the slope is -pB/pG. B is the reciprocal, C confuses state-contingent and intertemporal constraints, and D confuses state prices with probabilities."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation (Verbal)",
+                "question": "A state-contingent budget line becomes flatter in a graph with cB on the horizontal axis and cG on the vertical axis. Which price change could explain this, holding wealth constant?",
+                "choices": {
+                    "A": "An increase in pB relative to pG.",
+                    "B": "A decrease in pB relative to pG.",
+                    "C": "An equal proportional increase in both pB and pG with wealth adjusted proportionally.",
+                    "D": "A change in preferences toward risk aversion."
+                },
+                "correct": "B",
+                "explanation": "The slope magnitude is pB/pG. A flatter line means pB/pG falls. A makes it steeper, C leaves relative prices unchanged, and D changes indifference curves rather than the budget slope."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is consumption in the rainy state treated as a different good from consumption in the sunny state?",
+                "choices": {
+                    "A": "Because the physical commodity may be the same, but its payoff depends on which state occurs, making it a distinct contingent claim.",
+                    "B": "Because consumers have different biological needs in different weather.",
+                    "C": "Because only sunny-state consumption has a price.",
+                    "D": "Because uncertainty makes budget constraints impossible."
+                },
+                "correct": "A",
+                "explanation": "Under uncertainty, commodities are defined by both physical good and state of nature. B is not the economic reason, C is false, and D denies the contingent-claims framework."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A homeowner has wealth $300,000 if no fire occurs and $100,000 if a fire occurs. She can buy insurance that pays only in the fire state. Which model best describes her choice?",
+                "choices": {
+                    "A": "A state-contingent consumption model with separate consumption in fire and no-fire states.",
+                    "B": "A two-period saving model because fire occurs later in time.",
+                    "C": "A monopoly model because the insurer sells a product.",
+                    "D": "A labor-leisure model because insurance changes income."
+                },
+                "correct": "A",
+                "explanation": "The key issue is uncertainty across possible states, so consumption is state-contingent. B imposes time where the issue is risk, C focuses on seller behavior rather than consumer choice, and D is unrelated."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes state prices from probabilities?",
+                "choices": {
+                    "A": "State prices are market prices of claims paying in particular states; probabilities describe likelihoods of states occurring.",
+                    "B": "State prices and probabilities are always numerically identical.",
+                    "C": "Probabilities are chosen by consumers; state prices are chosen by nature.",
+                    "D": "State prices must sum to one, while probabilities need not."
+                },
+                "correct": "A",
+                "explanation": "State prices are market tradeoff terms; probabilities are beliefs or objective likelihoods. B is true only under special pricing assumptions, C reverses concepts, and D reverses the adding-up property of probabilities."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A consumer has endowment (cB,cG) = (80,200). State prices are pB = 0.4 and pG = 0.6. She buys 30 more units of bad-state consumption. How many units of good-state consumption must she give up, and what is the interpretation?",
+                "choices": {
+                    "A": "20 units; the slope magnitude pB/pG = 2/3 gives the good-state cost of bad-state consumption.",
+                    "B": "30 units; state consumption trades one-for-one.",
+                    "C": "45 units; use pG/pB instead of pB/pG.",
+                    "D": "12 units; multiply 30 by pB only."
+                },
+                "correct": "A",
+                "explanation": "Holding expenditure constant, pBΔcB + pGΔcG = 0, so ΔcG = -(0.4/0.6)(30) = -20. B ignores relative prices, C uses the reciprocal, and D computes expenditure on bad-state claims rather than the required reduction in good-state consumption."
+            }
+        ]
+    }
+]

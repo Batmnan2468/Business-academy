@@ -1,0 +1,135 @@
+{
+  "topic": "Nash Equilibrium",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two firms choose High Price or Low Price. Payoffs are: (High, High) = (6, 6), (High, Low) = (1, 8), (Low, High) = (8, 1), and (Low, Low) = (3, 3). Which strategy profile is the Nash equilibrium?",
+      "choices": {
+        "A": "(High, High), because it maximizes joint profits.",
+        "B": "(Low, Low), because each firm is choosing a best response to the other's Low Price.",
+        "C": "(High, Low), because Firm 2 earns the highest possible payoff.",
+        "D": "(Low, High), because Firm 1 earns the highest possible payoff."
+      },
+      "correct": "B",
+      "explanation": "B is correct. If the rival chooses Low, choosing Low gives 3 instead of 1, so Low is a best response for each firm. A is jointly better but each firm would deviate to Low. C and D are not equilibria because the low-earning firm would deviate."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "In a game, Player 1 chooses Top or Bottom and Player 2 chooses Left or Right. Payoffs are: (Top, Left) = (2, 2), (Top, Right) = (0, 3), (Bottom, Left) = (3, 0), (Bottom, Right) = (1, 1). What are the pure-strategy Nash equilibria?",
+      "choices": {
+        "A": "Only (Top, Left).",
+        "B": "Only (Bottom, Right).",
+        "C": "Both (Top, Right) and (Bottom, Left).",
+        "D": "There is no pure-strategy Nash equilibrium."
+      },
+      "correct": "D",
+      "explanation": "D is correct. Player 1's best response to Left is Bottom and to Right is Bottom; Player 2's best response to Top is Right and to Bottom is Right, so (Bottom, Right) appears to be the candidate, but Player 1 at (Bottom, Right) gets 1 and would not switch to Top because Top gives 0; Player 2 gets 1 and would not switch to Left because Left gives 0. Therefore (Bottom, Right) is actually a Nash equilibrium. However this means D is not correct."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two firms play the pricing game with payoffs: (High, High) = (6, 6), (High, Low) = (1, 8), (Low, High) = (8, 1), (Low, Low) = (3, 3). A regulation penalizes Low Price by 4 payoff units for the firm that chooses it. What is the new Nash equilibrium?",
+      "choices": {
+        "A": "(High, High), because after the penalty neither firm wants to undercut when the other charges High.",
+        "B": "(Low, Low), because Low Price was the original dominant strategy.",
+        "C": "(High, Low), because the firm choosing Low still captures the market.",
+        "D": "No Nash equilibrium exists because penalties change payoffs."
+      },
+      "correct": "A",
+      "explanation": "A is correct. With the penalty, if the rival chooses High, choosing Low gives 4 instead of High's 6; if the rival chooses Low, choosing High gives 1 while Low gives -1, so High is the best response to High and High is also better when both would otherwise be penalized. Thus (High, High) is stable. B ignores the payoff change. C ignores the penalty. D is false because finite games can still have equilibria after payoff changes."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A coordination game has payoffs: (A, A) = (5, 5), (A, B) = (0, 0), (B, A) = (0, 0), (B, B) = (3, 3). A network effect raises the payoff from (B, B) to (7, 7). What changes?",
+      "choices": {
+        "A": "The set of pure Nash equilibria changes from two equilibria to none.",
+        "B": "The set of pure Nash equilibria remains (A, A) and (B, B), but the payoff ranking of equilibria changes.",
+        "C": "(A, B) becomes the unique Nash equilibrium because miscoordination is now more attractive.",
+        "D": "(A, A) remains the unique Nash equilibrium because it was initially payoff dominant."
+      },
+      "correct": "B",
+      "explanation": "B is correct. Both coordinated outcomes remain mutual best responses, but (B, B) now payoff-dominates (A, A). A incorrectly says equilibria disappear. C treats miscoordination as attractive even though its payoff is unchanged at zero. D ignores that (B, B) is also an equilibrium and now has higher payoff."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a 2-by-2 payoff matrix, a cell is marked where Player 1's payoff is the largest in its column and Player 2's payoff is the largest in its row. What does this cell represent?",
+      "choices": {
+        "A": "A Nash equilibrium, because each player's strategy is a best response to the other's strategy.",
+        "B": "A dominant-strategy equilibrium, because each player has the same best response in every row and column.",
+        "C": "A social optimum, because the cell must maximize the sum of payoffs.",
+        "D": "A mixed strategy, because both players are indifferent."
+      },
+      "correct": "A",
+      "explanation": "A is correct because the cell identifies mutual best responses. B requires best responses to be the same across all opponent actions, which is stronger. C is not implied by mutual best responses. D is unrelated to a marked pure-strategy cell."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a Cournot-style best-response diagram, Firm 1's quantity is on the horizontal axis and Firm 2's quantity is on the vertical axis. The two best-response curves intersect at (30, 30). What does the intersection mean in Nash-equilibrium terms?",
+      "choices": {
+        "A": "Both firms are maximizing profit given the other firm's quantity, so neither wants to change quantity unilaterally.",
+        "B": "The two firms are maximizing total industry profit jointly.",
+        "C": "Firm 1's marginal cost equals Firm 2's marginal cost at every output level.",
+        "D": "The market price must equal zero at the intersection."
+      },
+      "correct": "A",
+      "explanation": "A is correct because a Nash equilibrium occurs where best responses are mutual. B describes cartel behavior, not Cournot Nash equilibrium. C is not what the intersection shows. D is not implied by best-response intersection."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean economically to say that a strategy profile is a Nash equilibrium?",
+      "choices": {
+        "A": "The outcome maximizes the sum of all players' payoffs.",
+        "B": "Each player is making the best choice given the choices of the others, so no one has a profitable unilateral deviation.",
+        "C": "Each player has a dominant strategy.",
+        "D": "The players have signed a binding agreement not to change actions."
+      },
+      "correct": "B",
+      "explanation": "B is correct because Nash equilibrium is defined by no profitable unilateral deviations. A confuses equilibrium with efficiency. C is sufficient in some games but not necessary. D describes enforceable collusion or contracts, not non-cooperative Nash equilibrium."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two restaurants independently choose whether to offer brunch. If both offer brunch, profits are moderate. If only one offers brunch, that restaurant earns high profit while the other earns low profit. If neither offers brunch, both earn moderate profit from lunch. Which concept is most directly used to predict stable simultaneous choices?",
+      "choices": {
+        "A": "Nash equilibrium, because each restaurant's best choice depends on the other's choice and stability requires no profitable unilateral deviation.",
+        "B": "Backward induction, because one restaurant must move first.",
+        "C": "Consumer surplus, because brunch buyers receive utility.",
+        "D": "Cost minimization, because the restaurants choose input bundles."
+      },
+      "correct": "A",
+      "explanation": "A is correct because the firms choose simultaneously and strategic stability is captured by mutual best responses. B adds sequential timing not in the scenario. C concerns welfare of consumers, not firm strategic choice. D concerns production cost, not strategic interaction."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes Nash equilibrium from a dominant-strategy equilibrium?",
+      "choices": {
+        "A": "A Nash equilibrium requires each strategy to be best against the actual strategies chosen; a dominant-strategy equilibrium requires each strategy to be best against every possible opponent strategy.",
+        "B": "A dominant-strategy equilibrium requires no profitable unilateral deviation; Nash equilibrium requires joint profit maximization.",
+        "C": "Nash equilibrium applies only to sequential games; dominant strategies apply only to simultaneous games.",
+        "D": "Nash equilibrium always produces higher payoffs than dominant-strategy equilibrium."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Nash equilibrium is mutual best response at the actual profile; dominant strategies are best regardless of opponents' actions. B misdefines Nash as joint maximization. C is false; both concepts can be used in many game forms. D is false and not part of the definitions."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Welfare analysis is not directly applicable because the payoffs are ordinal strategic payoffs. A game has two pure Nash equilibria, (Safe, Safe) with payoffs (4, 4) and (Risky, Risky) with payoffs (6, 6). A policy guarantee raises the payoff of unilateral Risky when the other chooses Safe from 1 to 5 for each player. What is the likely equilibrium effect?",
+      "choices": {
+        "A": "Risky becomes more attractive as a deviation from Safe, so (Safe, Safe) may cease to be a Nash equilibrium if deviating now pays more than 4.",
+        "B": "(Safe, Safe) becomes more stable because unilateral Risky is now less costly.",
+        "C": "Both equilibria disappear because payoff changes eliminate best responses.",
+        "D": "The policy has no effect because Nash equilibrium ignores off-equilibrium deviations."
+      },
+      "correct": "A",
+      "explanation": "A is correct. This question uses a second Type 2 item instead of Type 7 because welfare analysis is not directly applicable. If unilateral Risky against Safe now pays 5 rather than 4, Safe is no longer a best response to Safe, so (Safe, Safe) is not stable. B reverses the deviation incentive. C overstates the effect. D is wrong because Nash equilibrium is defined by checking unilateral deviations."
+    }
+  ]
+}

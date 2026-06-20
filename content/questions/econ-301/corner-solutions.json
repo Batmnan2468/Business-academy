@@ -1,0 +1,135 @@
+{
+  "topic": "Corner Solutions",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Alex has utility U(x,y)=3x+y, income m=60, p_x=5, and p_y=4. Solve the utility maximization problem and interpret why the optimum is a corner.",
+      "choices": {
+        "A": "x*=12, y*=0 because MU_x/p_x=3/5 exceeds MU_y/p_y=1/4, so every dollar gives more utility when spent on x.",
+        "B": "x*=0, y*=15 because y is cheaper in dollars.",
+        "C": "x*=6, y*=7.5 because interior tangency requires spending half on each good.",
+        "D": "x*=8, y*=5 because MRS equals p_x/p_y at that bundle."
+      },
+      "correct": "A",
+      "explanation": "For perfect substitutes, compare utility per dollar. x gives 3/5=0.6 utility per dollar; y gives 1/4=0.25. The consumer buys only x, so x=60/5=12. B uses price alone. C incorrectly imposes an interior split. D invents tangency for linear preferences where MRS=3 does not equal p_x/p_y=1.25."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Bianca has utility U(x,y)=2x+5y, income m=100, p_x=4, and p_y=20. Which bundle maximizes utility, and what does it show about corner solutions?",
+      "choices": {
+        "A": "x*=25, y*=0 because x gives more units per dollar.",
+        "B": "x*=0, y*=5 because y has the larger marginal utility.",
+        "C": "x*=25, y*=0 because MU_x/p_x=0.5 exceeds MU_y/p_y=0.25.",
+        "D": "x*=12.5, y*=2.5 because both goods must be consumed when utility is increasing."
+      },
+      "correct": "C",
+      "explanation": "Utility per dollar is 2/4=0.5 for x and 5/20=0.25 for y, so all income is spent on x: x=25. A gives the right bundle but incomplete and potentially price-only reasoning. B uses marginal utility without prices. D wrongly assumes monotonicity implies an interior solution."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=4x+y, m=80, p_x=8, and p_y=2, the consumer initially buys only x or only y? If p_x rises to 12, what changes and why?",
+      "choices": {
+        "A": "Initially buys x; after p_x rises, switches to y because x's utility per dollar falls from 0.5 to 0.333 while y remains 0.5.",
+        "B": "Initially buys y; after p_x rises, switches to x because x becomes scarce.",
+        "C": "Initially buys both; after p_x rises, buys less x and more y by tangency.",
+        "D": "Initially buys x; after p_x rises, still buys x because MU_x is unchanged."
+      },
+      "correct": "A",
+      "explanation": "Initially MU_x/p_x=4/8=0.5 and MU_y/p_y=1/2=0.5, so any budget-line bundle is optimal. After p_x rises, x gives 4/12=0.333 while y gives 0.5, so the optimum becomes all y. A captures the switch mechanism though the initial equal-return case means buying x is one optimal choice. B reverses the comparison. C wrongly applies tangency. D ignores price per utility."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x+3y, m=90, p_x=3, p_y=12. If p_y falls to 6, what happens to the optimal corner and what is the mechanism?",
+      "choices": {
+        "A": "The optimum switches from all x to all y because y's utility per dollar rises from 3/12=0.25 to 3/6=0.5, exceeding x's 1/3.",
+        "B": "The optimum stays all x because x is still cheaper in dollars.",
+        "C": "The consumer buys both goods because the lower price creates tangency.",
+        "D": "The optimum switches from all y to all x because y becomes less scarce."
+      },
+      "correct": "A",
+      "explanation": "Initially x gives 1/3 utility per dollar and y gives 1/4, so all x. After p_y falls to 6, y gives 1/2, so all y. The mechanism is a change in utility per dollar. B uses price alone. C incorrectly imposes tangency. D reverses the initial and final corners."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer has linear indifference curves for train rides x and bus rides y with slope -2. The budget line has slope -1. On a graph, where is the optimum and why?",
+      "choices": {
+        "A": "At the y-intercept because the budget line is flatter than the indifference curves.",
+        "B": "At the x-intercept because the indifference curves are steeper than the budget line, so x has higher value relative to its market cost.",
+        "C": "At an interior tangency because straight lines always cross once.",
+        "D": "At every point on the budget line because both curves are downward sloping."
+      },
+      "correct": "B",
+      "explanation": "Linear indifference curves with slope -2 imply MRS=2, while budget slope -1 implies p_x/p_y=1. Since MRS exceeds the market trade-off, the consumer chooses the x-intercept. A reverses direction. C ignores lack of tangency. D would require identical slopes."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For goods x and y, a consumer's indifference curves are straight lines with slope -1/2, while the budget line has slope -2. Which graphical conclusion is correct?",
+      "choices": {
+        "A": "The optimum is at the x-intercept because the budget line is steeper.",
+        "B": "The optimum is at an interior point because the curves cross.",
+        "C": "The optimum is at the y-intercept because the consumer's MRS is below the market trade-off.",
+        "D": "All points on the budget line are optimal because both slopes are negative."
+      },
+      "correct": "C",
+      "explanation": "MRS=1/2 and p_x/p_y=2. The consumer is willing to give up only 1/2 y for x, but the market requires 2 y, so x is relatively unattractive and the y-intercept is optimal. A reverses the conclusion. B ignores the linear corner result. D requires equal slopes."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can the tangency condition fail to characterize the optimum for perfect substitutes such as U(x,y)=2x+y?",
+      "choices": {
+        "A": "Because marginal utilities do not exist for linear utility.",
+        "B": "Because the MRS is constant, so unless it exactly equals the price ratio, the best affordable bundle lies at an endpoint of the budget line.",
+        "C": "Because consumers with linear utility do not face budget constraints.",
+        "D": "Because utility is decreasing in one of the goods."
+      },
+      "correct": "B",
+      "explanation": "With perfect substitutes, MRS is constant. If it differs from the price ratio, one good gives higher utility per dollar at every bundle, producing a corner solution. A is wrong because marginal utilities do exist. C ignores the consumer problem. D is false for positive coefficients."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A commuter views Lyft rides x and taxi rides y as perfect substitutes: each ride gets her to work equally well, so U(x,y)=x+y. A Lyft ride costs $10, a taxi ride costs $15, and her monthly ride budget is $300. Which model prediction is correct?",
+      "choices": {
+        "A": "She buys 15 Lyft rides and 10 taxi rides because variety is preferred.",
+        "B": "She buys 0 Lyft rides and 20 taxi rides because taxis are more expensive and therefore higher quality.",
+        "C": "She buys 30 Lyft rides and 0 taxi rides because Lyft gives the same marginal utility at a lower price.",
+        "D": "She buys any combination along the budget line because the services are substitutes."
+      },
+      "correct": "C",
+      "explanation": "For perfect substitutes with equal marginal utilities, the cheaper good gives greater utility per dollar. Lyft yields 1/10 versus taxi 1/15, so all spending goes to Lyft. A assumes variety without convexity. B confuses price with utility. D would be true only if prices were equal."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a corner solution from a boundary point that is not optimal?",
+      "choices": {
+        "A": "A corner solution is a boundary bundle that maximizes utility; a nonoptimal boundary point lies on the boundary but has another affordable bundle with higher utility.",
+        "B": "Every boundary point is a corner solution.",
+        "C": "A corner solution violates the budget constraint, while a nonoptimal boundary point satisfies it.",
+        "D": "A corner solution occurs only with perfect complements, while nonoptimal boundary points occur only with Cobb-Douglas utility."
+      },
+      "correct": "A",
+      "explanation": "A corner solution is an optimum at the boundary. Not every boundary point is optimal. B is the common confusion. C is wrong because optima must be feasible. D assigns corner solutions to the wrong preference type."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A consumer has U(x,y)=2x+y and income m=40. Initially p_x=4 and p_y=4. Then p_x falls to 2 while p_y stays 4. What is the change in maximized utility?",
+      "choices": {
+        "A": "Utility rises from 20 to 40 because the consumer buys more x at the cheaper price.",
+        "B": "Utility rises from 10 to 20 because the quantity of x doubles.",
+        "C": "Utility is unchanged at 10 because income is unchanged.",
+        "D": "Utility falls from 40 to 20 because lower price lowers total spending."
+      },
+      "correct": "A",
+      "explanation": "Initially x gives 2/4=0.5 utility per dollar and y gives 1/4=0.25, so buy x=10 and U=20. After p_x=2, buy x=20 and U=40. B reports quantities as utility. C ignores the price-induced budget expansion. D reverses welfare effects."
+    }
+  ]
+}

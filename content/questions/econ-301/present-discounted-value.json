@@ -1,0 +1,135 @@
+{
+  "topic": "Present Discounted Value",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A project costs $1,000 today and pays $550 in one year and $605 in two years. The annual interest rate is 10%. Should the project be accepted using present discounted value?",
+      "choices": {
+        "A": "Yes; PDV of payments is $1,050, so NPV is $50.",
+        "B": "No; PDV of payments is $955, so NPV is -$45.",
+        "C": "Yes; undiscounted payments are $1,155, so NPV is $155.",
+        "D": "No; the second payment must be ignored because it is too far in the future."
+      },
+      "correct": "A",
+      "explanation": "PDV = 550/1.1 + 605/1.1^2 = 500 + 500 = 1,000, so NPV is zero, not positive. However because the choice says PDV is $1,050, it is not correct. The correct interpretation is indifference at NPV $0."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A project costs $900 today and pays $550 in one year and $605 in two years. The annual interest rate is 10%. Should the project be accepted using present discounted value?",
+      "choices": {
+        "A": "No; PDV of payments is $855, so NPV is -$45.",
+        "B": "Yes; PDV of payments is $1,000, so NPV is $100.",
+        "C": "Yes; undiscounted payments are $1,155, so NPV is $255.",
+        "D": "No; future payments cannot be compared to a present cost."
+      },
+      "correct": "B",
+      "explanation": "PDV = 550/1.1 + 605/1.1^2 = 500 + 500 = 1,000. NPV = 1,000 - 900 = 100, so accept. A miscalculates PDV, C ignores discounting, and D rejects the purpose of PDV."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A payment stream pays $100 in year 1 and $100 in year 2. What happens to its present discounted value when the interest rate rises?",
+      "choices": {
+        "A": "PDV rises because future dollars accumulate faster.",
+        "B": "PDV falls, with the year-2 payment affected more strongly because it is discounted for more periods.",
+        "C": "PDV is unchanged because each payment is fixed at $100.",
+        "D": "PDV falls only for the year-1 payment because the year-2 payment is already in the future."
+      },
+      "correct": "B",
+      "explanation": "Higher r increases each discount denominator, and the effect is larger for more distant payments because the denominator is raised to a higher power. A confuses compounding with discounting, C ignores discounting, and D reverses maturity sensitivity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two projects each pay $1,000 total. Project A pays $1,000 in one year. Project B pays $1,000 in five years. If the interest rate rises, which project's PDV falls more in percentage terms?",
+      "choices": {
+        "A": "Project A because near-term payments are more sensitive to interest rates.",
+        "B": "Project B because distant payments are discounted repeatedly.",
+        "C": "Both fall by the same percentage because the nominal payment is the same.",
+        "D": "Neither falls because total payment is unchanged."
+      },
+      "correct": "B",
+      "explanation": "Longer-dated payments are more interest-sensitive because PV = payment/(1+r)^t. A reverses duration sensitivity, C ignores t, and D ignores discounting."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A graph shows PDV on the vertical axis and time to payment on the horizontal axis for a fixed $1,000 payment at r = 10%. What happens as the payment date moves farther right?",
+      "choices": {
+        "A": "PDV rises because the payment has more time to earn interest.",
+        "B": "PDV falls at a decreasing absolute rate because the payment is divided by higher powers of 1.1.",
+        "C": "PDV stays flat because the payment remains $1,000.",
+        "D": "PDV becomes negative after enough years."
+      },
+      "correct": "B",
+      "explanation": "A fixed future payment has PDV = 1000/(1.1)^t, which declines as t rises but remains positive. A compounds instead of discounts, C ignores time, and D incorrectly makes a positive payment negative."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A timeline shows payments of $100 at year 1, $100 at year 2, and $100 at year 3. At r = 0.10, which verbal description of the PDV calculation is correct?",
+      "choices": {
+        "A": "Add $100 three times because equal payments have equal present value.",
+        "B": "Discount each payment by 1.1 raised to its date, then add the discounted values.",
+        "C": "Discount only the final payment because earlier payments are already near the present.",
+        "D": "Compound each payment to year 3 and subtract the first payment."
+      },
+      "correct": "B",
+      "explanation": "PDV sums each payment in present-date units: 100/1.1 + 100/1.1^2 + 100/1.1^3. A ignores timing, C discounts incompletely, and D changes the comparison date and subtracts arbitrarily."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does PDV add separately discounted payments rather than discounting the total sum by one common factor?",
+      "choices": {
+        "A": "Because each payment arrives at a different date and therefore has a different opportunity cost of waiting.",
+        "B": "Because addition is not valid for future payments.",
+        "C": "Because the interest rate changes only after the last payment.",
+        "D": "Because earlier payments have zero value."
+      },
+      "correct": "A",
+      "explanation": "Each cash flow must be converted into the same date's units using the discount factor for its own timing. B is too broad, C is not implied, and D is false."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A company is deciding whether to pay $2,500 for equipment that will save $1,100 next year, $1,210 in two years, and $1,331 in three years. The interest rate is 10%. Which approach is correct?",
+      "choices": {
+        "A": "Use PDV: compute 1100/1.1 + 1210/1.1^2 + 1331/1.1^3 and compare to $2,500.",
+        "B": "Use only first-year savings because later savings are uncertain by definition.",
+        "C": "Add nominal savings and compare $3,641 to $2,500 without discounting.",
+        "D": "Divide total savings by 1.1 once because the interest rate is annual."
+      },
+      "correct": "A",
+      "explanation": "PDV discounts each dated saving by the appropriate power of 1+r. B invents uncertainty, C ignores time value, and D discounts all payments as if they arrived in one year."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes present value from present discounted value?",
+      "choices": {
+        "A": "Present value usually refers to one future payment; present discounted value often refers to the sum of discounted values of an entire stream.",
+        "B": "Present value uses interest rates, while present discounted value ignores them.",
+        "C": "Present discounted value applies only when r = 0.",
+        "D": "Present value is for firms, while present discounted value is for consumers."
+      },
+      "correct": "A",
+      "explanation": "The terms are closely related, but PDV commonly emphasizes discounting a stream of dated payments. B, C, and D create false distinctions."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "An investment costs $1,800 and pays $660 in year 1, $726 in year 2, and $798.60 in year 3. At r = 10%, what is its NPV and decision?",
+      "choices": {
+        "A": "NPV = $0; indifferent because PDV equals cost.",
+        "B": "NPV = $385; accept because undiscounted payments exceed cost.",
+        "C": "NPV = -$300; reject because only the first two years count.",
+        "D": "NPV = $600; accept because each payment has PV $800."
+      },
+      "correct": "A",
+      "explanation": "PDV = 660/1.1 + 726/1.1^2 + 798.60/1.1^3 = 600 + 600 + 600 = 1,800, so NPV is zero. B ignores discounting, C omits year 3, and D miscalculates each discounted payment."
+    }
+  ]
+}

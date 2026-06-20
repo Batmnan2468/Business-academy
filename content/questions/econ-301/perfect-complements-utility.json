@@ -1,0 +1,135 @@
+{
+  "topic": "Perfect Complements Utility",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A student has U(x,y)=min(x,2y), where x is left shoes and y is pairs of right shoes, income m=90, p_x=3, and p_y=6. What bundle maximizes utility?",
+      "choices": {
+        "A": "x*=15, y*=7.5 because the fixed-proportion condition is x=2y and the budget is exhausted.",
+        "B": "x*=30, y*=0 because x is cheaper.",
+        "C": "x*=0, y*=15 because y raises the second argument.",
+        "D": "x*=10, y*=10 because perfect complements require equal quantities."
+      },
+      "correct": "A",
+      "explanation": "At the kink, x=2y. Budget gives 3(2y)+6y=90, so 12y=90 and y=7.5, x=15. B and C waste one complementary input. D wrongly assumes equal quantities instead of equality of the two utility arguments."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For U(x,y)=min(3x,y), p_x=4, p_y=2, and m=80, which bundle is optimal and why?",
+      "choices": {
+        "A": "x*=20, y*=0 because x has the coefficient 3.",
+        "B": "x*=0, y*=40 because y is cheaper.",
+        "C": "x*=8, y*=24 because the optimum satisfies 3x=y at the kink.",
+        "D": "x*=10, y*=20 because spending must be equal across goods."
+      },
+      "correct": "C",
+      "explanation": "For Leontief utility, set 3x=y. Budget 4x+2(3x)=80 gives 10x=80, so x=8 and y=24. A and B choose wasteful corners. D uses equal spending, which is not the fixed-proportion condition."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=min(x,y), m=100, p_x=5, p_y=5. If p_x rises to 15, what happens to the optimal bundle?",
+      "choices": {
+        "A": "It changes from (10,10) to (5,5) because the kink condition x=y remains, but the higher price makes each matched pair more expensive.",
+        "B": "It changes from (10,10) to (0,20) because x is now too expensive.",
+        "C": "It changes from (10,10) to (20,0) because y is relatively cheaper.",
+        "D": "It stays (10,10) because perfect complements have no substitution effect."
+      },
+      "correct": "A",
+      "explanation": "The fixed proportion x=y remains. Initially 10 pairs cost 100. After p_x=15, each pair costs 20, so x=y=5. B and C ignore complementarity. D confuses zero substitution away from the fixed ratio with no price effect on affordability."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=min(2x,y), m=120, p_x=4, p_y=4. If income rises to 180, what happens to x* and y*?",
+      "choices": {
+        "A": "They remain x=10, y=20 because prices are unchanged.",
+        "B": "They rise from x=10, y=20 to x=15, y=30 along the fixed-proportion ray y=2x.",
+        "C": "Only x rises because income effects apply only to the first good.",
+        "D": "They shift to a corner because higher income makes tangency possible."
+      },
+      "correct": "B",
+      "explanation": "The kink condition is 2x=y. Initially 4x+4(2x)=120 gives x=10, y=20. After income 180, 12x=180 gives x=15, y=30. A ignores income. C violates fixed proportions. D wrongly applies tangency."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For U(x,y)=min(x,y), indifference curves are L-shaped with kinks along the 45-degree line. Why is the optimum on the kink rather than on a vertical or horizontal segment?",
+      "choices": {
+        "A": "Away from the kink, one good is in excess and does not raise utility, so spending on the excess good is wasted.",
+        "B": "The kink is where the budget line is always tangent to a smooth curve.",
+        "C": "The vertical segment gives the highest x-intercept.",
+        "D": "The horizontal segment always has a higher slope than the budget line."
+      },
+      "correct": "A",
+      "explanation": "For perfect complements, utility is limited by the smaller component. Off the kink, extra units of one good do not increase utility. B incorrectly claims smooth tangency. C and D do not explain the Leontief optimum."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer has U(x,y)=min(x,3y). On a graph with x horizontal and y vertical, along what ray do the kinks of the indifference curves lie?",
+      "choices": {
+        "A": "y=3x because y must be three times x.",
+        "B": "x=3y because the two arguments x and 3y must be equal.",
+        "C": "x=y because all perfect complements use equal quantities.",
+        "D": "y=-3x because indifference curves slope downward."
+      },
+      "correct": "B",
+      "explanation": "At the kink, x=3y. A reverses the fixed-proportion condition. C ignores coefficients. D confuses the kink ray with a downward-sloping budget or indifference segment."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does the tangency condition MRS=p_x/p_y generally fail for perfect complements?",
+      "choices": {
+        "A": "Because the optimum occurs at a kink where the indifference curve is not differentiable, so a single MRS is not defined.",
+        "B": "Because perfect complements have constant MRS everywhere.",
+        "C": "Because perfect complements are not subject to budget constraints.",
+        "D": "Because utility decreases when both goods increase."
+      },
+      "correct": "A",
+      "explanation": "Leontief indifference curves are L-shaped and nondifferentiable at the kink, where the optimum occurs. B describes perfect substitutes. C is false. D violates monotonicity."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A restaurant uses burger patties x and buns y in fixed one-to-one proportions. Extra patties without buns and extra buns without patties do not help. Patties cost $2, buns cost $1, and the budget is $90. Which consumer model and solution match this scenario?",
+      "choices": {
+        "A": "Perfect substitutes; buy only buns because they are cheaper.",
+        "B": "Cobb-Douglas; spend half the budget on each input.",
+        "C": "Perfect complements U=min(x,y); buy x=30 patties and y=30 buns.",
+        "D": "Quasilinear utility; buy x until MU_x=p_x."
+      },
+      "correct": "C",
+      "explanation": "The one-to-one fixed use pattern is perfect complements. Set x=y and 2x+1y=90, so 3x=90 and x=y=30. A ignores complementarity. B assumes substitutability and smooth convexity. D is unrelated."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes perfect complements from Cobb-Douglas preferences?",
+      "choices": {
+        "A": "Perfect complements require fixed proportions and have kinked indifference curves; Cobb-Douglas allows smooth substitution and has interior tangencies.",
+        "B": "Perfect complements always produce corners; Cobb-Douglas always produces corners.",
+        "C": "Perfect complements have straight indifference curves; Cobb-Douglas has L-shaped curves.",
+        "D": "Perfect complements depend only on prices; Cobb-Douglas depends only on income."
+      },
+      "correct": "A",
+      "explanation": "Perfect complements are used in fixed proportions and are represented by L-shaped curves. Cobb-Douglas has smooth, convex curves with diminishing MRS. B wrongly says complements produce corners. C reverses shapes. D misstates demand determinants."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Nina has U(x,y)=min(x,y), m=120, and initially p_x=p_y=6. Then p_x falls to 2 while p_y remains 6. What is the change in maximized utility?",
+      "choices": {
+        "A": "Utility rises from 10 to 15 because each matched pair becomes cheaper.",
+        "B": "Utility rises from 20 to 60 because x becomes cheaper.",
+        "C": "Utility stays 10 because there is no substitution effect.",
+        "D": "Utility falls from 15 to 10 because lower p_x creates excess x."
+      },
+      "correct": "A",
+      "explanation": "Initially x=y and each pair costs 12, so utility is 120/12=10. After p_x=2, each pair costs 8, so x=y=15 and utility is 15. B assumes all spending goes to x. C confuses zero substitution effect with no total price effect. D reverses welfare."
+    }
+  ]
+}

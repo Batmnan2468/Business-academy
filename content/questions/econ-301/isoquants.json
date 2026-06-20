@@ -1,0 +1,135 @@
+{
+  "topic": "Isoquants",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has Q = LK. To produce Q = 100 while using as little capital K as possible subject to using exactly L = 20 labor-hours, what K is required and what does this point represent?",
+      "choices": {
+        "A": "K = 5; it is one point on the Q = 100 isoquant.",
+        "B": "K = 20; equal inputs are always required on an isoquant.",
+        "C": "K = 100; capital must equal output.",
+        "D": "K = 0; labor alone can produce output."
+      },
+      "correct": "A",
+      "explanation": "With Q=LK=100 and L=20, K=5. This is one input combination on the isoquant for output 100. B assumes symmetry means equality. C confuses output with an input. D ignores the multiplicative technology."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For Q = min{2L, K}, what is the cost-minimizing input bundle on the Q = 40 isoquant if labor costs $5 and capital costs $1?",
+      "choices": {
+        "A": "L = 20, K = 40 because the fixed-proportions kink satisfies 2L = K = 40.",
+        "B": "L = 0, K = 40 because capital is cheaper.",
+        "C": "L = 20, K = 20 because equal input quantities minimize cost.",
+        "D": "L = 40, K = 0 because labor creates the first term."
+      },
+      "correct": "A",
+      "explanation": "To produce 40, both 2L and K must be at least 40, so L=20 and K=40. B and D ignore the complementary input requirement. C produces only min(40,20)=20."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = 6sqrt(LK), the firm moves from the Q = 60 isoquant to the Q = 120 isoquant while keeping the input ratio L/K constant. What happens to required L and K?",
+      "choices": {
+        "A": "Both inputs double because the technology has constant returns to scale.",
+        "B": "Both inputs quadruple because output doubles.",
+        "C": "Only labor doubles because isoquants measure labor changes.",
+        "D": "Inputs are unchanged because the input ratio is unchanged."
+      },
+      "correct": "A",
+      "explanation": "The function is homogeneous of degree 1, so doubling output at a constant input ratio requires doubling both inputs. B confuses output doubling with area scaling. C ignores capital. D confuses unchanged ratio with unchanged quantities."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = L + 2K, how does the isoquant for Q = 80 compare with the isoquant for Q = 40?",
+      "choices": {
+        "A": "It is parallel and farther from the origin, with intercepts twice as large.",
+        "B": "It is steeper because higher output requires more capital.",
+        "C": "It crosses the Q = 40 isoquant at L = 40, K = 20.",
+        "D": "It is closer to the origin because higher output is more efficient."
+      },
+      "correct": "A",
+      "explanation": "Isoquants are L+2K=Q, so slope is always -1/2. Q=80 has L-intercept 80 and K-intercept 40, twice those of Q=40. B incorrectly changes the slope. C violates non-intersection. D reverses output ranking."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Well-behaved isoquants for Q = L^(1/2)K^(1/2) are described as convex to the origin. What does that curvature mean?",
+      "choices": {
+        "A": "As the firm uses more labor and less capital, labor becomes less able to substitute for capital at the margin.",
+        "B": "Labor and capital are perfect substitutes with a constant slope.",
+        "C": "The firm must use labor and capital in a fixed one-to-one ratio.",
+        "D": "Higher isoquants eventually intersect lower isoquants."
+      },
+      "correct": "A",
+      "explanation": "Convex isoquants reflect diminishing technical substitutability: as labor becomes abundant relative to capital, extra labor replaces less capital. B describes linear isoquants. C describes right-angle isoquants. D violates production-function consistency."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In an isoquant diagram with labor on the horizontal axis and capital on the vertical axis, what does a flatter point on the same isoquant indicate?",
+      "choices": {
+        "A": "The firm is using relatively more labor and less capital, so the marginal product of labor is lower relative to capital.",
+        "B": "The firm is producing less output because the curve is flatter.",
+        "C": "The firm has lower total cost because the slope is closer to zero.",
+        "D": "The firm has moved to a higher isoquant."
+      },
+      "correct": "A",
+      "explanation": "The isoquant slope is -MPL/MPK. A flatter slope means MPL is lower relative to MPK, usually where labor is abundant. B confuses slope with output level. C requires input prices. D confuses movement along an isoquant with shifting isoquants."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can two isoquants from the same production function not cross?",
+      "choices": {
+        "A": "Because one input bundle cannot produce two different maximum output levels under the same technology.",
+        "B": "Because firms always minimize cost.",
+        "C": "Because marginal products must be negative at a crossing.",
+        "D": "Because all technologies have constant returns to scale."
+      },
+      "correct": "A",
+      "explanation": "If two isoquants crossed, the same input bundle would correspond to two different output levels, contradicting the production function. B adds cost minimization unnecessarily. C is not implied. D is false."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A hospital can perform 200 scans per day using several combinations of technicians and MRI machine-hours. Administrators want to list all combinations that achieve exactly 200 scans before considering wages or machine rental rates. Which tool should they use?",
+      "choices": {
+        "A": "An isoquant for 200 scans.",
+        "B": "A demand curve for MRI scans.",
+        "C": "An isocost line using technician wages.",
+        "D": "A marginal revenue curve."
+      },
+      "correct": "A",
+      "explanation": "An isoquant collects all input bundles producing a given output. B is about consumers. C requires prices and cost, which the problem says to ignore initially. D concerns revenue, not input combinations."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an isoquant from an indifference curve?",
+      "choices": {
+        "A": "An isoquant holds output constant across input bundles; an indifference curve holds utility constant across consumption bundles.",
+        "B": "An isoquant must be upward sloping; an indifference curve must be downward sloping.",
+        "C": "An isoquant includes input prices; an indifference curve includes consumer income.",
+        "D": "An isoquant applies only to fixed-proportions technologies; an indifference curve applies only to Cobb-Douglas preferences."
+      },
+      "correct": "A",
+      "explanation": "Isoquants represent equal output from input bundles; indifference curves represent equal utility from consumption bundles. B is wrong because typical isoquants are downward sloping. C confuses constraints with curves. D is far too narrow."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm initially uses technology Q = L + K. After automation, technology becomes Q = 2L + K. For the Q = 100 isoquant, what changes? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "The labor intercept falls from 100 to 50, and the isoquant becomes steeper because labor is more productive.",
+        "B": "The capital intercept falls from 100 to 50 because capital is more productive.",
+        "C": "The isoquant shifts outward because better technology requires more inputs.",
+        "D": "The slope stays -1 because output is still linear."
+      },
+      "correct": "A",
+      "explanation": "Before automation, Q=100 has L-intercept 100 and slope -1. After automation, 2L+K=100 has L-intercept 50 and slope -2. Labor productivity rises, so less labor is needed if using only labor. B changes the wrong intercept. C reverses the effect of better technology. D ignores the changed marginal product ratio."
+    }
+  ]
+}

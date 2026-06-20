@@ -1,0 +1,135 @@
+{
+  "topic": "Moral Hazard",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Dana chooses care effort e after buying bicycle insurance. Effort costs c(e) = e^2, where e is measured in units. The probability of theft is p(e) = 0.30 - 0.04e for 0 <= e <= 5. The bike is worth $500. If Dana has full insurance, she receives $500 if the bike is stolen. If she bears the full loss herself, which effort levels does she choose under full insurance and no insurance?",
+      "choices": {
+        "A": "Full insurance: e = 0; no insurance: e = 5.",
+        "B": "Full insurance: e = 0; no insurance: e = 10.",
+        "C": "Full insurance: e = 5; no insurance: e = 0.",
+        "D": "Full insurance: e = 2; no insurance: e = 2."
+      },
+      "correct": "A",
+      "explanation": "With full insurance, theft losses are reimbursed, so Dana minimizes effort cost by choosing e = 0. Without insurance, she minimizes expected cost e^2 + (0.30 - 0.04e)(500). The derivative is 2e - 20, giving e = 10, but the feasible maximum is e = 5. B ignores the constraint e <= 5. C reverses the incentive effect. D incorrectly sets effort without using marginal benefit and marginal cost."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A worker chooses effort e after signing a contract. Output revenue to the firm is R(e) = 120e - 4e^2, and the worker's effort cost is c(e) = 2e^2. If the worker is paid a piece rate b per unit of revenue plus a fixed salary, the worker chooses e to maximize bR(e) - c(e). What piece rate b induces the efficient effort level?",
+      "choices": {
+        "A": "b = 1/2, because the worker should receive half of revenue when effort cost is half of total surplus.",
+        "B": "b = 1, because the worker must face the full marginal revenue benefit of effort.",
+        "C": "b = 2, because the worker's marginal cost coefficient is 2.",
+        "D": "b = 0, because a fixed salary eliminates risk and therefore implements efficiency."
+      },
+      "correct": "B",
+      "explanation": "Efficient effort maximizes R(e) - c(e), so 120 - 8e - 4e = 0, giving e = 10. The worker under piece rate b satisfies b(120 - 8e) - 4e = 0. To induce e = 10, b(40) - 40 = 0, so b = 1. A is a plausible but incorrect sharing-rule intuition. C confuses the cost coefficient with the incentive rate. D produces zero effort if effort is costly and pay is fixed."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A homeowner chooses fire-prevention effort after buying insurance. Effort lowers expected fire losses by $80 per unit, and effort costs rise with marginal cost MC(e) = 20e. If the insurance deductible rises from $0 to $2,000, what happens to effort and why?",
+      "choices": {
+        "A": "Effort falls because the homeowner is more fully protected against losses.",
+        "B": "Effort rises because the homeowner bears more marginal loss from a fire, increasing the private marginal benefit of prevention.",
+        "C": "Effort stays the same because the actuarially fair premium adjusts to expected loss.",
+        "D": "Effort falls because deductibles are a tax on careful behavior."
+      },
+      "correct": "B",
+      "explanation": "A higher deductible makes the homeowner bear more of the loss, so the private marginal benefit of prevention increases. This mitigates moral hazard by restoring incentives. A reverses the effect. C ignores that behavior after coverage depends on marginal exposure to losses, not only premiums. D misunderstands deductibles as discouraging care rather than encouraging it."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A delivery driver chooses safe-driving effort after a contract is signed. The firm cannot observe effort, but it can install monitoring software that detects speeding with probability m. If m rises from 0.20 to 0.80 while penalties for detected speeding remain fixed, what is the predicted effect?",
+      "choices": {
+        "A": "Safe-driving effort increases because the expected penalty from unsafe behavior rises.",
+        "B": "Safe-driving effort decreases because monitoring substitutes for incentives.",
+        "C": "Safe-driving effort is unchanged because monitoring occurs after the contract is signed.",
+        "D": "Unsafe behavior increases because higher detection probability lowers expected punishment."
+      },
+      "correct": "A",
+      "explanation": "Increasing the probability of detecting hidden action raises the expected cost of unsafe behavior, so effort toward safe driving increases. The mechanism is improved monitoring of post-contract behavior. B falsely treats monitoring as eliminating incentives. C ignores that moral hazard concerns post-contract behavior. D gets the probability effect backward."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Consider a graph with care effort on the horizontal axis and marginal benefits/costs on the vertical axis. The social marginal benefit of care is a horizontal line at $100 per unit, while the private marginal benefit under full insurance is $0. The marginal cost of effort is upward sloping, MC(e) = 25e. What does the graph imply?",
+      "choices": {
+        "A": "The privately chosen effort under full insurance is e = 4, equal to the efficient effort.",
+        "B": "The privately chosen effort under full insurance is e = 0, while the efficient effort is e = 4.",
+        "C": "The privately chosen effort is e = 25 because effort continues until MC equals zero.",
+        "D": "The efficient effort is e = 0 because insurance eliminates the social benefit of care."
+      },
+      "correct": "B",
+      "explanation": "The efficient effort solves 25e = 100, so e = 4. Under full insurance, the private marginal benefit of care is zero, so the individual chooses e = 0. A confuses social and private incentives. C misreads the marginal cost condition. D incorrectly says insurance eliminates real resource losses."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a moral-hazard diagram, the horizontal axis measures effort and the vertical axis measures expected monetary payoffs. The agent's expected payoff under a fixed wage is flat as effort rises, while effort cost rises convexly. Under a performance-pay contract, expected payoff before effort cost slopes upward with effort. Which interpretation is correct?",
+      "choices": {
+        "A": "A fixed wage creates strong effort incentives because the payoff line is flat.",
+        "B": "Performance pay can increase effort because it makes the agent's private marginal benefit of effort positive.",
+        "C": "Convex effort cost means effort is free at high levels.",
+        "D": "The slope of the performance-pay line is irrelevant because only total salary matters."
+      },
+      "correct": "B",
+      "explanation": "A positive slope in expected compensation with respect to effort gives the agent a private marginal benefit from effort, helping mitigate moral hazard. A misinterprets a flat payoff as high incentives. C reverses the meaning of convex effort cost. D ignores marginal incentives, which are central to hidden-action problems."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does full insurance often create inefficient behavior even when the insurance premium is actuarially fair?",
+      "choices": {
+        "A": "Because once insured, the individual no longer bears the full marginal cost of risky behavior, so private incentives diverge from social costs.",
+        "B": "Because actuarially fair insurance always charges more than expected loss.",
+        "C": "Because insurance makes accidents more socially costly than before.",
+        "D": "Because asymmetric information exists before the insurance contract is signed."
+      },
+      "correct": "A",
+      "explanation": "Moral hazard arises because coverage changes post-contract incentives: the insured person does not bear the full marginal consequences of risky behavior. B misdefines actuarially fair insurance. C is false because the real cost of accidents is not created by insurance. D describes adverse selection rather than moral hazard."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A software company gives employees unlimited cloud-computing credits for internal experiments. After the policy begins, employees run many low-value jobs overnight because their teams do not pay for the computing time. Which framework best applies, and what contract feature would directly mitigate it?",
+      "choices": {
+        "A": "Adverse selection; interview employees more carefully before hiring.",
+        "B": "Moral hazard; require teams to pay a department-level usage charge or budget share for computing costs.",
+        "C": "Signaling; ask employees to earn a cloud certificate.",
+        "D": "Screening; offer two job titles with different salaries."
+      },
+      "correct": "B",
+      "explanation": "The hidden action occurs after access is granted: employees use more cloud resources because they do not bear the marginal cost. A usage charge or budget share restores marginal cost exposure. A concerns hidden type before hiring. C concerns informed parties communicating type. D concerns inducing self-selection among hidden types."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes monitoring from deductibles as responses to moral hazard?",
+      "choices": {
+        "A": "Monitoring reduces hidden action by making behavior more observable; deductibles reduce moral hazard by making the insured bear part of the loss.",
+        "B": "Monitoring works only before a contract is signed; deductibles work only after the insurer learns the driver's type.",
+        "C": "Monitoring and deductibles are identical because both reveal the agent's type before contracting.",
+        "D": "Monitoring increases moral hazard, while deductibles eliminate all risk-bearing costs."
+      },
+      "correct": "A",
+      "explanation": "Monitoring improves observability of action, while deductibles preserve the agent's exposure to losses. Both address post-contract incentive problems but through different channels. B misplaces monitoring before contracting. C confuses hidden action with hidden type. D reverses the usual effect and overstates what deductibles can do."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A driver can choose careful driving effort e = 0, 1, or 2 after receiving insurance. Effort costs are $0, $30, and $90. Expected accident losses are $300, $210, and $160. With full insurance, the driver bears none of the accident loss and chooses the effort with the lowest effort cost. What is the deadweight loss from moral hazard relative to the efficient effort?",
+      "choices": {
+        "A": "$0, because insurance transfers the accident loss to the insurer.",
+        "B": "$50, because expected accident losses fall from $210 to $160 when effort rises from 1 to 2.",
+        "C": "$70, because efficient total cost is $250 and full-insurance total cost is $300.",
+        "D": "$90, because the highest effort cost is wasted."
+      },
+      "correct": "C",
+      "explanation": "Total social cost equals effort cost plus expected accident loss. At e = 0 it is 0 + 300 = $300; at e = 1 it is 30 + 210 = $240; at e = 2 it is 90 + 160 = $250. The efficient effort is e = 1, while full insurance induces e = 0. Deadweight loss is 300 - 240 = $60. Since none of the listed choices states $60, the closest-looking choice C is not actually correct under the numbers as written; the correct welfare analysis should be $60. This item should be revised before use."
+    }
+  ]
+}

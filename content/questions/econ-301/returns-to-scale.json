@@ -1,0 +1,135 @@
+{
+  "topic": "Returns to Scale",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has Q = 5L^(1/2)K^(1/2). If it currently uses L = 16, K = 9, how much output does it produce, and what output would result from doubling both inputs?",
+      "choices": {
+        "A": "Q rises from 60 to 120, showing constant returns to scale.",
+        "B": "Q rises from 60 to 240, showing increasing returns to scale.",
+        "C": "Q rises from 25 to 50, showing constant returns to scale.",
+        "D": "Q stays at 60 because the input ratio is unchanged."
+      },
+      "correct": "A",
+      "explanation": "Initial Q=5sqrt(144)=60. Doubling both inputs gives Q=5sqrt(3218)=120. Output doubles, showing constant returns. B assumes each input doubling compounds into quadruple output. C miscalculates initial output. D confuses unchanged input ratio with unchanged input levels."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A production function is Q = L^0.7K^0.5. If the firm scales both inputs by t = 3, by what factor does output change, and what does this imply?",
+      "choices": {
+        "A": "Output changes by 3^1.2, implying increasing returns to scale.",
+        "B": "Output changes by 3, implying constant returns to scale.",
+        "C": "Output changes by 3^0.2, implying decreasing returns to scale.",
+        "D": "Output changes by 1.2, implying increasing returns to scale."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas, scaling both inputs by t scales output by t^(a+b). Here a+b=1.2, so output scales by 3^1.2, more than triple. B ignores the exponent sum. C subtracts from 1. D treats the exponent sum as the output multiplier."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm with Q = 4L^0.4K^0.4 doubles both inputs. What happens to output and what mechanism explains it?",
+      "choices": {
+        "A": "Output rises by a factor of 2^0.8, less than double, because the technology has decreasing returns to scale.",
+        "B": "Output doubles because both inputs doubled.",
+        "C": "Output rises by a factor of 2^1.6 because two inputs each have exponent 0.8.",
+        "D": "Output is unchanged because the input ratio is unchanged."
+      },
+      "correct": "A",
+      "explanation": "The exponent sum is 0.8, so doubling all inputs scales output by 2^0.8. The mechanism is decreasing returns to scale. B assumes constant returns. C doubles the exponent sum incorrectly. D confuses ratios with levels."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A factory has Q = 2L + 2K. If both inputs increase by 50%, what happens to output?",
+      "choices": {
+        "A": "Output increases by 50% because the production function is homogeneous of degree 1.",
+        "B": "Output increases by 100% because there are two inputs.",
+        "C": "Output increases by 25% because each input has diminishing marginal product.",
+        "D": "Output does not change because the input mix is constant."
+      },
+      "correct": "A",
+      "explanation": "A linear homogeneous function with no fixed term has constant returns to scale. Scaling both inputs by 1.5 scales output by 1.5. B double-counts inputs. C invents diminishing marginal product. D confuses unchanged mix with unchanged scale."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Along a ray from the origin in input space, a firm's isoquants for Q = 100, Q = 200, and Q = 300 become closer together as output rises. What does this indicate?",
+      "choices": {
+        "A": "Increasing returns to scale because equal output increments require smaller proportional input increases.",
+        "B": "Decreasing returns to scale because isoquants are closer together.",
+        "C": "Constant returns to scale because all isoquants are downward sloping.",
+        "D": "Negative marginal product because higher output uses fewer inputs."
+      },
+      "correct": "A",
+      "explanation": "If isoquants get closer along a ray, less additional input scale is needed for equal output increases, indicating increasing returns. B reverses the spacing interpretation. C ignores distances between isoquants. D misreads higher output with lower input use."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If a technology has constant returns to scale, how should equal-output-multiple isoquants appear along any straight ray from the origin?",
+      "choices": {
+        "A": "Doubling output should require doubling distance from the origin along the ray.",
+        "B": "Doubling output should require less than doubling distance from the origin.",
+        "C": "Isoquants should intersect along the ray.",
+        "D": "All isoquants should have the same intercepts."
+      },
+      "correct": "A",
+      "explanation": "With constant returns, scaling inputs by 2 scales output by 2, so distance along a ray doubles. B describes increasing returns. C is impossible for a well-defined production function. D would imply identical output levels."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does increasing returns to scale mean for a semiconductor plant?",
+      "choices": {
+        "A": "Doubling all inputs more than doubles chip output, often reflecting indivisibilities or specialization.",
+        "B": "Doubling labor while holding capital fixed more than doubles chip output.",
+        "C": "Marginal product of labor must always be increasing.",
+        "D": "Average product must be zero at low output."
+      },
+      "correct": "A",
+      "explanation": "Returns to scale concern proportional changes in all inputs. B is a marginal-product comparison with capital fixed. C confuses returns to scale with marginal product. D is unrelated."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A cloud services company doubles its engineers, servers, office space, and electricity use. Output capacity rises from 1 million to 2.6 million requests per second. Which concept best classifies this result?",
+      "choices": {
+        "A": "Increasing returns to scale.",
+        "B": "Diminishing marginal product of labor.",
+        "C": "Fixed-proportions production.",
+        "D": "A movement along a demand curve."
+      },
+      "correct": "A",
+      "explanation": "All inputs doubled and output rose by more than double, so this is increasing returns to scale. B changes one input holding others fixed. C concerns substitution patterns. D is a consumer-market concept."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes diminishing marginal product from decreasing returns to scale?",
+      "choices": {
+        "A": "Diminishing marginal product changes one input holding others fixed; decreasing returns to scale scales all inputs and output rises less than proportionally.",
+        "B": "They are identical because both mean output falls when inputs rise.",
+        "C": "Diminishing marginal product applies only in the long run; decreasing returns applies only in the short run.",
+        "D": "Diminishing marginal product uses input prices; decreasing returns uses output prices."
+      },
+      "correct": "A",
+      "explanation": "Diminishing marginal product is about varying one input; decreasing returns to scale is about scaling all inputs. B wrongly says output falls. C reverses the usual association and is conceptually wrong. D adds prices unnecessarily."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm changes technology from Q = L^0.5K^0.5 to Q = L^0.6K^0.6. What happens to returns to scale? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "It changes from constant to increasing returns to scale because the exponent sum rises from 1.0 to 1.2.",
+        "B": "It changes from increasing to constant returns because each exponent is less than 1.",
+        "C": "It remains constant because both inputs have equal exponents.",
+        "D": "It becomes decreasing because marginal products diminish in each input."
+      },
+      "correct": "A",
+      "explanation": "The first function has exponent sum 1.0, while the second has sum 1.2. Returns to scale depend on the sum of exponents, not whether each individual exponent is below 1. B and D confuse individual diminishing marginal product with scale returns. C confuses equal exponents with constant returns."
+    }
+  ]
+}

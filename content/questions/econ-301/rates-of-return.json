@@ -1,0 +1,135 @@
+{
+  "topic": "Rates of Return",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A bond sells for $900 today and pays $990 one year from now. What is its rate of return, and what should happen if equivalent-risk assets yield 8%?",
+      "choices": {
+        "A": "Return = 10%; investors buy this bond, pushing its price up and return down.",
+        "B": "Return = 8%; investors are indifferent because 990 - 900 = 90.",
+        "C": "Return = 9%; investors sell this bond because its dollar gain is too low.",
+        "D": "Return = 90%; investors buy because the gain is $90."
+      },
+      "correct": "A",
+      "explanation": "Return is (990 - 900)/900 = 10%. Since that exceeds 8%, buying pressure raises price and lowers return. B confuses dollar gain with percent return, C divides by the future payoff, and D treats $90 as 90%."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "An asset has current price P and will pay $575 next year. Equivalent-risk assets return 15%. What price P makes investors indifferent?",
+      "choices": {
+        "A": "$575.00 because price must equal payoff.",
+        "B": "$500.00 because 575/500 - 1 = 15%.",
+        "C": "$661.25 because the payoff is compounded at 15%.",
+        "D": "$560.00 because the asset must earn $15."
+      },
+      "correct": "B",
+      "explanation": "Indifference requires 575/P - 1 = 0.15, so P = 575/1.15 = 500. A ignores return, C compounds instead of discounts, and D confuses a 15% rate with a $15 gain."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A one-year asset pays $220. Its price rises from $200 to $210. What happens to its rate of return?",
+      "choices": {
+        "A": "It rises from 10% to 15%.",
+        "B": "It falls from 10% to about 4.76% because the same payoff gain is earned on a higher purchase price.",
+        "C": "It stays at 10% because the payoff remains $220.",
+        "D": "It falls from 20% to 10% because only the price matters."
+      },
+      "correct": "B",
+      "explanation": "Return changes from (220-200)/200 = 10% to (220-210)/210 = 4.76%. A reverses the effect, C ignores price, and D uses the wrong numerator."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two risk-free assets initially both yield 6%. Asset A's price temporarily falls while its payoff is unchanged. What market process should occur?",
+      "choices": {
+        "A": "Asset A's return rises, attracting buyers until its price rises and its return returns to 6%.",
+        "B": "Asset A's return falls, attracting sellers until price rises.",
+        "C": "Asset A's return is unchanged, so no one trades.",
+        "D": "Asset A's payoff falls automatically to preserve the old return."
+      },
+      "correct": "A",
+      "explanation": "With fixed payoff, a lower price increases return. Buyers bid the price up until equivalent-risk returns are equal again. B gets the return direction wrong, C ignores price, and D changes a fixed payoff."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A graph shows a horizontal line at 7% representing the market return for equivalent-risk assets. A bond's calculated return is plotted at 9%. What should happen in competitive equilibrium?",
+      "choices": {
+        "A": "The bond's price should be bid up until its return falls to 7%.",
+        "B": "The bond's price should fall until its return falls to 7%.",
+        "C": "The bond's payoff should fall because prices cannot change.",
+        "D": "The market return must rise to 9% for all assets."
+      },
+      "correct": "A",
+      "explanation": "A return above the market attracts buyers; the resulting price increase lowers the bond's return. B gets the price-return relationship wrong, C assumes fixed prices instead of fixed payoff, and D ignores that one asset's mispricing need not change the market return."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "On a payoff-price graph for a one-year risk-free bond, lines from the origin represent constant gross returns payoff/P. Which bond has the higher return?",
+      "choices": {
+        "A": "A bond at price 100 and payoff 105 rather than a bond at price 100 and payoff 110.",
+        "B": "A bond at price 100 and payoff 110 rather than a bond at price 120 and payoff 126.",
+        "C": "A bond at price 120 and payoff 126 rather than a bond at price 100 and payoff 110.",
+        "D": "Two bonds have the same return whenever their payoffs differ by the same number of dollars."
+      },
+      "correct": "B",
+      "explanation": "The first bond in B returns 10%, while the second returns 5%. A chooses the lower payoff at the same price, C reverses the comparison, and D confuses dollar differences with ratios."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why do competitive markets tend to equalize rates of return across assets with equivalent risk?",
+      "choices": {
+        "A": "Investors buy assets with unusually high returns and sell assets with unusually low returns, changing prices until excess returns disappear.",
+        "B": "Firms are legally required to set identical prices for all assets.",
+        "C": "Investors care only about dollar payoffs, not purchase prices.",
+        "D": "Equal risk means equal future payoff in dollars."
+      },
+      "correct": "A",
+      "explanation": "Arbitrage and portfolio reallocation push prices toward equal risk-adjusted returns. B is not the economic mechanism, C contradicts return calculation, and D confuses risk equivalence with identical payoffs."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A corporate bond costs $1,000, pays a $60 coupon in one year, and can then be sold for $1,020. Which calculation gives its one-year rate of return?",
+      "choices": {
+        "A": "(1,020 - 1,000)/1,000 = 2%",
+        "B": "(60 + 1,020 - 1,000)/1,000 = 8%",
+        "C": "60/1,020 = 5.88%",
+        "D": "(60 + 1,000)/1,020 = 103.92%"
+      },
+      "correct": "B",
+      "explanation": "Rate of return includes coupon income plus capital gain relative to purchase price: (60 + 20)/1000 = 8%. A omits the coupon, C divides coupon by sale price, and D uses the wrong numerator and denominator."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a bond's coupon rate from its rate of return?",
+      "choices": {
+        "A": "Coupon rate is coupon divided by face value; rate of return includes coupon plus capital gain or loss divided by purchase price.",
+        "B": "Coupon rate includes capital gains; rate of return ignores price changes.",
+        "C": "Coupon rate and rate of return are always identical for all bonds.",
+        "D": "Coupon rate is relevant only for stocks, while rate of return is relevant only for bonds."
+      },
+      "correct": "A",
+      "explanation": "The coupon rate is based on the promised coupon and face value; realized or expected return depends on the purchase price and resale or redemption value. B reverses definitions, C is true only in special cases, and D is false."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A risk-free asset costs $400 and pays $440 in one year. The market return on equivalent assets is 8%. What is the excess return in percentage points, and what does it imply?",
+      "choices": {
+        "A": "2 percentage points; buyers should bid up the asset price.",
+        "B": "8 percentage points; buyers should bid down the asset price.",
+        "C": "10 percentage points; investors are indifferent.",
+        "D": "$40; percentage returns cannot be compared."
+      },
+      "correct": "A",
+      "explanation": "The asset return is (440-400)/400 = 10%, which is 2 percentage points above the 8% market return. This attracts buyers and raises price. B confuses market return with excess return, C reports total return as excess return, and D confuses dollar gain with percentage return."
+    }
+  ]
+}

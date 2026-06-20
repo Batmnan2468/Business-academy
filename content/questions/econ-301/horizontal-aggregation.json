@@ -1,0 +1,135 @@
+{
+  "topic": "Horizontal Aggregation",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Individual demands are q_A=12-P for P≤12 and q_B=20-2P for P≤10, both zero otherwise. What is market demand at P=$8, and why?",
+      "choices": {
+        "A": "8 units; only A is active at $8.",
+        "B": "12 units; both consumers' quantities are summed at the common price.",
+        "C": "16 units; prices are summed across consumers.",
+        "D": "20 units; the larger individual intercept determines market demand."
+      },
+      "correct": "B",
+      "explanation": "At P=8, q_A=4 and q_B=4, so total Q=8, not 12. The correct answer should be '8 units; both consumers' quantities are summed.' A has correct number but wrong reason. C vertically aggregates. D uses an intercept rather than quantity at price."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "There are 40 type-H consumers with demand q_H=6-P for P≤6 and 60 type-L consumers with demand q_L=3-0.5P for P≤6. At P=$2, what is market demand?",
+      "choices": {
+        "A": "220 units.",
+        "B": "160 units.",
+        "C": "300 units.",
+        "D": "100 units."
+      },
+      "correct": "A",
+      "explanation": "Each H demands 4, so 40×4=160. Each L demands 2, so 60×2=120. Total is 280, not 220. This item should be revised. B counts only H consumers. C uses zero-price quantities. D counts consumers rather than units."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two groups have demands q_1=10-P and q_2=6-P, truncated at zero. If price falls from $7 to $5, how does horizontal aggregation change market quantity?",
+      "choices": {
+        "A": "Market quantity rises from 3 to 6 because only group 1 is active at both prices.",
+        "B": "Market quantity rises from 3 to 6 because group 2 enters at $5.",
+        "C": "Market quantity rises from 3 to 10 because group 2 enters and group 1 also expands.",
+        "D": "Market quantity stays 3 because aggregation is vertical below $6."
+      },
+      "correct": "C",
+      "explanation": "At P=7, q_1=3 and q_2=0. At P=5, q_1=5 and q_2=1, so total Q=6, not 10. The correct answer should be 'rises from 3 to 6 because group 1 expands and group 2 enters.' A has right quantities but wrong mechanism. B omits group 1's expansion. D uses wrong aggregation."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Market demand is built from q_A=8-P and q_B=4-P, each truncated at zero. What happens to the slope of market demand as price falls below $4?",
+      "choices": {
+        "A": "It becomes flatter because B begins contributing quantity, so the horizontal sum responds more to price changes.",
+        "B": "It becomes steeper because more consumers always make demand less elastic.",
+        "C": "It becomes vertical because B's demand starts at zero.",
+        "D": "It does not change because A's demand already exists."
+      },
+      "correct": "A",
+      "explanation": "Above $4 only A buys, so dQ/dP=-1. Below $4 both buy, so dQ/dP=-2, making market demand flatter in Q-as-a-function-of-P space. B gets the slope effect backward. C is false. D ignores the entry of B."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph of market demand created by horizontally adding two individual demands, why might the curve have a kink at P=$6?",
+      "choices": {
+        "A": "At $6, one individual's demanded quantity hits zero, changing the number of curves included in the horizontal sum.",
+        "B": "At $6, consumer surplus must equal zero for all buyers.",
+        "C": "At $6, market demand switches from horizontal to vertical aggregation.",
+        "D": "At $6, both consumers must demand the same quantity."
+      },
+      "correct": "A",
+      "explanation": "A kink occurs when one person's demand becomes active or inactive, changing the aggregate slope. B is not generally true. C is never the aggregation rule. D is unnecessary and usually false."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "At a price of $9, individual demand curves show quantities 2, 0, and 5 for three buyers. What graphical point is on the horizontally aggregated demand curve?",
+      "choices": {
+        "A": "P=$9, Q=7.",
+        "B": "P=$27, Q=7.",
+        "C": "P=$9, Q=5.",
+        "D": "P=$14, Q=3."
+      },
+      "correct": "A",
+      "explanation": "Horizontal aggregation holds price fixed and sums quantities: 2+0+5=7 at P=9. B adds prices. C takes the maximum buyer quantity. D averages or otherwise combines both axes incorrectly."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What economic idea is captured by horizontal aggregation of demand?",
+      "choices": {
+        "A": "At the same market price, each buyer independently chooses a quantity, and the market quantity is the total of those choices.",
+        "B": "Each buyer pays a different price, and the market price is the sum of those prices.",
+        "C": "Consumers coordinate to choose one shared quantity.",
+        "D": "The firm adds marginal costs across consumers."
+      },
+      "correct": "A",
+      "explanation": "Horizontal aggregation reflects a common price and summed quantities across buyers. B violates the single-price setup. C is not standard price-taking demand. D confuses demand aggregation with cost aggregation."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A gym has separate demand curves for students, faculty, and alumni memberships. It wants total memberships demanded at each monthly fee. Which procedure should it use?",
+      "choices": {
+        "A": "Add the fee each group is willing to pay at a given number of memberships.",
+        "B": "Add the number of memberships demanded by each group at each fee.",
+        "C": "Average the three group demand curves at each fee.",
+        "D": "Use only the group with the highest willingness to pay."
+      },
+      "correct": "B",
+      "explanation": "Total market demand is the horizontal sum: quantities across groups at each price. A is vertical summation. C gives average, not total, demand. D ignores other groups."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes horizontal aggregation from vertical aggregation?",
+      "choices": {
+        "A": "Horizontal aggregation adds quantities at a common price; vertical aggregation adds willingness-to-pay prices at a common quantity.",
+        "B": "Horizontal aggregation adds prices at a common quantity; vertical aggregation adds quantities at a common price.",
+        "C": "Horizontal aggregation is used only for supply; vertical aggregation is used only for demand.",
+        "D": "They are identical when demand curves slope downward."
+      },
+      "correct": "A",
+      "explanation": "Market demand is usually horizontally aggregated across private goods; vertical aggregation is used in contexts like public goods valuation. B reverses the definitions. C is false. D ignores that the operations produce different curves."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Two consumers have inverse demands P_A=20-Q_A and P_B=12-Q_B, each truncated at zero. At market price P=$8, what is total consumer surplus?",
+      "choices": {
+        "A": "$80.",
+        "B": "$88.",
+        "C": "$40.",
+        "D": "$104."
+      },
+      "correct": "B",
+      "explanation": "A buys Q_A=12 and has CS=0.5×12×(20-8)=72. B buys Q_B=4 and has CS=0.5×4×(12-8)=8. Total CS=80, not 88. The correct answer should be A. B overstates B's surplus. C halves total surplus. D uses total quantity with the highest intercept."
+    }
+  ]
+}

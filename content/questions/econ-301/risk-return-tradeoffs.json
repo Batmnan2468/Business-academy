@@ -1,0 +1,135 @@
+{
+  "topic": "Risk-Return Tradeoffs",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Leah has mean-variance utility U=E(r)-0.5Aσ^2 with A=4. She chooses between Portfolio X with E(r)=0.08 and σ=0.10, and Portfolio Y with E(r)=0.12 and σ=0.20. Which does she choose, and why?",
+      "choices": {
+        "A": "X, because U_X=0.08-0.5(4)(0.01)=0.06 and U_Y=0.12-0.5(4)(0.04)=0.04.",
+        "B": "Y, because it has the higher expected return.",
+        "C": "X, because it has the lower expected return and therefore lower opportunity cost.",
+        "D": "Y, because higher standard deviation always increases utility for risk-averse investors."
+      },
+      "correct": "A",
+      "explanation": "The risk penalty makes X preferred despite lower expected return. B ignores risk. C gives a wrong economic reason. D reverses risk aversion."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Noah can invest share s of wealth in a risky fund with expected excess return 0.06 over the risk-free asset and variance 0.04. His mean-variance utility over excess return is U=s(0.06)-0.5A s^2(0.04), with A=3. What share s maximizes utility?",
+      "choices": {
+        "A": "s=0.25, because he should invest one quarter in the risky asset.",
+        "B": "s=0.50, because diversification requires a half risky, half safe portfolio.",
+        "C": "s=1.00, because the risky fund has a positive expected excess return.",
+        "D": "s=0.50? No, the FOC gives s=0.06/(3·0.04)=0.50, so he invests half in the risky fund."
+      },
+      "correct": "D",
+      "explanation": "FOC: 0.06-A(0.04)s=0, so s=0.06/(3·0.04)=0.5. A miscalculates the denominator. B gives the right number but for a naive diversification reason, not optimization. C ignores the risk penalty."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Using s*=μ_e/(Aσ^2), where μ_e is expected excess return, what happens to the risky asset share when risk aversion A rises from 2 to 4, holding μ_e=0.08 and σ^2=0.04 fixed?",
+      "choices": {
+        "A": "It doubles from 1 to 2 because more risk aversion requires more expected return.",
+        "B": "It falls from 1 to 0.5 because higher risk aversion increases the marginal utility cost of variance.",
+        "C": "It stays at 1 because expected excess return is unchanged.",
+        "D": "It falls to 0 because any increase in risk aversion eliminates risky investment."
+      },
+      "correct": "B",
+      "explanation": "s*=0.08/(2·0.04)=1 initially and 0.08/(4·0.04)=0.5 after A rises. A reverses the comparative static. C ignores A. D is too extreme."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A risky fund's expected excess return rises from 0.04 to 0.08, while variance and risk aversion stay fixed. What happens to the optimal risky share in the mean-variance model?",
+      "choices": {
+        "A": "It falls because higher return must mean higher risk.",
+        "B": "It is unchanged because variance is unchanged.",
+        "C": "It rises because the reward per unit of variance increases.",
+        "D": "It becomes negative because investors sell assets after prices rise."
+      },
+      "correct": "C",
+      "explanation": "With s*=μ_e/(Aσ^2), a higher expected excess return raises the optimal risky share. A assumes risk changes when the problem holds it fixed. B ignores expected return. D introduces a trading story not in the model."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph with portfolio standard deviation on the horizontal axis and expected return on the vertical axis, what does a steeper indifference curve for an investor mean?",
+      "choices": {
+        "A": "The investor requires more additional expected return to accept an extra unit of risk, indicating greater risk aversion.",
+        "B": "The investor is less risk averse because they move up faster.",
+        "C": "The investor cares only about expected return and not risk.",
+        "D": "The investor has access to a better investment technology."
+      },
+      "correct": "A",
+      "explanation": "The slope is the required compensation in expected return for more risk. A steeper slope indicates greater risk aversion. B reverses this. C would imply flat indifference curves. D confuses preferences with opportunities."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A risk-return frontier slopes upward and becomes steeper as standard deviation rises. What does this shape indicate?",
+      "choices": {
+        "A": "Higher expected returns are available only by accepting more risk, and each additional unit of risk may require movement to portfolios with greater risk exposure.",
+        "B": "Investors can get higher return with lower risk at every point.",
+        "C": "All portfolios on the frontier have the same expected return.",
+        "D": "The frontier represents indifference curves rather than feasible portfolios."
+      },
+      "correct": "A",
+      "explanation": "An upward-sloping frontier captures the feasible tradeoff between expected return and risk. B contradicts the slope. C would be horizontal. D confuses the opportunity set with preferences."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why do more risk-averse investors choose lower-risk portfolios along the same risk-return frontier?",
+      "choices": {
+        "A": "They assign a larger utility penalty to variance, so the extra expected return from risk is less often worth the added dispersion.",
+        "B": "They believe all risky portfolios have negative expected return.",
+        "C": "They cannot calculate expected return.",
+        "D": "They always choose the global minimum-risk portfolio regardless of expected return."
+      },
+      "correct": "A",
+      "explanation": "Higher risk aversion increases the marginal disutility of risk. B is not necessary. C is unrelated. D is too extreme because some risk may still be worthwhile."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two investors face the same menu: a bond fund with 4% expected return and 5% standard deviation, and an equity fund with 9% expected return and 18% standard deviation. Alex puts 20% in equities; Blake puts 80% in equities. Which framework explains this difference?",
+      "choices": {
+        "A": "Risk-return tradeoff with different degrees of risk aversion.",
+        "B": "Giffen goods, because equities become more attractive as risk rises.",
+        "C": "Monopoly pricing, because funds choose prices above marginal cost.",
+        "D": "Revealed preference violation, because two people cannot choose different bundles from the same budget set."
+      },
+      "correct": "A",
+      "explanation": "Different risk preferences lead to different positions on the same risk-return menu. B is about inferior goods and demand. C is unrelated. D ignores heterogeneous preferences."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes risk-return tradeoff from diversification?",
+      "choices": {
+        "A": "Risk-return tradeoff concerns choosing how much expected return to seek by bearing risk; diversification concerns reducing risk for a given set of expected returns by combining imperfectly correlated assets.",
+        "B": "Risk-return tradeoff eliminates all risk; diversification increases expected return by increasing risk.",
+        "C": "Risk-return tradeoff applies only to insurance; diversification applies only to labor supply.",
+        "D": "Risk-return tradeoff is about probabilities; diversification does not involve probabilities."
+      },
+      "correct": "A",
+      "explanation": "The risk-return tradeoff is a preference/opportunity choice over risk and expected return; diversification is a portfolio construction method that reduces risk through imperfect correlation. B reverses both ideas. C is categorically wrong. D is false because both involve uncertain returns."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "An investor has mean-variance utility U=E(r)-0.5Aσ^2 with A=5. Portfolio A has E(r)=0.10 and σ=0.10. Portfolio B has E(r)=0.14 and σ=0.20. What is the welfare difference U_A-U_B?",
+      "choices": {
+        "A": "0.015, so A is preferred after adjusting for risk.",
+        "B": "-0.040, so B is preferred because expected return is 4 percentage points higher.",
+        "C": "0, so the investor is indifferent because higher return exactly offsets higher risk.",
+        "D": "0.050, so A is preferred by the difference in standard deviations."
+      },
+      "correct": "A",
+      "explanation": "U_A=0.10-0.5(5)(0.01)=0.075. U_B=0.14-0.5(5)(0.04)=0.04. U_A-U_B=0.035, not 0.015. A has the correct qualitative conclusion but an arithmetic error. B ignores risk adjustment. C miscalculates the risk penalty. D uses the difference in standard deviations rather than utility."
+    }
+  ]
+}

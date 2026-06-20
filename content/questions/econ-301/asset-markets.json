@@ -1,0 +1,135 @@
+{
+  "topic": "Asset Markets",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A risk-free asset pays $110 one year from now. The market interest rate is 10%. What price satisfies no arbitrage, and what happens if the price is $95?",
+      "choices": {
+        "A": "No-arbitrage price is $100; if price is $95, investors buy the asset because its return exceeds the market rate.",
+        "B": "No-arbitrage price is $110; if price is $95, investors sell the asset because it is overpriced.",
+        "C": "No-arbitrage price is $99; if price is $95, investors are indifferent.",
+        "D": "No-arbitrage price is $121; if price is $95, the asset has a negative return."
+      },
+      "correct": "A",
+      "explanation": "The asset price must be 110/1.1 = 100. At $95, its return is (110-95)/95 = 15.79%, above 10%, so demand rises. B fails to discount, C miscalculates PV, and D compounds instead of discounts."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "An asset costs P today and pays $240 in one year with certainty. A risk-free bond yields 20%. What P eliminates arbitrage, and how should that price be interpreted?",
+      "choices": {
+        "A": "P = $240; the price equals the future payoff.",
+        "B": "P = $200; the asset's return equals the market return of 20%.",
+        "C": "P = $288; the future payoff must be compounded to today.",
+        "D": "P = $220; the asset earns a $20 premium over bonds."
+      },
+      "correct": "B",
+      "explanation": "No arbitrage requires P(1.2) = 240, so P = 200. A ignores the time value of money, C compounds the payoff instead of discounting, and D imposes an arbitrary premium."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A risk-free asset pays $1,000 next year. What happens to its competitive price if the market interest rate rises from 5% to 25%?",
+      "choices": {
+        "A": "Price rises because investors earn a higher return.",
+        "B": "Price is unchanged because the payoff is unchanged.",
+        "C": "Price falls because the future payoff is discounted at a higher opportunity cost.",
+        "D": "Price rises because no-arbitrage requires equal dollar profits."
+      },
+      "correct": "C",
+      "explanation": "The no-arbitrage price is 1000/(1+r), so it falls as r rises. A confuses return with price, B ignores discounting, and D confuses rates of return with dollar profits."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A one-year asset pays $100 with certainty. Its price falls from $95 to $90 while the payoff is unchanged. What happens to its rate of return, and what market mechanism follows if other equivalent-risk assets still yield 5.26%?",
+      "choices": {
+        "A": "Its return falls, so investors leave the asset.",
+        "B": "Its return rises, attracting buyers and pushing its price back up.",
+        "C": "Its return is unchanged because payoff is unchanged.",
+        "D": "Its return becomes negative because price is lower."
+      },
+      "correct": "B",
+      "explanation": "Return rises from 100/95 - 1 = 5.26% to 100/90 - 1 = 11.11%. Buyers enter, raising price until returns equalize. A gets the return direction wrong, C ignores purchase price, and D misunderstands returns."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "Imagine a graph with an asset's current price P on the horizontal axis and its rate of return on the vertical axis, holding next year's payoff fixed at $120. What is the curve's shape?",
+      "choices": {
+        "A": "Upward sloping because higher prices signal higher returns.",
+        "B": "Downward sloping because return equals 120/P - 1.",
+        "C": "Horizontal because the payoff is fixed.",
+        "D": "Vertical because price is chosen by the market."
+      },
+      "correct": "B",
+      "explanation": "For a fixed payoff, a higher purchase price lowers the rate of return. A reverses the relationship, C ignores price in the denominator, and D confuses equilibrium determination with the return function."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "In an asset-market diagram, demand for an underpriced risk-free asset increases. Verbally, what happens to the price and return as the asset moves toward equilibrium?",
+      "choices": {
+        "A": "Price rises and return falls until the return equals the market rate.",
+        "B": "Price rises and return rises because buyers bid aggressively.",
+        "C": "Price falls and return falls because arbitrage disappears.",
+        "D": "Price stays fixed while return adjusts through the payoff."
+      },
+      "correct": "A",
+      "explanation": "Buying pressure raises the asset price; with fixed payoff, a higher price lowers the return until no-arbitrage holds. B gets the return direction wrong, C gets the price direction wrong, and D incorrectly changes a fixed payoff."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does the no-arbitrage condition mean in a competitive asset market with risk-free assets?",
+      "choices": {
+        "A": "All assets must have the same current price.",
+        "B": "Assets with the same risk and timing of payoffs must offer the same rate of return.",
+        "C": "Every investor must hold every asset.",
+        "D": "Future payoffs must be equal to current prices."
+      },
+      "correct": "B",
+      "explanation": "No arbitrage equalizes returns across equivalent-risk assets. A ignores different payoffs, C is not required, and D ignores discounting."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A Treasury bill pays $10,000 in one year. Equivalent risk-free assets yield 4%. Which model identifies the bill's competitive price?",
+      "choices": {
+        "A": "Consumer utility maximization with a marginal rate of substitution.",
+        "B": "No-arbitrage present-value pricing: P = 10,000/1.04.",
+        "C": "Monopoly markup pricing: P = MC/(1 - 1/epsilon).",
+        "D": "Expected utility with state-contingent claims."
+      },
+      "correct": "B",
+      "explanation": "A certain one-year payoff should be priced by no-arbitrage present value. A is unnecessary, C is a product-market model, and D is more general than needed because there is no uncertainty."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an asset's price from its rate of return?",
+      "choices": {
+        "A": "Price is what the asset pays next year; return is what it costs today.",
+        "B": "Price and return are the same because both are measured in dollars.",
+        "C": "Price is the cost of buying the asset today; return is the gain as a fraction of that price.",
+        "D": "Price matters only for risky assets, while return matters only for risk-free assets."
+      },
+      "correct": "C",
+      "explanation": "Price is a dollar amount paid now; return is a proportional payoff relative to that price. A reverses concepts, B ignores units, and D invents a false distinction."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "An asset pays $105 next year with certainty. The market interest rate is 5%, but the asset sells for $98. If an investor buys one unit, what is the arbitrage profit in present-value terms?",
+      "choices": {
+        "A": "$0 because all competitive markets eliminate arbitrage instantly.",
+        "B": "$2 because the no-arbitrage price is $100 and the asset costs $98.",
+        "C": "$7 because 105 - 98 = 7.",
+        "D": "$5 because the interest rate is 5%."
+      },
+      "correct": "B",
+      "explanation": "The no-arbitrage price is 105/1.05 = 100, so buying at 98 creates $2 of present-value profit. A assumes away the stated mispricing, C ignores discounting, and D confuses percentage return with dollar arbitrage profit."
+    }
+  ]
+}

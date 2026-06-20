@@ -1,0 +1,135 @@
+{
+  "topic": "Tangency Condition",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For U(x,y)=4ln x+2ln y, p_x=8, p_y=4, and m=120, which bundle satisfies the tangency condition and budget constraint?",
+      "choices": {
+        "A": "x*=10, y*=10; equal quantities satisfy tangency.",
+        "B": "x*=5, y*=20; y is cheaper, so more y is purchased.",
+        "C": "x*=10, y*=10; MRS=2y/x equals p_x/p_y=2.",
+        "D": "x*=15, y*=0; x has the larger utility weight."
+      },
+      "correct": "C",
+      "explanation": "MU_x=4/x and MU_y=2/y, so MRS=(4/x)/(2/y)=2y/x. Tangency gives 2y/x=8/4=2, so y=x. Budget 8x+4y=120 gives x=y=10. A has the right bundle but not the correct reasoning. B follows cheapness alone. D incorrectly chooses a corner."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer maximizes U(x,y)=xy subject to 2x+8y=80. Using the tangency condition derived from the Lagrangian, what is the optimal bundle and its interpretation?",
+      "choices": {
+        "A": "x*=20, y*=5; the consumer sets MRS=y/x=1/4, matching the market trade-off.",
+        "B": "x*=10, y*=7.5; the consumer equalizes quantities weighted by prices.",
+        "C": "x*=40, y*=0; x is cheaper, so all income goes to x.",
+        "D": "x*=16, y*=6; the consumer spends 40 percent of income on x."
+      },
+      "correct": "A",
+      "explanation": "For U=xy, MRS=y/x. Tangency gives y/x=p_x/p_y=2/8=1/4, so y=x/4. Budget gives 2x+8(x/4)=4x=80, so x=20 and y=5. B uses no valid tangency. C mistakes cheaper good for corner optimality. D uses an arbitrary spending share."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=xy, m=100, p_x=5, and p_y=5. If p_x rises to 10, what happens to the tangency condition and the optimal x?",
+      "choices": {
+        "A": "The tangency MRS falls from 1 to 1/2 and x rises from 10 to 20.",
+        "B": "The tangency MRS rises from 1 to 2 and x falls from 10 to 5 because the market requires more y per unit of x.",
+        "C": "The tangency MRS remains 1 and x remains 10 because preferences are unchanged.",
+        "D": "Tangency no longer applies because price changes create nonconvex preferences."
+      },
+      "correct": "B",
+      "explanation": "At an interior optimum, MRS=p_x/p_y. The ratio rises from 1 to 2. Cobb-Douglas demand x=m/(2p_x) falls from 10 to 5. A inverts the ratio. C ignores the changed budget slope. D falsely links price changes to preference convexity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Tara has U(x,y)=x^{1/3}y^{2/3}, m=180, p_x=6, and p_y=6. If p_y rises to 12, what happens to y* and through what mechanism?",
+      "choices": {
+        "A": "y* rises from 20 to 40 because y has a larger utility exponent.",
+        "B": "y* stays at 20 because the exponent on y is unchanged.",
+        "C": "y* falls from 20 to 10 because the same two-thirds expenditure share buys fewer units of y at the higher price.",
+        "D": "y* falls from 10 to 5 because only one-third of income is spent on y."
+      },
+      "correct": "C",
+      "explanation": "y*=(2/3)m/p_y. Initially y=(2/3)(180)/6=20; after p_y=12, y=10. The mechanism is a steeper budget trade-off and fixed Cobb-Douglas expenditure share. A reverses the price effect. B ignores price. D uses the wrong expenditure share and initial quantity."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a graph with x on the horizontal axis and y on the vertical axis, the budget line has slope -3. At bundle A, the indifference curve has slope -5. Which statement best interprets this failure of tangency?",
+      "choices": {
+        "A": "The consumer's MRS is 5, above the price ratio 3, so moving toward more x and less y can raise utility.",
+        "B": "The consumer's MRS is -5, below the price ratio -3, so the bundle is optimal.",
+        "C": "The consumer should move toward less x because the indifference curve is steeper than the budget line.",
+        "D": "Tangency holds because both curves slope downward."
+      },
+      "correct": "A",
+      "explanation": "The indifference curve slope is -MRS, so MRS=5. The budget slope is -p_x/p_y=-3, so p_x/p_y=3. Since MRS>price ratio, the consumer values x relatively more than the market, so more x and less y improves utility. B mishandles signs. C reverses the direction. D ignores slope magnitudes."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer's budget line rotates inward around the y-intercept when the price of x rises. For an interior optimum with convex indifference curves, what graphical change must occur at the new tangency?",
+      "choices": {
+        "A": "The budget line becomes flatter, and the new tangency has a lower MRS.",
+        "B": "The budget line becomes steeper, and the new tangency has a higher MRS.",
+        "C": "The budget line shifts outward in parallel, and the same indifference curve is reached.",
+        "D": "The indifference curves become concave because prices changed."
+      },
+      "correct": "B",
+      "explanation": "A rise in p_x makes the budget slope -p_x/p_y more negative, so the line becomes steeper. At an interior tangency, MRS rises to match the higher price ratio. A reverses the rotation. C describes an income increase, not an x-price increase. D wrongly says prices change preferences."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "At a bundle of pizza x and soda y, MRS=4 while p_x/p_y=2. What does this economically mean?",
+      "choices": {
+        "A": "The consumer is willing to give up 4 sodas for one pizza, while the market requires only 2 sodas, so pizza is relatively under-consumed at this bundle.",
+        "B": "The consumer is willing to give up 2 pizzas for one soda, so soda is under-consumed.",
+        "C": "The consumer is at the optimum because both numbers are positive.",
+        "D": "The consumer should buy no pizza because MRS exceeds the price ratio."
+      },
+      "correct": "A",
+      "explanation": "MRS=4 means the consumer values one more pizza at 4 sodas, but the market price is only 2 sodas per pizza. She should move toward more pizza. B reverses the trade-off. C ignores equality. D reverses the implication."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A tutoring app observes a student choosing between hours of tutoring x and hours of entertainment y. The student buys both goods, preferences are smooth and convex, tutoring costs $30 per hour, entertainment costs $10 per hour, and income is fully spent. Which condition should be used to test whether the observed bundle could be optimal?",
+      "choices": {
+        "A": "MRS=1/3 because tutoring is three times as expensive.",
+        "B": "MU_x=MU_y because both are measured in hours.",
+        "C": "MRS=3 because the market trades one tutoring hour for three entertainment hours.",
+        "D": "x=y because an interior optimum requires equal quantities."
+      },
+      "correct": "C",
+      "explanation": "The relevant model is interior utility maximization, so MRS=p_x/p_y=30/10=3. A inverts the price ratio. B ignores prices. D confuses interiority with equal quantities."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes MRS from the price ratio p_x/p_y?",
+      "choices": {
+        "A": "MRS is determined by preferences at a bundle; p_x/p_y is determined by market prices and is the budget line's absolute slope.",
+        "B": "MRS is the market cost of x; p_x/p_y is the consumer's personal willingness to trade.",
+        "C": "MRS and p_x/p_y are always equal at every feasible bundle.",
+        "D": "MRS is measured in dollars; p_x/p_y is measured in utility."
+      },
+      "correct": "A",
+      "explanation": "MRS is the preference trade-off, while p_x/p_y is the market trade-off. They are equal only at an interior optimum. B reverses the concepts. C overgeneralizes tangency. D gives incorrect units."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Kai has U(x,y)=xy, m=80, and p_y=4. Initially p_x=4; then p_x falls to 2. Using the optimized bundles, what happens to maximized utility?",
+      "choices": {
+        "A": "It rises from 100 to 200 because x demand doubles while spending shares remain equal.",
+        "B": "It rises from 80 to 160 because the price of x is cut in half.",
+        "C": "It stays at 100 because income and p_y are unchanged.",
+        "D": "It falls from 200 to 100 because lower prices reduce marginal utility."
+      },
+      "correct": "A",
+      "explanation": "For U=xy, x=m/(2p_x), y=m/(2p_y). Initially x=10, y=10, U=100. After p_x=2, x=20, y=10, U=200. B confuses income with utility. C ignores the price change. D reverses welfare effects."
+    }
+  ]
+}

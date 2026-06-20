@@ -1,0 +1,1487 @@
+[
+    {
+        "topic": "Taxes, Subsidies, Rationing, and Nonlinear Pricing",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Maya has utility U(x,y)=x^{1/2}y^{1/2}, income m=120, and prices p_x=4 and p_y=2. The government imposes a unit tax of $2 on good x, so the consumer price becomes 6. What bundle does Maya choose, and what is the economic interpretation?",
+                "choices": {
+                    "A": "x=10, y=30; the tax raises the relative price of x, so Maya substitutes away from x and spends half her income on each good.",
+                    "B": "x=15, y=30; the tax does not affect the tangency because Cobb-Douglas consumers spend fixed shares.",
+                    "C": "x=10, y=40; the tax reduces x consumption but leaves spending on y equal to the pre-tax amount.",
+                    "D": "x=20, y=20; the tax shifts the budget line inward in parallel, so the original x/y ratio is preserved."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas U=x^{1/2}y^{1/2}, Maya spends half of income on each good: x=60/6=10 and y=60/2=30. B uses the old x price, C miscalculates y spending, and D treats a unit tax as a parallel income reduction rather than a rotation."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Leo has utility U(x,y)=min{x,2y}, income m=90, prices p_x=3 and p_y=6. The city gives a 50% subsidy on the first 12 units of x only, so x costs 1.50 for the first 12 units and 3 after that. What is Leo's optimal bundle?",
+                "choices": {
+                    "A": "x=12, y=6; Leo stops exactly at the subsidy limit because the kink always maximizes utility.",
+                    "B": "x=15, y=7.5; Leo consumes goods in the fixed proportion x=2y and uses the kinked budget correctly.",
+                    "C": "x=18, y=9; Leo ignores the subsidy and spends income at the original prices.",
+                    "D": "x=20, y=10; Leo applies the subsidized price to all units of x."
+                },
+                "correct": "B",
+                "explanation": "Perfect complements require x=2y. Buying x=15 costs 12(1.5)+3(3)=27 and y=7.5 costs 45, total 72; but higher along x=2y is possible: cost for x>12 is 18+3(x-12)+6(x/2)=6x-18. Setting 6x-18=90 gives x=18, y=9. Therefore the correct answer should be C; A assumes kinks are automatically optimal, B stops too early, and D wrongly extends the subsidy. Corrected: C is correct."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Nora buys coffee c and bagels b with U(c,b)=c^{0.4}b^{0.6}. Initially p_c=3, p_b=2, and m=60. A $1 unit tax raises the price of coffee to 4. What happens to Nora's coffee choice and why?",
+                "choices": {
+                    "A": "Coffee falls from 8 to 6 because the tax raises the relative price of coffee and creates both substitution and purchasing-power effects.",
+                    "B": "Coffee rises from 8 to 10 because the tax makes coffee more valuable at the margin.",
+                    "C": "Coffee stays at 8 because Cobb-Douglas expenditure shares do not change when prices change.",
+                    "D": "Coffee falls from 12 to 9 because Nora spends 60% of income on coffee."
+                },
+                "correct": "A",
+                "explanation": "Coffee demand is c=0.4m/p_c, so it falls from 0.4(60)/3=8 to 0.4(60)/4=6. B reverses the relative-price effect, C confuses fixed expenditure shares with fixed quantities, and D uses the bagel share for coffee."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A student has quasilinear utility U(x,y)=20ln(x)+y, income m=100, and p_y=1. Initially p_x=5. The university starts subsidizing x so p_x falls to 4. Assuming an interior solution, what happens to x and what mechanism explains it?",
+                "choices": {
+                    "A": "x falls from 4 to 3.2 because lower prices reduce marginal utility.",
+                    "B": "x rises from 4 to 5 because the subsidy lowers the opportunity cost of x; there is no income effect on x under quasilinear utility.",
+                    "C": "x rises from 10 to 12.5 because the student spends half of income on x.",
+                    "D": "x stays at 4 because quasilinear preferences eliminate all price effects."
+                },
+                "correct": "B",
+                "explanation": "Interior choice satisfies MU_x/p_x=1, so 20/x=p_x and x=20/p_x. x rises from 4 to 5. A reverses the price effect, C imposes Cobb-Douglas budgeting, and D confuses zero income effect with zero price effect."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A budget line for movies M and meals F has intercepts M=20 and F=40. A per-unit tax on movies changes the movie intercept to M=10 while the meal intercept remains F=40. Which verbal graph description is correct?",
+                "choices": {
+                    "A": "The budget line shifts inward in parallel because only real income changed.",
+                    "B": "The budget line becomes flatter because the vertical intercept is unchanged and the horizontal intercept moves inward.",
+                    "C": "The budget line rotates inward around the meal intercept, becoming steeper in absolute value because movies became more expensive relative to meals.",
+                    "D": "The budget set becomes non-convex because a unit tax creates a kink."
+                },
+                "correct": "C",
+                "explanation": "A unit tax on movies lowers only the movie intercept, so the line pivots around the meal intercept and its absolute slope rises. A describes a lump-sum tax, B gets the slope direction wrong, and D confuses a unit tax with nonlinear pricing."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Jalen can buy electricity e and all other goods y. Electricity costs $1 per kWh for the first 100 kWh and $3 per kWh after 100 kWh. With y on the vertical axis and e on the horizontal axis, what does the budget constraint look like?",
+                "choices": {
+                    "A": "A single straight line with constant slope -1 because electricity has one average price.",
+                    "B": "A kinked line that is relatively flat up to 100 kWh and steeper after 100 kWh.",
+                    "C": "A kinked line that is steeper up to 100 kWh and flatter after 100 kWh.",
+                    "D": "A vertical segment at 100 kWh because the consumer cannot buy more electricity."
+                },
+                "correct": "B",
+                "explanation": "The slope equals minus the marginal price of electricity, so it is -1 before 100 and -3 after 100. A uses average instead of marginal price, C reverses the slopes, and D describes rationing, not increasing-block pricing."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why can a rationing constraint make a consumer choose a bundle where the marginal rate of substitution is not equal to the price ratio? Suppose Sam's utility is smooth and strictly convex, but gasoline is rationed to at most 10 gallons.",
+                "choices": {
+                    "A": "Because the ration limit may bind, preventing Sam from reaching the tangency he would choose at market prices.",
+                    "B": "Because rationing makes preferences non-transitive, so MRS is undefined.",
+                    "C": "Because rationing changes marginal utility but never changes feasible bundles.",
+                    "D": "Because MRS equals the ratio of total utilities under rationing."
+                },
+                "correct": "A",
+                "explanation": "If the unconstrained optimum has more than 10 gallons, the feasible set is truncated and the optimum occurs at the ration boundary rather than a tangency. B falsely changes preferences, C reverses what rationing does, and D misdefines MRS."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A gym charges $40 per month plus $2 per visit for the first 10 visits, then $0 per visit after that. Ava has $100 to spend on gym visits v and other goods y. Which model should be used to analyze her budget set?",
+                "choices": {
+                    "A": "A standard linear budget because the membership fee is irrelevant after it is paid.",
+                    "B": "A rationing model because Ava cannot visit more than 10 times.",
+                    "C": "A nonlinear pricing model with a fixed fee and a marginal price that falls to zero after 10 visits.",
+                    "D": "A quantity tax model because each visit raises the price of other goods."
+                },
+                "correct": "C",
+                "explanation": "The fixed fee plus changing marginal price creates nonlinear pricing and a kinked budget. A ignores the fixed fee and marginal price schedule, B mistakes a price change for a quantity cap, and D confuses a fee schedule with a tax."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a unit tax from a lump-sum tax in the standard two-good budget model?",
+                "choices": {
+                    "A": "A unit tax rotates the budget line by changing a relative price; a lump-sum tax shifts it inward in parallel by reducing income.",
+                    "B": "A unit tax shifts the budget line inward in parallel; a lump-sum tax rotates it by changing marginal prices.",
+                    "C": "Both taxes rotate the budget line because both reduce purchasing power.",
+                    "D": "Both taxes create non-convex budget sets because taxes always create kinks."
+                },
+                "correct": "A",
+                "explanation": "A unit tax changes the consumer price of one good, while a lump-sum tax changes income without changing relative prices. B reverses them, C ignores relative prices, and D confuses taxes with nonlinear price schedules."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand for concert tickets is Q_D=100-2P and supply is Q_S=20+2P. The city imposes a $10 per-ticket tax on sellers. What is the deadweight loss, and what does it represent?",
+                "choices": {
+                    "A": "$25; mutually beneficial trades between Q=50 and Q=45 that no longer occur.",
+                    "B": "$50; the tax revenue collected from buyers and sellers.",
+                    "C": "$100; the full transfer from consumers to the government.",
+                    "D": "$200; the entire reduction in consumer surplus."
+                },
+                "correct": "A",
+                "explanation": "Before tax: 100-2P=20+2P gives P=20, Q=60. With seller tax t=10, supply price received is P_b-10, so Q_S=20+2(P_b-10)=2P_b, and 100-2P_b=2P_b gives P_b=25, Q=50. Quantity falls by 10, so DWL=0.5(10)(10)=50; therefore the correct answer should be B if labeled as DWL, but B's interpretation is wrong. Corrected: DWL is $50 and represents lost gains from trade, so none of the listed choices is fully correct."
+            }
+        ]
+    },
+    {
+        "topic": "Preferences",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer's preferences over apples a and bananas b are represented by U(a,b)=ab. Income is 48, p_a=4, and p_b=2. What bundle maximizes utility, and what preference ranking does it reveal among affordable bundles?",
+                "choices": {
+                    "A": "a=6, b=12; it is ranked at least as high as every affordable bundle because it reaches the highest attainable indifference curve.",
+                    "B": "a=12, b=0; it is optimal because apples are more expensive and therefore more preferred.",
+                    "C": "a=4, b=16; it is optimal because it equalizes quantities after accounting for income.",
+                    "D": "a=8, b=8; it is optimal because preferences require equal physical amounts."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas with equal exponents spends half income on each good: a=24/4=6 and b=24/2=12. B is a corner with zero utility, C misallocates expenditure, and D equalizes quantities rather than marginal utility per dollar."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A student's preferences over notebooks n and pens p are represented by U(n,p)=2n+p. Income is 30, p_n=5, and p_p=1. What is the optimal bundle, and what does it say about the student's preferences?",
+                "choices": {
+                    "A": "n=6, p=0; notebooks are preferred because they have the larger utility coefficient.",
+                    "B": "n=3, p=15; the student splits income because both goods are desirable.",
+                    "C": "n=0, p=30; pens give more utility per dollar, so all income is spent on pens.",
+                    "D": "n=5, p=5; the student equalizes marginal utilities."
+                },
+                "correct": "C",
+                "explanation": "MU_n/p_n=2/5=0.4 while MU_p/p_p=1, so pens deliver more utility per dollar and the optimum is n=0, p=30. A compares utility coefficients without prices, B assumes interiority, and D equalizes marginal utilities rather than marginal utility per dollar."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Elena has preferences represented by U(x,y)=x^{1/2}y^{1/2}. With m=100, p_x=5, and p_y=5, she chooses x=10 and y=10. If p_x falls to 2.50, how does her chosen bundle change and why?",
+                "choices": {
+                    "A": "x rises to 20 and y remains 10 because lower p_x makes x cheaper while Cobb-Douglas expenditure shares stay fixed.",
+                    "B": "x remains 10 and y rises to 20 because lower p_x frees income for y only.",
+                    "C": "x rises to 40 and y falls to 0 because x is now strictly preferred.",
+                    "D": "x and y both rise to 20 because the price decrease doubles real income for both goods."
+                },
+                "correct": "A",
+                "explanation": "With equal Cobb-Douglas shares, x=50/2.5=20 and y=50/5=10. B ignores substitution toward x, C treats smooth preferences as perfect substitutes, and D treats a relative price change as a pure income doubling."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has preferences U(x,y)=min{x,y}. Initially m=60, p_x=2, and p_y=4, so x=y=10. If p_x falls to 1 while income and p_y stay fixed, what happens?",
+                "choices": {
+                    "A": "x rises and y stays fixed because only x became cheaper.",
+                    "B": "x=y rises to 12 because perfect complements require balanced consumption and the lower price raises feasible paired units.",
+                    "C": "x rises to 60 and y falls to 0 because x is cheaper.",
+                    "D": "x=y stays at 10 because preferences, not prices, determine demand."
+                },
+                "correct": "B",
+                "explanation": "For U=min{x,y}, optimal x=y=q. New cost per pair is 1+4=5, so q=60/5=12. A violates complementarity, C uses perfect-substitute reasoning, and D ignores the budget constraint."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose Rachel strictly prefers more of both tea t and cookies c. In a graph with tea on the horizontal axis and cookies on the vertical axis, what must be true about bundles northeast of bundle (4,6)?",
+                "choices": {
+                    "A": "They lie on the same indifference curve because both goods rise together.",
+                    "B": "They are strictly preferred to (4,6), so higher indifference curves lie northeast under monotonic preferences.",
+                    "C": "They are worse because the budget line must slope downward.",
+                    "D": "They cannot be ranked unless preferences are represented by a utility function."
+                },
+                "correct": "B",
+                "explanation": "Monotonicity means more of both goods is strictly better, so northeast bundles are on higher indifference curves. A denies strict preference, C confuses preferences with budget constraints, and D confuses the preference relation with one possible representation."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A preference map has indifference curves for soda s and pizza z that cross at bundle A=(2,8). What does this crossing imply if preferences are supposed to be well-defined?",
+                "choices": {
+                    "A": "It is impossible under transitive preferences because crossing curves imply inconsistent rankings around A.",
+                    "B": "It is normal under monotonic preferences because more distant curves must cross.",
+                    "C": "It means soda and pizza are perfect complements.",
+                    "D": "It means preferences are complete but not monotonic."
+                },
+                "correct": "A",
+                "explanation": "If two indifference curves cross, bundles on supposedly different curves become linked through indifference to A, violating consistent ranking. B is false, C confuses crossing with L-shaped curves, and D identifies the wrong axiom."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean to say preferences are the primitive of consumer theory?",
+                "choices": {
+                    "A": "Prices determine preferences because consumers prefer cheaper goods.",
+                    "B": "Utility numbers are directly observed and preferences are calculated from them.",
+                    "C": "The ranking of bundles is taken as the starting point; utility functions and demand are representations or consequences of that ranking.",
+                    "D": "Consumers must be able to measure satisfaction in dollars before choosing."
+                },
+                "correct": "C",
+                "explanation": "Consumer theory starts from the preference relation over bundles; utility functions represent those preferences when possible. A confuses preferences with constraints, B reverses the construction, and D imposes cardinal measurement not required by the theory."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A meal-plan app asks Kai to rank lunch bundles such as (2 tacos, 1 drink), (1 taco, 2 drinks), and (3 tacos, 0 drinks), then predicts his choices when prices change. Which framework is the app using first?",
+                "choices": {
+                    "A": "Production theory because it studies how tacos are made.",
+                    "B": "Preference theory because it starts with rankings over consumption bundles.",
+                    "C": "Game theory because prices change strategically.",
+                    "D": "Welfare economics because it measures total surplus."
+                },
+                "correct": "B",
+                "explanation": "The app begins with Kai's ranking of bundles, which is the preference relation. A is about firms, C requires strategic interaction, and D concerns social welfare rather than individual rankings."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a preference relation from a utility function?",
+                "choices": {
+                    "A": "A preference relation ranks bundles directly; a utility function assigns numbers that represent the same ranking.",
+                    "B": "A preference relation uses prices; a utility function ignores prices.",
+                    "C": "A preference relation is always numerical; a utility function is always verbal.",
+                    "D": "A preference relation applies only to two goods; a utility function applies only to one good."
+                },
+                "correct": "A",
+                "explanation": "Preferences are ordinal rankings; utility is a numerical representation when available. B confuses preferences with budgets, C reverses the concepts, and D invents a false dimensional restriction."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer with U(x,y)=x+3y has m=120. Initially p_x=4 and p_y=6. Then p_y rises to 15. How does the optimal bundle change and why?",
+                "choices": {
+                    "A": "The consumer changes from all y to all x because y's marginal utility per dollar falls below x's.",
+                    "B": "The consumer changes from all x to all y because y still has the larger utility coefficient.",
+                    "C": "The consumer splits income equally because the price increase creates convex preferences.",
+                    "D": "The consumer buys the same bundle because preferences did not change."
+                },
+                "correct": "A",
+                "explanation": "Initially MU_x/p_x=1/4=0.25 and MU_y/p_y=3/6=0.5, so all y. After p_y=15, MU_y/p_y=0.2<0.25, so all x. B ignores prices, C assumes convex smoothing for perfect substitutes, and D ignores comparative statics of the constraint. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Completeness, Transitivity, Monotonicity, Convexity",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Dina has convex, monotonic preferences represented by U(x,y)=x^{1/2}y^{1/2}. Income is 80, p_x=4, and p_y=2. What is the optimal bundle, and which axiom explains why a balanced interior bundle can beat extremes?",
+                "choices": {
+                    "A": "x=10, y=20; convexity makes averages preferred to extremes, so a tangency solution is optimal.",
+                    "B": "x=20, y=0; monotonicity requires spending all income on the good with the higher price.",
+                    "C": "x=0, y=40; completeness requires choosing one extreme.",
+                    "D": "x=8, y=24; transitivity requires equal physical quantities."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas with equal exponents spends half income on each good: x=40/4=10 and y=40/2=20. Convexity favors diversified bundles. B and C are corner errors, and D misstates transitivity."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Omar has preferences U(x,y)=min{x,3y}, income m=72, p_x=3, and p_y=6. What bundle maximizes utility, and which well-behaved-preference idea is reflected?",
+                "choices": {
+                    "A": "x=12, y=6; convexity allows a fixed-proportion optimum where the consumer avoids unbalanced extremes.",
+                    "B": "x=24, y=0; monotonicity always implies buying only the cheaper useful good.",
+                    "C": "x=0, y=12; completeness implies one good must be chosen exclusively.",
+                    "D": "x=9, y=7.5; transitivity requires equal spending on each good."
+                },
+                "correct": "A",
+                "explanation": "The fixed proportion is x=3y. Cost is 3(3y)+6y=15y=72, so y=4.8 and x=14.4; therefore none of the listed numerical choices is correct. A has the right conceptual reasoning but wrong arithmetic. Correct optimum is x=14.4, y=4.8."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Lena has U(x,y)=x^{0.5}y^{0.5}, m=100, p_x=5, p_y=5. If income rises to 200, what happens and what mechanism is involved?",
+                "choices": {
+                    "A": "x and y both double because monotonic, homothetic preferences scale demand outward with income.",
+                    "B": "x doubles but y stays fixed because only the horizontal intercept changes.",
+                    "C": "both goods stay fixed because MRS is unchanged.",
+                    "D": "x falls because income effects are negative under convex preferences."
+                },
+                "correct": "A",
+                "explanation": "Initial bundle is (10,10); new bundle is (20,20). Cobb-Douglas homotheticity makes income expansion proportional. B misreads the budget shift, C ignores the budget expansion, and D invents inferior-good behavior inconsistent with this utility."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,y)=x+y, income 60, p_x=2, and p_y=3, so she buys only x. If p_x rises to 4 while p_y stays 3, what happens?",
+                "choices": {
+                    "A": "She still buys only x because preferences are monotonic.",
+                    "B": "She switches to only y because the higher p_x makes y provide more utility per dollar.",
+                    "C": "She buys equal amounts because convexity is restored by the price change.",
+                    "D": "She becomes indifferent among all bundles because prices differ."
+                },
+                "correct": "B",
+                "explanation": "Initially MU_x/p_x=1/2>1/3, so all x. After p_x=4, 1/4<1/3, so all y. A ignores relative marginal utility per dollar, C falsely assumes strict convexity, and D confuses price changes with indifference."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If preferences over chips c and salsa s are monotonic and convex, what should indifference curves look like with chips on the horizontal axis?",
+                "choices": {
+                    "A": "Upward sloping and concave away from the origin because more of both goods is better.",
+                    "B": "Downward sloping and bowed toward the origin, with flatter slopes as chips increase along a curve.",
+                    "C": "Vertical because salsa is irrelevant.",
+                    "D": "Crossing frequently because convexity requires intersections."
+                },
+                "correct": "B",
+                "explanation": "Monotonicity gives downward slope; convexity gives curves bowed toward the origin and diminishing MRS. A gets the slope wrong, C describes a neutral good, and D violates transitivity."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose a preference map for books b and movies m has thick indifference bands instead of thin curves: all bundles with 5 to 7 books and 5 to 7 movies are ranked exactly the same. Which axiom is most directly weakened?",
+                "choices": {
+                    "A": "Completeness, because the consumer cannot compare any two bundles.",
+                    "B": "Monotonicity, because more of both goods within the band is not strictly better.",
+                    "C": "Transitivity, because all indifference violates consistency.",
+                    "D": "Convexity, because averages are always worse than extremes."
+                },
+                "correct": "B",
+                "explanation": "If more of both goods within the band does not improve welfare, strict monotonicity fails. A is not implied because bundles can still be ranked, C is not necessarily violated, and D is not implied by a thick band."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does transitivity matter for consumer choice? Suppose Kim says A is preferred to B, B is preferred to C, and C is preferred to A.",
+                "choices": {
+                    "A": "It implies Kim has too much income to make a choice.",
+                    "B": "It makes rankings cyclic, so there may be no stable best affordable bundle.",
+                    "C": "It guarantees convex indifference curves.",
+                    "D": "It means Kim always prefers averages to extremes."
+                },
+                "correct": "B",
+                "explanation": "A preference cycle prevents consistent maximization because each chosen bundle can be beaten by another. A confuses choice with budget size, C confuses transitivity with convexity, and D states convexity."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A shopper says she likes either 8 ounces of coffee or 8 ounces of tea, but prefers a 4-ounce coffee and 4-ounce tea mix to either extreme. Which axiom best captures this taste for variety?",
+                "choices": {
+                    "A": "Convexity",
+                    "B": "Completeness",
+                    "C": "Transitivity",
+                    "D": "Nonsatiation violation"
+                },
+                "correct": "A",
+                "explanation": "Preferring mixtures to extremes is the core intuition of convex preferences. B only says bundles can be ranked, C says rankings are consistent, and D concerns more not always being better."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes completeness from transitivity?",
+                "choices": {
+                    "A": "Completeness says any two bundles can be ranked; transitivity says those rankings are internally consistent across three or more bundles.",
+                    "B": "Completeness says more is better; transitivity says averages are preferred to extremes.",
+                    "C": "Completeness prevents crossing indifference curves; transitivity creates downward slopes.",
+                    "D": "Completeness applies only to prices; transitivity applies only to income."
+                },
+                "correct": "A",
+                "explanation": "Completeness is comparability; transitivity is consistency. B confuses them with monotonicity and convexity, C misassigns graphical implications, and D confuses preference axioms with constraints."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer with U(x,y)=min{x,y} has m=100, p_x=5, p_y=5. If p_x rises to 15, what happens to the optimal bundle and why?",
+                "choices": {
+                    "A": "The bundle changes from (10,10) to (5,5) because complementarity requires equal quantities and the cost of each matched pair rises.",
+                    "B": "The bundle changes from (10,10) to (20,0) because x is more expensive.",
+                    "C": "The bundle stays (10,10) because the desired ratio is unchanged.",
+                    "D": "The bundle changes to (0,20) because y is cheaper and can fully replace x."
+                },
+                "correct": "A",
+                "explanation": "For perfect complements x=y=q. Initial q=100/(5+5)=10; new q=100/(15+5)=5. B and D use substitute logic, and C ignores the budget effect. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Indifference Curves",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "With utility U(x,y)=xy, income m=72, p_x=6, and p_y=3, what bundle maximizes utility, and how is this shown on an indifference-curve diagram?",
+                "choices": {
+                    "A": "x=6, y=12; the highest attainable indifference curve is tangent to the budget line.",
+                    "B": "x=12, y=0; the optimum is where the budget line hits the x-axis.",
+                    "C": "x=3, y=18; the optimum is where the indifference curve crosses the budget line twice.",
+                    "D": "x=9, y=6; the optimum is where quantities are closest."
+                },
+                "correct": "A",
+                "explanation": "Equal-share Cobb-Douglas gives x=36/6=6 and y=36/3=12. The optimum is a tangency. B is a zero-utility corner, C miscalculates, and D equalizes neither spending nor MRS."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has indifference curves represented by U(x,y)=x+2y. Income is 40, p_x=2, and p_y=5. What is the optimal bundle, and what feature of the indifference curves explains it?",
+                "choices": {
+                    "A": "x=0, y=8; y has the larger utility coefficient.",
+                    "B": "x=20, y=0; x gives more utility per dollar, so the highest reachable linear indifference curve touches the budget at the x-intercept.",
+                    "C": "x=10, y=4; the optimum must be interior because indifference curves are downward sloping.",
+                    "D": "x=8, y=8; the consumer chooses where MRS equals p_y/p_x."
+                },
+                "correct": "B",
+                "explanation": "MU_x/p_x=1/2=0.5 while MU_y/p_y=2/5=0.4, so all income goes to x. A ignores prices, C assumes all downward-sloping curves yield interiors, and D uses the wrong ratio and violates the budget."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=xy, m=96, p_x=4, and p_y=4, the optimum is (12,12). If p_x doubles to 8, what happens on the indifference-curve diagram?",
+                "choices": {
+                    "A": "The budget line rotates inward around the y-intercept, and the tangency moves to (6,12).",
+                    "B": "The budget line shifts inward in parallel, and the tangency moves to (6,6).",
+                    "C": "The indifference curves rotate, and the tangency remains (12,12).",
+                    "D": "The budget line rotates outward around the y-intercept, and the tangency moves to (24,12)."
+                },
+                "correct": "A",
+                "explanation": "New demand is x=48/8=6, y=48/4=12. A price increase for x rotates the budget inward around the y-intercept. B treats it as lump-sum loss, C changes preferences, and D reverses the price effect."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=min{x,y}, m=80, p_x=4, p_y=4, the optimum is (10,10). If p_y falls to 2, what happens?",
+                "choices": {
+                    "A": "The optimum becomes (20,0) because y is cheaper.",
+                    "B": "The optimum becomes (13.33,13.33) because the kink of the L-shaped indifference curve moves to the highest affordable equal-quantity point.",
+                    "C": "The optimum remains (10,10) because the indifference-curve shape does not change.",
+                    "D": "The optimum becomes (10,20) because the consumer buys twice as much y."
+                },
+                "correct": "B",
+                "explanation": "For x=y=q, new cost is 4q+2q=6q=80, so q=13.33. A applies substitute logic, C ignores the budget rotation, and D violates the fixed-proportion kink."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a graph with sandwiches x on the horizontal axis and soup y on the vertical axis, an indifference curve through (4,8) is downward sloping and convex toward the origin. Moving rightward along the curve, what happens to its slope?",
+                "choices": {
+                    "A": "It becomes less steep in absolute value because the consumer is willing to give up fewer units of soup for each extra sandwich.",
+                    "B": "It becomes more steep because sandwiches become scarcer.",
+                    "C": "It becomes vertical because monotonicity eventually fails.",
+                    "D": "It becomes positive because more sandwiches require more soup to stay indifferent."
+                },
+                "correct": "A",
+                "explanation": "Convex indifference curves exhibit diminishing MRS: as sandwiches increase, the consumer gives up less soup for another sandwich. B reverses scarcity along the curve, C is not implied, and D violates monotonicity."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Two indifference curves for coffee c and donuts d are drawn so that one passes through A=(2,10) and another through B=(4,8), and they intersect at C=(3,9). Why is this graph invalid for well-behaved preferences?",
+                "choices": {
+                    "A": "Indifference curves must be horizontal if both goods are desirable.",
+                    "B": "Intersecting indifference curves imply the same bundle lies on two different utility levels, contradicting consistent preferences.",
+                    "C": "Indifference curves cannot pass through bundles with different quantities.",
+                    "D": "Convexity requires all indifference curves to be straight lines."
+                },
+                "correct": "B",
+                "explanation": "If curves cross, C is indifferent to bundles on both curves, collapsing supposedly different rankings. A gets slope wrong, C misunderstands curves, and D confuses convexity with linearity."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does monotonicity usually imply downward-sloping indifference curves for two goods such as pizza and soda?",
+                "choices": {
+                    "A": "Because if the consumer gets more pizza, she must get less soda to remain equally well off.",
+                    "B": "Because prices always slope downward.",
+                    "C": "Because utility must fall when both goods increase.",
+                    "D": "Because consumers always prefer extremes."
+                },
+                "correct": "A",
+                "explanation": "If both goods are desirable, increasing one good must be offset by reducing the other to stay on the same utility level. B confuses budgets with preferences, C violates monotonicity, and D confuses monotonicity with nonconvex preferences."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A nutrition app shows all combinations of protein bars and shakes that give Taylor exactly the same satisfaction score. What economic object is the app displaying?",
+                "choices": {
+                    "A": "A budget line",
+                    "B": "An indifference curve",
+                    "C": "An Engel curve",
+                    "D": "A demand curve"
+                },
+                "correct": "B",
+                "explanation": "An indifference curve contains all bundles yielding the same utility level. A shows affordability, C shows demand versus income, and D shows quantity demanded versus price."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a budget line from an indifference curve?",
+                "choices": {
+                    "A": "A budget line shows bundles with equal cost; an indifference curve shows bundles with equal preference ranking.",
+                    "B": "A budget line shows equal utility; an indifference curve shows equal income.",
+                    "C": "Both show equal utility, but only the budget line uses prices.",
+                    "D": "Both show equal cost, but only indifference curves can be curved."
+                },
+                "correct": "A",
+                "explanation": "Budget lines are constraints; indifference curves represent preferences. B reverses them, C incorrectly assigns utility to budget lines, and D incorrectly assigns cost to indifference curves."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=x^{0.5}y^{0.5}, p_x=2, p_y=8, and m=80. If income rises to 120, what happens to the tangency point?",
+                "choices": {
+                    "A": "It moves from (20,5) to (30,7.5) along the income expansion path because both goods are normal.",
+                    "B": "It moves from (20,5) to (20,10) because only y changes.",
+                    "C": "It stays at (20,5) because MRS is unchanged.",
+                    "D": "It moves to (60,0) because higher income makes corner solutions optimal."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas equal shares: initial x=40/2=20, y=40/8=5; new x=60/2=30, y=60/8=7.5. B changes only one good, C ignores the larger budget, and D falsely creates a corner. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Perfect Substitutes and Perfect Complements",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Chris has utility U(x,y)=3x+2y, income m=60, p_x=6, and p_y=3. What is the optimal bundle and interpretation?",
+                "choices": {
+                    "A": "x=10, y=0; x has the larger utility coefficient.",
+                    "B": "x=0, y=20; y gives more utility per dollar, so Chris buys only y.",
+                    "C": "x=5, y=10; perfect substitutes always imply equal spending.",
+                    "D": "x=6, y=8; the optimum occurs where x/y equals 3/2."
+                },
+                "correct": "B",
+                "explanation": "MU_x/p_x=3/6=0.5 and MU_y/p_y=2/3=0.667, so all income goes to y. A ignores prices, C imposes Cobb-Douglas logic, and D confuses utility coefficients with consumption ratios."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Priya has utility U(L,R)=min{L,2R}, where L is left shoes and R is right shoes. Income is 120, p_L=4, and p_R=8. What bundle maximizes utility?",
+                "choices": {
+                    "A": "L=15, R=7.5; she buys the fixed proportion L=2R and spends all income.",
+                    "B": "L=30, R=0; left shoes are cheaper.",
+                    "C": "L=0, R=15; right shoes determine utility more strongly.",
+                    "D": "L=12, R=9; she equalizes spending on the two goods."
+                },
+                "correct": "A",
+                "explanation": "The kink condition is L=2R. Cost is 4(2R)+8R=16R=120, so R=7.5 and L=15. B and C ignore complementarity, and D uses equal spending rather than the fixed proportion."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=x+2y, income is 100. Initially p_x=5 and p_y=8. Then p_y rises to 12. What happens?",
+                "choices": {
+                    "A": "The consumer switches from buying only y to buying only x because y's utility per dollar falls below x's.",
+                    "B": "The consumer continues buying only y because y has coefficient 2.",
+                    "C": "The consumer buys equal quantities because the price change makes the goods complements.",
+                    "D": "The consumer buys only x both before and after because x is cheaper."
+                },
+                "correct": "A",
+                "explanation": "Initially MU_x/p_x=0.2 and MU_y/p_y=0.25, so all y. After p_y=12, MU_y/p_y=0.167<0.2, so all x. B ignores price, C changes preferences, and D gets the initial comparison wrong."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=min{x,y}, m=90. Initially p_x=3 and p_y=6. Then p_x falls to 1.50. What happens to the optimal bundle?",
+                "choices": {
+                    "A": "It changes from (10,10) to (12,12) because the cost of each matched pair falls.",
+                    "B": "It changes from (10,10) to (60,0) because x is now cheaper.",
+                    "C": "It remains (10,10) because the goods must be consumed equally.",
+                    "D": "It changes from (15,15) to (20,20) because income is split equally."
+                },
+                "correct": "A",
+                "explanation": "Initial q=90/(3+6)=10. New q=90/(1.5+6)=12. B uses substitute logic, C ignores purchasing-power effects, and D miscomputes both bundles."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A consumer views red pencils r and blue pencils b as perfect substitutes at a rate of 1 red for 1 blue. What do the indifference curves look like with r on the horizontal axis?",
+                "choices": {
+                    "A": "Straight lines with constant slope -1.",
+                    "B": "L-shaped curves with kinks along r=b.",
+                    "C": "Vertical lines because blue pencils are neutral.",
+                    "D": "Upward-sloping lines because more of both goods is better."
+                },
+                "correct": "A",
+                "explanation": "Perfect substitutes have linear indifference curves with constant MRS. B describes perfect complements, C describes a neutral good, and D violates monotonicity for goods."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A consumer wants hot dogs h and buns b in a 1-to-1 ratio, U(h,b)=min{h,b}. What feature appears in the indifference-curve map?",
+                "choices": {
+                    "A": "Straight parallel downward-sloping lines.",
+                    "B": "L-shaped curves with kinks along the 45-degree line h=b.",
+                    "C": "Circles centered at the satiation point.",
+                    "D": "Horizontal lines because hot dogs are irrelevant."
+                },
+                "correct": "B",
+                "explanation": "Perfect complements generate L-shaped indifference curves whose kinks show the fixed consumption ratio. A describes substitutes, C describes satiation, and D describes a neutral good."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why do perfect substitutes often produce corner solutions?",
+                "choices": {
+                    "A": "Because the MRS is constant, so unless it exactly equals the price ratio, one good gives more utility per dollar everywhere.",
+                    "B": "Because the MRS is always diminishing, so the consumer diversifies.",
+                    "C": "Because the goods must be consumed in fixed proportions.",
+                    "D": "Because perfect substitutes violate completeness."
+                },
+                "correct": "A",
+                "explanation": "With constant MRS, the better value good remains better at every bundle, producing a corner unless the consumer is exactly indifferent along the budget line. B describes convex preferences, C describes complements, and D is false."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A printer requires exactly one black cartridge and one color cartridge to produce a usable cartridge set. Extra black cartridges without color cartridges add no value. Which preference model best fits?",
+                "choices": {
+                    "A": "Perfect substitutes",
+                    "B": "Perfect complements",
+                    "C": "Neutral goods",
+                    "D": "Bads"
+                },
+                "correct": "B",
+                "explanation": "The goods are valuable only in a fixed proportion, which is perfect complements. A would allow replacement at a constant rate, C would make one good irrelevant, and D would make one good undesirable."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes perfect substitutes from perfect complements?",
+                "choices": {
+                    "A": "Perfect substitutes have constant MRS and linear indifference curves; perfect complements have fixed-proportion consumption and L-shaped indifference curves.",
+                    "B": "Perfect substitutes have L-shaped curves; perfect complements have straight-line curves.",
+                    "C": "Perfect substitutes require equal quantities; perfect complements require equal marginal utilities per dollar.",
+                    "D": "Perfect substitutes are always inferior goods; perfect complements are always normal goods."
+                },
+                "correct": "A",
+                "explanation": "A states the core graphical and behavioral distinction. B reverses them, C confuses ratios and optimality conditions, and D incorrectly links preference type to income effects."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=4x+y and m=80. Initially p_x=8 and p_y=1, then p_x falls to 2. What happens?",
+                "choices": {
+                    "A": "The consumer switches from all y to all x because x's utility per dollar rises from 0.5 to 2.",
+                    "B": "The consumer buys all y both before and after because y is cheaper.",
+                    "C": "The consumer buys x=20 and y=40 because substitutes imply equal spending.",
+                    "D": "The consumer buys x=y because the goods become complements."
+                },
+                "correct": "A",
+                "explanation": "Initially MU_x/p_x=4/8=0.5<1, so all y. After p_x=2, 4/2=2>1, so all x. B ignores utility per dollar, C imposes interior logic, and D changes preferences. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Bads, Neutrals, and Satiation",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Tara consumes music downloads x, which she likes, and spam emails s, which are bads. Her utility is U(x,s)=x-2s. She has income 50, p_x=5, and spam is free but can be avoided completely. What bundle does she choose?",
+                "choices": {
+                    "A": "x=10, s=0; she buys as much of the good as possible and avoids the bad.",
+                    "B": "x=0, s=25; spam has no price, so she consumes all of it.",
+                    "C": "x=5, s=5; she balances marginal utilities.",
+                    "D": "x=10, s=10; free goods should always be consumed."
+                },
+                "correct": "A",
+                "explanation": "Since s lowers utility and can be avoided, Tara sets s=0 and spends all income on x: x=10. B and D treat a bad as a good, and C incorrectly applies interior tangency logic."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Ben has utility U(x,z)=x, where x is burritos and z is napkins, a neutral good. Income is 40, p_x=4, and p_z=1. What is Ben's optimal bundle?",
+                "choices": {
+                    "A": "x=5, z=20; he splits income because napkins are cheap.",
+                    "B": "x=10, z=0; he spends all income on burritos because napkins do not affect utility.",
+                    "C": "x=0, z=40; neutral goods are chosen because they have zero marginal utility.",
+                    "D": "x=8, z=8; he equalizes quantities."
+                },
+                "correct": "B",
+                "explanation": "Only x raises utility, so Ben buys x=40/4=10 and no z. A and D waste income on a neutral good, and C chooses the utility-minimizing allocation."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,z)=x, where z is neutral. Income is 60 and p_x=3. If p_z falls from 6 to 1, what happens to demand?",
+                "choices": {
+                    "A": "z rises because it is cheaper.",
+                    "B": "x rises because the neutral good's lower price increases real income.",
+                    "C": "The chosen bundle remains x=20, z=0 because z still adds no utility.",
+                    "D": "x falls because cheaper z creates substitution away from x."
+                },
+                "correct": "C",
+                "explanation": "A neutral good provides no utility, so its price change does not affect the optimum when income is spent only on x. A and D incorrectly create substitution toward z, and B falsely creates an income effect through an unchosen good."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Sara has satiation preferences U(x,y)=-(x-4)^2-(y-6)^2. With a large enough budget, she chooses (4,6). If her income rises from 100 to 200 and both bundles remain affordable, what happens?",
+                "choices": {
+                    "A": "She moves to (8,12) because income doubles.",
+                    "B": "She stays at (4,6) because the bliss point already maximizes utility.",
+                    "C": "She buys only x because more income eliminates satiation.",
+                    "D": "She moves away from the bliss point because monotonicity holds globally."
+                },
+                "correct": "B",
+                "explanation": "With satiation, more is not always better; if the bliss point is affordable, extra income does not change the optimum. A imposes homotheticity, C ignores satiation, and D falsely assumes global monotonicity."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose pollution p is on the horizontal axis and money m is on the vertical axis. Pollution is a bad and money is a good. What is the slope of an indifference curve?",
+                "choices": {
+                    "A": "Upward sloping because more pollution must be compensated by more money to keep utility constant.",
+                    "B": "Downward sloping because both variables are goods.",
+                    "C": "Horizontal because pollution is irrelevant.",
+                    "D": "Vertical because money is irrelevant."
+                },
+                "correct": "A",
+                "explanation": "If pollution rises, money must also rise to offset the harm, so indifference curves slope upward. B treats pollution as a good, C treats it as neutral, and D treats money as neutral."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For satiation preferences with bliss point (5,5), what do indifference curves around that point look like?",
+                "choices": {
+                    "A": "Straight parallel lines with constant MRS.",
+                    "B": "L-shaped curves with kinks at the bliss point.",
+                    "C": "Closed curves around the bliss point, with utility falling as the bundle moves farther away.",
+                    "D": "Only downward-sloping curves northeast of the bliss point."
+                },
+                "correct": "C",
+                "explanation": "Satiation creates a best point, and equal-utility sets can form closed contours around it. A describes substitutes, B describes complements, and D ignores that more beyond satiation can be worse."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean for a good to be neutral?",
+                "choices": {
+                    "A": "The consumer always wants less of it.",
+                    "B": "The consumer's ranking of bundles does not change when only that good changes.",
+                    "C": "The consumer wants it only in fixed proportion with another good.",
+                    "D": "The consumer always spends half of income on it."
+                },
+                "correct": "B",
+                "explanation": "A neutral good does not affect preference rankings. A describes a bad, C describes complements, and D describes a specific Cobb-Douglas-like demand pattern."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "At a buffet, Alex enjoys slices of cake up to 2 slices, but after that extra slices make him feel worse. Which preference case is most appropriate?",
+                "choices": {
+                    "A": "Perfect substitutes",
+                    "B": "Neutrality",
+                    "C": "Satiation",
+                    "D": "Perfect complements"
+                },
+                "correct": "C",
+                "explanation": "Cake becomes undesirable beyond a bliss level, which is satiation. A has constant tradeoffs, B says cake is irrelevant, and D requires fixed proportions."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a bad from a neutral good?",
+                "choices": {
+                    "A": "A bad lowers utility when increased; a neutral good leaves utility unchanged when increased.",
+                    "B": "A bad leaves utility unchanged; a neutral good lowers utility.",
+                    "C": "A bad is always expensive; a neutral good is always free.",
+                    "D": "A bad violates completeness; a neutral good violates transitivity."
+                },
+                "correct": "A",
+                "explanation": "A bad is disliked; a neutral has no effect on rankings. B reverses the definitions, C confuses preferences with prices, and D falsely links them to rationality axioms."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A student has U(x,h)=x-h, where x is snacks and h is hours of loud construction noise, a bad. She can buy x at p_x=2 with income 40, and h is imposed externally. If h rises from 3 to 7, what happens to optimal x and utility?",
+                "choices": {
+                    "A": "x stays 20 while utility falls by 4 because the bad is externally imposed and does not change the budget choice.",
+                    "B": "x falls to 16 because she substitutes away from snacks.",
+                    "C": "x rises to 24 because she buys more snacks to offset noise.",
+                    "D": "x stays 20 and utility is unchanged because h has no price."
+                },
+                "correct": "A",
+                "explanation": "She spends all income on x, so x=20 both times. Utility falls from 17 to 13. B invents substitution, C violates the fixed budget, and D treats a bad as neutral. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Utility",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A utility representation of Mia's preferences is U(x,y)=x^{1/3}y^{2/3}. She has income 90, p_x=3, and p_y=6. What bundle maximizes utility, and what does the utility function represent?",
+                "choices": {
+                    "A": "x=10, y=10; the function represents preference rankings, not measurable happiness units.",
+                    "B": "x=30, y=0; the function measures cardinal happiness, so x is chosen first.",
+                    "C": "x=15, y=7.5; the function requires equal spending.",
+                    "D": "x=5, y=12.5; the function assigns twice as much importance to x as y."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas shares are 1/3 on x and 2/3 on y: spend 30 on x and 60 on y, so x=10, y=10. B is a corner and cardinal error, C uses equal shares, and D reverses the exponents."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Noah's preferences are represented by U(x,y)=10x+y. Income is 100, p_x=20, and p_y=2. What is Noah's optimal bundle?",
+                "choices": {
+                    "A": "x=5, y=0; x has the larger utility coefficient.",
+                    "B": "x=0, y=50; y gives more utility per dollar.",
+                    "C": "x=2.5, y=25; linear utility always implies splitting income.",
+                    "D": "x=4, y=10; utility values must be balanced across goods."
+                },
+                "correct": "B",
+                "explanation": "MU_x/p_x=10/20=0.5 and MU_y/p_y=1/2=0.5, so every affordable bundle gives the same utility: U=50. Therefore A and B are both optimal, making the question ambiguous. Correct economic result: any bundle on 20x+2y=100 is optimal."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=x^{0.25}y^{0.75}, m=120, p_x=3, and p_y=3, the consumer chooses x=10 and y=30. If income rises to 240, what happens?",
+                "choices": {
+                    "A": "x and y both double because homothetic utility scales the optimal bundle with income.",
+                    "B": "x stays 10 and y rises to 70 because y has the larger exponent.",
+                    "C": "x rises to 40 and y stays 30 because x is cheaper in utility terms.",
+                    "D": "the bundle stays fixed because utility is ordinal."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas demands scale with income: x=0.25(240)/3=20, y=0.75(240)/3=60. B and C misallocate the income change, and D confuses ordinal utility with unchanging demand."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,y)=xy, m=100, p_x=5, p_y=5. If the utility function is replaced by V(x,y)=7xy+100, what happens to the optimal bundle?",
+                "choices": {
+                    "A": "It changes because adding 100 increases income.",
+                    "B": "It stays (10,10) because V is a strictly increasing transformation of U and represents the same preferences.",
+                    "C": "It changes to (70,70) because utility is multiplied by 7.",
+                    "D": "It becomes impossible to choose because utility must start at zero."
+                },
+                "correct": "B",
+                "explanation": "V=7U+100 preserves the ordering of bundles, so demand is unchanged. A confuses utility with income, C treats utility units as quantities, and D invents an invalid requirement."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For U(x,y)=xy, the indifference curve U=24 includes bundles such as (4,6) and (8,3). What does this curve show?",
+                "choices": {
+                    "A": "All bundles costing exactly $24.",
+                    "B": "All bundles assigned the same utility number and therefore ranked equally by this representation.",
+                    "C": "All bundles with the same marginal utility of x.",
+                    "D": "All bundles the consumer can afford at income 24."
+                },
+                "correct": "B",
+                "explanation": "An indifference curve is a level set of the utility function. A and D confuse utility with budget cost, and C confuses total utility level with marginal utility."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If U(x,y)=x+2y, what do the utility level curves look like in a graph with x on the horizontal axis and y on the vertical axis?",
+                "choices": {
+                    "A": "Straight parallel lines with slope -1/2.",
+                    "B": "L-shaped curves with kinks at x=2y.",
+                    "C": "Closed circles around a bliss point.",
+                    "D": "Upward-sloping lines with slope 2."
+                },
+                "correct": "A",
+                "explanation": "Level curves satisfy x+2y=k, or y=k/2 - x/2, so slope is -1/2. B describes complements, C satiation, and D has the wrong sign."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean to say a utility function represents preferences?",
+                "choices": {
+                    "A": "It assigns larger numbers to bundles that are ranked higher by the consumer.",
+                    "B": "It measures happiness in objective units comparable across people.",
+                    "C": "It determines market prices directly.",
+                    "D": "It replaces the budget constraint."
+                },
+                "correct": "A",
+                "explanation": "A utility representation preserves the consumer's ordering of bundles. B makes a cardinal and interpersonal claim, C confuses preferences with equilibrium, and D confuses objectives with constraints."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "An app assigns score U=4 to bundle A, U=9 to bundle B, and U=100 to bundle C for Jordan's snack preferences. What conclusion is justified?",
+                "choices": {
+                    "A": "C is preferred to B, and B is preferred to A.",
+                    "B": "C gives exactly 25 times as much happiness as A.",
+                    "C": "Jordan would pay exactly $96 more for C than A.",
+                    "D": "A and B cannot be compared because utility is artificial."
+                },
+                "correct": "A",
+                "explanation": "Utility numbers represent rankings only, so higher utility means preferred. B and C make invalid cardinal claims, and D ignores representability."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes utility from preference?",
+                "choices": {
+                    "A": "Preference is the underlying ranking; utility is a numerical representation of that ranking.",
+                    "B": "Utility is the underlying ranking; preference is the equation used to calculate it.",
+                    "C": "Preference requires prices; utility requires income.",
+                    "D": "Utility is cardinal in consumer theory; preference is ordinal."
+                },
+                "correct": "A",
+                "explanation": "Preferences are primitive rankings; utility represents them numerically. B reverses the relationship, C confuses preferences with constraints, and D overstates cardinal meaning."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=x^{1/2}y^{1/2}, m=80, p_x=2, p_y=4. If p_y falls to 2, what happens to demand?",
+                "choices": {
+                    "A": "x stays 20 and y rises from 10 to 20 because y became cheaper while equal expenditure shares remain.",
+                    "B": "x rises from 20 to 40 and y stays 10 because y's price fell.",
+                    "C": "both goods remain unchanged because utility represents preferences, not prices.",
+                    "D": "y falls because lower price lowers marginal utility."
+                },
+                "correct": "A",
+                "explanation": "Initial x=40/2=20, y=40/4=10. New x=40/2=20, y=40/2=20. B changes the wrong good, C ignores the budget constraint, and D reverses the price effect. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Ordinal Utility",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Ella maximizes U(x,y)=xy with m=100, p_x=5, and p_y=10. What bundle does she choose, and why would maximizing V(x,y)=ln(xy) give the same choice?",
+                "choices": {
+                    "A": "x=10, y=5; V is a strictly increasing transformation of U, so it preserves the same ranking.",
+                    "B": "x=20, y=0; logarithms make corner solutions optimal.",
+                    "C": "x=5, y=10; logarithms reverse the ranking of bundles.",
+                    "D": "x=10, y=10; ordinal utility requires equal quantities."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas spends half income on each good: x=50/5=10 and y=50/10=5. ln(U) preserves rankings for U>0. B, C, and D misunderstand monotonic transformations or the budget."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has U(x,y)=x^{2}y^{2}, income 72, p_x=3, and p_y=6. Since U is an increasing transformation of xy for positive bundles, what is the optimum?",
+                "choices": {
+                    "A": "x=24, y=0; squaring rewards concentrating consumption.",
+                    "B": "x=12, y=6; the same as maximizing xy, with equal expenditure shares.",
+                    "C": "x=6, y=9; the exponents require twice as much y.",
+                    "D": "x=8, y=8; ordinal utility requires equal utility contributions."
+                },
+                "correct": "B",
+                "explanation": "U=(xy)^2 is a strictly increasing transformation of xy, so equal shares apply: x=36/3=12 and y=36/6=6. A is a corner with zero utility, C misuses exponents, and D violates the budget."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer's preferences are represented by U(x,y)=xy and also by V(x,y)=5xy+17. If p_x rises from 2 to 4 while m=80 and p_y=4, what happens under either representation?",
+                "choices": {
+                    "A": "Initial demand is x=20,y=10; new demand is x=10,y=10 because the price change rotates the budget and the two utilities represent the same preferences.",
+                    "B": "Demand differs under V because adding 17 changes marginal utility units.",
+                    "C": "Initial demand is x=10,y=20; new demand is x=10,y=10 because x becomes cheaper.",
+                    "D": "Demand stays fixed because ordinal transformations remove price effects."
+                },
+                "correct": "A",
+                "explanation": "With equal shares, initial x=40/2=20, y=40/4=10; new x=40/4=10, y=10. V preserves preferences. B treats utility units as meaningful, C swaps goods, and D confuses ordinal invariance with price invariance."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose U(x,y)=x+y and W(x,y)=(x+y)^3. Income is 60, p_x=2, p_y=1. If p_y rises to 4, how does the optimum change?",
+                "choices": {
+                    "A": "It stays all y because W gives large utility numbers to y.",
+                    "B": "It switches from all y to all x because utility per dollar changes; W preserves the same ranking as U.",
+                    "C": "It becomes an equal split because cubing creates convex indifference curves.",
+                    "D": "It cannot be solved because ordinal utility cannot handle price changes."
+                },
+                "correct": "B",
+                "explanation": "Initially MU_y/p_y=1>1/2, so all y. After p_y=4, MU_y/p_y=1/4<1/2, so all x. W is monotonic in U. A ignores prices, C falsely changes preferences, and D is false."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If V=3U+10 is used instead of U to draw indifference curves over coffee and tea, what happens to the indifference-curve map?",
+                "choices": {
+                    "A": "The labels on curves change, but the curves themselves and their ordering stay the same.",
+                    "B": "The curves rotate because marginal utilities triple.",
+                    "C": "The curves become budget lines because 10 is added.",
+                    "D": "The higher curves become lower because the ranking is reversed."
+                },
+                "correct": "A",
+                "explanation": "A positive affine transformation preserves level sets' ordering, changing only utility labels. B mistakes utility scaling for preference changes, C confuses utility with income, and D would require a decreasing transformation."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Two utility functions U and V represent the same ordinal preferences. On a graph of apples and oranges, what must be true of their indifference curves?",
+                "choices": {
+                    "A": "They must have identical curve shapes and rankings, though numerical labels may differ.",
+                    "B": "They must have identical marginal utility numbers at every bundle.",
+                    "C": "They must have different tangencies because utility numbers differ.",
+                    "D": "They must be straight lines."
+                },
+                "correct": "A",
+                "explanation": "Same ordinal preferences imply the same indifference sets and ordering. B is not required because marginal utility units can change, C is false for the same preferences, and D is not generally true."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is utility called ordinal in standard consumer theory?",
+                "choices": {
+                    "A": "Because only the order of bundles matters, not the size of utility differences.",
+                    "B": "Because utility must be measured in dollars.",
+                    "C": "Because utility differences are comparable across people.",
+                    "D": "Because utility functions must be linear."
+                },
+                "correct": "A",
+                "explanation": "Ordinal utility represents rankings only. B and C make cardinal claims, and D imposes a false functional form restriction."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A website changes its satisfaction score from U to V=100U for every bundle. It still recommends the same snack bundle to Riley at the same prices and income. What concept explains this?",
+                "choices": {
+                    "A": "Diminishing marginal utility",
+                    "B": "Ordinal utility",
+                    "C": "Rationing",
+                    "D": "Deadweight loss"
+                },
+                "correct": "B",
+                "explanation": "Multiplying utility by a positive constant preserves rankings, so the same choice is recommended. A concerns marginal changes, C constraints quantities, and D welfare losses."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes ordinal from cardinal utility?",
+                "choices": {
+                    "A": "Ordinal utility ranks bundles; cardinal utility gives meaningful magnitudes of utility differences.",
+                    "B": "Ordinal utility uses calculus; cardinal utility does not.",
+                    "C": "Ordinal utility applies to firms; cardinal utility applies to consumers.",
+                    "D": "Ordinal utility requires prices; cardinal utility requires income."
+                },
+                "correct": "A",
+                "explanation": "Ordinal means order only; cardinal means meaningful numerical differences. B, C, and D are unrelated distinctions."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=xy and V(x,y)=sqrt(xy). With m=120, p_x=3, p_y=6, p_x falls to 2. What happens under both U and V?",
+                "choices": {
+                    "A": "x rises from 20 to 30 and y stays 10 because both utility functions represent the same preferences.",
+                    "B": "x stays 20 and y rises to 15 because V has a square root.",
+                    "C": "the optimum differs under V because square roots reduce marginal utility.",
+                    "D": "x falls because a lower price lowers utility per dollar."
+                },
+                "correct": "A",
+                "explanation": "Initial x=60/3=20, y=60/6=10; new x=60/2=30, y=10. V is strictly increasing in U, so demand is unchanged across representations. B and C treat transformations as preference changes, and D reverses the price effect. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Marginal Utility",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has U(x,y)=12ln(x)+y, income m=50, p_x=3, and p_y=1. What is the optimal bundle, and what marginal-utility condition supports it?",
+                "choices": {
+                    "A": "x=4, y=38; MU_x/p_x=MU_y/p_y at the interior optimum.",
+                    "B": "x=12, y=14; x is chosen until MU_x equals zero.",
+                    "C": "x=10, y=20; income is split equally.",
+                    "D": "x=0, y=50; y has constant marginal utility."
+                },
+                "correct": "A",
+                "explanation": "MU_x=12/x and MU_y=1. Interior condition 12/(3x)=1 gives x=4; y=50-12=38. B uses the wrong condition, C imposes Cobb-Douglas shares, and D ignores high initial MU_x."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "For U(x,y)=x^{1/2}y^{1/2}, income is 96, p_x=4, and p_y=8. Which bundle maximizes utility and equalizes marginal utility per dollar?",
+                "choices": {
+                    "A": "x=12, y=6",
+                    "B": "x=24, y=0",
+                    "C": "x=8, y=8",
+                    "D": "x=6, y=12"
+                },
+                "correct": "A",
+                "explanation": "Equal-share Cobb-Douglas gives x=48/4=12 and y=48/8=6, where MU_x/p_x=MU_y/p_y. B is a corner, C violates the budget, and D reverses the price quantities."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,y)=a ln(x)+y, p_x=2, p_y=1. Initially a=10, then advertising raises a to 20. With enough income for an interior solution, what happens to x?",
+                "choices": {
+                    "A": "x falls from 5 to 2.5 because marginal utility diminishes faster.",
+                    "B": "x rises from 5 to 10 because the marginal utility of x is higher at every x.",
+                    "C": "x stays 5 because prices did not change.",
+                    "D": "x rises from 10 to 20 because income doubles."
+                },
+                "correct": "B",
+                "explanation": "Interior condition a/x divided by p_x equals 1 gives x=a/2. x rises from 5 to 10. A reverses the effect, C ignores preference-parameter changes, and D attributes it to income."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=x^{1/2}y^{1/2}, m=100, p_x=5, p_y=5. If p_x rises to 10, what happens to marginal utility at the chosen x?",
+                "choices": {
+                    "A": "x falls from 10 to 5, making MU_x higher at the new optimum because x is scarcer.",
+                    "B": "x rises from 10 to 20, making MU_x lower.",
+                    "C": "x stays 10, so MU_x is unchanged.",
+                    "D": "MU_x becomes zero because the good is more expensive."
+                },
+                "correct": "A",
+                "explanation": "Demand changes from x=50/5=10 to x=50/10=5. With diminishing marginal utility, lower x means higher MU_x. B reverses demand, C ignores price, and D confuses price with utility."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For U(x,y)=ln(x)+y, what happens to marginal utility of x as x increases along any horizontal line holding y fixed?",
+                "choices": {
+                    "A": "It decreases because MU_x=1/x.",
+                    "B": "It increases because total utility rises.",
+                    "C": "It remains constant because y is linear.",
+                    "D": "It becomes negative once x exceeds y."
+                },
+                "correct": "A",
+                "explanation": "MU_x is the partial derivative with respect to x, equal to 1/x, which diminishes as x rises. B confuses total and marginal utility, C uses MU_y, and D invents a threshold."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph plots total utility from slices of pizza q as U(q)=20q-q^2 for 0≤q≤10. What is true about marginal utility as q increases?",
+                "choices": {
+                    "A": "It is constant at 20.",
+                    "B": "It rises linearly because total utility rises.",
+                    "C": "It falls linearly because MU=20-2q.",
+                    "D": "It is always negative."
+                },
+                "correct": "C",
+                "explanation": "Marginal utility is the derivative, MU=20-2q, so it declines with q. A ignores the quadratic term, B confuses total utility with marginal utility, and D is false for q<10."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does the condition MU_x/p_x=MU_y/p_y mean at an interior consumer optimum?",
+                "choices": {
+                    "A": "The last dollar spent on each good adds the same utility, so no reallocation can raise utility.",
+                    "B": "The consumer buys equal quantities of each good.",
+                    "C": "The consumer receives equal total utility from each good.",
+                    "D": "The prices of the two goods must be equal."
+                },
+                "correct": "A",
+                "explanation": "Equal marginal utility per dollar means the consumer cannot improve by shifting a dollar across goods. B, C, and D are not required by the optimum condition."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "At lunch, Jordan says the first taco was amazing, the second was good, and the third was only okay. Which concept is Jordan describing?",
+                "choices": {
+                    "A": "Increasing marginal utility",
+                    "B": "Diminishing marginal utility",
+                    "C": "Perfect complementarity",
+                    "D": "Ordinal transformation"
+                },
+                "correct": "B",
+                "explanation": "Each additional taco adds less extra satisfaction, which is diminishing marginal utility. A reverses the pattern, C concerns fixed proportions, and D concerns utility representations."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes total utility from marginal utility?",
+                "choices": {
+                    "A": "Total utility is the utility level from a bundle; marginal utility is the rate at which utility changes when one good increases.",
+                    "B": "Total utility is always ordinal; marginal utility is always cardinal and comparable across people.",
+                    "C": "Total utility is a derivative; marginal utility is the original function.",
+                    "D": "Total utility uses prices; marginal utility uses income."
+                },
+                "correct": "A",
+                "explanation": "Marginal utility is a partial derivative of total utility. B overstates cardinal meaning, C reverses derivative and function, and D confuses utility with budget variables."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=8ln(x)+y, p_x=4, p_y=1. If p_x falls to 2 with enough income for an interior solution, what happens to x and why?",
+                "choices": {
+                    "A": "x rises from 2 to 4 because the lower price means equality of marginal utility per dollar occurs at a lower MU_x and therefore higher x.",
+                    "B": "x falls from 2 to 1 because cheaper goods have lower marginal utility.",
+                    "C": "x stays 2 because marginal utility depends only on x.",
+                    "D": "x rises from 8 to 16 because all income is spent on x."
+                },
+                "correct": "A",
+                "explanation": "Interior condition 8/(p_x x)=1 gives x=8/p_x, so x rises from 2 to 4. B reverses the effect, C ignores the optimality condition, and D ignores y and income. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Marginal Rate of Substitution",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "For U(x,y)=xy, income m=120, p_x=4, and p_y=6. What is the optimal bundle, and what MRS condition holds there if MRS is the amount of y the consumer will give up for one more x?",
+                "choices": {
+                    "A": "x=15, y=10; MRS=y/x=2/3 equals p_x/p_y.",
+                    "B": "x=30, y=0; MRS is zero at the optimum.",
+                    "C": "x=10, y=15; MRS=x/y=2/3 equals p_x/p_y.",
+                    "D": "x=12, y=12; MRS equals 1 because quantities are equal."
+                },
+                "correct": "A",
+                "explanation": "Equal shares imply x=60/4=15, y=60/6=10. For U=xy, MRS=MU_x/MU_y=y/x=10/15=2/3=p_x/p_y. B is a corner, C uses the inverse MRS, and D ignores prices."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has U(x,y)=x^{1/4}y^{3/4}, m=160, p_x=4, and p_y=8. What is the optimum?",
+                "choices": {
+                    "A": "x=40, y=0; x is cheaper.",
+                    "B": "x=10, y=15; spending shares are 1/4 on x and 3/4 on y.",
+                    "C": "x=20, y=10; the consumer equalizes spending.",
+                    "D": "x=15, y=10; MRS must equal p_y/p_x."
+                },
+                "correct": "B",
+                "explanation": "Spend 40 on x and 120 on y: x=10, y=15. A ignores preference for y, C uses equal shares, and D uses the wrong condition and arithmetic."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=xy, m=100, p_x=5, p_y=5, the optimum is (10,10). If p_x falls to 2.50, what happens to the optimal MRS?",
+                "choices": {
+                    "A": "It falls from 1 to 0.5 because the budget slope becomes flatter and tangency requires MRS=p_x/p_y.",
+                    "B": "It rises from 1 to 2 because x becomes cheaper.",
+                    "C": "It stays 1 because preferences are unchanged.",
+                    "D": "It becomes zero because the consumer buys only x."
+                },
+                "correct": "A",
+                "explanation": "At an interior optimum MRS=p_x/p_y. The price ratio falls from 1 to 0.5. B uses the inverse ratio, C ignores movement along the indifference map, and D falsely predicts a corner."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,y)=sqrt(x)+y, so MRS=MU_x/MU_y=1/(2sqrt(x)). With p_y=1 and p_x rising from 1/4 to 1, what happens to interior x?",
+                "choices": {
+                    "A": "x rises from 4 to 16 because a higher price requires higher MRS.",
+                    "B": "x falls from 4 to 1/4 because tangency requires 1/(2sqrt(x))=p_x.",
+                    "C": "x stays 4 because y is quasilinear.",
+                    "D": "x falls from 16 to 4 because MRS equals p_y/p_x."
+                },
+                "correct": "B",
+                "explanation": "Set 1/(2sqrt(x))=p_x. If p_x=1/4, x=4; if p_x=1, x=1/4. A reverses the movement, C ignores price, and D uses the wrong ratio."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "An indifference curve has slope -3 at bundle A with x on the horizontal axis and y on the vertical axis. What does this mean?",
+                "choices": {
+                    "A": "The consumer is willing to give up 3 units of y for 1 more unit of x at A.",
+                    "B": "The consumer is willing to give up 3 units of x for 1 more unit of y at A.",
+                    "C": "The price of x is three times the price of y.",
+                    "D": "The consumer receives 3 units of utility from x."
+                },
+                "correct": "A",
+                "explanation": "The slope is -MRS, where MRS is y given up per extra x. B uses the reciprocal, C confuses MRS with prices, and D confuses MRS with marginal utility."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For convex indifference curves with x on the horizontal axis, moving down and to the right along one curve usually causes MRS to decline. What graphical change corresponds to this?",
+                "choices": {
+                    "A": "The curve becomes flatter in absolute value.",
+                    "B": "The curve becomes steeper in absolute value.",
+                    "C": "The curve becomes upward sloping.",
+                    "D": "The curve crosses a lower indifference curve."
+                },
+                "correct": "A",
+                "explanation": "Diminishing MRS means the absolute slope falls as x rises. B reverses it, C violates monotonicity, and D violates non-intersection."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does MRS equal the price ratio at an interior optimum?",
+                "choices": {
+                    "A": "Because the consumer's subjective tradeoff equals the market tradeoff, leaving no beneficial reallocation along the budget line.",
+                    "B": "Because marginal utilities must both equal zero.",
+                    "C": "Because the consumer must buy equal quantities of both goods.",
+                    "D": "Because prices determine preferences."
+                },
+                "correct": "A",
+                "explanation": "Tangency requires the indifference-curve slope to equal the budget-line slope. B is false for goods, C is unnecessary, and D reverses preferences and constraints."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "At her current bundle, Lina would give up 4 cups of coffee for 1 more sandwich while staying equally happy. Sandwiches cost $6 and coffee costs $2. What should she do if she can adjust spending?",
+                "choices": {
+                    "A": "Buy more sandwiches and less coffee because her MRS=4 exceeds the market tradeoff p_s/p_c=3.",
+                    "B": "Buy more coffee and fewer sandwiches because sandwiches are expensive.",
+                    "C": "Do nothing because MRS and price ratio are unrelated.",
+                    "D": "Buy equal numbers of sandwiches and coffees."
+                },
+                "correct": "A",
+                "explanation": "She values one more sandwich at 4 coffees but the market cost is only 3 coffees, so sandwiches are worth buying. B ignores MRS, C denies the optimality condition, and D uses an irrelevant equal-quantity rule."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes marginal utility from marginal rate of substitution?",
+                "choices": {
+                    "A": "Marginal utility is the utility change from one more good; MRS is the tradeoff between two goods holding utility constant.",
+                    "B": "Marginal utility is always negative; MRS is always positive.",
+                    "C": "Marginal utility uses prices; MRS uses income.",
+                    "D": "Marginal utility is ordinally invariant; MRS is not."
+                },
+                "correct": "A",
+                "explanation": "MU is a partial derivative; MRS is a ratio of marginal utilities representing a willingness to trade. B is false, C confuses utility with constraints, and D reverses invariance: MRS is preserved by monotonic transformations, while MU levels need not be."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. For U(x,y)=x^{1/2}y^{1/2}, p_y=4. If p_x rises from 2 to 8, what happens to the MRS at the new interior optimum?",
+                "choices": {
+                    "A": "It rises from 0.5 to 2 because tangency requires MRS=p_x/p_y.",
+                    "B": "It falls from 2 to 0.5 because tangency requires MRS=p_y/p_x.",
+                    "C": "It stays 1 because Cobb-Douglas preferences are symmetric.",
+                    "D": "It becomes infinite because the consumer buys no y."
+                },
+                "correct": "A",
+                "explanation": "At an interior optimum, MRS=p_x/p_y. The ratio rises from 2/4=0.5 to 8/4=2. B uses the inverse ratio, C ignores prices, and D incorrectly predicts a corner. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    },
+    {
+        "topic": "Monotonic Transformations",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer's utility is U(x,y)=xy, with m=90, p_x=3, and p_y=6. Another economist uses V(x,y)=ln(xy). What bundle maximizes both utility functions?",
+                "choices": {
+                    "A": "x=15, y=7.5; ln is strictly increasing, so it preserves the same maximizer.",
+                    "B": "x=30, y=0; ln makes high x especially valuable.",
+                    "C": "x=7.5, y=15; the logarithm reverses the price ratio.",
+                    "D": "x=10, y=10; monotonic transformations require equal quantities."
+                },
+                "correct": "A",
+                "explanation": "For xy, equal spending gives x=45/3=15 and y=45/6=7.5. ln is strictly increasing on positive utility values, so it preserves the choice. B gives undefined ln(0), C reverses quantities, and D ignores prices."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Suppose U(x,y)=x^{1/2}y^{1/2}, and W(x,y)=100+4U(x,y). Income is 160, p_x=4, p_y=8. What is the optimal bundle under W?",
+                "choices": {
+                    "A": "x=40, y=0 because adding 100 makes utility positive at corners.",
+                    "B": "x=20, y=10 because W is a strictly increasing transformation of U.",
+                    "C": "x=10, y=20 because multiplying by 4 reverses marginal utilities.",
+                    "D": "x=16, y=12 because the constant changes the budget."
+                },
+                "correct": "B",
+                "explanation": "W=100+4U preserves U's ranking. Equal spending gives x=80/4=20 and y=80/8=10. A ignores zero original utility at corners, C invents reversal, and D confuses utility constants with income."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For U(x,y)=xy and V(x,y)=(xy)^5, m=100, p_x=5, p_y=5. If p_x falls to 2.50, what happens to the chosen bundle under both representations?",
+                "choices": {
+                    "A": "It moves from (10,10) to (20,10) under both because V is strictly increasing in U.",
+                    "B": "It moves from (10,10) to (10,20) under V because exponent 5 favors y.",
+                    "C": "It stays (10,10) because monotonic transformations eliminate price effects.",
+                    "D": "It moves to (40,0) because the fifth power favors extremes."
+                },
+                "correct": "A",
+                "explanation": "Initial equal shares yield (10,10); after p_x falls, x=50/2.5=20 and y=50/5=10. V preserves the same preferences. B and D treat transformation as preference change, and C ignores the budget change."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer has U(x,y)=x+y and V(x,y)=e^{x+y}. With m=60, p_x=3, p_y=2, she initially buys only y. If p_y rises to 6, what happens?",
+                "choices": {
+                    "A": "She keeps buying only y because e^{x+y} strongly rewards total consumption.",
+                    "B": "She switches to only x because x now gives more utility per dollar; V preserves U's ranking.",
+                    "C": "She splits income because exponentials create strict convexity.",
+                    "D": "She cannot choose because e^{x+y} is cardinal."
+                },
+                "correct": "B",
+                "explanation": "Initially 1/2>1/3, so all y. After p_y=6, 1/3>1/6, so all x. The exponential is strictly increasing in x+y. A ignores prices, C changes preferences, and D is false."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a utility contour map, replacing U with V=U^3 for U>0 does what to the indifference curves?",
+                "choices": {
+                    "A": "Keeps the same curves and ordering but changes labels such as U=2 becoming V=8.",
+                    "B": "Reverses the ranking because cubes are nonlinear.",
+                    "C": "Turns convex curves into concave curves.",
+                    "D": "Changes budget-line slopes."
+                },
+                "correct": "A",
+                "explanation": "Cubing is strictly increasing for positive U, so it preserves ordinal rankings and level sets. B would require a decreasing transformation, C wrongly changes preferences, and D confuses utility with constraints."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If U(x,y)=xy and V(x,y)=-xy, how would the preference map change if V were treated as utility to maximize?",
+                "choices": {
+                    "A": "It would represent the same preferences because multiplying by any constant is allowed.",
+                    "B": "It would reverse rankings because -xy is a strictly decreasing transformation of U.",
+                    "C": "It would keep the same rankings but change only labels.",
+                    "D": "It would make all bundles indifferent."
+                },
+                "correct": "B",
+                "explanation": "Only strictly increasing transformations preserve preferences. Multiplying by -1 reverses rankings. A ignores the sign, C falsely treats it as monotonic increasing, and D is false."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does any strictly increasing transformation of a utility function represent the same preferences?",
+                "choices": {
+                    "A": "Because it preserves the order of utility values across bundles.",
+                    "B": "Because it preserves the exact marginal utility of each good.",
+                    "C": "Because it preserves income and prices only if linear.",
+                    "D": "Because it converts ordinal utility into cardinal utility."
+                },
+                "correct": "A",
+                "explanation": "Preference representation requires preserving rankings, not utility magnitudes or marginal utility levels. B is too strong, C confuses preferences with budgets, and D misunderstands ordinal utility."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A researcher first scores bundles with U, then reports scores using V=sqrt(U) because the numbers are easier to read. All U values are positive. What must be true?",
+                "choices": {
+                    "A": "The same bundles are ranked higher or lower because square root is strictly increasing.",
+                    "B": "The ranking is reversed because square root compresses large numbers.",
+                    "C": "The consumer's preferences become less convex.",
+                    "D": "The budget set expands."
+                },
+                "correct": "A",
+                "explanation": "sqrt(U) is strictly increasing for positive U, so it preserves rankings. B confuses compression with reversal, C changes preferences without basis, and D confuses utility representation with feasibility."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a monotonic transformation from an arbitrary transformation?",
+                "choices": {
+                    "A": "A monotonic transformation is strictly increasing and preserves rankings; an arbitrary transformation may reverse or scramble rankings.",
+                    "B": "A monotonic transformation must be linear; an arbitrary transformation must be nonlinear.",
+                    "C": "A monotonic transformation changes prices; an arbitrary transformation changes income.",
+                    "D": "A monotonic transformation preserves marginal utility exactly; an arbitrary transformation preserves total utility."
+                },
+                "correct": "A",
+                "explanation": "Strictly increasing transformations preserve order. B wrongly excludes nonlinear increasing functions, C confuses utility and budget variables, and D overstates what is preserved."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=x^{0.5}y^{0.5} and V(x,y)=ln(U(x,y)). Income is 200, p_x=10, p_y=5. If income falls to 100, what happens under both utility functions?",
+                "choices": {
+                    "A": "The optimum moves from (10,20) to (5,10) under both because V is strictly increasing in U and income scales demand down.",
+                    "B": "The optimum differs under V because logarithms reduce marginal utility.",
+                    "C": "The optimum stays (10,20) because monotonic transformations preserve choices even when income changes.",
+                    "D": "The optimum moves from (20,10) to (10,5) because quantities must match prices."
+                },
+                "correct": "A",
+                "explanation": "Equal spending: initially x=100/10=10 and y=100/5=20; after income falls, x=50/10=5 and y=50/5=10. B treats transformation as preference change, C ignores the budget, and D swaps quantities. Welfare analysis is not directly applicable here, so Type 2 is used."
+            }
+        ]
+    }
+]

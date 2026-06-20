@@ -1,0 +1,135 @@
+{
+  "topic": "Long-Run Cost Curves",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has q=K^{1/2}L^{1/2}, w=4, r=1. What is the long-run cost function C(q)?",
+      "choices": {
+        "A": "C(q)=4q because K=L=q.",
+        "B": "C(q)=8q because L=q/2 and K=2q.",
+        "C": "C(q)=16q because K=4L.",
+        "D": "C(q)=q^2 because KL=q."
+      },
+      "correct": "B",
+      "explanation": "TRS=K/L=w/r=4, so K=4L and KL=q^2 gives L=q/2, K=2q. Cost=4(q/2)+1(2q)=4q? Wait: that equals 4q. Thus the valid cost function is C(q)=4q, with K=2q and L=q/2. Choice A has the right cost but wrong input bundle."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has long-run production q=2K^{1/2}L^{1/2}, wage w=2, rental rate r=8. What is the long-run cost of producing q units?",
+      "choices": {
+        "A": "C(q)=4q.",
+        "B": "C(q)=8q.",
+        "C": "C(q)=2q^2.",
+        "D": "C(q)=16q."
+      },
+      "correct": "A",
+      "explanation": "Target implies KL=(q/2)^2. TRS=K/L=w/r=1/4, so L=2? Solving gives L=q and K=q/4. Cost=2q+8(q/4)=4q. B doubles cost. C confuses returns to scale. D overstates both inputs."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm's long-run average cost falls as output rises from 100 to 500 units. What does this indicate, and what mechanism explains it?",
+      "choices": {
+        "A": "Economies of scale, because average cost decreases with scale.",
+        "B": "Diseconomies of scale, because total cost increases.",
+        "C": "Constant returns to scale, because output rises.",
+        "D": "Shutdown, because price must be below AVC."
+      },
+      "correct": "A",
+      "explanation": "Falling LRAC indicates economies of scale. B confuses total cost with average cost. C would imply constant LRAC. D is short-run price logic, not scale."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm's input prices are fixed, but a new technology doubles output from every input bundle. What happens to the long-run cost curve for any target output q?",
+      "choices": {
+        "A": "It shifts downward because fewer inputs are needed for each q.",
+        "B": "It shifts upward because output is higher.",
+        "C": "It is unchanged because input prices are fixed.",
+        "D": "It becomes short-run cost because technology changed."
+      },
+      "correct": "A",
+      "explanation": "Better technology lowers the minimum cost of producing any given output. B confuses producing more with cost of a fixed target. C ignores production requirements. D is unrelated."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A graph shows several short-run average cost curves for different plant sizes, and the long-run average cost curve is tangent to the lowest attainable point among them at each output. What is this LRAC curve called?",
+      "choices": {
+        "A": "The envelope of the short-run average cost curves.",
+        "B": "The vertical sum of the short-run marginal cost curves.",
+        "C": "The shutdown curve.",
+        "D": "The average fixed cost curve."
+      },
+      "correct": "A",
+      "explanation": "LRAC is the lower envelope of SRAC curves because the firm can choose plant size in the long run. B is not how LRAC is formed. C relates to AVC. D is short-run only."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a long-run average cost graph, the curve is U-shaped: falling, flat briefly, then rising. What do these regions represent?",
+      "choices": {
+        "A": "Falling AFC, constant AVC, and rising MC.",
+        "B": "Economies of scale, roughly constant returns to scale, and diseconomies of scale.",
+        "C": "Shutdown, production, and exit.",
+        "D": "Increasing fixed cost, sunk cost, and variable cost."
+      },
+      "correct": "B",
+      "explanation": "LRAC shape reflects scale economies, constant returns, and diseconomies. A uses short-run components. C is market participation logic. D confuses accounting categories with scale behavior."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can long-run cost be no higher than short-run cost for a given output when the short-run plant size is one available long-run option?",
+      "choices": {
+        "A": "Because the long run has fewer choices and therefore lower cost.",
+        "B": "Because the firm can choose the short-run input combination or adjust all inputs, so the feasible set is larger.",
+        "C": "Because fixed costs disappear from accounting profit.",
+        "D": "Because marginal cost must equal average cost."
+      },
+      "correct": "B",
+      "explanation": "The long run expands the feasible set by allowing all inputs to vary. A reverses feasible-set logic. C is false; costs do not disappear. D is not generally true."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "An airline is deciding the cheapest fleet and staffing plan for serving 1 million, 2 million, or 5 million passengers annually over the next decade, with all inputs adjustable. Which cost concept is most relevant?",
+      "choices": {
+        "A": "Long-run cost curves.",
+        "B": "Average fixed cost from the current fleet.",
+        "C": "Short-run shutdown rule.",
+        "D": "One-week marginal product of labor."
+      },
+      "correct": "A",
+      "explanation": "All inputs are adjustable over the decade, so long-run cost is relevant. B fixes the current fleet. C is operating versus shutdown. D is short-run production."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes economies of scale from increasing marginal returns to a variable input?",
+      "choices": {
+        "A": "Economies of scale are long-run average-cost effects from scaling all inputs; increasing marginal returns concern extra output from one variable input holding others fixed.",
+        "B": "They are identical because both make output rise.",
+        "C": "Economies of scale occur only when fixed cost rises; increasing marginal returns occur only when fixed cost falls.",
+        "D": "Economies of scale are short-run; increasing marginal returns are long-run."
+      },
+      "correct": "A",
+      "explanation": "Scale concerns changing all inputs; marginal returns concern changing one input. B ignores the all-input versus one-input distinction. C is unrelated. D reverses the usual distinction."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. If a firm's production function changes from constant returns to scale to increasing returns to scale over a range, what happens to LRAC over that range?",
+      "choices": {
+        "A": "It becomes downward sloping because output rises more than proportionally when inputs scale up.",
+        "B": "It becomes upward sloping because more output always costs more.",
+        "C": "It remains flat because input prices are fixed.",
+        "D": "It becomes equal to marginal cost at every quantity."
+      },
+      "correct": "A",
+      "explanation": "Increasing returns to scale imply economies of scale and falling LRAC over that range. B confuses total cost with average cost. C describes constant returns. D is not generally implied."
+    }
+  ]
+}

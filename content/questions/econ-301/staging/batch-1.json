@@ -1,0 +1,1352 @@
+[
+    {
+        "topic": "Economic Models and Simplification",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A coffee shop models daily profit as pi(q) = 8q - 0.5q^2, where q is hundreds of lattes sold. The owner restricts output to q <= 6 because of machine capacity. What output maximizes modeled profit, and what does the capacity constraint imply economically?",
+                "choices": {
+                    "A": "q = 8, so the shop should sell 800 lattes; the capacity assumption is irrelevant because the unconstrained maximum is best.",
+                    "B": "q = 6, so the shop should sell 600 lattes; the constraint binds because the unconstrained optimum exceeds feasible capacity.",
+                    "C": "q = 4, so the shop should sell 400 lattes; the firm should stop where marginal revenue equals average cost.",
+                    "D": "q = 0, so the shop should sell no lattes; profit is decreasing because the quadratic term is negative."
+                },
+                "correct": "B",
+                "explanation": "The unconstrained first-order condition is 8 - q = 0, so q = 8, but q <= 6 makes q = 6 the feasible optimum. A ignores the constraint, C uses the wrong condition, and D misreads concavity as implying zero output."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An economist simplifies a student's study choice as maximizing S(h) = 20h - h^2 subject to h <= 8, where h is hours studied in a day. Which choice maximizes the model, and what is the right interpretation of the simplification?",
+                "choices": {
+                    "A": "h = 8; the time constraint binds, and the model abstracts from sleep, fatigue, and other details to isolate the study tradeoff.",
+                    "B": "h = 10; the first-order condition gives the true best choice, so the constraint should be ignored.",
+                    "C": "h = 5; the student should choose half of the unconstrained optimum because real life is more complicated than the model.",
+                    "D": "h = 0; because the model omits many real factors, it cannot imply any positive study time."
+                },
+                "correct": "A",
+                "explanation": "The unconstrained optimum is h = 10, but h <= 8 binds, so h = 8. B ignores feasibility, C invents an adjustment not in the model, and D confuses simplification with uselessness."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A model of weekly gym visits is v* = (B - c)/2, where B is the perceived benefit parameter and c is the travel cost. If c rises from 4 to 6 while B stays at 16, what happens to v*, and what mechanism explains it?",
+                "choices": {
+                    "A": "v* rises from 6 to 7 because higher travel cost signals higher gym quality.",
+                    "B": "v* falls from 6 to 5 because the opportunity cost of each visit rises.",
+                    "C": "v* stays at 6 because only income changes affect choices in simplified models.",
+                    "D": "v* falls from 8 to 6 because the entire benefit parameter shifts down by 2."
+                },
+                "correct": "B",
+                "explanation": "At c = 4, v* = 6; at c = 6, v* = 5. The mechanism is a higher opportunity cost of gym visits. A adds an unsupported signaling story, C falsely freezes the endogenous choice, and D changes the wrong parameter."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A simplified demand model for campus burritos is Qd = 120 - 4P + 2I, where I is student income measured in tens of dollars. If I rises from 10 to 15 at P = 8, what happens to Qd, and what modeling lesson does this illustrate?",
+                "choices": {
+                    "A": "Qd rises by 10 because the model isolates the income effect while holding price fixed.",
+                    "B": "Qd falls by 20 because higher income raises the price students are willing to pay.",
+                    "C": "Qd rises by 5 because the income variable rose by 5.",
+                    "D": "Qd is unchanged because the model is simplified and therefore cannot analyze real income changes."
+                },
+                "correct": "A",
+                "explanation": "The change is 2(15 - 10) = 10. The model's simplification lets us isolate the income effect. B confuses income with price, C ignores the coefficient 2, and D misunderstands comparative statics."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A model compares two linear demand curves for NC State basketball tickets: D1: Q = 100 - 2P and D2: Q = 160 - 2P. Without drawing the graph, which verbal description is correct?",
+                "choices": {
+                    "A": "D2 is flatter than D1 because its quantity intercept is larger.",
+                    "B": "D2 is parallel to D1 and lies to the right because both have slope -2 in Q-on-P form but D2 has a larger intercept.",
+                    "C": "D2 is steeper than D1 because it reaches a higher quantity at P = 0.",
+                    "D": "D2 crosses D1 at P = 30 because the intercept difference eventually disappears."
+                },
+                "correct": "B",
+                "explanation": "Both equations have the same coefficient on P, so they are parallel in Q-on-P space; D2 has a larger quantity intercept. A and C confuse intercepts with slope, and D invents an intersection despite equal slopes."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A simplified production possibilities frontier is y = 100 - x^2, where x is hours spent on finance practice and y is hours-equivalent performance in economics. What feature would its graph have?",
+                "choices": {
+                    "A": "A constant slope of -1, showing the opportunity cost of finance practice never changes.",
+                    "B": "A positive slope that becomes steeper as x rises, showing both skills increase together.",
+                    "C": "A vertical intercept at y = 100 and a slope of -2x, so the opportunity cost of x rises in magnitude as x increases.",
+                    "D": "A horizontal intercept at x = 100 and a slope of -x^2, so the opportunity cost falls as x increases."
+                },
+                "correct": "C",
+                "explanation": "At x = 0, y = 100, and dy/dx = -2x, so the frontier becomes steeper as x rises. A assumes linearity, B gets the sign wrong, and D misstates both the intercept and derivative."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "In a model of ride-share demand, Qd = 500 - 20P is used instead of a complex machine-learning forecast with weather, traffic, events, and driver ratings. What is the best economic justification for using the simple model in an introductory comparative statics exercise?",
+                "choices": {
+                    "A": "The simple model is better because it is always more realistic than a complex model.",
+                    "B": "The simple model is useful because it isolates the price-quantity relationship and makes the mechanism transparent.",
+                    "C": "The simple model proves that weather and traffic have no effect on ride-share demand.",
+                    "D": "The simple model should be rejected because omitting variables always makes a model false and unusable."
+                },
+                "correct": "B",
+                "explanation": "Simplification is useful when it isolates the mechanism being studied. A overclaims realism, C confuses omission with proof of irrelevance, and D treats all abstraction as fatal."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A startup wants to understand whether lowering the price of its $12 meal subscription will increase signups enough to raise revenue. Which simplified model is most appropriate for a first-pass microeconomic analysis?",
+                "choices": {
+                    "A": "A production function relating kitchen labor to meals cooked, because the decision is mainly about input substitution.",
+                    "B": "A demand model Q = a - bP and revenue R = P(Q), because the central issue is how quantity demanded responds to price.",
+                    "C": "A macroeconomic model of GDP growth, because subscriptions are part of aggregate consumption.",
+                    "D": "A model with no assumptions, because assumptions would bias the analysis."
+                },
+                "correct": "B",
+                "explanation": "The scenario asks about price, quantity demanded, and revenue, so a demand-and-revenue model fits. A answers a production question, C uses the wrong level of analysis, and D ignores that models require assumptions."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a simplifying assumption from an unrealistic mistake in an economic model?",
+                "choices": {
+                    "A": "A simplifying assumption deliberately abstracts from details to isolate a mechanism; an unrealistic mistake distorts the mechanism the model is meant to analyze.",
+                    "B": "A simplifying assumption is always numerically true; an unrealistic mistake is always mathematically false.",
+                    "C": "A simplifying assumption removes all variables; an unrealistic mistake includes too many variables.",
+                    "D": "There is no distinction because any unrealistic assumption makes a model invalid."
+                },
+                "correct": "A",
+                "explanation": "The key distinction is whether the abstraction helps isolate the intended mechanism or corrupts it. B wrongly requires literal truth, C misdefines simplification, and D rejects useful abstraction."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A simplified model of demand for tutoring is Q = 80 - 5P + 3A, where A is advertising intensity. If A rises from 4 to 8 while P is fixed at 10, what changes, and why? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+                "choices": {
+                    "A": "Q rises by 12 because the exogenous advertising parameter shifts demand outward.",
+                    "B": "Q rises by 4 because advertising rises by 4 units.",
+                    "C": "Q falls by 20 because price is multiplied by the advertising increase.",
+                    "D": "Q does not change because advertising is outside the model."
+                },
+                "correct": "A",
+                "explanation": "Delta Q = 3(8 - 4) = 12, caused by an outward demand shift from a higher exogenous advertising parameter. B ignores the coefficient, C mixes unrelated terms, and D falsely says A is outside the model."
+            }
+        ]
+    },
+    {
+        "topic": "Endogenous vs Exogenous Variables",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A student chooses hours h to maximize U(h) = 48h - 2h^2 subject to h <= T. In the model, T = 10 is taken as given. What is the optimal h, and how should h and T be classified?",
+                "choices": {
+                    "A": "h = 10; h is endogenous and T is exogenous because h is chosen inside the model while T is imposed from outside.",
+                    "B": "h = 12; h and T are both endogenous because both appear in the constraint.",
+                    "C": "h = 8; h is exogenous and T is endogenous because T limits h.",
+                    "D": "h = 0; both variables are exogenous because the model gives T numerically."
+                },
+                "correct": "A",
+                "explanation": "The unconstrained optimum is h = 12, but h <= 10 binds, so h = 10. h is determined by optimization inside the model; T is taken as given. B ignores the constraint and misclassifies T, C reverses the definitions, and D confuses numerical values with exogeneity."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm chooses output q to maximize pi(q) = 30q - q^2 - wq, where the wage w = 6 is set outside the model. What q maximizes profit, and which variable is endogenous?",
+                "choices": {
+                    "A": "q = 6; w is endogenous because it affects profit.",
+                    "B": "q = 12; q is endogenous because the firm chooses it after taking w as given.",
+                    "C": "q = 24; both q and w are endogenous because both enter the first-order condition.",
+                    "D": "q = 30; q is exogenous because the revenue intercept is 30."
+                },
+                "correct": "B",
+                "explanation": "The FOC is 30 - 2q - 6 = 0, so q = 12. q is endogenous; w is exogenous. A divides the wage by one, C forgets the factor 2, and D mistakes a parameter for the choice."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the model Qd = 100 - 4P + 2I, price P is determined later by market clearing, while income I is taken as given. If I increases from 20 to 25 at a fixed trial price P = 10, what happens to Qd, and what mechanism is involved?",
+                "choices": {
+                    "A": "Qd falls by 20 because higher income raises equilibrium price.",
+                    "B": "Qd rises by 10 because the exogenous income parameter shifts demand outward.",
+                    "C": "Qd rises by 5 because income increases by 5 units.",
+                    "D": "Qd is unchanged because only endogenous variables can affect outcomes."
+                },
+                "correct": "B",
+                "explanation": "The direct change is 2(25 - 20) = 10. The mechanism is an outward demand shift from a change in an exogenous parameter. A answers a later equilibrium question, C ignores the coefficient, and D misunderstands exogenous variables."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's optimal labor demand is L* = 100 - 5w, where w is an exogenous wage. If w rises from 8 to 10, what happens to L*, and why?",
+                "choices": {
+                    "A": "L* falls from 60 to 50 because a higher exogenous input price lowers the marginal profitability of labor.",
+                    "B": "L* rises from 60 to 70 because higher wages attract more workers.",
+                    "C": "L* falls from 92 to 90 because only the wage itself changes by 2.",
+                    "D": "L* is unchanged because wages are exogenous and therefore cannot affect endogenous choices."
+                },
+                "correct": "A",
+                "explanation": "At w = 8, L* = 60; at w = 10, L* = 50. The mechanism is the higher input price reducing labor demand. B gives a labor supply story, C ignores the coefficient, and D misunderstands how exogenous variables drive endogenous outcomes."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a supply-demand diagram, Qd = 80 - 2P + I and Qs = 4P. The graph is drawn with P on the vertical axis and Q on the horizontal axis. Which statement correctly describes the effect of increasing exogenous income I?",
+                "choices": {
+                    "A": "The demand curve shifts right because at every price quantity demanded is higher.",
+                    "B": "The supply curve rotates because income changes the slope of supply.",
+                    "C": "The demand curve becomes flatter because income appears additively.",
+                    "D": "The equilibrium point is exogenous, so the graph does not move."
+                },
+                "correct": "A",
+                "explanation": "Since I enters demand additively, higher I raises Qd at each P, shifting demand right. B changes the wrong curve, C confuses intercept shifts with slope changes, and D misclassifies equilibrium as exogenous."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For the equation y = a + bx, suppose x is on the horizontal axis, y is on the vertical axis, b is fixed, and a is an exogenous intercept parameter. What happens graphically when a increases from 3 to 7?",
+                "choices": {
+                    "A": "The line becomes steeper because the slope rises from 3 to 7.",
+                    "B": "The line shifts upward in parallel because the vertical intercept increases while slope b stays fixed.",
+                    "C": "The line rotates around the origin because the endogenous variable changes.",
+                    "D": "The line shifts downward because higher exogenous variables reduce endogenous variables."
+                },
+                "correct": "B",
+                "explanation": "An increase in a raises the vertical intercept but leaves slope b unchanged. A confuses intercept with slope, C invents a rotation, and D imposes a false general rule."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "In a market model, equilibrium price P* is solved from Qd(P, I) = Qs(P, w), while income I and wage w are taken as given. What does it mean to call P* endogenous?",
+                "choices": {
+                    "A": "P* is chosen arbitrarily by the economist before the model is solved.",
+                    "B": "P* is determined by the internal logic of the model, specifically the market-clearing condition.",
+                    "C": "P* cannot change when I or w changes.",
+                    "D": "P* must be directly controlled by the government."
+                },
+                "correct": "B",
+                "explanation": "Endogenous means determined inside the model. A describes an exogenous assumption, C ignores comparative statics, and D confuses endogenous with policy control."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city studies how a new $3 bus fare affects daily ridership. The model treats the fare as set by the city council and solves for ridership using Q = 5000 - 600P. Which classification is correct?",
+                "choices": {
+                    "A": "Ridership is exogenous and fare is endogenous because ridership depends on fare.",
+                    "B": "Both ridership and fare are endogenous because both appear in the equation.",
+                    "C": "Fare is exogenous and ridership is endogenous because the fare is imposed from outside and ridership is solved inside the model.",
+                    "D": "Both variables are exogenous because the model is linear."
+                },
+                "correct": "C",
+                "explanation": "The city-set fare is taken as given; ridership is determined by the model. A reverses the terms, B confuses appearing in an equation with being endogenous, and D makes linearity irrelevant."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes an endogenous variable from an exogenous variable?",
+                "choices": {
+                    "A": "An endogenous variable is always a choice variable; an exogenous variable is always irrelevant.",
+                    "B": "An endogenous variable is solved within the model; an exogenous variable is taken as given by the model.",
+                    "C": "An endogenous variable is numeric; an exogenous variable is verbal.",
+                    "D": "An endogenous variable causes changes; an exogenous variable can only respond to changes."
+                },
+                "correct": "B",
+                "explanation": "The distinction is whether the model determines the variable or takes it as given. A wrongly says exogenous variables are irrelevant, C is meaningless, and D reverses the typical comparative statics role."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A market has Qd = 100 - 2P + I and Qs = 3P. Income I is exogenous. If I rises from 20 to 30, what happens to equilibrium price? Welfare analysis is not directly applicable to this classification topic, so this substitutes a second comparative statics question.",
+                "choices": {
+                    "A": "P* rises from 24 to 26 because higher exogenous income shifts demand outward and the endogenous price adjusts to clear the market.",
+                    "B": "P* falls from 24 to 22 because higher income reduces scarcity.",
+                    "C": "P* rises from 20 to 30 because price equals income in equilibrium.",
+                    "D": "P* is unchanged because income is exogenous."
+                },
+                "correct": "A",
+                "explanation": "Market clearing gives 100 - 2P + I = 3P, so P* = (100 + I)/5. P rises from 24 to 26. B gets the mechanism backward, C solves the wrong equation, and D misunderstands exogenous shocks."
+            }
+        ]
+    },
+    {
+        "topic": "Optimization vs Equilibrium",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer chooses apples A and bananas B to maximize U(A,B) = A^0.5B^0.5 subject to 2A + B = 24. What bundle is optimal, and what does the tangency condition mean?",
+                "choices": {
+                    "A": "A = 6, B = 12; the consumer sets MRS = PA/PB, so the marginal willingness to trade equals the market tradeoff.",
+                    "B": "A = 12, B = 0; the consumer buys only the good with the higher exponent.",
+                    "C": "A = 4, B = 16; the consumer equalizes quantities after adjusting income.",
+                    "D": "A = 8, B = 8; the consumer spends the same number of units on each good."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas with equal exponents spends half income on each good: $12 on apples gives A = 6 and $12 on bananas gives B = 12. The tangency means MRS equals the price ratio. B ignores the interior solution, C misallocates spending, and D equalizes quantities rather than expenditures."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm chooses labor L to maximize profit pi(L) = 40L - 2L^2 - 8L. What labor choice is optimal, and why is this an optimization problem rather than an equilibrium problem?",
+                "choices": {
+                    "A": "L = 4; it is optimization because the firm sets average revenue equal to wage.",
+                    "B": "L = 8; it is optimization because one firm chooses its best L taking the wage and revenue environment as given.",
+                    "C": "L = 16; it is equilibrium because labor supply must equal labor demand.",
+                    "D": "L = 32; it is equilibrium because profit equals zero."
+                },
+                "correct": "B",
+                "explanation": "The FOC is 40 - 4L - 8 = 0, so L = 8. One decision maker optimizes given conditions. A uses the wrong condition, C adds a market-clearing condition not given, and D confuses profit maximization with zero profit."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer's optimal demand for ramen is R* = M/(2P). If income M rises from 40 to 60 while P = 5, what happens to R*, and what mechanism explains it?",
+                "choices": {
+                    "A": "R* falls from 4 to 3 because higher income raises opportunity cost.",
+                    "B": "R* rises from 4 to 6 because the relaxed budget constraint allows more spending on ramen.",
+                    "C": "R* rises from 8 to 12 because the consumer spends all income on ramen.",
+                    "D": "R* is unchanged because optimization problems do not use comparative statics."
+                },
+                "correct": "B",
+                "explanation": "R* = 40/(10) = 4 and then 60/(10) = 6. The mechanism is a relaxed income constraint. A gets the direction wrong, C uses all income rather than half, and D denies comparative statics."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive market has Qd = 80 - 2P and Qs = 20 + P. If supply shifts to Qs = 30 + P, what happens to equilibrium price, and what mechanism explains it?",
+                "choices": {
+                    "A": "Price falls from 20 to 16.67 because an outward supply shift creates excess supply at the old price.",
+                    "B": "Price rises from 20 to 25 because more supply means sellers charge more.",
+                    "C": "Price falls from 30 to 25 because demand shifts inward.",
+                    "D": "Price is unchanged because equilibrium requires both curves to shift."
+                },
+                "correct": "A",
+                "explanation": "Initial equilibrium: 80 - 2P = 20 + P gives P = 20. New equilibrium: 80 - 2P = 30 + P gives P = 50/3. The mechanism is excess supply at the old price. B has the direction wrong, C shifts demand, and D misunderstands equilibrium adjustment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A single consumer's optimization diagram has a downward-sloping budget line and convex indifference curves. Which verbal graph feature identifies the interior optimum?",
+                "choices": {
+                    "A": "The highest indifference curve touching the budget line where its slope equals the budget line's slope.",
+                    "B": "The lowest indifference curve crossing the budget line twice.",
+                    "C": "The point where the budget line crosses the vertical axis.",
+                    "D": "The bundle where the indifference curve has zero slope."
+                },
+                "correct": "A",
+                "explanation": "An interior optimum is a tangency between the highest attainable indifference curve and the budget line. B is not utility-maximizing, C is a corner, and D is not the general tangency condition."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a supply-demand graph with price on the vertical axis and quantity on the horizontal axis, demand is downward sloping and supply is upward sloping. What graph feature represents competitive equilibrium?",
+                "choices": {
+                    "A": "The vertical intercept of demand because it shows maximum willingness to pay.",
+                    "B": "The horizontal intercept of supply because it shows zero price supply.",
+                    "C": "The area between demand and supply for all quantities.",
+                    "D": "The intersection of supply and demand where the two curves give the same price and quantity."
+                },
+                "correct": "D",
+                "explanation": "Competitive equilibrium occurs at the intersection where quantity demanded equals quantity supplied. A and B identify intercepts, and C refers to surplus, not the equilibrium point itself."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the equation MRS = Px/Py an optimization condition, while Qd(P) = Qs(P) is an equilibrium condition?",
+                "choices": {
+                    "A": "MRS = Px/Py describes one agent's best feasible choice; Qd = Qs describes mutual consistency among many agents' choices.",
+                    "B": "MRS = Px/Py always uses money; Qd = Qs never uses prices.",
+                    "C": "MRS = Px/Py is true only in macroeconomics; Qd = Qs is true only for individuals.",
+                    "D": "MRS = Px/Py is a graphing rule; Qd = Qs is a calculus rule."
+                },
+                "correct": "A",
+                "explanation": "Optimization concerns an individual best response; equilibrium concerns consistency across agents. B, C, and D misclassify the concepts."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A dining hall wants to predict the lunch price at which student meals demanded equal meals supplied by vendors. Which framework should be used first?",
+                "choices": {
+                    "A": "Consumer optimization only, because one student's best lunch choice determines the market price.",
+                    "B": "Producer optimization only, because vendors choose supply and students do not matter.",
+                    "C": "Competitive equilibrium, because the question asks for a price making demand and supply mutually consistent.",
+                    "D": "A utility maximization problem with no budget constraint, because prices are unknown."
+                },
+                "correct": "C",
+                "explanation": "The scenario asks for a market-clearing price, so equilibrium is the correct framework. A and B isolate one side only, and D omits the market-clearing condition."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement most precisely distinguishes optimization from equilibrium?",
+                "choices": {
+                    "A": "Optimization is about prices; equilibrium is about preferences.",
+                    "B": "Optimization is a single agent choosing the best feasible action; equilibrium is a situation where agents' choices are mutually consistent.",
+                    "C": "Optimization requires graphs; equilibrium requires equations.",
+                    "D": "Optimization is always short run; equilibrium is always long run."
+                },
+                "correct": "B",
+                "explanation": "Optimization is individual best choice; equilibrium is consistency across choices. A reverses common associations, C is a method confusion, and D adds an unsupported time distinction."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A competitive market has demand P = 50 - Q and supply P = 10 + Q. What are equilibrium quantity and total surplus, and what does the surplus measure?",
+                "choices": {
+                    "A": "Q = 20 and total surplus = 400; it measures gains from trade between buyers and sellers up to the equilibrium quantity.",
+                    "B": "Q = 40 and total surplus = 800; it measures total revenue.",
+                    "C": "Q = 20 and total surplus = 800; it measures the full rectangle under price.",
+                    "D": "Q = 30 and total surplus = 300; it measures producer profit only."
+                },
+                "correct": "A",
+                "explanation": "Equilibrium solves 50 - Q = 10 + Q, so Q = 20 and P = 30. Total surplus is 0.5(50 - 10)(20) = 400. B uses the wrong quantity and revenue logic, C doubles the triangle, and D calculates neither equilibrium nor total surplus."
+            }
+        ]
+    },
+    {
+        "topic": "Reservation Prices",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Maya values one used textbook at $70 and a second copy at $20. The bookstore price is $45 per copy, and Maya can buy 0, 1, or 2 copies. What quantity maximizes her net surplus, and what does it imply about reservation prices?",
+                "choices": {
+                    "A": "0 copies, because the second reservation price is below price.",
+                    "B": "1 copy, because the first reservation price exceeds price but the second does not.",
+                    "C": "2 copies, because total value $90 exceeds total cost $90.",
+                    "D": "2 copies, because any positive reservation price means the good should be bought."
+                },
+                "correct": "B",
+                "explanation": "The first copy gives 70 - 45 = 25 surplus; the second gives 20 - 45 = -25, so she buys one. A ignores positive surplus on the first unit, C uses equality of total value and total cost while missing marginal choice, and D ignores price."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A seller has one concert ticket with a minimum acceptable price of $55. A buyer has a maximum willingness to pay of $80. If bargaining can choose any price P between them, which transaction price maximizes total surplus, and what does that reveal?",
+                "choices": {
+                    "A": "P = $55 only, because total surplus is maximized when the seller receives exactly cost.",
+                    "B": "P = $80 only, because total surplus is maximized when the buyer pays exactly value.",
+                    "C": "Any P from $55 to $80, because total surplus is $25 whenever the trade occurs; price only divides the surplus.",
+                    "D": "No price, because buyer and seller reservation prices are different."
+                },
+                "correct": "C",
+                "explanation": "Total surplus is buyer value minus seller cost, 80 - 55 = 25, for any mutually acceptable price. A and B confuse surplus division with surplus size, and D wrongly treats different reservation prices as preventing trade."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A buyer's reservation price for a used bike is $120. After the buyer learns the bike needs a $35 repair, the buyer subtracts the repair cost from willingness to pay. What happens to the reservation price, and why?",
+                "choices": {
+                    "A": "It rises to $155 because repairs make the bike more valuable.",
+                    "B": "It falls to $85 because the repair cost reduces the net benefit of ownership.",
+                    "C": "It falls to $35 because repair cost becomes the new reservation price.",
+                    "D": "It stays $120 because reservation prices are fixed by definition."
+                },
+                "correct": "B",
+                "explanation": "The buyer's maximum willingness to pay falls by the repair cost: 120 - 35 = 85. A reverses the effect, C confuses cost with value, and D ignores that reservation prices can change with information."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A seller's reservation price for mowing a lawn is $40 when the job takes 2 hours and their opportunity cost is $20 per hour. If the job now takes 3 hours, what happens to the seller's reservation price, and what mechanism explains it?",
+                "choices": {
+                    "A": "It rises to $60 because the seller's opportunity cost of accepting the job increases.",
+                    "B": "It falls to $20 because more hours spread the cost over time.",
+                    "C": "It stays $40 because reservation prices are based only on buyer value.",
+                    "D": "It rises to $80 because both price and hours double."
+                },
+                "correct": "A",
+                "explanation": "Reservation price equals minimum compensation for opportunity cost: 3 x $20 = $60. B averages incorrectly, C confuses seller and buyer reservation prices, and D doubles without basis."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Four buyers have reservation prices for one parking pass: $100, $80, $50, and $30. In a step demand schedule with price on the vertical axis and quantity on the horizontal axis, what graph feature is correct?",
+                "choices": {
+                    "A": "The demand curve is upward sloping because more buyers enter at higher prices.",
+                    "B": "The step height from Q = 1 to Q = 2 is $80, reflecting the second-highest reservation price.",
+                    "C": "The horizontal intercept is $100 because that is the highest reservation price.",
+                    "D": "The curve is smooth and linear because reservation prices are individual values."
+                },
+                "correct": "B",
+                "explanation": "The second unit's marginal buyer has reservation price $80, so the step for the second pass is at $80. A gets the slope logic backward, C confuses vertical and horizontal intercepts, and D ignores discreteness."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Three sellers have reservation prices for selling one used calculator: $15, $25, and $40. In a step supply schedule, which verbal graph description is correct?",
+                "choices": {
+                    "A": "Supply has steps at $15, $25, and $40, with the lowest-cost seller entering first.",
+                    "B": "Supply has steps at $40, $25, and $15, with the highest-cost seller entering first.",
+                    "C": "Supply is downward sloping because sellers with low reservation prices sell less.",
+                    "D": "Supply is vertical at Q = 3 for all prices above zero."
+                },
+                "correct": "A",
+                "explanation": "Sellers enter in ascending order of minimum acceptable price. B reverses the order, C gets supply slope wrong, and D ignores reservation prices below which sellers will not sell."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A buyer's reservation price for a laptop is $900 and the posted price is $950. What does the reservation price condition imply?",
+                "choices": {
+                    "A": "The buyer should purchase because $900 is close to $950.",
+                    "B": "The buyer should not purchase because willingness to pay is below the price.",
+                    "C": "The seller must lower price to exactly $900 because reservation prices are legally binding.",
+                    "D": "The buyer is indifferent because reservation price is not related to surplus."
+                },
+                "correct": "B",
+                "explanation": "Buying would give surplus 900 - 950 = -50, so the buyer refuses. A uses closeness rather than sign, C invents a legal rule, and D ignores surplus."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student will sell a football ticket only if paid at least $65. Another student would pay up to $90. They agree on $75. Which model best explains why trade occurs?",
+                "choices": {
+                    "A": "Reservation price model, because the buyer's maximum willingness to pay exceeds the seller's minimum acceptable price.",
+                    "B": "Budget constraint model, because both students have income limits.",
+                    "C": "Production function model, because the ticket must be produced.",
+                    "D": "Price ceiling model, because the agreed price is below $90."
+                },
+                "correct": "A",
+                "explanation": "Trade occurs because 90 >= 75 >= 65 and total surplus is positive. B may be background but not the central model, C is irrelevant, and D misidentifies a voluntary price as a ceiling."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a buyer's reservation price from a seller's reservation price?",
+                "choices": {
+                    "A": "A buyer's reservation price is the minimum they accept; a seller's is the maximum they pay.",
+                    "B": "A buyer's reservation price is the maximum willingness to pay; a seller's is the minimum willingness to accept.",
+                    "C": "A buyer's reservation price is always market price; a seller's is always marginal cost plus profit.",
+                    "D": "A buyer's reservation price measures income; a seller's measures revenue."
+                },
+                "correct": "B",
+                "explanation": "Buyer reservation price is maximum WTP; seller reservation price is minimum WTA. A reverses them, C confuses reservation prices with market outcomes, and D confuses valuation with budget/accounting variables."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A buyer's reservation price for a desk is $140 and a seller's reservation price is $95. They trade at $110. What are buyer surplus, seller surplus, and total surplus?",
+                "choices": {
+                    "A": "Buyer surplus $30, seller surplus $15, total surplus $45.",
+                    "B": "Buyer surplus $45, seller surplus $0, total surplus $45.",
+                    "C": "Buyer surplus $30, seller surplus $45, total surplus $75.",
+                    "D": "Buyer surplus $110, seller surplus $95, total surplus $205."
+                },
+                "correct": "A",
+                "explanation": "Buyer surplus is 140 - 110 = 30; seller surplus is 110 - 95 = 15; total surplus is 45. B treats seller surplus as zero, C uses seller cost incorrectly, and D confuses price and cost with surplus."
+            }
+        ]
+    },
+    {
+        "topic": "Demand and Supply Schedules",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A buyer has marginal reservation prices for slices of pizza of $8, $6, $4, and $1. The market price is $5 per slice, and the buyer can buy only whole slices. How many slices maximize net surplus, and what does this imply for the individual demand schedule?",
+                "choices": {
+                    "A": "1 slice, because the first slice has the highest reservation price.",
+                    "B": "2 slices, because the first two marginal values exceed price while the third does not.",
+                    "C": "3 slices, because total value $18 exceeds total cost $15.",
+                    "D": "4 slices, because positive marginal value means positive demand."
+                },
+                "correct": "B",
+                "explanation": "The buyer purchases units whose marginal reservation price is at least the $5 price: $8 and $6 only. A stops too soon, C includes a negative marginal-surplus third unit, and D ignores price."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A seller can supply up to four handmade mugs with marginal costs $3, $5, $9, and $14. The market price is $10 per mug. What quantity maximizes producer surplus, and how does this generate the supply schedule?",
+                "choices": {
+                    "A": "2 mugs, because only costs strictly below average price should be produced.",
+                    "B": "3 mugs, because the first three marginal costs are no greater than price.",
+                    "C": "4 mugs, because total revenue $40 exceeds total cost $31.",
+                    "D": "1 mug, because the lowest-cost unit determines supply."
+                },
+                "correct": "B",
+                "explanation": "Produce units with marginal cost at or below price: 3, 5, and 9. C includes the fourth unit with marginal cost 14 > price, lowering surplus. A and D stop too early."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "An individual demand schedule for coffee is Qd = 12 - 2P. If the price rises from $3 to $4, what happens to quantity demanded, and what mechanism explains the movement?",
+                "choices": {
+                    "A": "Quantity demanded falls from 6 to 4 because the higher price moves the buyer up along the same demand schedule.",
+                    "B": "Quantity demanded rises from 6 to 8 because higher price signals higher quality.",
+                    "C": "Demand shifts left by 2 because price is an exogenous shifter.",
+                    "D": "Quantity demanded falls from 9 to 8 because the price rose by 1."
+                },
+                "correct": "A",
+                "explanation": "At P = 3, Qd = 6; at P = 4, Qd = 4. This is movement along demand due to price. B invents quality signaling, C confuses movement with shift, and D uses the wrong calculation."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A supply schedule is Qs = -6 + 3P. A technology improvement changes it to Qs = -2 + 3P. At P = $5, what happens to quantity supplied, and why?",
+                "choices": {
+                    "A": "It falls from 9 to 5 because better technology lowers price.",
+                    "B": "It rises from 9 to 13 because lower marginal cost shifts supply outward at each price.",
+                    "C": "It rises from 15 to 17 because price is multiplied by technology.",
+                    "D": "It is unchanged because price did not change."
+                },
+                "correct": "B",
+                "explanation": "Old Qs = -6 + 15 = 9; new Qs = -2 + 15 = 13. Better technology shifts supply outward. A answers an equilibrium price question, C miscalculates, and D ignores supply shifters."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Market demand is created by horizontally summing two individual demands: Q1 = 20 - P and Q2 = 10 - 0.5P for prices where both quantities are positive. What is the market demand slope in Q-on-P form over that range?",
+                "choices": {
+                    "A": "-1.5, because the quantities demanded are added at each price.",
+                    "B": "-0.5, because only the flatter individual curve matters.",
+                    "C": "-1, because individual 1 has the larger intercept.",
+                    "D": "1.5, because market quantity rises when price rises."
+                },
+                "correct": "A",
+                "explanation": "Horizontal summation gives Q = 30 - 1.5P, so the slope in Q-on-P form is -1.5. B and C ignore one consumer, and D gets the sign wrong."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Three buyers have reservation prices $12, $9, and $5 for one unit each. What does the market demand schedule look like verbally?",
+                "choices": {
+                    "A": "A vertical line at Q = 3 for all positive prices.",
+                    "B": "An upward-sloping step curve with steps at $5, $9, and $12.",
+                    "C": "A downward step curve: Q = 3 for P <= $5, Q = 2 for $5 < P <= $9, Q = 1 for $9 < P <= $12, and Q = 0 for P > $12.",
+                    "D": "A smooth line with slope -3 because there are three buyers."
+                },
+                "correct": "C",
+                "explanation": "As price rises, buyers with lower reservation prices exit, creating a downward step schedule. A ignores price thresholds, B has the slope direction wrong, and D incorrectly smooths discrete buyers."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A demand schedule says Qd = 40 at P = $6. What does this statement mean economically?",
+                "choices": {
+                    "A": "Exactly 40 units will be sold regardless of supply.",
+                    "B": "Buyers are willing to purchase 40 units at a price of $6, holding other demand shifters fixed.",
+                    "C": "Sellers must produce 40 units at a price of $6.",
+                    "D": "Every buyer values the good at exactly $6."
+                },
+                "correct": "B",
+                "explanation": "A demand schedule gives quantity buyers want at each price, ceteris paribus. A assumes market clearing, C describes supply, and D confuses market quantity with individual valuations."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A campus store records how many hoodies students would buy at prices $20, $30, and $40, then adds those quantities across students. Which concept is being constructed?",
+                "choices": {
+                    "A": "A market demand schedule, because quantities demanded by individuals are summed at each price.",
+                    "B": "A production function, because hoodies are outputs.",
+                    "C": "A budget line, because prices appear in the data.",
+                    "D": "A supply schedule, because the store sells hoodies."
+                },
+                "correct": "A",
+                "explanation": "Adding individual quantities at each price constructs market demand. B concerns input-output production, C concerns affordability for one consumer, and D would require seller quantities supplied."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a demand schedule from quantity demanded?",
+                "choices": {
+                    "A": "A demand schedule is the whole relationship between price and quantity demanded; quantity demanded is the amount buyers want at one particular price.",
+                    "B": "A demand schedule is one point; quantity demanded is the whole curve.",
+                    "C": "A demand schedule applies to sellers; quantity demanded applies to buyers.",
+                    "D": "A demand schedule includes only income; quantity demanded includes only price."
+                },
+                "correct": "A",
+                "explanation": "Demand is the relationship; quantity demanded is a point on that relationship. B reverses them, C confuses demand and supply, and D misstates both concepts."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Market demand is P = 20 - Q and market supply is P = 4 + Q. At the competitive equilibrium, what is total surplus?",
+                "choices": {
+                    "A": "64, because equilibrium Q = 8 and total surplus is the triangle between demand and supply.",
+                    "B": "128, because total surplus equals P times Q.",
+                    "C": "32, because only consumer surplus counts.",
+                    "D": "80, because the demand intercept times quantity is 20 x 4."
+                },
+                "correct": "A",
+                "explanation": "Equilibrium solves 20 - Q = 4 + Q, so Q = 8 and P = 12. Total surplus is 0.5(20 - 4)(8) = 64. B uses revenue, C counts only part of surplus, and D uses the wrong base and height."
+            }
+        ]
+    },
+    {
+        "topic": "Competitive Equilibrium",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A representative buyer has marginal values for bottled water of $10, $7, $4, and $1. At a market price of $5, how many bottles does the buyer choose, and what is the economic interpretation?",
+                "choices": {
+                    "A": "1 bottle, because only the first bottle has the highest marginal value.",
+                    "B": "2 bottles, because the buyer purchases each unit whose marginal value is at least the market price.",
+                    "C": "3 bottles, because total value $21 exceeds total cost $15.",
+                    "D": "4 bottles, because total value is positive."
+                },
+                "correct": "B",
+                "explanation": "The buyer purchases the $10 and $7 units but not the $4 or $1 units. A stops too early, C includes a unit with negative marginal surplus, and D ignores price."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm has cost C(q) = q^2 + 4q and takes price P = 20 as given. It chooses q >= 0 to maximize profit. What output should it produce, and how does price-taking matter?",
+                "choices": {
+                    "A": "q = 4, because average cost equals price.",
+                    "B": "q = 8, because marginal cost 2q + 4 equals the given market price.",
+                    "C": "q = 10, because price equals q^2 divided by q.",
+                    "D": "q = 20, because a price-taking firm produces where q equals P."
+                },
+                "correct": "B",
+                "explanation": "Profit is 20q - q^2 - 4q; FOC 16 - 2q = 0 gives q = 8. Price-taking means P is treated as fixed. A uses average cost, C miscomputes cost, and D invents q = P."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive market has Qd = 100 - 2P and Qs = 10 + P. If demand shifts to Qd = 130 - 2P, what happens to equilibrium price, and what mechanism explains it?",
+                "choices": {
+                    "A": "Price rises from 30 to 40 because an outward demand shift creates excess demand at the old price.",
+                    "B": "Price falls from 30 to 20 because buyers demand more only at lower prices.",
+                    "C": "Price stays 30 because supply did not shift.",
+                    "D": "Price rises from 45 to 60 because demand intercepts determine price directly."
+                },
+                "correct": "A",
+                "explanation": "Initial: 100 - 2P = 10 + P gives P = 30. New: 130 - 2P = 10 + P gives P = 40. The old price creates excess demand. B reverses adjustment, C ignores demand shifts, and D solves incorrectly."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive market has Qd = 60 - P and Qs = 2P. A tax-like cost increase shifts supply to Qs = 2P - 12. What happens to equilibrium quantity, and why?",
+                "choices": {
+                    "A": "Quantity falls from 40 to 32 because the supply curve shifts left, creating excess demand at the old price.",
+                    "B": "Quantity rises from 40 to 48 because sellers need to sell more to cover costs.",
+                    "C": "Quantity falls from 60 to 48 because demand shifts left.",
+                    "D": "Quantity is unchanged because demand did not change."
+                },
+                "correct": "A",
+                "explanation": "Initial equilibrium: 60 - P = 2P gives P = 20 and Q = 40. New: 60 - P = 2P - 12 gives P = 24 and Q = 36, not 32. Since A has wrong quantity, no choice is correct."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a competitive market graph, demand is P = 40 - Q and supply is P = 10 + 0.5Q. Which verbal description of the equilibrium graph is correct?",
+                "choices": {
+                    "A": "Demand crosses the vertical axis at 40 and supply at 10; their intersection occurs where the downward-sloping demand curve meets the upward-sloping supply curve.",
+                    "B": "Demand and supply are parallel because both equations include Q.",
+                    "C": "Supply slopes downward because 0.5 is less than 1.",
+                    "D": "Equilibrium occurs at the demand intercept because that is where willingness to pay is highest."
+                },
+                "correct": "A",
+                "explanation": "Demand has vertical intercept 40 and slope -1; supply has vertical intercept 10 and slope 0.5. B ignores different slopes, C gets the sign wrong, and D confuses intercept with market clearing."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "At price $12 in a market, Qd = 90 and Qs = 50. With price on the vertical axis, what graph interpretation is correct?",
+                "choices": {
+                    "A": "There is a surplus of 40 units, so price tends to fall.",
+                    "B": "There is a shortage of 40 units, so upward pressure on price tends to occur.",
+                    "C": "The market clears because both quantities are measured at the same price.",
+                    "D": "Demand must shift left until Qd becomes 50."
+                },
+                "correct": "B",
+                "explanation": "Qd exceeds Qs by 40, so there is a shortage and upward pressure on price. A reverses shortage and surplus, C mistakes same price for equality, and D assumes curve shifts instead of price adjustment."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean economically when a competitive equilibrium price clears the market?",
+                "choices": {
+                    "A": "Every buyer gets as much as they want for free.",
+                    "B": "Quantity demanded equals quantity supplied, so there is no tendency for price to change due to shortage or surplus.",
+                    "C": "All firms earn zero accounting profit.",
+                    "D": "Demand and supply become identical curves at every price."
+                },
+                "correct": "B",
+                "explanation": "Market clearing means equality of quantity demanded and supplied at the equilibrium price. A ignores scarcity, C is a separate long-run condition, and D confuses intersection with identical curves."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A farmers market has buyers willing to buy Qd = 200 - 5P pounds of strawberries and sellers willing to sell Qs = 20 + 4P pounds. Which model should be used to predict the price at which the market settles?",
+                "choices": {
+                    "A": "Competitive equilibrium, solving Qd = Qs.",
+                    "B": "Consumer optimization only, solving MRS = price ratio.",
+                    "C": "A production function only, solving marginal product equals zero.",
+                    "D": "A reservation price for one buyer only."
+                },
+                "correct": "A",
+                "explanation": "The scenario gives market demand and supply schedules, so the equilibrium condition Qd = Qs predicts price. B, C, and D focus on only one side or one agent."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes equilibrium price from a disequilibrium price?",
+                "choices": {
+                    "A": "An equilibrium price clears the market; a disequilibrium price creates excess demand or excess supply.",
+                    "B": "An equilibrium price is always low; a disequilibrium price is always high.",
+                    "C": "An equilibrium price is chosen by buyers; a disequilibrium price is chosen by sellers.",
+                    "D": "An equilibrium price occurs only when demand is vertical; a disequilibrium price occurs only when supply is vertical."
+                },
+                "correct": "A",
+                "explanation": "Equilibrium price makes Qd = Qs. Disequilibrium creates shortage or surplus. B, C, and D add false restrictions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 100 - 2Q and supply is P = 20 + 2Q. What are competitive equilibrium quantity and total surplus?",
+                "choices": {
+                    "A": "Q = 20 and total surplus = 800.",
+                    "B": "Q = 40 and total surplus = 1600.",
+                    "C": "Q = 20 and total surplus = 1600.",
+                    "D": "Q = 30 and total surplus = 900."
+                },
+                "correct": "A",
+                "explanation": "Set 100 - 2Q = 20 + 2Q, so Q = 20 and P = 60. Total surplus is 0.5(100 - 20)(20) = 800. B uses the intercept gap as quantity, C doubles the triangle, and D solves neither equation correctly."
+            }
+        ]
+    },
+    {
+        "topic": "Comparative Statics",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer chooses tutoring hours h to maximize U(h) = ah - h^2 subject to h <= 6. If a = 10, what is h*, and how should the constraint be interpreted?",
+                "choices": {
+                    "A": "h* = 5; the unconstrained optimum is feasible, so the time constraint does not bind.",
+                    "B": "h* = 6; the consumer always uses all available time.",
+                    "C": "h* = 10; the coefficient a directly equals optimal hours.",
+                    "D": "h* = 0; utility is concave, so extra hours reduce utility."
+                },
+                "correct": "A",
+                "explanation": "The FOC is a - 2h = 0, so h = 5 when a = 10, and 5 <= 6. B assumes the constraint binds, C misses the derivative, and D misreads concavity."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm chooses advertising A to maximize pi(A) = 24A - 2A^2 - F, where F = 30 is a fixed cost. What A maximizes profit, and what does this imply about fixed costs in this choice?",
+                "choices": {
+                    "A": "A = 3; fixed costs reduce the marginal benefit of advertising.",
+                    "B": "A = 6; fixed cost affects profit level but not the marginal condition for optimal advertising.",
+                    "C": "A = 12; the firm sets marginal revenue equal to zero before subtracting fixed cost.",
+                    "D": "A = 30; the firm chooses advertising equal to fixed cost."
+                },
+                "correct": "B",
+                "explanation": "The FOC is 24 - 4A = 0, so A = 6. F affects total profit but not marginal profit. A incorrectly includes fixed cost in the derivative, C forgets the factor 4, and D confuses a parameter with a choice."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the model h* = a/2 from U(h) = ah - h^2, what happens when a rises from 10 to 14, and what mechanism explains it?",
+                "choices": {
+                    "A": "h* rises from 5 to 7 because the marginal benefit schedule shifts upward.",
+                    "B": "h* falls from 5 to 3 because higher a makes each hour more costly.",
+                    "C": "h* rises from 10 to 14 because optimal hours equal a.",
+                    "D": "h* is unchanged because comparative statics holds constraints constant."
+                },
+                "correct": "A",
+                "explanation": "h* = a/2, so it rises from 5 to 7. The mechanism is a higher marginal benefit of h. B reverses the role of a, C misses division by 2, and D confuses holding other parameters constant with freezing the outcome."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Market equilibrium is determined by Qd = 100 - 2P and Qs = s + P. If s rises from 10 to 25, what happens to equilibrium price, and why?",
+                "choices": {
+                    "A": "Price rises from 30 to 35 because higher s means stronger demand.",
+                    "B": "Price falls from 30 to 25 because the supply curve shifts outward, creating excess supply at the old price.",
+                    "C": "Price falls from 45 to 37.5 because demand becomes flatter.",
+                    "D": "Price is unchanged because only slopes affect equilibrium."
+                },
+                "correct": "B",
+                "explanation": "P* = (100 - s)/3, so P falls from 30 to 25. The mechanism is an outward supply shift. A changes the wrong curve, C miscalculates and changes slope, and D ignores intercept shifts."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A demand curve is Q = 80 - 4P + 2I. In a graph with P on the vertical axis and Q on the horizontal axis, what happens when I increases?",
+                "choices": {
+                    "A": "Demand shifts right in parallel because the quantity intercept rises while the slope with respect to price is unchanged.",
+                    "B": "Demand rotates clockwise because the price coefficient changes.",
+                    "C": "Demand becomes vertical because income is exogenous.",
+                    "D": "Demand shifts left because higher income reduces all demand."
+                },
+                "correct": "A",
+                "explanation": "Income enters the intercept, not the price slope, so the curve shifts right in parallel. B incorrectly changes the coefficient on price, C confuses exogeneity with verticality, and D assumes an inferior good not specified."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A supply curve is P = 5 + 2Q. A per-unit tax of $3 shifts sellers' required price to P = 8 + 2Q. What graphical change does this represent?",
+                "choices": {
+                    "A": "A parallel upward shift of supply by $3 at every quantity.",
+                    "B": "A flattening of supply because sellers produce less.",
+                    "C": "A movement down along supply because buyers pay more.",
+                    "D": "A rightward demand shift by $3."
+                },
+                "correct": "A",
+                "explanation": "The vertical intercept rises by 3 while slope remains 2, so supply shifts upward in parallel. B changes slope, C confuses movement with shift, and D changes the wrong curve."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does ceteris paribus mean in comparative statics when analyzing the effect of a rise in the wage w on labor demand L* = 80 - 4w?",
+                "choices": {
+                    "A": "All variables including L* must remain fixed.",
+                    "B": "Only w changes initially; other exogenous factors are held fixed so the change in L* can be attributed to w.",
+                    "C": "The wage must be endogenous.",
+                    "D": "The model must ignore the wage because it changes."
+                },
+                "correct": "B",
+                "explanation": "Ceteris paribus holds other exogenous factors fixed to isolate the effect of w. A would prevent analysis, C misclassifies the parameter, and D rejects the variable being studied."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city asks how equilibrium apartment rent changes after a new train station makes the neighborhood more desirable, holding construction costs fixed. Which method is being used?",
+                "choices": {
+                    "A": "Comparative statics, because one exogenous demand shifter changes and the new equilibrium is compared to the old one.",
+                    "B": "Consumer optimization only, because each renter chooses an apartment.",
+                    "C": "Accounting profit analysis, because rent is revenue.",
+                    "D": "A fixed-equilibrium assumption, because equilibrium cannot change."
+                },
+                "correct": "A",
+                "explanation": "The question compares equilibria after an exogenous demand shift. B is too narrow, C is not the relevant economic method, and D contradicts comparative statics."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a movement along a curve from a shift of a curve?",
+                "choices": {
+                    "A": "A movement along a curve is caused by a change in the variable on an axis; a shift is caused by a change in a non-axis parameter.",
+                    "B": "A movement along a curve means the curve is wrong; a shift means the curve is correct.",
+                    "C": "A movement applies only to supply; a shift applies only to demand.",
+                    "D": "A movement changes slope; a shift never changes intercept."
+                },
+                "correct": "A",
+                "explanation": "Changes in axis variables cause movements along a curve; changes in other parameters shift the curve. B, C, and D are false distinctions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 60 - Q and supply is P = 20 + Q. A technology improvement shifts supply to P = 10 + Q. What is the change in total surplus from the old equilibrium to the new equilibrium?",
+                "choices": {
+                    "A": "Total surplus rises by 225 because the intercept gap rises and equilibrium quantity increases.",
+                    "B": "Total surplus falls by 225 because lower supply costs reduce seller surplus.",
+                    "C": "Total surplus rises by 100 because price falls by 10 and old quantity was 20.",
+                    "D": "Total surplus is unchanged because demand did not shift."
+                },
+                "correct": "A",
+                "explanation": "Old Q = 20 and TS = 0.5(60 - 20)(20) = 400. New Q = 25 and TS = 0.5(60 - 10)(25) = 625. The increase is 225. B gets the welfare direction wrong, C uses a rectangle, and D ignores supply-side welfare gains."
+            }
+        ]
+    },
+    {
+        "topic": "Budget Constraints",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A student has income M = $60 to spend on tacos T at $3 each and smoothies S at $6 each. Utility is U(T,S) = T^0.5S^0.5. What bundle maximizes utility, and what is the interpretation?",
+                "choices": {
+                    "A": "T = 10, S = 5; the student spends equal shares of income on each good and reaches a tangency on the budget constraint.",
+                    "B": "T = 20, S = 0; tacos are cheaper, so all income goes to tacos.",
+                    "C": "T = 5, S = 10; the student buys equal dollar prices of the goods.",
+                    "D": "T = 10, S = 10; the student equalizes quantities of both goods."
+                },
+                "correct": "A",
+                "explanation": "With equal Cobb-Douglas exponents, the student spends $30 on each good: T = 10 and S = 5. B ignores preference for both goods, C reverses quantities, and D violates the budget."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has M = $48, Px = $4, Py = $8, and utility U(x,y) = xy. What bundle maximizes utility, and what does the budget constraint require?",
+                "choices": {
+                    "A": "x = 6, y = 3; the consumer spends all income and equalizes expenditure shares.",
+                    "B": "x = 12, y = 0; the consumer buys only the cheaper good.",
+                    "C": "x = 4, y = 4; the consumer equalizes quantities and spends all income.",
+                    "D": "x = 8, y = 2; the consumer sets prices equal."
+                },
+                "correct": "A",
+                "explanation": "For U = xy, spend half income on each good: $24 on x gives x = 6, and $24 on y gives y = 3. B gives zero utility, C spends $48 but is not tangency, and D spends only $48 but has lower utility than the optimum."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget constraint is 4x + 2y = 40. If income rises to 60 with prices unchanged, what happens to the budget line?",
+                "choices": {
+                    "A": "It shifts outward in parallel because both intercepts rise while slope -Px/Py remains -2.",
+                    "B": "It rotates inward around the x-intercept because only y becomes more affordable.",
+                    "C": "It becomes flatter because income affects slope.",
+                    "D": "It shifts inward because higher income raises spending."
+                },
+                "correct": "A",
+                "explanation": "Initial intercepts are x = 10 and y = 20; new intercepts are x = 15 and y = 30. The slope remains -4/2 = -2. B and C misstate geometry, and D reverses the income effect."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget constraint is 5x + 10y = 100. If Px falls from 5 to 4 while M and Py stay fixed, what happens to the budget line, and what mechanism explains it?",
+                "choices": {
+                    "A": "The x-intercept rises from 20 to 25 and the line becomes flatter because x becomes cheaper relative to y.",
+                    "B": "The y-intercept rises from 10 to 25 because x is cheaper.",
+                    "C": "Both intercepts rise because a price decrease is like higher income for every good.",
+                    "D": "The line shifts inward in parallel because lower prices reduce spending."
+                },
+                "correct": "A",
+                "explanation": "The x-intercept changes from 100/5 = 20 to 100/4 = 25; y-intercept stays 10; slope changes from -0.5 to -0.4. B changes the wrong intercept, C treats a relative price change as pure income, and D reverses the effect."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For the budget line 3x + 6y = 36 with x on the horizontal axis and y on the vertical axis, which graph description is correct?",
+                "choices": {
+                    "A": "The x-intercept is 12, the y-intercept is 6, and the slope is -1/2.",
+                    "B": "The x-intercept is 6, the y-intercept is 12, and the slope is -2.",
+                    "C": "Both intercepts are 36 because income is 36.",
+                    "D": "The slope is +1/2 because prices are positive."
+                },
+                "correct": "A",
+                "explanation": "Set y = 0 to get x = 12; set x = 0 to get y = 6; slope is -Px/Py = -3/6 = -1/2. B reverses intercepts and slope, C confuses income with intercepts, and D misses the tradeoff sign."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A consumer has M = 120, Px = 10, and Py = 5. With x on the horizontal axis, what does the budget line's slope indicate?",
+                "choices": {
+                    "A": "Slope = -2, meaning one more unit of x requires giving up 2 units of y.",
+                    "B": "Slope = -1/2, meaning one more unit of x requires giving up half a unit of y.",
+                    "C": "Slope = 2, meaning x and y can both increase together.",
+                    "D": "Slope = -24, meaning all income is spent on y."
+                },
+                "correct": "A",
+                "explanation": "Slope is -Px/Py = -10/5 = -2. It is the opportunity cost of x in units of y. B uses the inverse ratio, C misses the negative tradeoff, and D confuses slope with an intercept."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean for a bundle (x,y) to satisfy 4x + 8y < 80 in a two-good budget model?",
+                "choices": {
+                    "A": "The bundle is unaffordable because spending is below income.",
+                    "B": "The bundle is affordable and leaves unspent income.",
+                    "C": "The bundle is exactly on the budget line.",
+                    "D": "The bundle must be optimal because cheaper bundles are always preferred."
+                },
+                "correct": "B",
+                "explanation": "Strict inequality means total spending is less than income, so the bundle is inside the budget set. A reverses affordability, C requires equality, and D confuses feasibility with optimality."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student has $100 for dining hall meals at $10 each and coffee drinks at $5 each. The student asks which combinations are affordable. Which model applies?",
+                "choices": {
+                    "A": "A budget constraint and budget set model, because the question is about feasible bundles given income and prices.",
+                    "B": "A supply curve model, because meals and coffee are sold by firms.",
+                    "C": "A production function, because meals are produced.",
+                    "D": "A market equilibrium model, because two goods exist."
+                },
+                "correct": "A",
+                "explanation": "The scenario is about affordability given income and prices, so the budget model applies. B and C focus on sellers, and D requires market demand and supply."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes income from prices in a budget constraint Px x + Py y = M?",
+                "choices": {
+                    "A": "Income determines the slope; prices determine only the intercepts.",
+                    "B": "Prices determine the tradeoff slope and intercepts together with income; income determines the overall purchasing power holding prices fixed.",
+                    "C": "Income and prices both affect only preferences.",
+                    "D": "Prices matter only if the consumer buys both goods; income matters only at corner solutions."
+                },
+                "correct": "B",
+                "explanation": "Prices determine relative tradeoffs and, with income, intercepts; income scales the feasible set. A reverses slope logic, C confuses constraints with preferences, and D adds false restrictions."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget line is 2x + 4y = 40. Then both prices double to Px = 4 and Py = 8 while income stays 40. What happens to the budget set? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+                "choices": {
+                    "A": "The budget set shrinks inward in parallel because both intercepts are cut in half while the slope remains -1/2.",
+                    "B": "The budget set expands because higher prices make the goods more valuable.",
+                    "C": "The line rotates around the y-intercept because only x becomes relatively expensive.",
+                    "D": "The budget set is unchanged because the price ratio is unchanged."
+                },
+                "correct": "A",
+                "explanation": "Old intercepts are x = 20 and y = 10; new intercepts are x = 10 and y = 5. The slope remains -4/8 = -1/2. B reverses the effect, C ignores both prices changing proportionally, and D ignores reduced real income."
+            }
+        ]
+    },
+    {
+        "topic": "Budget Sets and Budget Lines",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has M = $72, Px = $6, Py = $3, and utility U(x,y) = x^0.5y^0.5. What bundle on the budget line maximizes utility, and what does it imply about the budget set?",
+                "choices": {
+                    "A": "x = 6, y = 12; the optimum lies on the boundary because utility is increasing in both goods.",
+                    "B": "x = 12, y = 0; the optimum is the x-intercept because x is more expensive.",
+                    "C": "x = 4, y = 16; the optimum is inside the budget set because spending less is preferred.",
+                    "D": "x = 6, y = 6; the optimum equalizes quantities."
+                },
+                "correct": "A",
+                "explanation": "Equal Cobb-Douglas shares spend $36 on each good, so x = 6 and y = 12. With monotonic preferences, the optimum is on the budget line. B gives zero utility, C is not optimal with monotonic preferences, and D spends only $54."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has $50 to spend on notebooks N at $5 and pens P at $2.50. Utility is U(N,P) = min(N,P), so the goods are perfect complements. What bundle maximizes utility?",
+                "choices": {
+                    "A": "N = 10, P = 0; spend all money on notebooks.",
+                    "B": "N = 0, P = 20; spend all money on pens.",
+                    "C": "N = P = 6.67 approximately; choose the kink on the budget line where N equals P.",
+                    "D": "N = 5, P = 10; spend equal dollars on both goods."
+                },
+                "correct": "C",
+                "explanation": "Perfect complements require N = P. Then 5N + 2.5N = 50, so N = P = 6.67. A and B give zero utility, and D fails to match complements."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget set is defined by 10x + 5y <= 100. If income increases to 150, what happens to the budget set?",
+                "choices": {
+                    "A": "It expands outward because every old affordable bundle remains affordable and some new bundles become affordable.",
+                    "B": "It shrinks because the consumer must spend more.",
+                    "C": "It rotates because the relative price changes.",
+                    "D": "It becomes only the boundary line because income is higher."
+                },
+                "correct": "A",
+                "explanation": "Higher income with unchanged prices expands the feasible region. B reverses the effect, C falsely changes prices, and D confuses budget set with budget line."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget line is 4x + 8y = 80. If Py rises from 8 to 10 while M and Px stay fixed, what happens?",
+                "choices": {
+                    "A": "The y-intercept falls from 10 to 8 and the line becomes steeper in absolute value.",
+                    "B": "The x-intercept falls from 20 to 8 and the line becomes flatter.",
+                    "C": "Both intercepts fall because one price rose.",
+                    "D": "The budget line shifts outward in parallel."
+                },
+                "correct": "A",
+                "explanation": "The y-intercept changes from 80/8 = 10 to 80/10 = 8; x-intercept remains 20; slope changes from -4/8 to -4/10, becoming flatter, not steeper. Since A has the slope wrong, no choice is correct."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For the budget set 2x + y <= 12, with x on the horizontal axis and y on the vertical axis, which description is correct?",
+                "choices": {
+                    "A": "The feasible region is the area on and below the line with intercepts x = 6 and y = 12.",
+                    "B": "The feasible region is only the line segment between x = 6 and y = 12.",
+                    "C": "The feasible region is above the line because spending must exceed income.",
+                    "D": "The feasible region has positive slope because goods have positive prices."
+                },
+                "correct": "A",
+                "explanation": "The budget set includes all bundles whose spending is no more than 12, including the area below the boundary. B describes only the budget line, C reverses affordability, and D gets the slope wrong."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A budget line has vertical intercept 15 and horizontal intercept 5. What can be inferred about the slope and relative prices?",
+                "choices": {
+                    "A": "The slope is -3, so x costs three times as much as y.",
+                    "B": "The slope is -1/3, so x costs one-third as much as y.",
+                    "C": "The slope is +3, so both goods can rise together.",
+                    "D": "The slope is -10, so income must be 10."
+                },
+                "correct": "A",
+                "explanation": "Slope from (0,15) to (5,0) is (0 - 15)/(5 - 0) = -3, equal to -Px/Py. B uses the inverse, C misses the tradeoff, and D confuses slope with income."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the budget line called the boundary of the budget set?",
+                "choices": {
+                    "A": "It contains bundles that exactly exhaust income, separating affordable bundles from unaffordable bundles.",
+                    "B": "It contains all affordable bundles, including those with unspent income.",
+                    "C": "It contains only unaffordable bundles.",
+                    "D": "It shows preferences rather than feasibility."
+                },
+                "correct": "A",
+                "explanation": "The budget line is the equality case of the affordability constraint. B describes the whole budget set, C is wrong because boundary bundles are affordable, and D confuses constraints with preferences."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student says, 'I can afford any combination of coffee and snacks that costs no more than $30, but the combinations that cost exactly $30 are special because they use my whole budget.' Which distinction is being described?",
+                "choices": {
+                    "A": "Budget set versus budget line.",
+                    "B": "Demand versus supply.",
+                    "C": "Reservation price versus market price.",
+                    "D": "Consumer surplus versus producer surplus."
+                },
+                "correct": "A",
+                "explanation": "The budget set is all affordable bundles; the budget line is the exact-spending boundary. The other distinctions do not describe feasibility versus boundary."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes the budget set from the budget line?",
+                "choices": {
+                    "A": "The budget set is the full feasible region satisfying spending <= income; the budget line is the boundary satisfying spending = income.",
+                    "B": "The budget set is the boundary; the budget line is the area below it.",
+                    "C": "The budget set shows preferences; the budget line shows utility.",
+                    "D": "The budget set applies to two goods; the budget line applies only to one good."
+                },
+                "correct": "A",
+                "explanation": "The set is the region; the line is the equality boundary. B reverses them, C confuses constraints with preferences, and D adds a false dimensional restriction."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A consumer receives a coupon that gives 4 free units of x but cannot be spent on y. Compared with the original budget set 2x + y <= 20, what happens conceptually? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+                "choices": {
+                    "A": "The budget set expands in a kinked way rather than as a simple parallel shift, because the coupon changes affordability for x specifically.",
+                    "B": "The budget line shifts inward in parallel because coupons reduce cash income.",
+                    "C": "The slope is unchanged everywhere and only the y-intercept rises.",
+                    "D": "Nothing changes because free units have no price."
+                },
+                "correct": "A",
+                "explanation": "An in-kind coupon expands feasible x consumption but not y purchasing power in the same way as cash, often creating a kink. B reverses the effect, C describes cash income, and D ignores the value of free units."
+            }
+        ]
+    },
+    {
+        "topic": "Opportunity Cost and Slope",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A consumer has M = $100, Px = $20, Py = $10, and utility U(x,y) = xy. What bundle maximizes utility, and what opportunity cost is reflected in the slope?",
+                "choices": {
+                    "A": "x = 2.5, y = 5; one more x costs 2 units of y.",
+                    "B": "x = 5, y = 0; one more x costs 1 unit of y.",
+                    "C": "x = 2, y = 6; one more x costs 0.5 units of y.",
+                    "D": "x = 1, y = 8; one more x costs 10 units of y."
+                },
+                "correct": "A",
+                "explanation": "Cobb-Douglas with equal exponents spends $50 on each good, so x = 2.5 and y = 5. Slope is -Px/Py = -2, so one x costs 2 y. B gives zero utility, C is not tangency, and D confuses price of y with opportunity cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A student allocates $80 between online courses C at $40 each and books B at $20 each. Utility is U(C,B) = C^0.5B^0.5. What is the optimal bundle, and how does the slope enter the interpretation?",
+                "choices": {
+                    "A": "C = 1, B = 2; the budget slope is -2, so one more course requires giving up 2 books.",
+                    "B": "C = 2, B = 0; courses are more valuable because they cost more.",
+                    "C": "C = 1, B = 1; equal quantities are optimal.",
+                    "D": "C = 0, B = 4; books are cheaper, so all income goes to books."
+                },
+                "correct": "A",
+                "explanation": "Equal exponents imply equal spending: $40 on courses gives C = 1 and $40 on books gives B = 2. Slope is -40/20 = -2. B and D are corners with zero utility, and C leaves $20 unspent."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget line has Px = 6 and Py = 3. If Px rises to 9 while Py stays 3, what happens to the opportunity cost of x?",
+                "choices": {
+                    "A": "It rises from 2 units of y to 3 units of y because x becomes more expensive relative to y.",
+                    "B": "It falls from 2 units of y to 1/3 unit of y because the slope becomes smaller.",
+                    "C": "It stays at 2 because Py did not change.",
+                    "D": "It rises from 6 to 9 units of y because opportunity cost equals the dollar price of x."
+                },
+                "correct": "A",
+                "explanation": "Opportunity cost of x is Px/Py. It rises from 6/3 = 2 to 9/3 = 3. B uses the inverse, C ignores Px, and D confuses dollars with units of y."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget line has slope -4 when x is on the horizontal axis. If Py doubles while Px and income stay fixed, what happens to the slope and opportunity cost of x?",
+                "choices": {
+                    "A": "The slope becomes -2, so the opportunity cost of x falls because y is now more expensive.",
+                    "B": "The slope becomes -8, so the opportunity cost of x rises because y is more expensive.",
+                    "C": "The slope stays -4 because income is unchanged.",
+                    "D": "The slope becomes +2 because the relative price changed."
+                },
+                "correct": "A",
+                "explanation": "Slope is -Px/Py. Doubling Py cuts Px/Py in half, so slope changes from -4 to -2 and each x costs fewer units of y. B reverses the ratio, C ignores price changes, and D gets the sign wrong."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A budget line runs from (0, 12) to (6, 0), with x on the horizontal axis and y on the vertical axis. Which statement correctly interprets its slope?",
+                "choices": {
+                    "A": "The slope is -2, meaning each additional x requires giving up 2 y.",
+                    "B": "The slope is -1/2, meaning each additional x requires giving up 0.5 y.",
+                    "C": "The slope is +2, meaning x and y trade off positively.",
+                    "D": "The slope is 6, meaning the consumer can buy 6 units of x."
+                },
+                "correct": "A",
+                "explanation": "Slope is (0 - 12)/(6 - 0) = -2. B uses the reciprocal, C misses the negative tradeoff, and D gives an intercept instead of slope."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Two budget lines have the same vertical intercept but one is steeper in absolute value. What must be true if x is on the horizontal axis?",
+                "choices": {
+                    "A": "The steeper line has a higher opportunity cost of x in terms of y.",
+                    "B": "The steeper line has a lower opportunity cost of x in terms of y.",
+                    "C": "The steeper line must represent higher income.",
+                    "D": "The steeper line means y is impossible to buy."
+                },
+                "correct": "A",
+                "explanation": "A larger absolute slope means Px/Py is higher, so one more x costs more y. B reverses the interpretation, C is not implied by same vertical intercept, and D is false."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is the slope of the budget line negative?",
+                "choices": {
+                    "A": "Because with fixed income and positive prices, consuming more of one good requires consuming less of the other.",
+                    "B": "Because consumers dislike both goods.",
+                    "C": "Because prices must be negative for tradeoffs to exist.",
+                    "D": "Because income falls when consumption rises."
+                },
+                "correct": "A",
+                "explanation": "The negative slope represents scarcity and tradeoffs under fixed income. B confuses preferences with constraints, C is mathematically wrong, and D is not part of the static budget model."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A student says, 'If I buy one more $15 movie ticket, I have to give up three $5 coffees.' Which concept is the student using?",
+                "choices": {
+                    "A": "Opportunity cost measured by the price ratio.",
+                    "B": "Consumer surplus measured by willingness to pay.",
+                    "C": "Producer surplus measured by marginal cost.",
+                    "D": "Market equilibrium measured by supply equaling demand."
+                },
+                "correct": "A",
+                "explanation": "The student computes the opportunity cost of one movie ticket as 15/5 = 3 coffees. The other options describe different concepts."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes dollar cost from opportunity cost in a two-good budget model?",
+                "choices": {
+                    "A": "Dollar cost is the money price of a good; opportunity cost is what must be given up, often measured as the other good forgone.",
+                    "B": "Dollar cost and opportunity cost are always identical numbers.",
+                    "C": "Dollar cost applies only to firms; opportunity cost applies only to consumers.",
+                    "D": "Dollar cost is subjective; opportunity cost never depends on prices."
+                },
+                "correct": "A",
+                "explanation": "Dollar cost is measured in money; opportunity cost is measured by the alternative forgone. B ignores units, C creates a false agent distinction, and D incorrectly separates opportunity cost from prices."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A budget constraint is 12x + 4y = 96. The price of y falls to 3 while Px and income stay fixed. What happens to the opportunity cost of x? Welfare analysis is not directly applicable to this topic, so this substitutes a second comparative statics question.",
+                "choices": {
+                    "A": "It rises from 3 units of y to 4 units of y because y is cheaper, so each x costs more y forgone.",
+                    "B": "It falls from 3 units of y to 0.25 units of y because y is cheaper.",
+                    "C": "It stays at 3 because Px did not change.",
+                    "D": "It falls from 12 to 3 because opportunity cost equals Py."
+                },
+                "correct": "A",
+                "explanation": "Opportunity cost of x is Px/Py. It rises from 12/4 = 3 to 12/3 = 4 when y becomes cheaper. B uses the inverse, C ignores Py, and D confuses opportunity cost with a dollar price."
+            }
+        ]
+    }
+]

@@ -1,0 +1,135 @@
+{
+  "topic": "Shutdown Condition",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has fixed cost F=90 and variable cost VC(q)=12q+q^2. At price P=20, should it produce or shut down in the short run, and if producing, what output?",
+      "choices": {
+        "A": "Produce q=4 because P=MC gives 20=12+2q, and P exceeds minimum AVC.",
+        "B": "Shut down because price is below fixed cost.",
+        "C": "Produce q=8 because P=AVC gives 20=12+q.",
+        "D": "Shut down because profit is negative."
+      },
+      "correct": "A",
+      "explanation": "MC=12+2q, so q=4. AVC=12+q, whose minimum over q>=0 is 12, so P=20 covers variable cost. A is correct. B compares price to fixed cost, C uses AVC to choose output, and D ignores that producing can reduce losses even if total profit is negative."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A small printer has F=200 and VC(q)=30q+2q^2. The market price is P=26. What is the optimal short-run decision?",
+      "choices": {
+        "A": "Produce q=1 because marginal cost is close to price.",
+        "B": "Produce q=13 because price divided by 2 gives output.",
+        "C": "Shut down because P is below minimum AVC of 30, so producing would not cover variable cost.",
+        "D": "Produce q=0 only if fixed cost is also zero."
+      },
+      "correct": "C",
+      "explanation": "AVC=30+2q, minimized at q=0 with value 30. Since P=26<30, the firm shuts down and loses only fixed cost. C is correct. A applies approximate MC reasoning despite P below AVC, B misuses a coefficient, and D misunderstands that shutdown still involves paying fixed cost."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm has minimum AVC of $15. If market price falls from $18 to $14, how does the short-run decision change?",
+      "choices": {
+        "A": "It moves from operating to shutting down because price falls below the minimum variable cost per unit.",
+        "B": "It keeps operating because fixed cost is unchanged.",
+        "C": "It shuts down at both prices because price must exceed fixed cost.",
+        "D": "It produces more at $14 because lower price reduces marginal cost."
+      },
+      "correct": "A",
+      "explanation": "At P=18 the firm may operate; at P=14<min AVC=15 it shuts down. A is correct because the mechanism is failure to cover avoidable variable cost. B ignores the price-AVC comparison, C uses fixed cost incorrectly, and D reverses the price-output relationship."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A taco stand's minimum AVC rises from $5 to $7 after ingredient prices rise. Market price remains $6. What happens to its shutdown decision?",
+      "choices": {
+        "A": "It changes from shut down to operate because AVC rose.",
+        "B": "It changes from operate to shut down because the AVC curve shifts up above price.",
+        "C": "It keeps operating because price did not change.",
+        "D": "It shuts down only if fixed cost also rises."
+      },
+      "correct": "B",
+      "explanation": "Initially P=6 exceeds min AVC=5, so operation may be worthwhile. After min AVC=7, P=6 is below min AVC, so the stand shuts down. B is correct. A reverses the effect, C ignores cost shifts, and D incorrectly requires a fixed-cost change."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A firm's price line is drawn below the lowest point of its AVC curve. What area comparison does this imply?",
+      "choices": {
+        "A": "Total revenue is less than variable cost at every positive output, so shutting down is better.",
+        "B": "Total revenue is greater than total cost at every output, so profit is positive.",
+        "C": "The firm should produce where price crosses ATC.",
+        "D": "Fixed cost is zero because price is below AVC."
+      },
+      "correct": "A",
+      "explanation": "If P<AVC at all positive outputs, then Pq<VC(q), so producing adds a variable loss on top of fixed cost. A is correct. B reverses the inequality, C uses ATC incorrectly, and D makes an unsupported claim about fixed cost."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a cost graph, the MC curve intersects AVC at AVC's minimum of $11. At market price P=$11, what does the shutdown condition imply?",
+      "choices": {
+        "A": "The firm is indifferent at the shutdown margin because revenue just covers variable cost at the minimum AVC output.",
+        "B": "The firm must shut down because price must strictly exceed ATC.",
+        "C": "The firm earns positive economic profit because MC=AVC.",
+        "D": "The firm produces infinite output because demand is horizontal."
+      },
+      "correct": "A",
+      "explanation": "At P=min AVC, the firm is just indifferent between producing the minimum-AVC output and shutting down, ignoring fixed cost because it is paid either way. A is correct. B uses ATC instead of AVC, C confuses variable-cost coverage with profit, and D misunderstands price-taking."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why are fixed costs irrelevant to the short-run shutdown decision?",
+      "choices": {
+        "A": "Because fixed costs are zero in the short run.",
+        "B": "Because fixed costs must be paid whether the firm produces or shuts down, so they do not affect the comparison.",
+        "C": "Because fixed costs are included in marginal cost.",
+        "D": "Because firms always earn enough revenue to cover fixed costs."
+      },
+      "correct": "B",
+      "explanation": "B is correct: the shutdown decision compares producing loss with shutdown loss, and fixed cost appears in both. A is false, C is false because fixed cost does not affect MC, and D is not generally true."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A gym pays monthly rent of $6,000 whether open or closed. Its variable cost per class is VC(q)=40q+q^2, and the market price per class is $36. What short-run model should the gym apply?",
+      "choices": {
+        "A": "It should stay open because rent is large and must be recovered.",
+        "B": "It should shut down because price is below the minimum AVC of $40.",
+        "C": "It should produce where price equals ATC because rent is fixed.",
+        "D": "It should produce q=36 because the price is $36."
+      },
+      "correct": "B",
+      "explanation": "AVC=40+q, so its minimum is 40. Since P=36<min AVC, each positive class fails to cover variable cost. B is correct. A commits the sunk fixed-cost fallacy, C uses ATC for short-run shutdown, and D confuses price with quantity."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes shutdown from exit?",
+      "choices": {
+        "A": "Shutdown is a short-run decision based on AVC; exit is a long-run decision based on ATC.",
+        "B": "Shutdown and exit both occur whenever price is below MC.",
+        "C": "Shutdown is based on fixed cost; exit is based on variable cost.",
+        "D": "Shutdown means producing at a loss; exit means producing zero but paying fixed cost forever."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Short-run shutdown asks whether revenue covers variable cost; long-run exit asks whether revenue covers total opportunity cost. B uses MC incorrectly, C reverses the relevant cost concepts, and D misstates both terms."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A firm has supply q=P-12 for P>=12 and q=0 below 12. If price rises from $10 to $16, what is the change in producer surplus?",
+      "choices": {
+        "A": "$0 because the firm is shut down at both prices.",
+        "B": "$8 because quantity at $16 is 4 and producer surplus becomes 0.5×4×4.",
+        "C": "$64 because revenue at $16 is 16×4.",
+        "D": "$24 because price rose by 6 and quantity is 4."
+      },
+      "correct": "B",
+      "explanation": "At P=10<12, supply and producer surplus are zero. At P=16, q=4 and producer surplus is 0.5×4×(16-12)=8. B is correct. A ignores that the firm operates at $16, C calculates revenue, and D multiplies price change by final quantity."
+    }
+  ]
+}

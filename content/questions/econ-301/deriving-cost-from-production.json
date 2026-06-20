@@ -1,0 +1,135 @@
+{
+  "topic": "Deriving Cost Functions from Production Functions",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has q=K^{1/2}L^{1/2}, wage w=9, and rental rate r=1. Derive the cost function C(q).",
+      "choices": {
+        "A": "C(q)=6q.",
+        "B": "C(q)=10q.",
+        "C": "C(q)=18q.",
+        "D": "C(q)=q^2."
+      },
+      "correct": "A",
+      "explanation": "TRS=K/L=w/r=9, so K=9L and KL=q^2. Thus L=q/3 and K=3q. Cost=9(q/3)+1(3q)=6q. B adds input prices without optimizing. C doubles the optimized cost. D confuses production constraint with cost."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has production q=L+K, wage w=4, rental rate r=7. What is the cost function for producing q units?",
+      "choices": {
+        "A": "C(q)=7q because capital is productive.",
+        "B": "C(q)=11q because both inputs must be used.",
+        "C": "C(q)=4q because labor is the cheaper perfect substitute.",
+        "D": "C(q)=28q because prices multiply."
+      },
+      "correct": "C",
+      "explanation": "Inputs are perfect substitutes one-for-one, so use only the cheaper input, labor. Cost is 4q. A uses the more expensive input. B wrongly requires both. D multiplies prices."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For q=K^{1/2}L^{1/2}, the cost function is C(q,w,r)=2q sqrt(wr). If the wage rises from 4 to 9 while r=1 and q=10, what happens to cost?",
+      "choices": {
+        "A": "Cost rises from 40 to 60 because higher wage raises the minimized cost through input substitution and higher labor expense.",
+        "B": "Cost rises from 20 to 90 because cost is wq.",
+        "C": "Cost stays 40 because the firm substitutes completely away from labor.",
+        "D": "Cost falls because higher wage makes capital relatively cheaper."
+      },
+      "correct": "A",
+      "explanation": "Initial cost=2(10)sqrt(4)=40; new cost=2(10)sqrt(9)=60. B assumes labor only. C ignores imperfect substitution. D confuses relative substitution with total cost."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A production function has increasing returns to scale. Holding input prices fixed, what property should its cost function display?",
+      "choices": {
+        "A": "Cost rises more than proportionally with output.",
+        "B": "Cost rises less than proportionally with output, so average cost falls.",
+        "C": "Cost is independent of output.",
+        "D": "Marginal cost must be zero."
+      },
+      "correct": "B",
+      "explanation": "Increasing returns mean scaling inputs by t raises output by more than t, so producing higher output requires less-than-proportional cost increases. A describes decreasing returns. C is impossible for positive input requirements. D is too strong."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A production isoquant map and isocost lines are used to derive a cost function. What graphical operation corresponds to finding C(q) for each output q?",
+      "choices": {
+        "A": "Choose the highest isoquant tangent to a fixed isocost line.",
+        "B": "Choose the lowest isocost line tangent to the isoquant for q.",
+        "C": "Choose the point where the isoquant crosses the labor axis.",
+        "D": "Choose the steepest isoquant regardless of prices."
+      },
+      "correct": "B",
+      "explanation": "For each target q, minimum cost is the lowest isocost reaching that isoquant. A describes output maximization for a cost budget. C is usually infeasible or not optimal. D ignores input prices."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For a Cobb-Douglas technology with constant returns to scale, the expansion path is a ray from the origin and isocosts are parallel as output rises. What should the derived long-run average cost curve look like?",
+      "choices": {
+        "A": "Flat, because cost rises proportionally with output.",
+        "B": "U-shaped, because all long-run costs are U-shaped.",
+        "C": "Downward sloping forever, because fixed cost is spread out.",
+        "D": "Vertical, because output is fixed."
+      },
+      "correct": "A",
+      "explanation": "Constant returns and fixed input prices imply linear total cost and constant average cost. B overgeneralizes. C imports short-run fixed-cost logic. D confuses one isoquant with the cost curve."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does Shephard's lemma imply about a differentiable cost function C(q,w,r)?",
+      "choices": {
+        "A": "The derivative of cost with respect to an input price gives the conditional demand for that input.",
+        "B": "The derivative of cost with respect to output gives average cost.",
+        "C": "The cost function is always quadratic.",
+        "D": "Input demands do not depend on input prices."
+      },
+      "correct": "A",
+      "explanation": "Shephard's lemma says partial C/partial w equals conditional labor demand and partial C/partial r equals conditional capital demand. B confuses marginal and average cost. C is false. D contradicts cost minimization."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A robotics firm knows its production function for drones and current input prices. It wants a formula giving the minimum dollar cost of producing any target number of drones. What procedure should it use?",
+      "choices": {
+        "A": "Derive the cost function by minimizing input cost subject to the production function.",
+        "B": "Set price equal to marginal revenue.",
+        "C": "Calculate consumer surplus from the demand curve.",
+        "D": "Use only accounting fixed costs."
+      },
+      "correct": "A",
+      "explanation": "The cost function comes from cost minimization subject to producing target output. B is output-market analysis. C is welfare analysis. D omits technology and variable inputs."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a production function from a cost function?",
+      "choices": {
+        "A": "A production function gives maximum output from inputs; a cost function gives minimum cost of producing output at input prices.",
+        "B": "A production function gives total cost; a cost function gives total output.",
+        "C": "A production function depends on input prices; a cost function depends only on technology.",
+        "D": "They are identical whenever firms minimize cost."
+      },
+      "correct": "A",
+      "explanation": "Production describes technology; cost combines technology with input prices through minimization. B reverses definitions. C reverses price dependence. D confuses related objects with identical ones."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has production q=(KL)^{1/4}, with w=r=1. This technology has decreasing returns to scale. How does its cost function change with q?",
+      "choices": {
+        "A": "Cost rises linearly with q.",
+        "B": "Cost rises more than proportionally with q, so average cost rises.",
+        "C": "Cost rises less than proportionally with q, so average cost falls.",
+        "D": "Cost is constant because both input prices are 1."
+      },
+      "correct": "B",
+      "explanation": "Since q=(KL)^{1/4}, producing higher q requires inputs to rise more than proportionally; decreasing returns imply rising average cost. A would fit constant returns. C describes increasing returns. D ignores input requirements."
+    }
+  ]
+}

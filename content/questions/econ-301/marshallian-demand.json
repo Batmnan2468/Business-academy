@@ -1,0 +1,135 @@
+{
+  "topic": "Marshallian Demand",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Derive Marshallian demand for x when U(x,y)=x^{1/2}y^{1/2}, p_x=4, p_y=2, and m=80. What is x*(p_x,p_y,m) at these values?",
+      "choices": {
+        "A": "x*=10 because x=m/(2p_x).",
+        "B": "x*=20 because x=m/(2p_y).",
+        "C": "x*=5 because x=p_y m/(2p_x^2).",
+        "D": "x*=40 because all income is spent on x."
+      },
+      "correct": "A",
+      "explanation": "For equal Cobb-Douglas, Marshallian demand is x=m/(2p_x). With m=80 and p_x=4, x=10. B uses y's price. C invents a formula. D gives a corner, not Cobb-Douglas demand."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For U(x,y)=x^{2/3}y^{1/3}, derive the Marshallian demands at p_x=6, p_y=3, and m=180.",
+      "choices": {
+        "A": "x*=20, y*=20 because spending on x is twice spending on y.",
+        "B": "x*=10, y*=40 because y is cheaper.",
+        "C": "x*=30, y*=0 because x has the larger exponent.",
+        "D": "x*=15, y*=30 because quantities follow the exponents directly."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas Marshallian demands are x=(2/3)m/p_x=20 and y=(1/3)m/p_y=20. Spending is 120 on x and 60 on y. B overweights the cheaper good. C wrongly creates a corner. D uses exponent shares as quantity shares."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A Marshallian demand function is x*(p_x,p_y,m)=m/(4p_x). If all prices and income double from (p_x,p_y,m)=(5,10,100) to (10,20,200), what happens to x* and why?",
+      "choices": {
+        "A": "x* doubles because income doubles.",
+        "B": "x* is unchanged at 5 because Marshallian demand is homogeneous of degree zero in all prices and income.",
+        "C": "x* falls from 5 to 2.5 because p_x doubles.",
+        "D": "x* rises from 5 to 10 because p_y doubles."
+      },
+      "correct": "B",
+      "explanation": "Marshallian demand is homogeneous of degree zero: scaling all prices and income by the same factor leaves real purchasing power unchanged. x=100/(45)=5 and 200/(410)=5. A ignores price scaling. C ignores income scaling. D incorrectly makes x depend positively on p_y here."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Cobb-Douglas demand x*=0.4m/p_x and y*=0.6m/p_y, initially m=200, p_x=4, p_y=6. If only p_x rises to 8, what happens to x*?",
+      "choices": {
+        "A": "x* rises from 20 to 40 because x becomes more expensive.",
+        "B": "x* remains 20 because the expenditure share is fixed.",
+        "C": "x* falls from 20 to 10 because the fixed 40 percent expenditure share buys fewer units.",
+        "D": "x* falls from 30 to 15 because x receives 60 percent of income."
+      },
+      "correct": "C",
+      "explanation": "Initial x=0.4(200)/4=20. After p_x=8, x=0.4(200)/8=10. The mechanism is a higher own price reducing quantity for a fixed spending share. A reverses demand. B confuses fixed expenditure share with fixed quantity. D uses y's share."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A Marshallian demand curve for x is drawn with p_x on the vertical axis and x on the horizontal axis, holding p_y and m fixed. For x*=60/p_x, what is the curve's shape?",
+      "choices": {
+        "A": "Downward sloping and convex to the origin because p_x=60/x.",
+        "B": "Upward sloping because higher prices imply higher spending.",
+        "C": "Horizontal because income is fixed.",
+        "D": "Vertical because p_y is held fixed."
+      },
+      "correct": "A",
+      "explanation": "Demand x=60/p_x implies inverse demand p_x=60/x, a downward-sloping convex curve. B reverses the law of demand. C and D confuse holding variables fixed with the shape of the relationship between p_x and x."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If income rises while p_x and p_y remain fixed, how is the Marshallian demand curve for a normal good x represented graphically?",
+      "choices": {
+        "A": "The demand curve shifts right because at each p_x the consumer demands more x.",
+        "B": "The demand curve shifts left because higher income raises opportunity cost.",
+        "C": "There is movement upward along the same demand curve only.",
+        "D": "The budget line becomes steeper with no demand shift."
+      },
+      "correct": "A",
+      "explanation": "For a normal good, higher income increases quantity demanded at every own price, shifting Marshallian demand right. B describes an inferior-good response. C would describe a price change, not income change. D is false because fixed prices mean budget slope is unchanged."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean that Marshallian demand satisfies the budget constraint when preferences are monotonic?",
+      "choices": {
+        "A": "The chosen bundle exhausts income: p_xx*(p_x,p_y,m)+p_yy*(p_x,p_y,m)=m.",
+        "B": "The chosen bundle always has x*=y*.",
+        "C": "The chosen bundle minimizes expenditure for every possible utility level.",
+        "D": "The chosen bundle does not depend on income."
+      },
+      "correct": "A",
+      "explanation": "With monotonic preferences, more is better, so the consumer spends all income at the Marshallian optimum. B is not generally true. C describes Hicksian demand. D is false for most Marshallian demands."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A business wants to forecast how many coffees x a student buys as coffee prices, snack prices, and weekly income vary. The student's preferences are U(x,y)=x^{1/4}y^{3/4}. Which object should the business estimate?",
+      "choices": {
+        "A": "A production function for coffee shops.",
+        "B": "A Marshallian demand function x*(p_x,p_y,m)=0.25m/p_x.",
+        "C": "A cost-minimization function holding utility fixed.",
+        "D": "A supply curve for snacks."
+      },
+      "correct": "B",
+      "explanation": "The business wants ordinary demand as a function of prices and income, so Marshallian demand is appropriate. For Cobb-Douglas, x=0.25m/p_x. A and D are producer-side objects. C is Hicksian demand, not ordinary demand."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes Marshallian demand from Hicksian demand?",
+      "choices": {
+        "A": "Marshallian demand comes from utility maximization given income; Hicksian demand comes from expenditure minimization given a target utility.",
+        "B": "Marshallian demand holds utility fixed; Hicksian demand holds income fixed.",
+        "C": "Marshallian demand is only for firms; Hicksian demand is only for consumers.",
+        "D": "Marshallian demand ignores prices; Hicksian demand ignores utility."
+      },
+      "correct": "A",
+      "explanation": "Marshallian demand solves the primal consumer problem with prices and income. Hicksian demand solves the dual problem with prices and utility. B reverses the definitions. C is false. D misstates both concepts."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "For quasilinear preferences, the Marshallian demand for x is x(p)=20-p for 0<=p<=20. If price falls from 12 to 8, what is the increase in consumer surplus?",
+      "choices": {
+        "A": "32, the area under demand between prices 12 and 8: average quantity (8+12)/2 times price change 4.",
+        "B": "16, because price falls by 4 and initial quantity is 8.",
+        "C": "48, because price falls by 4 and final quantity is 12.",
+        "D": "4, because the price falls by 4."
+      },
+      "correct": "A",
+      "explanation": "At p=12, quantity is 8; at p=8, quantity is 12. The surplus gain is a trapezoid: ((8+12)/2)4=40, not 32. None of the answer choices gives the correct value; A uses the right method but incorrect arithmetic."
+    }
+  ]
+}

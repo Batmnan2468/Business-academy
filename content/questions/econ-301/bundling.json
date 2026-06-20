@@ -1,0 +1,135 @@
+{
+  "topic": "Bundling",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A streaming platform sells access to Movie A and Movie B. Consumer 1 values A at $10 and B at $2. Consumer 2 values A at $2 and B at $10. Marginal cost is zero. The firm can choose either separate pricing only or pure bundling only. What pricing policy maximizes profit, and what economic force explains the result?",
+      "choices": {
+        "A": "Sell each movie separately at $10, earning $20; high individual prices extract the maximum willingness to pay.",
+        "B": "Sell the bundle at $12, earning $24; negatively correlated valuations make total bundle values more equal across consumers.",
+        "C": "Sell each movie separately at $2, earning $8; low prices maximize quantity sold.",
+        "D": "Sell the bundle at $20, earning $20; the bundle price should equal the sum of the two highest individual valuations."
+      },
+      "correct": "B",
+      "explanation": "B is correct because each consumer values the bundle at $12, so pure bundling at $12 sells to both consumers and earns $24. A is the profit from selling each good at $10 to only one consumer each, missing the gain from pooling valuations. C uses the low separate price and sells four units but leaves surplus unextracted. D incorrectly adds the highest separate valuations from different consumers and sets a bundle price only one or no consumer would pay."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A software firm sells WordPro and SheetPro to two buyers. Buyer 1 values WordPro at $18 and SheetPro at $6. Buyer 2 values WordPro at $8 and SheetPro at $14. Marginal costs are zero. The firm may use mixed bundling with individual prices pW = $18 and pS = $14, plus a bundle price pB. Which bundle price maximizes total profit given these individual prices?",
+      "choices": {
+        "A": "$22, because both buyers strictly prefer the bundle and total profit is $44.",
+        "B": "$24, because Buyer 1 buys WordPro separately and Buyer 2 buys SheetPro separately, total profit is $32.",
+        "C": "$20, because both buyers buy the bundle and total profit is $40.",
+        "D": "$32, because the bundle price should equal the sum of the two individual prices."
+      },
+      "correct": "C",
+      "explanation": "C is correct: Buyer 1 values the bundle at $24 and Buyer 2 at $22. At pB = $20, both choose the bundle over buying any individual good, producing $40 profit. A fails because at $22 Buyer 1 may buy the bundle but Buyer 2 is indifferent between buying the bundle and not buying; it does not unambiguously guarantee $44. B describes the outcome without meaningful bundle sales and earns only $32. D prices above both buyers' bundle valuations, so nobody buys the bundle."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm sells two goods to two consumers with zero marginal cost. Initially, Consumer 1 values the goods at ($12, $4), and Consumer 2 values them at ($4, $12). Later, Consumer 2's valuation for the first good rises from $4 to $8, so valuations become ($12, $4) and ($8, $12). What happens to the profitability advantage of pure bundling over separate pricing?",
+      "choices": {
+        "A": "It increases because total bundle valuations become more unequal.",
+        "B": "It decreases because valuations become less negatively correlated, making separate pricing more effective.",
+        "C": "It stays the same because total bundle values remain above marginal cost.",
+        "D": "It disappears because bundling is never profitable when all marginal costs are zero."
+      },
+      "correct": "B",
+      "explanation": "B is correct. Initially both bundle values are $16, so bundling at $16 earns $32, while separate pricing at $12 per good earns $24. After Consumer 2's first-good value rises, separate pricing can charge $8 for good 1 to both and $12 for good 2 to one, earning $28, while bundling at $16 still earns $32 or at $20 earns $20; the advantage shrinks. A reverses the correlation mechanism. C ignores how separate pricing improves. D confuses zero marginal cost with zero value from price discrimination."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A publisher sells an e-book and an audiobook. Consumer A values them at ($20, $5), and Consumer B values them at ($6, $19). Marginal cost is initially zero for both. Then the audiobook marginal cost rises to $8 per copy while the e-book cost stays zero. How does this cost increase affect the optimal pure bundle price and the attractiveness of bundling?",
+      "choices": {
+        "A": "The optimal pure bundle price rises by $8 because cost should be fully passed through to preserve margin.",
+        "B": "The optimal pure bundle price falls to $17 because price must equal valuation minus cost.",
+        "C": "The revenue-maximizing pure bundle price remains $25, but the profit from selling the bundle to both falls by $16 because each bundle includes one audiobook.",
+        "D": "Bundling becomes impossible because goods with positive marginal cost cannot be bundled."
+      },
+      "correct": "C",
+      "explanation": "C is correct. Both consumers value the bundle at $25, so the revenue-maximizing bundle price remains $25. But selling two bundles now includes two audiobook copies, adding $16 total cost and reducing profit. A incorrectly assumes automatic full pass-through despite unchanged willingness to pay. B subtracts cost from valuation as if price must equal net surplus. D incorrectly treats positive marginal cost as ruling out bundling."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Imagine a diagram with Consumer 1's valuation for Good X on the horizontal axis and valuation for Good Y on the vertical axis. A pure bundle priced at $30 is represented by the line vX + vY = 30. Which verbal description correctly identifies the buyers who purchase the bundle?",
+      "choices": {
+        "A": "Consumers northeast of the line buy because their combined valuation is at least $30.",
+        "B": "Consumers southwest of the line buy because they have lower opportunity cost.",
+        "C": "Only consumers on the line buy because only they value the bundle exactly at price.",
+        "D": "Consumers to the right of vX = 30 buy regardless of their valuation for Good Y."
+      },
+      "correct": "A",
+      "explanation": "A is correct because bundle purchase depends on whether vX + vY is at least the bundle price; graphically that is the region on or above/northeast of the downward-sloping line. B reverses the buying region. C confuses indifference with purchase. D describes a separate price cutoff for Good X, not a bundle cutoff."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a two-consumer valuation table, valuations are negatively correlated: the consumer with a high value for Concert Tickets has a low value for Parking, and the consumer with a low value for Concert Tickets has a high value for Parking. If the firm draws bars for each consumer's total bundle value, what feature explains why pure bundling may outperform separate pricing?",
+      "choices": {
+        "A": "The separate-good valuation bars become more unequal while total bundle-value bars become more similar.",
+        "B": "The total bundle-value bars become steeper than the marginal cost curve.",
+        "C": "Each individual good has a perfectly elastic demand curve at the bundle price.",
+        "D": "Negative correlation lowers every consumer's total willingness to pay below marginal cost."
+      },
+      "correct": "A",
+      "explanation": "A is correct because bundling works especially well when low valuation for one good is offset by high valuation for the other, compressing variation in total bundle values. B imports a cost-curve idea not relevant to the valuation diagram. C confuses firm demand curves with consumer valuation bars. D is false; negative correlation changes the distribution of total values, not necessarily their level relative to cost."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A museum sells entry and an audio guide. Some visitors value entry highly but the guide little; others value the guide highly but entry less. Why can a single bundled ticket extract more surplus than separate prices?",
+      "choices": {
+        "A": "Bundling forces all consumers to have identical preferences.",
+        "B": "Bundling pools valuations, reducing dispersion in total willingness to pay and allowing a higher common price.",
+        "C": "Bundling works only because consumers misunderstand the individual prices.",
+        "D": "Bundling eliminates marginal cost, so every bundle sale is pure profit."
+      },
+      "correct": "B",
+      "explanation": "B is correct: bundling can make consumers' total valuations more similar, especially with negatively correlated values, so a common price captures more surplus. A is wrong because preferences remain different. C incorrectly relies on consumer confusion. D confuses pricing strategy with production cost."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A gym can sell pool access and yoga classes. Serious swimmers value pool access at $80 and yoga at $10. Yoga-focused members value pool access at $20 and yoga at $70. Casual members value each at $25. Marginal costs are close to zero. Which pricing model is most naturally suggested by this pattern?",
+      "choices": {
+        "A": "Pure bundling or mixed bundling, because high values for one service partly offset low values for the other across customer types.",
+        "B": "Perfect competition, because the gym should take market price as given.",
+        "C": "Two-part tariff only, because all customers have identical usage intensity.",
+        "D": "Shutdown analysis, because marginal cost is close to zero."
+      },
+      "correct": "A",
+      "explanation": "A is correct because the scenario has multiple goods and negatively correlated valuations, the classic condition under which bundling can increase profit. B applies a market structure model that ignores multi-good pricing. C assumes identical usage intensity, which the scenario does not give. D applies a production decision framework rather than a pricing strategy."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "A video game company offers two games. Under Policy P, customers can buy only a $50 package containing both games. Under Policy M, customers can buy either game separately for $35 each or the package for $50. What is the correct distinction?",
+      "choices": {
+        "A": "Policy P is mixed bundling; Policy M is pure bundling.",
+        "B": "Policy P is pure bundling; Policy M is mixed bundling.",
+        "C": "Both policies are pure bundling because both include a package price.",
+        "D": "Both policies are tying because the bundle price is below the sum of individual prices."
+      },
+      "correct": "B",
+      "explanation": "B is correct. Pure bundling means the goods are sold only as a package, while mixed bundling offers both the package and individual components. A reverses the definitions. C ignores the availability of individual goods under mixed bundling. D confuses bundling with tying and incorrectly uses price comparison as the defining feature."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Two consumers value a news subscription and a crossword subscription as follows: Consumer 1 values news at $14 and crossword at $4; Consumer 2 values news at $6 and crossword at $12. Marginal cost is zero. If the firm switches from separate pricing at pNews = $14 and pCrossword = $12 to pure bundling at pBundle = $18, what happens to total consumer surplus and total profit?",
+      "choices": {
+        "A": "Consumer surplus rises from $0 to $0, and profit rises from $26 to $36.",
+        "B": "Consumer surplus rises from $0 to $4, and profit rises from $26 to $36.",
+        "C": "Consumer surplus falls from $10 to $0, and profit rises from $20 to $36.",
+        "D": "Consumer surplus stays at $0, and profit falls from $36 to $26."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Under separate pricing, Consumer 1 buys news at $14 and Consumer 2 buys crossword at $12, so profit is $26 and consumer surplus is zero. Under bundling, both consumers value the bundle at $18 and pay $18, so profit is $36 and consumer surplus remains zero. B incorrectly gives surplus to buyers whose bundle valuation exactly equals price. C uses the wrong separate-pricing profit. D reverses the profit comparison."
+    }
+  ]
+}

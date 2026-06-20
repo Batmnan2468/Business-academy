@@ -1,0 +1,135 @@
+{
+  "topic": "Preferences",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer's preferences over apples a and bananas b are represented by U(a,b)=ab. Income is 48, p_a=4, and p_b=2. What bundle maximizes utility, and what preference ranking does it reveal among affordable bundles?",
+      "choices": {
+        "A": "a=6, b=12; it is ranked at least as high as every affordable bundle because it reaches the highest attainable indifference curve.",
+        "B": "a=12, b=0; it is optimal because apples are more expensive and therefore more preferred.",
+        "C": "a=4, b=16; it is optimal because it equalizes quantities after accounting for income.",
+        "D": "a=8, b=8; it is optimal because preferences require equal physical amounts."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas with equal exponents spends half income on each good: a=24/4=6 and b=24/2=12. B is a corner with zero utility, C misallocates expenditure, and D equalizes quantities rather than marginal utility per dollar."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A student's preferences over notebooks n and pens p are represented by U(n,p)=2n+p. Income is 30, p_n=5, and p_p=1. What is the optimal bundle, and what does it say about the student's preferences?",
+      "choices": {
+        "A": "n=6, p=0; notebooks are preferred because they have the larger utility coefficient.",
+        "B": "n=3, p=15; the student splits income because both goods are desirable.",
+        "C": "n=0, p=30; pens give more utility per dollar, so all income is spent on pens.",
+        "D": "n=5, p=5; the student equalizes marginal utilities."
+      },
+      "correct": "C",
+      "explanation": "MU_n/p_n=2/5=0.4 while MU_p/p_p=1, so pens deliver more utility per dollar and the optimum is n=0, p=30. A compares utility coefficients without prices, B assumes interiority, and D equalizes marginal utilities rather than marginal utility per dollar."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Elena has preferences represented by U(x,y)=x^{1/2}y^{1/2}. With m=100, p_x=5, and p_y=5, she chooses x=10 and y=10. If p_x falls to 2.50, how does her chosen bundle change and why?",
+      "choices": {
+        "A": "x rises to 20 and y remains 10 because lower p_x makes x cheaper while Cobb-Douglas expenditure shares stay fixed.",
+        "B": "x remains 10 and y rises to 20 because lower p_x frees income for y only.",
+        "C": "x rises to 40 and y falls to 0 because x is now strictly preferred.",
+        "D": "x and y both rise to 20 because the price decrease doubles real income for both goods."
+      },
+      "correct": "A",
+      "explanation": "With equal Cobb-Douglas shares, x=50/2.5=20 and y=50/5=10. B ignores substitution toward x, C treats smooth preferences as perfect substitutes, and D treats a relative price change as a pure income doubling."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer has preferences U(x,y)=min{x,y}. Initially m=60, p_x=2, and p_y=4, so x=y=10. If p_x falls to 1 while income and p_y stay fixed, what happens?",
+      "choices": {
+        "A": "x rises and y stays fixed because only x became cheaper.",
+        "B": "x=y rises to 12 because perfect complements require balanced consumption and the lower price raises feasible paired units.",
+        "C": "x rises to 60 and y falls to 0 because x is cheaper.",
+        "D": "x=y stays at 10 because preferences, not prices, determine demand."
+      },
+      "correct": "B",
+      "explanation": "For U=min{x,y}, optimal x=y=q. New cost per pair is 1+4=5, so q=60/5=12. A violates complementarity, C uses perfect-substitute reasoning, and D ignores the budget constraint."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Suppose Rachel strictly prefers more of both tea t and cookies c. In a graph with tea on the horizontal axis and cookies on the vertical axis, what must be true about bundles northeast of bundle (4,6)?",
+      "choices": {
+        "A": "They lie on the same indifference curve because both goods rise together.",
+        "B": "They are strictly preferred to (4,6), so higher indifference curves lie northeast under monotonic preferences.",
+        "C": "They are worse because the budget line must slope downward.",
+        "D": "They cannot be ranked unless preferences are represented by a utility function."
+      },
+      "correct": "B",
+      "explanation": "Monotonicity means more of both goods is strictly better, so northeast bundles are on higher indifference curves. A denies strict preference, C confuses preferences with budget constraints, and D confuses the preference relation with one possible representation."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A preference map has indifference curves for soda s and pizza z that cross at bundle A=(2,8). What does this crossing imply if preferences are supposed to be well-defined?",
+      "choices": {
+        "A": "It is impossible under transitive preferences because crossing curves imply inconsistent rankings around A.",
+        "B": "It is normal under monotonic preferences because more distant curves must cross.",
+        "C": "It means soda and pizza are perfect complements.",
+        "D": "It means preferences are complete but not monotonic."
+      },
+      "correct": "A",
+      "explanation": "If two indifference curves cross, bundles on supposedly different curves become linked through indifference to A, violating consistent ranking. B is false, C confuses crossing with L-shaped curves, and D identifies the wrong axiom."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean to say preferences are the primitive of consumer theory?",
+      "choices": {
+        "A": "Prices determine preferences because consumers prefer cheaper goods.",
+        "B": "Utility numbers are directly observed and preferences are calculated from them.",
+        "C": "The ranking of bundles is taken as the starting point; utility functions and demand are representations or consequences of that ranking.",
+        "D": "Consumers must be able to measure satisfaction in dollars before choosing."
+      },
+      "correct": "C",
+      "explanation": "Consumer theory starts from the preference relation over bundles; utility functions represent those preferences when possible. A confuses preferences with constraints, B reverses the construction, and D imposes cardinal measurement not required by the theory."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A meal-plan app asks Kai to rank lunch bundles such as (2 tacos, 1 drink), (1 taco, 2 drinks), and (3 tacos, 0 drinks), then predicts his choices when prices change. Which framework is the app using first?",
+      "choices": {
+        "A": "Production theory because it studies how tacos are made.",
+        "B": "Preference theory because it starts with rankings over consumption bundles.",
+        "C": "Game theory because prices change strategically.",
+        "D": "Welfare economics because it measures total surplus."
+      },
+      "correct": "B",
+      "explanation": "The app begins with Kai's ranking of bundles, which is the preference relation. A is about firms, C requires strategic interaction, and D concerns social welfare rather than individual rankings."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a preference relation from a utility function?",
+      "choices": {
+        "A": "A preference relation ranks bundles directly; a utility function assigns numbers that represent the same ranking.",
+        "B": "A preference relation uses prices; a utility function ignores prices.",
+        "C": "A preference relation is always numerical; a utility function is always verbal.",
+        "D": "A preference relation applies only to two goods; a utility function applies only to one good."
+      },
+      "correct": "A",
+      "explanation": "Preferences are ordinal rankings; utility is a numerical representation when available. B confuses preferences with budgets, C reverses the concepts, and D invents a false dimensional restriction."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer with U(x,y)=x+3y has m=120. Initially p_x=4 and p_y=6. Then p_y rises to 15. How does the optimal bundle change and why?",
+      "choices": {
+        "A": "The consumer changes from all y to all x because y's marginal utility per dollar falls below x's.",
+        "B": "The consumer changes from all x to all y because y still has the larger utility coefficient.",
+        "C": "The consumer splits income equally because the price increase creates convex preferences.",
+        "D": "The consumer buys the same bundle because preferences did not change."
+      },
+      "correct": "A",
+      "explanation": "Initially MU_x/p_x=1/4=0.25 and MU_y/p_y=3/6=0.5, so all y. After p_y=15, MU_y/p_y=0.2<0.25, so all x. B ignores prices, C assumes convex smoothing for perfect substitutes, and D ignores comparative statics of the constraint. Welfare analysis is not directly applicable here, so Type 2 is used."
+    }
+  ]
+}

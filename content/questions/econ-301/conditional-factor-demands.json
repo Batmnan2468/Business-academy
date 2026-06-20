@@ -1,0 +1,135 @@
+{
+  "topic": "Conditional Factor Demands",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has q=K^{1/2}L^{1/2}. Derive the conditional factor demands for output y when input prices are w and r.",
+      "choices": {
+        "A": "L(y,w,r)=y(r/w)^{1/2}, K(y,w,r)=y(w/r)^{1/2}.",
+        "B": "L(y,w,r)=y(w/r)^{1/2}, K(y,w,r)=y(r/w)^{1/2}.",
+        "C": "L(y,w,r)=y^2r/w, K(y,w,r)=y^2w/r.",
+        "D": "L(y,w,r)=w/y, K(y,w,r)=r/y."
+      },
+      "correct": "A",
+      "explanation": "TRS=K/L=w/r and KL=y^2. Thus L=y sqrt(r/w), K=y sqrt(w/r). B reverses the price effects. C solves KL=y^2 but not the square-root system. D is unrelated to the constraint."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm produces y=min{2L,K}. What are its conditional factor demands for producing y units at any positive input prices?",
+      "choices": {
+        "A": "L=y, K=y because inputs must be equal.",
+        "B": "L=y/2, K=y because extra units beyond the fixed proportion are wasted.",
+        "C": "L=0, K=y because capital alone determines output.",
+        "D": "L=y/2, K=2y because K must be twice output."
+      },
+      "correct": "B",
+      "explanation": "To produce y, need 2L=y and K=y, so L=y/2 and K=y. A confuses this with min{L,K}. C ignores labor. D doubles capital unnecessarily."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For q=K^{1/2}L^{1/2}, conditional labor demand is L=y sqrt(r/w). If w rises from 4 to 16 while r=1 and y=20, what happens to L, and why?",
+      "choices": {
+        "A": "L falls from 10 to 5 because labor becomes relatively more expensive.",
+        "B": "L rises from 10 to 20 because wage income is higher.",
+        "C": "L stays 10 because output is fixed.",
+        "D": "L falls from 5 to 2.5 because the wage quadruples."
+      },
+      "correct": "A",
+      "explanation": "Initially L=20 sqrt(1/4)=10; afterward L=20 sqrt(1/16)=5. The mechanism is substitution away from labor. B uses worker labor supply logic. C ignores substitution. D uses the wrong initial value."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For q=K^{1/2}L^{1/2}, suppose both input prices double from w=2,r=8 to w=4,r=16 while target output y=30 stays fixed. What happens to conditional input demands?",
+      "choices": {
+        "A": "Both fall by half because production is more expensive.",
+        "B": "Both double because costs double.",
+        "C": "They are unchanged because relative input prices and output are unchanged.",
+        "D": "Labor rises and capital falls because wage increased."
+      },
+      "correct": "C",
+      "explanation": "Conditional factor demands depend on output and relative prices, not the common price scale. A confuses cost level with quantities. B confuses spending with physical inputs. D ignores that r also rose proportionally."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a diagram with L horizontal and K vertical, a wage increase makes the cost-minimizing tangency on a fixed isoquant move up and left. What does this imply for conditional factor demands?",
+      "choices": {
+        "A": "L(y,w,r) falls and K(y,w,r) rises.",
+        "B": "L(y,w,r) rises and K(y,w,r) falls.",
+        "C": "Both conditional demands fall because total cost falls.",
+        "D": "Both conditional demands rise because output rises."
+      },
+      "correct": "A",
+      "explanation": "Up-left means less labor and more capital at the same output. B reverses the movement. C is impossible with a wage increase and fixed output. D changes output when the isoquant is fixed."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A set of conditional factor demand points is plotted for y=10, y=20, and y=30 with input prices fixed. If all points lie on the same ray from the origin, what does the graph suggest?",
+      "choices": {
+        "A": "The firm uses constant input proportions as output scales up.",
+        "B": "The firm faces increasing wages at higher output.",
+        "C": "The firm has no substitution possibilities.",
+        "D": "The firm's output is fixed."
+      },
+      "correct": "A",
+      "explanation": "A ray through the origin means K/L is constant across output levels. B concerns price changes, not fixed prices. C is not necessary; Cobb-Douglas can generate rays. D contradicts multiple output levels."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does the notation L(y,w,r) represent for a bakery choosing labor and ovens?",
+      "choices": {
+        "A": "The profit-maximizing labor choice after the bakery chooses output price.",
+        "B": "The cost-minimizing amount of labor needed to produce target output y at input prices w and r.",
+        "C": "The total amount of labor available in the market.",
+        "D": "The labor demand curve holding total cost fixed instead of output."
+      },
+      "correct": "B",
+      "explanation": "Conditional factor demand conditions on output and prices. A describes unconditional profit-maximizing input demand. C is market supply. D confuses isocost analysis with cost minimization."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A hospital must perform exactly 1,000 lab tests per week. It can use technicians and automated machines. Management wants formulas showing the cost-minimizing technicians and machines for any wage and machine rental rate. What is it asking for?",
+      "choices": {
+        "A": "Conditional factor demands.",
+        "B": "Consumer Marshallian demands.",
+        "C": "Short-run shutdown output.",
+        "D": "Market supply elasticity."
+      },
+      "correct": "A",
+      "explanation": "The hospital fixes output and asks for cost-minimizing input quantities as functions of input prices. B is consumer theory. C concerns produce versus not produce. D is a market-level concept."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes conditional factor demand from ordinary profit-maximizing factor demand?",
+      "choices": {
+        "A": "Conditional factor demand holds output fixed; profit-maximizing factor demand lets output vary with product price.",
+        "B": "Conditional factor demand ignores input prices; profit-maximizing factor demand ignores output price.",
+        "C": "Conditional factor demand applies only to labor; profit-maximizing demand applies only to capital.",
+        "D": "They are identical because both come from the same production function."
+      },
+      "correct": "A",
+      "explanation": "Conditional demands solve cost minimization for a target output; ordinary factor demands arise after output choice. B removes necessary prices. C invents an input distinction. D misses the different constraints."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. For q=K^{1/2}L^{1/2}, w=9, r=1. If target output y rises from 10 to 20, what happens to conditional input demands?",
+      "choices": {
+        "A": "Both double while K/L remains 9.",
+        "B": "Labor doubles but capital stays fixed.",
+        "C": "Capital doubles but labor stays fixed.",
+        "D": "Both quadruple because output depends on the square root of inputs."
+      },
+      "correct": "A",
+      "explanation": "L=y sqrt(r/w)=y/3 and K=y sqrt(w/r)=3y, so both scale linearly with y and K/L=9. B and C violate the isoquant relation. D confuses scaling both inputs with scaling output."
+    }
+  ]
+}

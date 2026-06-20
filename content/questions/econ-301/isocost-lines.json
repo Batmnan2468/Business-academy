@@ -1,0 +1,135 @@
+{
+  "topic": "Isocost Lines",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has production q=K^{1/2}L^{1/2}, target q=12, wage w=3, and rental rate r=12. Using the isocost tangency condition, what input bundle minimizes cost?",
+      "choices": {
+        "A": "K=6, L=24 because K/L=w/r.",
+        "B": "K=24, L=6 because capital is more expensive.",
+        "C": "K=12, L=12 because the isoquant is symmetric.",
+        "D": "K=3, L=48 because the isocost slope is -4."
+      },
+      "correct": "A",
+      "explanation": "TRS=K/L=w/r=1/4 and KL=144, so L=24 and K=6. B reverses the ratio. C ignores input prices. D confuses the inverse price ratio with the tangency ratio."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm must produce q=40 using q=2K^{1/2}L^{1/2}. Input prices are w=2 and r=8. Which bundle lies on the lowest isocost line reaching the target isoquant?",
+      "choices": {
+        "A": "K=10, L=10",
+        "B": "K=5, L=20",
+        "C": "K=20, L=5",
+        "D": "K=4, L=25"
+      },
+      "correct": "B",
+      "explanation": "Target requires KL=400. TRS=K/L=w/r=1/4, so L=20 and K=5. A ignores price ratio. C reverses it. D satisfies the ratio poorly and misses the output target."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "An isocost line is C=120=4L+6K, with L on the horizontal axis and K on the vertical axis. If the wage rises to 8 while C and r stay fixed, what happens to the line?",
+      "choices": {
+        "A": "It becomes flatter and the L-intercept rises.",
+        "B": "It becomes steeper and the L-intercept falls.",
+        "C": "It shifts outward in parallel.",
+        "D": "It becomes steeper and the K-intercept falls."
+      },
+      "correct": "B",
+      "explanation": "Slope is -w/r, so it changes from -4/6 to -8/6. The L-intercept falls from 30 to 15, while K-intercept stays 20. A reverses slope and intercept. C would require higher cost. D wrongly changes the K-intercept."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm's isocost line is C=240=6L+12K. If total cost C increases to 360 while input prices stay fixed, what happens graphically?",
+      "choices": {
+        "A": "The isocost line rotates around the K-intercept.",
+        "B": "The isocost line rotates around the L-intercept.",
+        "C": "The isocost line shifts outward in parallel with the same slope.",
+        "D": "The isocost line becomes steeper because more spending raises w/r."
+      },
+      "correct": "C",
+      "explanation": "Holding w and r fixed keeps slope -w/r=-1/2. Raising C increases both intercepts proportionally. A and B describe price changes. D incorrectly treats spending as changing prices."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In an L-horizontal, K-vertical diagram, an isocost line has L-intercept 50 and K-intercept 25. What does this imply about the relative input prices?",
+      "choices": {
+        "A": "Labor is twice as expensive as capital.",
+        "B": "Capital is twice as expensive as labor.",
+        "C": "Labor and capital have equal prices.",
+        "D": "The total cost must be 75."
+      },
+      "correct": "B",
+      "explanation": "Intercepts are C/w=50 and C/r=25, so r=2w. Capital is twice as expensive. A reverses the ratio. C ignores unequal intercepts. D adds quantities rather than inferring prices."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A target isoquant is convex. The currently drawn isocost line crosses the isoquant at two points rather than being tangent. What does this indicate about cost minimization?",
+      "choices": {
+        "A": "The line is too low to produce the target output.",
+        "B": "The firm is at the cost minimum because two intersections mean two choices.",
+        "C": "A lower parallel isocost line can still touch the isoquant, so current cost is not minimized.",
+        "D": "The firm must choose one of the intercepts."
+      },
+      "correct": "C",
+      "explanation": "With a convex isoquant, a crossing line is above the minimum cost line; a lower parallel line can be tangent. A would mean no intersection. B confuses feasibility with optimality. D ignores interior tangency."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A firm faces wage w=5 and rental rate r=10. What does the isocost slope -1/2 mean economically in an L-horizontal, K-vertical diagram?",
+      "choices": {
+        "A": "Giving up 1 unit of capital frees enough money to hire 2 units of labor.",
+        "B": "Giving up 1 unit of labor frees enough money to hire 2 units of capital.",
+        "C": "The marginal product of labor is half the marginal product of capital.",
+        "D": "The firm must use twice as much labor as capital."
+      },
+      "correct": "A",
+      "explanation": "The slope -w/r=-5/10=-1/2 means one more labor requires giving up half a capital unit; equivalently, one capital finances two labor units. B reverses prices. C confuses isocost with isoquant slope. D confuses cost tradeoff with optimal quantity ratio."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A software startup has a monthly input budget of 60,000. Engineers cost 10,000 per month and cloud-compute units cost 2,000 per month. Which equation represents its isocost line, with E engineers and M compute units?",
+      "choices": {
+        "A": "60,000=2,000E+10,000M",
+        "B": "60,000=10,000E+2,000M",
+        "C": "Q=10,000E+2,000M",
+        "D": "60,000=E/M"
+      },
+      "correct": "B",
+      "explanation": "Total cost equals price of engineers times engineers plus price of compute times compute. A swaps input prices. C writes a production function, not an isocost. D uses a ratio instead of total spending."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes an isocost line from an isoquant?",
+      "choices": {
+        "A": "An isocost line shows equal output; an isoquant shows equal cost.",
+        "B": "An isocost line is determined by input prices and expenditure; an isoquant is determined by production technology and output.",
+        "C": "Both show equal cost, but only isoquants are straight lines.",
+        "D": "Both show equal output, but only isocost lines have slopes."
+      },
+      "correct": "B",
+      "explanation": "Isocosts represent cost tradeoffs; isoquants represent technological output combinations. A reverses definitions. C falsely says both show cost. D falsely says both show output and that isoquants lack slopes."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm has isocost C=100=wL+rK. If both w and r double while C stays 100, what happens to the isocost line?",
+      "choices": {
+        "A": "It shifts inward in parallel because both intercepts are cut in half and the slope is unchanged.",
+        "B": "It shifts outward in parallel because inputs are more productive.",
+        "C": "It rotates clockwise because the wage-rental ratio doubles.",
+        "D": "It is unchanged because relative prices are unchanged."
+      },
+      "correct": "A",
+      "explanation": "Doubling both prices leaves slope -w/r unchanged but halves C/w and C/r. B confuses prices with productivity. C is wrong because the price ratio is unchanged. D ignores lower purchasing power."
+    }
+  ]
+}

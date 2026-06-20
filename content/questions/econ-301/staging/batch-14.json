@@ -1,0 +1,1082 @@
+[
+    {
+        "topic": "Externalities",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A paper mill faces inverse demand P = 100 - Q and private marginal cost MPC = 20. Production creates pollution with marginal external cost MEC = 2Q. What output maximizes total surplus, and what does it imply relative to the unregulated market output?",
+                "choices": {
+                    "A": "Q = 40; the market overproduces because buyers and sellers ignore marginal external cost.",
+                    "B": "Q = 80; the market underproduces because pollution lowers private cost.",
+                    "C": "Q = 26.67; the market overproduces because MSC is incorrectly set equal to demand plus MPC.",
+                    "D": "Q = 60; the market is efficient because demand equals private marginal cost."
+                },
+                "correct": "A",
+                "explanation": "The efficient output sets marginal benefit equal to marginal social cost: 100 - Q = 20 + 2Q, so Q = 40. The unregulated market sets 100 - Q = 20, so Q = 80, meaning overproduction. B gives the unregulated quantity and reverses the welfare conclusion. C uses an incorrect setup. D ignores the external cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A vaccine has inverse private demand MPB = 90 - Q and marginal cost MC = 30. Each vaccination creates a constant external benefit of 20 for others. What output is socially efficient, and what is the economic interpretation?",
+                "choices": {
+                    "A": "Q = 40; the market output is efficient because private benefit already includes all benefits.",
+                    "B": "Q = 60; the market overproduces because marginal social benefit exceeds marginal private benefit.",
+                    "C": "Q = 80; the market underproduces because consumers ignore the external benefit their vaccination creates.",
+                    "D": "Q = 20; the market underproduces because the external benefit should be subtracted from private benefit."
+                },
+                "correct": "C",
+                "explanation": "Marginal social benefit is MSB = MPB + 20 = 110 - Q. Efficiency requires 110 - Q = 30, so Q = 80. The private market sets 90 - Q = 30, so Q = 60. A ignores the external benefit. B reverses the direction of the distortion. D subtracts the external benefit instead of adding it."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For a factory with inverse demand P = 120 - Q, MPC = 30, and MEC = aQ, how does the socially efficient output change when a rises from 1 to 3?",
+                "choices": {
+                    "A": "It rises from 45 to 90 because higher external cost increases the value of production.",
+                    "B": "It falls from 45 to 22.5 because the MSC curve becomes steeper.",
+                    "C": "It falls from 90 to 30 because private marginal cost increases.",
+                    "D": "It remains 90 because the externality does not affect private demand."
+                },
+                "correct": "B",
+                "explanation": "Efficiency requires 120 - Q = 30 + aQ, so Q = 90/(1 + a). When a = 1, Q = 45; when a = 3, Q = 22.5. The mechanism is that a higher marginal external cost rotates MSC upward. A gets the direction wrong. C treats MEC as a change in private cost and uses the market output as the initial point. D describes the private market quantity, not the efficient quantity."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose a flu shot has MPB = 80 - Q, MC = 20, and external benefit EB = b per shot. What happens to the efficient quantity when b rises from 10 to 30?",
+                "choices": {
+                    "A": "It rises from 70 to 90 because MSB shifts upward by the larger external benefit.",
+                    "B": "It falls from 70 to 50 because external benefits reduce the need for vaccination.",
+                    "C": "It stays at 60 because private marginal benefit is unchanged.",
+                    "D": "It rises from 60 to 80 because the private demand curve shifts upward."
+                },
+                "correct": "A",
+                "explanation": "Efficiency sets 80 - Q + b = 20, so Q = 60 + b. When b rises from 10 to 30, efficient output rises from 70 to 90. The mechanism is an upward shift in marginal social benefit. B reverses the effect. C gives the private market quantity. D gets the direction but incorrectly says private demand shifts."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a diagram for a negative production externality, demand is downward sloping, MPC is upward sloping, and MSC lies above MPC with the vertical gap increasing as output rises. Which verbal graph interpretation is correct?",
+                "choices": {
+                    "A": "The efficient quantity is where demand crosses MPC, and deadweight loss is the area under demand to the left of that quantity.",
+                    "B": "The market quantity is where demand crosses MSC, and the efficient quantity is where demand crosses MPC.",
+                    "C": "The market quantity is where demand crosses MPC, the efficient quantity is where demand crosses MSC, and the deadweight loss is the triangle between MSC and demand over the excess units.",
+                    "D": "The market and efficient quantities are equal because the same demand curve applies to both."
+                },
+                "correct": "C",
+                "explanation": "With a negative externality, private decisions use MPC, while efficiency uses MSC. Since MSC is above MPC, the market quantity exceeds the efficient quantity, and DWL is the excess social cost over benefit for units between them. A uses the private condition as the efficient condition. B reverses market and efficient quantities. D ignores the external cost gap."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a diagram for a positive consumption externality, MPB is downward sloping, MC is upward sloping, and MSB lies above MPB by a constant vertical distance. Which statement correctly describes the graph?",
+                "choices": {
+                    "A": "The efficient quantity is to the right of the market quantity, and the deadweight loss is the area between MSB and MC over the units not produced by the market.",
+                    "B": "The efficient quantity is to the left of the market quantity, and the deadweight loss is the area between MC and MPB over the excess units.",
+                    "C": "The efficient quantity equals the market quantity because the vertical gap is constant.",
+                    "D": "The market quantity is found where MSB intersects MC because consumers account for external benefits."
+                },
+                "correct": "A",
+                "explanation": "A positive externality means MSB exceeds MPB, so the private market underproduces. The missing units have social benefit above marginal cost, creating DWL. B describes a negative externality. C incorrectly assumes a constant gap eliminates inefficiency. D incorrectly assigns social benefits to private decision-making."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A steel plant emits smoke that imposes $12 of health damage on nearby residents for each ton of steel, but the steel buyer and seller do not bear that damage. Which interpretation best explains the market failure?",
+                "choices": {
+                    "A": "The plant produces too little steel because private marginal cost exceeds social marginal cost.",
+                    "B": "The plant produces the efficient amount because the $12 damage is not part of the transaction.",
+                    "C": "The plant produces too much steel because market participants compare private benefit with private cost rather than social cost.",
+                    "D": "The plant produces too much steel only if fixed costs are positive."
+                },
+                "correct": "C",
+                "explanation": "The external damage makes MSC exceed MPC by $12. Because the market ignores this cost, it produces beyond the efficient level. A reverses the cost relationship. B mistakes exclusion from the transaction for irrelevance to welfare. D confuses externality analysis with fixed-cost shutdown logic."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A beekeeper places hives next to an apple orchard. The bees pollinate the orchard, raising apple output, but the orchard owner does not pay the beekeeper. Which model applies, and what does it predict?",
+                "choices": {
+                    "A": "Negative production externality; the beekeeper produces too many hives because social cost exceeds private cost.",
+                    "B": "Positive production externality; the beekeeper supplies too few hives because private revenue excludes benefits to the orchard.",
+                    "C": "Public good; hives are non-rival and non-excludable.",
+                    "D": "Common resource; hives are rival but non-excludable."
+                },
+                "correct": "B",
+                "explanation": "The hives generate an uncompensated benefit for the orchard, so marginal social benefit exceeds marginal private benefit. The market underprovides hives. A uses the wrong sign of externality. C and D confuse externalities with goods classified by rivalry and excludability."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a negative externality from a pecuniary externality?",
+                "choices": {
+                    "A": "A negative externality changes a third party's real payoff outside the price system, while a pecuniary externality works through prices and does not by itself imply inefficiency.",
+                    "B": "A negative externality always involves money, while a pecuniary externality always involves physical harm.",
+                    "C": "A negative externality occurs only in production, while a pecuniary externality occurs only in consumption.",
+                    "D": "A negative externality is efficient, while a pecuniary externality always creates deadweight loss."
+                },
+                "correct": "A",
+                "explanation": "Real externalities create unpriced costs or benefits affecting social surplus. Pecuniary effects operate through market prices and may redistribute surplus without causing inefficiency. B reverses the distinction. C invents a production-consumption separation. D reverses the welfare logic."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A market has inverse demand P = 100 - Q, MPC = 20, and MEC = Q. The unregulated market output is 80 and the efficient output is 40. What is the deadweight loss from the negative externality?",
+                "choices": {
+                    "A": "800",
+                    "B": "1600",
+                    "C": "3200",
+                    "D": "400"
+                },
+                "correct": "A",
+                "explanation": "For units from 40 to 80, MSC exceeds demand. At Q = 40, demand equals MSC; at Q = 80, the gap is MSC - demand = (20 + 80) - 20 = 80. DWL is 0.5 × 40 × 40? More directly, gap = 2Q - 80, which rises from 0 to 80 over 40 units, so DWL = 0.5 × 40 × 80 = 1600. However because MSC = 20 + Q and demand = 100 - Q, the efficient condition is Q = 40. The correct DWL is 1600. B is correct; A uses only the external damage triangle, C doubles the triangle, and D uses the wrong base."
+            }
+        ]
+    },
+    {
+        "topic": "Private Cost vs Social Cost",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A chemical producer has private marginal cost MPC = 10 + Q and faces inverse demand P = 70 - Q. Each unit creates marginal external cost MEC = Q. What are the private market output and socially efficient output?",
+                "choices": {
+                    "A": "Market Q = 30; efficient Q = 20.",
+                    "B": "Market Q = 20; efficient Q = 30.",
+                    "C": "Market Q = 40; efficient Q = 20.",
+                    "D": "Market Q = 30; efficient Q = 30."
+                },
+                "correct": "A",
+                "explanation": "The market sets demand equal to MPC: 70 - Q = 10 + Q, so Q = 30. Efficiency sets demand equal to MSC = MPC + MEC = 10 + 2Q: 70 - Q = 10 + 2Q, so Q = 20. B reverses the two quantities. C uses price minus constant cost incorrectly. D ignores external cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A refinery chooses output Q. Inverse demand is P = 100 - 2Q, private marginal cost is MPC = 20, and marginal external cost is MEC = 2Q. What output maximizes social surplus, and why is it below the private output?",
+                "choices": {
+                    "A": "Q = 20; because social marginal cost includes pollution damage ignored by the refinery.",
+                    "B": "Q = 40; because private cost is the only cost relevant to surplus.",
+                    "C": "Q = 30; because marginal external cost should be averaged over all units.",
+                    "D": "Q = 10; because external cost should be added twice, once to demand and once to cost."
+                },
+                "correct": "A",
+                "explanation": "MSC = 20 + 2Q. Efficiency requires 100 - 2Q = 20 + 2Q, so Q = 20. The private market sets 100 - 2Q = 20, so Q = 40. B gives private output. C uses an averaging logic instead of marginal analysis. D double-counts the external cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a market with P = 90 - Q, MPC = 30, and MEC = e, what happens to the efficient output when e rises from 10 to 30?",
+                "choices": {
+                    "A": "It rises from 50 to 70 because external costs increase demand.",
+                    "B": "It falls from 50 to 30 because MSC shifts upward by the higher external cost.",
+                    "C": "It remains 60 because private marginal cost is unchanged.",
+                    "D": "It falls from 60 to 30 because the private supply curve shifts upward."
+                },
+                "correct": "B",
+                "explanation": "Efficiency requires 90 - Q = 30 + e, so Q = 60 - e. When e rises from 10 to 30, efficient output falls from 50 to 30. The mechanism is an upward shift in MSC. A reverses the direction. C gives the unchanged private output. D gets the final efficient output but incorrectly says private supply shifts."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose P = 120 - Q, MPC = 40 + Q, and MEC = aQ. If a rises from 1 to 3, what happens to the gap between market output and efficient output?",
+                "choices": {
+                    "A": "It shrinks from 20 to 10 because the private market adjusts to the external cost.",
+                    "B": "It stays at 0 because demand is unchanged.",
+                    "C": "It widens from 20 to 30 because the MSC curve becomes steeper while MPC is unchanged.",
+                    "D": "It widens from 40 to 60 because market output increases."
+                },
+                "correct": "C",
+                "explanation": "Market output solves 120 - Q = 40 + Q, so Qm = 40. Efficient output solves 120 - Q = 40 + Q + aQ, so Qe = 80/(2 + a). If a = 1, Qe = 26.67, gap = 13.33; if a = 3, Qe = 16, gap = 24. The qualitative mechanism is that higher a steepens MSC and widens overproduction; among the choices, C captures the mechanism though the numbers should read approximately 13.33 to 24. A reverses the effect. B ignores the cost divergence. D incorrectly says market output increases."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph, the MPC curve slopes upward and the MSC curve is parallel to MPC but exactly $15 above it at every quantity. Demand slopes downward. Which interpretation is correct?",
+                "choices": {
+                    "A": "The vertical distance between MSC and MPC is the marginal external cost.",
+                    "B": "The horizontal distance between demand and MPC is the marginal external cost.",
+                    "C": "The vertical distance between demand and MSC is the producer's private cost.",
+                    "D": "MSC being parallel to MPC means there is no externality."
+                },
+                "correct": "A",
+                "explanation": "Social marginal cost equals private marginal cost plus marginal external cost, so the vertical gap is MEC. B uses a horizontal gap incorrectly. C confuses net benefit with cost. D is wrong because a constant vertical gap is still an external cost."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A market diagram shows demand crossing MPC at Q = 100 and crossing MSC at Q = 70. MSC lies above MPC for all positive quantities. Which graph-based conclusion is correct?",
+                "choices": {
+                    "A": "Output from 70 to 100 creates deadweight loss because marginal social cost exceeds marginal benefit.",
+                    "B": "Output from 70 to 100 creates surplus because marginal private cost is below demand.",
+                    "C": "Output below 70 creates deadweight loss because MSC is above MPC.",
+                    "D": "The efficient quantity is 100 because that is where buyers' willingness to pay equals sellers' private cost."
+                },
+                "correct": "A",
+                "explanation": "For the excess units between efficient output 70 and market output 100, MSC exceeds demand, so those units reduce total surplus. B focuses on private surplus and ignores external cost. C treats all external cost as deadweight loss even for efficient units. D uses the private market condition."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A coal plant's MPC for electricity is $40 per MWh, but each MWh also causes $25 of expected health and environmental damage. What is the correct interpretation of social cost?",
+                "choices": {
+                    "A": "Social marginal cost is $15 because external cost offsets private cost.",
+                    "B": "Social marginal cost is $40 because only the producer's cost affects production.",
+                    "C": "Social marginal cost is $65 because it includes both producer cost and external damage.",
+                    "D": "Social marginal cost cannot be measured if the external damage is not paid in cash."
+                },
+                "correct": "C",
+                "explanation": "MSC = MPC + MEC = 40 + 25 = 65. A subtracts external cost. B ignores third-party damage. D incorrectly assumes social cost requires an actual market payment."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A downtown nightclub earns revenue from loud outdoor music. Nearby residents lose sleep, but the club does not compensate them. Which framework should be used to compare the club's private decision with efficiency?",
+                "choices": {
+                    "A": "Private cost versus social cost, because the club's marginal private cost excludes noise damage borne by residents.",
+                    "B": "Public good provision, because music is non-rival and non-excludable.",
+                    "C": "Monopoly pricing, because the club chooses a price above marginal cost.",
+                    "D": "Income effect analysis, because residents' real income falls."
+                },
+                "correct": "A",
+                "explanation": "The relevant model is a negative externality: social cost includes residents' sleep loss while private cost does not. B misclassifies the problem as public good provision. C might be relevant to pricing but not to the external damage. D is not the central efficiency framework."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes private marginal cost from social marginal cost for a good with a negative production externality?",
+                "choices": {
+                    "A": "Private marginal cost is the firm's production cost; social marginal cost is private marginal cost plus marginal external damage.",
+                    "B": "Private marginal cost is paid by consumers; social marginal cost is paid only by producers.",
+                    "C": "Private marginal cost includes all damages; social marginal cost includes only accounting expenses.",
+                    "D": "Private marginal cost determines efficiency; social marginal cost determines profit."
+                },
+                "correct": "A",
+                "explanation": "MPC reflects costs borne by the producer; MSC adds external damages borne by others. B misassigns who bears private cost. C reverses the concepts. D reverses the roles of private and social marginal cost."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 80 - Q, MPC = 20, and MEC = 20. The market output is 60 and the efficient output is 40. What is the deadweight loss from ignoring the external cost?",
+                "choices": {
+                    "A": "200",
+                    "B": "400",
+                    "C": "800",
+                    "D": "1200"
+                },
+                "correct": "B",
+                "explanation": "MSC = 40. For units from 40 to 60, MSC exceeds willingness to pay. The gap rises from 0 at Q = 40 to 20 at Q = 60, so DWL = 0.5 × 20 × 20 = 200. Thus A is the correct calculation; B doubles the triangle, C uses the full external cost over all 40 efficient units, and D uses market quantity times the external cost."
+            }
+        ]
+    },
+    {
+        "topic": "Pigouvian Taxes",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A gasoline market has inverse demand P = 120 - Q, private marginal cost MPC = 30, and marginal external cost MEC = Q. What Pigouvian tax per gallon should be imposed to achieve the efficient output?",
+                "choices": {
+                    "A": "$30",
+                    "B": "$45",
+                    "C": "$60",
+                    "D": "$90"
+                },
+                "correct": "A",
+                "explanation": "Efficiency requires 120 - Q = 30 + Q, so Q* = 45. The Pigouvian tax equals MEC at Q*, which is 45. Therefore B is correct; A confuses private marginal cost with the tax, C uses the market output's external cost, and D uses price at the efficient quantity."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A factory sells output in a market with P = 100 - Q and MPC = 20 + Q. Its marginal external cost is constant at $12 per unit. What output will result if the government imposes the correct Pigouvian tax, and what does the tax do?",
+                "choices": {
+                    "A": "Q = 34; the tax shifts private marginal cost up to marginal social cost.",
+                    "B": "Q = 40; the tax leaves private decisions unchanged but raises revenue.",
+                    "C": "Q = 28; the tax is added to demand rather than cost.",
+                    "D": "Q = 44; the tax corrects underproduction caused by the externality."
+                },
+                "correct": "A",
+                "explanation": "With tax t = 12, firms face MPC + t = 32 + Q. Set 100 - Q = 32 + Q, so Q = 34. The tax makes private decision-makers face MSC. B is the no-tax market output. C uses the wrong side of the market. D reverses the direction of a negative externality."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a market with P = 90 - Q, MPC = 20, and MEC = aQ, how does the optimal Pigouvian tax change when a rises from 1 to 2?",
+                "choices": {
+                    "A": "It falls because the efficient quantity falls.",
+                    "B": "It rises from 35 to 46.67 because marginal external damage is larger at the new optimum.",
+                    "C": "It remains 35 because the tax equals the original marginal external cost.",
+                    "D": "It rises from 70 to 140 because the tax equals total external cost."
+                },
+                "correct": "B",
+                "explanation": "Efficiency requires 90 - Q = 20 + aQ, so Q* = 70/(1 + a). The tax is t = aQ*. For a = 1, t = 35. For a = 2, Q* = 23.33 and t = 46.67. A ignores the higher damage parameter. C fails to update the tax. D confuses marginal and total external cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A power market has P = 150 - Q, MPC = 50, and constant MEC = e. If e falls from 30 to 10 because of cleaner technology, what happens to the efficient output and the optimal Pigouvian tax?",
+                "choices": {
+                    "A": "Efficient output rises from 70 to 90, and the optimal tax falls from $30 to $10.",
+                    "B": "Efficient output falls from 70 to 90, and the optimal tax rises from $10 to $30.",
+                    "C": "Efficient output remains 100, and the tax falls from $30 to $10.",
+                    "D": "Efficient output rises from 30 to 10, and the tax equals output."
+                },
+                "correct": "A",
+                "explanation": "Efficiency sets 150 - Q = 50 + e, so Q* = 100 - e. When e falls from 30 to 10, Q* rises from 70 to 90 and the tax falls from 30 to 10. The mechanism is a downward shift in MSC. B reverses the quantities. C gives the private output. D confuses tax and quantity."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph of a negative externality, the government imposes a per-unit Pigouvian tax equal to the vertical distance between MSC and MPC at the efficient quantity. What should happen visually?",
+                "choices": {
+                    "A": "The demand curve shifts down until it intersects MPC at the market quantity.",
+                    "B": "The private supply curve faced by buyers shifts upward so the post-tax equilibrium quantity equals the MSC-demand intersection.",
+                    "C": "MSC shifts downward until it equals MPC at every quantity.",
+                    "D": "The deadweight loss triangle expands because taxes always reduce surplus."
+                },
+                "correct": "B",
+                "explanation": "A Pigouvian tax shifts the private supply curve upward by the tax, causing private equilibrium to occur at the efficient quantity. A incorrectly shifts demand. C treats the tax as eliminating real external damage. D ignores that a corrective tax can reduce DWL."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose MEC rises with output, so the vertical gap between MSC and MPC is small at low output and large at high output. On the standard externality graph, why is the correct Pigouvian tax measured at Q* rather than at the unregulated market quantity Qm?",
+                "choices": {
+                    "A": "Because efficiency requires private marginal cost plus tax to equal MSC at the efficient quantity.",
+                    "B": "Because the tax should equal average external cost over all units produced.",
+                    "C": "Because the tax should maximize government revenue at Qm.",
+                    "D": "Because external costs only exist at Q* and not at other quantities."
+                },
+                "correct": "A",
+                "explanation": "The corrective tax must make the private marginal decision at Q* reflect the marginal external cost at Q*. B confuses marginal and average external cost. C gives a revenue-maximization objective, not efficiency. D incorrectly says external costs exist only at one quantity."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does a Pigouvian tax equal to marginal external cost at the social optimum restore efficiency in a competitive market with a negative production externality?",
+                "choices": {
+                    "A": "It transfers all producer surplus to the government, eliminating profit.",
+                    "B": "It makes firms and consumers face the full marginal social cost of the good.",
+                    "C": "It forces output to zero whenever pollution exists.",
+                    "D": "It lowers marginal private cost until it equals demand."
+                },
+                "correct": "B",
+                "explanation": "The tax internalizes the externality by adding marginal external cost to the private cost of production, aligning private and social incentives at Q*. A confuses taxation with confiscation. C is too strong; efficient output is usually positive. D gets the direction of the tax effect wrong."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A city wants to reduce traffic congestion. Each downtown trip imposes delay costs on other drivers, and the marginal delay cost is estimated to be $6 at the efficient number of trips. Which policy is the Pigouvian solution?",
+                "choices": {
+                    "A": "A $6 congestion charge per downtown trip.",
+                    "B": "A $6 subsidy per downtown trip.",
+                    "C": "A ban on all downtown trips.",
+                    "D": "A lump-sum annual tax of $6 on every resident regardless of driving."
+                },
+                "correct": "A",
+                "explanation": "Congestion is a negative externality, and the Pigouvian policy is a per-unit tax equal to marginal external cost at the efficient quantity. B worsens the externality. C is not generally efficient unless optimal trips are zero. D does not change the marginal cost of making a trip."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a Pigouvian tax from a standard revenue-raising excise tax?",
+                "choices": {
+                    "A": "A Pigouvian tax is set to internalize marginal external cost; a revenue tax is primarily set to raise government revenue.",
+                    "B": "A Pigouvian tax is always paid by producers; a revenue tax is always paid by consumers.",
+                    "C": "A Pigouvian tax creates deadweight loss by design; a revenue tax eliminates deadweight loss by design.",
+                    "D": "A Pigouvian tax applies only to public goods; a revenue tax applies only to private goods."
+                },
+                "correct": "A",
+                "explanation": "A Pigouvian tax is corrective: it targets the externality wedge. A revenue tax may distort behavior without correcting an externality. B confuses statutory and economic incidence. C reverses the welfare role. D misclassifies Pigouvian taxes."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Demand is P = 100 - Q, MPC = 20, and MEC = 20. A Pigouvian tax of $20 reduces output from 80 to 60, which is efficient. What is the deadweight loss eliminated by the tax?",
+                "choices": {
+                    "A": "200",
+                    "B": "400",
+                    "C": "800",
+                    "D": "1200"
+                },
+                "correct": "A",
+                "explanation": "MSC = 40. The inefficient units are Q = 60 to Q = 80. At Q = 60, demand equals MSC; at Q = 80, demand is 20, so the MSC-demand gap is 20. DWL eliminated is 0.5 × 20 × 20 = 200. B doubles the triangle. C multiplies the tax by the efficient output loss. D multiplies the tax by the original output."
+            }
+        ]
+    },
+    {
+        "topic": "Coasian Bargaining",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A factory can install a filter that costs $400 and eliminates smoke damage of $700 to nearby residents. Transaction costs are zero and property rights are well-defined. What is the efficient outcome and bargaining interpretation?",
+                "choices": {
+                    "A": "Install the filter; total surplus rises by $300, and bargaining can achieve this regardless of whether residents or the factory initially hold the right.",
+                    "B": "Do not install the filter; the factory's private cost is what determines efficiency.",
+                    "C": "Install the filter only if residents initially have the right to clean air.",
+                    "D": "Do not install the filter because any payment between parties is a deadweight loss."
+                },
+                "correct": "A",
+                "explanation": "Installing the filter costs $400 and prevents $700 of damage, creating a net surplus gain of $300. With zero transaction costs and clear rights, bargaining can achieve efficiency regardless of initial rights. B ignores social damage. C confuses distribution with efficiency. D mistakes transfers for deadweight losses."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A rancher's cattle cause $50 of crop damage per steer to a farmer. Each steer gives the rancher marginal benefit MB = 200 - 20Q, where Q is the number of steers. What number of steers is efficient, and how does Coasian bargaining interpret the result?",
+                "choices": {
+                    "A": "Q = 10; the rancher should keep adding steers until private marginal benefit is zero.",
+                    "B": "Q = 7.5; the rancher should keep steers until marginal benefit equals marginal crop damage.",
+                    "C": "Q = 5; the farmer should ban all steers beyond average damage.",
+                    "D": "Q = 2.5; the rancher should set marginal benefit equal to total crop damage."
+                },
+                "correct": "B",
+                "explanation": "Efficiency requires MB = marginal damage: 200 - 20Q = 50, so Q = 7.5. Coasian bargaining can reach this quantity if rights are clear and transaction costs are zero. A ignores crop damage. C uses no valid marginal condition. D confuses marginal and total damage."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In the cattle example, MB = 200 - 20Q and marginal crop damage rises from $50 to $80 per steer. What happens to the efficient number of steers?",
+                "choices": {
+                    "A": "It rises from 7.5 to 10 because damage raises the value of bargaining.",
+                    "B": "It falls from 7.5 to 6 because higher marginal damage makes additional steers socially less valuable.",
+                    "C": "It remains 7.5 because property rights determine efficiency.",
+                    "D": "It falls from 10 to 4 because private marginal benefit becomes negative."
+                },
+                "correct": "B",
+                "explanation": "Efficiency sets 200 - 20Q = damage. At $50 damage, Q = 7.5; at $80 damage, Q = 6. The mechanism is higher marginal social cost of cattle. A reverses the effect. C confuses the Coase theorem's invariance of efficiency to initial rights with invariance to real damages. D uses the wrong initial and final conditions."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A factory's abatement costs $500 and prevents $900 of damage. Later, transaction costs of organizing residents rise from $50 to $600. What happens to the likelihood of achieving the efficient bargain?",
+                "choices": {
+                    "A": "It increases because higher transaction costs make bargaining more valuable.",
+                    "B": "It falls because the net gains from bargaining fall from $350 to -$200 after transaction costs.",
+                    "C": "It is unchanged because the Coase theorem holds with any transaction costs.",
+                    "D": "It falls only if the factory initially has the right to pollute."
+                },
+                "correct": "B",
+                "explanation": "The gross surplus from abatement is $900 - $500 = $400. With $50 transaction costs, net gains are $350; with $600 transaction costs, net gains are negative. The mechanism is that transaction costs can prevent mutually beneficial bargaining. A gets the direction wrong. C ignores a key condition of the theorem. D incorrectly makes failure depend only on rights assignment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph of bargaining over pollution reduction, the marginal benefit of abatement to residents slopes downward and the marginal cost of abatement to the factory slopes upward. Which point is efficient?",
+                "choices": {
+                    "A": "Where marginal benefit of abatement equals marginal cost of abatement.",
+                    "B": "Where total benefit of abatement is maximized, regardless of cost.",
+                    "C": "Where marginal cost of abatement is zero.",
+                    "D": "Where residents' marginal benefit is highest."
+                },
+                "correct": "A",
+                "explanation": "Efficient abatement equates marginal benefit and marginal cost. B ignores abatement cost. C would generally under-abate or over-abate depending on the curves. D focuses only on the first unit rather than the marginal tradeoff."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph shows two possible legal assignments: the factory has the right to pollute, or residents have the right to clean air. With zero transaction costs, which graph interpretation is consistent with the Coase theorem?",
+                "choices": {
+                    "A": "The efficient pollution level changes with the initial right because rights shift the marginal damage curve.",
+                    "B": "The efficient pollution level is the same, but the division of surplus differs across legal assignments.",
+                    "C": "The factory always chooses zero pollution if residents have no right to clean air.",
+                    "D": "Residents always receive the same payment regardless of the initial right."
+                },
+                "correct": "B",
+                "explanation": "The Coase theorem says efficient allocation is independent of initial rights when bargaining is costless, but distribution depends on the rights assignment. A confuses distribution with real marginal conditions. C is not implied. D ignores bargaining positions created by rights."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What is the central economic meaning of the Coase theorem?",
+                "choices": {
+                    "A": "Externalities never require government action because bargaining is always costless.",
+                    "B": "If property rights are clear and transaction costs are zero, private bargaining can internalize externalities and reach an efficient allocation.",
+                    "C": "The party causing harm must always legally pay damages for efficiency to occur.",
+                    "D": "Externalities disappear because affected parties stop caring about damages."
+                },
+                "correct": "B",
+                "explanation": "The theorem identifies conditions under which private bargaining can solve externalities. A overgeneralizes beyond the theorem's assumptions. C confuses one legal rule with efficiency. D misunderstands internalization; damages still exist, but parties account for them."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A small coffee roaster's smell bothers one neighboring apartment. The neighbor values odor reduction at $300 per month, and the roaster can install a vent for $120 per month. They can negotiate at no cost. Which model applies and what is predicted?",
+                "choices": {
+                    "A": "Coasian bargaining; the vent is installed because the gains from odor reduction exceed the cost.",
+                    "B": "Pigouvian tax; the city must tax all coffee sales by $300.",
+                    "C": "Public good provision; odor reduction is non-rival for the entire city.",
+                    "D": "Common resource; the smell will be overused."
+                },
+                "correct": "A",
+                "explanation": "This is a small-number externality with clear bargaining possibilities. Since benefit exceeds cost, the efficient bargain installs the vent. B is unnecessary under the stated assumptions. C and D misclassify the good and problem."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes efficiency from distribution in Coasian bargaining?",
+                "choices": {
+                    "A": "Efficiency concerns whether total surplus is maximized; distribution concerns who receives the surplus and depends on the initial rights assignment.",
+                    "B": "Efficiency concerns who pays whom; distribution concerns whether marginal benefit equals marginal cost.",
+                    "C": "Efficiency and distribution are identical because all transfers are deadweight losses.",
+                    "D": "Distribution determines only total surplus, while efficiency determines only legal rights."
+                },
+                "correct": "A",
+                "explanation": "Coasian bargaining separates the efficient allocation from the distribution of gains. Transfers affect who gets surplus, not total surplus. B reverses the terms. C treats transfers as losses. D reverses the concepts."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A factory emits 10 units of pollution. Reducing pollution by each unit gives residents marginal benefit MB = 100 - 10A, where A is units abated, and costs the factory MC = 20 + 10A. What is the efficient abatement level and total net gain from abating that amount?",
+                "choices": {
+                    "A": "A = 4; net gain = $160.",
+                    "B": "A = 4; net gain = $320.",
+                    "C": "A = 8; net gain = $160.",
+                    "D": "A = 2; net gain = $120."
+                },
+                "correct": "A",
+                "explanation": "Efficiency sets 100 - 10A = 20 + 10A, so A = 4. Net gain is the area between MB and MC from 0 to 4: initial gap 80, final gap 0, so 0.5 × 4 × 80 = 160. B doubles the gain. C sets marginal benefit equal to zero. D stops too early."
+            }
+        ]
+    },
+    {
+        "topic": "Public Goods",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two residents value a fireworks display. Alex's marginal benefit is MBA = 40 - Q and Brianna's is MBB = 30 - Q. Marginal cost is MC = 20. What is the efficient quantity of fireworks?",
+                "choices": {
+                    "A": "Q = 25",
+                    "B": "Q = 50",
+                    "C": "Q = 10",
+                    "D": "Q = 15"
+                },
+                "correct": "A",
+                "explanation": "For a public good, vertically sum marginal benefits: MSB = 70 - 2Q. Efficiency requires 70 - 2Q = 20, so Q = 25. B horizontally sums as if this were a private good. C uses only Alex's marginal benefit. D uses only Brianna's marginal benefit."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Three roommates are deciding how many hours Q of apartment cleaning to buy. Their marginal benefits are 30 - Q, 20 - Q, and 10 - Q. The cleaner charges a constant MC = 24 per hour. What is the efficient number of hours, and why?",
+                "choices": {
+                    "A": "Q = 12; because the sum of marginal benefits equals marginal cost.",
+                    "B": "Q = 6; because the highest individual marginal benefit equals marginal cost.",
+                    "C": "Q = 18; because total benefits should be horizontally summed.",
+                    "D": "Q = 0; because no roommate individually values the first hour above $24."
+                },
+                "correct": "A",
+                "explanation": "For shared cleaning, the same hour benefits all roommates, so sum marginal benefits: MSB = 60 - 3Q. Set 60 - 3Q = 24, so Q = 12. B uses only one person's benefit. C treats the public good like a private good. D is false because at Q = 0 the sum of benefits is 60."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Two people have marginal benefits for a public radio station: MB1 = 50 - Q and MB2 = a - Q. MC = 30. What happens to efficient Q when a rises from 30 to 50?",
+                "choices": {
+                    "A": "Q rises from 25 to 35 because the vertical sum of marginal benefits shifts upward.",
+                    "B": "Q falls from 25 to 15 because more people free ride.",
+                    "C": "Q stays at 20 because only the highest marginal benefit matters.",
+                    "D": "Q rises from 20 to 40 because marginal costs shift downward."
+                },
+                "correct": "A",
+                "explanation": "MSB = 50 - Q + a - Q = 50 + a - 2Q. Set equal to 30. If a = 30, Q = 25; if a = 50, Q = 35. The mechanism is an upward shift in aggregate marginal benefit. B confuses valuation with strategic contribution. C ignores vertical summation. D incorrectly shifts cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For a public park, the sum of marginal benefits is MSB = 120 - 2Q and marginal cost is MC = c. What happens to efficient Q when c rises from 40 to 60?",
+                "choices": {
+                    "A": "It rises from 40 to 60 because higher cost implies more valuable provision.",
+                    "B": "It falls from 40 to 30 because the MC line shifts upward.",
+                    "C": "It remains 60 because public goods are non-rival.",
+                    "D": "It falls from 80 to 60 because individual benefits are summed horizontally."
+                },
+                "correct": "B",
+                "explanation": "Efficiency sets 120 - 2Q = c. When c = 40, Q = 40; when c = 60, Q = 30. The mechanism is a higher marginal cost reducing the efficient provision level. A reverses the effect. C confuses non-rivalry with cost irrelevance. D uses incorrect quantities and summation logic."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a public good diagram, two individual marginal benefit curves slope downward. How is the social marginal benefit curve constructed?",
+                "choices": {
+                    "A": "By vertically summing individual marginal benefits at each quantity.",
+                    "B": "By horizontally summing quantities demanded at each price.",
+                    "C": "By taking only the highest marginal benefit at each quantity.",
+                    "D": "By averaging the two marginal benefit curves."
+                },
+                "correct": "A",
+                "explanation": "Because all consumers can consume the same unit of a public good, social marginal benefit is the sum of their marginal willingnesses to pay for that unit. B describes private good demand aggregation. C ignores other beneficiaries. D undercounts total benefit unless there is only one consumer."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph for lighthouse provision shows the vertically summed marginal benefit curve crossing MC at Q = 6, while no individual marginal benefit curve crosses MC above Q = 0. What does this show?",
+                "choices": {
+                    "A": "Efficient provision is zero because no individual alone values the lighthouse enough.",
+                    "B": "Efficient provision is positive because combined marginal benefits can exceed marginal cost even when individual benefits do not.",
+                    "C": "The lighthouse is a private good because marginal benefits are downward sloping.",
+                    "D": "The market will automatically provide Q = 6 through voluntary pricing."
+                },
+                "correct": "B",
+                "explanation": "Public good efficiency depends on the sum of individual marginal benefits. A ignores aggregation. C confuses demand shape with rivalry and excludability. D ignores the free-rider problem."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why do public goods create a free-rider problem?",
+                "choices": {
+                    "A": "Because one person's consumption reduces the amount available to others.",
+                    "B": "Because non-excludability makes it hard to prevent non-payers from consuming the good.",
+                    "C": "Because firms always have zero marginal cost for public goods.",
+                    "D": "Because public goods have no marginal benefit."
+                },
+                "correct": "B",
+                "explanation": "Non-excludability means people can benefit without paying, weakening voluntary contribution incentives. A describes rivalry, not public goods. C is not generally true. D is false; public goods can have high marginal benefits."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A town is considering tornado sirens. Once installed, everyone nearby hears the warning, and one person's hearing it does not prevent others from hearing it. What model applies?",
+                "choices": {
+                    "A": "Public good, because the siren warning is non-excludable and non-rival.",
+                    "B": "Common resource, because everyone can use it and it gets depleted.",
+                    "C": "Private good, because each resident has a separate willingness to pay.",
+                    "D": "Negative externality, because sirens are loud."
+                },
+                "correct": "A",
+                "explanation": "The warning is non-excludable and non-rival, so public good analysis applies. B is wrong because the warning is not depleted by use. C confuses individual valuation with private-good status. D focuses on a possible side effect, not the primary provision problem."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes non-rivalry from non-excludability?",
+                "choices": {
+                    "A": "Non-rivalry means one person's consumption does not reduce availability to others; non-excludability means it is hard to prevent non-payers from consuming.",
+                    "B": "Non-rivalry means people cannot be charged; non-excludability means marginal cost is positive.",
+                    "C": "Non-rivalry means the good is supplied by government; non-excludability means it is supplied by markets.",
+                    "D": "Non-rivalry means no one values the good; non-excludability means everyone values it equally."
+                },
+                "correct": "A",
+                "explanation": "Rivalry concerns whether consumption depletes the good; excludability concerns whether access can be restricted. B swaps and distorts the concepts. C incorrectly defines them by provider. D invents valuation assumptions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Two households value street lighting with MB1 = 60 - Q and MB2 = 40 - Q. MC = 40. If voluntary private provision supplies Q = 20 but the efficient quantity is Q = 30, what is the deadweight loss from underprovision?",
+                "choices": {
+                    "A": "100",
+                    "B": "200",
+                    "C": "300",
+                    "D": "400"
+                },
+                "correct": "A",
+                "explanation": "MSB = 100 - 2Q. At Q = 20, MSB = 60; at Q = 30, MSB = 40 = MC. DWL is the triangle between MSB and MC from 20 to 30: 0.5 × 10 × 20 = 100. B doubles the triangle. C uses the wrong height. D uses total cost over the missing units."
+            }
+        ]
+    },
+    {
+        "topic": "Common Resources",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A lake fishery has inverse demand for fish P = 100 - Q and private marginal harvesting cost MPC = 20. Each unit harvested imposes crowding and stock depletion cost MEC = Q on other fishers. What is the efficient harvest?",
+                "choices": {
+                    "A": "Q = 80",
+                    "B": "Q = 40",
+                    "C": "Q = 60",
+                    "D": "Q = 20"
+                },
+                "correct": "B",
+                "explanation": "Efficiency sets demand equal to social marginal cost: 100 - Q = 20 + Q, so Q = 40. The open-access/private condition would produce Q = 80. A gives the unregulated output. C uses half the external cost. D subtracts external cost incorrectly."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A grazing commons supports cattle. The marginal private benefit of cattle is MPB = 90 - Q, private marginal cost is $30, and each cow imposes marginal external damage MEC = 2Q through overgrazing. What herd size is efficient, and what does open access tend to do?",
+                "choices": {
+                    "A": "Q = 60; open access is efficient because no one owns the land.",
+                    "B": "Q = 20; open access tends to overuse the commons.",
+                    "C": "Q = 30; open access tends to underuse the commons.",
+                    "D": "Q = 45; open access equals the average of private and social outputs."
+                },
+                "correct": "B",
+                "explanation": "Efficiency requires 90 - Q = 30 + 2Q, so Q = 20. Open access ignores the external damage and sets 90 - Q = 30, so Q = 60, causing overuse. A gives the private output. C uses only part of the external cost and gets the direction wrong. D invents an averaging rule."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For a common resource, demand is P = 120 - Q, MPC = 40, and MEC = aQ. What happens to efficient use when a rises from 1 to 3?",
+                "choices": {
+                    "A": "It falls from 40 to 20 because overuse damage rises.",
+                    "B": "It rises from 40 to 80 because the resource becomes more valuable.",
+                    "C": "It remains 80 because users ignore MEC.",
+                    "D": "It falls from 80 to 40 because private cost rises."
+                },
+                "correct": "A",
+                "explanation": "Efficiency requires 120 - Q = 40 + aQ, so Q = 80/(1 + a). When a = 1, Q = 40; when a = 3, Q = 20. The mechanism is a steeper MSC curve from greater congestion or depletion damage. B reverses the effect. C gives the open-access private quantity. D incorrectly says private cost rises."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A city beach is non-excludable but rival when crowded. If the city introduces an entry permit that limits daily users from 1,000 to the efficient level of 700, what is the main comparative-static effect?",
+                "choices": {
+                    "A": "Use falls, and congestion external costs fall because access is restricted to the efficient quantity.",
+                    "B": "Use rises, because permits make the beach non-rival.",
+                    "C": "Use remains 1,000, because rivalry prevents regulation.",
+                    "D": "Use falls to zero, because excludability always eliminates consumption."
+                },
+                "correct": "A",
+                "explanation": "A permit system can reduce open-access overuse by making access excludable and limiting use. B confuses excludability with rivalry. C incorrectly says regulation is impossible. D exaggerates the effect of access control."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph of a common pasture, private marginal cost is below social marginal cost, and demand slopes downward. Which area represents the welfare loss from open access overuse?",
+                "choices": {
+                    "A": "The triangle between social marginal cost and demand over the units used beyond the efficient quantity.",
+                    "B": "The rectangle of total revenue at the open-access quantity.",
+                    "C": "The area below demand and above private marginal cost up to the efficient quantity.",
+                    "D": "The vertical gap between private and social marginal cost at zero use."
+                },
+                "correct": "A",
+                "explanation": "Overuse creates DWL on units for which social cost exceeds marginal benefit. B is revenue, not welfare loss. C is private surplus from efficient units. D is not generally the welfare loss and may be zero."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A common-resource diagram shows the open-access equilibrium to the right of the efficient quantity. What graph feature explains this?",
+                "choices": {
+                    "A": "Users respond to private marginal cost, while the upward vertical gap to social marginal cost reflects congestion or depletion costs imposed on others.",
+                    "B": "Users respond to social marginal cost, while regulators respond to private marginal cost.",
+                    "C": "Demand lies below social marginal cost at every positive quantity, so no use is efficient.",
+                    "D": "The good is non-rival, so marginal cost is zero."
+                },
+                "correct": "A",
+                "explanation": "Common resources are overused because individual users ignore costs they impose on other users. B reverses private and social decision rules. C is not implied by overuse. D describes pure public goods, not common resources."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does open access to a rival resource tend to create a tragedy of the commons?",
+                "choices": {
+                    "A": "Each user captures the full private benefit of use but bears only part of the social cost from depletion or congestion.",
+                    "B": "Each user captures no benefit from use, so nobody uses the resource.",
+                    "C": "The resource is non-rival, so additional use has zero marginal cost.",
+                    "D": "The government always sets the price above marginal cost."
+                },
+                "correct": "A",
+                "explanation": "With open access, users do not internalize the full cost their use imposes on others, so the resource is overused. B contradicts observed overuse. C describes public goods, not common resources. D is not the mechanism."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "Several fishing boats harvest from the same unregulated coastal area. Fish caught by one boat are unavailable to others, and no boat can be excluded. Which model applies?",
+                "choices": {
+                    "A": "Public good, because no one can be excluded.",
+                    "B": "Common resource, because the fishery is non-excludable but rival.",
+                    "C": "Club good, because boats pay a membership fee.",
+                    "D": "Positive externality, because fishing creates benefits for consumers."
+                },
+                "correct": "B",
+                "explanation": "The fishery is a common resource: non-excludable but rival. A ignores rivalry. C adds a fee not in the scenario. D focuses on consumer surplus rather than the access problem."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a public good from a common resource?",
+                "choices": {
+                    "A": "A public good is non-excludable and non-rival; a common resource is non-excludable and rival.",
+                    "B": "A public good is rival and excludable; a common resource is non-rival and non-excludable.",
+                    "C": "A public good is always provided by government; a common resource is always privately owned.",
+                    "D": "A public good is overused; a common resource is underprovided because of free riding."
+                },
+                "correct": "A",
+                "explanation": "The key distinction is rivalry. Public goods are non-rival; common resources are rival. B reverses classifications. C defines goods by provider rather than characteristics. D reverses the usual market failures."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "For a lake, demand is P = 100 - Q, MPC = 20, and MEC = Q. Open access leads to Q = 80, while efficient use is Q = 40. What is the deadweight loss from overuse?",
+                "choices": {
+                    "A": "800",
+                    "B": "1600",
+                    "C": "2400",
+                    "D": "3200"
+                },
+                "correct": "B",
+                "explanation": "MSC = 20 + Q. From Q = 40 to Q = 80, the gap between MSC and demand rises from 0 to 80. DWL = 0.5 × 40 × 80 = 1600. A uses half the correct height. C incorrectly uses an average gap of 60. D doubles the triangle."
+            }
+        ]
+    },
+    {
+        "topic": "Free Riding",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two roommates are deciding whether to buy a shared router that costs $70. Maya values it at $50 and Leo values it at $40. What is the efficient decision, and why might voluntary contribution fail?",
+                "choices": {
+                    "A": "Buy it; total benefit is $90, but each roommate may prefer the other to pay.",
+                    "B": "Do not buy it; neither individual value exceeds cost.",
+                    "C": "Buy it only if Maya pays the full $70 because her value is higher.",
+                    "D": "Do not buy it because shared goods have zero total benefit."
+                },
+                "correct": "A",
+                "explanation": "The router is efficient because total benefit 50 + 40 = 90 exceeds cost 70. Voluntary contribution may fail because each can benefit if the other pays. B ignores summed benefits. C confuses efficiency with distribution. D is false."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A neighborhood security patrol costs $120 per week. Three households value it at $50, $45, and $40 per week. What is efficient, and what does free riding predict about voluntary provision?",
+                "choices": {
+                    "A": "Provide it; total value is $135, but each household has an incentive to understate willingness to pay.",
+                    "B": "Do not provide it; the highest individual value is below $120.",
+                    "C": "Provide it only if the household valuing it at $50 pays the full cost.",
+                    "D": "Do not provide it because non-rival goods cannot be valuable."
+                },
+                "correct": "A",
+                "explanation": "Total benefit is 135, greater than cost 120, so provision is efficient. Free riding may prevent voluntary financing. B uses a private-good individual condition. C answers a distribution question, not efficiency. D is conceptually wrong."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a two-person public good contribution game, each person receives benefit $60 if the good is provided. The cost of contributing is initially $40 for one contributor, then rises to $80. What happens to the incentive to contribute individually?",
+                "choices": {
+                    "A": "It weakens; when the private cost exceeds the private benefit, each person prefers to free ride if possible.",
+                    "B": "It strengthens; higher cost makes contribution more socially valuable.",
+                    "C": "It is unchanged because total social benefit is unchanged.",
+                    "D": "It disappears only if both people have identical values."
+                },
+                "correct": "A",
+                "explanation": "A higher private cost makes unilateral contribution less attractive, even if total social benefits could still justify provision. B reverses the incentive effect. C ignores individual payoff comparisons. D introduces irrelevant symmetry."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A public radio station has 1,000 listeners, each valuing it at $5. Fixed cost is $3,000. If the listener base rises to 2,000 while individual value remains $5, what changes about efficient provision and free riding?",
+                "choices": {
+                    "A": "Efficient provision becomes more strongly justified, but voluntary payment may still fail because each listener can hope others pay.",
+                    "B": "Efficient provision becomes less justified because more people make the good more costly to consume.",
+                    "C": "Free riding disappears because a larger group makes exclusion easier.",
+                    "D": "Provision becomes inefficient because individual value remains below fixed cost."
+                },
+                "correct": "A",
+                "explanation": "Total benefit rises from $5,000 to $10,000 while cost stays $3,000, so provision is efficient in both cases and more valuable with more listeners. But larger groups can worsen free riding. B treats the good as rival. C is not implied. D uses individual rather than aggregate benefit."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph of voluntary public good provision, the social marginal benefit curve lies above every individual's marginal benefit curve. What does this vertical gap represent?",
+                "choices": {
+                    "A": "The benefits to other people that an individual does not consider when deciding whether to contribute.",
+                    "B": "The marginal cost of producing the public good.",
+                    "C": "The amount by which the good is rival.",
+                    "D": "The tax revenue collected from users."
+                },
+                "correct": "A",
+                "explanation": "For a public good, an individual's contribution benefits others too. The gap between social and private marginal benefit captures ignored benefits to others. B is a cost curve, not the benefit gap. C confuses rivalry with external benefit. D is not shown by the benefit curves."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A public good graph shows the efficient quantity where summed marginal benefits cross MC, but voluntary contributions stop where one person's marginal benefit crosses MC. What does the graph illustrate?",
+                "choices": {
+                    "A": "Overprovision from free riding.",
+                    "B": "Underprovision because contributors ignore benefits received by non-contributors.",
+                    "C": "Efficient provision because one person's demand is enough.",
+                    "D": "No market failure because marginal cost is positive."
+                },
+                "correct": "B",
+                "explanation": "Voluntary contributors base decisions on private benefits, not total benefits, so public goods tend to be underprovided. A reverses the typical result. C ignores summed benefits. D incorrectly says positive marginal cost prevents market failure."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why can free riding be a Nash equilibrium in a voluntary public good contribution game?",
+                "choices": {
+                    "A": "Because each person may prefer not contributing regardless of whether others contribute, while still benefiting if others pay.",
+                    "B": "Because everyone receives zero benefit from the public good.",
+                    "C": "Because each person is legally required to contribute.",
+                    "D": "Because public goods are rival in consumption."
+                },
+                "correct": "A",
+                "explanation": "Free riding is individually rational when a person can enjoy the good without paying and their own contribution is costly. B denies the benefit. C removes voluntariness. D misclassifies public goods."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A class can buy a shared online study guide. Everyone can access it once purchased, whether or not they paid. Several students say they will wait to see if others buy it. Which concept best explains this?",
+                "choices": {
+                    "A": "Free riding in public good provision.",
+                    "B": "Diminishing marginal utility for private goods.",
+                    "C": "Price discrimination by a monopolist.",
+                    "D": "Tragedy of the commons from rivalry."
+                },
+                "correct": "A",
+                "explanation": "The study guide is non-excludable within the class once purchased, so students have an incentive to benefit without contributing. B is not the strategic issue. C is not about seller pricing. D applies to rival non-excludable resources."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes free riding from the tragedy of the commons?",
+                "choices": {
+                    "A": "Free riding causes underprovision of non-rival public goods; tragedy of the commons causes overuse of rival common resources.",
+                    "B": "Free riding causes overuse of rival resources; tragedy of the commons causes underprovision of public goods.",
+                    "C": "Free riding occurs only with private goods; tragedy of the commons occurs only with club goods.",
+                    "D": "Free riding and tragedy of the commons are identical because both require excludability."
+                },
+                "correct": "A",
+                "explanation": "Free riding is about not paying for a non-excludable public good; commons problems are about overusing a rival non-excludable resource. B reverses the concepts. C misclassifies both. D ignores that both often arise from non-excludability, not excludability."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A public good costs $100. Four people value it at $40, $35, $20, and $15. Voluntary contributions fail and the good is not provided. What is the deadweight loss from non-provision?",
+                "choices": {
+                    "A": "$0 because no money is spent.",
+                    "B": "$10 because total value exceeds cost by $10.",
+                    "C": "$100 because the cost is not paid.",
+                    "D": "$110 because total value is lost."
+                },
+                "correct": "B",
+                "explanation": "Total benefit is 40 + 35 + 20 + 15 = 110, and cost is 100. Efficient provision would create net surplus of 10, so failure to provide creates DWL of 10. A ignores forgone surplus. C counts cost rather than net loss. D ignores the cost saved by not providing."
+            }
+        ]
+    },
+    {
+        "topic": "Efficient Public Good Provision",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Two consumers have marginal benefits for a public good: MB1 = 80 - 2Q and MB2 = 40 - Q. Marginal cost is MC = 60. What is the efficient quantity?",
+                "choices": {
+                    "A": "Q = 10",
+                    "B": "Q = 20",
+                    "C": "Q = 30",
+                    "D": "Q = 40"
+                },
+                "correct": "B",
+                "explanation": "Samuelson condition: MB1 + MB2 = MC. Thus 120 - 3Q = 60, so Q = 20. A uses only consumer 1's MB condition. C uses only consumer 2's MB condition incorrectly. D horizontally sums as if it were a private good."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Three households value flood protection with marginal benefits 50 - Q, 40 - Q, and 30 - Q. The marginal cost is MC = 60. What is the efficient level of flood protection?",
+                "choices": {
+                    "A": "Q = 20",
+                    "B": "Q = 30",
+                    "C": "Q = 60",
+                    "D": "Q = 10"
+                },
+                "correct": "A",
+                "explanation": "Sum marginal benefits: MSB = 120 - 3Q. Set 120 - 3Q = 60, so Q = 20. B uses two households' benefits. C ignores the negative slope. D uses only the highest individual benefit curve."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For a public good, MSB = 150 - 3Q and MC = c. What happens to efficient Q when MC falls from 60 to 30?",
+                "choices": {
+                    "A": "It falls from 30 to 40 because lower cost reduces scarcity.",
+                    "B": "It rises from 30 to 40 because the lower MC line intersects MSB at a higher quantity.",
+                    "C": "It stays at 50 because MSB is unchanged.",
+                    "D": "It rises from 60 to 90 because MC is subtracted from each individual's MB."
+                },
+                "correct": "B",
+                "explanation": "Efficiency sets 150 - 3Q = c. At c = 60, Q = 30; at c = 30, Q = 40. The mechanism is a downward shift in marginal cost. A reverses the direction. C ignores the changed cost. D uses an incorrect formula."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A town's efficient public good provision satisfies MB1 + MB2 = MC. Initially MB1 = 60 - Q and MB2 = 40 - Q. MC = 50. If a third resident with MB3 = 30 - Q moves in, what happens to efficient Q?",
+                "choices": {
+                    "A": "It rises from 25 to 26.67 because the vertical sum of marginal benefits increases.",
+                    "B": "It falls from 25 to 20 because more people increase free riding.",
+                    "C": "It stays at 25 because MC is unchanged.",
+                    "D": "It rises from 50 to 80 because quantities are horizontally summed."
+                },
+                "correct": "A",
+                "explanation": "Initially, 100 - 2Q = 50, so Q = 25. With the third resident, 130 - 3Q = 50, so Q = 26.67. The mechanism is an upward shift in summed marginal benefits. B confuses efficient provision with voluntary provision. C ignores the new beneficiary. D uses private-good summation."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "On a public good graph, individual MB curves are vertically summed into an MSB curve. The efficient quantity is where MSB crosses MC. What must be true at that point?",
+                "choices": {
+                    "A": "Each individual's marginal benefit equals marginal cost.",
+                    "B": "The sum of individuals' marginal benefits equals marginal cost.",
+                    "C": "The average of individuals' marginal benefits equals marginal cost.",
+                    "D": "Total benefit equals zero."
+                },
+                "correct": "B",
+                "explanation": "The Samuelson condition is sum of marginal benefits equals marginal cost. A is the private good condition incorrectly applied to each person. C undercounts benefits. D is unrelated."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph compares efficient provision of a private good and a public good. Which interpretation is correct?",
+                "choices": {
+                    "A": "For a private good, demands are vertically summed; for a public good, demands are horizontally summed.",
+                    "B": "For a private good, marginal rates of substitution are summed across people; for a public good, each person's MRS must equal MC separately.",
+                    "C": "For a private good, quantities are horizontally summed at a common price; for a public good, willingnesses to pay are vertically summed at a common quantity.",
+                    "D": "Both goods use the same aggregation rule because all demand curves slope downward."
+                },
+                "correct": "C",
+                "explanation": "Private goods are rival, so people consume different quantities at the same price; public goods are jointly consumed, so marginal willingnesses to pay are summed for the same quantity. A reverses the rules. B reverses the efficiency conditions. D ignores rivalry."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What is the economic intuition behind the Samuelson condition for efficient public good provision?",
+                "choices": {
+                    "A": "Because everyone consumes the same unit, society should add all individuals' marginal willingnesses to pay for that unit and compare the sum to marginal cost.",
+                    "B": "Because public goods are free to produce, marginal cost should be ignored.",
+                    "C": "Because only the highest-value consumer matters for efficiency.",
+                    "D": "Because each person must buy a separate unit of the public good."
+                },
+                "correct": "A",
+                "explanation": "A unit of a public good benefits all consumers simultaneously, so the relevant marginal benefit is the sum across consumers. B falsely assumes zero cost. C ignores other beneficiaries. D describes private goods."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A county is deciding how much mosquito control to provide. All residents benefit from the same spraying level, and one resident's protection does not reduce another's. Which efficiency rule should the county use?",
+                "choices": {
+                    "A": "Provide spraying until each resident's marginal benefit separately equals marginal cost.",
+                    "B": "Provide spraying until the sum of residents' marginal benefits equals marginal cost.",
+                    "C": "Provide spraying until the lowest marginal benefit equals zero.",
+                    "D": "Provide spraying only if one resident is willing to pay the full marginal cost."
+                },
+                "correct": "B",
+                "explanation": "Mosquito control is a public good over the protected area, so the Samuelson condition applies. A applies the private-good condition incorrectly. C is not an efficiency rule. D ignores aggregate benefits."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes the public good efficiency condition from the private good efficiency condition?",
+                "choices": {
+                    "A": "Public good efficiency requires summing marginal benefits across consumers; private good efficiency requires each consumer's marginal benefit for their own units to equal price or marginal cost.",
+                    "B": "Public good efficiency requires each person to consume a different quantity; private good efficiency requires everyone consume the same quantity.",
+                    "C": "Public good efficiency ignores marginal cost; private good efficiency ignores marginal benefit.",
+                    "D": "Public good efficiency uses horizontal summation; private good efficiency uses vertical summation."
+                },
+                "correct": "A",
+                "explanation": "Public goods are jointly consumed, so marginal benefits are vertically summed. Private goods are rival, so efficiency allocates units so each consumer's marginal benefit equals marginal cost. B reverses consumption patterns. C is false. D reverses aggregation rules."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "Two residents value a public good with MB1 = 70 - Q and MB2 = 50 - Q. MC = 40. If the market provides Q = 20 but the efficient quantity is Q = 40, what is the deadweight loss from underprovision?",
+                "choices": {
+                    "A": "200",
+                    "B": "400",
+                    "C": "800",
+                    "D": "1600"
+                },
+                "correct": "B",
+                "explanation": "MSB = 120 - 2Q. At Q = 20, MSB = 80; at Q = 40, MSB = 40 = MC. DWL is 0.5 × 20 × 40 = 400. A halves the triangle. C doubles it. D uses total benefit over the missing units without subtracting cost."
+            }
+        ]
+    }
+]

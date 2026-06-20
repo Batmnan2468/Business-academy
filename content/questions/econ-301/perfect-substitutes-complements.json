@@ -1,0 +1,135 @@
+{
+  "topic": "Perfect Substitutes and Perfect Complements",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Chris has utility U(x,y)=3x+2y, income m=60, p_x=6, and p_y=3. What is the optimal bundle and interpretation?",
+      "choices": {
+        "A": "x=10, y=0; x has the larger utility coefficient.",
+        "B": "x=0, y=20; y gives more utility per dollar, so Chris buys only y.",
+        "C": "x=5, y=10; perfect substitutes always imply equal spending.",
+        "D": "x=6, y=8; the optimum occurs where x/y equals 3/2."
+      },
+      "correct": "B",
+      "explanation": "MU_x/p_x=3/6=0.5 and MU_y/p_y=2/3=0.667, so all income goes to y. A ignores prices, C imposes Cobb-Douglas logic, and D confuses utility coefficients with consumption ratios."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Priya has utility U(L,R)=min{L,2R}, where L is left shoes and R is right shoes. Income is 120, p_L=4, and p_R=8. What bundle maximizes utility?",
+      "choices": {
+        "A": "L=15, R=7.5; she buys the fixed proportion L=2R and spends all income.",
+        "B": "L=30, R=0; left shoes are cheaper.",
+        "C": "L=0, R=15; right shoes determine utility more strongly.",
+        "D": "L=12, R=9; she equalizes spending on the two goods."
+      },
+      "correct": "A",
+      "explanation": "The kink condition is L=2R. Cost is 4(2R)+8R=16R=120, so R=7.5 and L=15. B and C ignore complementarity, and D uses equal spending rather than the fixed proportion."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x+2y, income is 100. Initially p_x=5 and p_y=8. Then p_y rises to 12. What happens?",
+      "choices": {
+        "A": "The consumer switches from buying only y to buying only x because y's utility per dollar falls below x's.",
+        "B": "The consumer continues buying only y because y has coefficient 2.",
+        "C": "The consumer buys equal quantities because the price change makes the goods complements.",
+        "D": "The consumer buys only x both before and after because x is cheaper."
+      },
+      "correct": "A",
+      "explanation": "Initially MU_x/p_x=0.2 and MU_y/p_y=0.25, so all y. After p_y=12, MU_y/p_y=0.167<0.2, so all x. B ignores price, C changes preferences, and D gets the initial comparison wrong."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=min{x,y}, m=90. Initially p_x=3 and p_y=6. Then p_x falls to 1.50. What happens to the optimal bundle?",
+      "choices": {
+        "A": "It changes from (10,10) to (12,12) because the cost of each matched pair falls.",
+        "B": "It changes from (10,10) to (60,0) because x is now cheaper.",
+        "C": "It remains (10,10) because the goods must be consumed equally.",
+        "D": "It changes from (15,15) to (20,20) because income is split equally."
+      },
+      "correct": "A",
+      "explanation": "Initial q=90/(3+6)=10. New q=90/(1.5+6)=12. B uses substitute logic, C ignores purchasing-power effects, and D miscomputes both bundles."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer views red pencils r and blue pencils b as perfect substitutes at a rate of 1 red for 1 blue. What do the indifference curves look like with r on the horizontal axis?",
+      "choices": {
+        "A": "Straight lines with constant slope -1.",
+        "B": "L-shaped curves with kinks along r=b.",
+        "C": "Vertical lines because blue pencils are neutral.",
+        "D": "Upward-sloping lines because more of both goods is better."
+      },
+      "correct": "A",
+      "explanation": "Perfect substitutes have linear indifference curves with constant MRS. B describes perfect complements, C describes a neutral good, and D violates monotonicity for goods."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A consumer wants hot dogs h and buns b in a 1-to-1 ratio, U(h,b)=min{h,b}. What feature appears in the indifference-curve map?",
+      "choices": {
+        "A": "Straight parallel downward-sloping lines.",
+        "B": "L-shaped curves with kinks along the 45-degree line h=b.",
+        "C": "Circles centered at the satiation point.",
+        "D": "Horizontal lines because hot dogs are irrelevant."
+      },
+      "correct": "B",
+      "explanation": "Perfect complements generate L-shaped indifference curves whose kinks show the fixed consumption ratio. A describes substitutes, C describes satiation, and D describes a neutral good."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why do perfect substitutes often produce corner solutions?",
+      "choices": {
+        "A": "Because the MRS is constant, so unless it exactly equals the price ratio, one good gives more utility per dollar everywhere.",
+        "B": "Because the MRS is always diminishing, so the consumer diversifies.",
+        "C": "Because the goods must be consumed in fixed proportions.",
+        "D": "Because perfect substitutes violate completeness."
+      },
+      "correct": "A",
+      "explanation": "With constant MRS, the better value good remains better at every bundle, producing a corner unless the consumer is exactly indifferent along the budget line. B describes convex preferences, C describes complements, and D is false."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A printer requires exactly one black cartridge and one color cartridge to produce a usable cartridge set. Extra black cartridges without color cartridges add no value. Which preference model best fits?",
+      "choices": {
+        "A": "Perfect substitutes",
+        "B": "Perfect complements",
+        "C": "Neutral goods",
+        "D": "Bads"
+      },
+      "correct": "B",
+      "explanation": "The goods are valuable only in a fixed proportion, which is perfect complements. A would allow replacement at a constant rate, C would make one good irrelevant, and D would make one good undesirable."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes perfect substitutes from perfect complements?",
+      "choices": {
+        "A": "Perfect substitutes have constant MRS and linear indifference curves; perfect complements have fixed-proportion consumption and L-shaped indifference curves.",
+        "B": "Perfect substitutes have L-shaped curves; perfect complements have straight-line curves.",
+        "C": "Perfect substitutes require equal quantities; perfect complements require equal marginal utilities per dollar.",
+        "D": "Perfect substitutes are always inferior goods; perfect complements are always normal goods."
+      },
+      "correct": "A",
+      "explanation": "A states the core graphical and behavioral distinction. B reverses them, C confuses ratios and optimality conditions, and D incorrectly links preference type to income effects."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=4x+y and m=80. Initially p_x=8 and p_y=1, then p_x falls to 2. What happens?",
+      "choices": {
+        "A": "The consumer switches from all y to all x because x's utility per dollar rises from 0.5 to 2.",
+        "B": "The consumer buys all y both before and after because y is cheaper.",
+        "C": "The consumer buys x=20 and y=40 because substitutes imply equal spending.",
+        "D": "The consumer buys x=y because the goods become complements."
+      },
+      "correct": "A",
+      "explanation": "Initially MU_x/p_x=4/8=0.5<1, so all y. After p_x=2, 4/2=2>1, so all x. B ignores utility per dollar, C imposes interior logic, and D changes preferences. Welfare analysis is not directly applicable here, so Type 2 is used."
+    }
+  ]
+}

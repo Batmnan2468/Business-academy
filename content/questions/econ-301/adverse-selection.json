@@ -1,0 +1,135 @@
+{
+  "topic": "Adverse Selection",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A used-laptop market has 100 high-quality laptops worth $900 to buyers and $700 to sellers, and 100 low-quality laptops worth $400 to buyers and $300 to sellers. Buyers cannot observe quality before purchase but know the composition of laptops offered. If both types are offered, risk-neutral buyers offer the expected value. Which outcome is consistent with adverse selection?",
+      "choices": {
+        "A": "Buyers offer $650, both types sell, and total gains from trade are $30,000.",
+        "B": "Buyers offer $650, only low-quality laptops sell, and high-quality laptops are inefficiently excluded.",
+        "C": "Buyers offer $900, both types sell, and there is no market failure.",
+        "D": "Buyers offer $400, no laptops sell because low-quality sellers require $700."
+      },
+      "correct": "B",
+      "explanation": "If both types were expected to sell, buyers would pay (900 + 400)/2 = $650. High-quality sellers require at least $700, so they exit; low-quality sellers require $300, so they remain. This is adverse selection because the presence of low-quality laptops drives out high-quality laptops. A incorrectly assumes high-quality sellers accept $650. C ignores asymmetric information. D confuses the low-quality reservation value with the high-quality one."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "An insurance company faces two types of drivers. Safe drivers have expected accident costs of $600 per year and risky drivers have expected accident costs of $2,400 per year. There are 80 safe drivers and 20 risky drivers. Drivers know their type, but the insurer cannot observe type before selling a policy. If the insurer must charge one premium and break even on the pool of buyers, what is the actuarially fair pooled premium, and why might adverse selection occur if safe drivers value coverage at no more than $900?",
+      "choices": {
+        "A": "$960; safe drivers buy because $960 is close to their expected cost, so the pooled market survives.",
+        "B": "$1,500; risky drivers leave because the premium is below their expected cost.",
+        "C": "$960; safe drivers leave because the premium exceeds their maximum willingness to pay, leaving a riskier pool.",
+        "D": "$600; the insurer should charge the safe-driver expected cost because safe drivers are the majority."
+      },
+      "correct": "C",
+      "explanation": "The pooled expected cost is (80)(600)/100 + (20)(2400)/100 = 480 + 480 = $960. Since safe drivers value coverage at no more than $900, they do not buy at $960, so the remaining pool becomes riskier. A gets the premium but misses the participation problem. B miscalculates the pooled premium and reverses which type exits. D incorrectly prices only the majority type rather than the expected cost of the insured pool."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a used-bike market, high-quality bikes are worth $500 to buyers and $420 to sellers. Low-quality bikes are worth $200 to buyers and $120 to sellers. Initially buyers believe 60% of offered bikes are high-quality. After online reviews reveal more complaints, buyers believe only 40% are high-quality. How does this belief change affect the market?",
+      "choices": {
+        "A": "Expected willingness to pay falls from $380 to $320; high-quality sellers may exit because the pooled price moves farther below their reservation value.",
+        "B": "Expected willingness to pay rises from $320 to $380; high-quality sellers become more likely to participate.",
+        "C": "Expected willingness to pay falls from $500 to $420; all bikes still sell because high-quality sellers receive exactly their cost.",
+        "D": "Expected willingness to pay remains $350 because quality is unobservable, so beliefs cannot affect price."
+      },
+      "correct": "A",
+      "explanation": "With 60% high quality, expected buyer value is .6(500) + .4(200) = $380. With 40% high quality, it is .4(500) + .6(200) = $320. The mechanism is belief-driven pooling: worse expected quality lowers the pooled price and makes high-quality sellers less willing to participate. B reverses the direction. C uses the high-quality seller cost incorrectly as the price. D ignores that beliefs determine expected willingness to pay under asymmetric information."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Suppose a certification program for used cars reduces buyers' uncertainty. Without certification, buyers believe a car has a 50% chance of being good, worth $12,000, and a 50% chance of being bad, worth $6,000. Good-car sellers require $10,000, while bad-car sellers require $5,000. With credible certification, buyers can identify good cars. What changes, and what is the mechanism?",
+      "choices": {
+        "A": "The pooled price falls from $9,000 to $6,000 because certification reveals bad cars, reducing gains from trade.",
+        "B": "Good cars can trade at prices between $10,000 and $12,000 because certification separates quality and prevents low-quality cars from depressing the good-car price.",
+        "C": "Bad cars disappear because certification makes them worthless to buyers.",
+        "D": "Nothing changes because seller reservation values are unaffected by certification."
+      },
+      "correct": "B",
+      "explanation": "Without certification, the pooled buyer value is .5(12000) + .5(6000) = $9,000, below the good-car seller's reservation value of $10,000. Certification makes quality observable, allowing good cars to trade separately at mutually beneficial prices between $10,000 and $12,000. A focuses only on bad-car revelation and misses the separating effect. C incorrectly says bad cars have zero value. D ignores that information changes buyers' willingness to pay."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Imagine a graph with the fraction of high-quality used phones on the horizontal axis and buyers' maximum pooled willingness to pay on the vertical axis. High-quality sellers require $300, low-quality sellers require $100, buyers value high-quality phones at $400, and buyers value low-quality phones at $150. Which statement correctly describes the graph and the adverse-selection threshold?",
+      "choices": {
+        "A": "The pooled willingness-to-pay line is downward sloping, and high-quality phones enter only when the high-quality fraction is low.",
+        "B": "The pooled willingness-to-pay line is horizontal at $275 because buyers average $400 and $150.",
+        "C": "The pooled willingness-to-pay line is upward sloping from $150 to $400, and high-quality sellers participate only when it reaches at least $300.",
+        "D": "The seller reservation line for high-quality phones slopes upward because quality becomes more expensive as more high-quality phones enter."
+      },
+      "correct": "C",
+      "explanation": "Expected willingness to pay is p(400) + (1 - p)(150) = 150 + 250p, an upward-sloping line in the fraction p of high-quality phones. High-quality sellers participate when 150 + 250p >= 300, so p >= 0.6. A gets the slope backward. B treats the average as fixed regardless of composition. D invents a changing reservation value not given in the setup."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In an adverse-selection diagram for health insurance, put the premium on the vertical axis and the share of low-risk people remaining in the pool on the horizontal axis. Low-risk people have expected cost $1,000, high-risk people have expected cost $5,000, and the insurer's break-even premium falls as the low-risk share rises. What does a downward movement along the break-even premium curve represent when low-risk people exit the pool?",
+      "choices": {
+        "A": "It represents lower average expected claims because the pool becomes healthier.",
+        "B": "It represents a lower premium caused by competition among insurers for high-risk customers.",
+        "C": "It represents movement to a pool with fewer low-risk people, higher average expected claims, and a higher required premium.",
+        "D": "It represents the elimination of asymmetric information because the insurer learns everyone’s type."
+      },
+      "correct": "C",
+      "explanation": "As the share of low-risk people falls, the insured pool becomes riskier, average expected claims rise, and the break-even premium must rise. The key graph feature is the negative relationship between low-risk share and break-even premium. A reverses the risk composition effect. B gives a competition explanation rather than an adverse-selection mechanism. D confuses changing pool composition with full information."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A market has high-quality repair services worth $200 to customers and costing $140 to providers, and low-quality repair services worth $80 to customers and costing $50 to providers. Customers cannot observe quality before purchase. Why can the market fail even though high-quality repair has positive gains from trade?",
+      "choices": {
+        "A": "Because asymmetric information can force customers to offer a pooled price below $140, causing high-quality providers to exit despite positive surplus.",
+        "B": "Because high-quality providers have higher costs, their services are inefficient by definition.",
+        "C": "Because low-quality providers always lose money when they sell at any pooled price.",
+        "D": "Because customers cannot value repair services unless the government sets a price."
+      },
+      "correct": "A",
+      "explanation": "High-quality repair creates gains from trade because $200 exceeds $140, but if customers cannot distinguish quality, their pooled offer may be too low for high-quality providers. This is the central economic meaning of adverse selection. B confuses higher cost with inefficiency; efficiency depends on value exceeding cost. C is false because low-quality providers have cost $50. D is unrelated to the information problem."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A peer-to-peer lending site finds that borrowers most eager to accept loans at a 22% interest rate are disproportionately those who privately know they are unlikely to repay. Safer borrowers leave because the rate is too high for their risk. Which model best explains the pattern, and what policy targets the root problem?",
+      "choices": {
+        "A": "Moral hazard; require borrowers to post updates after receiving the loan.",
+        "B": "Adverse selection; improve pre-loan risk classification using verified income and credit-history screening.",
+        "C": "Signaling; require lenders to buy education certificates.",
+        "D": "Perfect competition; lower the interest rate until all borrowers participate."
+      },
+      "correct": "B",
+      "explanation": "The problem occurs before the transaction: borrowers privately know their repayment risk, and high-risk borrowers crowd out low-risk borrowers. Better pre-loan screening targets the asymmetric information. A describes post-contract behavior, not initial hidden type. C misplaces signaling on lenders rather than informed borrowers. D ignores that a uniform price can worsen selection."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement most precisely distinguishes adverse selection from moral hazard in insurance markets?",
+      "choices": {
+        "A": "Adverse selection concerns hidden action after coverage begins; moral hazard concerns hidden type before coverage begins.",
+        "B": "Adverse selection occurs only in product markets; moral hazard occurs only in labor markets.",
+        "C": "Adverse selection concerns hidden type before the contract is signed; moral hazard concerns hidden action after the contract is signed.",
+        "D": "Adverse selection is caused by monopoly power; moral hazard is caused by externalities."
+      },
+      "correct": "C",
+      "explanation": "Adverse selection is a hidden-information problem before contracting, while moral hazard is a hidden-action problem after contracting. A reverses the definitions. B falsely limits each problem to one market. D confuses asymmetric information with other market failures."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "In a used-tablet market, there are 50 good tablets worth $300 to buyers and $220 to sellers, and 50 bad tablets worth $120 to buyers and $80 to sellers. With full information, all tablets with positive gains from trade sell. Under asymmetric information, buyers offer the pooled expected value if both types are expected, and good tablets exit if that offer is below their reservation value. What is the deadweight loss from adverse selection?",
+      "choices": {
+        "A": "$0, because bad tablets still trade.",
+        "B": "$2,000, equal to the surplus lost from good tablets not trading.",
+        "C": "$4,000, equal to the total full-information surplus from good tablets.",
+        "D": "$6,000, equal to the buyer value of bad tablets."
+      },
+      "correct": "C",
+      "explanation": "The pooled value is (300 + 120)/2 = $210, below the good-tablet seller reservation value of $220, so good tablets exit. Full-information surplus on each good tablet is 300 - 220 = $80, so the lost surplus is 50($80) = $4,000. Bad tablets still trade, so their surplus is not lost. A ignores the missing good-tablet trades. B uses only half the lost surplus. D uses buyer value rather than surplus."
+    }
+  ]
+}

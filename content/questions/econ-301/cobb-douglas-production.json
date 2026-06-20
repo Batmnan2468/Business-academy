@@ -1,0 +1,135 @@
+{
+  "topic": "Cobb-Douglas Production",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has Q = 10L^0.5K^0.5. Labor costs $20 and capital costs $80. To produce Q = 200 at minimum cost, what input bundle should it choose?",
+      "choices": {
+        "A": "L = 40, K = 10 because cost minimization requires MPL/MPK = w/r = 1/4, so K/L = 1/4.",
+        "B": "L = 10, K = 40 because capital is more expensive and should have higher marginal product.",
+        "C": "L = 20, K = 20 because equal exponents imply equal input quantities.",
+        "D": "L = 400, K = 1 because only LK matters."
+      },
+      "correct": "A",
+      "explanation": "Q=200 implies sqrt(LK)=20, so LK=400. For this Cobb-Douglas, MPL/MPK=K/L. Set K/L=w/r=20/80=1/4, so K=L/4. Then L(L/4)=400, giving L=40,K=10. B inverts the ratio. C ignores input prices. D is feasible but not cost-minimizing."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "For Q = 4L^0.25K^0.75, what is the output elasticity of labor, and what does it mean?",
+      "choices": {
+        "A": "0.25; a 1% increase in labor holding capital fixed raises output by approximately 0.25%.",
+        "B": "0.75; labor's elasticity equals capital's exponent because capital is held fixed.",
+        "C": "1.00; Cobb-Douglas output always rises one-for-one with labor.",
+        "D": "4.00; the technology parameter is labor's elasticity."
+      },
+      "correct": "A",
+      "explanation": "In Cobb-Douglas Q=AL^aK^b, the exponent a is the output elasticity of labor. B uses the capital exponent. C assumes constant returns implies unit elasticity. D confuses total factor productivity with elasticity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = 5L^0.4K^0.6, what happens to output if labor rises by 10% while capital is fixed?",
+      "choices": {
+        "A": "Output rises by approximately 4% because the labor exponent is the labor output elasticity.",
+        "B": "Output rises by approximately 6% because the capital exponent is larger.",
+        "C": "Output rises by approximately 10% because labor rises by 10%.",
+        "D": "Output rises by approximately 50% because A = 5."
+      },
+      "correct": "A",
+      "explanation": "The labor elasticity is 0.4, so a 10% labor increase raises output by about 4%. B uses the wrong exponent. C assumes unit elasticity. D confuses productivity level with elasticity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A Cobb-Douglas firm has Q = AL^0.3K^0.7. If A rises from 2 to 3 while L and K stay fixed, what happens to output?",
+      "choices": {
+        "A": "Output rises by 50% because A scales total factor productivity directly.",
+        "B": "Output rises by 30% because labor's exponent is 0.3.",
+        "C": "Output rises by 70% because capital's exponent is 0.7.",
+        "D": "Output is unchanged because inputs do not change."
+      },
+      "correct": "A",
+      "explanation": "Changing A from 2 to 3 multiplies output by 3/2, a 50% increase. B and C incorrectly use input elasticities. D ignores technology."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For Q = L^0.5K^0.5, what happens to the isoquant slope as the firm moves rightward along an isoquant, using more labor and less capital?",
+      "choices": {
+        "A": "The isoquant becomes flatter because TRS = K/L falls.",
+        "B": "The isoquant becomes steeper because labor increases.",
+        "C": "The slope stays constant because the exponents are equal.",
+        "D": "The isoquant becomes upward sloping because output is fixed."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas with equal exponents, TRS=K/L. Moving rightward lowers K and raises L, so K/L falls and the isoquant flattens. B reverses the effect. C confuses equal exponents with constant slope. D misunderstands isoquants."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A Cobb-Douglas isoquant is smooth and convex to the origin. Which graphical feature is inconsistent with that technology?",
+      "choices": {
+        "A": "A sharp right-angle kink at a fixed labor-capital ratio.",
+        "B": "A downward-sloping curve.",
+        "C": "A diminishing absolute slope as labor increases.",
+        "D": "Higher isoquants lying farther from the origin."
+      },
+      "correct": "A",
+      "explanation": "A right-angle kink describes Leontief fixed-proportions production, not smooth Cobb-Douglas. B, C, and D are standard Cobb-Douglas isoquant properties."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "In Q = 12L^0.2K^0.8, what does the larger capital exponent imply?",
+      "choices": {
+        "A": "Holding the other input fixed, output is more elastic with respect to capital than labor.",
+        "B": "The firm must spend 80% of its budget on capital.",
+        "C": "Capital is always cheaper than labor.",
+        "D": "Labor has negative marginal product."
+      },
+      "correct": "A",
+      "explanation": "The exponent is the output elasticity of that input. A larger capital exponent means output responds more proportionally to capital changes. B would require cost minimization and prices. C has no basis. D is false because the labor exponent is positive."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "An analyst estimates Q = 3L^0.6K^0.3 for a delivery company and wants to classify returns to scale. What should she conclude?",
+      "choices": {
+        "A": "Decreasing returns to scale because 0.6 + 0.3 = 0.9 < 1.",
+        "B": "Increasing returns to scale because labor's exponent is greater than capital's.",
+        "C": "Constant returns to scale because both exponents are positive.",
+        "D": "Cannot determine returns to scale without wages and rental rates."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas, returns to scale depend on the sum of exponents. Since 0.9<1, returns are decreasing. B compares exponents incorrectly. C only notes positive marginal products. D confuses production technology with cost minimization."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes the Cobb-Douglas technology parameter A from the exponents a and b in Q = AL^aK^b?",
+      "choices": {
+        "A": "A shifts overall productivity; a and b measure output elasticities and determine returns to scale through their sum.",
+        "B": "A determines returns to scale; a and b only determine input prices.",
+        "C": "A is labor productivity; b is capital cost.",
+        "D": "A matters only in the short run; a and b matter only in the long run."
+      },
+      "correct": "A",
+      "explanation": "A is total factor productivity, while a and b are input elasticities whose sum determines returns to scale. B misassigns returns to scale. C confuses technology with costs. D invents a time-period division."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For Q = 2L^0.5K^0.5, input prices change from w = 10, r = 10 to w = 20, r = 10. Holding target output fixed, how does the cost-minimizing input mix change? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "The firm uses relatively less labor and more capital because labor becomes more expensive, requiring a higher TRS at the optimum.",
+        "B": "The firm uses relatively more labor because labor's marginal product must rise when its wage rises.",
+        "C": "The input mix is unchanged because the production exponents are unchanged.",
+        "D": "The firm stops using capital because labor price changed."
+      },
+      "correct": "A",
+      "explanation": "Cost minimization requires TRS=w/r. When w/r rises, the firm moves to a point with higher K/L, meaning less labor relative to capital. B reverses substitution. C ignores input prices. D has no basis for Cobb-Douglas interior production."
+    }
+  ]
+}

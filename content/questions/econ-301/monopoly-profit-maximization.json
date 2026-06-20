@@ -1,0 +1,135 @@
+{
+  "topic": "Monopoly Profit Maximization",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A monopolist faces inverse demand P = 150 - 2Q and total cost C(Q) = 300 + 30Q. Find the profit-maximizing output, price, and profit.",
+      "choices": {
+        "A": "Q = 30, P = 90, profit = 1,500.",
+        "B": "Q = 60, P = 30, profit = -300.",
+        "C": "Q = 37.5, P = 75, profit = 1,387.50.",
+        "D": "Q = 30, P = 30, profit = -300."
+      },
+      "correct": "A",
+      "explanation": "TR = 150Q - 2Q^2, so MR = 150 - 4Q. Setting MR = MC = 30 gives Q = 30 and P = 90. Profit is 90(30) - 300 - 30(30) = 1,500. B uses P = MC. C sets MR = 0. D gets monopoly quantity but charges marginal cost."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A campus bookstore has exclusive rights to sell a course packet. Demand is P = 70 - Q and cost is C(Q) = 100 + 10Q + Q^2. What output and price maximize profit?",
+      "choices": {
+        "A": "Q = 20, P = 50",
+        "B": "Q = 15, P = 55",
+        "C": "Q = 30, P = 40",
+        "D": "Q = 10, P = 60"
+      },
+      "correct": "B",
+      "explanation": "TR = 70Q - Q^2, so MR = 70 - 2Q. MC = 10 + 2Q. Setting MR = MC gives 70 - 2Q = 10 + 2Q, so Q = 15 and P = 55. A ignores the rising marginal cost term. C uses P = MC incorrectly. D results from setting MR equal to average variable cost."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A monopolist faces P = 100 - Q. Marginal cost falls from 20 to 10 after an improvement in production technology. What happens to the optimal output and price?",
+      "choices": {
+        "A": "Output rises from 40 to 45 and price falls from 60 to 55 because lower MC makes additional units profitable until MR falls to the new MC.",
+        "B": "Output rises from 80 to 90 and price remains equal to MC because the firm is a price taker.",
+        "C": "Output falls from 40 to 35 and price rises from 60 to 65 because lower cost reduces the need to sell output.",
+        "D": "Output stays at 40 and price rises to 70 because lower cost increases monopoly power."
+      },
+      "correct": "A",
+      "explanation": "MR = 100 - 2Q. With MC = 20, Q = 40 and P = 60. With MC = 10, Q = 45 and P = 55. Lower MC causes expansion along MR and a lower price along demand. B uses competitive pricing. C reverses the effect. D incorrectly holds quantity fixed."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A monopolist faces P = 120 - 2Q and MC = 20. A successful advertising campaign changes demand to P = 140 - 2Q, with MC unchanged. What happens to the profit-maximizing output and price?",
+      "choices": {
+        "A": "Output stays at 25 and price rises from 70 to 90 because advertising only changes willingness to pay.",
+        "B": "Output rises from 25 to 30 and price rises from 70 to 80 because demand and MR shift upward.",
+        "C": "Output rises from 50 to 60 and price remains 20 because MC is unchanged.",
+        "D": "Output falls from 30 to 25 and price rises because demand becomes more elastic."
+      },
+      "correct": "B",
+      "explanation": "Initially MR = 120 - 4Q, so Q = 25 and P = 70. After advertising, MR = 140 - 4Q, so Q = 30 and P = 80. The mechanism is an upward shift in both demand and MR. A ignores the MR shift. C uses competitive output. D reverses the output effect."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "On a monopoly diagram, demand is downward sloping, MR lies below demand, and MC is upward sloping. If MR intersects MC at Q = 25 and the demand curve at Q = 25 has height P = 80, which statement is correct?",
+      "choices": {
+        "A": "The firm produces Q = 25 and charges P = 80.",
+        "B": "The firm produces Q = 25 and charges the MC value at Q = 25.",
+        "C": "The firm produces where demand intersects MC, not where MR intersects MC.",
+        "D": "The firm charges the price at which MR equals zero."
+      },
+      "correct": "A",
+      "explanation": "The profit-maximizing output comes from MR = MC, and the price comes from demand at that output. B confuses price with marginal cost. C gives the competitive condition. D confuses revenue maximization with profit maximization."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A graph for a monopolist shows MC crossing MR at Q = 12, while MC crosses demand at Q = 20. The demand curve is above MC at Q = 12. What does the distance between price on demand and MC at Q = 12 represent?",
+      "choices": {
+        "A": "Deadweight loss per unit on all 20 competitive units.",
+        "B": "The monopolist's markup over marginal cost at the profit-maximizing output.",
+        "C": "Fixed cost per unit.",
+        "D": "The slope of the MR curve."
+      },
+      "correct": "B",
+      "explanation": "At the monopoly quantity, price is read from demand and MC is read from the MC curve. The vertical gap P - MC is the markup per unit. A confuses a vertical gap with the welfare triangle. C confuses markup with average fixed cost. D confuses a vertical distance with a slope."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A monopolist sets MR = MC at Q = 40 while price is $75 and MC is $35. What is the best interpretation of the condition MR = MC?",
+      "choices": {
+        "A": "The last unit's contribution to revenue equals the last unit's cost, even though price exceeds marginal cost.",
+        "B": "The last unit sells for exactly its marginal cost.",
+        "C": "The firm's total revenue equals total cost.",
+        "D": "The firm has eliminated all consumer surplus."
+      },
+      "correct": "A",
+      "explanation": "MR = MC means the marginal contribution to revenue from increasing output equals marginal cost. Since MR is below price under monopoly, price can exceed MC at the optimum. B confuses MR with price. C describes zero profit, not marginal optimization. D describes perfect price discrimination, not ordinary monopoly."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A city grants one firm the exclusive right to operate parking garages downtown. Demand for parking spaces per hour is P = 20 - 0.1Q and marginal cost is $2 per space. What model and optimization condition should be used, and what are the resulting Q and P?",
+      "choices": {
+        "A": "Monopoly; set MR = MC, giving Q = 90 and P = 11.",
+        "B": "Perfect competition; set P = MC, giving Q = 180 and P = 2.",
+        "C": "Monopoly; set P = MC, giving Q = 180 and P = 2.",
+        "D": "Revenue maximization; set MR = 0, giving Q = 100 and P = 10."
+      },
+      "correct": "A",
+      "explanation": "Exclusive rights create monopoly power. MR = 20 - 0.2Q. Setting MR = 2 gives Q = 90 and P = 11. B and C use competitive pricing. D maximizes revenue but ignores marginal cost."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes monopoly profit maximization from revenue maximization for demand P = 100 - Q and MC = 20?",
+      "choices": {
+        "A": "Profit maximization sets MR = MC and gives Q = 40; revenue maximization sets MR = 0 and gives Q = 50.",
+        "B": "Profit maximization sets P = MC and gives Q = 80; revenue maximization sets MR = MC and gives Q = 40.",
+        "C": "Profit maximization and revenue maximization both give Q = 50 because total revenue is largest there.",
+        "D": "Profit maximization sets MC = 0 and gives Q = 50; revenue maximization sets P = MC and gives Q = 80."
+      },
+      "correct": "A",
+      "explanation": "MR = 100 - 2Q. Profit maximization uses MR = MC = 20, giving Q = 40. Revenue maximization uses MR = 0, giving Q = 50. B reverses the rules. C ignores cost. D incorrectly uses MC = 0 for profit maximization."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A monopolist faces P = 90 - Q and MC = 30. What are consumer surplus, producer surplus, and deadweight loss at the monopoly outcome, assuming no fixed cost?",
+      "choices": {
+        "A": "CS = 450, PS = 900, DWL = 450",
+        "B": "CS = 900, PS = 900, DWL = 0",
+        "C": "CS = 450, PS = 1,800, DWL = 900",
+        "D": "CS = 1,800, PS = 0, DWL = 450"
+      },
+      "correct": "A",
+      "explanation": "MR = 90 - 2Q. Setting MR = 30 gives Qm = 30 and Pm = 60. CS = 0.5(90 - 60)(30) = 450. PS = (60 - 30)(30) = 900. Competitive output is Qc = 60, so DWL = 0.5(60 - 30)(60 - 30) = 450. B uses competitive welfare. C doubles PS and DWL. D treats the monopoly outcome as if price were marginal cost."
+    }
+  ]
+}

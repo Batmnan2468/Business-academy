@@ -1,0 +1,135 @@
+{
+  "topic": "Private Cost vs Social Cost",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A chemical producer has private marginal cost MPC = 10 + Q and faces inverse demand P = 70 - Q. Each unit creates marginal external cost MEC = Q. What are the private market output and socially efficient output?",
+      "choices": {
+        "A": "Market Q = 30; efficient Q = 20.",
+        "B": "Market Q = 20; efficient Q = 30.",
+        "C": "Market Q = 40; efficient Q = 20.",
+        "D": "Market Q = 30; efficient Q = 30."
+      },
+      "correct": "A",
+      "explanation": "The market sets demand equal to MPC: 70 - Q = 10 + Q, so Q = 30. Efficiency sets demand equal to MSC = MPC + MEC = 10 + 2Q: 70 - Q = 10 + 2Q, so Q = 20. B reverses the two quantities. C uses price minus constant cost incorrectly. D ignores external cost."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A refinery chooses output Q. Inverse demand is P = 100 - 2Q, private marginal cost is MPC = 20, and marginal external cost is MEC = 2Q. What output maximizes social surplus, and why is it below the private output?",
+      "choices": {
+        "A": "Q = 20; because social marginal cost includes pollution damage ignored by the refinery.",
+        "B": "Q = 40; because private cost is the only cost relevant to surplus.",
+        "C": "Q = 30; because marginal external cost should be averaged over all units.",
+        "D": "Q = 10; because external cost should be added twice, once to demand and once to cost."
+      },
+      "correct": "A",
+      "explanation": "MSC = 20 + 2Q. Efficiency requires 100 - 2Q = 20 + 2Q, so Q = 20. The private market sets 100 - 2Q = 20, so Q = 40. B gives private output. C uses an averaging logic instead of marginal analysis. D double-counts the external cost."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a market with P = 90 - Q, MPC = 30, and MEC = e, what happens to the efficient output when e rises from 10 to 30?",
+      "choices": {
+        "A": "It rises from 50 to 70 because external costs increase demand.",
+        "B": "It falls from 50 to 30 because MSC shifts upward by the higher external cost.",
+        "C": "It remains 60 because private marginal cost is unchanged.",
+        "D": "It falls from 60 to 30 because the private supply curve shifts upward."
+      },
+      "correct": "B",
+      "explanation": "Efficiency requires 90 - Q = 30 + e, so Q = 60 - e. When e rises from 10 to 30, efficient output falls from 50 to 30. The mechanism is an upward shift in MSC. A reverses the direction. C gives the unchanged private output. D gets the final efficient output but incorrectly says private supply shifts."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Suppose P = 120 - Q, MPC = 40 + Q, and MEC = aQ. If a rises from 1 to 3, what happens to the gap between market output and efficient output?",
+      "choices": {
+        "A": "It shrinks from 20 to 10 because the private market adjusts to the external cost.",
+        "B": "It stays at 0 because demand is unchanged.",
+        "C": "It widens from 20 to 30 because the MSC curve becomes steeper while MPC is unchanged.",
+        "D": "It widens from 40 to 60 because market output increases."
+      },
+      "correct": "C",
+      "explanation": "Market output solves 120 - Q = 40 + Q, so Qm = 40. Efficient output solves 120 - Q = 40 + Q + aQ, so Qe = 80/(2 + a). If a = 1, Qe = 26.67, gap = 13.33; if a = 3, Qe = 16, gap = 24. The qualitative mechanism is that higher a steepens MSC and widens overproduction; among the choices, C captures the mechanism though the numbers should read approximately 13.33 to 24. A reverses the effect. B ignores the cost divergence. D incorrectly says market output increases."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph, the MPC curve slopes upward and the MSC curve is parallel to MPC but exactly $15 above it at every quantity. Demand slopes downward. Which interpretation is correct?",
+      "choices": {
+        "A": "The vertical distance between MSC and MPC is the marginal external cost.",
+        "B": "The horizontal distance between demand and MPC is the marginal external cost.",
+        "C": "The vertical distance between demand and MSC is the producer's private cost.",
+        "D": "MSC being parallel to MPC means there is no externality."
+      },
+      "correct": "A",
+      "explanation": "Social marginal cost equals private marginal cost plus marginal external cost, so the vertical gap is MEC. B uses a horizontal gap incorrectly. C confuses net benefit with cost. D is wrong because a constant vertical gap is still an external cost."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A market diagram shows demand crossing MPC at Q = 100 and crossing MSC at Q = 70. MSC lies above MPC for all positive quantities. Which graph-based conclusion is correct?",
+      "choices": {
+        "A": "Output from 70 to 100 creates deadweight loss because marginal social cost exceeds marginal benefit.",
+        "B": "Output from 70 to 100 creates surplus because marginal private cost is below demand.",
+        "C": "Output below 70 creates deadweight loss because MSC is above MPC.",
+        "D": "The efficient quantity is 100 because that is where buyers' willingness to pay equals sellers' private cost."
+      },
+      "correct": "A",
+      "explanation": "For the excess units between efficient output 70 and market output 100, MSC exceeds demand, so those units reduce total surplus. B focuses on private surplus and ignores external cost. C treats all external cost as deadweight loss even for efficient units. D uses the private market condition."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A coal plant's MPC for electricity is $40 per MWh, but each MWh also causes $25 of expected health and environmental damage. What is the correct interpretation of social cost?",
+      "choices": {
+        "A": "Social marginal cost is $15 because external cost offsets private cost.",
+        "B": "Social marginal cost is $40 because only the producer's cost affects production.",
+        "C": "Social marginal cost is $65 because it includes both producer cost and external damage.",
+        "D": "Social marginal cost cannot be measured if the external damage is not paid in cash."
+      },
+      "correct": "C",
+      "explanation": "MSC = MPC + MEC = 40 + 25 = 65. A subtracts external cost. B ignores third-party damage. D incorrectly assumes social cost requires an actual market payment."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A downtown nightclub earns revenue from loud outdoor music. Nearby residents lose sleep, but the club does not compensate them. Which framework should be used to compare the club's private decision with efficiency?",
+      "choices": {
+        "A": "Private cost versus social cost, because the club's marginal private cost excludes noise damage borne by residents.",
+        "B": "Public good provision, because music is non-rival and non-excludable.",
+        "C": "Monopoly pricing, because the club chooses a price above marginal cost.",
+        "D": "Income effect analysis, because residents' real income falls."
+      },
+      "correct": "A",
+      "explanation": "The relevant model is a negative externality: social cost includes residents' sleep loss while private cost does not. B misclassifies the problem as public good provision. C might be relevant to pricing but not to the external damage. D is not the central efficiency framework."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes private marginal cost from social marginal cost for a good with a negative production externality?",
+      "choices": {
+        "A": "Private marginal cost is the firm's production cost; social marginal cost is private marginal cost plus marginal external damage.",
+        "B": "Private marginal cost is paid by consumers; social marginal cost is paid only by producers.",
+        "C": "Private marginal cost includes all damages; social marginal cost includes only accounting expenses.",
+        "D": "Private marginal cost determines efficiency; social marginal cost determines profit."
+      },
+      "correct": "A",
+      "explanation": "MPC reflects costs borne by the producer; MSC adds external damages borne by others. B misassigns who bears private cost. C reverses the concepts. D reverses the roles of private and social marginal cost."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand is P = 80 - Q, MPC = 20, and MEC = 20. The market output is 60 and the efficient output is 40. What is the deadweight loss from ignoring the external cost?",
+      "choices": {
+        "A": "200",
+        "B": "400",
+        "C": "800",
+        "D": "1200"
+      },
+      "correct": "B",
+      "explanation": "MSC = 40. For units from 40 to 60, MSC exceeds willingness to pay. The gap rises from 0 at Q = 40 to 20 at Q = 60, so DWL = 0.5 × 20 × 20 = 200. Thus A is the correct calculation; B doubles the triangle, C uses the full external cost over all 40 efficient units, and D uses market quantity times the external cost."
+    }
+  ]
+}

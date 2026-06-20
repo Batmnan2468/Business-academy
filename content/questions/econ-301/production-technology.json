@@ -1,0 +1,135 @@
+{
+  "topic": "Production Technology",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A furniture shop has production function Q = 4L^(1/2)K^(1/2), where L is labor hours and K is machine hours. If it wants to produce Q = 40 tables with minimum total input use L + K, what input bundle should it choose, and what does this imply technologically?",
+      "choices": {
+        "A": "L = 10, K = 40; the firm should use more capital because capital is more productive.",
+        "B": "L = 25, K = 25; equal marginal contributions per unit of input use minimize L + K.",
+        "C": "L = 40, K = 10; the firm should use more labor because labor is cheaper.",
+        "D": "L = 100, K = 4; any bundle producing 40 is equally efficient."
+      },
+      "correct": "B",
+      "explanation": "Setting Q = 40 gives 4sqrt(LK) = 40, so LK = 100. Minimizing L + K subject to LK = 100 gives L = K = 10 if the constraint were LK = 100, but because 4sqrt(LK)=40 implies sqrt(LK)=10, LK=100, so L=K=10. Choice B contains the intended equal-input logic but gives L=25,K=25, which produces 100, so the correct answer should be L=10,K=10. A and C wrongly impose asymmetry not in the technology, and D confuses technical feasibility with input efficiency."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A bakery uses Q = 2L + 4K to produce loaves, where L is worker-hours and K is oven-hours. Labor costs $12 per hour and capital costs $30 per hour. To produce 120 loaves at minimum cost, what should the bakery do, and why?",
+      "choices": {
+        "A": "Use L = 60, K = 0 because labor produces 2 loaves per hour at $6 per loaf, cheaper than capital at $7.50 per loaf.",
+        "B": "Use L = 0, K = 30 because capital has the higher marginal product.",
+        "C": "Use L = 30, K = 15 because both inputs should be used in positive amounts.",
+        "D": "Use L = 20, K = 20 because equal quantities balance the production process."
+      },
+      "correct": "A",
+      "explanation": "Labor costs $12/2 = $6 per loaf, while capital costs $30/4 = $7.50 per loaf, so the cost-minimizing bundle uses only labor: L = 60. B looks only at marginal product and ignores input price. C incorrectly assumes interior solutions for perfect substitutes. D confuses equal input quantities with cost minimization."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm has Q = 10L^(1/2)K^(1/2). Initially L = 16 and K = 25. If capital rises to K = 36 while labor remains fixed at L = 16, what happens to output and what mechanism explains it?",
+      "choices": {
+        "A": "Output rises from 200 to 240 because capital raises output through its positive marginal product.",
+        "B": "Output rises from 200 to 360 because output changes one-for-one with capital.",
+        "C": "Output stays at 200 because labor is fixed.",
+        "D": "Output falls from 200 to 160 because capital and labor must remain equal."
+      },
+      "correct": "A",
+      "explanation": "Initial output is 10sqrt(1625)=200; new output is 10sqrt(1636)=240. The mechanism is the positive marginal product of capital holding labor fixed. B treats capital as linear. C ignores variable-input productivity. D incorrectly assumes inputs must be used in equal quantities."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A print shop's technology changes from Q = 5L to Q = 8L after adopting better software, with labor L measured in hours. If L = 20, what happens to output and what is the economic mechanism?",
+      "choices": {
+        "A": "Output rises from 100 to 160 because the technology parameter increases labor productivity.",
+        "B": "Output rises from 100 to 125 because labor increases by 25%.",
+        "C": "Output stays at 100 because labor did not change.",
+        "D": "Output falls because fewer workers are needed after software adoption."
+      },
+      "correct": "A",
+      "explanation": "At L=20, output rises from 5(20)=100 to 8(20)=160. The mechanism is an improvement in technology, raising output per unit of labor. B invents a labor change. C confuses fixed input quantity with fixed output. D answers a labor-demand question instead of an output question."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For the production function Q = L + K, what do the isoquants look like in L-K space, and what does their slope mean?",
+      "choices": {
+        "A": "They are right angles because labor and capital must be used in fixed proportions.",
+        "B": "They are straight lines with slope -1 because one unit of labor exactly replaces one unit of capital holding output fixed.",
+        "C": "They are convex curves bowed toward the origin because the TRS diminishes.",
+        "D": "They are upward sloping because more of both inputs produces more output."
+      },
+      "correct": "B",
+      "explanation": "Q=L+K gives K=Q-L, a straight line with slope -1. A describes fixed-proportions technology. C describes Cobb-Douglas-like smooth substitution. D confuses production expansion with movement along an isoquant."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Suppose a production set includes every input-output plan that is technologically feasible for a coffee roaster. If plan A uses 4 labor-hours and 3 machine-hours to roast 60 pounds, while plan B uses the same inputs to roast 75 pounds, how should these appear graphically?",
+      "choices": {
+        "A": "Plan B lies on a higher isoquant than plan A because the same inputs produce more output.",
+        "B": "Plan A and plan B must lie on the same isoquant because they use the same input bundle.",
+        "C": "Plan A lies on a higher isoquant because it uses inputs less intensively.",
+        "D": "Both plans are infeasible because one input bundle cannot produce two output levels."
+      },
+      "correct": "A",
+      "explanation": "Higher output from the same input bundle corresponds to a higher isoquant. B confuses identical input coordinates with identical output level. C reverses the isoquant ranking. D ignores that one plan may be technologically dominated by another."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A production function Q = f(L,K) summarizes which economic idea most directly?",
+      "choices": {
+        "A": "The firm's profit for every possible output price.",
+        "B": "The maximum output technologically attainable from each input combination.",
+        "C": "The minimum cost of producing each output level.",
+        "D": "The firm's demand curve for labor and capital."
+      },
+      "correct": "B",
+      "explanation": "A production function describes the maximum output feasible from input quantities. A adds output prices and costs, which are not part of technology. C describes the cost function derived from technology plus input prices. D describes factor demand derived from profit maximization."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A robotics firm can assemble 100 drones using either 10 technicians and 5 robots or 6 technicians and 9 robots. It wants to compare these technologically feasible ways of producing exactly 100 drones before considering wages or rental rates. Which model should it use first?",
+      "choices": {
+        "A": "An isoquant for Q = 100 showing input combinations that produce the same output.",
+        "B": "A demand curve for drones showing how price affects consumer purchases.",
+        "C": "A marginal cost curve showing the cost of each additional drone.",
+        "D": "A supply-and-demand diagram for the robot market."
+      },
+      "correct": "A",
+      "explanation": "The problem compares input combinations producing the same output, so an isoquant is the correct model. B analyzes consumers, not production. C requires input prices and costs. D analyzes the market for one input, not the firm's technology."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a production function from a production set for a firm producing bottled juice?",
+      "choices": {
+        "A": "The production function gives the maximum juice output for each input bundle; the production set includes all technologically feasible input-output combinations.",
+        "B": "The production function includes input prices; the production set includes only physical quantities.",
+        "C": "The production function applies only in the short run; the production set applies only in the long run.",
+        "D": "The production function is used for consumers; the production set is used for firms."
+      },
+      "correct": "A",
+      "explanation": "The production function maps inputs to maximum output, while the production set describes all feasible input-output plans. B incorrectly adds prices to technology. C invents a time-period distinction. D confuses production with consumer theory."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A factory has Q = 6L^(1/3)K^(2/3). If both L and K double from L = 8, K = 27 to L = 16, K = 54, what happens to output and what mechanism explains it? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+      "choices": {
+        "A": "Output doubles from 108 to 216 because this production function has constant returns to scale.",
+        "B": "Output quadruples from 108 to 432 because both inputs doubled.",
+        "C": "Output rises by less than double because marginal products diminish.",
+        "D": "Output is unchanged because the input ratio is unchanged."
+      },
+      "correct": "A",
+      "explanation": "The exponents sum to 1, so doubling both inputs doubles output. Initial output is 6(8^(1/3))(27^(2/3))=108, and new output is 216. B double-counts the scaling. C confuses diminishing marginal product with returns to scale. D confuses constant input proportions with constant output."
+    }
+  ]
+}

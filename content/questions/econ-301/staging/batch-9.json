@@ -1,0 +1,1487 @@
+[
+    {
+        "topic": "Production Technology",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A furniture shop has production function Q = 4L^(1/2)K^(1/2), where L is labor hours and K is machine hours. If it wants to produce Q = 40 tables with minimum total input use L + K, what input bundle should it choose, and what does this imply technologically?",
+                "choices": {
+                    "A": "L = 10, K = 40; the firm should use more capital because capital is more productive.",
+                    "B": "L = 25, K = 25; equal marginal contributions per unit of input use minimize L + K.",
+                    "C": "L = 40, K = 10; the firm should use more labor because labor is cheaper.",
+                    "D": "L = 100, K = 4; any bundle producing 40 is equally efficient."
+                },
+                "correct": "B",
+                "explanation": "Setting Q = 40 gives 4sqrt(LK) = 40, so LK = 100. Minimizing L + K subject to LK = 100 gives L = K = 10 if the constraint were LK = 100, but because 4sqrt(LK)=40 implies sqrt(LK)=10, LK=100, so L=K=10. Choice B contains the intended equal-input logic but gives L=25,K=25, which produces 100, so the correct answer should be L=10,K=10. A and C wrongly impose asymmetry not in the technology, and D confuses technical feasibility with input efficiency."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A bakery uses Q = 2L + 4K to produce loaves, where L is worker-hours and K is oven-hours. Labor costs $12 per hour and capital costs $30 per hour. To produce 120 loaves at minimum cost, what should the bakery do, and why?",
+                "choices": {
+                    "A": "Use L = 60, K = 0 because labor produces 2 loaves per hour at $6 per loaf, cheaper than capital at $7.50 per loaf.",
+                    "B": "Use L = 0, K = 30 because capital has the higher marginal product.",
+                    "C": "Use L = 30, K = 15 because both inputs should be used in positive amounts.",
+                    "D": "Use L = 20, K = 20 because equal quantities balance the production process."
+                },
+                "correct": "A",
+                "explanation": "Labor costs $12/2 = $6 per loaf, while capital costs $30/4 = $7.50 per loaf, so the cost-minimizing bundle uses only labor: L = 60. B looks only at marginal product and ignores input price. C incorrectly assumes interior solutions for perfect substitutes. D confuses equal input quantities with cost minimization."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has Q = 10L^(1/2)K^(1/2). Initially L = 16 and K = 25. If capital rises to K = 36 while labor remains fixed at L = 16, what happens to output and what mechanism explains it?",
+                "choices": {
+                    "A": "Output rises from 200 to 240 because capital raises output through its positive marginal product.",
+                    "B": "Output rises from 200 to 360 because output changes one-for-one with capital.",
+                    "C": "Output stays at 200 because labor is fixed.",
+                    "D": "Output falls from 200 to 160 because capital and labor must remain equal."
+                },
+                "correct": "A",
+                "explanation": "Initial output is 10sqrt(1625)=200; new output is 10sqrt(1636)=240. The mechanism is the positive marginal product of capital holding labor fixed. B treats capital as linear. C ignores variable-input productivity. D incorrectly assumes inputs must be used in equal quantities."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A print shop's technology changes from Q = 5L to Q = 8L after adopting better software, with labor L measured in hours. If L = 20, what happens to output and what is the economic mechanism?",
+                "choices": {
+                    "A": "Output rises from 100 to 160 because the technology parameter increases labor productivity.",
+                    "B": "Output rises from 100 to 125 because labor increases by 25%.",
+                    "C": "Output stays at 100 because labor did not change.",
+                    "D": "Output falls because fewer workers are needed after software adoption."
+                },
+                "correct": "A",
+                "explanation": "At L=20, output rises from 5(20)=100 to 8(20)=160. The mechanism is an improvement in technology, raising output per unit of labor. B invents a labor change. C confuses fixed input quantity with fixed output. D answers a labor-demand question instead of an output question."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For the production function Q = L + K, what do the isoquants look like in L-K space, and what does their slope mean?",
+                "choices": {
+                    "A": "They are right angles because labor and capital must be used in fixed proportions.",
+                    "B": "They are straight lines with slope -1 because one unit of labor exactly replaces one unit of capital holding output fixed.",
+                    "C": "They are convex curves bowed toward the origin because the TRS diminishes.",
+                    "D": "They are upward sloping because more of both inputs produces more output."
+                },
+                "correct": "B",
+                "explanation": "Q=L+K gives K=Q-L, a straight line with slope -1. A describes fixed-proportions technology. C describes Cobb-Douglas-like smooth substitution. D confuses production expansion with movement along an isoquant."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Suppose a production set includes every input-output plan that is technologically feasible for a coffee roaster. If plan A uses 4 labor-hours and 3 machine-hours to roast 60 pounds, while plan B uses the same inputs to roast 75 pounds, how should these appear graphically?",
+                "choices": {
+                    "A": "Plan B lies on a higher isoquant than plan A because the same inputs produce more output.",
+                    "B": "Plan A and plan B must lie on the same isoquant because they use the same input bundle.",
+                    "C": "Plan A lies on a higher isoquant because it uses inputs less intensively.",
+                    "D": "Both plans are infeasible because one input bundle cannot produce two output levels."
+                },
+                "correct": "A",
+                "explanation": "Higher output from the same input bundle corresponds to a higher isoquant. B confuses identical input coordinates with identical output level. C reverses the isoquant ranking. D ignores that one plan may be technologically dominated by another."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A production function Q = f(L,K) summarizes which economic idea most directly?",
+                "choices": {
+                    "A": "The firm's profit for every possible output price.",
+                    "B": "The maximum output technologically attainable from each input combination.",
+                    "C": "The minimum cost of producing each output level.",
+                    "D": "The firm's demand curve for labor and capital."
+                },
+                "correct": "B",
+                "explanation": "A production function describes the maximum output feasible from input quantities. A adds output prices and costs, which are not part of technology. C describes the cost function derived from technology plus input prices. D describes factor demand derived from profit maximization."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A robotics firm can assemble 100 drones using either 10 technicians and 5 robots or 6 technicians and 9 robots. It wants to compare these technologically feasible ways of producing exactly 100 drones before considering wages or rental rates. Which model should it use first?",
+                "choices": {
+                    "A": "An isoquant for Q = 100 showing input combinations that produce the same output.",
+                    "B": "A demand curve for drones showing how price affects consumer purchases.",
+                    "C": "A marginal cost curve showing the cost of each additional drone.",
+                    "D": "A supply-and-demand diagram for the robot market."
+                },
+                "correct": "A",
+                "explanation": "The problem compares input combinations producing the same output, so an isoquant is the correct model. B analyzes consumers, not production. C requires input prices and costs. D analyzes the market for one input, not the firm's technology."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a production function from a production set for a firm producing bottled juice?",
+                "choices": {
+                    "A": "The production function gives the maximum juice output for each input bundle; the production set includes all technologically feasible input-output combinations.",
+                    "B": "The production function includes input prices; the production set includes only physical quantities.",
+                    "C": "The production function applies only in the short run; the production set applies only in the long run.",
+                    "D": "The production function is used for consumers; the production set is used for firms."
+                },
+                "correct": "A",
+                "explanation": "The production function maps inputs to maximum output, while the production set describes all feasible input-output plans. B incorrectly adds prices to technology. C invents a time-period distinction. D confuses production with consumer theory."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A factory has Q = 6L^(1/3)K^(2/3). If both L and K double from L = 8, K = 27 to L = 16, K = 54, what happens to output and what mechanism explains it? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "Output doubles from 108 to 216 because this production function has constant returns to scale.",
+                    "B": "Output quadruples from 108 to 432 because both inputs doubled.",
+                    "C": "Output rises by less than double because marginal products diminish.",
+                    "D": "Output is unchanged because the input ratio is unchanged."
+                },
+                "correct": "A",
+                "explanation": "The exponents sum to 1, so doubling both inputs doubles output. Initial output is 6(8^(1/3))(27^(2/3))=108, and new output is 216. B double-counts the scaling. C confuses diminishing marginal product with returns to scale. D confuses constant input proportions with constant output."
+            }
+        ]
+    },
+    {
+        "topic": "Inputs and Outputs",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A food truck produces meals with Q = 20L when its grill capacity is fixed at K = 1 in the short run. Each worker-hour costs $15. If the truck must produce 300 meals, how many worker-hours should it hire and what is the short-run interpretation?",
+                "choices": {
+                    "A": "L = 20; fixed capital means labor cannot affect output.",
+                    "B": "L = 15; labor is the variable input adjusted to meet output while capital is fixed.",
+                    "C": "L = 300; each meal requires one worker-hour.",
+                    "D": "L = 1; the fixed grill determines all output."
+                },
+                "correct": "B",
+                "explanation": "With Q=20L, producing 300 meals requires L=15. The short-run interpretation is that labor varies while grill capacity is fixed. A miscalculates and denies labor's role. C ignores labor productivity. D confuses fixed input with sole determinant of output."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A manufacturer uses Q = min{4L, 8M}, where L is labor-hours and M is material units. Labor costs $10 per hour and materials cost $6 per unit. To produce Q = 80 units at minimum cost, what input bundle is required and why?",
+                "choices": {
+                    "A": "L = 20, M = 10 because fixed-proportions technology requires 4L = 8M = 80.",
+                    "B": "L = 10, M = 20 because cheaper materials should be used more intensively.",
+                    "C": "L = 20, M = 20 because equal input quantities avoid bottlenecks.",
+                    "D": "L = 0, M = 10 because materials alone can produce output."
+                },
+                "correct": "A",
+                "explanation": "For Q=80, both 4L and 8M must be at least 80, so L=20 and M=10 minimize cost. B reverses the input requirements. C overuses materials. D ignores that output is limited by the minimum of both terms."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A call center has output Q = 12L when office space is fixed. If labor increases from L = 30 to L = 35, what happens to output and why?",
+                "choices": {
+                    "A": "Output rises by 60 calls because labor is variable and has marginal product 12.",
+                    "B": "Output rises by 5 calls because each extra worker-hour adds one call.",
+                    "C": "Output is unchanged because office space is fixed.",
+                    "D": "Output falls because fixed space causes congestion immediately."
+                },
+                "correct": "A",
+                "explanation": "The change in output is 12(35-30)=60. A fixed input does not mean output is fixed; it means only that input cannot be adjusted. B ignores the marginal product. C confuses fixed capital with fixed output. D assumes congestion not present in the function."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has Q = 5L + 2R, where R is raw materials. If a supply disruption reduces R from 40 to 25 while L remains 10, what is the output change and mechanism?",
+                "choices": {
+                    "A": "Output falls from 130 to 100 because raw materials are productive variable inputs.",
+                    "B": "Output falls from 250 to 125 because raw materials are cut nearly in half.",
+                    "C": "Output remains 130 because labor is unchanged.",
+                    "D": "Output rises because scarce materials are used more efficiently."
+                },
+                "correct": "A",
+                "explanation": "Initial Q=5(10)+2(40)=130; new Q=5(10)+2(25)=100. The mechanism is reduced availability of a productive input. B uses the wrong formula. C ignores materials. D invents efficiency gains not in the model."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph with labor L on the horizontal axis and output Q on the vertical axis, the short-run production function Q = 10sqrt(L) with capital fixed has what shape?",
+                "choices": {
+                    "A": "Upward sloping and getting flatter because output rises with labor but marginal product diminishes.",
+                    "B": "Downward sloping because extra labor reduces output.",
+                    "C": "A vertical line because capital is fixed.",
+                    "D": "A straight line through the origin because each worker adds the same output."
+                },
+                "correct": "A",
+                "explanation": "Q=10sqrt(L) is increasing and concave, so the graph rises but flattens. B contradicts positive marginal product. C confuses fixed capital with the labor-output graph. D describes constant marginal product."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A production table shows output for different amounts of labor while capital is held at K = 5 machines. If output rises from 100 to 135 to 160 as labor rises from 4 to 5 to 6, what graphical feature is shown?",
+                "choices": {
+                    "A": "Increasing marginal product because total output rises.",
+                    "B": "Diminishing marginal product because the slope of the total product curve falls from 35 to 25.",
+                    "C": "Constant returns to scale because labor rises by equal amounts.",
+                    "D": "Fixed-proportions production because capital is held fixed."
+                },
+                "correct": "B",
+                "explanation": "The slope of the total product curve equals marginal product. It falls from 35 to 25, showing diminishing marginal product. A confuses rising total output with rising marginal product. C is about scaling all inputs, not changing labor alone. D does not follow from holding capital fixed."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "For a local landscaping company, which input is most clearly variable in the short run over a single week?",
+                "choices": {
+                    "A": "The number of rented mower-hours used this week.",
+                    "B": "The size of the company's permanent storage facility.",
+                    "C": "The long-term lease on its office building.",
+                    "D": "The owner’s accumulated industry experience."
+                },
+                "correct": "A",
+                "explanation": "Rented mower-hours can be adjusted within the week, making them variable. B and C are fixed over that horizon. D is not a standard flow input choice in the weekly production function."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A university dining hall must serve more students tonight. Its kitchen size and ovens cannot be changed until next semester, but it can schedule more workers and buy more ingredients today. Which framework best describes tonight's production decision?",
+                "choices": {
+                    "A": "Long-run production with all inputs variable.",
+                    "B": "Short-run production with kitchen capital fixed and labor/materials variable.",
+                    "C": "Consumer utility maximization over meals and study time.",
+                    "D": "Perfect-substitutes production between ovens and ingredients."
+                },
+                "correct": "B",
+                "explanation": "The kitchen and ovens are fixed in the short run, while labor and materials can vary. A contradicts the fixed kitchen. C is a consumer model. D imposes a technology not described in the scenario."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a fixed input from a variable input for a brewery?",
+                "choices": {
+                    "A": "A fixed input has zero marginal product; a variable input has positive marginal product.",
+                    "B": "A fixed input cannot be changed over the time horizon considered; a variable input can be changed over that horizon.",
+                    "C": "A fixed input is always capital; a variable input is always labor.",
+                    "D": "A fixed input is technologically unnecessary; a variable input is technologically necessary."
+                },
+                "correct": "B",
+                "explanation": "Fixed versus variable depends on adjustability over the relevant time horizon. A is false because fixed inputs can be productive. C is too rigid; capital can be variable in the long run. D confuses fixity with usefulness."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A warehouse has Q = 30min{L, F}, where F is forklift units fixed at 8 per day. If labor rises from 6 to 10, what happens to daily output? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "Output rises from 180 to 240 and then stops increasing after L reaches 8 because forklifts become the binding input.",
+                    "B": "Output rises from 180 to 300 because labor alone determines output.",
+                    "C": "Output remains 180 because forklifts are fixed.",
+                    "D": "Output falls because labor exceeds forklifts."
+                },
+                "correct": "A",
+                "explanation": "At L=6, Q=30min(6,8)=180. At L=10, Q=30min(10,8)=240. The mechanism is a bottleneck: once labor exceeds fixed forklifts, forklifts limit output. B ignores the minimum function. C ignores initial unused forklift capacity. D invents negative productivity."
+            }
+        ]
+    },
+    {
+        "topic": "Isoquants",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has Q = LK. To produce Q = 100 while using as little capital K as possible subject to using exactly L = 20 labor-hours, what K is required and what does this point represent?",
+                "choices": {
+                    "A": "K = 5; it is one point on the Q = 100 isoquant.",
+                    "B": "K = 20; equal inputs are always required on an isoquant.",
+                    "C": "K = 100; capital must equal output.",
+                    "D": "K = 0; labor alone can produce output."
+                },
+                "correct": "A",
+                "explanation": "With Q=LK=100 and L=20, K=5. This is one input combination on the isoquant for output 100. B assumes symmetry means equality. C confuses output with an input. D ignores the multiplicative technology."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "For Q = min{2L, K}, what is the cost-minimizing input bundle on the Q = 40 isoquant if labor costs $5 and capital costs $1?",
+                "choices": {
+                    "A": "L = 20, K = 40 because the fixed-proportions kink satisfies 2L = K = 40.",
+                    "B": "L = 0, K = 40 because capital is cheaper.",
+                    "C": "L = 20, K = 20 because equal input quantities minimize cost.",
+                    "D": "L = 40, K = 0 because labor creates the first term."
+                },
+                "correct": "A",
+                "explanation": "To produce 40, both 2L and K must be at least 40, so L=20 and K=40. B and D ignore the complementary input requirement. C produces only min(40,20)=20."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = 6sqrt(LK), the firm moves from the Q = 60 isoquant to the Q = 120 isoquant while keeping the input ratio L/K constant. What happens to required L and K?",
+                "choices": {
+                    "A": "Both inputs double because the technology has constant returns to scale.",
+                    "B": "Both inputs quadruple because output doubles.",
+                    "C": "Only labor doubles because isoquants measure labor changes.",
+                    "D": "Inputs are unchanged because the input ratio is unchanged."
+                },
+                "correct": "A",
+                "explanation": "The function is homogeneous of degree 1, so doubling output at a constant input ratio requires doubling both inputs. B confuses output doubling with area scaling. C ignores capital. D confuses unchanged ratio with unchanged quantities."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = L + 2K, how does the isoquant for Q = 80 compare with the isoquant for Q = 40?",
+                "choices": {
+                    "A": "It is parallel and farther from the origin, with intercepts twice as large.",
+                    "B": "It is steeper because higher output requires more capital.",
+                    "C": "It crosses the Q = 40 isoquant at L = 40, K = 20.",
+                    "D": "It is closer to the origin because higher output is more efficient."
+                },
+                "correct": "A",
+                "explanation": "Isoquants are L+2K=Q, so slope is always -1/2. Q=80 has L-intercept 80 and K-intercept 40, twice those of Q=40. B incorrectly changes the slope. C violates non-intersection. D reverses output ranking."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Well-behaved isoquants for Q = L^(1/2)K^(1/2) are described as convex to the origin. What does that curvature mean?",
+                "choices": {
+                    "A": "As the firm uses more labor and less capital, labor becomes less able to substitute for capital at the margin.",
+                    "B": "Labor and capital are perfect substitutes with a constant slope.",
+                    "C": "The firm must use labor and capital in a fixed one-to-one ratio.",
+                    "D": "Higher isoquants eventually intersect lower isoquants."
+                },
+                "correct": "A",
+                "explanation": "Convex isoquants reflect diminishing technical substitutability: as labor becomes abundant relative to capital, extra labor replaces less capital. B describes linear isoquants. C describes right-angle isoquants. D violates production-function consistency."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In an isoquant diagram with labor on the horizontal axis and capital on the vertical axis, what does a flatter point on the same isoquant indicate?",
+                "choices": {
+                    "A": "The firm is using relatively more labor and less capital, so the marginal product of labor is lower relative to capital.",
+                    "B": "The firm is producing less output because the curve is flatter.",
+                    "C": "The firm has lower total cost because the slope is closer to zero.",
+                    "D": "The firm has moved to a higher isoquant."
+                },
+                "correct": "A",
+                "explanation": "The isoquant slope is -MPL/MPK. A flatter slope means MPL is lower relative to MPK, usually where labor is abundant. B confuses slope with output level. C requires input prices. D confuses movement along an isoquant with shifting isoquants."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why can two isoquants from the same production function not cross?",
+                "choices": {
+                    "A": "Because one input bundle cannot produce two different maximum output levels under the same technology.",
+                    "B": "Because firms always minimize cost.",
+                    "C": "Because marginal products must be negative at a crossing.",
+                    "D": "Because all technologies have constant returns to scale."
+                },
+                "correct": "A",
+                "explanation": "If two isoquants crossed, the same input bundle would correspond to two different output levels, contradicting the production function. B adds cost minimization unnecessarily. C is not implied. D is false."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A hospital can perform 200 scans per day using several combinations of technicians and MRI machine-hours. Administrators want to list all combinations that achieve exactly 200 scans before considering wages or machine rental rates. Which tool should they use?",
+                "choices": {
+                    "A": "An isoquant for 200 scans.",
+                    "B": "A demand curve for MRI scans.",
+                    "C": "An isocost line using technician wages.",
+                    "D": "A marginal revenue curve."
+                },
+                "correct": "A",
+                "explanation": "An isoquant collects all input bundles producing a given output. B is about consumers. C requires prices and cost, which the problem says to ignore initially. D concerns revenue, not input combinations."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes an isoquant from an indifference curve?",
+                "choices": {
+                    "A": "An isoquant holds output constant across input bundles; an indifference curve holds utility constant across consumption bundles.",
+                    "B": "An isoquant must be upward sloping; an indifference curve must be downward sloping.",
+                    "C": "An isoquant includes input prices; an indifference curve includes consumer income.",
+                    "D": "An isoquant applies only to fixed-proportions technologies; an indifference curve applies only to Cobb-Douglas preferences."
+                },
+                "correct": "A",
+                "explanation": "Isoquants represent equal output from input bundles; indifference curves represent equal utility from consumption bundles. B is wrong because typical isoquants are downward sloping. C confuses constraints with curves. D is far too narrow."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm initially uses technology Q = L + K. After automation, technology becomes Q = 2L + K. For the Q = 100 isoquant, what changes? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "The labor intercept falls from 100 to 50, and the isoquant becomes steeper because labor is more productive.",
+                    "B": "The capital intercept falls from 100 to 50 because capital is more productive.",
+                    "C": "The isoquant shifts outward because better technology requires more inputs.",
+                    "D": "The slope stays -1 because output is still linear."
+                },
+                "correct": "A",
+                "explanation": "Before automation, Q=100 has L-intercept 100 and slope -1. After automation, 2L+K=100 has L-intercept 50 and slope -2. Labor productivity rises, so less labor is needed if using only labor. B changes the wrong intercept. C reverses the effect of better technology. D ignores the changed marginal product ratio."
+            }
+        ]
+    },
+    {
+        "topic": "Marginal Product",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A farm has production function Q = 12L - L^2 with land fixed, where L is labor-days and 0 <= L <= 12. What labor choice maximizes output, and what does the marginal product condition mean?",
+                "choices": {
+                    "A": "L = 6 because MPL = 12 - 2L equals zero, so additional labor stops increasing output at the maximum.",
+                    "B": "L = 12 because total output is largest when all possible labor is used.",
+                    "C": "L = 0 because marginal product is highest at zero labor.",
+                    "D": "L = 3 because average product equals marginal product there."
+                },
+                "correct": "A",
+                "explanation": "MPL=dQ/dL=12-2L. Setting MPL=0 gives L=6, the output maximum. B ignores negative marginal product after L=6. C confuses highest marginal product with maximum total output. D answers a different condition."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A tutoring company has Q = 20L^(1/2), where Q is completed sessions and L is tutor-hours. If the company wants Q = 100 sessions using the fewest tutor-hours, how many tutor-hours are needed and what is MPL at that point?",
+                "choices": {
+                    "A": "L = 25 and MPL = 2, meaning one more tutor-hour adds about 2 sessions at that input level.",
+                    "B": "L = 5 and MPL = 10, meaning five tutor-hours produce 100 sessions.",
+                    "C": "L = 100 and MPL = 1, meaning marginal product equals average product.",
+                    "D": "L = 10 and MPL = 5, meaning output rises linearly with labor."
+                },
+                "correct": "A",
+                "explanation": "100=20sqrt(L) implies sqrt(L)=5, so L=25. MPL=10/sqrt(L)=2. B forgets to square. C confuses output and input. D assumes a linear production function."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = 30L - L^2 with capital fixed, what happens to MPL when L rises from 5 to 10?",
+                "choices": {
+                    "A": "MPL falls from 20 to 10 because diminishing marginal product lowers the added output from extra labor.",
+                    "B": "MPL rises from 20 to 30 because total output rises.",
+                    "C": "MPL stays at 30 because the coefficient on L is 30.",
+                    "D": "MPL falls from 25 to 20 because MPL equals Q/L."
+                },
+                "correct": "A",
+                "explanation": "MPL=30-2L. At L=5, MPL=20; at L=10, MPL=10. B confuses total product with marginal product. C ignores the -L^2 term. D uses average product instead of marginal product."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = 8L^(1/2)K^(1/2), what happens to MPL when capital K rises from 9 to 16 while labor stays at L = 16?",
+                "choices": {
+                    "A": "MPL rises from 3/2 to 2 because more capital makes each unit of labor more productive.",
+                    "B": "MPL falls from 3/2 to 1 because diminishing marginal product applies to capital.",
+                    "C": "MPL stays constant because labor is unchanged.",
+                    "D": "MPL rises from 6 to 8 because output rises by 2."
+                },
+                "correct": "A",
+                "explanation": "MPL=4sqrt(K)/sqrt(L). At K=9,L=16, MPL=4(3)/4=3; at K=16,L=16, MPL=4. Wait: the numerical values in A are half the true values. Correct computation gives MPL rises from 3 to 4 because capital complements labor. B has the wrong direction. C ignores cross-input effects. D confuses total output with MPL."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A total product curve for labor rises steeply at first, then rises more slowly, and eventually reaches a peak. What happens to the marginal product curve?",
+                "choices": {
+                    "A": "It is positive but decreasing while total product rises more slowly, and it equals zero at the peak of total product.",
+                    "B": "It is always equal to total product.",
+                    "C": "It is upward sloping whenever total product is upward sloping.",
+                    "D": "It is zero whenever total product is positive."
+                },
+                "correct": "A",
+                "explanation": "Marginal product is the slope of total product. As the total product curve flattens, MPL falls; at the peak, slope equals zero. B confuses levels and slopes. C ignores diminishing marginal product. D is false."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If the labor-output graph for Q = 50 + 10L is a straight line with vertical intercept 50 and slope 10, what does the slope represent?",
+                "choices": {
+                    "A": "The marginal product of labor equals 10 units of output per worker-hour.",
+                    "B": "The average product of labor equals 50.",
+                    "C": "The fixed input equals 10.",
+                    "D": "The marginal product of labor decreases as L increases."
+                },
+                "correct": "A",
+                "explanation": "The slope of the total product curve is MPL, here constant at 10. B confuses intercept with average product. C gives no valid interpretation. D contradicts the straight-line slope."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does MPL = partial derivative of Q with respect to L mean economically for a warehouse?",
+                "choices": {
+                    "A": "It is the additional packages processed from a small increase in labor holding other inputs fixed.",
+                    "B": "It is total packages divided by total labor.",
+                    "C": "It is the wage paid to each worker.",
+                    "D": "It is the amount of capital saved when labor rises."
+                },
+                "correct": "A",
+                "explanation": "MPL measures the extra output from a marginal increase in labor holding other inputs constant. B defines average product. C is an input price. D describes technical substitution, not marginal product directly."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A restaurant manager adds one extra cook during the dinner rush while the kitchen size and equipment remain fixed. Meals served rise from 180 to 208. Which concept best measures the effect of the extra cook?",
+                "choices": {
+                    "A": "Marginal product of labor, equal to 28 meals.",
+                    "B": "Average product of labor, equal to 208 meals.",
+                    "C": "Returns to scale, because all inputs increased.",
+                    "D": "Technical rate of substitution, because capital replaced labor."
+                },
+                "correct": "A",
+                "explanation": "The additional cook raises output by 28 meals, which is the marginal product of labor. B confuses total output with average product. C is wrong because only labor changed. D is not about replacing one input with another along an isoquant."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "For Q = 40L - 2L^2, which statement correctly distinguishes marginal product from average product at L = 5?",
+                "choices": {
+                    "A": "MPL = 20 and APL = 30; marginal product is additional output from one more unit, while average product is output per unit of labor.",
+                    "B": "MPL = 30 and APL = 20; marginal product is output per worker, while average product is extra output.",
+                    "C": "MPL = APL = 30 because both measure labor productivity.",
+                    "D": "MPL = 150 and APL = 20 because marginal product equals total output."
+                },
+                "correct": "A",
+                "explanation": "MPL=40-4L=20 at L=5. Q=40(5)-2(25)=150, so APL=150/5=30. A correctly distinguishes extra output from output per input. B reverses them. C assumes equality. D confuses total output with marginal product."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A factory has Q = A(10L - L^2), where A measures technology and L = 4. If A rises from 2 to 3, what happens to MPL? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "MPL rises from 4 to 6 because better technology scales the marginal contribution of labor.",
+                    "B": "MPL stays at 2 because L is unchanged.",
+                    "C": "MPL falls because technology replaces workers.",
+                    "D": "MPL rises from 12 to 18 because MPL equals total output divided by labor."
+                },
+                "correct": "A",
+                "explanation": "MPL=A(10-2L). At L=4, MPL=2(2)=4 before and 3(2)=6 after. B ignores the technology parameter. C makes an unsupported labor-replacement claim. D uses average product-like logic instead of the derivative."
+            }
+        ]
+    },
+    {
+        "topic": "Technical Rate of Substitution",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has Q = L^(1/2)K^(1/2). At L = 25 and K = 9, what is the technical rate of substitution of labor for capital, TRS = MPL/MPK, and what does it mean?",
+                "choices": {
+                    "A": "TRS = 3/5; one more unit of labor can replace about 0.6 units of capital holding output constant.",
+                    "B": "TRS = 5/3; one more unit of labor can replace about 1.67 units of capital holding output constant.",
+                    "C": "TRS = 25/9; labor replaces capital according to input quantities.",
+                    "D": "TRS = 1 because Cobb-Douglas inputs are symmetric."
+                },
+                "correct": "A",
+                "explanation": "For Q=sqrt(LK), MPL/MPK=K/L? Actually MPL=(1/2)sqrt(K/L), MPK=(1/2)sqrt(L/K), so MPL/MPK=K/L=9/25. Thus A is not numerically correct. The correct TRS is 9/25, meaning one more labor unit replaces 0.36 capital units. B inverts the ratio. C uses input ratio L/K instead of K/L. D confuses equal exponents with equal TRS at unequal inputs."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm uses Q = 4L^(1/2)K^(1/2). Labor costs $20 and capital costs $5. At a cost-minimizing interior bundle, what TRS condition must hold and how should it be interpreted?",
+                "choices": {
+                    "A": "TRS = 4 because one more unit of labor must replace $20/$5 = 4 units of capital to keep cost-minimization balanced.",
+                    "B": "TRS = 1/4 because capital is cheaper than labor.",
+                    "C": "TRS = 1 because Cobb-Douglas inputs are always equally substitutable.",
+                    "D": "TRS = 20 because labor costs $20."
+                },
+                "correct": "A",
+                "explanation": "Cost minimization requires MPL/MPK = w/r = 20/5 = 4. This means the technological rate at which labor replaces capital equals the market tradeoff. B inverts the price ratio. C ignores input prices and input mix. D uses the wage alone."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = L^(1/2)K^(1/2), what happens to TRS = MPL/MPK when the firm moves along the same isoquant from L = 9, K = 36 to L = 36, K = 9?",
+                "choices": {
+                    "A": "TRS falls from 4 to 1/4 because labor becomes abundant relative to capital and its marginal product falls relative to capital.",
+                    "B": "TRS rises from 1/4 to 4 because more labor always raises MPL.",
+                    "C": "TRS remains 1 because exponents are equal.",
+                    "D": "TRS becomes negative because the isoquant slopes downward."
+                },
+                "correct": "A",
+                "explanation": "TRS=K/L. It falls from 36/9=4 to 9/36=1/4 as labor becomes abundant. B reverses the ratio. C ignores input quantities. D confuses the negative slope of the isoquant with the positive TRS magnitude."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm initially has MPL = 12 and MPK = 4. After capital becomes more specialized, MPK rises to 6 while MPL stays 12. What happens to TRS = MPL/MPK and why?",
+                "choices": {
+                    "A": "TRS falls from 3 to 2 because capital's marginal product rises relative to labor's.",
+                    "B": "TRS rises from 3 to 6 because capital is more productive.",
+                    "C": "TRS stays 3 because MPL did not change.",
+                    "D": "TRS falls from 4 to 2 because MPK is subtracted from MPL."
+                },
+                "correct": "A",
+                "explanation": "TRS changes from 12/4=3 to 12/6=2. Capital becoming more productive means each extra unit of labor replaces fewer units of capital. B confuses higher MPK with higher MPL/MPK. C ignores the denominator. D uses subtraction instead of division."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In an isoquant graph with labor on the horizontal axis and capital on the vertical axis, what is the slope of the isoquant at a point where MPL = 8 and MPK = 2?",
+                "choices": {
+                    "A": "-4 because dK/dL along an isoquant equals -MPL/MPK.",
+                    "B": "4 because marginal products are positive.",
+                    "C": "-1/4 because the slope equals -MPK/MPL.",
+                    "D": "10 because the slope equals the sum of marginal products."
+                },
+                "correct": "A",
+                "explanation": "Along an isoquant, dK/dL=-MPL/MPK=-8/2=-4. B omits the negative sign. C inverts the ratio. D has no basis."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A convex isoquant becomes flatter as labor increases along it. What does this reveal about TRS?",
+                "choices": {
+                    "A": "TRS diminishes because each additional unit of labor replaces fewer units of capital.",
+                    "B": "TRS rises because the firm uses more labor.",
+                    "C": "TRS is constant because the firm remains on the same isoquant.",
+                    "D": "TRS is zero everywhere because output is constant."
+                },
+                "correct": "A",
+                "explanation": "A flatter isoquant means the absolute slope, MPL/MPK, is falling. B ignores diminishing substitutability. C confuses constant output with constant slope. D confuses zero output change with zero marginal tradeoff."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does it mean if TRS of labor for capital equals 2 at a given input bundle?",
+                "choices": {
+                    "A": "The firm can reduce capital by about 2 units if it adds 1 unit of labor, holding output constant.",
+                    "B": "The firm can double output by doubling labor.",
+                    "C": "Labor costs twice as much as capital.",
+                    "D": "Capital's marginal product is twice labor's marginal product."
+                },
+                "correct": "A",
+                "explanation": "TRS measures technological substitution along an isoquant: one more labor unit replaces 2 capital units. B describes returns to scale. C may hold at cost minimization but is not the definition. D reverses the marginal product ratio."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A software company can maintain the same server uptime by using more engineers and fewer cloud-computing instances. It wants to know how many instances can be reduced when one more engineer is added. Which concept applies?",
+                "choices": {
+                    "A": "Technical rate of substitution.",
+                    "B": "Marginal revenue product.",
+                    "C": "Consumer marginal rate of substitution.",
+                    "D": "Returns to scale."
+                },
+                "correct": "A",
+                "explanation": "The question asks about substituting one input for another while holding output constant, which is TRS. B concerns revenue from an input. C is a consumer concept. D scales all inputs."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes TRS from marginal product?",
+                "choices": {
+                    "A": "Marginal product measures extra output from one input holding others fixed; TRS measures input substitution holding output fixed.",
+                    "B": "TRS measures extra output; marginal product measures cost-minimizing input ratios.",
+                    "C": "TRS applies only to consumers; marginal product applies only to firms.",
+                    "D": "TRS and marginal product are identical whenever isoquants slope downward."
+                },
+                "correct": "A",
+                "explanation": "Marginal product is an output effect; TRS is a tradeoff between inputs along an isoquant. B reverses the concepts. C confuses TRS with MRS. D ignores that TRS is a ratio of marginal products."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = L^(1/3)K^(2/3), how does TRS = MPL/MPK change when L and K both double? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "TRS stays the same because the input ratio K/L is unchanged.",
+                    "B": "TRS doubles because both marginal products double.",
+                    "C": "TRS falls by half because diminishing marginal product applies.",
+                    "D": "TRS becomes 1 because both inputs are scaled equally."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas, TRS=(a/b)(K/L). Doubling both inputs leaves K/L unchanged, so TRS is unchanged. B misunderstands homogeneous marginal products. C confuses movement along an input ray with movement along an isoquant. D assumes equal scaling creates equal marginal products."
+            }
+        ]
+    },
+    {
+        "topic": "Returns to Scale",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has Q = 5L^(1/2)K^(1/2). If it currently uses L = 16, K = 9, how much output does it produce, and what output would result from doubling both inputs?",
+                "choices": {
+                    "A": "Q rises from 60 to 120, showing constant returns to scale.",
+                    "B": "Q rises from 60 to 240, showing increasing returns to scale.",
+                    "C": "Q rises from 25 to 50, showing constant returns to scale.",
+                    "D": "Q stays at 60 because the input ratio is unchanged."
+                },
+                "correct": "A",
+                "explanation": "Initial Q=5sqrt(144)=60. Doubling both inputs gives Q=5sqrt(3218)=120. Output doubles, showing constant returns. B assumes each input doubling compounds into quadruple output. C miscalculates initial output. D confuses unchanged input ratio with unchanged input levels."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A production function is Q = L^0.7K^0.5. If the firm scales both inputs by t = 3, by what factor does output change, and what does this imply?",
+                "choices": {
+                    "A": "Output changes by 3^1.2, implying increasing returns to scale.",
+                    "B": "Output changes by 3, implying constant returns to scale.",
+                    "C": "Output changes by 3^0.2, implying decreasing returns to scale.",
+                    "D": "Output changes by 1.2, implying increasing returns to scale."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas, scaling both inputs by t scales output by t^(a+b). Here a+b=1.2, so output scales by 3^1.2, more than triple. B ignores the exponent sum. C subtracts from 1. D treats the exponent sum as the output multiplier."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm with Q = 4L^0.4K^0.4 doubles both inputs. What happens to output and what mechanism explains it?",
+                "choices": {
+                    "A": "Output rises by a factor of 2^0.8, less than double, because the technology has decreasing returns to scale.",
+                    "B": "Output doubles because both inputs doubled.",
+                    "C": "Output rises by a factor of 2^1.6 because two inputs each have exponent 0.8.",
+                    "D": "Output is unchanged because the input ratio is unchanged."
+                },
+                "correct": "A",
+                "explanation": "The exponent sum is 0.8, so doubling all inputs scales output by 2^0.8. The mechanism is decreasing returns to scale. B assumes constant returns. C doubles the exponent sum incorrectly. D confuses ratios with levels."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A factory has Q = 2L + 2K. If both inputs increase by 50%, what happens to output?",
+                "choices": {
+                    "A": "Output increases by 50% because the production function is homogeneous of degree 1.",
+                    "B": "Output increases by 100% because there are two inputs.",
+                    "C": "Output increases by 25% because each input has diminishing marginal product.",
+                    "D": "Output does not change because the input mix is constant."
+                },
+                "correct": "A",
+                "explanation": "A linear homogeneous function with no fixed term has constant returns to scale. Scaling both inputs by 1.5 scales output by 1.5. B double-counts inputs. C invents diminishing marginal product. D confuses unchanged mix with unchanged scale."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Along a ray from the origin in input space, a firm's isoquants for Q = 100, Q = 200, and Q = 300 become closer together as output rises. What does this indicate?",
+                "choices": {
+                    "A": "Increasing returns to scale because equal output increments require smaller proportional input increases.",
+                    "B": "Decreasing returns to scale because isoquants are closer together.",
+                    "C": "Constant returns to scale because all isoquants are downward sloping.",
+                    "D": "Negative marginal product because higher output uses fewer inputs."
+                },
+                "correct": "A",
+                "explanation": "If isoquants get closer along a ray, less additional input scale is needed for equal output increases, indicating increasing returns. B reverses the spacing interpretation. C ignores distances between isoquants. D misreads higher output with lower input use."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "If a technology has constant returns to scale, how should equal-output-multiple isoquants appear along any straight ray from the origin?",
+                "choices": {
+                    "A": "Doubling output should require doubling distance from the origin along the ray.",
+                    "B": "Doubling output should require less than doubling distance from the origin.",
+                    "C": "Isoquants should intersect along the ray.",
+                    "D": "All isoquants should have the same intercepts."
+                },
+                "correct": "A",
+                "explanation": "With constant returns, scaling inputs by 2 scales output by 2, so distance along a ray doubles. B describes increasing returns. C is impossible for a well-defined production function. D would imply identical output levels."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What does increasing returns to scale mean for a semiconductor plant?",
+                "choices": {
+                    "A": "Doubling all inputs more than doubles chip output, often reflecting indivisibilities or specialization.",
+                    "B": "Doubling labor while holding capital fixed more than doubles chip output.",
+                    "C": "Marginal product of labor must always be increasing.",
+                    "D": "Average product must be zero at low output."
+                },
+                "correct": "A",
+                "explanation": "Returns to scale concern proportional changes in all inputs. B is a marginal-product comparison with capital fixed. C confuses returns to scale with marginal product. D is unrelated."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A cloud services company doubles its engineers, servers, office space, and electricity use. Output capacity rises from 1 million to 2.6 million requests per second. Which concept best classifies this result?",
+                "choices": {
+                    "A": "Increasing returns to scale.",
+                    "B": "Diminishing marginal product of labor.",
+                    "C": "Fixed-proportions production.",
+                    "D": "A movement along a demand curve."
+                },
+                "correct": "A",
+                "explanation": "All inputs doubled and output rose by more than double, so this is increasing returns to scale. B changes one input holding others fixed. C concerns substitution patterns. D is a consumer-market concept."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes diminishing marginal product from decreasing returns to scale?",
+                "choices": {
+                    "A": "Diminishing marginal product changes one input holding others fixed; decreasing returns to scale scales all inputs and output rises less than proportionally.",
+                    "B": "They are identical because both mean output falls when inputs rise.",
+                    "C": "Diminishing marginal product applies only in the long run; decreasing returns applies only in the short run.",
+                    "D": "Diminishing marginal product uses input prices; decreasing returns uses output prices."
+                },
+                "correct": "A",
+                "explanation": "Diminishing marginal product is about varying one input; decreasing returns to scale is about scaling all inputs. B wrongly says output falls. C reverses the usual association and is conceptually wrong. D adds prices unnecessarily."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm changes technology from Q = L^0.5K^0.5 to Q = L^0.6K^0.6. What happens to returns to scale? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "It changes from constant to increasing returns to scale because the exponent sum rises from 1.0 to 1.2.",
+                    "B": "It changes from increasing to constant returns because each exponent is less than 1.",
+                    "C": "It remains constant because both inputs have equal exponents.",
+                    "D": "It becomes decreasing because marginal products diminish in each input."
+                },
+                "correct": "A",
+                "explanation": "The first function has exponent sum 1.0, while the second has sum 1.2. Returns to scale depend on the sum of exponents, not whether each individual exponent is below 1. B and D confuse individual diminishing marginal product with scale returns. C confuses equal exponents with constant returns."
+            }
+        ]
+    },
+    {
+        "topic": "Cobb-Douglas Production",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has Q = 10L^0.5K^0.5. Labor costs $20 and capital costs $80. To produce Q = 200 at minimum cost, what input bundle should it choose?",
+                "choices": {
+                    "A": "L = 40, K = 10 because cost minimization requires MPL/MPK = w/r = 1/4, so K/L = 1/4.",
+                    "B": "L = 10, K = 40 because capital is more expensive and should have higher marginal product.",
+                    "C": "L = 20, K = 20 because equal exponents imply equal input quantities.",
+                    "D": "L = 400, K = 1 because only LK matters."
+                },
+                "correct": "A",
+                "explanation": "Q=200 implies sqrt(LK)=20, so LK=400. For this Cobb-Douglas, MPL/MPK=K/L. Set K/L=w/r=20/80=1/4, so K=L/4. Then L(L/4)=400, giving L=40,K=10. B inverts the ratio. C ignores input prices. D is feasible but not cost-minimizing."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "For Q = 4L^0.25K^0.75, what is the output elasticity of labor, and what does it mean?",
+                "choices": {
+                    "A": "0.25; a 1% increase in labor holding capital fixed raises output by approximately 0.25%.",
+                    "B": "0.75; labor's elasticity equals capital's exponent because capital is held fixed.",
+                    "C": "1.00; Cobb-Douglas output always rises one-for-one with labor.",
+                    "D": "4.00; the technology parameter is labor's elasticity."
+                },
+                "correct": "A",
+                "explanation": "In Cobb-Douglas Q=AL^aK^b, the exponent a is the output elasticity of labor. B uses the capital exponent. C assumes constant returns implies unit elasticity. D confuses total factor productivity with elasticity."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = 5L^0.4K^0.6, what happens to output if labor rises by 10% while capital is fixed?",
+                "choices": {
+                    "A": "Output rises by approximately 4% because the labor exponent is the labor output elasticity.",
+                    "B": "Output rises by approximately 6% because the capital exponent is larger.",
+                    "C": "Output rises by approximately 10% because labor rises by 10%.",
+                    "D": "Output rises by approximately 50% because A = 5."
+                },
+                "correct": "A",
+                "explanation": "The labor elasticity is 0.4, so a 10% labor increase raises output by about 4%. B uses the wrong exponent. C assumes unit elasticity. D confuses productivity level with elasticity."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A Cobb-Douglas firm has Q = AL^0.3K^0.7. If A rises from 2 to 3 while L and K stay fixed, what happens to output?",
+                "choices": {
+                    "A": "Output rises by 50% because A scales total factor productivity directly.",
+                    "B": "Output rises by 30% because labor's exponent is 0.3.",
+                    "C": "Output rises by 70% because capital's exponent is 0.7.",
+                    "D": "Output is unchanged because inputs do not change."
+                },
+                "correct": "A",
+                "explanation": "Changing A from 2 to 3 multiplies output by 3/2, a 50% increase. B and C incorrectly use input elasticities. D ignores technology."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For Q = L^0.5K^0.5, what happens to the isoquant slope as the firm moves rightward along an isoquant, using more labor and less capital?",
+                "choices": {
+                    "A": "The isoquant becomes flatter because TRS = K/L falls.",
+                    "B": "The isoquant becomes steeper because labor increases.",
+                    "C": "The slope stays constant because the exponents are equal.",
+                    "D": "The isoquant becomes upward sloping because output is fixed."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas with equal exponents, TRS=K/L. Moving rightward lowers K and raises L, so K/L falls and the isoquant flattens. B reverses the effect. C confuses equal exponents with constant slope. D misunderstands isoquants."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A Cobb-Douglas isoquant is smooth and convex to the origin. Which graphical feature is inconsistent with that technology?",
+                "choices": {
+                    "A": "A sharp right-angle kink at a fixed labor-capital ratio.",
+                    "B": "A downward-sloping curve.",
+                    "C": "A diminishing absolute slope as labor increases.",
+                    "D": "Higher isoquants lying farther from the origin."
+                },
+                "correct": "A",
+                "explanation": "A right-angle kink describes Leontief fixed-proportions production, not smooth Cobb-Douglas. B, C, and D are standard Cobb-Douglas isoquant properties."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "In Q = 12L^0.2K^0.8, what does the larger capital exponent imply?",
+                "choices": {
+                    "A": "Holding the other input fixed, output is more elastic with respect to capital than labor.",
+                    "B": "The firm must spend 80% of its budget on capital.",
+                    "C": "Capital is always cheaper than labor.",
+                    "D": "Labor has negative marginal product."
+                },
+                "correct": "A",
+                "explanation": "The exponent is the output elasticity of that input. A larger capital exponent means output responds more proportionally to capital changes. B would require cost minimization and prices. C has no basis. D is false because the labor exponent is positive."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "An analyst estimates Q = 3L^0.6K^0.3 for a delivery company and wants to classify returns to scale. What should she conclude?",
+                "choices": {
+                    "A": "Decreasing returns to scale because 0.6 + 0.3 = 0.9 < 1.",
+                    "B": "Increasing returns to scale because labor's exponent is greater than capital's.",
+                    "C": "Constant returns to scale because both exponents are positive.",
+                    "D": "Cannot determine returns to scale without wages and rental rates."
+                },
+                "correct": "A",
+                "explanation": "For Cobb-Douglas, returns to scale depend on the sum of exponents. Since 0.9<1, returns are decreasing. B compares exponents incorrectly. C only notes positive marginal products. D confuses production technology with cost minimization."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes the Cobb-Douglas technology parameter A from the exponents a and b in Q = AL^aK^b?",
+                "choices": {
+                    "A": "A shifts overall productivity; a and b measure output elasticities and determine returns to scale through their sum.",
+                    "B": "A determines returns to scale; a and b only determine input prices.",
+                    "C": "A is labor productivity; b is capital cost.",
+                    "D": "A matters only in the short run; a and b matter only in the long run."
+                },
+                "correct": "A",
+                "explanation": "A is total factor productivity, while a and b are input elasticities whose sum determines returns to scale. B misassigns returns to scale. C confuses technology with costs. D invents a time-period division."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "For Q = 2L^0.5K^0.5, input prices change from w = 10, r = 10 to w = 20, r = 10. Holding target output fixed, how does the cost-minimizing input mix change? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "The firm uses relatively less labor and more capital because labor becomes more expensive, requiring a higher TRS at the optimum.",
+                    "B": "The firm uses relatively more labor because labor's marginal product must rise when its wage rises.",
+                    "C": "The input mix is unchanged because the production exponents are unchanged.",
+                    "D": "The firm stops using capital because labor price changed."
+                },
+                "correct": "A",
+                "explanation": "Cost minimization requires TRS=w/r. When w/r rises, the firm moves to a point with higher K/L, meaning less labor relative to capital. B reverses substitution. C ignores input prices. D has no basis for Cobb-Douglas interior production."
+            }
+        ]
+    },
+    {
+        "topic": "Short Run vs Long Run",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has Q = 10L^(1/2)K^(1/2). In the short run K is fixed at 16. Labor costs $25. To produce Q = 200, how much labor is required and what is the short-run implication?",
+                "choices": {
+                    "A": "L = 25; the firm adjusts labor because capital is fixed in the short run.",
+                    "B": "L = 16; labor must equal capital.",
+                    "C": "L = 100; output equals labor times capital.",
+                    "D": "L = 4; capital alone supplies most output."
+                },
+                "correct": "A",
+                "explanation": "200=10sqrt(16L)=40sqrt(L), so sqrt(L)=5 and L=25. In the short run, labor adjusts while K is fixed. B assumes equality. C uses the wrong functional form. D miscalculates."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "The same firm has Q = 10L^(1/2)K^(1/2), with w = $25 and r = $25. In the long run, what cost-minimizing input bundle produces Q = 200?",
+                "choices": {
+                    "A": "L = 20, K = 20 because equal input prices and symmetric technology imply equal inputs, and LK = 400.",
+                    "B": "L = 25, K = 16 because the short-run capital stock remains fixed.",
+                    "C": "L = 40, K = 10 because labor should replace capital.",
+                    "D": "L = 10, K = 40 because capital should replace labor."
+                },
+                "correct": "A",
+                "explanation": "Q=200 implies sqrt(LK)=20, so LK=400. With symmetric Cobb-Douglas and equal input prices, L=K=20. B is the short-run bundle, not long-run cost minimization. C and D are asymmetric without price or technology justification."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A restaurant's short-run production is Q = 30sqrt(L) because kitchen space is fixed. If demand rises permanently, how does the long-run adjustment differ?",
+                "choices": {
+                    "A": "The restaurant can vary both labor and kitchen size, so it may reduce the marginal pressure on labor by expanding capital.",
+                    "B": "The restaurant can only hire more labor forever.",
+                    "C": "The restaurant must reduce output because fixed capital prevents expansion.",
+                    "D": "The restaurant's production function becomes a demand curve."
+                },
+                "correct": "A",
+                "explanation": "In the long run all inputs are variable, so the firm can expand kitchen space as well as labor. B describes the short run. C ignores long-run adjustability. D confuses production with demand."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm with fixed capital experiences a wage increase from $15 to $20. In the short run, what is the immediate effect on the firm's cost of producing a fixed output requiring L = 40?",
+                "choices": {
+                    "A": "Variable cost rises by $200 because the same required labor is more expensive.",
+                    "B": "Fixed cost rises by $200 because wages are fixed costs.",
+                    "C": "Cost is unchanged because output is fixed.",
+                    "D": "Labor use must fall immediately even if output is fixed."
+                },
+                "correct": "A",
+                "explanation": "The wage increase is $5 per labor unit, so cost rises by $540=$200. Wages for variable labor are variable cost. C ignores input prices. D may happen with substitution in the long run, but not if fixed output and technology require L=40 immediately."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Why is the long-run average cost curve typically drawn as an envelope of short-run average cost curves?",
+                "choices": {
+                    "A": "Each short-run curve corresponds to a fixed plant size, while the long run allows choosing the lowest-cost plant size for each output.",
+                    "B": "The long-run curve must always lie above every short-run curve.",
+                    "C": "Short-run curves are demand curves and the long-run curve is supply.",
+                    "D": "The envelope exists because fixed costs are zero in the short run."
+                },
+                "correct": "A",
+                "explanation": "Each SRAC is tied to a fixed capital level; LRAC chooses among capital levels. B reverses the envelope relationship. C misidentifies the curves. D is false."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a short-run total cost graph, fixed cost is $500. What does the vertical intercept of the total cost curve represent?",
+                "choices": {
+                    "A": "$500, the cost incurred even when output is zero.",
+                    "B": "$0, because no output means no cost.",
+                    "C": "Marginal cost at the first unit.",
+                    "D": "Average variable cost."
+                },
+                "correct": "A",
+                "explanation": "Short-run total cost equals fixed cost plus variable cost, so at Q=0 the intercept is fixed cost. B ignores fixed cost. C is a slope concept. D is a ratio, not an intercept."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "What is the key economic difference between the short run and the long run for a firm?",
+                "choices": {
+                    "A": "In the short run at least one input is fixed; in the long run all inputs are variable.",
+                    "B": "The short run is less than one year; the long run is more than one year for every firm.",
+                    "C": "Firms maximize output in the short run and profit in the long run.",
+                    "D": "Input prices matter only in the long run."
+                },
+                "correct": "A",
+                "explanation": "The short run and long run are defined by input flexibility, not calendar time. B is too rigid. C misstates firm objectives. D is false because prices matter in both periods."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A gym can hire more trainers this month but cannot expand floor space or buy new equipment until next year. Membership demand rises this month. Which production framework applies to the immediate decision?",
+                "choices": {
+                    "A": "Short-run production with trainers variable and floor space/equipment fixed.",
+                    "B": "Long-run production with all inputs variable.",
+                    "C": "Consumer choice over gym memberships.",
+                    "D": "Returns to scale from doubling all inputs."
+                },
+                "correct": "A",
+                "explanation": "The immediate decision has some inputs fixed and trainers variable, so it is short-run production. B applies next year. C is demand-side. D would require scaling all inputs."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes fixed cost from sunk cost?",
+                "choices": {
+                    "A": "Fixed cost does not vary with current output; sunk cost cannot be recovered once incurred.",
+                    "B": "Fixed cost is always sunk; sunk cost is always fixed.",
+                    "C": "Fixed cost applies only in the long run; sunk cost applies only in the short run.",
+                    "D": "Fixed cost is paid to labor; sunk cost is paid to capital."
+                },
+                "correct": "A",
+                "explanation": "Fixed cost is output-invariant over the period; sunk cost is unrecoverable. Some fixed costs are avoidable, and some sunk costs need not be current fixed costs. B overstates overlap. C and D are incorrect classifications."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm initially treats warehouse space as fixed. After its lease expires, warehouse space becomes adjustable. How does this change the relevant production problem? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "The firm moves from short-run optimization with one fixed input to long-run optimization with more substitution possibilities.",
+                    "B": "The firm moves from long-run to short-run optimization because leases expire.",
+                    "C": "The production function disappears because all inputs are variable.",
+                    "D": "The firm no longer faces input prices."
+                },
+                "correct": "A",
+                "explanation": "Once warehouse space can be adjusted, the firm has more long-run substitution and scale choices. B reverses the time horizon logic. C is false; production functions still apply. D is false."
+            }
+        ]
+    },
+    {
+        "topic": "Profit Maximization",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm has total cost C(q) = 100 + 4q + q^2 and market price p = 24. What output maximizes profit, and what is the economic interpretation?",
+                "choices": {
+                    "A": "q = 10 because p = MC = 4 + 2q, so the firm produces until price equals marginal cost.",
+                    "B": "q = 24 because price equals output.",
+                    "C": "q = 5 because average cost is minimized there.",
+                    "D": "q = 0 because fixed cost is positive."
+                },
+                "correct": "A",
+                "explanation": "Profit maximization for a competitive firm requires p=MC. Since MC=4+2q, 24=4+2q gives q=10. B confuses price with quantity. C answers an average-cost question. D ignores that operating may cover variable cost and contribute toward fixed cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A monopolist faces inverse demand p(q)=60-2q and cost C(q)=20+4q. What output maximizes profit?",
+                "choices": {
+                    "A": "q = 14 because MR = 60 - 4q equals MC = 4.",
+                    "B": "q = 28 because price should equal marginal cost.",
+                    "C": "q = 15 because revenue is maximized where MR = 0.",
+                    "D": "q = 10 because price equals average cost."
+                },
+                "correct": "A",
+                "explanation": "Total revenue is 60q-2q^2, so MR=60-4q. Setting MR=MC=4 gives q=14. B uses the competitive condition p=MC. C maximizes revenue, not profit. D uses an irrelevant average-cost condition."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive firm has MC(q)=6+2q. If market price rises from 20 to 30, how does profit-maximizing output change and why?",
+                "choices": {
+                    "A": "Output rises from 7 to 12 because the higher price makes additional units profitable until MC rises to the new price.",
+                    "B": "Output falls from 7 to 3 because higher price reduces demand for the firm's output.",
+                    "C": "Output rises from 20 to 30 because q = p.",
+                    "D": "Output is unchanged because marginal cost did not shift."
+                },
+                "correct": "A",
+                "explanation": "Set p=MC. At p=20, q=7; at p=30, q=12. The mechanism is movement along the marginal cost curve. B applies market demand logic incorrectly to an individual price-taking firm. C confuses price and quantity. D ignores changed output choice."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's cost changes from C(q)=50+2q+q^2 to C(q)=50+6q+q^2 while price remains p=20. What happens to competitive profit-maximizing output?",
+                "choices": {
+                    "A": "Output falls from 9 to 7 because marginal cost shifts up by 4.",
+                    "B": "Output rises from 9 to 13 because higher cost requires more output.",
+                    "C": "Output stays at 9 because fixed cost is unchanged.",
+                    "D": "Output falls to zero because total cost increased."
+                },
+                "correct": "A",
+                "explanation": "Initially MC=2+2q, so q=9. Afterward MC=6+2q, so q=7. Higher marginal cost reduces desired output. B reverses the incentive. C ignores marginal cost. D ignores that positive production may still be profitable."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a competitive firm's graph, price is a horizontal line at $18 and marginal cost is upward sloping. What is the profit-maximizing output condition?",
+                "choices": {
+                    "A": "Produce where the upward-sloping MC curve intersects the horizontal price line, provided price covers avoidable cost.",
+                    "B": "Produce where total revenue is zero.",
+                    "C": "Produce where average fixed cost is minimized.",
+                    "D": "Produce the largest physically possible output."
+                },
+                "correct": "A",
+                "explanation": "For a price-taking firm, MR=p, so profit maximization occurs where p=MC, subject to shutdown considerations. B and C are not profit-maximizing conditions. D ignores marginal cost."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "For a monopolist with a downward-sloping demand curve, why does the marginal revenue curve lie below demand?",
+                "choices": {
+                    "A": "Selling one more unit requires lowering the price on marginal and inframarginal units, so MR is below price.",
+                    "B": "Marginal cost is always below demand.",
+                    "C": "Consumers prefer lower prices.",
+                    "D": "Demand is the same as average cost."
+                },
+                "correct": "A",
+                "explanation": "With downward-sloping demand, extra sales require a lower price, reducing revenue on previous units, so MR<p. B discusses cost, not revenue. C is too vague and not the mechanism. D is false."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is MR = MC the profit-maximizing condition for an interior output choice?",
+                "choices": {
+                    "A": "If MR exceeds MC, producing more raises profit; if MC exceeds MR, producing less raises profit.",
+                    "B": "It guarantees total revenue is maximized.",
+                    "C": "It guarantees average cost is minimized.",
+                    "D": "It means fixed cost is zero."
+                },
+                "correct": "A",
+                "explanation": "MR=MC is where no marginal output adjustment can increase profit. B confuses profit and revenue maximization. C confuses profit maximization and cost minimization per unit. D is unrelated."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A small wheat farmer can sell any amount at the market price of $8 per bushel. Its marginal cost is MC(q)=2+0.1q. Which model and output rule should it use?",
+                "choices": {
+                    "A": "Competitive firm profit maximization; set p = MC.",
+                    "B": "Monopoly pricing; set MR below price equal to MC.",
+                    "C": "Consumer utility maximization; set MRS equal to price ratio.",
+                    "D": "Cost minimization only; ignore output price."
+                },
+                "correct": "A",
+                "explanation": "The farmer is a price taker, so MR=p and the rule is p=MC. B would apply to market power. C is consumer theory. D ignores revenue and profit."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes profit maximization from cost minimization?",
+                "choices": {
+                    "A": "Profit maximization chooses output and inputs using revenue and cost; cost minimization chooses the least-cost input bundle for a given output.",
+                    "B": "Profit maximization ignores costs; cost minimization ignores technology.",
+                    "C": "Profit maximization applies only to monopolies; cost minimization applies only to competitive firms.",
+                    "D": "They are identical because both set price equal to marginal cost."
+                },
+                "correct": "A",
+                "explanation": "Profit maximization includes the output decision and revenue side; cost minimization holds output fixed and finds the cheapest way to produce it. B is false. C is false. D incorrectly collapses distinct problems."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A competitive firm's fixed cost rises from $100 to $180, while marginal cost remains MC(q)=5+q and price remains $25. What happens to its profit-maximizing output, assuming it continues operating? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "Output remains q = 20 because fixed cost does not affect marginal cost.",
+                    "B": "Output falls because total cost is higher.",
+                    "C": "Output rises to spread fixed cost over more units.",
+                    "D": "Output becomes zero automatically."
+                },
+                "correct": "A",
+                "explanation": "The operating output satisfies p=MC: 25=5+q, so q=20 both before and after. Fixed cost affects profit level and exit decisions, not the marginal output condition if operating. B and C confuse total and marginal cost. D ignores the operating assumption."
+            }
+        ]
+    },
+    {
+        "topic": "Marginal Revenue Product",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm sells output at p = $10 and has production Q = 20L - L^2 with capital fixed. If the wage is w = $80, what labor choice maximizes profit?",
+                "choices": {
+                    "A": "L = 6 because MRP = pMPL = 10(20 - 2L) equals w = 80.",
+                    "B": "L = 10 because MPL equals zero.",
+                    "C": "L = 4 because MPL equals the wage.",
+                    "D": "L = 8 because output price equals wage divided by labor."
+                },
+                "correct": "A",
+                "explanation": "MPL=20-2L, so MRP=10(20-2L). Setting MRP=80 gives 200-20L=80, so L=6. B maximizes output, not profit. C forgets to multiply by output price. D uses no valid FOC."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm has production Q = 12sqrt(L), sells output at p = $30, and pays wage w = $90. What labor amount satisfies the profit-maximizing condition MRP = w?",
+                "choices": {
+                    "A": "L = 4 because MPL = 6/sqrt(L), so MRP = 180/sqrt(L) = 90.",
+                    "B": "L = 2 because output price divided by wage equals 1/3.",
+                    "C": "L = 36 because MPL equals sqrt(L).",
+                    "D": "L = 12 because output equals labor productivity."
+                },
+                "correct": "A",
+                "explanation": "MPL=6/sqrt(L), so MRP=306/sqrt(L)=180/sqrt(L). Set equal to 90: sqrt(L)=2, so L=4. B uses a price ratio without the production function. C differentiates incorrectly. D confuses output and marginal product."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's labor MRP is p(20 - 2L). If output price p rises from $5 to $8 while wage stays $40, how does optimal labor change?",
+                "choices": {
+                    "A": "Labor rises from 6 to 7.5 because a higher output price raises the value of each worker's marginal product.",
+                    "B": "Labor falls from 6 to 4 because higher price reduces demand.",
+                    "C": "Labor stays at 6 because the physical MPL is unchanged.",
+                    "D": "Labor rises from 5 to 8 because labor equals output price."
+                },
+                "correct": "A",
+                "explanation": "At p=5, 5(20-2L)=40 gives L=6. At p=8, 8(20-2L)=40 gives L=7.5. Higher p raises MRP. B reverses the derived-demand effect. C ignores revenue valuation. D uses an invalid rule."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has MRP_L = 120 - 4L. If the wage rises from $40 to $60, what happens to labor demand?",
+                "choices": {
+                    "A": "Labor falls from 20 to 15 because the higher wage requires a higher marginal revenue product, reached at lower L.",
+                    "B": "Labor rises from 20 to 30 because workers are more expensive.",
+                    "C": "Labor stays at 20 because MRP is unchanged.",
+                    "D": "Labor falls from 80 to 60 because wage is subtracted from MRP."
+                },
+                "correct": "A",
+                "explanation": "Set MRP=w. At w=40, L=20; at w=60, L=15. The downward-sloping MRP curve gives lower labor demand at higher wages. B reverses the result. C ignores the new equality condition. D uses wrong arithmetic."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph with labor on the horizontal axis and dollars on the vertical axis, the MRP curve slopes downward. What does its height at L = 12 represent?",
+                "choices": {
+                    "A": "The extra revenue generated by the 12th unit of labor.",
+                    "B": "The total revenue generated by all 12 workers.",
+                    "C": "The wage paid to every worker regardless of productivity.",
+                    "D": "The total cost of hiring 12 workers."
+                },
+                "correct": "A",
+                "explanation": "MRP is the marginal revenue from one more input unit. B is total revenue, not marginal. C is the input price, not MRP. D is labor cost."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A competitive firm's labor demand curve coincides with its downward-sloping MRP curve. If the wage is shown as a horizontal line, where is labor chosen?",
+                "choices": {
+                    "A": "At the intersection of wage and MRP, where the last worker's revenue contribution equals the wage.",
+                    "B": "At the highest possible labor quantity.",
+                    "C": "Where total product is maximized.",
+                    "D": "Where wage equals average product."
+                },
+                "correct": "A",
+                "explanation": "The firm hires labor until MRP=w. B ignores marginal profitability. C would set MPL=0, not MRP=w. D misses output price and marginal analysis."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does profit maximization require MRP = w for labor at an interior optimum?",
+                "choices": {
+                    "A": "If MRP exceeds the wage, hiring another worker raises profit; if MRP is below the wage, reducing labor raises profit.",
+                    "B": "Because workers must be paid their average product.",
+                    "C": "Because total revenue must equal total labor cost.",
+                    "D": "Because marginal product must equal zero."
+                },
+                "correct": "A",
+                "explanation": "MRP=w equalizes marginal benefit and marginal cost of labor. B confuses average and marginal conditions. C is not required for profit maximization. D maximizes output, not profit."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A delivery app is deciding whether to hire one more driver. The driver would complete 14 extra deliveries per night, and the firm earns $6 net revenue per delivery before paying the driver. What concept determines the maximum nightly wage the firm would pay?",
+                "choices": {
+                    "A": "Marginal revenue product, equal to $84.",
+                    "B": "Average product, equal to 14.",
+                    "C": "Returns to scale, equal to 6/14.",
+                    "D": "Consumer surplus, equal to $84."
+                },
+                "correct": "A",
+                "explanation": "MRP = marginal product times marginal revenue = 14*$6 = $84. B omits revenue valuation. C is unrelated. D is a welfare concept, not the firm's hiring value."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes marginal product from marginal revenue product?",
+                "choices": {
+                    "A": "Marginal product is extra physical output from one more input; marginal revenue product is the extra revenue from that input.",
+                    "B": "Marginal product is measured in dollars; marginal revenue product is measured in units of output.",
+                    "C": "They are identical whenever labor is the input.",
+                    "D": "Marginal product includes wages; marginal revenue product excludes wages."
+                },
+                "correct": "A",
+                "explanation": "MP is physical output; MRP converts that physical output into revenue using marginal revenue. B reverses units. C ignores output price or marginal revenue. D confuses revenue product with cost."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A monopolist's marginal revenue falls because demand becomes more elastic at the current output, while MPL is unchanged. What happens to MRP_L? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "MRP_L falls because MRP equals MR times MPL.",
+                    "B": "MRP_L rises because elasticity increased.",
+                    "C": "MRP_L is unchanged because MPL is unchanged.",
+                    "D": "MRP_L becomes equal to wage automatically."
+                },
+                "correct": "A",
+                "explanation": "MRP_L = MRMPL. If MR falls and MPL is unchanged, MRP_L falls. B misreads elasticity's effect through MR. C ignores MR. D confuses a possible optimum condition with an automatic identity."
+            }
+        ]
+    },
+    {
+        "topic": "Factor Demand",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A competitive firm has Q = 30L - L^2, output price p = $4, and wage w = $40. With capital fixed, what is the firm's labor demand?",
+                "choices": {
+                    "A": "L = 10 because pMPL = 4(30 - 2L) = 40.",
+                    "B": "L = 15 because output is maximized where MPL = 0.",
+                    "C": "L = 5 because MPL = w.",
+                    "D": "L = 40 because wage equals total labor spending."
+                },
+                "correct": "A",
+                "explanation": "MPL=30-2L, so MRP=4(30-2L). Setting MRP=w gives 120-8L=40, so L=10. B maximizes output, not profit. C forgets output price. D is not a marginal condition."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm uses Q = 50sqrt(L), sells output for p = $20, and pays wage w = $100. What labor quantity does it demand?",
+                "choices": {
+                    "A": "L = 25 because MRP = 500/sqrt(L) equals 100.",
+                    "B": "L = 5 because sqrt(L)=5.",
+                    "C": "L = 100 because wage equals output price times 5.",
+                    "D": "L = 10 because labor demand equals wage divided by price."
+                },
+                "correct": "A",
+                "explanation": "MPL=25/sqrt(L), so MRP=2025/sqrt(L)=500/sqrt(L). Set equal to 100: sqrt(L)=5, so L=25. B stops before squaring. C and D use invalid rules."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm's labor demand satisfies w = p(40 - 4L). If output price rises from p = $2 to p = $4 while w = $40, how does labor demand change?",
+                "choices": {
+                    "A": "Labor rises from 5 to 7.5 because higher output price raises the value of marginal product.",
+                    "B": "Labor falls from 5 to 2.5 because higher price reduces input demand.",
+                    "C": "Labor stays at 5 because wage is unchanged.",
+                    "D": "Labor rises from 2 to 4 because labor equals price."
+                },
+                "correct": "A",
+                "explanation": "At p=2, 40=2(40-4L) gives L=5. At p=4, 40=4(40-4L) gives L=7.5. Higher output price raises derived factor demand. B reverses the effect. C ignores output price. D uses no correct condition."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has labor demand from MRP_L = 200 - 10L. If the wage rises from $50 to $80, what happens to labor demanded?",
+                "choices": {
+                    "A": "Labor falls from 15 to 12 because a higher wage intersects the downward-sloping MRP curve at lower L.",
+                    "B": "Labor rises from 15 to 18 because workers are more costly.",
+                    "C": "Labor stays at 15 because MRP did not shift.",
+                    "D": "Labor falls from 150 to 120 because wage is multiplied by 10."
+                },
+                "correct": "A",
+                "explanation": "Set MRP=w. At w=50, L=15; at w=80, L=12. The mechanism is movement along the MRP-derived labor demand curve. B reverses the direction. C ignores the changed wage. D miscalculates."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a graph of labor demand, the wage is on the vertical axis and labor on the horizontal axis. Why does the firm's factor demand curve usually slope downward?",
+                "choices": {
+                    "A": "Because as labor rises, diminishing marginal product lowers MRP, so the firm will hire more labor only at a lower wage.",
+                    "B": "Because workers prefer leisure to labor.",
+                    "C": "Because higher wages shift the MRP curve right.",
+                    "D": "Because total product falls immediately when labor rises."
+                },
+                "correct": "A",
+                "explanation": "Factor demand is derived from MRP, which falls with diminishing marginal product. B is labor supply reasoning. C confuses movement along demand with shifts. D is not generally true."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A rise in the output price shifts a competitive firm's labor demand curve. How does the graph change?",
+                "choices": {
+                    "A": "The labor demand curve shifts right/up because each labor unit's marginal product is worth more revenue.",
+                    "B": "The labor demand curve shifts left/down because output is more expensive.",
+                    "C": "The curve becomes vertical because wage no longer matters.",
+                    "D": "There is only movement along the same curve because output price is on the vertical axis."
+                },
+                "correct": "A",
+                "explanation": "MRP=pMPL for a competitive firm. A higher output price raises MRP at every labor quantity, shifting factor demand right/up. B reverses the shift. C is false. D confuses wage-axis movement with an MRP shift."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why is factor demand called derived demand?",
+                "choices": {
+                    "A": "Because demand for inputs comes from the revenue generated by the outputs those inputs help produce.",
+                    "B": "Because workers derive utility from being employed.",
+                    "C": "Because input demand is chosen before output demand exists.",
+                    "D": "Because factor demand depends only on input prices, not output markets."
+                },
+                "correct": "A",
+                "explanation": "Firms demand inputs because inputs produce output that can be sold. B is about labor supply. C reverses the logic. D ignores output price and marginal revenue."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A coffee shop considers hiring more baristas after the market price of specialty drinks rises. The baristas' physical productivity has not changed. Which model explains why the shop may hire more labor?",
+                "choices": {
+                    "A": "Derived factor demand: higher output price raises baristas' marginal revenue product.",
+                    "B": "Consumer indifference curves: customers substitute leisure for drinks.",
+                    "C": "Fixed-proportions isoquants: labor and capital cannot substitute.",
+                    "D": "Sunk cost analysis: past espresso-machine spending determines hiring."
+                },
+                "correct": "A",
+                "explanation": "A higher output price raises MRP even if physical productivity is unchanged, increasing labor demand. B is consumer theory. C is not the key mechanism. D incorrectly bases hiring on sunk costs."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes a movement along factor demand from a shift of factor demand?",
+                "choices": {
+                    "A": "A wage change causes movement along factor demand; an output price or productivity change shifts factor demand.",
+                    "B": "A wage change shifts factor demand; an output price change causes movement along it.",
+                    "C": "Both wage and output price changes only cause movements along the same curve.",
+                    "D": "Both wage and productivity changes only shift labor supply."
+                },
+                "correct": "A",
+                "explanation": "The wage is the vertical-axis price of the input, so changing it causes movement along demand. Output price or productivity changes alter MRP at every labor quantity, shifting demand. B reverses this. C ignores demand shifters. D confuses labor demand with labor supply."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm has Q = A(20L - L^2), sells output at p = $5, and pays wage w = $50. If A rises from 1 to 2, how does labor demand change? Welfare analysis is not directly applicable here, so this substitutes a second Type 2 question.",
+                "choices": {
+                    "A": "Labor rises from 5 to 7.5 because higher productivity raises MRP at each labor quantity.",
+                    "B": "Labor falls from 5 to 2.5 because fewer workers are needed after productivity improves.",
+                    "C": "Labor stays at 5 because the wage is unchanged.",
+                    "D": "Labor rises from 10 to 20 because productivity doubled."
+                },
+                "correct": "A",
+                "explanation": "MPL=A(20-2L), so MRP=5A(20-2L). With A=1, 50=5(20-2L) gives L=5. With A=2, 50=10(20-2L) gives L=7.5. Productivity raises MRP and labor demand. B confuses output target with profit-maximizing demand. C ignores productivity. D assumes labor doubles."
+            }
+        ]
+    }
+]

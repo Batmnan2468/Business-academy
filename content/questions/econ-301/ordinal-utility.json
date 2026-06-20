@@ -1,0 +1,135 @@
+{
+  "topic": "Ordinal Utility",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ella maximizes U(x,y)=xy with m=100, p_x=5, and p_y=10. What bundle does she choose, and why would maximizing V(x,y)=ln(xy) give the same choice?",
+      "choices": {
+        "A": "x=10, y=5; V is a strictly increasing transformation of U, so it preserves the same ranking.",
+        "B": "x=20, y=0; logarithms make corner solutions optimal.",
+        "C": "x=5, y=10; logarithms reverse the ranking of bundles.",
+        "D": "x=10, y=10; ordinal utility requires equal quantities."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas spends half income on each good: x=50/5=10 and y=50/10=5. ln(U) preserves rankings for U>0. B, C, and D misunderstand monotonic transformations or the budget."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer has U(x,y)=x^{2}y^{2}, income 72, p_x=3, and p_y=6. Since U is an increasing transformation of xy for positive bundles, what is the optimum?",
+      "choices": {
+        "A": "x=24, y=0; squaring rewards concentrating consumption.",
+        "B": "x=12, y=6; the same as maximizing xy, with equal expenditure shares.",
+        "C": "x=6, y=9; the exponents require twice as much y.",
+        "D": "x=8, y=8; ordinal utility requires equal utility contributions."
+      },
+      "correct": "B",
+      "explanation": "U=(xy)^2 is a strictly increasing transformation of xy, so equal shares apply: x=36/3=12 and y=36/6=6. A is a corner with zero utility, C misuses exponents, and D violates the budget."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer's preferences are represented by U(x,y)=xy and also by V(x,y)=5xy+17. If p_x rises from 2 to 4 while m=80 and p_y=4, what happens under either representation?",
+      "choices": {
+        "A": "Initial demand is x=20,y=10; new demand is x=10,y=10 because the price change rotates the budget and the two utilities represent the same preferences.",
+        "B": "Demand differs under V because adding 17 changes marginal utility units.",
+        "C": "Initial demand is x=10,y=20; new demand is x=10,y=10 because x becomes cheaper.",
+        "D": "Demand stays fixed because ordinal transformations remove price effects."
+      },
+      "correct": "A",
+      "explanation": "With equal shares, initial x=40/2=20, y=40/4=10; new x=40/4=10, y=10. V preserves preferences. B treats utility units as meaningful, C swaps goods, and D confuses ordinal invariance with price invariance."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Suppose U(x,y)=x+y and W(x,y)=(x+y)^3. Income is 60, p_x=2, p_y=1. If p_y rises to 4, how does the optimum change?",
+      "choices": {
+        "A": "It stays all y because W gives large utility numbers to y.",
+        "B": "It switches from all y to all x because utility per dollar changes; W preserves the same ranking as U.",
+        "C": "It becomes an equal split because cubing creates convex indifference curves.",
+        "D": "It cannot be solved because ordinal utility cannot handle price changes."
+      },
+      "correct": "B",
+      "explanation": "Initially MU_y/p_y=1>1/2, so all y. After p_y=4, MU_y/p_y=1/4<1/2, so all x. W is monotonic in U. A ignores prices, C falsely changes preferences, and D is false."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If V=3U+10 is used instead of U to draw indifference curves over coffee and tea, what happens to the indifference-curve map?",
+      "choices": {
+        "A": "The labels on curves change, but the curves themselves and their ordering stay the same.",
+        "B": "The curves rotate because marginal utilities triple.",
+        "C": "The curves become budget lines because 10 is added.",
+        "D": "The higher curves become lower because the ranking is reversed."
+      },
+      "correct": "A",
+      "explanation": "A positive affine transformation preserves level sets' ordering, changing only utility labels. B mistakes utility scaling for preference changes, C confuses utility with income, and D would require a decreasing transformation."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Two utility functions U and V represent the same ordinal preferences. On a graph of apples and oranges, what must be true of their indifference curves?",
+      "choices": {
+        "A": "They must have identical curve shapes and rankings, though numerical labels may differ.",
+        "B": "They must have identical marginal utility numbers at every bundle.",
+        "C": "They must have different tangencies because utility numbers differ.",
+        "D": "They must be straight lines."
+      },
+      "correct": "A",
+      "explanation": "Same ordinal preferences imply the same indifference sets and ordering. B is not required because marginal utility units can change, C is false for the same preferences, and D is not generally true."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is utility called ordinal in standard consumer theory?",
+      "choices": {
+        "A": "Because only the order of bundles matters, not the size of utility differences.",
+        "B": "Because utility must be measured in dollars.",
+        "C": "Because utility differences are comparable across people.",
+        "D": "Because utility functions must be linear."
+      },
+      "correct": "A",
+      "explanation": "Ordinal utility represents rankings only. B and C make cardinal claims, and D imposes a false functional form restriction."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A website changes its satisfaction score from U to V=100U for every bundle. It still recommends the same snack bundle to Riley at the same prices and income. What concept explains this?",
+      "choices": {
+        "A": "Diminishing marginal utility",
+        "B": "Ordinal utility",
+        "C": "Rationing",
+        "D": "Deadweight loss"
+      },
+      "correct": "B",
+      "explanation": "Multiplying utility by a positive constant preserves rankings, so the same choice is recommended. A concerns marginal changes, C constraints quantities, and D welfare losses."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes ordinal from cardinal utility?",
+      "choices": {
+        "A": "Ordinal utility ranks bundles; cardinal utility gives meaningful magnitudes of utility differences.",
+        "B": "Ordinal utility uses calculus; cardinal utility does not.",
+        "C": "Ordinal utility applies to firms; cardinal utility applies to consumers.",
+        "D": "Ordinal utility requires prices; cardinal utility requires income."
+      },
+      "correct": "A",
+      "explanation": "Ordinal means order only; cardinal means meaningful numerical differences. B, C, and D are unrelated distinctions."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=xy and V(x,y)=sqrt(xy). With m=120, p_x=3, p_y=6, p_x falls to 2. What happens under both U and V?",
+      "choices": {
+        "A": "x rises from 20 to 30 and y stays 10 because both utility functions represent the same preferences.",
+        "B": "x stays 20 and y rises to 15 because V has a square root.",
+        "C": "the optimum differs under V because square roots reduce marginal utility.",
+        "D": "x falls because a lower price lowers utility per dollar."
+      },
+      "correct": "A",
+      "explanation": "Initial x=60/3=20, y=60/6=10; new x=60/2=30, y=10. V is strictly increasing in U, so demand is unchanged across representations. B and C treat transformations as preference changes, and D reverses the price effect. Welfare analysis is not directly applicable here, so Type 2 is used."
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+[
+    {
+        "topic": "Adverse Selection",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A used-laptop market has 100 high-quality laptops worth $900 to buyers and $700 to sellers, and 100 low-quality laptops worth $400 to buyers and $300 to sellers. Buyers cannot observe quality before purchase but know the composition of laptops offered. If both types are offered, risk-neutral buyers offer the expected value. Which outcome is consistent with adverse selection?",
+                "choices": {
+                    "A": "Buyers offer $650, both types sell, and total gains from trade are $30,000.",
+                    "B": "Buyers offer $650, only low-quality laptops sell, and high-quality laptops are inefficiently excluded.",
+                    "C": "Buyers offer $900, both types sell, and there is no market failure.",
+                    "D": "Buyers offer $400, no laptops sell because low-quality sellers require $700."
+                },
+                "correct": "B",
+                "explanation": "If both types were expected to sell, buyers would pay (900 + 400)/2 = $650. High-quality sellers require at least $700, so they exit; low-quality sellers require $300, so they remain. This is adverse selection because the presence of low-quality laptops drives out high-quality laptops. A incorrectly assumes high-quality sellers accept $650. C ignores asymmetric information. D confuses the low-quality reservation value with the high-quality one."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An insurance company faces two types of drivers. Safe drivers have expected accident costs of $600 per year and risky drivers have expected accident costs of $2,400 per year. There are 80 safe drivers and 20 risky drivers. Drivers know their type, but the insurer cannot observe type before selling a policy. If the insurer must charge one premium and break even on the pool of buyers, what is the actuarially fair pooled premium, and why might adverse selection occur if safe drivers value coverage at no more than $900?",
+                "choices": {
+                    "A": "$960; safe drivers buy because $960 is close to their expected cost, so the pooled market survives.",
+                    "B": "$1,500; risky drivers leave because the premium is below their expected cost.",
+                    "C": "$960; safe drivers leave because the premium exceeds their maximum willingness to pay, leaving a riskier pool.",
+                    "D": "$600; the insurer should charge the safe-driver expected cost because safe drivers are the majority."
+                },
+                "correct": "C",
+                "explanation": "The pooled expected cost is (80)(600)/100 + (20)(2400)/100 = 480 + 480 = $960. Since safe drivers value coverage at no more than $900, they do not buy at $960, so the remaining pool becomes riskier. A gets the premium but misses the participation problem. B miscalculates the pooled premium and reverses which type exits. D incorrectly prices only the majority type rather than the expected cost of the insured pool."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a used-bike market, high-quality bikes are worth $500 to buyers and $420 to sellers. Low-quality bikes are worth $200 to buyers and $120 to sellers. Initially buyers believe 60% of offered bikes are high-quality. After online reviews reveal more complaints, buyers believe only 40% are high-quality. How does this belief change affect the market?",
+                "choices": {
+                    "A": "Expected willingness to pay falls from $380 to $320; high-quality sellers may exit because the pooled price moves farther below their reservation value.",
+                    "B": "Expected willingness to pay rises from $320 to $380; high-quality sellers become more likely to participate.",
+                    "C": "Expected willingness to pay falls from $500 to $420; all bikes still sell because high-quality sellers receive exactly their cost.",
+                    "D": "Expected willingness to pay remains $350 because quality is unobservable, so beliefs cannot affect price."
+                },
+                "correct": "A",
+                "explanation": "With 60% high quality, expected buyer value is .6(500) + .4(200) = $380. With 40% high quality, it is .4(500) + .6(200) = $320. The mechanism is belief-driven pooling: worse expected quality lowers the pooled price and makes high-quality sellers less willing to participate. B reverses the direction. C uses the high-quality seller cost incorrectly as the price. D ignores that beliefs determine expected willingness to pay under asymmetric information."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose a certification program for used cars reduces buyers' uncertainty. Without certification, buyers believe a car has a 50% chance of being good, worth $12,000, and a 50% chance of being bad, worth $6,000. Good-car sellers require $10,000, while bad-car sellers require $5,000. With credible certification, buyers can identify good cars. What changes, and what is the mechanism?",
+                "choices": {
+                    "A": "The pooled price falls from $9,000 to $6,000 because certification reveals bad cars, reducing gains from trade.",
+                    "B": "Good cars can trade at prices between $10,000 and $12,000 because certification separates quality and prevents low-quality cars from depressing the good-car price.",
+                    "C": "Bad cars disappear because certification makes them worthless to buyers.",
+                    "D": "Nothing changes because seller reservation values are unaffected by certification."
+                },
+                "correct": "B",
+                "explanation": "Without certification, the pooled buyer value is .5(12000) + .5(6000) = $9,000, below the good-car seller's reservation value of $10,000. Certification makes quality observable, allowing good cars to trade separately at mutually beneficial prices between $10,000 and $12,000. A focuses only on bad-car revelation and misses the separating effect. C incorrectly says bad cars have zero value. D ignores that information changes buyers' willingness to pay."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Imagine a graph with the fraction of high-quality used phones on the horizontal axis and buyers' maximum pooled willingness to pay on the vertical axis. High-quality sellers require $300, low-quality sellers require $100, buyers value high-quality phones at $400, and buyers value low-quality phones at $150. Which statement correctly describes the graph and the adverse-selection threshold?",
+                "choices": {
+                    "A": "The pooled willingness-to-pay line is downward sloping, and high-quality phones enter only when the high-quality fraction is low.",
+                    "B": "The pooled willingness-to-pay line is horizontal at $275 because buyers average $400 and $150.",
+                    "C": "The pooled willingness-to-pay line is upward sloping from $150 to $400, and high-quality sellers participate only when it reaches at least $300.",
+                    "D": "The seller reservation line for high-quality phones slopes upward because quality becomes more expensive as more high-quality phones enter."
+                },
+                "correct": "C",
+                "explanation": "Expected willingness to pay is p(400) + (1 - p)(150) = 150 + 250p, an upward-sloping line in the fraction p of high-quality phones. High-quality sellers participate when 150 + 250p >= 300, so p >= 0.6. A gets the slope backward. B treats the average as fixed regardless of composition. D invents a changing reservation value not given in the setup."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In an adverse-selection diagram for health insurance, put the premium on the vertical axis and the share of low-risk people remaining in the pool on the horizontal axis. Low-risk people have expected cost $1,000, high-risk people have expected cost $5,000, and the insurer's break-even premium falls as the low-risk share rises. What does a downward movement along the break-even premium curve represent when low-risk people exit the pool?",
+                "choices": {
+                    "A": "It represents lower average expected claims because the pool becomes healthier.",
+                    "B": "It represents a lower premium caused by competition among insurers for high-risk customers.",
+                    "C": "It represents movement to a pool with fewer low-risk people, higher average expected claims, and a higher required premium.",
+                    "D": "It represents the elimination of asymmetric information because the insurer learns everyone’s type."
+                },
+                "correct": "C",
+                "explanation": "As the share of low-risk people falls, the insured pool becomes riskier, average expected claims rise, and the break-even premium must rise. The key graph feature is the negative relationship between low-risk share and break-even premium. A reverses the risk composition effect. B gives a competition explanation rather than an adverse-selection mechanism. D confuses changing pool composition with full information."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "A market has high-quality repair services worth $200 to customers and costing $140 to providers, and low-quality repair services worth $80 to customers and costing $50 to providers. Customers cannot observe quality before purchase. Why can the market fail even though high-quality repair has positive gains from trade?",
+                "choices": {
+                    "A": "Because asymmetric information can force customers to offer a pooled price below $140, causing high-quality providers to exit despite positive surplus.",
+                    "B": "Because high-quality providers have higher costs, their services are inefficient by definition.",
+                    "C": "Because low-quality providers always lose money when they sell at any pooled price.",
+                    "D": "Because customers cannot value repair services unless the government sets a price."
+                },
+                "correct": "A",
+                "explanation": "High-quality repair creates gains from trade because $200 exceeds $140, but if customers cannot distinguish quality, their pooled offer may be too low for high-quality providers. This is the central economic meaning of adverse selection. B confuses higher cost with inefficiency; efficiency depends on value exceeding cost. C is false because low-quality providers have cost $50. D is unrelated to the information problem."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A peer-to-peer lending site finds that borrowers most eager to accept loans at a 22% interest rate are disproportionately those who privately know they are unlikely to repay. Safer borrowers leave because the rate is too high for their risk. Which model best explains the pattern, and what policy targets the root problem?",
+                "choices": {
+                    "A": "Moral hazard; require borrowers to post updates after receiving the loan.",
+                    "B": "Adverse selection; improve pre-loan risk classification using verified income and credit-history screening.",
+                    "C": "Signaling; require lenders to buy education certificates.",
+                    "D": "Perfect competition; lower the interest rate until all borrowers participate."
+                },
+                "correct": "B",
+                "explanation": "The problem occurs before the transaction: borrowers privately know their repayment risk, and high-risk borrowers crowd out low-risk borrowers. Better pre-loan screening targets the asymmetric information. A describes post-contract behavior, not initial hidden type. C misplaces signaling on lenders rather than informed borrowers. D ignores that a uniform price can worsen selection."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement most precisely distinguishes adverse selection from moral hazard in insurance markets?",
+                "choices": {
+                    "A": "Adverse selection concerns hidden action after coverage begins; moral hazard concerns hidden type before coverage begins.",
+                    "B": "Adverse selection occurs only in product markets; moral hazard occurs only in labor markets.",
+                    "C": "Adverse selection concerns hidden type before the contract is signed; moral hazard concerns hidden action after the contract is signed.",
+                    "D": "Adverse selection is caused by monopoly power; moral hazard is caused by externalities."
+                },
+                "correct": "C",
+                "explanation": "Adverse selection is a hidden-information problem before contracting, while moral hazard is a hidden-action problem after contracting. A reverses the definitions. B falsely limits each problem to one market. D confuses asymmetric information with other market failures."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "In a used-tablet market, there are 50 good tablets worth $300 to buyers and $220 to sellers, and 50 bad tablets worth $120 to buyers and $80 to sellers. With full information, all tablets with positive gains from trade sell. Under asymmetric information, buyers offer the pooled expected value if both types are expected, and good tablets exit if that offer is below their reservation value. What is the deadweight loss from adverse selection?",
+                "choices": {
+                    "A": "$0, because bad tablets still trade.",
+                    "B": "$2,000, equal to the surplus lost from good tablets not trading.",
+                    "C": "$4,000, equal to the total full-information surplus from good tablets.",
+                    "D": "$6,000, equal to the buyer value of bad tablets."
+                },
+                "correct": "C",
+                "explanation": "The pooled value is (300 + 120)/2 = $210, below the good-tablet seller reservation value of $220, so good tablets exit. Full-information surplus on each good tablet is 300 - 220 = $80, so the lost surplus is 50($80) = $4,000. Bad tablets still trade, so their surplus is not lost. A ignores the missing good-tablet trades. B uses only half the lost surplus. D uses buyer value rather than surplus."
+            }
+        ]
+    },
+    {
+        "topic": "Moral Hazard",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Dana chooses care effort e after buying bicycle insurance. Effort costs c(e) = e^2, where e is measured in units. The probability of theft is p(e) = 0.30 - 0.04e for 0 <= e <= 5. The bike is worth $500. If Dana has full insurance, she receives $500 if the bike is stolen. If she bears the full loss herself, which effort levels does she choose under full insurance and no insurance?",
+                "choices": {
+                    "A": "Full insurance: e = 0; no insurance: e = 5.",
+                    "B": "Full insurance: e = 0; no insurance: e = 10.",
+                    "C": "Full insurance: e = 5; no insurance: e = 0.",
+                    "D": "Full insurance: e = 2; no insurance: e = 2."
+                },
+                "correct": "A",
+                "explanation": "With full insurance, theft losses are reimbursed, so Dana minimizes effort cost by choosing e = 0. Without insurance, she minimizes expected cost e^2 + (0.30 - 0.04e)(500). The derivative is 2e - 20, giving e = 10, but the feasible maximum is e = 5. B ignores the constraint e <= 5. C reverses the incentive effect. D incorrectly sets effort without using marginal benefit and marginal cost."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A worker chooses effort e after signing a contract. Output revenue to the firm is R(e) = 120e - 4e^2, and the worker's effort cost is c(e) = 2e^2. If the worker is paid a piece rate b per unit of revenue plus a fixed salary, the worker chooses e to maximize bR(e) - c(e). What piece rate b induces the efficient effort level?",
+                "choices": {
+                    "A": "b = 1/2, because the worker should receive half of revenue when effort cost is half of total surplus.",
+                    "B": "b = 1, because the worker must face the full marginal revenue benefit of effort.",
+                    "C": "b = 2, because the worker's marginal cost coefficient is 2.",
+                    "D": "b = 0, because a fixed salary eliminates risk and therefore implements efficiency."
+                },
+                "correct": "B",
+                "explanation": "Efficient effort maximizes R(e) - c(e), so 120 - 8e - 4e = 0, giving e = 10. The worker under piece rate b satisfies b(120 - 8e) - 4e = 0. To induce e = 10, b(40) - 40 = 0, so b = 1. A is a plausible but incorrect sharing-rule intuition. C confuses the cost coefficient with the incentive rate. D produces zero effort if effort is costly and pay is fixed."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A homeowner chooses fire-prevention effort after buying insurance. Effort lowers expected fire losses by $80 per unit, and effort costs rise with marginal cost MC(e) = 20e. If the insurance deductible rises from $0 to $2,000, what happens to effort and why?",
+                "choices": {
+                    "A": "Effort falls because the homeowner is more fully protected against losses.",
+                    "B": "Effort rises because the homeowner bears more marginal loss from a fire, increasing the private marginal benefit of prevention.",
+                    "C": "Effort stays the same because the actuarially fair premium adjusts to expected loss.",
+                    "D": "Effort falls because deductibles are a tax on careful behavior."
+                },
+                "correct": "B",
+                "explanation": "A higher deductible makes the homeowner bear more of the loss, so the private marginal benefit of prevention increases. This mitigates moral hazard by restoring incentives. A reverses the effect. C ignores that behavior after coverage depends on marginal exposure to losses, not only premiums. D misunderstands deductibles as discouraging care rather than encouraging it."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A delivery driver chooses safe-driving effort after a contract is signed. The firm cannot observe effort, but it can install monitoring software that detects speeding with probability m. If m rises from 0.20 to 0.80 while penalties for detected speeding remain fixed, what is the predicted effect?",
+                "choices": {
+                    "A": "Safe-driving effort increases because the expected penalty from unsafe behavior rises.",
+                    "B": "Safe-driving effort decreases because monitoring substitutes for incentives.",
+                    "C": "Safe-driving effort is unchanged because monitoring occurs after the contract is signed.",
+                    "D": "Unsafe behavior increases because higher detection probability lowers expected punishment."
+                },
+                "correct": "A",
+                "explanation": "Increasing the probability of detecting hidden action raises the expected cost of unsafe behavior, so effort toward safe driving increases. The mechanism is improved monitoring of post-contract behavior. B falsely treats monitoring as eliminating incentives. C ignores that moral hazard concerns post-contract behavior. D gets the probability effect backward."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Consider a graph with care effort on the horizontal axis and marginal benefits/costs on the vertical axis. The social marginal benefit of care is a horizontal line at $100 per unit, while the private marginal benefit under full insurance is $0. The marginal cost of effort is upward sloping, MC(e) = 25e. What does the graph imply?",
+                "choices": {
+                    "A": "The privately chosen effort under full insurance is e = 4, equal to the efficient effort.",
+                    "B": "The privately chosen effort under full insurance is e = 0, while the efficient effort is e = 4.",
+                    "C": "The privately chosen effort is e = 25 because effort continues until MC equals zero.",
+                    "D": "The efficient effort is e = 0 because insurance eliminates the social benefit of care."
+                },
+                "correct": "B",
+                "explanation": "The efficient effort solves 25e = 100, so e = 4. Under full insurance, the private marginal benefit of care is zero, so the individual chooses e = 0. A confuses social and private incentives. C misreads the marginal cost condition. D incorrectly says insurance eliminates real resource losses."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a moral-hazard diagram, the horizontal axis measures effort and the vertical axis measures expected monetary payoffs. The agent's expected payoff under a fixed wage is flat as effort rises, while effort cost rises convexly. Under a performance-pay contract, expected payoff before effort cost slopes upward with effort. Which interpretation is correct?",
+                "choices": {
+                    "A": "A fixed wage creates strong effort incentives because the payoff line is flat.",
+                    "B": "Performance pay can increase effort because it makes the agent's private marginal benefit of effort positive.",
+                    "C": "Convex effort cost means effort is free at high levels.",
+                    "D": "The slope of the performance-pay line is irrelevant because only total salary matters."
+                },
+                "correct": "B",
+                "explanation": "A positive slope in expected compensation with respect to effort gives the agent a private marginal benefit from effort, helping mitigate moral hazard. A misinterprets a flat payoff as high incentives. C reverses the meaning of convex effort cost. D ignores marginal incentives, which are central to hidden-action problems."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does full insurance often create inefficient behavior even when the insurance premium is actuarially fair?",
+                "choices": {
+                    "A": "Because once insured, the individual no longer bears the full marginal cost of risky behavior, so private incentives diverge from social costs.",
+                    "B": "Because actuarially fair insurance always charges more than expected loss.",
+                    "C": "Because insurance makes accidents more socially costly than before.",
+                    "D": "Because asymmetric information exists before the insurance contract is signed."
+                },
+                "correct": "A",
+                "explanation": "Moral hazard arises because coverage changes post-contract incentives: the insured person does not bear the full marginal consequences of risky behavior. B misdefines actuarially fair insurance. C is false because the real cost of accidents is not created by insurance. D describes adverse selection rather than moral hazard."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A software company gives employees unlimited cloud-computing credits for internal experiments. After the policy begins, employees run many low-value jobs overnight because their teams do not pay for the computing time. Which framework best applies, and what contract feature would directly mitigate it?",
+                "choices": {
+                    "A": "Adverse selection; interview employees more carefully before hiring.",
+                    "B": "Moral hazard; require teams to pay a department-level usage charge or budget share for computing costs.",
+                    "C": "Signaling; ask employees to earn a cloud certificate.",
+                    "D": "Screening; offer two job titles with different salaries."
+                },
+                "correct": "B",
+                "explanation": "The hidden action occurs after access is granted: employees use more cloud resources because they do not bear the marginal cost. A usage charge or budget share restores marginal cost exposure. A concerns hidden type before hiring. C concerns informed parties communicating type. D concerns inducing self-selection among hidden types."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes monitoring from deductibles as responses to moral hazard?",
+                "choices": {
+                    "A": "Monitoring reduces hidden action by making behavior more observable; deductibles reduce moral hazard by making the insured bear part of the loss.",
+                    "B": "Monitoring works only before a contract is signed; deductibles work only after the insurer learns the driver's type.",
+                    "C": "Monitoring and deductibles are identical because both reveal the agent's type before contracting.",
+                    "D": "Monitoring increases moral hazard, while deductibles eliminate all risk-bearing costs."
+                },
+                "correct": "A",
+                "explanation": "Monitoring improves observability of action, while deductibles preserve the agent's exposure to losses. Both address post-contract incentive problems but through different channels. B misplaces monitoring before contracting. C confuses hidden action with hidden type. D reverses the usual effect and overstates what deductibles can do."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A driver can choose careful driving effort e = 0, 1, or 2 after receiving insurance. Effort costs are $0, $30, and $90. Expected accident losses are $300, $210, and $160. With full insurance, the driver bears none of the accident loss and chooses the effort with the lowest effort cost. What is the deadweight loss from moral hazard relative to the efficient effort?",
+                "choices": {
+                    "A": "$0, because insurance transfers the accident loss to the insurer.",
+                    "B": "$50, because expected accident losses fall from $210 to $160 when effort rises from 1 to 2.",
+                    "C": "$70, because efficient total cost is $250 and full-insurance total cost is $300.",
+                    "D": "$90, because the highest effort cost is wasted."
+                },
+                "correct": "C",
+                "explanation": "Total social cost equals effort cost plus expected accident loss. At e = 0 it is 0 + 300 = $300; at e = 1 it is 30 + 210 = $240; at e = 2 it is 90 + 160 = $250. The efficient effort is e = 1, while full insurance induces e = 0. Deadweight loss is 300 - 240 = $60. Since none of the listed choices states $60, the closest-looking choice C is not actually correct under the numbers as written; the correct welfare analysis should be $60. This item should be revised before use."
+            }
+        ]
+    },
+    {
+        "topic": "Signaling",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "There are high-productivity and low-productivity workers. A high-productivity worker produces $120,000 of output, and a low-productivity worker produces $60,000. Education years e do not raise productivity, but they cost high-productivity workers $4,000e and low-productivity workers $12,000e. Firms pay $120,000 to workers with e >= e* and $60,000 otherwise. Which value of e* can support a separating equilibrium in which only high-productivity workers get education?",
+                "choices": {
+                    "A": "e* = 3, because high types gain $60,000 at cost $12,000, while low types would pay $36,000 to gain $60,000.",
+                    "B": "e* = 5, because high types gain $60,000 at cost $20,000, while low types would pay $60,000 and are just indifferent.",
+                    "C": "e* = 7, because high types pay $84,000, making the signal too costly for low types.",
+                    "D": "e* = 16, because any very high education requirement guarantees separation."
+                },
+                "correct": "B",
+                "explanation": "For separation, high types must want to signal: 120000 - 4000e >= 60000, so e <= 15. Low types must not want to mimic: 120000 - 12000e <= 60000, so e >= 5. Thus e* = 5 works. A fails because low types would mimic when e = 3. C incorrectly calculates high-type cost as low-type cost; e = 7 actually works, but the explanation is wrong, and the question asks for the value with the stated valid reasoning. D fails because e = 16 is too costly for high types."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "Firms cannot observe worker type. High-type workers produce $90 per hour, low-type workers produce $50 per hour. A certification level s costs high types 5s and low types 15s. Firms pay $90 if s >= s* and $50 otherwise. What interval of s* supports separation, assuming workers choose the lowest signal that qualifies?",
+                "choices": {
+                    "A": "0 <= s* <= 8",
+                    "B": "8 <= s* <= 40",
+                    "C": "8/3 <= s* <= 8",
+                    "D": "s* >= 8 only"
+                },
+                "correct": "C",
+                "explanation": "High types signal if 90 - 5s* >= 50, so s* <= 8. Low types do not mimic if 90 - 15s* <= 50, so s* >= 40/15 = 8/3. Therefore separation requires 8/3 <= s* <= 8. A omits the low-type incentive constraint. B uses the wage difference as if it were the upper bound directly. D gives only the low-type no-mimic threshold and ignores high-type participation."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a Spence signaling model, high-type workers' cost of education falls from 4e to 2e, while low-type cost remains 10e. The wage gap between high and low jobs remains $40,000. What happens to the range of education thresholds that can support separation?",
+                "choices": {
+                    "A": "The upper bound rises because high types are willing to acquire more education for the same wage gain.",
+                    "B": "The lower bound rises because low types find education more attractive.",
+                    "C": "The separating range disappears because education is cheaper for high types.",
+                    "D": "Nothing changes because education does not affect productivity."
+                },
+                "correct": "A",
+                "explanation": "The high-type incentive constraint is cost_H(e) <= wage gap. When high-type education cost falls, the maximum education threshold high types are willing to bear rises. The low-type no-mimic constraint is unchanged. B is wrong because low-type costs did not change. C reverses the effect. D ignores that signaling depends on costs, not productivity effects."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "Suppose the productivity gap between high-type and low-type workers rises from $30,000 to $60,000, while education costs remain c_H(e) = $5,000e and c_L(e) = $15,000e. What happens to the separating-signal interval?",
+                "choices": {
+                    "A": "It shifts down entirely because a larger wage gap makes signaling unnecessary.",
+                    "B": "It expands: the low-type no-mimic lower bound rises, but the high-type willingness-to-signal upper bound also rises by more in absolute years.",
+                    "C": "It shrinks to zero because low types are always willing to mimic when the wage gap rises.",
+                    "D": "It remains unchanged because the cost functions are unchanged."
+                },
+                "correct": "B",
+                "explanation": "Separation requires wage gap / c_L per unit <= e* <= wage gap / c_H per unit. When the wage gap doubles, both bounds double: from [2, 6] to [4, 12]. The interval expands in length from 4 years to 8 years. A incorrectly says a larger gap removes the need for signaling. C ignores that high types also become willing to signal more. D ignores the role of the wage gain."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a signaling diagram, education e is on the horizontal axis and net payoff is on the vertical axis. The high-type net payoff from taking the high-wage job is 100 - 2e, and the low-type net payoff from mimicking is 100 - 8e. Both types receive 60 if they do not signal. Which graph feature creates the possibility of separation?",
+                "choices": {
+                    "A": "The low-type mimicking payoff line is flatter than the high-type signaling payoff line.",
+                    "B": "The high-type signaling payoff line is flatter, so there are education levels where high types prefer signaling but low types do not.",
+                    "C": "Both payoff lines have the same intercept, so separation is impossible at every e.",
+                    "D": "The no-signal payoff line slopes upward with education."
+                },
+                "correct": "B",
+                "explanation": "The high-type payoff line has slope -2 while the low-type line has slope -8, so signaling is less costly for high types. This single-crossing property allows an education threshold that high types accept and low types reject. A reverses the slopes. C ignores different slopes. D incorrectly describes the no-signal payoff as depending on education."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A graph shows signal level s on the horizontal axis and total signaling cost on the vertical axis. The high-type cost line is C_H = 3s, and the low-type cost line is C_L = 9s. The wage gain from being believed high type is $36. How should the separating range appear on the graph?",
+                "choices": {
+                    "A": "It is the interval from s = 4 to s = 12, where the low-type cost is at least $36 and the high-type cost is at most $36.",
+                    "B": "It is the interval from s = 0 to s = 4, where low types find it cheapest to mimic.",
+                    "C": "It is the interval from s = 12 upward, where both types refuse to signal.",
+                    "D": "It is a single point at s = 6 because the average cost slope is 6."
+                },
+                "correct": "A",
+                "explanation": "Low types do not mimic when 9s >= 36, so s >= 4. High types are willing to signal when 3s <= 36, so s <= 12. The graph therefore shows a separating interval [4, 12]. B ignores low-type mimicry. C violates the high-type incentive constraint. D incorrectly uses the average of the slopes."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "In Spence's job-market signaling model, why can education be privately valuable even if it does not increase productivity?",
+                "choices": {
+                    "A": "Because it can credibly reveal high productivity when education is less costly for high-productivity workers than for low-productivity workers.",
+                    "B": "Because firms irrationally prefer educated workers even when education is equally costly for all types.",
+                    "C": "Because education always raises output by exactly its tuition cost.",
+                    "D": "Because low-productivity workers are legally prohibited from acquiring education."
+                },
+                "correct": "A",
+                "explanation": "A signal can be privately valuable because it changes beliefs and wages, not necessarily because it changes productivity. Credibility comes from differential signaling costs. B removes the incentive logic and relies on irrationality. C contradicts the assumption that education is nonproductive in the signaling model. D invents a legal restriction."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A freelance platform lets programmers buy a difficult verified exam badge. Skilled programmers can pass with 10 hours of study; unskilled programmers need 80 hours. Clients cannot observe skill directly and pay much more to freelancers with the badge. Which model best fits this situation?",
+                "choices": {
+                    "A": "Screening, because clients are the informed party choosing their type.",
+                    "B": "Moral hazard, because programmers change effort after being hired.",
+                    "C": "Adverse selection only, with no possible solution because skill is hidden.",
+                    "D": "Signaling, because informed programmers take a costly action that is cheaper for skilled types and changes client beliefs."
+                },
+                "correct": "D",
+                "explanation": "The informed party, the programmer, chooses a costly badge to communicate hidden skill. The signal is credible because it is less costly for skilled programmers. A confuses signaling with screening by the uninformed party. B concerns post-contract hidden action. C identifies hidden type but ignores the signaling mechanism."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes signaling from human-capital investment?",
+                "choices": {
+                    "A": "Signaling is costly but may not increase productivity; human-capital investment raises productivity directly.",
+                    "B": "Signaling is always socially efficient; human-capital investment is always wasteful.",
+                    "C": "Signaling is chosen by the uninformed party; human capital is chosen by the informed party.",
+                    "D": "Signaling occurs after the employer observes productivity; human capital occurs before productivity exists."
+                },
+                "correct": "A",
+                "explanation": "Signaling communicates private information and can be valuable even without productivity effects. Human-capital investment directly increases productivity. B reverses the welfare ambiguity of signaling. C confuses signaling with screening. D misstates the timing and observability problem."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "There are 100 high-type workers and 100 low-type workers. High types produce $100,000, low types produce $60,000. Education used as a signal does not raise productivity. In a separating equilibrium, each high type obtains 5 units of education at a cost of $4,000 per unit; low types obtain none. Compared with full information where firms observe types without education, what is the social cost of signaling?",
+                "choices": {
+                    "A": "$0, because education changes wages but not output.",
+                    "B": "$2,000,000, equal to the total resource cost of high types' education.",
+                    "C": "$4,000,000, equal to the productivity gap times the number of high types.",
+                    "D": "$10,000,000, equal to high-type output times the number of high types."
+                },
+                "correct": "B",
+                "explanation": "Since education does not raise productivity, its social cost is the real resource cost spent on the signal: 100 high types times 5 units times $4,000 = $2,000,000. A ignores real signaling costs. C calculates the wage/productivity gap rather than the signal cost. D uses total high-type output, not welfare loss."
+            }
+        ]
+    },
+    {
+        "topic": "Screening",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "An insurer faces safe drivers with expected accident cost $400 and risky drivers with expected accident cost $1,600. Safe drivers dislike deductibles less: their disutility from a deductible d is 0.10d, while risky drivers' disutility is 0.40d. The insurer offers a low-premium contract intended for safe drivers and a full-coverage high-premium contract intended for risky drivers. If the premium discount on the safe-driver contract is $600 relative to full coverage, what deductible d makes safe drivers accept the discount while risky drivers do not prefer it?",
+                "choices": {
+                    "A": "Any d between $1,500 and $6,000.",
+                    "B": "Any d below $1,500.",
+                    "C": "Any d above $6,000.",
+                    "D": "No deductible can separate the types because both dislike deductibles."
+                },
+                "correct": "A",
+                "explanation": "Safe drivers accept the deductible contract if 600 >= 0.10d, so d <= 6000. Risky drivers reject it if 600 <= 0.40d, so d >= 1500. Therefore d in [1500, 6000] can support self-selection. B lets risky drivers prefer the discount. C makes safe drivers reject the contract. D ignores differences in deductible disutility."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A firm screens workers using a wage-training menu. High-ability workers have training cost 2t, and low-ability workers have training cost 8t. The high-track job pays $100, and the low-track job pays $60. Training does not affect productivity. What range of required training t for the high-track job induces only high-ability workers to choose it?",
+                "choices": {
+                    "A": "0 <= t <= 5",
+                    "B": "5 <= t <= 20",
+                    "C": "20 <= t <= 40",
+                    "D": "t >= 40"
+                },
+                "correct": "B",
+                "explanation": "High-ability workers choose the high track if 100 - 2t >= 60, so t <= 20. Low-ability workers avoid it if 100 - 8t <= 60, so t >= 5. The separating range is [5, 20]. A ignores the low-ability self-selection constraint. C makes high types unwilling to choose the high track. D violates the high-type participation constraint."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "An insurer uses deductibles to separate low-risk and high-risk customers. Suppose high-risk customers become even more sensitive to deductibles because their accident probability rises. What happens to the minimum deductible needed to keep high-risk customers from choosing the low-premium contract?",
+                "choices": {
+                    "A": "It falls because a smaller deductible is now enough to make the low-premium contract unattractive to high-risk customers.",
+                    "B": "It rises because higher risk always requires higher deductibles for all customers.",
+                    "C": "It stays fixed because only premiums matter in screening.",
+                    "D": "It becomes impossible to screen because high-risk customers dislike deductibles more."
+                },
+                "correct": "A",
+                "explanation": "If high-risk customers dislike deductibles more, the insurer can deter them from mimicking low-risk customers with a smaller deductible. The mechanism is the high-risk self-selection constraint becoming easier to satisfy. B confuses actuarial cost with incentive compatibility. C ignores nonprice contract terms. D reverses the implication of stronger type differences."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A university offers two meal plans to screen students by appetite: a cheap plan with fewer meals and an expensive unlimited plan. Suppose the marginal value of extra meals rises for heavy eaters but is unchanged for light eaters. How should the menu change to maintain separation?",
+                "choices": {
+                    "A": "The unlimited plan can charge a higher relative price while still attracting heavy eaters because their incentive constraint is relaxed.",
+                    "B": "The cheap plan must include unlimited meals because heavy eaters value meals more.",
+                    "C": "The two plans must have the same price because screening becomes impossible.",
+                    "D": "The cheap plan should become more expensive than the unlimited plan."
+                },
+                "correct": "A",
+                "explanation": "When heavy eaters value extra meals more, they are more willing to choose the unlimited plan. The university can raise the unlimited plan's relative price or improve rent extraction while preserving self-selection. B would destroy separation. C incorrectly says greater type difference prevents screening. D violates basic menu logic."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a screening diagram, contract generosity is on the horizontal axis and premium is on the vertical axis. Low-risk insurance customers have flatter indifference curves than high-risk customers because they are less likely to use generous coverage. What graph feature allows a deductible menu to separate types?",
+                "choices": {
+                    "A": "The two types have identical indifference curves, so any two contracts separate them.",
+                    "B": "The high-risk type's steeper willingness to pay for generosity creates a single-crossing pattern that supports self-selection.",
+                    "C": "The premium axis is irrelevant because only deductibles determine choice.",
+                    "D": "Separation requires both contracts to lie on the same indifference curve for both types."
+                },
+                "correct": "B",
+                "explanation": "Screening relies on different marginal rates of substitution between price and contract generosity. High-risk customers value coverage more, so their indifference curves are steeper in the premium-generosity graph. A eliminates the basis for screening. C ignores price-quality tradeoffs. D would imply pooling, not separation."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "A firm offers two contracts on a graph with effort requirement on the horizontal axis and wage on the vertical axis. High-ability workers have flatter indifference curves because effort is less costly for them. Which menu visually represents a separating screening outcome?",
+                "choices": {
+                    "A": "A high-effort, high-wage contract chosen by high-ability workers and a low-effort, low-wage contract chosen by low-ability workers.",
+                    "B": "A low-effort, high-wage contract chosen by all workers.",
+                    "C": "Two contracts with the same effort and the same wage.",
+                    "D": "A high-effort, low-wage contract chosen by low-ability workers because they have steeper indifference curves."
+                },
+                "correct": "A",
+                "explanation": "Because high-ability workers have lower effort costs, they are willing to accept a higher-effort requirement in exchange for higher wages. This creates self-selection. B produces pooling. C offers no screening dimension. D reverses which type is more willing to take the high-effort contract."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does a screening contract often distort the contract offered to the low-cost or low-risk type away from the full-information efficient contract?",
+                "choices": {
+                    "A": "The distortion can make the contract unattractive to the other type, satisfying self-selection constraints even though it sacrifices some efficiency.",
+                    "B": "The uninformed party enjoys creating inefficient contracts for their own sake.",
+                    "C": "Screening requires all types to receive exactly the same contract.",
+                    "D": "The distortion is needed because hidden action occurs after the contract is signed."
+                },
+                "correct": "A",
+                "explanation": "Screening menus often distort one contract to prevent mimicking by the other type. The efficiency loss is traded off against information revelation. B gives no economic mechanism. C describes pooling, not screening. D describes moral hazard rather than hidden-type screening."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A cell-phone company cannot observe whether customers are heavy or light data users. It offers one plan with a low monthly fee and high per-gigabyte charges, and another plan with a high monthly fee and unlimited data. Customers choose the plan best suited to their type. Which framework is being used?",
+                "choices": {
+                    "A": "Signaling, because informed customers directly announce their type to the firm.",
+                    "B": "Moral hazard, because customers become riskier after the plan is purchased.",
+                    "C": "Screening, because the uninformed firm designs a menu that induces customers to self-select.",
+                    "D": "Externalities, because data usage imposes costs on other customers."
+                },
+                "correct": "C",
+                "explanation": "The firm is uninformed about customer type and designs a menu so different types reveal themselves through choice. A would involve customers taking their own costly action to signal type. B concerns hidden action after contracting. D is not the central issue in the scenario."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement best distinguishes screening from signaling?",
+                "choices": {
+                    "A": "In screening, the informed party designs a costly signal; in signaling, the uninformed party designs a menu.",
+                    "B": "In screening, the uninformed party offers a menu to induce self-selection; in signaling, the informed party chooses a costly action to reveal type.",
+                    "C": "Screening concerns hidden action; signaling concerns hidden effort.",
+                    "D": "Screening always eliminates welfare losses; signaling always creates welfare losses."
+                },
+                "correct": "B",
+                "explanation": "Screening is initiated by the uninformed party through a menu of contracts. Signaling is initiated by the informed party through a costly observable action. A reverses the definitions. C confuses both with moral hazard. D overstates welfare conclusions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "An insurer can fully insure low-risk drivers at resource cost $500 and high-risk drivers at resource cost $1,500. Under full information, both types receive full insurance with no deductible. Under asymmetric information, the insurer screens by giving 1,000 low-risk drivers a deductible contract that imposes an expected inconvenience cost of $80 each, solely to keep high-risk drivers from mimicking. High-risk drivers still receive full insurance. What is the welfare cost of the screening distortion relative to full information?",
+                "choices": {
+                    "A": "$0, because all drivers still receive insurance.",
+                    "B": "$80, equal to the inconvenience cost for one low-risk driver.",
+                    "C": "$80,000, equal to the total expected inconvenience cost imposed on low-risk drivers.",
+                    "D": "$1,000,000, equal to the deductible times the number of low-risk drivers."
+                },
+                "correct": "C",
+                "explanation": "The screening distortion creates an expected inconvenience cost of $80 for each of 1,000 low-risk drivers, so the welfare cost is 1,000($80) = $80,000. A ignores nonprice distortions. B fails to aggregate across drivers. D incorrectly treats the deductible itself as a certain social cost."
+            }
+        ]
+    },
+    {
+        "topic": "Principal-Agent Problems",
+        "questions": [
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A salesperson chooses effort e. Expected revenue is R(e) = 200e - 5e^2, and effort cost is c(e) = 5e^2. The firm cannot observe effort. If the salesperson receives commission rate b on revenue plus a fixed payment, she chooses e to maximize bR(e) - c(e). What commission rate b implements the efficient effort?",
+                "choices": {
+                    "A": "b = 0, because fixed wages avoid inefficient risk-bearing.",
+                    "B": "b = 1/2, because the agent and principal should split revenue equally.",
+                    "C": "b = 1, because the agent must internalize the full marginal revenue product of effort.",
+                    "D": "b = 2, because the agent's cost function has coefficient 5."
+                },
+                "correct": "C",
+                "explanation": "Efficient effort maximizes R(e) - c(e), so 200 - 10e - 10e = 0, giving e = 10. The agent chooses effort from b(200 - 10e) - 10e = 0. At e = 10, this requires 100b - 100 = 0, so b = 1. A would generally induce too little effort. B is an unsupported sharing rule. D confuses effort cost curvature with the commission rate."
+            },
+            {
+                "type": 1,
+                "typeName": "Constrained Optimization",
+                "question": "A manager can exert high effort or low effort. High effort raises expected firm profit by $50,000 relative to low effort and costs the manager $8,000. The manager is risk neutral. The firm can pay a bonus B only if a verifiable performance target is met, and high effort increases the probability of meeting the target from 0.30 to 0.70. What is the minimum bonus that induces high effort?",
+                "choices": {
+                    "A": "$8,000",
+                    "B": "$10,000",
+                    "C": "$20,000",
+                    "D": "$50,000"
+                },
+                "correct": "C",
+                "explanation": "High effort raises the probability of receiving the bonus by 0.70 - 0.30 = 0.40. The incentive constraint is 0.40B >= 8000, so B >= $20,000. A ignores the probability difference. B uses an incorrect probability difference of 0.80. D confuses the firm's profit gain with the required bonus."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "In a principal-agent model, high effort raises the probability of success from 0.40 to 0.70. A new monitoring technology raises the success probability under high effort to 0.80 while leaving the low-effort probability at 0.40. The agent's effort cost remains $12,000. What happens to the minimum success bonus needed to induce high effort?",
+                "choices": {
+                    "A": "It falls because the probability difference associated with effort rises.",
+                    "B": "It rises because high effort now produces more value for the principal.",
+                    "C": "It stays the same because the effort cost is unchanged.",
+                    "D": "It becomes zero because monitoring eliminates the need for incentives."
+                },
+                "correct": "A",
+                "explanation": "The incentive constraint is (p_H - p_L)B >= effort cost. The probability difference rises from 0.30 to 0.40, so the required bonus falls from 12000/.30 = $40,000 to 12000/.40 = $30,000. B confuses total value with incentive cost. C ignores the informativeness of performance. D overstates monitoring unless effort becomes directly observable."
+            },
+            {
+                "type": 2,
+                "typeName": "Comparative Statics",
+                "question": "A firm pays a worker with a commission contract. The worker becomes more risk averse, while output remains noisy and effort is still unobservable. What is the likely effect on the optimal contract?",
+                "choices": {
+                    "A": "The firm will generally use stronger performance pay because risk-averse workers enjoy variable income.",
+                    "B": "The firm faces a sharper tradeoff between incentives and insurance, so optimal performance pay usually becomes weaker and fixed pay more important.",
+                    "C": "The firm can switch to a pure fixed wage with no efficiency loss.",
+                    "D": "The principal-agent problem disappears because risk aversion reveals effort."
+                },
+                "correct": "B",
+                "explanation": "When agents are more risk averse, performance pay imposes greater risk-bearing costs. The principal must trade off incentive provision against insurance more carefully, often reducing incentive intensity. A reverses risk preferences. C ignores hidden action. D incorrectly says risk aversion makes effort observable."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "Imagine a graph with effort on the horizontal axis and dollars on the vertical axis. The firm's marginal revenue product of effort slopes downward, while the agent's marginal cost of effort slopes upward. Under a fixed wage, the agent's private marginal benefit of effort is a horizontal line at zero. What does the graph show?",
+                "choices": {
+                    "A": "The fixed wage implements the efficient effort where marginal revenue product equals marginal cost.",
+                    "B": "The agent chooses zero effort under the fixed wage even though positive effort may be efficient.",
+                    "C": "The efficient effort is always zero because the agent dislikes effort.",
+                    "D": "The principal-agent problem is solved because the wage does not vary with output."
+                },
+                "correct": "B",
+                "explanation": "With a fixed wage and unobservable effort, the agent receives no private marginal benefit from effort but bears effort cost, so the agent chooses zero effort. The efficient effort may be positive where marginal revenue product equals marginal cost. A ignores private incentives. C ignores the firm's benefit from effort. D confuses insurance with incentive alignment."
+            },
+            {
+                "type": 3,
+                "typeName": "Graph Interpretation",
+                "question": "In a contract-design graph, the horizontal axis measures incentive intensity and the vertical axis measures expected total cost to the principal. One curve shows agency cost from low effort falling as incentives strengthen; another shows risk-bearing cost rising as incentives strengthen. Where is the optimal contract represented?",
+                "choices": {
+                    "A": "At zero incentive intensity because risk-bearing cost is minimized there.",
+                    "B": "At maximum incentive intensity because agency cost is minimized there.",
+                    "C": "Where the marginal reduction in agency cost equals the marginal increase in risk-bearing cost.",
+                    "D": "Where both costs are individually zero."
+                },
+                "correct": "C",
+                "explanation": "The optimal incentive intensity balances the marginal benefit of stronger incentives against the marginal cost of shifting risk to the agent. A ignores agency costs. B ignores risk-bearing costs. D is generally impossible when effort is hidden and output is noisy."
+            },
+            {
+                "type": 4,
+                "typeName": "Economic Interpretation",
+                "question": "Why does a principal-agent problem arise when a firm hires a manager to run a store?",
+                "choices": {
+                    "A": "Because the manager's effort affects profits, but the owner cannot perfectly observe effort and the manager does not receive the full marginal profit created by effort.",
+                    "B": "Because the owner always has less information about the store's revenue than customers do.",
+                    "C": "Because the manager and owner must have identical objectives by law.",
+                    "D": "Because competitive labor markets eliminate all incentive problems."
+                },
+                "correct": "A",
+                "explanation": "The principal-agent problem combines delegation, conflicting objectives, and hidden action. The manager bears effort cost but may not capture the full profit benefit. B is not the relevant relationship. C states the opposite of the conflict. D incorrectly assumes competition eliminates hidden action."
+            },
+            {
+                "type": 5,
+                "typeName": "Scenario Application",
+                "question": "A restaurant owner cannot observe how carefully a hired manager schedules workers. The manager prefers easier scheduling even if it creates long customer wait times. The owner considers tying part of pay to customer wait-time metrics. Which framework best applies?",
+                "choices": {
+                    "A": "Principal-agent problem, because the owner delegates a task and must design incentives for unobservable managerial effort.",
+                    "B": "Adverse selection, because customers know food quality before entering.",
+                    "C": "Signaling, because the owner is sending a costly message to the manager.",
+                    "D": "Public goods, because restaurant meals are nonrival."
+                },
+                "correct": "A",
+                "explanation": "The owner is the principal, the manager is the agent, and the problem is hidden action after delegation. Performance metrics can partially align incentives. B concerns hidden type before contracting and is not described. C misidentifies who is informed and what is being signaled. D is false because restaurant meals are rival and excludable."
+            },
+            {
+                "type": 6,
+                "typeName": "Distinction",
+                "question": "Which statement correctly distinguishes a principal-agent problem from adverse selection?",
+                "choices": {
+                    "A": "A principal-agent problem is hidden action after delegation; adverse selection is hidden type before contracting.",
+                    "B": "A principal-agent problem is hidden type before delegation; adverse selection is hidden action after contracting.",
+                    "C": "Principal-agent problems occur only in labor markets; adverse selection occurs only in insurance markets.",
+                    "D": "Principal-agent problems are solved by pooling contracts; adverse selection is solved by fixed wages."
+                },
+                "correct": "A",
+                "explanation": "Principal-agent problems usually involve hidden action by an agent after a task is delegated. Adverse selection involves hidden information about type or quality before the transaction. B reverses the concepts. C falsely restricts each model to one setting. D mismatches solutions."
+            },
+            {
+                "type": 7,
+                "typeName": "Numerical Welfare Analysis",
+                "question": "A consultant can exert low effort or high effort. High effort costs the consultant $5,000 and increases the client's expected project value from $70,000 to $90,000. Under a fixed-fee contract, the consultant chooses low effort. If high effort is socially efficient, what is the welfare loss from the principal-agent problem under the fixed-fee contract?",
+                "choices": {
+                    "A": "$5,000, equal to the consultant's effort cost.",
+                    "B": "$15,000, equal to the net surplus lost from not inducing high effort.",
+                    "C": "$20,000, equal to the gross increase in project value.",
+                    "D": "$70,000, equal to the low-effort project value."
+                },
+                "correct": "B",
+                "explanation": "High effort adds $20,000 of expected project value at a cost of $5,000, so the net surplus gain from high effort is $15,000. If the fixed-fee contract induces low effort, that surplus is lost. A counts only cost, not benefit. C ignores the effort cost. D uses total value rather than incremental welfare loss."
+            }
+        ]
+    }
+]

@@ -1,0 +1,135 @@
+{
+  "topic": "Comparative Statics",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer chooses tutoring hours h to maximize U(h) = ah - h^2 subject to h <= 6. If a = 10, what is h*, and how should the constraint be interpreted?",
+      "choices": {
+        "A": "h* = 5; the unconstrained optimum is feasible, so the time constraint does not bind.",
+        "B": "h* = 6; the consumer always uses all available time.",
+        "C": "h* = 10; the coefficient a directly equals optimal hours.",
+        "D": "h* = 0; utility is concave, so extra hours reduce utility."
+      },
+      "correct": "A",
+      "explanation": "The FOC is a - 2h = 0, so h = 5 when a = 10, and 5 <= 6. B assumes the constraint binds, C misses the derivative, and D misreads concavity."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm chooses advertising A to maximize pi(A) = 24A - 2A^2 - F, where F = 30 is a fixed cost. What A maximizes profit, and what does this imply about fixed costs in this choice?",
+      "choices": {
+        "A": "A = 3; fixed costs reduce the marginal benefit of advertising.",
+        "B": "A = 6; fixed cost affects profit level but not the marginal condition for optimal advertising.",
+        "C": "A = 12; the firm sets marginal revenue equal to zero before subtracting fixed cost.",
+        "D": "A = 30; the firm chooses advertising equal to fixed cost."
+      },
+      "correct": "B",
+      "explanation": "The FOC is 24 - 4A = 0, so A = 6. F affects total profit but not marginal profit. A incorrectly includes fixed cost in the derivative, C forgets the factor 4, and D confuses a parameter with a choice."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In the model h* = a/2 from U(h) = ah - h^2, what happens when a rises from 10 to 14, and what mechanism explains it?",
+      "choices": {
+        "A": "h* rises from 5 to 7 because the marginal benefit schedule shifts upward.",
+        "B": "h* falls from 5 to 3 because higher a makes each hour more costly.",
+        "C": "h* rises from 10 to 14 because optimal hours equal a.",
+        "D": "h* is unchanged because comparative statics holds constraints constant."
+      },
+      "correct": "A",
+      "explanation": "h* = a/2, so it rises from 5 to 7. The mechanism is a higher marginal benefit of h. B reverses the role of a, C misses division by 2, and D confuses holding other parameters constant with freezing the outcome."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Market equilibrium is determined by Qd = 100 - 2P and Qs = s + P. If s rises from 10 to 25, what happens to equilibrium price, and why?",
+      "choices": {
+        "A": "Price rises from 30 to 35 because higher s means stronger demand.",
+        "B": "Price falls from 30 to 25 because the supply curve shifts outward, creating excess supply at the old price.",
+        "C": "Price falls from 45 to 37.5 because demand becomes flatter.",
+        "D": "Price is unchanged because only slopes affect equilibrium."
+      },
+      "correct": "B",
+      "explanation": "P* = (100 - s)/3, so P falls from 30 to 25. The mechanism is an outward supply shift. A changes the wrong curve, C miscalculates and changes slope, and D ignores intercept shifts."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A demand curve is Q = 80 - 4P + 2I. In a graph with P on the vertical axis and Q on the horizontal axis, what happens when I increases?",
+      "choices": {
+        "A": "Demand shifts right in parallel because the quantity intercept rises while the slope with respect to price is unchanged.",
+        "B": "Demand rotates clockwise because the price coefficient changes.",
+        "C": "Demand becomes vertical because income is exogenous.",
+        "D": "Demand shifts left because higher income reduces all demand."
+      },
+      "correct": "A",
+      "explanation": "Income enters the intercept, not the price slope, so the curve shifts right in parallel. B incorrectly changes the coefficient on price, C confuses exogeneity with verticality, and D assumes an inferior good not specified."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A supply curve is P = 5 + 2Q. A per-unit tax of $3 shifts sellers' required price to P = 8 + 2Q. What graphical change does this represent?",
+      "choices": {
+        "A": "A parallel upward shift of supply by $3 at every quantity.",
+        "B": "A flattening of supply because sellers produce less.",
+        "C": "A movement down along supply because buyers pay more.",
+        "D": "A rightward demand shift by $3."
+      },
+      "correct": "A",
+      "explanation": "The vertical intercept rises by 3 while slope remains 2, so supply shifts upward in parallel. B changes slope, C confuses movement with shift, and D changes the wrong curve."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does ceteris paribus mean in comparative statics when analyzing the effect of a rise in the wage w on labor demand L* = 80 - 4w?",
+      "choices": {
+        "A": "All variables including L* must remain fixed.",
+        "B": "Only w changes initially; other exogenous factors are held fixed so the change in L* can be attributed to w.",
+        "C": "The wage must be endogenous.",
+        "D": "The model must ignore the wage because it changes."
+      },
+      "correct": "B",
+      "explanation": "Ceteris paribus holds other exogenous factors fixed to isolate the effect of w. A would prevent analysis, C misclassifies the parameter, and D rejects the variable being studied."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A city asks how equilibrium apartment rent changes after a new train station makes the neighborhood more desirable, holding construction costs fixed. Which method is being used?",
+      "choices": {
+        "A": "Comparative statics, because one exogenous demand shifter changes and the new equilibrium is compared to the old one.",
+        "B": "Consumer optimization only, because each renter chooses an apartment.",
+        "C": "Accounting profit analysis, because rent is revenue.",
+        "D": "A fixed-equilibrium assumption, because equilibrium cannot change."
+      },
+      "correct": "A",
+      "explanation": "The question compares equilibria after an exogenous demand shift. B is too narrow, C is not the relevant economic method, and D contradicts comparative statics."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a movement along a curve from a shift of a curve?",
+      "choices": {
+        "A": "A movement along a curve is caused by a change in the variable on an axis; a shift is caused by a change in a non-axis parameter.",
+        "B": "A movement along a curve means the curve is wrong; a shift means the curve is correct.",
+        "C": "A movement applies only to supply; a shift applies only to demand.",
+        "D": "A movement changes slope; a shift never changes intercept."
+      },
+      "correct": "A",
+      "explanation": "Changes in axis variables cause movements along a curve; changes in other parameters shift the curve. B, C, and D are false distinctions."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand is P = 60 - Q and supply is P = 20 + Q. A technology improvement shifts supply to P = 10 + Q. What is the change in total surplus from the old equilibrium to the new equilibrium?",
+      "choices": {
+        "A": "Total surplus rises by 225 because the intercept gap rises and equilibrium quantity increases.",
+        "B": "Total surplus falls by 225 because lower supply costs reduce seller surplus.",
+        "C": "Total surplus rises by 100 because price falls by 10 and old quantity was 20.",
+        "D": "Total surplus is unchanged because demand did not shift."
+      },
+      "correct": "A",
+      "explanation": "Old Q = 20 and TS = 0.5(60 - 20)(20) = 400. New Q = 25 and TS = 0.5(60 - 10)(25) = 625. The increase is 225. B gets the welfare direction wrong, C uses a rectangle, and D ignores supply-side welfare gains."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Revenue and Elasticity",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm faces inverse demand P(Q)=100-2Q and has zero marginal cost. What quantity maximizes total revenue, and what is the elasticity condition at that quantity?",
+      "choices": {
+        "A": "Q=50; elasticity is 0 because price is zero.",
+        "B": "Q=25; elasticity equals -1, so total revenue is maximized where marginal revenue is zero.",
+        "C": "Q=20; elasticity is less than -1, so revenue rises with more output.",
+        "D": "Q=30; elasticity is greater than -1, so revenue rises with less output."
+      },
+      "correct": "B",
+      "explanation": "TR=PQ=(100-2Q)Q=100Q-2Q^2, so MR=100-4Q=0 gives Q=25 and P=50. Linear demand has unit elasticity where MR=0. A chooses the quantity where price hits zero. C and D are calculation errors and misstate the revenue-maximizing condition."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A movie theater faces demand Q=240-20P for evening tickets. Ignoring costs, what ticket price maximizes total revenue, and what is the economic interpretation?",
+      "choices": {
+        "A": "P=6; this is where demand is unit elastic and a small price change has no first-order effect on revenue.",
+        "B": "P=12; this maximizes quantity sold.",
+        "C": "P=0; this maximizes attendance and therefore revenue.",
+        "D": "P=9; this is where demand is elastic, so revenue is highest."
+      },
+      "correct": "A",
+      "explanation": "TR=P(240-20P)=240P-20P^2, so dTR/dP=240-40P=0 gives P=6. At this point elasticity is -1. B is the choke price, where Q=0. C gives zero revenue. D is in the elastic region but not the maximum."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "At a price of 10 dollars, a gym sells 500 day passes per week and demand elasticity is -2. If the gym lowers price by 1 percent, what happens to total revenue locally and why?",
+      "choices": {
+        "A": "Revenue falls because the price is lower.",
+        "B": "Revenue rises because the 2 percent quantity increase more than offsets the 1 percent price decrease.",
+        "C": "Revenue is unchanged because elasticity is negative.",
+        "D": "Revenue falls because elastic demand means consumers are insensitive to price."
+      },
+      "correct": "B",
+      "explanation": "When demand is elastic, absolute elasticity exceeds 1, so a 1 percent price cut raises quantity demanded by 2 percent and total revenue rises. A ignores quantity response. C confuses negative sign with zero revenue effect. D reverses the meaning of elastic."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A coffee shop currently sells lattes where demand elasticity is -0.4. If it raises the latte price by 5 percent, what happens to total revenue locally?",
+      "choices": {
+        "A": "Revenue falls because quantity falls by more than 5 percent.",
+        "B": "Revenue is maximized because elasticity is negative.",
+        "C": "Revenue rises because quantity falls by only about 2 percent, less than the price increase.",
+        "D": "Revenue is unchanged because quantity and price always move in opposite directions."
+      },
+      "correct": "C",
+      "explanation": "With elasticity -0.4, a 5 percent price increase reduces quantity by about 2 percent. Since price rises proportionally more than quantity falls, total revenue rises. A treats demand as elastic. B confuses negative elasticity with unit elasticity. D ignores elasticity magnitude."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a linear demand curve P=80-Q, total revenue is represented by P times Q. Moving down the demand curve from Q=10 to Q=20, what graph feature explains whether revenue rises?",
+      "choices": {
+        "A": "Revenue falls because the demand curve is downward sloping.",
+        "B": "Revenue rises because the rectangle gains more width than it loses in height while demand is elastic.",
+        "C": "Revenue is unchanged because the slope is constant.",
+        "D": "Revenue falls because the vertical intercept is fixed at 80."
+      },
+      "correct": "B",
+      "explanation": "At low Q on a linear demand curve, demand is elastic; increasing Q expands the revenue rectangle's width more than it reduces height. A ignores area changes. C confuses constant slope with constant elasticity. D mistakes the intercept for revenue behavior."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For the linear demand curve Q=100-2P, compare the upper half and lower half of the demand curve in a verbal graph. Which statement about elasticity and total revenue is correct?",
+      "choices": {
+        "A": "The upper half is inelastic, so price cuts raise revenue there.",
+        "B": "The lower half is elastic, so price cuts lower revenue there.",
+        "C": "The midpoint is unit elastic; above it demand is elastic and below it demand is inelastic.",
+        "D": "Elasticity is constant because the demand curve has a constant slope."
+      },
+      "correct": "C",
+      "explanation": "A linear demand curve has elastic demand above the midpoint, unit elasticity at the midpoint, and inelastic demand below it. A and B reverse the regions. D confuses slope with elasticity."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is total revenue maximized at the point where price elasticity of demand equals -1?",
+      "choices": {
+        "A": "Because quantity demanded stops changing when elasticity equals -1.",
+        "B": "Because marginal cost equals marginal revenue at elasticity -1.",
+        "C": "Because the percentage gain in quantity from a small price cut exactly offsets the percentage loss in price.",
+        "D": "Because consumers spend the same amount on every good when elasticity equals -1."
+      },
+      "correct": "C",
+      "explanation": "At unit elasticity, a small price decrease creates an equal percentage increase in quantity, leaving revenue unchanged to a first-order approximation; this is the revenue peak. A falsely says quantity stops changing. B introduces cost and profit, not revenue maximization. D overgeneralizes across goods."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A campus parking app considers cutting the daily parking price from 8 to 7 dollars. Data suggest daily purchases would rise from 1,000 to 1,300. Which framework should be used, and what should the app predict for total revenue?",
+      "choices": {
+        "A": "Use price elasticity and total revenue: revenue rises from 8,000 to 9,100, so demand is elastic over this range.",
+        "B": "Use cross-price elasticity: parking and app usage are complements.",
+        "C": "Use income elasticity: parking is a normal good because purchases rise.",
+        "D": "Use marginal cost pricing: revenue falls because the price is lower."
+      },
+      "correct": "A",
+      "explanation": "Revenue changes from 8(1000)=8000 to 7(1300)=9100, so the price cut raises revenue, indicating elastic demand over the range. B and C use unrelated elasticity concepts. D ignores the quantity increase and confuses revenue with profit."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes revenue maximization from profit maximization for a firm with demand P=50-Q and marginal cost MC=10?",
+      "choices": {
+        "A": "Revenue maximization sets MR=0, while profit maximization sets MR=MC.",
+        "B": "Revenue maximization sets P=MC, while profit maximization sets elasticity equal to -1.",
+        "C": "Both require elasticity equal to -1 because both involve demand.",
+        "D": "Profit maximization ignores marginal revenue, while revenue maximization ignores demand."
+      },
+      "correct": "A",
+      "explanation": "Total revenue is maximized where MR=0; profit is maximized where MR=MC. B swaps rules. C ignores cost in profit maximization. D incorrectly describes both concepts."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A software company faces constant-elasticity demand with elasticity -1.5 at its current subscription price. It is considering a 4 percent price increase. What is the approximate revenue effect and mechanism?",
+      "choices": {
+        "A": "Revenue rises by about 2 percent because price increases directly raise revenue.",
+        "B": "Revenue falls by about 2 percent because quantity falls by about 6 percent, more than the 4 percent price increase.",
+        "C": "Revenue is unchanged because elasticity is constant.",
+        "D": "Revenue rises by about 6 percent because quantity changes by elasticity times price."
+      },
+      "correct": "B",
+      "explanation": "With elasticity -1.5, a 4 percent price increase reduces quantity by about 6 percent, so revenue falls by roughly 2 percent. A ignores elastic quantity response. C confuses constant elasticity with unit elasticity. D uses the quantity change as the revenue change. This topic does not naturally require surplus or deadweight loss, so Type 7 is replaced with an additional comparative statics question."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Interest Rates",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Hannah has m1 = 100 and m2 = 100. Her utility is U(c1,c2)=ln(c1)+ln(c2). If r = 0.25, what is her optimal bundle and what role does the interest rate play?",
+      "choices": {
+        "A": "c1 = 90, c2 = 112.5; the interest rate makes future consumption relatively cheaper in present-value terms.",
+        "B": "c1 = 100, c2 = 100; the endowment remains optimal because income is equal across periods.",
+        "C": "c1 = 112.5, c2 = 90; the interest rate makes current consumption cheaper.",
+        "D": "c1 = 80, c2 = 100; the interest rate only affects saving, not consumption."
+      },
+      "correct": "A",
+      "explanation": "Present wealth is 100 + 100/1.25 = 180. Log utility implies c2 = 1.25c1, so 2c1 = 180 and c1 = 90, c2 = 112.5. B assumes the endowment is optimal, C reverses the price effect, and D violates the tangency and budget logic."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Isaac has m1 = 60 and m2 = 156, with utility U(c1,c2)=c1c2. The interest rate is r = 0.30. What is his optimal bundle and borrowing/lending position?",
+      "choices": {
+        "A": "c1 = 90, c2 = 117; he borrows 30.",
+        "B": "c1 = 60, c2 = 156; he stays at the endowment.",
+        "C": "c1 = 100, c2 = 100; he borrows 40.",
+        "D": "c1 = 90, c2 = 156; he borrows 30 and keeps future income unchanged."
+      },
+      "correct": "A",
+      "explanation": "Present wealth is 60 + 156/1.3 = 180. With Cobb-Douglas exponents equal, c1 = 90 and c2 = 1.3(90) = 117. Since c1 > 60, Isaac borrows 30. B confuses feasibility with optimality, C equalizes quantities, and D violates the budget constraint."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A budget line passes through endowment (100,120). When r rises from 0.10 to 0.40, what happens to the graph?",
+      "choices": {
+        "A": "It shifts outward in parallel because saving earns more.",
+        "B": "It rotates around (100,120), becoming steeper; bundles with lower c1 and higher c2 become more affordable relative to before.",
+        "C": "It rotates around the vertical intercept, becoming flatter.",
+        "D": "It shifts inward in parallel because borrowing is more expensive."
+      },
+      "correct": "B",
+      "explanation": "The endowment remains affordable at any interest rate, so the line rotates around it. The slope changes from -1.10 to -1.40. A and D wrongly describe parallel shifts, and C uses the wrong pivot and slope direction."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Mia is initially a borrower at r = 0.08. The interest rate rises to r = 0.20. Which statement correctly describes the substitution effect for Mia?",
+      "choices": {
+        "A": "It pushes her toward more c1 because higher interest rates reward current spending.",
+        "B": "It pushes her toward less c1 because current consumption becomes more expensive in terms of forgone future consumption.",
+        "C": "It pushes her toward less c2 because future consumption becomes more expensive in terms of current consumption.",
+        "D": "It has no effect because the endowment point does not move."
+      },
+      "correct": "B",
+      "explanation": "The relative price of c1 is 1+r units of c2, so a higher r makes c1 more expensive and induces substitution away from c1. A reverses the price effect, C misidentifies the relative price, and D ignores that a slope change matters even when the endowment remains fixed."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A two-period budget line becomes steeper while still passing through the same endowment point (70,140). Which event caused this change?",
+      "choices": {
+        "A": "A decrease in period-1 income only.",
+        "B": "An increase in period-2 income only.",
+        "C": "An increase in the interest rate.",
+        "D": "A decrease in both incomes by the same present value."
+      },
+      "correct": "C",
+      "explanation": "A steeper line through the same endowment indicates a higher slope magnitude, -(1+r), caused by an increase in r. Income changes move the endowment and shift the line rather than preserving the same pivot."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "The interest rate falls from 25% to 5%. In a graph with c1 horizontal and c2 vertical, how does the budget line change around the endowment?",
+      "choices": {
+        "A": "It rotates and becomes flatter, reducing the future-consumption payoff from giving up one unit of c1.",
+        "B": "It rotates and becomes steeper, increasing the reward to saving.",
+        "C": "It shifts outward in parallel, leaving the slope unchanged.",
+        "D": "It shifts inward in parallel, leaving the endowment unaffordable."
+      },
+      "correct": "A",
+      "explanation": "A lower interest rate changes the slope from -1.25 to -1.05, making the budget line flatter through the endowment. B gets the direction wrong, C incorrectly holds slope fixed, and D wrongly says the endowment becomes unaffordable."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is the interest rate called the relative price of present consumption?",
+      "choices": {
+        "A": "Because r is the dollar price paid at the grocery store for current goods.",
+        "B": "Because consuming 1 more unit today requires giving up 1+r units of future consumption along the budget line.",
+        "C": "Because present consumption and future consumption must always be equal at the optimum.",
+        "D": "Because higher interest rates make all consumers better off."
+      },
+      "correct": "B",
+      "explanation": "The slope -(1+r) measures the opportunity cost of c1 in terms of c2. A confuses nominal money prices with intertemporal prices, C invents equal consumption, and D ignores borrower/lender differences."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A bank raises its one-year interest rate from 5% to 15%. Olivia has fixed income of $100 this year and $115 next year. Which framework best analyzes how her feasible current and future consumption choices change?",
+      "choices": {
+        "A": "A production possibility frontier because the bank produces loans.",
+        "B": "A two-period budget constraint rotating around Olivia's endowment point.",
+        "C": "A monopoly pricing model because the bank sets the interest rate.",
+        "D": "A labor-leisure model because interest is a wage for waiting."
+      },
+      "correct": "B",
+      "explanation": "The scenario is about intertemporal consumption tradeoffs with a changed interest rate and fixed endowment, so the budget line rotates around the endowment. A, C, and D use models not needed for the consumption-saving choice."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes the interest rate from the discount factor?",
+      "choices": {
+        "A": "The interest rate is 1/(1+r), while the discount factor is r.",
+        "B": "The interest rate measures the extra future units earned per unit saved, while the discount factor 1/(1+r) converts future units into present value.",
+        "C": "The interest rate applies only to borrowers, while the discount factor applies only to lenders.",
+        "D": "The interest rate is a preference parameter, while the discount factor is a market price."
+      },
+      "correct": "B",
+      "explanation": "The interest rate is r, and the gross return is 1+r; the discount factor is 1/(1+r). A reverses definitions, C falsely separates borrowers and lenders, and D confuses market interest with subjective time preference."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "At r = 0.10, Sam saves 40 from current income. At r = 0.25, he saves the same 40. How much additional future consumption does the higher interest rate generate on this saving, and what does it represent?",
+      "choices": {
+        "A": "4; it is the total interest at the old rate.",
+        "B": "10; it is the total interest at the new rate.",
+        "C": "6; it is the extra future consumption from the higher return on the same saving.",
+        "D": "40; it is the principal transferred into the future."
+      },
+      "correct": "C",
+      "explanation": "Saving 40 yields 44 at 10% and 50 at 25%, so the higher rate generates 6 additional units of future consumption. A and B compute total interest under one rate, and D counts principal rather than the welfare-relevant gain from the rate increase."
+    }
+  ]
+}

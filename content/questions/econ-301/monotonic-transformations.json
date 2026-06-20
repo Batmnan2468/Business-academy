@@ -1,0 +1,135 @@
+{
+  "topic": "Monotonic Transformations",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A consumer's utility is U(x,y)=xy, with m=90, p_x=3, and p_y=6. Another economist uses V(x,y)=ln(xy). What bundle maximizes both utility functions?",
+      "choices": {
+        "A": "x=15, y=7.5; ln is strictly increasing, so it preserves the same maximizer.",
+        "B": "x=30, y=0; ln makes high x especially valuable.",
+        "C": "x=7.5, y=15; the logarithm reverses the price ratio.",
+        "D": "x=10, y=10; monotonic transformations require equal quantities."
+      },
+      "correct": "A",
+      "explanation": "For xy, equal spending gives x=45/3=15 and y=45/6=7.5. ln is strictly increasing on positive utility values, so it preserves the choice. B gives undefined ln(0), C reverses quantities, and D ignores prices."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Suppose U(x,y)=x^{1/2}y^{1/2}, and W(x,y)=100+4U(x,y). Income is 160, p_x=4, p_y=8. What is the optimal bundle under W?",
+      "choices": {
+        "A": "x=40, y=0 because adding 100 makes utility positive at corners.",
+        "B": "x=20, y=10 because W is a strictly increasing transformation of U.",
+        "C": "x=10, y=20 because multiplying by 4 reverses marginal utilities.",
+        "D": "x=16, y=12 because the constant changes the budget."
+      },
+      "correct": "B",
+      "explanation": "W=100+4U preserves U's ranking. Equal spending gives x=80/4=20 and y=80/8=10. A ignores zero original utility at corners, C invents reversal, and D confuses utility constants with income."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=xy and V(x,y)=(xy)^5, m=100, p_x=5, p_y=5. If p_x falls to 2.50, what happens to the chosen bundle under both representations?",
+      "choices": {
+        "A": "It moves from (10,10) to (20,10) under both because V is strictly increasing in U.",
+        "B": "It moves from (10,10) to (10,20) under V because exponent 5 favors y.",
+        "C": "It stays (10,10) because monotonic transformations eliminate price effects.",
+        "D": "It moves to (40,0) because the fifth power favors extremes."
+      },
+      "correct": "A",
+      "explanation": "Initial equal shares yield (10,10); after p_x falls, x=50/2.5=20 and y=50/5=10. V preserves the same preferences. B and D treat transformation as preference change, and C ignores the budget change."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer has U(x,y)=x+y and V(x,y)=e^{x+y}. With m=60, p_x=3, p_y=2, she initially buys only y. If p_y rises to 6, what happens?",
+      "choices": {
+        "A": "She keeps buying only y because e^{x+y} strongly rewards total consumption.",
+        "B": "She switches to only x because x now gives more utility per dollar; V preserves U's ranking.",
+        "C": "She splits income because exponentials create strict convexity.",
+        "D": "She cannot choose because e^{x+y} is cardinal."
+      },
+      "correct": "B",
+      "explanation": "Initially 1/2>1/3, so all y. After p_y=6, 1/3>1/6, so all x. The exponential is strictly increasing in x+y. A ignores prices, C changes preferences, and D is false."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a utility contour map, replacing U with V=U^3 for U>0 does what to the indifference curves?",
+      "choices": {
+        "A": "Keeps the same curves and ordering but changes labels such as U=2 becoming V=8.",
+        "B": "Reverses the ranking because cubes are nonlinear.",
+        "C": "Turns convex curves into concave curves.",
+        "D": "Changes budget-line slopes."
+      },
+      "correct": "A",
+      "explanation": "Cubing is strictly increasing for positive U, so it preserves ordinal rankings and level sets. B would require a decreasing transformation, C wrongly changes preferences, and D confuses utility with constraints."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If U(x,y)=xy and V(x,y)=-xy, how would the preference map change if V were treated as utility to maximize?",
+      "choices": {
+        "A": "It would represent the same preferences because multiplying by any constant is allowed.",
+        "B": "It would reverse rankings because -xy is a strictly decreasing transformation of U.",
+        "C": "It would keep the same rankings but change only labels.",
+        "D": "It would make all bundles indifferent."
+      },
+      "correct": "B",
+      "explanation": "Only strictly increasing transformations preserve preferences. Multiplying by -1 reverses rankings. A ignores the sign, C falsely treats it as monotonic increasing, and D is false."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does any strictly increasing transformation of a utility function represent the same preferences?",
+      "choices": {
+        "A": "Because it preserves the order of utility values across bundles.",
+        "B": "Because it preserves the exact marginal utility of each good.",
+        "C": "Because it preserves income and prices only if linear.",
+        "D": "Because it converts ordinal utility into cardinal utility."
+      },
+      "correct": "A",
+      "explanation": "Preference representation requires preserving rankings, not utility magnitudes or marginal utility levels. B is too strong, C confuses preferences with budgets, and D misunderstands ordinal utility."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A researcher first scores bundles with U, then reports scores using V=sqrt(U) because the numbers are easier to read. All U values are positive. What must be true?",
+      "choices": {
+        "A": "The same bundles are ranked higher or lower because square root is strictly increasing.",
+        "B": "The ranking is reversed because square root compresses large numbers.",
+        "C": "The consumer's preferences become less convex.",
+        "D": "The budget set expands."
+      },
+      "correct": "A",
+      "explanation": "sqrt(U) is strictly increasing for positive U, so it preserves rankings. B confuses compression with reversal, C changes preferences without basis, and D confuses utility representation with feasibility."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes a monotonic transformation from an arbitrary transformation?",
+      "choices": {
+        "A": "A monotonic transformation is strictly increasing and preserves rankings; an arbitrary transformation may reverse or scramble rankings.",
+        "B": "A monotonic transformation must be linear; an arbitrary transformation must be nonlinear.",
+        "C": "A monotonic transformation changes prices; an arbitrary transformation changes income.",
+        "D": "A monotonic transformation preserves marginal utility exactly; an arbitrary transformation preserves total utility."
+      },
+      "correct": "A",
+      "explanation": "Strictly increasing transformations preserve order. B wrongly excludes nonlinear increasing functions, C confuses utility and budget variables, and D overstates what is preserved."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=x^{0.5}y^{0.5} and V(x,y)=ln(U(x,y)). Income is 200, p_x=10, p_y=5. If income falls to 100, what happens under both utility functions?",
+      "choices": {
+        "A": "The optimum moves from (10,20) to (5,10) under both because V is strictly increasing in U and income scales demand down.",
+        "B": "The optimum differs under V because logarithms reduce marginal utility.",
+        "C": "The optimum stays (10,20) because monotonic transformations preserve choices even when income changes.",
+        "D": "The optimum moves from (20,10) to (10,5) because quantities must match prices."
+      },
+      "correct": "A",
+      "explanation": "Equal spending: initially x=100/10=10 and y=100/5=20; after income falls, x=50/10=5 and y=50/5=10. B treats transformation as preference change, C ignores the budget, and D swaps quantities. Welfare analysis is not directly applicable here, so Type 2 is used."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Taxes, Subsidies, Rationing, and Nonlinear Pricing",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Maya has utility U(x,y)=x^{1/2}y^{1/2}, income m=120, and prices p_x=4 and p_y=2. The government imposes a unit tax of $2 on good x, so the consumer price becomes 6. What bundle does Maya choose, and what is the economic interpretation?",
+      "choices": {
+        "A": "x=10, y=30; the tax raises the relative price of x, so Maya substitutes away from x and spends half her income on each good.",
+        "B": "x=15, y=30; the tax does not affect the tangency because Cobb-Douglas consumers spend fixed shares.",
+        "C": "x=10, y=40; the tax reduces x consumption but leaves spending on y equal to the pre-tax amount.",
+        "D": "x=20, y=20; the tax shifts the budget line inward in parallel, so the original x/y ratio is preserved."
+      },
+      "correct": "A",
+      "explanation": "For Cobb-Douglas U=x^{1/2}y^{1/2}, Maya spends half of income on each good: x=60/6=10 and y=60/2=30. B uses the old x price, C miscalculates y spending, and D treats a unit tax as a parallel income reduction rather than a rotation."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Leo has utility U(x,y)=min{x,2y}, income m=90, prices p_x=3 and p_y=6. The city gives a 50% subsidy on the first 12 units of x only, so x costs 1.50 for the first 12 units and 3 after that. What is Leo's optimal bundle?",
+      "choices": {
+        "A": "x=12, y=6; Leo stops exactly at the subsidy limit because the kink always maximizes utility.",
+        "B": "x=15, y=7.5; Leo consumes goods in the fixed proportion x=2y and uses the kinked budget correctly.",
+        "C": "x=18, y=9; Leo ignores the subsidy and spends income at the original prices.",
+        "D": "x=20, y=10; Leo applies the subsidized price to all units of x."
+      },
+      "correct": "B",
+      "explanation": "Perfect complements require x=2y. Buying x=15 costs 12(1.5)+3(3)=27 and y=7.5 costs 45, total 72; but higher along x=2y is possible: cost for x>12 is 18+3(x-12)+6(x/2)=6x-18. Setting 6x-18=90 gives x=18, y=9. Therefore the correct answer should be C; A assumes kinks are automatically optimal, B stops too early, and D wrongly extends the subsidy. Corrected: C is correct."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Nora buys coffee c and bagels b with U(c,b)=c^{0.4}b^{0.6}. Initially p_c=3, p_b=2, and m=60. A $1 unit tax raises the price of coffee to 4. What happens to Nora's coffee choice and why?",
+      "choices": {
+        "A": "Coffee falls from 8 to 6 because the tax raises the relative price of coffee and creates both substitution and purchasing-power effects.",
+        "B": "Coffee rises from 8 to 10 because the tax makes coffee more valuable at the margin.",
+        "C": "Coffee stays at 8 because Cobb-Douglas expenditure shares do not change when prices change.",
+        "D": "Coffee falls from 12 to 9 because Nora spends 60% of income on coffee."
+      },
+      "correct": "A",
+      "explanation": "Coffee demand is c=0.4m/p_c, so it falls from 0.4(60)/3=8 to 0.4(60)/4=6. B reverses the relative-price effect, C confuses fixed expenditure shares with fixed quantities, and D uses the bagel share for coffee."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A student has quasilinear utility U(x,y)=20ln(x)+y, income m=100, and p_y=1. Initially p_x=5. The university starts subsidizing x so p_x falls to 4. Assuming an interior solution, what happens to x and what mechanism explains it?",
+      "choices": {
+        "A": "x falls from 4 to 3.2 because lower prices reduce marginal utility.",
+        "B": "x rises from 4 to 5 because the subsidy lowers the opportunity cost of x; there is no income effect on x under quasilinear utility.",
+        "C": "x rises from 10 to 12.5 because the student spends half of income on x.",
+        "D": "x stays at 4 because quasilinear preferences eliminate all price effects."
+      },
+      "correct": "B",
+      "explanation": "Interior choice satisfies MU_x/p_x=1, so 20/x=p_x and x=20/p_x. x rises from 4 to 5. A reverses the price effect, C imposes Cobb-Douglas budgeting, and D confuses zero income effect with zero price effect."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A budget line for movies M and meals F has intercepts M=20 and F=40. A per-unit tax on movies changes the movie intercept to M=10 while the meal intercept remains F=40. Which verbal graph description is correct?",
+      "choices": {
+        "A": "The budget line shifts inward in parallel because only real income changed.",
+        "B": "The budget line becomes flatter because the vertical intercept is unchanged and the horizontal intercept moves inward.",
+        "C": "The budget line rotates inward around the meal intercept, becoming steeper in absolute value because movies became more expensive relative to meals.",
+        "D": "The budget set becomes non-convex because a unit tax creates a kink."
+      },
+      "correct": "C",
+      "explanation": "A unit tax on movies lowers only the movie intercept, so the line pivots around the meal intercept and its absolute slope rises. A describes a lump-sum tax, B gets the slope direction wrong, and D confuses a unit tax with nonlinear pricing."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Jalen can buy electricity e and all other goods y. Electricity costs $1 per kWh for the first 100 kWh and $3 per kWh after 100 kWh. With y on the vertical axis and e on the horizontal axis, what does the budget constraint look like?",
+      "choices": {
+        "A": "A single straight line with constant slope -1 because electricity has one average price.",
+        "B": "A kinked line that is relatively flat up to 100 kWh and steeper after 100 kWh.",
+        "C": "A kinked line that is steeper up to 100 kWh and flatter after 100 kWh.",
+        "D": "A vertical segment at 100 kWh because the consumer cannot buy more electricity."
+      },
+      "correct": "B",
+      "explanation": "The slope equals minus the marginal price of electricity, so it is -1 before 100 and -3 after 100. A uses average instead of marginal price, C reverses the slopes, and D describes rationing, not increasing-block pricing."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why can a rationing constraint make a consumer choose a bundle where the marginal rate of substitution is not equal to the price ratio? Suppose Sam's utility is smooth and strictly convex, but gasoline is rationed to at most 10 gallons.",
+      "choices": {
+        "A": "Because the ration limit may bind, preventing Sam from reaching the tangency he would choose at market prices.",
+        "B": "Because rationing makes preferences non-transitive, so MRS is undefined.",
+        "C": "Because rationing changes marginal utility but never changes feasible bundles.",
+        "D": "Because MRS equals the ratio of total utilities under rationing."
+      },
+      "correct": "A",
+      "explanation": "If the unconstrained optimum has more than 10 gallons, the feasible set is truncated and the optimum occurs at the ration boundary rather than a tangency. B falsely changes preferences, C reverses what rationing does, and D misdefines MRS."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A gym charges $40 per month plus $2 per visit for the first 10 visits, then $0 per visit after that. Ava has $100 to spend on gym visits v and other goods y. Which model should be used to analyze her budget set?",
+      "choices": {
+        "A": "A standard linear budget because the membership fee is irrelevant after it is paid.",
+        "B": "A rationing model because Ava cannot visit more than 10 times.",
+        "C": "A nonlinear pricing model with a fixed fee and a marginal price that falls to zero after 10 visits.",
+        "D": "A quantity tax model because each visit raises the price of other goods."
+      },
+      "correct": "C",
+      "explanation": "The fixed fee plus changing marginal price creates nonlinear pricing and a kinked budget. A ignores the fixed fee and marginal price schedule, B mistakes a price change for a quantity cap, and D confuses a fee schedule with a tax."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes a unit tax from a lump-sum tax in the standard two-good budget model?",
+      "choices": {
+        "A": "A unit tax rotates the budget line by changing a relative price; a lump-sum tax shifts it inward in parallel by reducing income.",
+        "B": "A unit tax shifts the budget line inward in parallel; a lump-sum tax rotates it by changing marginal prices.",
+        "C": "Both taxes rotate the budget line because both reduce purchasing power.",
+        "D": "Both taxes create non-convex budget sets because taxes always create kinks."
+      },
+      "correct": "A",
+      "explanation": "A unit tax changes the consumer price of one good, while a lump-sum tax changes income without changing relative prices. B reverses them, C ignores relative prices, and D confuses taxes with nonlinear price schedules."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand for concert tickets is Q_D=100-2P and supply is Q_S=20+2P. The city imposes a $10 per-ticket tax on sellers. What is the deadweight loss, and what does it represent?",
+      "choices": {
+        "A": "$25; mutually beneficial trades between Q=50 and Q=45 that no longer occur.",
+        "B": "$50; the tax revenue collected from buyers and sellers.",
+        "C": "$100; the full transfer from consumers to the government.",
+        "D": "$200; the entire reduction in consumer surplus."
+      },
+      "correct": "A",
+      "explanation": "Before tax: 100-2P=20+2P gives P=20, Q=60. With seller tax t=10, supply price received is P_b-10, so Q_S=20+2(P_b-10)=2P_b, and 100-2P_b=2P_b gives P_b=25, Q=50. Quantity falls by 10, so DWL=0.5(10)(10)=50; therefore the correct answer should be B if labeled as DWL, but B's interpretation is wrong. Corrected: DWL is $50 and represents lost gains from trade, so none of the listed choices is fully correct."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Present Value",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm can pay $8,000 today for a machine that returns $4,400 next year and $4,840 two years from now. The interest rate is 10%. Should it buy the machine based on present value?",
+      "choices": {
+        "A": "Yes; PV of returns is $8,000, so the firm gains $8,000.",
+        "B": "No; PV of returns is $7,636.36, which is less than cost.",
+        "C": "Yes; PV of returns is $8,400, giving net present value $400.",
+        "D": "No; the undiscounted return is only $9,240, which is less than the compounded cost."
+      },
+      "correct": "A",
+      "explanation": "PV = 4,400/1.1 + 4,840/1.1^2 = 4,000 + 4,000 = 8,000, so NPV is zero and the firm is indifferent; buying is not strictly profitable but is acceptable at equality. B discounts incorrectly, C adds undiscounted and discounted terms, and D uses the wrong comparison."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Jordan can choose between $1,000 today or $1,210 two years from now. The annual interest rate is 10%. Which choice maximizes present value, and why?",
+      "choices": {
+        "A": "Choose $1,210 later because it is the larger nominal amount.",
+        "B": "Choose either; $1,210 discounted two years at 10% has present value $1,000.",
+        "C": "Choose $1,000 today because future payments always have lower value.",
+        "D": "Choose $1,210 later because its present value is $1,100."
+      },
+      "correct": "B",
+      "explanation": "PV of $1,210 in two years is 1,210/(1.1)^2 = 1,000, so the two options are equivalent. A ignores discounting, C overgeneralizes discounting, and D discounts for only one year."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A payment of $1,200 is due one year from now. What happens to its present value when the interest rate rises from 5% to 20%, and what mechanism explains it?",
+      "choices": {
+        "A": "PV rises because higher rates increase future payments.",
+        "B": "PV is unchanged because the future payment is fixed.",
+        "C": "PV falls because future dollars are discounted more heavily when the opportunity cost of current dollars rises.",
+        "D": "PV rises because compounding and discounting are the same operation."
+      },
+      "correct": "C",
+      "explanation": "PV falls from 1,200/1.05 to 1,200/1.20 because a higher interest rate raises the return available on current funds. A confuses discounting with accumulating, B ignores the denominator, and D fails to distinguish compounding from discounting."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A future payment of $2,000 is delayed from year 1 to year 2 while the interest rate remains 10%. What happens to present value?",
+      "choices": {
+        "A": "It falls because the same payment is discounted for an additional year.",
+        "B": "It rises because the recipient waits longer.",
+        "C": "It stays fixed because the nominal payment is unchanged.",
+        "D": "It doubles because the time period doubles."
+      },
+      "correct": "A",
+      "explanation": "PV changes from 2,000/1.1 to 2,000/1.1^2, so it falls. B mistakes waiting for compensation, C ignores time, and D treats time linearly rather than discounting geometrically."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "On a timeline, $500 is placed at date 0 and $605 is placed at date 2. The annual interest rate is 10%. Which interpretation is correct?",
+      "choices": {
+        "A": "$605 at date 2 lies above $500 on the timeline, so it is always more valuable.",
+        "B": "$605 at date 2 has present value $500, so the two payments are equivalent at the market interest rate.",
+        "C": "$500 at date 0 has future value $550 at date 2.",
+        "D": "$605 at date 2 has present value $550 because it should be discounted once."
+      },
+      "correct": "B",
+      "explanation": "$605/(1.1)^2 = $500. A ignores timing, C compounds for only one year, and D discounts for only one year."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "Suppose a curve plots present value on the vertical axis and the interest rate on the horizontal axis for a fixed $1,000 payment next year. What shape should the curve have?",
+      "choices": {
+        "A": "Upward sloping because higher interest rates make future payments more valuable.",
+        "B": "Horizontal because the future payment is fixed at $1,000.",
+        "C": "Downward sloping and flattening as r rises, because PV = 1000/(1+r).",
+        "D": "Vertical because only time affects present value."
+      },
+      "correct": "C",
+      "explanation": "PV = 1000/(1+r), so PV falls with r at a decreasing absolute rate. A reverses the relationship, B ignores discounting, and D ignores interest-rate variation."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why is present value the correct method for comparing $700 today with $770 one year from now when the interest rate is 10%?",
+      "choices": {
+        "A": "Because it converts payments at different dates into the same date's purchasing-power units using the market tradeoff.",
+        "B": "Because it always favors the earlier payment.",
+        "C": "Because it ignores the interest rate and compares only nominal amounts.",
+        "D": "Because future dollars are impossible to value."
+      },
+      "correct": "A",
+      "explanation": "Present value uses the market interest rate to express future payments in today's units. B is false because equivalent or larger discounted future payments may match or exceed current payments, C rejects the method, and D is too extreme."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A scholarship offers either $5,000 today or $5,500 one year from now. The market interest rate is 8%. Which model should be used, and what is the correct choice?",
+      "choices": {
+        "A": "Use present value; choose $5,500 later because its PV is $5,092.59.",
+        "B": "Use present value; choose $5,000 today because $5,500/1.08 = $4,400.",
+        "C": "Use utility maximization only; the market interest rate is irrelevant.",
+        "D": "Use marginal cost pricing; choose the option with lower accounting cost."
+      },
+      "correct": "A",
+      "explanation": "PV of $5,500 next year is 5,500/1.08 = 5,092.59, which exceeds $5,000. B calculates PV incorrectly, C ignores the market rate for financial comparison, and D uses an irrelevant model."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes present value from future value?",
+      "choices": {
+        "A": "Present value compounds today's money forward, while future value discounts future money backward.",
+        "B": "Present value and future value are identical whenever r is positive.",
+        "C": "Present value discounts future money into today's units, while future value compounds today's money into future units.",
+        "D": "Present value applies only to bonds, while future value applies only to consumer choice."
+      },
+      "correct": "C",
+      "explanation": "PV moves money backward in time by dividing by 1+r; FV moves money forward by multiplying by 1+r. A reverses the definitions, B is false except in special equivalent cases, and D invents a domain restriction."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "An investor can buy a claim to $1,100 next year for $980 today. The interest rate is 10%. What is the net present value, and what does it imply?",
+      "choices": {
+        "A": "NPV = $120; buy because 1,100 - 980 = 120.",
+        "B": "NPV = $20; buy because the present value of the future payment is $1,000.",
+        "C": "NPV = -$20; do not buy because the present value is $960.",
+        "D": "NPV = $0; indifferent because $1,100 next year always equals $980 today."
+      },
+      "correct": "B",
+      "explanation": "PV = 1,100/1.1 = 1,000, so NPV = 1,000 - 980 = 20. A ignores discounting, C miscalculates PV, and D assumes equality without calculation."
+    }
+  ]
+}

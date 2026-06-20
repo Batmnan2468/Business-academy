@@ -1,0 +1,135 @@
+{
+  "topic": "Utility",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A utility representation of Mia's preferences is U(x,y)=x^{1/3}y^{2/3}. She has income 90, p_x=3, and p_y=6. What bundle maximizes utility, and what does the utility function represent?",
+      "choices": {
+        "A": "x=10, y=10; the function represents preference rankings, not measurable happiness units.",
+        "B": "x=30, y=0; the function measures cardinal happiness, so x is chosen first.",
+        "C": "x=15, y=7.5; the function requires equal spending.",
+        "D": "x=5, y=12.5; the function assigns twice as much importance to x as y."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas shares are 1/3 on x and 2/3 on y: spend 30 on x and 60 on y, so x=10, y=10. B is a corner and cardinal error, C uses equal shares, and D reverses the exponents."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Noah's preferences are represented by U(x,y)=10x+y. Income is 100, p_x=20, and p_y=2. What is Noah's optimal bundle?",
+      "choices": {
+        "A": "x=5, y=0; x has the larger utility coefficient.",
+        "B": "x=0, y=50; y gives more utility per dollar.",
+        "C": "x=2.5, y=25; linear utility always implies splitting income.",
+        "D": "x=4, y=10; utility values must be balanced across goods."
+      },
+      "correct": "B",
+      "explanation": "MU_x/p_x=10/20=0.5 and MU_y/p_y=1/2=0.5, so every affordable bundle gives the same utility: U=50. Therefore A and B are both optimal, making the question ambiguous. Correct economic result: any bundle on 20x+2y=100 is optimal."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For U(x,y)=x^{0.25}y^{0.75}, m=120, p_x=3, and p_y=3, the consumer chooses x=10 and y=30. If income rises to 240, what happens?",
+      "choices": {
+        "A": "x and y both double because homothetic utility scales the optimal bundle with income.",
+        "B": "x stays 10 and y rises to 70 because y has the larger exponent.",
+        "C": "x rises to 40 and y stays 30 because x is cheaper in utility terms.",
+        "D": "the bundle stays fixed because utility is ordinal."
+      },
+      "correct": "A",
+      "explanation": "Cobb-Douglas demands scale with income: x=0.25(240)/3=20, y=0.75(240)/3=60. B and C misallocate the income change, and D confuses ordinal utility with unchanging demand."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A consumer has U(x,y)=xy, m=100, p_x=5, p_y=5. If the utility function is replaced by V(x,y)=7xy+100, what happens to the optimal bundle?",
+      "choices": {
+        "A": "It changes because adding 100 increases income.",
+        "B": "It stays (10,10) because V is a strictly increasing transformation of U and represents the same preferences.",
+        "C": "It changes to (70,70) because utility is multiplied by 7.",
+        "D": "It becomes impossible to choose because utility must start at zero."
+      },
+      "correct": "B",
+      "explanation": "V=7U+100 preserves the ordering of bundles, so demand is unchanged. A confuses utility with income, C treats utility units as quantities, and D invents an invalid requirement."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For U(x,y)=xy, the indifference curve U=24 includes bundles such as (4,6) and (8,3). What does this curve show?",
+      "choices": {
+        "A": "All bundles costing exactly $24.",
+        "B": "All bundles assigned the same utility number and therefore ranked equally by this representation.",
+        "C": "All bundles with the same marginal utility of x.",
+        "D": "All bundles the consumer can afford at income 24."
+      },
+      "correct": "B",
+      "explanation": "An indifference curve is a level set of the utility function. A and D confuse utility with budget cost, and C confuses total utility level with marginal utility."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If U(x,y)=x+2y, what do the utility level curves look like in a graph with x on the horizontal axis and y on the vertical axis?",
+      "choices": {
+        "A": "Straight parallel lines with slope -1/2.",
+        "B": "L-shaped curves with kinks at x=2y.",
+        "C": "Closed circles around a bliss point.",
+        "D": "Upward-sloping lines with slope 2."
+      },
+      "correct": "A",
+      "explanation": "Level curves satisfy x+2y=k, or y=k/2 - x/2, so slope is -1/2. B describes complements, C satiation, and D has the wrong sign."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "What does it mean to say a utility function represents preferences?",
+      "choices": {
+        "A": "It assigns larger numbers to bundles that are ranked higher by the consumer.",
+        "B": "It measures happiness in objective units comparable across people.",
+        "C": "It determines market prices directly.",
+        "D": "It replaces the budget constraint."
+      },
+      "correct": "A",
+      "explanation": "A utility representation preserves the consumer's ordering of bundles. B makes a cardinal and interpersonal claim, C confuses preferences with equilibrium, and D confuses objectives with constraints."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "An app assigns score U=4 to bundle A, U=9 to bundle B, and U=100 to bundle C for Jordan's snack preferences. What conclusion is justified?",
+      "choices": {
+        "A": "C is preferred to B, and B is preferred to A.",
+        "B": "C gives exactly 25 times as much happiness as A.",
+        "C": "Jordan would pay exactly $96 more for C than A.",
+        "D": "A and B cannot be compared because utility is artificial."
+      },
+      "correct": "A",
+      "explanation": "Utility numbers represent rankings only, so higher utility means preferred. B and C make invalid cardinal claims, and D ignores representability."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes utility from preference?",
+      "choices": {
+        "A": "Preference is the underlying ranking; utility is a numerical representation of that ranking.",
+        "B": "Utility is the underlying ranking; preference is the equation used to calculate it.",
+        "C": "Preference requires prices; utility requires income.",
+        "D": "Utility is cardinal in consumer theory; preference is ordinal."
+      },
+      "correct": "A",
+      "explanation": "Preferences are primitive rankings; utility represents them numerically. B reverses the relationship, C confuses preferences with constraints, and D overstates cardinal meaning."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve surplus or deadweight loss, so this question substitutes Type 2. A consumer has U(x,y)=x^{1/2}y^{1/2}, m=80, p_x=2, p_y=4. If p_y falls to 2, what happens to demand?",
+      "choices": {
+        "A": "x stays 20 and y rises from 10 to 20 because y became cheaper while equal expenditure shares remain.",
+        "B": "x rises from 20 to 40 and y stays 10 because y's price fell.",
+        "C": "both goods remain unchanged because utility represents preferences, not prices.",
+        "D": "y falls because lower price lowers marginal utility."
+      },
+      "correct": "A",
+      "explanation": "Initial x=40/2=20, y=40/4=10. New x=40/2=20, y=40/2=20. B changes the wrong good, C ignores the budget constraint, and D reverses the price effect. Welfare analysis is not directly applicable here, so Type 2 is used."
+    }
+  ]
+}

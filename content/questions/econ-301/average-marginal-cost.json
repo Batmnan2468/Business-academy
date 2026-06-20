@@ -1,0 +1,135 @@
+{
+  "topic": "Average and Marginal Cost",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm has total cost C(q)=64+4q+q^2. What output minimizes average total cost, and what is true about MC and ATC there?",
+      "choices": {
+        "A": "q=4, and MC=ATC=20.",
+        "B": "q=8, and MC=ATC=20.",
+        "C": "q=4, and MC=12 while ATC=24.",
+        "D": "q=0, because average cost is lowest with no output."
+      },
+      "correct": "B",
+      "explanation": "ATC=64/q+4+q. Setting dATC/dq=-64/q^2+1=0 gives q=8. ATC=20 and MC=4+2q=20. A uses sqrt(16). C evaluates q=4 incorrectly. D ignores that ATC is undefined at zero."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A competitive firm has C(q)=25+10q+q^2 and price p=30. What output maximizes profit, and how does MC guide the decision?",
+      "choices": {
+        "A": "q=5 because ATC is minimized there.",
+        "B": "q=10 because p=MC.",
+        "C": "q=20 because p=ATC.",
+        "D": "q=0 because fixed cost is positive."
+      },
+      "correct": "B",
+      "explanation": "MC=10+2q. Set p=30 to get q=10. A gives the minimum-ATC scale, not profit maximum. C uses average rather than marginal condition. D ignores that p exceeds AVC."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "For C(q)=100+2q+q^2, output rises from q=5 to q=10. What happens to ATC and why?",
+      "choices": {
+        "A": "ATC falls from 27 to 22 because spreading fixed cost dominates the increase in variable cost over this range.",
+        "B": "ATC rises from 22 to 27 because marginal cost is positive.",
+        "C": "ATC stays constant because fixed cost and variable cost offset exactly.",
+        "D": "ATC falls from 42 to 22 because fixed cost disappears."
+      },
+      "correct": "A",
+      "explanation": "ATC=100/q+2+q. At q=5, ATC=27; at q=10, ATC=22. The fixed-cost-spreading effect dominates. B reverses values. C is false numerically. D miscalculates q=5 and says fixed cost disappears."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm is producing where MC=18 and ATC=24. If it increases output slightly, what happens to ATC and why?",
+      "choices": {
+        "A": "ATC rises because MC is positive.",
+        "B": "ATC falls because the marginal unit costs less than the current average.",
+        "C": "ATC stays constant because MC is below price.",
+        "D": "ATC becomes equal to AVC."
+      },
+      "correct": "B",
+      "explanation": "When MC<ATC, the next unit pulls the average down. A ignores the comparison between marginal and average. C introduces price, which is not given. D confuses average total and variable cost."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "On a standard cost graph, the MC curve crosses the ATC curve at the ATC curve's minimum. What is the correct interpretation of this crossing?",
+      "choices": {
+        "A": "Before the crossing MC lies above ATC, pulling ATC down.",
+        "B": "At the crossing, the marginal cost of the next unit equals the current average cost, so ATC stops falling and starts rising.",
+        "C": "At the crossing, total cost is zero.",
+        "D": "After the crossing, ATC must continue falling because MC is rising."
+      },
+      "correct": "B",
+      "explanation": "MC below ATC pulls ATC down; MC above ATC pulls ATC up; equality marks the minimum. A reverses the below/above relation. C is unrelated. D ignores the average-marginal relationship."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "If the total cost curve becomes steeper as output rises, what does that imply about marginal cost?",
+      "choices": {
+        "A": "Marginal cost is increasing because MC is the slope of total cost.",
+        "B": "Marginal cost is decreasing because total cost is increasing.",
+        "C": "Average cost must be constant.",
+        "D": "Fixed cost must be negative."
+      },
+      "correct": "A",
+      "explanation": "MC=dC/dq, so a steeper TC curve means higher MC. B contradicts the slope interpretation. C does not follow. D is unrelated."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "A firm has ATC=15 and MC=11 at q=100. What does this say about the cost of the 101st unit relative to the average?",
+      "choices": {
+        "A": "The 101st unit is cheaper than the current average, so producing it lowers ATC.",
+        "B": "The 101st unit is more expensive than the current average, so producing it raises ATC.",
+        "C": "The 101st unit has no effect on ATC because fixed cost is already paid.",
+        "D": "The 101st unit lowers total cost."
+      },
+      "correct": "A",
+      "explanation": "MC below ATC lowers the average. B reverses the comparison. C ignores variable and marginal costs. D confuses lower average with lower total."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A coffee roaster wants to know whether roasting one more batch will raise or lower its average cost. It knows current ATC is 18 and the next batch's marginal cost is 22. What should it conclude?",
+      "choices": {
+        "A": "Average cost will fall because output rises.",
+        "B": "Average cost will rise because the marginal batch costs more than the current average.",
+        "C": "Average cost is unchanged because fixed cost is unchanged.",
+        "D": "The firm should shut down because MC exceeds ATC."
+      },
+      "correct": "B",
+      "explanation": "A marginal unit above the average pulls the average upward. A ignores marginal-versus-average logic. C ignores variable cost. D misuses shutdown logic."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes marginal cost from average total cost?",
+      "choices": {
+        "A": "MC is total cost divided by output; ATC is the derivative of total cost.",
+        "B": "MC is the cost of one more unit; ATC is total cost per unit across all units.",
+        "C": "MC includes fixed cost; ATC excludes fixed cost.",
+        "D": "MC is always less than ATC."
+      },
+      "correct": "B",
+      "explanation": "MC=dC/dq; ATC=C/q. A reverses definitions. C is false because ATC includes fixed cost and MC excludes fixed cost if fixed cost is constant. D is false generally."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "This topic does not directly involve welfare surplus, so this question uses Type 2. A firm's MC curve shifts upward because a per-unit tax of 3 is imposed. What happens to the output where ATC is minimized?",
+      "choices": {
+        "A": "It is unchanged because fixed cost is unchanged.",
+        "B": "It rises because the firm spreads the tax over more units.",
+        "C": "It may change because both MC and ATC shift through variable cost; the minimum occurs where new MC equals new ATC.",
+        "D": "It must fall to zero because any tax causes shutdown."
+      },
+      "correct": "C",
+      "explanation": "A per-unit tax raises variable cost, shifting both MC and ATC. The ATC-minimizing output satisfies new MC=new ATC. A ignores AVC/ATC effects. B assumes a direction without calculation. D confuses cost-curve changes with shutdown."
+    }
+  ]
+}

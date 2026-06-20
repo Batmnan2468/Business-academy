@@ -1,0 +1,135 @@
+{
+  "topic": "Screening",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "An insurer faces safe drivers with expected accident cost $400 and risky drivers with expected accident cost $1,600. Safe drivers dislike deductibles less: their disutility from a deductible d is 0.10d, while risky drivers' disutility is 0.40d. The insurer offers a low-premium contract intended for safe drivers and a full-coverage high-premium contract intended for risky drivers. If the premium discount on the safe-driver contract is $600 relative to full coverage, what deductible d makes safe drivers accept the discount while risky drivers do not prefer it?",
+      "choices": {
+        "A": "Any d between $1,500 and $6,000.",
+        "B": "Any d below $1,500.",
+        "C": "Any d above $6,000.",
+        "D": "No deductible can separate the types because both dislike deductibles."
+      },
+      "correct": "A",
+      "explanation": "Safe drivers accept the deductible contract if 600 >= 0.10d, so d <= 6000. Risky drivers reject it if 600 <= 0.40d, so d >= 1500. Therefore d in [1500, 6000] can support self-selection. B lets risky drivers prefer the discount. C makes safe drivers reject the contract. D ignores differences in deductible disutility."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm screens workers using a wage-training menu. High-ability workers have training cost 2t, and low-ability workers have training cost 8t. The high-track job pays $100, and the low-track job pays $60. Training does not affect productivity. What range of required training t for the high-track job induces only high-ability workers to choose it?",
+      "choices": {
+        "A": "0 <= t <= 5",
+        "B": "5 <= t <= 20",
+        "C": "20 <= t <= 40",
+        "D": "t >= 40"
+      },
+      "correct": "B",
+      "explanation": "High-ability workers choose the high track if 100 - 2t >= 60, so t <= 20. Low-ability workers avoid it if 100 - 8t <= 60, so t >= 5. The separating range is [5, 20]. A ignores the low-ability self-selection constraint. C makes high types unwilling to choose the high track. D violates the high-type participation constraint."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "An insurer uses deductibles to separate low-risk and high-risk customers. Suppose high-risk customers become even more sensitive to deductibles because their accident probability rises. What happens to the minimum deductible needed to keep high-risk customers from choosing the low-premium contract?",
+      "choices": {
+        "A": "It falls because a smaller deductible is now enough to make the low-premium contract unattractive to high-risk customers.",
+        "B": "It rises because higher risk always requires higher deductibles for all customers.",
+        "C": "It stays fixed because only premiums matter in screening.",
+        "D": "It becomes impossible to screen because high-risk customers dislike deductibles more."
+      },
+      "correct": "A",
+      "explanation": "If high-risk customers dislike deductibles more, the insurer can deter them from mimicking low-risk customers with a smaller deductible. The mechanism is the high-risk self-selection constraint becoming easier to satisfy. B confuses actuarial cost with incentive compatibility. C ignores nonprice contract terms. D reverses the implication of stronger type differences."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A university offers two meal plans to screen students by appetite: a cheap plan with fewer meals and an expensive unlimited plan. Suppose the marginal value of extra meals rises for heavy eaters but is unchanged for light eaters. How should the menu change to maintain separation?",
+      "choices": {
+        "A": "The unlimited plan can charge a higher relative price while still attracting heavy eaters because their incentive constraint is relaxed.",
+        "B": "The cheap plan must include unlimited meals because heavy eaters value meals more.",
+        "C": "The two plans must have the same price because screening becomes impossible.",
+        "D": "The cheap plan should become more expensive than the unlimited plan."
+      },
+      "correct": "A",
+      "explanation": "When heavy eaters value extra meals more, they are more willing to choose the unlimited plan. The university can raise the unlimited plan's relative price or improve rent extraction while preserving self-selection. B would destroy separation. C incorrectly says greater type difference prevents screening. D violates basic menu logic."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a screening diagram, contract generosity is on the horizontal axis and premium is on the vertical axis. Low-risk insurance customers have flatter indifference curves than high-risk customers because they are less likely to use generous coverage. What graph feature allows a deductible menu to separate types?",
+      "choices": {
+        "A": "The two types have identical indifference curves, so any two contracts separate them.",
+        "B": "The high-risk type's steeper willingness to pay for generosity creates a single-crossing pattern that supports self-selection.",
+        "C": "The premium axis is irrelevant because only deductibles determine choice.",
+        "D": "Separation requires both contracts to lie on the same indifference curve for both types."
+      },
+      "correct": "B",
+      "explanation": "Screening relies on different marginal rates of substitution between price and contract generosity. High-risk customers value coverage more, so their indifference curves are steeper in the premium-generosity graph. A eliminates the basis for screening. C ignores price-quality tradeoffs. D would imply pooling, not separation."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A firm offers two contracts on a graph with effort requirement on the horizontal axis and wage on the vertical axis. High-ability workers have flatter indifference curves because effort is less costly for them. Which menu visually represents a separating screening outcome?",
+      "choices": {
+        "A": "A high-effort, high-wage contract chosen by high-ability workers and a low-effort, low-wage contract chosen by low-ability workers.",
+        "B": "A low-effort, high-wage contract chosen by all workers.",
+        "C": "Two contracts with the same effort and the same wage.",
+        "D": "A high-effort, low-wage contract chosen by low-ability workers because they have steeper indifference curves."
+      },
+      "correct": "A",
+      "explanation": "Because high-ability workers have lower effort costs, they are willing to accept a higher-effort requirement in exchange for higher wages. This creates self-selection. B produces pooling. C offers no screening dimension. D reverses which type is more willing to take the high-effort contract."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does a screening contract often distort the contract offered to the low-cost or low-risk type away from the full-information efficient contract?",
+      "choices": {
+        "A": "The distortion can make the contract unattractive to the other type, satisfying self-selection constraints even though it sacrifices some efficiency.",
+        "B": "The uninformed party enjoys creating inefficient contracts for their own sake.",
+        "C": "Screening requires all types to receive exactly the same contract.",
+        "D": "The distortion is needed because hidden action occurs after the contract is signed."
+      },
+      "correct": "A",
+      "explanation": "Screening menus often distort one contract to prevent mimicking by the other type. The efficiency loss is traded off against information revelation. B gives no economic mechanism. C describes pooling, not screening. D describes moral hazard rather than hidden-type screening."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A cell-phone company cannot observe whether customers are heavy or light data users. It offers one plan with a low monthly fee and high per-gigabyte charges, and another plan with a high monthly fee and unlimited data. Customers choose the plan best suited to their type. Which framework is being used?",
+      "choices": {
+        "A": "Signaling, because informed customers directly announce their type to the firm.",
+        "B": "Moral hazard, because customers become riskier after the plan is purchased.",
+        "C": "Screening, because the uninformed firm designs a menu that induces customers to self-select.",
+        "D": "Externalities, because data usage imposes costs on other customers."
+      },
+      "correct": "C",
+      "explanation": "The firm is uninformed about customer type and designs a menu so different types reveal themselves through choice. A would involve customers taking their own costly action to signal type. B concerns hidden action after contracting. D is not the central issue in the scenario."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes screening from signaling?",
+      "choices": {
+        "A": "In screening, the informed party designs a costly signal; in signaling, the uninformed party designs a menu.",
+        "B": "In screening, the uninformed party offers a menu to induce self-selection; in signaling, the informed party chooses a costly action to reveal type.",
+        "C": "Screening concerns hidden action; signaling concerns hidden effort.",
+        "D": "Screening always eliminates welfare losses; signaling always creates welfare losses."
+      },
+      "correct": "B",
+      "explanation": "Screening is initiated by the uninformed party through a menu of contracts. Signaling is initiated by the informed party through a costly observable action. A reverses the definitions. C confuses both with moral hazard. D overstates welfare conclusions."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "An insurer can fully insure low-risk drivers at resource cost $500 and high-risk drivers at resource cost $1,500. Under full information, both types receive full insurance with no deductible. Under asymmetric information, the insurer screens by giving 1,000 low-risk drivers a deductible contract that imposes an expected inconvenience cost of $80 each, solely to keep high-risk drivers from mimicking. High-risk drivers still receive full insurance. What is the welfare cost of the screening distortion relative to full information?",
+      "choices": {
+        "A": "$0, because all drivers still receive insurance.",
+        "B": "$80, equal to the inconvenience cost for one low-risk driver.",
+        "C": "$80,000, equal to the total expected inconvenience cost imposed on low-risk drivers.",
+        "D": "$1,000,000, equal to the deductible times the number of low-risk drivers."
+      },
+      "correct": "C",
+      "explanation": "The screening distortion creates an expected inconvenience cost of $80 for each of 1,000 low-risk drivers, so the welfare cost is 1,000($80) = $80,000. A ignores nonprice distortions. B fails to aggregate across drivers. D incorrectly treats the deductible itself as a certain social cost."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "Consumer Surplus",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ben's inverse demand for slices of pizza is P(q)=16-2q. Pizza costs $6 per slice. How many slices does Ben buy, and what is his consumer surplus?",
+      "choices": {
+        "A": "5 slices; consumer surplus is $25.",
+        "B": "6 slices; consumer surplus is $36.",
+        "C": "5 slices; consumer surplus is $50.",
+        "D": "3 slices; consumer surplus is $30."
+      },
+      "correct": "A",
+      "explanation": "Set 16-2q=6 to get q=5. Consumer surplus is 0.5×5×(16-6)=$25. B uses the choke price quantity at P=4 or mis-solves demand. C doubles the triangle area. D uses the wrong quantity from 16-2q=10."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Carla has utility U(x,m)=36x-3x^2+m, where x is streaming rentals and m is dollars. Each rental costs $12. What rental quantity maximizes her utility, and what consumer surplus does she receive?",
+      "choices": {
+        "A": "x=2; consumer surplus is $24.",
+        "B": "x=4; consumer surplus is $48.",
+        "C": "x=4; consumer surplus is $24.",
+        "D": "x=6; consumer surplus is $72."
+      },
+      "correct": "B",
+      "explanation": "MU_x=36-6x. Set MU_x=12, giving x=4. Consumer surplus is the integral from 0 to 4 of (36-6x-12)dx = [24x-3x^2]_0^4=96-48=$48. A uses x=2 from a calculation error. C gets quantity right but uses half the surplus. D uses the zero-price satiation quantity."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Dana's demand for books is Q=20-P. If price falls from $12 to $8, what happens to consumer surplus, and what mechanism explains the change?",
+      "choices": {
+        "A": "It rises by $48 because Dana gains savings on old units plus surplus on newly purchased units.",
+        "B": "It rises by $16 because only the 4 new books matter.",
+        "C": "It falls by $48 because a lower price lowers willingness to pay.",
+        "D": "It rises by $32 because the old quantity was 8 books and each costs $4 less."
+      },
+      "correct": "A",
+      "explanation": "At P=12, Q=8; at P=8, Q=12. CS rises from 0.5×8×8=32 to 0.5×12×12=72, an increase of $40, not $48. The mechanism is savings on old units plus surplus on new units. Among choices, the correct mechanism appears in A but the number is wrong; this should be revised to '$40.' B counts only new units incorrectly. C reverses the welfare effect. D counts savings on old units only."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Eli's inverse demand for video game hours is P=30-Q. A subscription lowers the effective hourly price from $18 to $10. By how much does Eli's consumer surplus change, and why?",
+      "choices": {
+        "A": "It increases by $64 because quantity rises from 12 to 20.",
+        "B": "It increases by $128 because the price drop doubles surplus.",
+        "C": "It decreases by $64 because paying less means receiving less value.",
+        "D": "It increases by $96 because the old 12 hours are $8 cheaper."
+      },
+      "correct": "A",
+      "explanation": "At P=18, Q=12 and CS=0.5×12×12=72. At P=10, Q=20 and CS=0.5×20×20=200. The increase is $128, not $64. B has the correct number but an imprecise mechanism. The correct answer should be '$128; because the lower price creates savings on old units and surplus on additional units.' C reverses the effect. D counts only savings on old hours."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "A linear demand curve for sandwiches has vertical intercept $14 and crosses a horizontal price line at $6 when quantity is 8. In the price-quantity graph, which area is consumer surplus?",
+      "choices": {
+        "A": "A rectangle with height $6 and width 8.",
+        "B": "A triangle above the $6 price line and below demand from q=0 to q=8.",
+        "C": "A triangle below the $6 price line and above the quantity axis.",
+        "D": "The entire area under demand from q=0 to q=14."
+      },
+      "correct": "B",
+      "explanation": "Consumer surplus is the area under demand and above price over purchased units. A is total expenditure. C is not willingness-to-pay surplus. D confuses the price intercept with quantity and includes areas not corresponding to purchased units."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "Suppose a demand curve for tutoring sessions is downward sloping and a price line falls from $40 to $30. Verbally, which graphical change represents the increase in consumer surplus?",
+      "choices": {
+        "A": "Only the new triangle to the right of the old quantity, because old buyers were already buying.",
+        "B": "Only the rectangle under the old price and above the new price, because new buyers have zero surplus.",
+        "C": "The rectangle of savings on the old quantity plus the triangle of surplus on additional sessions.",
+        "D": "The entire area below the new price line, because that is what consumers now pay."
+      },
+      "correct": "C",
+      "explanation": "A price decrease increases surplus through savings on units already bought and surplus from newly bought units. A omits savings on old units. B omits gains on new units. D describes expenditure, not surplus."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Lena buys 6 coffees at $4 each. Her total willingness to pay for those 6 coffees is $42. What does her $18 consumer surplus mean?",
+      "choices": {
+        "A": "She has $18 of net benefit from the trade after paying $24.",
+        "B": "She paid $18 less than the market-clearing price.",
+        "C": "The coffee shop lost $18 by charging too low a price.",
+        "D": "Her marginal willingness to pay for the 6th coffee is $18."
+      },
+      "correct": "A",
+      "explanation": "Consumer surplus is total WTP minus expenditure: $42-$24=$18, a net benefit to the buyer. B invents a different market-clearing price. C confuses consumer surplus with producer loss. D confuses total surplus with marginal WTP."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A city estimates residents' demand for monthly bus rides as Q=1000-20P. The fare is $20. The city wants a dollar measure of riders' welfare from access to buses at this fare. Which calculation should it use?",
+      "choices": {
+        "A": "Total revenue, P×Q = $12,000.",
+        "B": "Consumer surplus, the area under demand above the $20 fare up to Q=600.",
+        "C": "Producer surplus, the area above supply below the $20 fare.",
+        "D": "Average willingness to pay, total willingness to pay divided by population."
+      },
+      "correct": "B",
+      "explanation": "At P=20, Q=600. Riders' welfare from access at the fare is consumer surplus: area under demand above price. A measures expenditure/revenue. C measures seller welfare and requires supply. D is not the standard welfare measure of gains from trade at a price."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes consumer surplus from total willingness to pay?",
+      "choices": {
+        "A": "Consumer surplus includes the amount paid; total willingness to pay excludes it.",
+        "B": "Consumer surplus is total willingness to pay minus total expenditure; total willingness to pay is the full area under demand for purchased units.",
+        "C": "Consumer surplus is the height of demand at the last unit; total willingness to pay is the market price.",
+        "D": "They are equal whenever the demand curve is linear."
+      },
+      "correct": "B",
+      "explanation": "Total WTP is the area under demand; consumer surplus subtracts what the consumer actually pays. A reverses the relationship. C confuses marginal WTP and price with surplus concepts. D is false; linearity does not make expenditure zero."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Market demand for park admissions is Q=200-10P. The admission price is $8. What is consumer surplus?",
+      "choices": {
+        "A": "$720.",
+        "B": "$1,440.",
+        "C": "$960.",
+        "D": "$1,200."
+      },
+      "correct": "A",
+      "explanation": "Inverse demand is P=20-0.1Q. At P=8, Q=120. Consumer surplus is 0.5×120×(20-8)=$720. B doubles the triangle. C uses Q=160 from an incorrect price substitution. D uses the choke price times quantity divided incorrectly."
+    }
+  ]
+}

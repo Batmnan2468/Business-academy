@@ -1,0 +1,135 @@
+{
+  "topic": "Expected Utility",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Sofia can choose lottery A, which pays $100 with probability 0.25 and $36 with probability 0.75, or lottery B, which pays $64 for sure. Her von Neumann-Morgenstern utility is u(w)=sqrt(w). Which option does she choose, and why?",
+      "choices": {
+        "A": "Lottery A, because its expected monetary value is 52, which is close to 64.",
+        "B": "Lottery B, because EU(A)=0.25(10)+0.75(6)=7 and EU(B)=8.",
+        "C": "Lottery A, because EU(A)=0.25(100)+0.75(36)=52 and EU(B)=64.",
+        "D": "She is indifferent because both lotteries have two possible outcomes."
+      },
+      "correct": "B",
+      "explanation": "Expected utility weights utilities, not dollar outcomes: EU(A)=7 and EU(B)=8, so Sofia chooses B. A compares expected value loosely rather than utility. C calculates expected monetary values, not expected utilities. D ignores probabilities and payoffs."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Ethan allocates $100 between a safe asset returning $1 per dollar for sure and a risky asset that returns $2 per dollar in the good state and $0 per dollar in the bad state. The states are equally likely, and his utility is u(w)=ln(w). If x is dollars invested in the risky asset, final wealth is 100+x in the good state and 100-x in the bad state. What x maximizes expected utility?",
+      "choices": {
+        "A": "x=100, because the risky asset has the same expected return as the safe asset but a higher upside.",
+        "B": "x=50, because splitting wealth equally across assets diversifies risk.",
+        "C": "x=0, because expected utility 0.5ln(100+x)+0.5ln(100-x) is maximized by equalizing final wealth across states.",
+        "D": "x=-100, because a risk-averse investor should short all risky assets."
+      },
+      "correct": "C",
+      "explanation": "The first-order condition is 0.5/(100+x)-0.5/(100-x)=0, which gives x=0. The risky asset has no risk premium, so log utility favors no risk exposure. A maximizes upside, not expected utility. B applies a naive diversification rule. D goes beyond the feasible interpretation and creates unnecessary risk in the opposite direction."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A lottery pays $100 if a startup succeeds and $25 if it fails. Priya has u(w)=sqrt(w). The success probability rises from 0.25 to 0.64. What happens to the expected utility of the lottery, and what is the mechanism?",
+      "choices": {
+        "A": "It rises from 6.5 to 8.2 because probability weight shifts toward the high-utility state.",
+        "B": "It rises from 43.75 to 73 because probability weight shifts toward the higher dollar payoff.",
+        "C": "It stays constant because the utility function has not changed.",
+        "D": "It falls because higher success probability makes the lottery less diversified."
+      },
+      "correct": "A",
+      "explanation": "EU initially is 0.25(10)+0.75(5)=6.25, not 6.5; after the change it is 0.64(10)+0.36(5)=8.2. The correct mechanism is a higher probability weight on the high-utility state, but A has a calculation error. The correct numerical statement would be 6.25 to 8.2. B calculates expected money, not expected utility. C ignores probability weights. D misuses diversification language."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Marcus has u(w)=ln(w) and compares a sure $50 with a lottery paying $100 with probability p and $25 with probability 1-p. As p increases, how does the attractiveness of the lottery change?",
+      "choices": {
+        "A": "It becomes less attractive because the variance rises whenever p moves away from 0.5.",
+        "B": "It is unchanged because the outcomes $100 and $25 do not change.",
+        "C": "It becomes more attractive because expected utility increases linearly in p by shifting probability weight from ln(25) to ln(100).",
+        "D": "It becomes more attractive only if p exceeds 0.5 because probabilities below 0.5 do not enter expected utility."
+      },
+      "correct": "C",
+      "explanation": "EU=p ln(100)+(1-p)ln(25), which rises with p because ln(100)>ln(25). A focuses on variance rather than the favorable probability shift. B ignores probabilities. D incorrectly imposes a threshold for probabilities to matter."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a graph with wealth w on the horizontal axis and utility u(w)=sqrt(w) on the vertical axis, what does the chord connecting w=25 and w=100 represent for a lottery over those two wealth levels?",
+      "choices": {
+        "A": "The chord gives the expected utility of lotteries as a linear probability-weighted average of endpoint utilities.",
+        "B": "The chord gives the utility of expected wealth for every probability.",
+        "C": "The chord is below the utility curve because sqrt(w) is convex.",
+        "D": "The slope of the chord equals the marginal utility at every wealth level between 25 and 100."
+      },
+      "correct": "A",
+      "explanation": "For a two-outcome lottery, expected utility lies on the chord between the utilities of the two outcomes. B describes the point on the utility curve at expected wealth. C misstates curvature; sqrt(w) is concave and the chord lies below the curve. D confuses average slope with marginal utility."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For u(w)=ln(w), compare the point on the utility curve at expected wealth E[w]=80 with the point on the chord representing expected utility of a lottery paying $40 or $120. What must be true?",
+      "choices": {
+        "A": "The chord point is above the curve point because logarithmic utility is increasing.",
+        "B": "The chord point equals the curve point because expected wealth is $80.",
+        "C": "The curve point at $80 lies above the expected-utility chord point because ln(w) is concave.",
+        "D": "The curve point is unrelated to the lottery because expected utility cannot be graphed."
+      },
+      "correct": "C",
+      "explanation": "Concavity implies u(E[w])>E[u(w)] for a non-degenerate lottery. A confuses increasing utility with convexity. B confuses expected wealth with expected utility. D is false; expected utility is represented by the chord."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does expected utility theory evaluate a lottery as p u(w_H)+(1-p)u(w_L) rather than u(pw_H+(1-p)w_L)?",
+      "choices": {
+        "A": "Because preferences over risky prospects rank complete lotteries, so probabilities weight utilities of outcomes rather than converting risk into a certain expected payoff.",
+        "B": "Because consumers always maximize expected dollars first and then apply utility later.",
+        "C": "Because u(pw_H+(1-p)w_L) would make all consumers risk loving.",
+        "D": "Because probabilities are irrelevant once outcomes are expressed in dollars."
+      },
+      "correct": "A",
+      "explanation": "Expected utility represents preferences over lotteries by weighting utility in each outcome by its probability. B reverses the expected utility procedure. C is false; u(E[w]) can be used for certain wealth but not as the lottery evaluation. D denies the core role of probabilities."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A student deciding whether to apply Early Decision estimates a 0.4 chance of admission with utility 90 if admitted and utility 30 if rejected. Not applying gives utility 50 for sure. Which framework directly analyzes this decision?",
+      "choices": {
+        "A": "Expected utility, comparing 0.4(90)+0.6(30) with 50.",
+        "B": "Consumer demand, comparing marginal utility per dollar across two ordinary goods.",
+        "C": "Producer theory, maximizing profit from admissions decisions.",
+        "D": "Revealed preference, because probabilities are not needed if choices are observed."
+      },
+      "correct": "A",
+      "explanation": "The choice is between risky prospects with utilities in different outcomes, so expected utility applies. B treats it as ordinary goods. C uses the college's production perspective rather than the student's risky choice. D would infer preferences from choices but does not directly solve the ex ante decision."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes expected value from expected utility for a lottery paying $100 with probability 0.5 and $0 with probability 0.5 when u(w)=sqrt(w)?",
+      "choices": {
+        "A": "Expected value is 0.5(100)+0.5(0)=50, while expected utility is 0.5sqrt(100)+0.5sqrt(0)=5.",
+        "B": "Expected value is 5, while expected utility is 50.",
+        "C": "Expected value and expected utility are both 50 because probability weights are the same.",
+        "D": "Expected utility cannot be calculated unless the lottery is actuarially fair."
+      },
+      "correct": "A",
+      "explanation": "Expected value averages dollars; expected utility averages utility numbers. B reverses the two. C ignores the nonlinear utility function. D confuses expected utility calculation with insurance pricing."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Nina has u(w)=sqrt(w). Policy X gives her $100 for sure. Policy Y gives her $144 with probability 0.5 and $64 with probability 0.5. What is the expected-utility welfare comparison?",
+      "choices": {
+        "A": "Policy Y is better because its expected value is $104, greater than $100.",
+        "B": "Policy X is better because EU(X)=10 and EU(Y)=0.5(12)+0.5(8)=10, so X has less risk at the same utility.",
+        "C": "Nina is indifferent in expected utility because EU(X)=10 and EU(Y)=10, even though Y has higher expected money.",
+        "D": "Policy X is better because EU(Y)=sqrt(104), which is less than 10."
+      },
+      "correct": "C",
+      "explanation": "EU(X)=sqrt(100)=10, and EU(Y)=0.5sqrt(144)+0.5sqrt(64)=10, so she is indifferent in expected utility. A compares expected values only. B claims X is strictly better even though EU is equal. D incorrectly applies utility to expected wealth and also miscalculates since sqrt(104)>10."
+    }
+  ]
+}

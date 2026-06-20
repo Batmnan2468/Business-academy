@@ -1,0 +1,135 @@
+{
+  "topic": "Intertemporal Budget Constraints",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Maya has income m1 = 100 this year and m2 = 121 next year. The interest rate is r = 0.10, and her utility is U(c1,c2)=ln(c1)+ln(c2). What is her optimal bundle, and what does it imply about saving or borrowing in period 1?",
+      "choices": {
+        "A": "c1 = 105, c2 = 115.5; she borrows 5 in period 1 because c1 exceeds m1.",
+        "B": "c1 = 100, c2 = 121; she neither borrows nor lends because the endowment is always optimal.",
+        "C": "c1 = 110, c2 = 110; she borrows 10 because equal consumption maximizes log utility.",
+        "D": "c1 = 105, c2 = 105; she lends 5 because future consumption is lower than future income."
+      },
+      "correct": "A",
+      "explanation": "The present-value budget is c1 + c2/1.1 = 100 + 121/1.1 = 210. With log utility, equal present-value spending gives c1 = 105 and c2 = 1.1c1 = 115.5. Since c1 > 100, Maya borrows 5. B treats the endowment as automatically optimal, C equalizes physical consumption instead of using the price ratio, and D miscomputes c2 and reverses the borrowing interpretation."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Noah has m1 = 80 and m2 = 132. The interest rate is r = 0.20. His utility is U(c1,c2)=c1^(1/2)c2^(1/2). Which choice solves his optimization problem and correctly interprets it?",
+      "choices": {
+        "A": "c1 = 80, c2 = 132; he stays at the endowment because Cobb-Douglas consumers never borrow or lend.",
+        "B": "c1 = 95, c2 = 114; he borrows 15 in period 1 because c1 exceeds m1.",
+        "C": "c1 = 100, c2 = 120; he borrows 20 because c2/c1 must equal 1.2.",
+        "D": "c1 = 95, c2 = 132; he borrows 15 and leaves future income unchanged."
+      },
+      "correct": "B",
+      "explanation": "The present value of wealth is 80 + 132/1.2 = 190. Cobb-Douglas with equal exponents spends half present value on each period, so c1 = 95 and c2/1.2 = 95, giving c2 = 114. B is correct. A incorrectly assumes the endowment is optimal, C uses the wrong total wealth, and D violates the intertemporal budget constraint."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Lena has m1 = 100 and m2 = 110. At r = 0.10, her endowment lies on c2 = 220 - 1.1c1. If her period-2 income rises to 132 while r stays 0.10, what happens to the intertemporal budget line?",
+      "choices": {
+        "A": "It becomes steeper because future income raises the opportunity cost of current consumption.",
+        "B": "It shifts outward in a parallel way because lifetime wealth rises while the relative price 1+r is unchanged.",
+        "C": "It rotates around the original endowment because only the interest rate causes parallel shifts.",
+        "D": "It shifts inward because higher future income must be discounted."
+      },
+      "correct": "B",
+      "explanation": "The slope remains -(1+r) = -1.1, while present-value wealth rises by 22/1.1 = 20, so the budget line shifts outward parallel. A confuses income changes with interest-rate changes, C reverses rotations and shifts, and D treats discounting as if it makes the income gain negative."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Omar has m1 = 120 and m2 = 120. The interest rate rises from 0.05 to 0.20. Holding the endowment fixed, what is the correct comparative-static effect on the intertemporal budget constraint?",
+      "choices": {
+        "A": "The line shifts outward in parallel because a higher interest rate increases lifetime wealth for everyone.",
+        "B": "The line rotates around the endowment and becomes flatter because present consumption is cheaper.",
+        "C": "The line rotates around the endowment and becomes steeper because giving up 1 unit of c1 now yields more future consumption.",
+        "D": "The line shifts inward in parallel because future income is discounted more heavily."
+      },
+      "correct": "C",
+      "explanation": "A change in r leaves the endowment affordable, so the line rotates through (120,120). Its slope changes from -1.05 to -1.20, so it becomes steeper. A wrongly gives a parallel shift, B gets the slope direction wrong, and D focuses only on discounted m2 while ignoring that the endowment point remains on the constraint."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "In a two-period diagram with c1 on the horizontal axis and c2 on the vertical axis, Priya's budget line passes through endowment (60,90) and has interest rate r = 0.25. Which verbal description is correct?",
+      "choices": {
+        "A": "The slope is -0.8 because future consumption is discounted into present consumption.",
+        "B": "The slope is -1.25, meaning each extra unit of current consumption costs 1.25 units of future consumption.",
+        "C": "The vertical intercept is 90 because the endowment's future income is the maximum future consumption.",
+        "D": "The horizontal intercept is 60 because present income is the maximum present consumption."
+      },
+      "correct": "B",
+      "explanation": "With c1 on the horizontal axis, the slope is -(1+r) = -1.25. A uses the reciprocal slope, while C and D confuse endowment coordinates with intercepts; borrowing or lending lets the consumer consume beyond either single-period income."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A budget line for Kai has equation c2 = 180 - 1.5c1. Which interpretation of its graph is correct?",
+      "choices": {
+        "A": "The interest rate is 50%, and the c2-intercept shows maximum future consumption if all lifetime wealth is carried into period 2.",
+        "B": "The interest rate is 150%, and the c2-intercept equals period-2 income.",
+        "C": "The interest rate is 33.3%, and the c1-intercept shows maximum future consumption.",
+        "D": "The interest rate is 50%, and the slope shows that 1 unit of future consumption costs 1.5 units of present consumption."
+      },
+      "correct": "A",
+      "explanation": "The slope equals -(1+r), so r = 0.5. The vertical intercept 180 is maximum c2 if all present-value wealth is saved into period 2. B mistakes slope magnitude for r and misreads the intercept, C uses the reciprocal, and D reverses the opportunity-cost interpretation."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Eli's intertemporal budget constraint is c1 + c2/1.08 = 200. What is the economic meaning of the term c2/1.08?",
+      "choices": {
+        "A": "It is the amount of future consumption Eli can buy with one unit of present consumption.",
+        "B": "It is future consumption converted into present-value units so goods consumed in different periods can be compared on one budget constraint.",
+        "C": "It is Eli's period-2 income after interest has been added.",
+        "D": "It is the utility value of future consumption after impatience is subtracted."
+      },
+      "correct": "B",
+      "explanation": "Dividing c2 by 1.08 expresses future consumption in current-period purchasing-power units. A describes 1+r instead of discounting, C confuses consumption with income, and D confuses market discounting with utility discounting."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A student receives $2,000 today and will receive $3,300 next year. The annual interest rate is 10%. She wants to choose spending this year and next year using the standard two-period model. Which equation should she use as her budget constraint?",
+      "choices": {
+        "A": "c1 + c2 = 5,300",
+        "B": "c1 + 1.1c2 = 5,630",
+        "C": "c1 + c2/1.1 = 5,000",
+        "D": "1.1c1 + c2 = 5,300"
+      },
+      "correct": "C",
+      "explanation": "The present-value constraint is c1 + c2/(1+r) = m1 + m2/(1+r) = 2,000 + 3,300/1.1 = 5,000. A ignores timing, B compounds future consumption incorrectly, and D mixes future-value and present-value units without matching the right-hand side."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an income change from an interest-rate change in the two-period budget constraint?",
+      "choices": {
+        "A": "An income change changes preferences, while an interest-rate change changes endowments.",
+        "B": "An income change always rotates the budget line, while an interest-rate change always shifts it parallel.",
+        "C": "An income change changes lifetime wealth with the slope fixed, while an interest-rate change changes the relative price and rotates the line through the endowment.",
+        "D": "Both changes shift the budget line in parallel because both change lifetime wealth."
+      },
+      "correct": "C",
+      "explanation": "Income changes alter the right-hand side of the budget constraint while r fixes the slope; interest-rate changes alter the slope and keep the endowment affordable. A invents a preference change, B reverses the geometry, and D misses the relative-price effect of r."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "At r = 0.10, Jamal has m1 = 100 and m2 = 110 and chooses c1 = 90, c2 = 121. Compared with consuming his endowment, how much additional future consumption does his period-1 saving generate, and how should it be evaluated?",
+      "choices": {
+        "A": "Additional future consumption is 10; saving transfers dollars one-for-one across periods.",
+        "B": "Additional future consumption is 11; he gives up 10 units of current consumption and earns 10% interest, so the gain is the market return to saving.",
+        "C": "Additional future consumption is 21; all future consumption above 100 is interest income.",
+        "D": "Additional future consumption is 1; only the interest payment counts because principal is not consumption."
+      },
+      "correct": "B",
+      "explanation": "Jamal saves 100 - 90 = 10 in period 1, which becomes 10(1.10) = 11 additional units of c2, raising future consumption from 110 to 121. A ignores interest, C uses the wrong baseline, and D counts only interest rather than the full extra future consumption purchased by saving."
+    }
+  ]
+}

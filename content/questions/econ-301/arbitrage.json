@@ -1,0 +1,135 @@
+{
+  "topic": "Arbitrage",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Gold sells for $1,950 per ounce in Market A and $1,980 per ounce in Market B. Transaction costs are $10 per ounce total. What arbitrage action and profit per ounce are available?",
+      "choices": {
+        "A": "Buy in A and sell in B; profit is $20 per ounce.",
+        "B": "Buy in B and sell in A; profit is $20 per ounce.",
+        "C": "Buy in A and sell in B; profit is $30 per ounce.",
+        "D": "No arbitrage exists because prices differ by less than $50."
+      },
+      "correct": "A",
+      "explanation": "Buy at 1,950, sell at 1,980, and pay 10 in transaction costs, giving 20 profit. B reverses the trade, C ignores transaction costs, and D imposes an arbitrary threshold."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A risk-free claim pays $1,100 in one year. The interest rate is 10%, but the claim sells for $970. What arbitrage strategy earns riskless profit today?",
+      "choices": {
+        "A": "Sell the claim short and invest $970 at 10%.",
+        "B": "Borrow $970, buy the claim, and repay $1,067 next year, keeping $33 next year.",
+        "C": "Buy the claim with cash only; no borrowing is involved, so profit is not arbitrage.",
+        "D": "Borrow $1,100, buy the claim, and repay $970 next year."
+      },
+      "correct": "B",
+      "explanation": "The no-arbitrage price is 1,100/1.1 = 1,000. Borrowing 970 to buy the underpriced claim requires repayment of 1,067, leaving 33 next year risk-free. A shorts an underpriced asset, C misses the zero-net-investment arbitrage structure, and D reverses loan repayment logic."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "If many traders exploit an arbitrage opportunity by buying an underpriced asset, what happens to the asset's price and expected excess return?",
+      "choices": {
+        "A": "Price rises and excess return falls toward zero.",
+        "B": "Price falls and excess return rises.",
+        "C": "Price rises and excess return rises because demand is higher.",
+        "D": "Price stays fixed because arbitrage affects only quantities."
+      },
+      "correct": "A",
+      "explanation": "Buying pressure raises price; with fixed payoff, the return falls until no excess return remains. B and C get the price-return adjustment wrong, and D ignores price adjustment in competitive markets."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two identical one-year risk-free claims pay $500. Claim X costs $450 and Claim Y costs $470. What happens as arbitrageurs trade?",
+      "choices": {
+        "A": "They buy X and sell Y, pushing X's price up and Y's price down.",
+        "B": "They buy Y and sell X, pushing Y's price up and X's price down.",
+        "C": "They buy both because both have positive payoffs.",
+        "D": "They sell both because identical payoffs cannot have positive value."
+      },
+      "correct": "A",
+      "explanation": "The cheaper identical claim is underpriced relative to the expensive one. Arbitrageurs buy X and sell Y, narrowing the price gap. B reverses the trade, C ignores relative mispricing, and D denies asset value."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "A graph plots the price difference between two identical assets over time. The difference starts at $12 and moves toward $0 as trading volume rises. What does this graph illustrate?",
+      "choices": {
+        "A": "Arbitrage widens price gaps because traders prefer cheap assets.",
+        "B": "Arbitrage pressure eliminates price differences for identical payoffs.",
+        "C": "Arbitrage requires prices to remain permanently different.",
+        "D": "Arbitrage works only when trading volume falls."
+      },
+      "correct": "B",
+      "explanation": "Trading on the price difference pushes prices together until the riskless profit disappears. A reverses the effect, C contradicts no-arbitrage, and D misreads the role of trading volume."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation (Verbal)",
+      "question": "In a payoff diagram, Portfolio A and Portfolio B have identical future payoffs in every possible state, but Portfolio A is plotted with a lower current cost. What does the graph imply?",
+      "choices": {
+        "A": "Buy A and sell B; the vertical cost gap is riskless arbitrage profit.",
+        "B": "Buy B and sell A; higher current cost means higher value.",
+        "C": "Hold both portfolios because identical future payoffs require diversification.",
+        "D": "No conclusion is possible because payoffs are identical."
+      },
+      "correct": "A",
+      "explanation": "Identical future payoffs must have the same current price. If A is cheaper, buying A and selling B gives the same future obligations/assets with money left over today. B reverses the trade, C is irrelevant, and D misses the no-arbitrage implication."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why cannot persistent arbitrage opportunities survive in competitive markets?",
+      "choices": {
+        "A": "Because traders exploiting riskless profit change demand and supply, pushing prices to no-arbitrage levels.",
+        "B": "Because governments set all asset prices equal.",
+        "C": "Because investors dislike riskless profit.",
+        "D": "Because arbitrage opportunities are profitable only after prices adjust."
+      },
+      "correct": "A",
+      "explanation": "Competitive arbitrage creates buying and selling pressure that removes mispricing. B is not the general market mechanism, C is false, and D reverses the timing."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A concert ticket can be bought on one platform for $80 and immediately resold on another for $95. Platform fees total $8 per ticket. Which framework applies, and what is the profit?",
+      "choices": {
+        "A": "Consumer choice; utility gain is $15.",
+        "B": "Arbitrage; riskless profit is $7 per ticket before considering any resale risk.",
+        "C": "Present value; profit is $95/1.08 - $80.",
+        "D": "Monopoly pricing; profit is $95 - marginal cost."
+      },
+      "correct": "B",
+      "explanation": "The same good can be bought low and sold high immediately, giving 95 - 80 - 8 = 7. A confuses profit with utility, C inserts an irrelevant interest rate, and D uses a seller-pricing model."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes arbitrage from ordinary risky investment?",
+      "choices": {
+        "A": "Arbitrage requires a riskless profit from price differences or mispricing; risky investment earns compensation for bearing uncertainty.",
+        "B": "Arbitrage always loses money, while risky investment always earns money.",
+        "C": "Arbitrage means buying any asset expected to rise in price.",
+        "D": "Arbitrage requires patience, while risky investment requires no time."
+      },
+      "correct": "A",
+      "explanation": "Arbitrage is riskless profit from inconsistent prices; risky investment involves uncertain payoffs. B is false, C is too broad, and D confuses time horizon with risk."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "A portfolio that pays $100 in every state next year costs $92. A risk-free bond paying $100 next year costs $95. What arbitrage profit is available today?",
+      "choices": {
+        "A": "$0 because both pay $100 next year.",
+        "B": "$3 by buying the portfolio and selling the bond short.",
+        "C": "$3 by buying the bond and selling the portfolio short.",
+        "D": "$8 by buying the portfolio because 100 - 92 = 8."
+      },
+      "correct": "B",
+      "explanation": "The two assets have identical future payoffs, so buy the cheaper portfolio for 92 and short the bond for 95, receiving 3 today with no future net obligation. A ignores current price differences, C reverses the arbitrage, and D measures payoff minus cost rather than arbitrage against an identical asset."
+    }
+  ]
+}

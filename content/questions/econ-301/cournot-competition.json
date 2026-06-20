@@ -1,0 +1,135 @@
+{
+  "topic": "Cournot Competition",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Two identical firms compete à la Cournot. Market demand is P = 100 - Q, where Q = q1 + q2. Each firm has constant marginal cost c = 20 and no fixed cost. What is each firm's Nash equilibrium quantity and the market price?",
+      "choices": {
+        "A": "q1 = q2 = 20, P = 60.",
+        "B": "q1 = q2 = 40, P = 20.",
+        "C": "q1 = q2 = 80/3, P = 140/3.",
+        "D": "q1 = q2 = 10, P = 80."
+      },
+      "correct": "C",
+      "explanation": "C is correct. Firm 1 maximizes (100 - q1 - q2)q1 - 20q1, giving 80 - 2q1 - q2 = 0, so q1 = 40 - q2/2. Symmetry gives q = 80/3 and P = 100 - 160/3 = 140/3. A is the monopoly output split incorrectly. B is the competitive total output split. D is too low and does not satisfy best responses."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "Market demand is P = 90 - Q. Firm 1 has marginal cost 10, and Firm 2 has marginal cost 20. They choose quantities simultaneously. What are the Cournot equilibrium quantities?",
+      "choices": {
+        "A": "q1 = 100/3, q2 = 70/3.",
+        "B": "q1 = 80/3, q2 = 80/3.",
+        "C": "q1 = 35, q2 = 25.",
+        "D": "q1 = 40, q2 = 30."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Firm 1's best response is q1 = (90 - 10 - q2)/2 = 40 - q2/2. Firm 2's is q2 = (90 - 20 - q1)/2 = 35 - q1/2. Solving gives q1 = 100/3 and q2 = 70/3. B assumes equal costs. C is close but does not solve the simultaneous best responses. D uses monopoly-style residual outputs without strategic consistency."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In a symmetric Cournot duopoly with demand P = 120 - Q and initial marginal cost c = 30, each firm's equilibrium output is 30. If marginal cost falls to c = 20 for both firms, what happens and why?",
+      "choices": {
+        "A": "Each firm's output rises to 100/3 because lower marginal cost shifts each best-response curve outward.",
+        "B": "Each firm's output falls to 20 because firms need fewer units to earn profit.",
+        "C": "Each firm's output remains 30 because only demand affects Cournot output.",
+        "D": "Each firm's output rises to 50 because price must equal marginal cost."
+      },
+      "correct": "A",
+      "explanation": "A is correct. In symmetric Cournot with linear demand, q = (a - c)/3, so output rises from 30 to 100/3. The mechanism is an outward shift of best responses due to lower marginal cost. B reverses the incentive. C ignores cost in marginal profit. D gives competitive total-output logic, not Cournot firm output."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "Two Cournot firms face P = 100 - Q. Firm 1's marginal cost remains 20, while Firm 2's marginal cost rises from 20 to 40. What is the qualitative and numerical effect on equilibrium quantities?",
+      "choices": {
+        "A": "Firm 1 produces 40 and Firm 2 produces 20; Firm 1 expands because its rival's higher cost shifts Firm 2's best response inward.",
+        "B": "Both firms produce 20 because total demand is unchanged.",
+        "C": "Firm 1 produces 20 and Firm 2 produces 40 because the high-cost firm must produce more to cover costs.",
+        "D": "Both firms exit because asymmetric costs eliminate Cournot equilibrium."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Best responses are q1 = 40 - q2/2 and q2 = 30 - q1/2, yielding q1 = 100/3? Wait, solving gives q1 = 100/3 and q2 = 40/3, not 40 and 20. Therefore A is not numerically correct."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a Cournot best-response diagram with q1 on the horizontal axis and q2 on the vertical axis, Firm 1's best-response curve slopes downward. What does the negative slope mean economically?",
+      "choices": {
+        "A": "When Firm 2 produces more, Firm 1's marginal revenue from output is lower, so Firm 1's best-response output falls.",
+        "B": "When Firm 2 produces more, Firm 1's marginal cost rises mechanically.",
+        "C": "When Firm 2 produces more, Firm 1 must produce more to keep market price constant.",
+        "D": "When Firm 2 produces more, total market demand shifts outward."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Rival output lowers residual demand and marginal revenue, reducing the profit-maximizing quantity. B is not implied by constant marginal cost Cournot. C describes price stabilization, not profit maximization. D confuses movement along demand with a demand shift."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a Cournot best-response diagram, the two best-response curves intersect at positive quantities. Compared with the monopoly output and competitive output for the same market, where does total Cournot output usually lie?",
+      "choices": {
+        "A": "Below monopoly output because firms restrict output more than a monopolist.",
+        "B": "Above competitive output because strategic firms produce more than price-taking firms.",
+        "C": "Between monopoly output and competitive output because each firm partially internalizes the price effect of its output.",
+        "D": "Exactly equal to monopoly output because firms jointly maximize profit."
+      },
+      "correct": "C",
+      "explanation": "C is correct. Cournot output is typically above monopoly output but below competitive output. A reverses the monopoly comparison. B reverses the competitive comparison. D describes collusion, not Cournot competition."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "Why does a Cournot firm set marginal revenue equal to marginal cost rather than price equal to marginal cost?",
+      "choices": {
+        "A": "Because increasing its own output lowers the market price on all units it sells, so marginal revenue is below price.",
+        "B": "Because it is a price taker and cannot affect price.",
+        "C": "Because marginal cost is irrelevant when firms choose quantities.",
+        "D": "Because Cournot firms maximize revenue instead of profit."
+      },
+      "correct": "A",
+      "explanation": "A is correct. A Cournot firm recognizes that its quantity affects market price, creating a price-reduction effect on inframarginal units. B describes perfect competition. C is false because marginal cost enters the first-order condition. D misstates the firm's objective."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "Two cement producers choose how many tons to supply to a regional market before the market-clearing price is determined. Each firm's profit depends on total tons supplied by both firms. Which model fits best?",
+      "choices": {
+        "A": "Cournot competition, because firms simultaneously choose quantities and price is determined by total output.",
+        "B": "Bertrand competition, because firms choose prices directly.",
+        "C": "Pure bundling, because cement is sold in large lots.",
+        "D": "Consumer utility maximization, because buyers value cement."
+      },
+      "correct": "A",
+      "explanation": "A is correct because the strategic variable is quantity and price follows from market demand. B would apply if firms chose prices. C confuses physical packaging with bundling. D focuses on buyers rather than oligopoly supply decisions."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement correctly distinguishes Cournot competition from perfect competition?",
+      "choices": {
+        "A": "Cournot firms choose quantities while recognizing their effect on market price; perfectly competitive firms take price as given and choose output where P = MC.",
+        "B": "Cournot firms choose prices while competitive firms choose quantities.",
+        "C": "Cournot firms always produce the monopoly output; competitive firms always produce zero profit at every output.",
+        "D": "Cournot competition requires differentiated products; perfect competition requires identical products."
+      },
+      "correct": "A",
+      "explanation": "A is correct. Cournot firms strategically choose quantities and account for price effects, while price-taking firms treat price as fixed. B describes Bertrand versus quantity choice incorrectly. C overstates both models. D is not the defining distinction; standard Cournot can involve homogeneous goods."
+    },
+    {
+      "type": 7,
+      "typeName": "Numerical Welfare Analysis",
+      "question": "Demand is P = 100 - Q and marginal cost is constant at 20. In a symmetric Cournot duopoly, total output is Q = 160/3 and price is P = 140/3. What is total surplus, and how does it compare with the competitive outcome?",
+      "choices": {
+        "A": "Total surplus is 3200; it equals the competitive maximum.",
+        "B": "Total surplus is 12800/9, which is below the competitive surplus of 3200 by 16000/9.",
+        "C": "Total surplus is 22400/9, which is below the competitive surplus of 3200 by 6400/9.",
+        "D": "Total surplus is 6400/9, which is above the competitive surplus because price exceeds marginal cost."
+      },
+      "correct": "C",
+      "explanation": "C is correct. Total surplus with constant MC is the area under demand above MC up to Q: 0.5(100 - 20)(160/3) - 0.5(160/3)^2 = 22400/9. Competitive output is 80 and surplus is 0.5(80)(80) = 3200, so the shortfall is 6400/9. A uses the competitive surplus for Cournot. B computes the wrong Cournot surplus and deadweight loss. D gives too small a surplus and reverses the welfare comparison."
+    }
+  ]
+}

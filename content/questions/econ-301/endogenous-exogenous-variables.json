@@ -1,0 +1,135 @@
+{
+  "topic": "Endogenous vs Exogenous Variables",
+  "questions": [
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A student chooses hours h to maximize U(h) = 48h - 2h^2 subject to h <= T. In the model, T = 10 is taken as given. What is the optimal h, and how should h and T be classified?",
+      "choices": {
+        "A": "h = 10; h is endogenous and T is exogenous because h is chosen inside the model while T is imposed from outside.",
+        "B": "h = 12; h and T are both endogenous because both appear in the constraint.",
+        "C": "h = 8; h is exogenous and T is endogenous because T limits h.",
+        "D": "h = 0; both variables are exogenous because the model gives T numerically."
+      },
+      "correct": "A",
+      "explanation": "The unconstrained optimum is h = 12, but h <= 10 binds, so h = 10. h is determined by optimization inside the model; T is taken as given. B ignores the constraint and misclassifies T, C reverses the definitions, and D confuses numerical values with exogeneity."
+    },
+    {
+      "type": 1,
+      "typeName": "Constrained Optimization",
+      "question": "A firm chooses output q to maximize pi(q) = 30q - q^2 - wq, where the wage w = 6 is set outside the model. What q maximizes profit, and which variable is endogenous?",
+      "choices": {
+        "A": "q = 6; w is endogenous because it affects profit.",
+        "B": "q = 12; q is endogenous because the firm chooses it after taking w as given.",
+        "C": "q = 24; both q and w are endogenous because both enter the first-order condition.",
+        "D": "q = 30; q is exogenous because the revenue intercept is 30."
+      },
+      "correct": "B",
+      "explanation": "The FOC is 30 - 2q - 6 = 0, so q = 12. q is endogenous; w is exogenous. A divides the wage by one, C forgets the factor 2, and D mistakes a parameter for the choice."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "In the model Qd = 100 - 4P + 2I, price P is determined later by market clearing, while income I is taken as given. If I increases from 20 to 25 at a fixed trial price P = 10, what happens to Qd, and what mechanism is involved?",
+      "choices": {
+        "A": "Qd falls by 20 because higher income raises equilibrium price.",
+        "B": "Qd rises by 10 because the exogenous income parameter shifts demand outward.",
+        "C": "Qd rises by 5 because income increases by 5 units.",
+        "D": "Qd is unchanged because only endogenous variables can affect outcomes."
+      },
+      "correct": "B",
+      "explanation": "The direct change is 2(25 - 20) = 10. The mechanism is an outward demand shift from a change in an exogenous parameter. A answers a later equilibrium question, C ignores the coefficient, and D misunderstands exogenous variables."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A firm's optimal labor demand is L* = 100 - 5w, where w is an exogenous wage. If w rises from 8 to 10, what happens to L*, and why?",
+      "choices": {
+        "A": "L* falls from 60 to 50 because a higher exogenous input price lowers the marginal profitability of labor.",
+        "B": "L* rises from 60 to 70 because higher wages attract more workers.",
+        "C": "L* falls from 92 to 90 because only the wage itself changes by 2.",
+        "D": "L* is unchanged because wages are exogenous and therefore cannot affect endogenous choices."
+      },
+      "correct": "A",
+      "explanation": "At w = 8, L* = 60; at w = 10, L* = 50. The mechanism is the higher input price reducing labor demand. B gives a labor supply story, C ignores the coefficient, and D misunderstands how exogenous variables drive endogenous outcomes."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "In a supply-demand diagram, Qd = 80 - 2P + I and Qs = 4P. The graph is drawn with P on the vertical axis and Q on the horizontal axis. Which statement correctly describes the effect of increasing exogenous income I?",
+      "choices": {
+        "A": "The demand curve shifts right because at every price quantity demanded is higher.",
+        "B": "The supply curve rotates because income changes the slope of supply.",
+        "C": "The demand curve becomes flatter because income appears additively.",
+        "D": "The equilibrium point is exogenous, so the graph does not move."
+      },
+      "correct": "A",
+      "explanation": "Since I enters demand additively, higher I raises Qd at each P, shifting demand right. B changes the wrong curve, C confuses intercept shifts with slope changes, and D misclassifies equilibrium as exogenous."
+    },
+    {
+      "type": 3,
+      "typeName": "Graph Interpretation",
+      "question": "For the equation y = a + bx, suppose x is on the horizontal axis, y is on the vertical axis, b is fixed, and a is an exogenous intercept parameter. What happens graphically when a increases from 3 to 7?",
+      "choices": {
+        "A": "The line becomes steeper because the slope rises from 3 to 7.",
+        "B": "The line shifts upward in parallel because the vertical intercept increases while slope b stays fixed.",
+        "C": "The line rotates around the origin because the endogenous variable changes.",
+        "D": "The line shifts downward because higher exogenous variables reduce endogenous variables."
+      },
+      "correct": "B",
+      "explanation": "An increase in a raises the vertical intercept but leaves slope b unchanged. A confuses intercept with slope, C invents a rotation, and D imposes a false general rule."
+    },
+    {
+      "type": 4,
+      "typeName": "Economic Interpretation",
+      "question": "In a market model, equilibrium price P* is solved from Qd(P, I) = Qs(P, w), while income I and wage w are taken as given. What does it mean to call P* endogenous?",
+      "choices": {
+        "A": "P* is chosen arbitrarily by the economist before the model is solved.",
+        "B": "P* is determined by the internal logic of the model, specifically the market-clearing condition.",
+        "C": "P* cannot change when I or w changes.",
+        "D": "P* must be directly controlled by the government."
+      },
+      "correct": "B",
+      "explanation": "Endogenous means determined inside the model. A describes an exogenous assumption, C ignores comparative statics, and D confuses endogenous with policy control."
+    },
+    {
+      "type": 5,
+      "typeName": "Scenario Application",
+      "question": "A city studies how a new $3 bus fare affects daily ridership. The model treats the fare as set by the city council and solves for ridership using Q = 5000 - 600P. Which classification is correct?",
+      "choices": {
+        "A": "Ridership is exogenous and fare is endogenous because ridership depends on fare.",
+        "B": "Both ridership and fare are endogenous because both appear in the equation.",
+        "C": "Fare is exogenous and ridership is endogenous because the fare is imposed from outside and ridership is solved inside the model.",
+        "D": "Both variables are exogenous because the model is linear."
+      },
+      "correct": "C",
+      "explanation": "The city-set fare is taken as given; ridership is determined by the model. A reverses the terms, B confuses appearing in an equation with being endogenous, and D makes linearity irrelevant."
+    },
+    {
+      "type": 6,
+      "typeName": "Distinction",
+      "question": "Which statement best distinguishes an endogenous variable from an exogenous variable?",
+      "choices": {
+        "A": "An endogenous variable is always a choice variable; an exogenous variable is always irrelevant.",
+        "B": "An endogenous variable is solved within the model; an exogenous variable is taken as given by the model.",
+        "C": "An endogenous variable is numeric; an exogenous variable is verbal.",
+        "D": "An endogenous variable causes changes; an exogenous variable can only respond to changes."
+      },
+      "correct": "B",
+      "explanation": "The distinction is whether the model determines the variable or takes it as given. A wrongly says exogenous variables are irrelevant, C is meaningless, and D reverses the typical comparative statics role."
+    },
+    {
+      "type": 2,
+      "typeName": "Comparative Statics",
+      "question": "A market has Qd = 100 - 2P + I and Qs = 3P. Income I is exogenous. If I rises from 20 to 30, what happens to equilibrium price? Welfare analysis is not directly applicable to this classification topic, so this substitutes a second comparative statics question.",
+      "choices": {
+        "A": "P* rises from 24 to 26 because higher exogenous income shifts demand outward and the endogenous price adjusts to clear the market.",
+        "B": "P* falls from 24 to 22 because higher income reduces scarcity.",
+        "C": "P* rises from 20 to 30 because price equals income in equilibrium.",
+        "D": "P* is unchanged because income is exogenous."
+      },
+      "correct": "A",
+      "explanation": "Market clearing gives 100 - 2P + I = 3P, so P* = (100 + I)/5. P rises from 24 to 26. B gets the mechanism backward, C solves the wrong equation, and D misunderstands exogenous shocks."
+    }
+  ]
+}
