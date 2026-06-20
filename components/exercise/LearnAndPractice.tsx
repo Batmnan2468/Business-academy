@@ -23,6 +23,15 @@ interface NextTopic {
   title: string
 }
 
+interface Question {
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  type?: string
+  difficulty?: string
+}
+
 interface Props {
   topicTitle: string
   topicSlug: string
@@ -32,6 +41,7 @@ interface Props {
   nextTopic?: NextTopic | null
   hasLearnContent?: boolean
   nextTopicHasLearn?: boolean
+  questions?: Question[]
 }
 
 function markTopicComplete(courseSlug: string, topicSlug: string) {
@@ -68,18 +78,11 @@ const INITIAL_SESSION: Session = {
   showMastery: false,
 }
 
-const DIFFICULTIES = [
-  { value: 'easy', label: 'Easy' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'hard', label: 'Hard' },
-]
-
-export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic, hasLearnContent, nextTopicHasLearn }: Props) {
+export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseSlug, courseTitle, nextTopic, hasLearnContent, nextTopicHasLearn, questions }: Props) {
   const fireConfetti = useConfetti()
   const initialMode = learn ? 'learn' : 'practice'
   const [mode, setMode] = useState<'learn' | 'practice'>(initialMode)
   const [session, setSession] = useState<Session>(INITIAL_SESSION)
-  const [difficulty, setDifficulty] = useState('medium')
   const [elapsed, setElapsed] = useState(0)
   const [toastVisible, setToastVisible] = useState(false)
   const [toastXP, setToastXP] = useState(0)
@@ -247,14 +250,12 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
           />
         )}
 
-        <DifficultySelector value={difficulty} onChange={setDifficulty} disabled={session.total > 0} />
-
         <PracticeQuestion
           topicTitle={topicTitle}
           topicSlug={topicSlug}
           courseSlug={courseSlug}
           courseTitle={courseTitle}
-          difficulty={difficulty}
+          questions={questions}
           onAnswer={handleAnswer}
           nextLabel={session.masteryPending ? 'See results →' : undefined}
           onNext={session.masteryPending ? handleMasteryTransition : undefined}
@@ -291,7 +292,6 @@ export default function LearnAndPractice({ topicTitle, topicSlug, learn, courseS
       </div>
 
       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-        <DifficultySelector value={difficulty} onChange={setDifficulty} />
         <button
           onClick={startPractice}
           className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
@@ -518,39 +518,3 @@ function MasteryScreen({
   )
 }
 
-function DifficultySelector({
-  value,
-  onChange,
-  disabled = false,
-}: {
-  value: string
-  onChange: (v: string) => void
-  disabled?: boolean
-}) {
-  return (
-    <div className="flex items-center gap-2 mb-6">
-      <span className="text-xs text-gray-400 shrink-0">Difficulty:</span>
-      <div className="flex gap-1">
-        {DIFFICULTIES.map((d) => (
-          <button
-            key={d.value}
-            onClick={() => !disabled && onChange(d.value)}
-            disabled={disabled}
-            className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
-              value === d.value
-                ? 'bg-blue-600 text-white'
-                : disabled
-                  ? 'text-gray-300 dark:text-gray-600 cursor-default'
-                  : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-            }`}
-          >
-            {d.label}
-          </button>
-        ))}
-      </div>
-      {disabled && (
-        <span className="text-xs text-gray-400 italic">locked during session</span>
-      )}
-    </div>
-  )
-}

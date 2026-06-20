@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { isQuestionSaved, saveQuestion, removeQuestion } from '@/lib/savedQuestions'
 import SaveAsFlashcardButton from '@/components/flashcards/SaveAsFlashcardButton'
@@ -32,14 +32,15 @@ interface Props {
   topicSlug: string
   courseSlug: string
   courseTitle?: string
-  difficulty: string
+  difficulty?: string
+  questions?: Question[]
   onAnswer?: (correct: boolean, questionType: string, difficulty: string) => void
   nextLabel?: string
   onNext?: () => void
   hasLearnContent?: boolean
 }
 
-export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty, onAnswer, nextLabel, onNext, hasLearnContent }: Props) {
+export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty = 'medium', questions, onAnswer, nextLabel, onNext, hasLearnContent }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -47,6 +48,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
   const [isSaved, setIsSaved] = useState(false)
   const [showToast, setShowToast] = useState(false)
   const [showKeyboardHint, setShowKeyboardHint] = useState(true)
+  const usedIndicesRef = useRef<Set<number>>(new Set())
 
   const fetchQuestion = useCallback(async () => {
     setLoading(true)
@@ -55,6 +57,22 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     setQuestion(null)
     setIsSaved(false)
     setShowToast(false)
+
+    if (questions && questions.length > 0) {
+      let available = questions.map((_, i) => i).filter((i) => !usedIndicesRef.current.has(i))
+      if (available.length === 0) {
+        usedIndicesRef.current = new Set()
+        available = questions.map((_, i) => i)
+      }
+      const idx = available[Math.floor(Math.random() * available.length)]
+      usedIndicesRef.current.add(idx)
+      const picked = shuffleOptions(questions[idx])
+      setQuestion(picked)
+      setIsSaved(isQuestionSaved(courseSlug, picked.question))
+      setLoading(false)
+      return
+    }
+
     try {
       const res = await fetch('/api/generate-question', {
         method: 'POST',
@@ -73,7 +91,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     } finally {
       setLoading(false)
     }
-  }, [topicTitle, topicSlug, courseSlug, difficulty])
+  }, [topicTitle, topicSlug, courseSlug, difficulty, questions])
 
   useEffect(() => {
     fetchQuestion()
@@ -156,7 +174,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
   if (loading) {
     return (
       <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>
-        Generating question…
+        Loading question…
       </p>
     )
   }

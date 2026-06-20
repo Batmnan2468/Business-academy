@@ -1,10 +1,55 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
 import { getCourse, getAllTopics } from '@/lib/courses'
 import LearnAndPractice from '@/components/exercise/LearnAndPractice'
 
 interface Props {
   params: Promise<{ courseSlug: string; topicSlug: string }>
+}
+
+interface NormalizedQuestion {
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  type?: string
+  difficulty?: string
+}
+
+function loadQuestions(courseSlug: string, topicSlug: string): NormalizedQuestion[] {
+  const filePath = path.join(process.cwd(), 'content', 'questions', courseSlug, `${topicSlug}.json`)
+  try {
+    const raw = fs.readFileSync(filePath, 'utf-8')
+    const data = JSON.parse(raw)
+
+    // Old format: top-level array [{question, options, correctIndex, explanation, ...}]
+    if (Array.isArray(data)) {
+      return data as NormalizedQuestion[]
+    }
+
+    // New format: {topic, questions: [{question, choices: {A,B,C,D}, correct, explanation, typeName, ...}]}
+    if (data && Array.isArray(data.questions)) {
+      const keys = ['A', 'B', 'C', 'D'] as const
+      return data.questions.map((q: {
+        question: string
+        choices: Record<string, string>
+        correct: string
+        explanation: string
+        typeName?: string
+      }): NormalizedQuestion => ({
+        question: q.question,
+        options: keys.map((k) => q.choices[k] ?? ''),
+        correctIndex: keys.indexOf(q.correct as typeof keys[number]),
+        explanation: q.explanation,
+        type: q.typeName,
+      }))
+    }
+  } catch {
+    // file not found or parse error — fall through
+  }
+  return []
 }
 
 export default async function PracticeTopicPage({ params }: Props) {
@@ -32,6 +77,8 @@ export default async function PracticeTopicPage({ params }: Props) {
   const hasLearnContent =
     topic.learn != null &&
     ('openingQuestion' in topic.learn || 'explanation' in topic.learn)
+
+  const questions = loadQuestions(courseSlug, topicSlug)
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
@@ -62,6 +109,7 @@ export default async function PracticeTopicPage({ params }: Props) {
         nextTopic={nextTopic}
         hasLearnContent={hasLearnContent}
         nextTopicHasLearn={nextTopicHasLearn}
+        questions={questions.length > 0 ? questions : undefined}
       />
     </main>
   )
