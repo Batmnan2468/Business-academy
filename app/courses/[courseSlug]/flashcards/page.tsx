@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { getCourse, loadTermCards } from '@/lib/courses'
+import { getCourse, loadTermCards, loadConceptCards } from '@/lib/courses'
 import CourseFlashcardHub from '@/components/flashcards/CourseFlashcardHub'
 
 interface Props {
@@ -12,6 +12,7 @@ export default async function CourseFlashcardsPage({ params }: Props) {
   if (!course) notFound()
 
   const termCards = loadTermCards(courseSlug)
+  const conceptCards = loadConceptCards(courseSlug)
 
-  return <CourseFlashcardHub course={course} courseSlug={courseSlug} termCards={termCards} />
+  return <CourseFlashcardHub course={course} courseSlug={courseSlug} termCards={termCards} conceptCards={conceptCards} />
 }

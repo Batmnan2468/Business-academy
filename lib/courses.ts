@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import type { Course, Topic, PracticeQuestion } from '@/types'
 import { isLearnContentV2 } from '@/types'
-import type { TermCard } from '@/lib/courseFlashcards'
+import type { TermCard, ConceptCard } from '@/lib/courseFlashcards'
 
 export function getAllTopics(course: Course): Topic[] {
   if (course.units) return course.units.flatMap((u) => u.topics)
@@ -68,6 +68,18 @@ export function loadTermCards(courseSlug: string): TermCard[] {
     const raw = fs.readFileSync(filePath, 'utf-8')
     const items = JSON.parse(raw) as Array<{ id: string; front: string; back: string; tags: string[] }>
     return items.map((item) => ({ ...item, type: 'term' as const, courseSlug }))
+  } catch {
+    return []
+  }
+}
+
+export function loadConceptCards(courseSlug: string): ConceptCard[] {
+  try {
+    const filePath = path.join(flashcardsDir, `${courseSlug}-concepts.json`)
+    if (!fs.existsSync(filePath)) return []
+    const raw = fs.readFileSync(filePath, 'utf-8')
+    const items = JSON.parse(raw) as Array<{ id: string; front: string; back: string; tags: string[] }>
+    return items.map((item) => ({ ...item, type: 'concept' as const, courseSlug }))
   } catch {
     return []
   }

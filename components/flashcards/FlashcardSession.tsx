@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import type { CourseCard, TermCard } from '@/lib/courseFlashcards'
+import type { CourseCard, TermCard, ConceptCard } from '@/lib/courseFlashcards'
 import type { CustomCard } from '@/lib/flashcards'
 import {
   getSRState,
@@ -13,7 +13,7 @@ import {
 } from '@/lib/flashcards'
 import { addXP } from '@/lib/xp'
 
-export type AnyCard = CourseCard | CustomCard | TermCard
+export type AnyCard = CourseCard | CustomCard | TermCard | ConceptCard
 
 export interface SessionStats {
   total: number

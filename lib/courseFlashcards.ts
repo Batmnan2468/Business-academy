@@ -24,6 +24,15 @@ export interface TermCard {
   courseSlug: string
 }
 
+export interface ConceptCard {
+  id: string
+  front: string
+  back: string
+  tags: string[]
+  type: 'concept'
+  courseSlug: string
+}
+
 function topicToCard(topic: Topic, courseSlug: string, unitId: string): CourseCard | null {
   if (!topic.learn) return null
 
