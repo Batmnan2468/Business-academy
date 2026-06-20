@@ -18,15 +18,38 @@ export interface LearnContentV2 {
   keyPoints: string[]
 }
 
-export function isLearnContentV2(c: LearnContent | LearnContentV2): c is LearnContentV2 {
+export interface LearnContentV3 {
+  openingTension: string
+  coreIdea: string
+  mathSetup: string
+  derivation: string
+  graphicalIntuition: string
+  workedExample: string
+  boundaryConditions: string
+  examTraps: string[]
+  frq: { prompt: string; parts: string[] }
+}
+
+export interface Flashcard {
+  front: string
+  back: string
+  type: string
+}
+
+export function isLearnContentV2(c: LearnContent | LearnContentV2 | LearnContentV3): c is LearnContentV2 {
   return 'openingQuestion' in c
+}
+
+export function isLearnContentV3(c: LearnContent | LearnContentV2 | LearnContentV3): c is LearnContentV3 {
+  return 'openingTension' in c
 }
 
 export interface Topic {
   id: string
   slug: string
   title: string
-  learn?: LearnContent | LearnContentV2
+  learn?: LearnContent | LearnContentV2 | LearnContentV3
+  flashcards?: Flashcard[]
 }
 
 export interface Unit {

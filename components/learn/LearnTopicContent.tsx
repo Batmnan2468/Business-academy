@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import type { LearnContent, LearnContentV2, PracticeQuestion } from '@/types'
+import type { LearnContent, LearnContentV2, LearnContentV3, PracticeQuestion } from '@/types'
 import {
   getLearnThought,
   setLearnThought,
@@ -562,6 +562,195 @@ function PracticeNav({
           go back to the topic list
         </Link>
       </p>
+    </div>
+  )
+}
+
+// ── V3 (ECON 301 / intermediate micro) layout ─────────────────────────────
+
+interface PropsV3 {
+  courseSlug: string
+  topicSlug: string
+  learnV3: LearnContentV3
+  nextTopic?: NextTopic | null
+  checkpointQuestions?: PracticeQuestion[]
+}
+
+export function LearnTopicContentV3({
+  courseSlug,
+  topicSlug,
+  learnV3,
+  nextTopic,
+  checkpointQuestions = [],
+}: PropsV3) {
+  const [checkpointDone, setCheckpointDone] = useState(false)
+  const [checkpointScore, setCheckpointScore] = useState<number | null>(null)
+  const [showCheckpoints, setShowCheckpoints] = useState(false)
+
+  useEffect(() => {
+    setLearnState(courseSlug, topicSlug, 'reading')
+    setLastLearnVisit(courseSlug, topicSlug)
+    const existing = getCheckpointResult(courseSlug, topicSlug)
+    if (existing) {
+      setCheckpointScore(existing.score)
+      setCheckpointDone(true)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function handleCheckpointComplete(score: number) {
+    setCheckpointScore(score)
+    setCheckpointDone(true)
+    setCheckpointResult(courseSlug, topicSlug, {
+      score,
+      total: 3,
+      completedAt: new Date().toISOString(),
+    })
+    setLearnState(courseSlug, topicSlug, 'completed')
+    addXP('learnTopicCompleted')
+    updateStreak()
+  }
+
+  const hasCheckpoints = checkpointQuestions.length > 0
+
+  const Section = ({ label, children }: { label: string; children: React.ReactNode }) => (
+    <div className="mb-6">
+      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-2">
+        {label}
+      </p>
+      {children}
+    </div>
+  )
+
+  return (
+    <div>
+      {/* Opening tension */}
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-base italic">
+        {learnV3.openingTension}
+      </p>
+
+      <Section label="Core Idea">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+          {learnV3.coreIdea}
+        </p>
+      </Section>
+
+      <Section label="Math Setup">
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl px-5 py-4 font-mono text-sm text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap">
+          {learnV3.mathSetup}
+        </div>
+      </Section>
+
+      <Section label="Derivation">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm whitespace-pre-line">
+          {learnV3.derivation}
+        </p>
+      </Section>
+
+      <Section label="Graphical Intuition">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+          {learnV3.graphicalIntuition}
+        </p>
+      </Section>
+
+      <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl px-5 py-4 mb-6">
+        <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-2">
+          Worked Example
+        </p>
+        <p className="text-sm text-amber-900 dark:text-amber-100 leading-relaxed whitespace-pre-line">
+          {learnV3.workedExample}
+        </p>
+      </div>
+
+      <Section label="Boundary Conditions">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm whitespace-pre-line">
+          {learnV3.boundaryConditions}
+        </p>
+      </Section>
+
+      <Section label="Exam Traps">
+        <ul className="space-y-2">
+          {learnV3.examTraps.map((trap, i) => (
+            <li key={i} className="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+              <span className="text-red-500 shrink-0 font-bold mt-0.5">!</span>
+              <span>{trap}</span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl px-5 py-4 mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+          Free Response Question
+        </p>
+        <p className="text-sm text-blue-900 dark:text-blue-100 leading-relaxed mb-3">
+          {learnV3.frq.prompt}
+        </p>
+        <ol className="space-y-1.5 list-decimal list-inside">
+          {learnV3.frq.parts.map((part, i) => (
+            <li key={i} className="text-sm text-blue-800 dark:text-blue-200">
+              {part}
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      {/* Checkpoints gate */}
+      {hasCheckpoints && !checkpointDone && !showCheckpoints && (
+        <button
+          onClick={() => setShowCheckpoints(true)}
+          className="w-full sm:w-auto mb-4 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+        >
+          Check Your Understanding →
+        </button>
+      )}
+
+      {hasCheckpoints && !checkpointDone && showCheckpoints && (
+        <div className="mb-4">
+          <CheckpointQuestions
+            questions={checkpointQuestions}
+            onComplete={handleCheckpointComplete}
+          />
+        </div>
+      )}
+
+      {(!hasCheckpoints || checkpointDone) && (
+        <>
+          {checkpointDone && checkpointScore !== null && (
+            <CheckpointSummary
+              score={checkpointScore}
+              total={3}
+              courseSlug={courseSlug}
+              topicSlug={topicSlug}
+            />
+          )}
+          <div className="flex flex-col gap-3 mt-4">
+            <Link
+              href={`/courses/${courseSlug}/practice/${topicSlug}`}
+              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors text-center"
+            >
+              Practice this topic →
+            </Link>
+            {nextTopic && (
+              <Link
+                href={`/courses/${courseSlug}/learn/${nextTopic.slug}`}
+                className="w-full sm:w-auto px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
+              >
+                Next: {nextTopic.title} →
+              </Link>
+            )}
+            <p className="text-sm text-gray-400 dark:text-gray-500 text-center">
+              or{' '}
+              <Link
+                href={`/courses/${courseSlug}`}
+                className="hover:underline hover:text-blue-500 dark:hover:text-blue-400"
+              >
+                go back to the topic list
+              </Link>
+            </p>
+          </div>
+        </>
+      )}
     </div>
   )
 }

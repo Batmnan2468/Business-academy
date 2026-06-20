@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getCourse, getAllTopics, getTopicQuestions } from '@/lib/courses'
-import { isLearnContentV2 } from '@/types'
-import LearnTopicContent, { LearnTopicContentLegacy } from '@/components/learn/LearnTopicContent'
+import { isLearnContentV2, isLearnContentV3 } from '@/types'
+import LearnTopicContent, { LearnTopicContentLegacy, LearnTopicContentV3 } from '@/components/learn/LearnTopicContent'
 
 interface Props {
   params: Promise<{ courseSlug: string; topicSlug: string }>
@@ -46,6 +46,14 @@ export default async function LearnTopicPage({ params }: Props) {
             courseSlug={courseSlug}
             topicSlug={topicSlug}
             learnV2={topic.learn}
+            nextTopic={nextTopic}
+            checkpointQuestions={checkpointQuestions}
+          />
+        ) : isLearnContentV3(topic.learn) ? (
+          <LearnTopicContentV3
+            courseSlug={courseSlug}
+            topicSlug={topicSlug}
+            learnV3={topic.learn}
             nextTopic={nextTopic}
             checkpointQuestions={checkpointQuestions}
           />

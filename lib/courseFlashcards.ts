@@ -2,7 +2,7 @@
 // Runs in the browser (course data is passed as props from server components).
 
 import type { Course, Topic, LearnContent } from '@/types'
-import { isLearnContentV2 } from '@/types'
+import { isLearnContentV2, isLearnContentV3 } from '@/types'
 
 export interface CourseCard {
   id: string          // "${courseSlug}:${topicSlug}"
@@ -43,10 +43,13 @@ function topicToCard(topic: Topic, courseSlug: string, unitId: string): CourseCa
   if (isLearnContentV2(learn)) {
     front = learn.openingQuestion
     back = learn.anchorSummary
+  } else if (isLearnContentV3(learn)) {
+    front = learn.openingTension.split('.')[0] + '.'
+    back = learn.coreIdea.split('.')[0] + '.'
   } else {
     const v1 = learn as LearnContent
     front = `${topic.title} — what is this?`
-    back = v1.keyPoints[0] ?? v1.explanation.slice(0, 120)
+    back = v1.keyPoints?.[0] ?? v1.explanation?.slice(0, 120) ?? ''
   }
 
   if (!front || !back) return null
