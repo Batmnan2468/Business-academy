@@ -50,6 +50,7 @@ export default async function PracticeOverviewPage({ params }: Props) {
           topics={slimTopics}
           totalTopics={allTopics.length}
           hasLearnContent={false}
+          practiceMode={true}
         />
       ) : (
         <div>

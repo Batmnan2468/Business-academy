@@ -164,7 +164,6 @@ export default function DailyReview({ courseSlug, courseTitle, allTopics }: Prop
         topicSlug={currentTopic.slug}
         courseSlug={courseSlug}
         courseTitle={courseTitle}
-        difficulty="medium"
         onAnswer={handleAnswer}
         nextLabel={isLastTopic ? 'Finish review →' : 'Next topic →'}
         onNext={handleNext}

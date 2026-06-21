@@ -27,12 +27,36 @@ function shuffleOptions(q: Question): Question {
   }
 }
 
+function parseQuestion(text: string): { context: string | null; question: string } {
+  // Rule 1: " -- " or " — " delimiter — context before, question after
+  for (const delim of [' -- ', ' — ']) {
+    const idx = text.indexOf(delim)
+    if (idx !== -1) {
+      return {
+        context: text.slice(0, idx).trim(),
+        question: text.slice(idx + delim.length).trim(),
+      }
+    }
+  }
+  // Rule 2: Last sentence ending in "?" is the question; everything before it is context
+  if (text.includes('?')) {
+    const sentences = text.split(/(?<=[.!?])\s+/)
+    const last = sentences[sentences.length - 1].trim()
+    if (last.endsWith('?') && sentences.length > 1) {
+      return {
+        context: sentences.slice(0, -1).join(' ').trim(),
+        question: last,
+      }
+    }
+  }
+  return { context: null, question: text }
+}
+
 interface Props {
   topicTitle: string
   topicSlug: string
   courseSlug: string
   courseTitle?: string
-  difficulty?: string
   questions?: Question[]
   onAnswer?: (correct: boolean, questionType: string, difficulty: string) => void
   nextLabel?: string
@@ -40,7 +64,7 @@ interface Props {
   hasLearnContent?: boolean
 }
 
-export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, difficulty = 'medium', questions, onAnswer, nextLabel, onNext, hasLearnContent }: Props) {
+export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, courseTitle, questions, onAnswer, nextLabel, onNext, hasLearnContent }: Props) {
   const [question, setQuestion] = useState<Question | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -77,7 +101,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       const res = await fetch('/api/generate-question', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topicTitle, topicSlug, courseSlug, difficulty }),
+        body: JSON.stringify({ topic: topicTitle, topicSlug, courseSlug }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -91,7 +115,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     } finally {
       setLoading(false)
     }
-  }, [topicTitle, topicSlug, courseSlug, difficulty, questions])
+  }, [topicTitle, topicSlug, courseSlug, questions])
 
   useEffect(() => {
     fetchQuestion()
@@ -111,13 +135,13 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       onAnswer?.(
         index === question.correctIndex,
         question.type ?? '',
-        question.difficulty ?? difficulty,
+        question.difficulty ?? '',
       )
     }
 
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [selected, question, loading, difficulty, onAnswer])
+  }, [selected, question, loading, onAnswer])
 
   // Enter or Space advances to next question after answering
   useEffect(() => {
@@ -142,7 +166,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     onAnswer?.(
       index === question.correctIndex,
       question.type ?? '',
-      question.difficulty ?? difficulty,
+      question.difficulty ?? '',
     )
   }
 
@@ -162,7 +186,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
         correctIndex: question.correctIndex,
         explanation: question.explanation,
         type: question.type ?? '',
-        difficulty: question.difficulty ?? difficulty,
+        difficulty: question.difficulty ?? '',
         savedAt: new Date().toISOString(),
       })
       setIsSaved(true)
@@ -217,11 +241,15 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
 
   const answered = selected !== null
   const isCorrect = selected === question.correctIndex
+  const parsed = parseQuestion(question.question)
 
   return (
     <div>
-      <p className="text-lg font-medium mb-6 text-gray-900 dark:text-gray-100">
-        {question.question}
+      {parsed.context && (
+        <p className="text-base text-gray-700 dark:text-gray-300 mb-4">{parsed.context}</p>
+      )}
+      <p className="text-lg font-semibold mb-6 text-gray-900 dark:text-gray-100">
+        {parsed.question}
       </p>
 
       <ul className="space-y-3 mb-2">

@@ -69,11 +69,6 @@ export default async function PracticeTopicPage({ params }: Props) {
 
   const nextTopicHasLearn = nextTopic != null && allTopics[currentIndex + 1].learn != null
 
-  // LearnAndPractice only understands the old LearnContent format.
-  // For V2 learn content, skip the learn pane — it's handled by the /learn route.
-  const legacyLearn =
-    topic.learn && 'explanation' in topic.learn ? topic.learn : undefined
-
   const hasLearnContent =
     topic.learn != null &&
     ('openingQuestion' in topic.learn || 'explanation' in topic.learn)
@@ -81,36 +76,49 @@ export default async function PracticeTopicPage({ params }: Props) {
   const questions = loadQuestions(courseSlug, topicSlug)
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
-      <nav className="flex items-center gap-1.5 text-sm mb-8">
-        <Link href={`/courses/${courseSlug}`} className="text-blue-500 hover:underline">
+    <div className="flex min-h-screen">
+      {/* Sidebar — hidden on mobile */}
+      <aside className="hidden md:flex flex-col w-60 shrink-0 bg-gray-900 border-r border-gray-800 px-6 py-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400">
           {course.title}
-        </Link>
-        <span className="text-gray-400">›</span>
-        <Link href={`/courses/${courseSlug}/practice`} className="text-blue-500 hover:underline">
-          Practice
-        </Link>
-        <span className="text-gray-400">›</span>
-        <span className="text-gray-600 dark:text-gray-300">{topic.title}</span>
-      </nav>
+        </p>
+        <div className="border-t border-gray-800 my-4" />
+        <p className="text-sm text-gray-300">Topic Practice</p>
+      </aside>
 
-      <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-500">
-        {course.subject}
+      {/* Main content */}
+      <div className="flex-1 min-w-0">
+        <main className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
+          <nav className="flex items-center gap-1.5 text-sm mb-8">
+            <Link href={`/courses/${courseSlug}`} className="text-blue-500 hover:underline">
+              {course.title}
+            </Link>
+            <span className="text-gray-400">›</span>
+            <Link href={`/courses/${courseSlug}/practice`} className="text-blue-500 hover:underline">
+              Practice
+            </Link>
+            <span className="text-gray-400">›</span>
+            <span className="text-gray-600 dark:text-gray-300">{topic.title}</span>
+          </nav>
+
+          <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-500">
+            {course.subject}
+          </div>
+          <h1 className="text-2xl font-bold mb-1">{topic.title}</h1>
+          <p className="text-sm text-gray-400 mb-10">Practice question</p>
+
+          <LearnAndPractice
+            topicTitle={topic.title}
+            topicSlug={topicSlug}
+            courseSlug={courseSlug}
+            courseTitle={course.title}
+            nextTopic={nextTopic}
+            hasLearnContent={hasLearnContent}
+            nextTopicHasLearn={nextTopicHasLearn}
+            questions={questions.length > 0 ? questions : undefined}
+          />
+        </main>
       </div>
-      <h1 className="text-2xl font-bold mb-1">{topic.title}</h1>
-      <p className="text-sm text-gray-400 mb-10">Practice question</p>
-
-      <LearnAndPractice
-        topicTitle={topic.title}
-        topicSlug={topicSlug}
-        learn={legacyLearn}
-        courseSlug={courseSlug}
-        courseTitle={course.title}
-        nextTopic={nextTopic}
-        hasLearnContent={hasLearnContent}
-        nextTopicHasLearn={nextTopicHasLearn}
-        questions={questions.length > 0 ? questions : undefined}
-      />
-    </main>
+    </div>
   )
 }

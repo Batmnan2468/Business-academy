@@ -29,6 +29,7 @@ interface Props {
   topics?: TopicItem[]
   totalTopics: number
   hasLearnContent?: boolean
+  practiceMode?: boolean
 }
 
 // ── localStorage loaders ──────────────────────────────────────────────────────
@@ -271,6 +272,7 @@ export default function CourseTopicList({
   topics,
   totalTopics,
   hasLearnContent = false,
+  practiceMode = false,
 }: Props) {
   const [masteryMap, setMasteryMap] = useState<Map<string, TopicMastery>>(new Map())
   const [topicStateMap, setTopicStateMap] = useState<Map<string, TopicState>>(new Map())
@@ -392,7 +394,7 @@ export default function CourseTopicList({
     return (
       <li key={topic.id}>
         <Link
-          href={`/courses/${courseSlug}/${topic.slug}`}
+          href={practiceMode ? `/courses/${courseSlug}/practice/${topic.slug}` : `/courses/${courseSlug}/${topic.slug}`}
           className={`flex items-center gap-4 px-5 py-4 min-h-[48px] rounded-xl border hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors group ${borderClass}`}
         >
           <div className="flex items-center gap-2 shrink-0">
