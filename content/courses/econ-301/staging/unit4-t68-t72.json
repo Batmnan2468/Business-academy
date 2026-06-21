@@ -1,0 +1,264 @@
+[
+  {
+    "id": "t68",
+    "learn": {
+      "openingTension": "A market has 10,000 consumers, each with their own demand curve. You need one aggregate demand curve for the entire market. Do you add the quantities at each price, the prices at each quantity, or something else entirely? The wrong answer here corrupts every market analysis built on top of it.",
+      "coreIdea": "Market demand is the sum of all individual demands at each price level. It aggregates individual consumption decisions into a single demand schedule the market faces. The optimization role of market demand is to represent the collective marginal willingness to pay across all consumers, which determines equilibrium price and welfare in a competitive market.",
+      "mathSetup": "If there are N consumers with individual demand functions x_i(p) for i = 1, ..., N, market demand is X(p) = Σ_{i=1}^N x_i(p). For inverse demand P_i(x) for each consumer, market demand aggregation is done in quantity space (horizontal), not price space. Key: aggregate at fixed price p, sum quantities. For two consumers: X(p) = x_1(p) + x_2(p). Properties: if each x_i(p) is downward-sloping, X(p) is also downward-sloping. If x_i depends on income m_i, then X also depends on the distribution of income.",
+      "derivation": "1. Fix a price p. Each consumer i chooses x_i*(p) independently. Economic reason: consumers are price-takers — they treat p as given. 2. Sum across all consumers: X(p) = Σ x_i*(p). Economic reason: total market purchases equal the sum of individual purchases. 3. Vary p across its full range to trace out the market demand curve. Economic reason: this generates the entire market demand schedule. 4. Market demand inherits slope sign from individual demands: if x_i is decreasing in p for all i, X(p) is decreasing in p. Economic reason: a lower price induces each consumer to buy weakly more.",
+      "graphicalIntuition": "On a graph with price on the vertical axis and quantity on the horizontal axis, draw two individual demand curves D1 and D2. At each price level, draw a horizontal dotted line. Read off x_1 and x_2 where the line hits each demand curve, then mark X = x_1 + x_2 to the right of both. Connecting these summed points traces the market demand curve. The market demand curve lies to the right of both individual curves at every price. When a consumer's choke price (where their demand hits zero) is reached, their demand drops to zero and market demand flattens by that amount.",
+      "workedExample": "Given: Consumer 1: x_1(p) = 10 - p (for p ≤ 10, else 0). Consumer 2: x_2(p) = 20 - 2p (for p ≤ 10, else 0).\nFind: Market demand function X(p).\nSolution: For p ≤ 10: X(p) = (10-p) + (20-2p) = 30 - 3p. For p > 10: both demands are 0, so X = 0. Market demand: X(p) = max(30 - 3p, 0).\nInterpret: At p=$5, X = 30 - 15 = 15 units (x_1=5, x_2=10). At p=$8, X = 30 - 24 = 6 units. Market demand is simply the sum of all individual demands at each price.",
+      "boundaryConditions": "1. Different choke prices: If consumers have different prices at which demand hits zero, market demand has kinks. For p above some consumers' choke prices, those consumers exit the market and market demand is the sum of only remaining active consumers. 2. Income distribution effects: Market demand X(p) = Σ x_i(p, m_i) depends on the distribution of incomes {m_i}, not just total income. Redistributing income between consumers changes market demand even if total income is unchanged. 3. Corner solutions: If some consumers are at corner solutions (buy 0), they don't contribute to X(p). Market demand changes slope when consumers enter or exit the market.",
+      "examTraps": [
+        "A student might think market demand is the average of individual demands, but the correct answer is that it is the horizontal sum (sum of quantities at each price), not an average — with N identical consumers each buying x*(p), market demand is N·x*(p).",
+        "A student might think you add individual inverse demand curves to get market inverse demand, but the correct answer is that you must first convert to direct demand (quantity as a function of price), sum quantities, and then invert if needed — adding inverse demands gives the wrong answer.",
+        "A student might think market demand curve shape is the same as individual demand curves, but the correct answer is that the market demand curve has kinks at prices where individual consumers stop buying (their choke prices), creating discontinuities in the slope."
+      ],
+      "frq": {
+        "prompt": "There are two groups of consumers in a market. Group A has 100 identical consumers, each with demand x_A(p) = 8 - p (for p ≤ 8). Group B has 50 identical consumers, each with demand x_B(p) = 12 - 2p (for p ≤ 6).",
+        "parts": [
+          "Derive the market demand function for p ≤ 6, for 6 < p ≤ 8, and for p > 8. Explain why the function has kinks.",
+          "At price p = $4, calculate total quantity demanded. Verify by summing group demands.",
+          "Sketch the market demand curve, marking the kink points and the choke prices for each group.",
+          "If income in Group B doubles, explain qualitatively how market demand changes and whether the market demand curve shifts or rotates. Would the answer differ if the good were inferior for Group B?"
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "How is market demand derived from individual demands?",
+        "back": "Market demand X(p) = Σ_{i=1}^N x_i(p) — the horizontal sum of individual demand curves at each price. Fix price p, sum each consumer's quantity demanded, plot the total. This is done in quantity (horizontal) space, not price (vertical) space. With N identical consumers each demanding x*(p): X(p) = N·x*(p).",
+        "type": "definition"
+      },
+      {
+        "front": "Why does market demand have kinks when consumers have different choke prices?",
+        "back": "A consumer's choke price is the price at which their quantity demanded falls to zero. When price rises above a consumer's choke price, they exit the market, and market demand loses that consumer's contribution. At that price, the slope of the market demand curve becomes less steep (smaller in absolute value) because fewer consumers remain active. Each kink corresponds to one consumer group exiting.",
+        "type": "graph"
+      },
+      {
+        "front": "Can you add inverse demand curves to get market inverse demand?",
+        "back": "No. You must add demand curves in quantity (horizontal) space, not price (vertical) space. Convert inverse demands P_i(x) to direct demands x_i(p), sum: X(p) = Σ x_i(p), then invert if needed: P(X). Adding P_i(x) directly gives wrong answers because price is held fixed during horizontal aggregation, not quantity.",
+        "type": "distinction"
+      },
+      {
+        "front": "How does income distribution affect market demand?",
+        "back": "Market demand X(p) = Σ x_i(p, m_i) depends on each consumer's income m_i separately. Redistributing income between consumers changes X(p) even if aggregate income Σm_i is unchanged, because individual demands have different income slopes. Only if all consumers have identical income elasticities does redistribution not affect market demand.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t69",
+    "learn": {
+      "openingTension": "A teacher tells you to 'add up the demand curves.' A student adds the prices at each quantity. Another adds the quantities at each price. Only one is right. The seemingly minor difference in technique produces demand functions that are completely wrong for any policy or pricing calculation.",
+      "coreIdea": "Horizontal aggregation is the correct method for summing individual demand curves into market demand: at each price level, sum the quantities demanded across all consumers. The 'horizontal' refers to summing in the quantity dimension (horizontal axis), holding price fixed. Horizontal aggregation is the direct implementation of the definition of market demand — it sums all individual optimization outcomes at a common price.",
+      "mathSetup": "Given N consumers with demand functions x_1(p), x_2(p), ..., x_N(p): Market demand X(p) = x_1(p) + x_2(p) + ... + x_N(p). Algorithm: (1) Express each demand as function of p (not P as function of x). (2) Add the right-hand sides. (3) Check domain (price ranges where each consumer is active). In contrast, vertical aggregation (used for public goods) sums marginal WTP at each quantity — this is NOT the right method for private goods.",
+      "derivation": "1. Convert any inverse demands P_i(x_i) to direct demands: solve for x_i as a function of p. Economic reason: aggregation is in quantity space — need x_i = f(p). 2. Add the quantity functions: X(p) = Σ x_i(p). Economic reason: total market quantity at price p is the sum of what each consumer independently buys. 3. Check domain: consumer i is active only when p ≤ p_i^max (their choke price). For p above p_i^max, set x_i(p) = 0 and exclude from sum. 4. The resulting X(p) is a piecewise function with kinks at each consumer's choke price. Invert if needed: solve X(p) = Q for P(Q) to get market inverse demand.",
+      "graphicalIntuition": "On a graph with individual demand curves plotted, horizontal aggregation works as follows: draw a horizontal line at any price p. Measure the horizontal distance from the price axis to where the line intersects each demand curve. Add all these horizontal distances. The sum is a single point on the market demand curve at price p. Repeat for all prices. The market demand curve is traced by connecting all such summed-distance points. This is why it is called 'horizontal' — you are summing horizontal lengths (quantities), not vertical heights (prices).",
+      "workedExample": "Given: Two consumers. Consumer 1 inverse demand: P = 12 - x_1. Consumer 2 inverse demand: P = 8 - 2x_2.\nFind: Market demand function X(p).\nSolution: Step 1 — convert to direct demand. x_1 = 12 - p (for p ≤ 12). x_2 = (8-p)/2 = 4 - p/2 (for p ≤ 8). Step 2 — add. For p ≤ 8: X(p) = (12-p) + (4-p/2) = 16 - 3p/2. For 8 < p ≤ 12: X(p) = 12 - p (only consumer 1 active). Step 3 — invert market demand. For X ≤ 4: P = (16 - X)·(2/3) = (32-2X)/3. For X > 4: P = 12 - X.\nInterpret: Market demand has a kink at p=8 where consumer 2 exits.",
+      "boundaryConditions": "1. Public goods exception: For public goods, use vertical aggregation — sum the marginal WTPs (inverse demands) at each quantity because all consumers consume the same quantity simultaneously. Private good: horizontal sum. Public good: vertical sum. 2. Identical consumers: If all N consumers are identical with demand x*(p), market demand is simply X(p) = N·x*(p) — no need to add individually. 3. Non-negativity: Always impose x_i(p) ≥ 0. A consumer with a negative demand (implied by a linear formula at high prices) must be censored at 0 — they simply exit the market.",
+      "examTraps": [
+        "A student might think vertical aggregation (adding P_i(x)) works for private goods, but the correct answer is that horizontal aggregation (adding x_i(p)) is correct for private goods; vertical aggregation is used for public goods where all consumers share the same quantity.",
+        "A student might think the market demand slope equals the average of individual demand slopes, but the correct answer is that the market demand slope is the sum of individual quantity responses: dX/dp = Σ(dx_i/dp), which equals N times the individual slope only if all consumers are identical.",
+        "A student might think market demand is the same function for all price ranges, but the correct answer is that market demand is piecewise linear (for linear individual demands) with slope changes at each consumer's choke price."
+      ],
+      "frq": {
+        "prompt": "Three consumers have the following demand functions: Consumer A: x_A = 20 - 2p (for p ≤ 10); Consumer B: x_B = 15 - 3p (for p ≤ 5); Consumer C: x_C = 10 - p (for p ≤ 10).",
+        "parts": [
+          "Derive market demand X(p) for each price range. Identify all kink points.",
+          "At p = $3, calculate X using the market demand function. Verify by summing individual demands.",
+          "Invert the market demand function for the range p ≤ 5 to get the market inverse demand P(X).",
+          "Explain why horizontal (not vertical) aggregation is the correct method for private goods. Describe the scenario where vertical aggregation would be appropriate and why the logic differs."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is horizontal aggregation and why is it used for private goods?",
+        "back": "Horizontal aggregation sums the quantities demanded by all consumers at each fixed price: X(p) = Σ x_i(p). 'Horizontal' because quantities lie on the horizontal axis — you add horizontal distances at each price level. Used for private goods because each unit is consumed by exactly one consumer — at any price, market quantity is the total across all independent buyers.",
+        "type": "definition"
+      },
+      {
+        "front": "Algorithm: How to derive market demand by horizontal aggregation.",
+        "back": "Step 1: Express each consumer's demand as x_i(p) — quantity as function of price (solve inverse demand for x if needed). Step 2: Identify each consumer's choke price (where x_i = 0). Step 3: For each price range, sum only the active consumers' demands: X(p) = Σ_{active i} x_i(p). Step 4: Result is a piecewise function with kinks at choke prices. Invert to get P(X) if needed.",
+        "type": "definition"
+      },
+      {
+        "front": "Horizontal vs. vertical aggregation: when to use each.",
+        "back": "Horizontal aggregation (add quantities at each price): use for private goods where each unit goes to exactly one consumer. Vertical aggregation (add marginal WTPs at each quantity): use for public goods where all consumers simultaneously consume the same quantity. Private good market demand: X(p) = Σ x_i(p). Public good social demand: P(Q) = Σ P_i(Q).",
+        "type": "distinction"
+      },
+      {
+        "front": "What causes kinks in the market demand curve when using horizontal aggregation?",
+        "back": "Kinks occur at prices equal to a consumer's choke price — the price where that consumer's quantity demanded hits zero. Above their choke price, they exit the market and contribute 0. Market demand slope (dX/dp) becomes less negative (flatter in absolute value) because fewer consumers remain active above the kink. Each consumer group exiting creates one kink.",
+        "type": "graph"
+      }
+    ]
+  },
+  {
+    "id": "t70",
+    "learn": {
+      "openingTension": "Economists write demand two ways: Q as a function of P, or P as a function of Q. These look like the same equation rearranged — and they are. But they answer different questions and arise from different economic setups. Confusing them is one of the most common errors in intermediate micro.",
+      "coreIdea": "Direct demand x(p) gives quantity as a function of price — it answers 'how much does the consumer buy at this price?' Inverse demand P(x) gives price as a function of quantity — it answers 'what price would induce the consumer to buy exactly this quantity?' Inverse demand equals marginal willingness to pay and plays the central role in welfare calculations, surplus measurement, and monopoly pricing.",
+      "mathSetup": "Direct demand: x* = x(p, m) — solves the consumer's utility maximization problem for quantity given price p. Inverse demand: P(x) — the price at which exactly x units are demanded (the function inverse of x(p) with respect to p). Relationship: if x = a - bp, then inverting: p = (a-x)/b = a/b - x/b, so P(x) = a/b - x/b. Key property: P(x) = MU_x / MU_m (marginal rate of substitution between x and money) — the MRS equals price at the optimum, so inverse demand equals MRS at each quantity.",
+      "derivation": "1. Start from direct demand x*(p, m): this is the solution to the consumer's UMP, giving optimal quantity at each price. Economic reason: UMP gives quantity as the outcome. 2. Invert: hold income m fixed, solve x = x*(p, m) for p as a function of x. This yields p = P(x, m) = inverse demand. Economic reason: inverting answers 'what price clears to exactly x?' 3. Economic content of P(x): at the optimum, consumer sets MU_x/MU_m = p. So P(x) = MU_x/MU_m = marginal WTP in dollar terms. 4. Therefore: inverse demand is the marginal WTP schedule. Consumer surplus = ∫[P(x) - p*]dx uses inverse demand because P(x) is the value of each marginal unit.",
+      "graphicalIntuition": "On a standard supply-and-demand graph, the demand curve plotted as P on the vertical axis and Q on the horizontal axis IS the inverse demand function P(Q). When economists 'read off the demand curve,' they are reading the inverse demand: at quantity Q, the height of the demand curve is P(Q) = the marginal WTP. Direct demand x(p) is the same curve but with axes switched in interpretation — you enter with a price and read off quantity horizontally. Consumer surplus calculations integrate the inverse demand curve.",
+      "workedExample": "Given: A consumer's direct demand is x(p) = 100/p (derived from utility maximization with quasilinear preferences).\nFind: Inverse demand and interpret it economically.\nSolution: Start with x = 100/p. Solve for p: p = 100/x. So P(x) = 100/x is the inverse demand.\nAt x=5: P(5) = $20 — the consumer's marginal WTP for the 5th unit is $20. At x=10: P(10) = $10. Consumer surplus at p*=$10: x* = 10. CS = ∫₁^{10} (100/x)dx - 10·10 — note: lower bound at x=1 (not 0) since demand is not finite at x=0.\nInterpret: Inverse demand tells us the dollar value of each marginal unit. The demand curve 'read vertically' is the marginal value schedule.",
+      "boundaryConditions": "1. Non-invertibility: If the direct demand function is not monotone in p (which can occur for Giffen goods over some range), the inverse demand is not a single-valued function. Treat as a correspondence rather than a function. 2. Choke price: Inverse demand evaluated at x=0 gives the choke price — the price at which demand just equals zero. If the direct demand has a finite quantity at p=0, the choke price is well-defined. If demand goes to infinity as p→0 (like x=1/p), the inverse demand has no choke price. 3. Multiple consumers: Market inverse demand P(X) is the inverse of market demand X(p) — invert after aggregating, not before.",
+      "examTraps": [
+        "A student might think direct demand and inverse demand are the same equation, but the correct answer is they are inverses of each other: direct demand gives x*(p) (quantity as function of price), while inverse demand gives P*(x) (price as function of quantity) — same relationship, different question answered.",
+        "A student might think the supply-demand diagram plots direct demand, but the correct answer is that the standard diagram with P on the vertical axis and Q on the horizontal axis plots inverse demand P(Q) — the marginal WTP at each quantity.",
+        "A student might think you can add inverse demand curves directly to get market inverse demand, but the correct answer is that you must first horizontally aggregate direct demands X(p) = Σx_i(p), then invert the result to get market inverse demand P(X)."
+      ],
+      "frq": {
+        "prompt": "Consumer 1 has direct demand x_1(p) = 60 - 3p. Consumer 2 has direct demand x_2(p) = 40 - 2p (for p ≤ 20).",
+        "parts": [
+          "Derive the inverse demand for Consumer 1 alone. State what P_1(x) represents economically.",
+          "Derive the market demand X(p) by horizontal aggregation. Specify all price ranges.",
+          "Invert the market demand to get market inverse demand P(X). Specify all quantity ranges.",
+          "At quantity X = 50, use the inverse demand to state the market-clearing price and explain what this price represents in terms of consumers' willingness to pay."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Distinguish direct demand x(p) from inverse demand P(x).",
+        "back": "Direct demand x(p): quantity as a function of price — answers 'how much is bought at price p?' Inverse demand P(x): price as a function of quantity — answers 'what price clears quantity x?' They are mathematical inverses of each other. The standard supply-demand diagram plots inverse demand with P on the vertical axis. P(x) = marginal WTP at quantity x.",
+        "type": "distinction"
+      },
+      {
+        "front": "What does the inverse demand P(x) represent economically?",
+        "back": "P(x) equals the consumer's marginal willingness to pay for the xth unit — which equals MU_x/MU_m at the optimum (the MRS between the good and money). At any quantity x, the height of the demand curve gives the dollar value of one more unit of the good. Consumer surplus = ∫₀^{x*} P(x)dx - p·x* uses inverse demand because each P(x) is the marginal value of unit x.",
+        "type": "definition"
+      },
+      {
+        "front": "How do you derive inverse demand from direct demand? Give the algorithm.",
+        "back": "Step 1: Write direct demand as x = f(p). Step 2: Solve algebraically for p as a function of x. The result P(x) is inverse demand. Example: x = a - bp → solve for p: p = (a-x)/b → P(x) = a/b - x/b. Check: P(x) = a/b at x=0 (choke price) and P(x) = 0 at x=a (max quantity). Invert market demand only after horizontal aggregation.",
+        "type": "definition"
+      },
+      {
+        "front": "Choke price: definition and how to find it from inverse demand.",
+        "back": "The choke price is the price at which quantity demanded = 0. Find it by evaluating P(0) from the inverse demand function, or equivalently, the price intercept of the demand curve. For linear demand x = a - bp: choke price = a/b (set x=0, solve for p). Economic meaning: above the choke price, no consumer in the market finds the good worth buying.",
+        "type": "definition"
+      },
+      {
+        "front": "Why can't you add inverse demands to get market inverse demand?",
+        "back": "Market demand is defined by horizontal aggregation: X(p) = Σ x_i(p). To get market inverse demand, first aggregate horizontally, then invert: solve X(p) = Q for P(Q). Adding inverse demands Σ P_i(x) gives the vertical sum — this is the social marginal WTP schedule for a public good, not market demand for private goods.",
+        "type": "distinction"
+      }
+    ]
+  },
+  {
+    "id": "t71",
+    "learn": {
+      "openingTension": "A luxury car brand raises prices by 10%. Sales drop by 30%. A utility company raises electricity prices by 10%. Sales drop by 2%. Both face downward-sloping demand, but their optimal pricing strategies are completely different. What single number captures the difference, and why does it determine everything from revenue to tax policy?",
+      "coreIdea": "Own-price elasticity of demand (ε) measures the percentage change in quantity demanded per one percent change in price. It answers: how sensitive are consumers to price? Elasticity plays the central optimization role in pricing — a monopolist should only price in the elastic region, and the welfare cost of taxation depends critically on how elastic demand is.",
+      "mathSetup": "ε = (dQ/dp) · (p/Q) = (% change in Q) / (% change in p). For inverse demand P(Q): ε = 1/[dP/dQ · Q/P] = P / [Q · dP/dQ]. Classification: |ε| > 1: elastic (quantity very responsive to price). |ε| < 1: inelastic (quantity not very responsive). |ε| = 1: unit elastic. |ε| = 0: perfectly inelastic. |ε| = ∞: perfectly elastic. For linear demand Q = a - bp: ε = -b·(p/Q) = -bp/(a-bp). Note: ε varies along a linear demand curve — not constant.",
+      "derivation": "1. Start with demand Q = x(p). The elasticity captures how much Q changes proportionally when p changes proportionally. Economic reason: use percentage changes because they are unit-free — comparable across goods and markets. 2. ε = (dQ/dp)·(p/Q). The first term dQ/dp is the slope of demand; the second term p/Q scales by the price-quantity ratio. Economic reason: the same slope means different elasticities at different points on the curve. 3. For linear demand Q = a - bp: dQ/dp = -b. So ε = -b·(p/Q) = -bp/(a-bp). At the midpoint: ε = -1. At high prices (near choke price): |ε| > 1 (elastic). At low prices: |ε| < 1 (inelastic). 4. For constant-elasticity demand Q = A·p^ε: dQ/dp = A·ε·p^(ε-1). Elasticity = ε everywhere — constant.",
+      "graphicalIntuition": "On a graph with a linear demand curve, the elasticity is not constant. At the choke price (top of the demand curve), elasticity is -∞ (perfectly elastic). At the midpoint of the demand curve, elasticity equals -1 (unit elastic). At the quantity axis intercept (price = 0), elasticity = 0 (perfectly inelastic). The upper half of a linear demand curve is elastic; the lower half is inelastic. Revenue (P·Q) is maximized at the midpoint where ε = -1.",
+      "workedExample": "Given: Demand Q = 100 - 2P. Price P = $20.\nFind: Own-price elasticity at P = $20.\nSolution: dQ/dP = -2. At P = $20: Q = 100 - 40 = 60. ε = (dQ/dP)·(P/Q) = (-2)·(20/60) = -40/60 = -2/3 ≈ -0.67.\nInterpret: |ε| = 0.67 < 1 — demand is inelastic at this price. A 10% price increase reduces quantity by only 6.7%. The firm is in the inelastic region — raising price increases revenue (since quantity falls proportionally less than price rises).",
+      "boundaryConditions": "1. Perfectly inelastic demand (ε = 0): Quantity does not respond to price at all (vertical demand curve). Examples: insulin for diabetics, life-saving drugs. Entire tax burden falls on consumers. No deadweight loss from a per-unit tax. 2. Perfectly elastic demand (ε = -∞): Demand is a horizontal line at the competitive price. A price-taker firm faces this. Any price above the market price loses all customers. Tax burden falls entirely on producers. 3. Constant elasticity demand Q = Ap^ε: Elasticity is the same at every point on the curve — requires log-linear specification. Real-world demand is rarely constant-elasticity except as an empirical approximation.",
+      "examTraps": [
+        "A student might think elasticity equals the slope of the demand curve, but the correct answer is that elasticity = slope × (p/Q) — it multiplies the slope by the price-quantity ratio, which varies along the curve. Two demand curves with the same slope can have very different elasticities at a given price.",
+        "A student might think a steeper demand curve is always more inelastic, but the correct answer is that this is only true when comparing curves at the same price-quantity point — at different points along the same curve, elasticity varies despite the slope being constant.",
+        "A student might think elasticity is constant along a linear demand curve, but the correct answer is that it varies from -∞ at the choke price to 0 at the quantity intercept — only for log-linear demand (Q = Ap^ε) is elasticity constant.",
+        "A student might think a negative elasticity means demand is falling, but the correct answer is that own-price elasticity is negative for downward-sloping demand by definition — the sign tells us direction (negative = demand slopes down) while the magnitude tells us responsiveness."
+      ],
+      "frq": {
+        "prompt": "A market has demand Q = 240 - 4P.",
+        "parts": [
+          "Derive the own-price elasticity of demand as a function of P. Identify the price at which ε = -1.",
+          "At price P = $30, is demand elastic or inelastic? What happens to total revenue if price rises by 5% from this point?",
+          "A consumer advocacy group argues that a 20% price increase will reduce quantity demanded by 20%. Evaluate this claim using the elasticity you computed at P = $30.",
+          "Explain in words why a monopolist would never choose to produce in the inelastic region of its demand curve, connecting to the relationship between elasticity and marginal revenue."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Formula: Own-price elasticity of demand.",
+        "back": "ε = (dQ/dP) · (P/Q) = (% ΔQ) / (% ΔP). Always negative for downward-sloping demand. For linear demand Q = a - bP: ε = -b·(P/Q). Ranges from ε = -∞ at choke price to ε = 0 at P = 0. Key: elasticity ≠ slope. Same slope gives different elasticities at different price-quantity points along the curve.",
+        "type": "formula"
+      },
+      {
+        "front": "Classifications: elastic, unit elastic, inelastic, perfectly inelastic, perfectly elastic.",
+        "back": "|ε| > 1: elastic — quantity % change exceeds price % change. |ε| = 1: unit elastic — revenue maximizing point. |ε| < 1: inelastic — quantity % change less than price % change. |ε| = 0: perfectly inelastic — vertical demand, no quantity response. |ε| = ∞: perfectly elastic — horizontal demand, firm is price taker. Connect to revenue: TR rises when price rises iff demand is inelastic.",
+        "type": "definition"
+      },
+      {
+        "front": "Where on a linear demand curve is demand elastic, unit elastic, and inelastic?",
+        "back": "For linear demand: upper half (high prices, low quantities): elastic (|ε| > 1). Midpoint: unit elastic (|ε| = 1) — here P = a/(2b), Q = a/2, and revenue is maximized. Lower half (low prices, high quantities): inelastic (|ε| < 1). The choke price gives |ε| = ∞; P = 0 gives ε = 0. Connect to monopoly pricing: monopolist always chooses a point in the elastic region.",
+        "type": "graph"
+      },
+      {
+        "front": "Why does elasticity differ from slope?",
+        "back": "Slope = dQ/dP (absolute change in Q per unit change in P). Elasticity = (dQ/dP)·(P/Q) = slope scaled by the price-quantity ratio P/Q. Because P/Q varies along the demand curve even when slope is constant, elasticity changes along a linear demand curve despite constant slope. Two parallel demand curves have the same slope but different elasticities at any given price because they have different quantities (different P/Q ratios).",
+        "type": "distinction"
+      },
+      {
+        "front": "Constant-elasticity demand: form and property.",
+        "back": "Q = A·P^ε where ε < 0 is the constant price elasticity. Taking logs: ln Q = ln A + ε·ln P — log-linear form. Elasticity = ε at every point on the curve. Used in empirical work because it gives constant percentage responses. Contrast with linear demand where elasticity varies from -∞ to 0 along the curve. Revenue = P·Q = A·P^(1+ε) — rises with price iff 1+ε > 0, i.e., |ε| < 1.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the relationship between own-price elasticity and total revenue?",
+        "back": "TR = P·Q. dTR/dP = Q + P·(dQ/dP) = Q(1 + ε). If |ε| > 1 (elastic): dTR/dP < 0 — price increase reduces revenue. If |ε| < 1 (inelastic): dTR/dP > 0 — price increase raises revenue. Revenue is maximized at |ε| = 1. This is why a monopolist never prices in the inelastic region: marginal revenue is negative there, so cutting quantity (raising price) always increases revenue.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t72",
+    "learn": {
+      "openingTension": "Economists classify goods as 'normal' or 'inferior' — but these are not moral judgments. When your income doubles, do you buy more ramen or less? Your answer reveals whether ramen is a necessity, a luxury, or an inferior good for you personally — and this single classification determines how income redistribution and economic growth affect market demand.",
+      "coreIdea": "Income elasticity of demand (η) measures the percentage change in quantity demanded per one percent change in income. It determines whether a good is normal (η > 0, bought more when income rises), inferior (η < 0, bought less when income rises), or a luxury (η > 1, consumed proportionally more as income rises). Income elasticity plays the central role in Engel curve analysis and income offer curve analysis.",
+      "mathSetup": "η = (dQ/dm) · (m/Q) = (% ΔQ) / (% Δm). Classification: η > 1: luxury good (income elastic). 0 < η < 1: necessity (income inelastic but normal). η = 0: income-independent demand. η < 0: inferior good. Engel curve: Q as function of m at fixed prices. For homothetic preferences, η = 1 for all goods (demand scales proportionally with income). Budget share s_i = p_i·x_i/m: Σ s_i = 1, so Σ s_i·η_i = 1 (budget share weighted average of income elasticities = 1, Engel aggregation).",
+      "derivation": "1. From the demand function Q*(p, m), differentiate with respect to m: ∂Q/∂m is the slope of the Engel curve. Economic reason: this is how quantity responds to income changes. 2. Scale by m/Q to get percentage terms: η = (∂Q/∂m)·(m/Q). Economic reason: percentage changes are unit-free and comparable. 3. Sign of η determines good type: ∂Q/∂m > 0 (normal) or < 0 (inferior). Magnitude > 1 means luxury. 4. Engel aggregation constraint: the budget-share-weighted sum of income elasticities must equal 1. Economic reason: if income rises by 1%, total spending must rise by 1% (spending must exhaust income), so weighted average income elasticity = 1.",
+      "graphicalIntuition": "On a graph with income m on the horizontal axis and quantity Q on the vertical axis, the Engel curve shows Q*(m) at fixed prices. Normal good: Engel curve slopes upward (dQ/dm > 0). Luxury good: Engel curve is convex upward (slopes up, accelerating). Necessity: Engel curve slopes up but flattens (decelerating). Inferior good: Engel curve eventually slopes backward (dQ/dm < 0). For homothetic utility (Cobb-Douglas), the Engel curve is a straight line through the origin — η = 1 for every good.",
+      "workedExample": "Given: Demand for a good is Q = 0.02·m - 3P. Income m = $1000, price P = $5. Find income elasticity.\nSolution: dQ/dm = 0.02. At m=$1000, P=$5: Q = 0.02(1000) - 3(5) = 20 - 15 = 5. η = (dQ/dm)·(m/Q) = 0.02·(1000/5) = 0.02·200 = 4.\nInterpret: η = 4 > 1 — this is a luxury good. A 10% income increase raises quantity demanded by 40%. The good's budget share rises as income rises. Examples: designer goods, vacations, fine dining.",
+      "boundaryConditions": "1. Inferior goods have η < 0: As income rises, consumers substitute away from the inferior good toward higher-quality substitutes. Example: generic store-brand food, Greyhound bus tickets. Note: a good cannot be inferior at all income levels — at some low income it must be normal. 2. Giffen goods are inferior goods with a perverse price effect — do not confuse. Giffen requires η < 0 AND a large income effect — but not all inferior goods are Giffen. 3. Engel aggregation: Σ(budget share × income elasticity) = 1. This means not all goods in a budget can be luxuries (all η > 1) simultaneously.",
+      "examTraps": [
+        "A student might think 'inferior good' means the good is low quality, but the correct answer is that inferiority is defined behaviorally — a good is inferior if the consumer buys less of it as income rises, regardless of quality.",
+        "A student might think income elasticity equals income responsiveness in absolute terms, but the correct answer is that η is a percentage measure — it normalizes by m/Q so that goods with different units can be compared; a high dQ/dm does not imply high η if Q is large.",
+        "A student might think all goods must have η > 0 (be normal), but the correct answer is that inferior goods (η < 0) are well-documented empirically — they exist whenever consumers shift to higher-quality substitutes as income rises.",
+        "A student might think income elasticity is constant along the demand curve, but the correct answer is that it varies as income changes — a good can be a luxury at low incomes and a necessity at high incomes as the consumer's consumption pattern evolves."
+      ],
+      "frq": {
+        "prompt": "A consumer's demand for bus rides is Q_bus = 50 - 0.01·m + 2·P_taxi - 3·P_bus, where m is income, P_taxi is the price of a taxi, and P_bus is the price of a bus ride. Current values: m = $2000, P_taxi = $15, P_bus = $3.",
+        "parts": [
+          "Calculate quantity of bus rides demanded at current values.",
+          "Compute the income elasticity of demand for bus rides. Classify the good.",
+          "What does the income elasticity tell a transit authority about how bus ridership will change as the city's average income grows over time?",
+          "Explain in words why bus rides might be an inferior good for higher-income consumers but a normal good for very low-income consumers. What does this imply for the shape of the Engel curve?"
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Formula: Income elasticity of demand.",
+        "back": "η = (dQ/dm) · (m/Q) = (% ΔQ) / (% Δm). Computed from the demand function Q(p, m) by differentiating with respect to m and scaling. Normal good: η > 0. Luxury: η > 1. Necessity: 0 < η < 1. Inferior good: η < 0. Neutral: η = 0. Engel aggregation: Σ (budget share × η_i) = 1 across all goods.",
+        "type": "formula"
+      },
+      {
+        "front": "Define: normal good, luxury good, necessity, inferior good (using income elasticity).",
+        "back": "Normal good: η > 0 (buy more when income rises). Luxury: η > 1 (budget share rises with income). Necessity: 0 < η < 1 (buy more but budget share falls as income rises). Inferior good: η < 0 (buy less when income rises — substituting toward better goods). Connect to Engel curve: slope = dQ/dm, which is positive for normal, negative for inferior goods.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the Engel curve and what does its slope tell us?",
+        "back": "The Engel curve plots Q (vertical) against income m (horizontal) at fixed prices. Slope = dQ/dm. Positive slope: normal good. Negative slope: inferior good. Linear through origin: homothetic preferences (η = 1). Convex (accelerating upward): luxury good. Concave (decelerating): necessity. Backward-bending: good transitions from normal to inferior as income rises.",
+        "type": "graph"
+      },
+      {
+        "front": "Engel aggregation: state the constraint and its economic meaning.",
+        "back": "Σ_{i} (s_i · η_i) = 1, where s_i = p_i·x_i/m is the budget share of good i and η_i is its income elasticity. Economic meaning: if income rises by 1%, total spending must also rise by 1% (budget exhaustion). Therefore the budget-share-weighted average of all income elasticities must equal 1. Implication: not all goods can be luxuries (η > 1) simultaneously.",
+        "type": "formula"
+      },
+      {
+        "front": "For homothetic preferences, what is the income elasticity of every good?",
+        "back": "η = 1 for all goods with homothetic preferences. This means all goods are neither luxuries nor necessities — demand for each good scales proportionally with income. Geometrically: Engel curves are straight lines through the origin. Income offer curves are straight lines from the origin in the commodity space. Cobb-Douglas utility is homothetic and delivers η = 1 for all goods.",
+        "type": "condition"
+      }
+    ]
+  }
+]

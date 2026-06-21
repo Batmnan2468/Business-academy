@@ -1,0 +1,268 @@
+[
+  {
+    "id": "t73",
+    "learn": {
+      "openingTension": "Coke and Pepsi are rivals — but are butter and margarine rivals in the same way as Coke and Pepsi? And how do we measure whether two goods compete at all, versus whether they complement each other? Cross-price elasticity gives a single number that answers these questions and determines how a price change in one market ripples through another.",
+      "coreIdea": "Cross-price elasticity of demand (ε_{xy}) measures the percentage change in quantity demanded of good x when the price of good y changes by one percent. It identifies whether goods are substitutes (ε_{xy} > 0), complements (ε_{xy} < 0), or independent (ε_{xy} = 0). Cross-price elasticity plays the role of measuring demand interdependence across markets, which shapes monopoly pricing of related products and antitrust market definition.",
+      "mathSetup": "ε_{xy} = (∂Q_x/∂P_y) · (P_y/Q_x) = (% ΔQ_x) / (% ΔP_y). From the demand function Q_x(P_x, P_y, m): ε_{xy} = (∂Q_x/∂P_y) · (P_y/Q_x). Sign interpretation: ε_{xy} > 0: substitutes (higher P_y raises Q_x, as consumers switch from y to x). ε_{xy} < 0: complements (higher P_y reduces Q_x, as consumers buy less y and therefore less x). ε_{xy} = 0: independent goods. Symmetry: ε_{xy} ≠ ε_{yx} in general — the cross-price effect of x on y may differ from y on x.",
+      "derivation": "1. From demand Q_x(P_x, P_y, m), differentiate with respect to P_y: ∂Q_x/∂P_y captures how quantity of x changes when price of y changes. Economic reason: the cross-price effect reflects the substitution or complementarity between the two goods. 2. Scale by P_y/Q_x to get percentage: ε_{xy} = (∂Q_x/∂P_y)·(P_y/Q_x). Economic reason: unit-free measure, comparable across goods. 3. Substitutes (ε_{xy} > 0): when P_y rises, consumers find y more expensive and switch to x — Q_x rises. Classic examples: Coke/Pepsi, butter/margarine, bus/taxi. 4. Complements (ε_{xy} < 0): when P_y rises, consumers buy less y, and since x is used together with y, they also buy less x. Classic examples: cars/gasoline, printers/ink, smartphones/apps.",
+      "graphicalIntuition": "On a graph showing two demand curves (for x at two different P_y levels), the cross-price effect is visible as a demand shift. If x and y are substitutes: raising P_y shifts the demand curve for x rightward (outward) — at every price of x, more x is demanded. If x and y are complements: raising P_y shifts the demand curve for x leftward (inward). The cross-price elasticity measures how much and in which direction the demand curve for x shifts when P_y changes.",
+      "workedExample": "Given: Demand for good A: Q_A = 100 - 3P_A + 2P_B - 0.5P_C. Current prices: P_A=$10, P_B=$5, P_C=$20. Find cross-price elasticities with goods B and C.\nSolution: Q_A at current prices = 100 - 30 + 10 - 10 = 70. ε_{AB} = (∂Q_A/∂P_B)·(P_B/Q_A) = 2·(5/70) = 10/70 ≈ +0.14. ε_{AC} = (∂Q_A/∂P_C)·(P_C/Q_A) = (-0.5)·(20/70) = -10/70 ≈ -0.14.\nInterpret: A and B are substitutes (ε_{AB} = +0.14): a 10% rise in P_B increases Q_A by 1.4%. A and C are complements (ε_{AC} = -0.14): a 10% rise in P_C decreases Q_A by 1.4%. The small magnitudes suggest weak substitutability and complementarity.",
+      "boundaryConditions": "1. Symmetric Hicksian (compensated) cross-price effects: For compensated demand (Slutsky), ∂h_x/∂P_y = ∂h_y/∂P_x — symmetry holds. For Marshallian (uncompensated) demand, ε_{xy} ≠ ε_{yx} in general due to income effects. 2. Antitrust application: Cross-price elasticity is used to define relevant markets. If ε_{xy} is large and positive, x and y are in the same antitrust market — they constrain each other's pricing. A low ε_{xy} suggests the products are in separate markets. 3. Asymmetric market power: ε_{xy} may be large (substitutes) but ε_{yx} small if the markets have very different sizes — small markets are more affected by large-market price changes.",
+      "examTraps": [
+        "A student might think substitutes always have high cross-price elasticity, but the correct answer is that the magnitude depends on closeness of substitution — Coke and Pepsi have high ε_{xy} while coffee and tea have lower ε_{xy} even though both pairs are substitutes.",
+        "A student might think ε_{xy} = ε_{yx} (symmetry), but the correct answer is that Marshallian cross-price elasticities are not symmetric in general — only Hicksian (compensated) cross-effects are symmetric due to Slutsky symmetry.",
+        "A student might think a zero cross-price elasticity means the goods are unrelated economically, but the correct answer is that ε_{xy} = 0 only at the specific price-quantity point evaluated — it may be nonzero at other points along the demand function."
+      ],
+      "frq": {
+        "prompt": "A firm produces both smartphones (S) and tablet computers (T). Demand for smartphones: Q_S = 200 - 5P_S + 3P_T - 0.02m. Demand for tablets: Q_T = 150 - 4P_T + 2P_S - 0.01m. Current values: P_S=$100, P_T=$300, m=$50,000.",
+        "parts": [
+          "Calculate Q_S and Q_T at current prices and income.",
+          "Compute ε_{ST} (cross-price elasticity of smartphone demand with respect to tablet price) and ε_{TS} (cross-price elasticity of tablet demand with respect to smartphone price). Are phones and tablets substitutes or complements?",
+          "The firm raises P_T by 20%. Using your elasticity, estimate the new Q_S. Then use the exact formula to find new Q_S. Explain any discrepancy.",
+          "Explain how the cross-price elasticity between smartphones and tablets should influence the firm's pricing strategy when it sells both products. Should it price tablets high or low relative to cost?"
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Formula: Cross-price elasticity of demand.",
+        "back": "ε_{xy} = (∂Q_x/∂P_y) · (P_y/Q_x) = (% ΔQ_x) / (% ΔP_y). Positive: substitutes (P_y ↑ → Q_x ↑, consumers switch to x). Negative: complements (P_y ↑ → Q_x ↓, x and y used together). Zero: independent goods. Note: ε_{xy} ≠ ε_{yx} in general for Marshallian demand — Hicksian (compensated) cross-effects are symmetric.",
+        "type": "formula"
+      },
+      {
+        "front": "Substitutes vs. complements: definition using cross-price elasticity.",
+        "back": "Substitutes: ε_{xy} > 0 — goods that can replace each other; higher P_y causes consumers to buy more x. Examples: butter/margarine, Coke/Pepsi, bus/taxi. Complements: ε_{xy} < 0 — goods used together; higher P_y reduces demand for both y and x. Examples: cars/gasoline, printers/ink, smartphones/data plans. Independent: ε_{xy} = 0.",
+        "type": "definition"
+      },
+      {
+        "front": "How does a positive cross-price elasticity appear on a supply-demand graph?",
+        "back": "If ε_{xy} > 0 (substitutes): when P_y rises, the demand curve for x shifts rightward (increases). At every price of x, consumers demand more x because y is now relatively more expensive. The shift distance depends on the magnitude of ε_{xy} and the size of the P_y change. A negative ε_{xy} (complements) shifts the demand curve for x leftward.",
+        "type": "graph"
+      },
+      {
+        "front": "Why is cross-price elasticity used in antitrust analysis?",
+        "back": "Cross-price elasticity defines whether products are in the same relevant market. Large positive ε_{xy} means products compete closely — consumers substitute between them freely, constraining each other's market power. Low ε_{xy} suggests separate markets. The 'SSNIP test' (Small but Significant Non-transitory Increase in Price) uses cross-price responses to test whether a firm can profitably raise prices without losing customers to substitutes.",
+        "type": "definition"
+      },
+      {
+        "front": "Is cross-price elasticity symmetric? Explain.",
+        "back": "Marshallian (uncompensated) cross-price elasticities are generally NOT symmetric: ε_{xy} ≠ ε_{yx}. The income effects on each good differ, causing asymmetry. However, Hicksian (compensated) cross-price effects are symmetric: ∂h_x/∂P_y = ∂h_y/∂P_x (Slutsky symmetry). This matters when using cross-price elasticities for welfare analysis vs. demand forecasting.",
+        "type": "distinction"
+      }
+    ]
+  },
+  {
+    "id": "t74",
+    "learn": {
+      "openingTension": "A coffee shop raises its prices by 10%. Revenue goes up. A tech startup raises subscription prices by 10%. Revenue crashes. The identical price increase produces opposite revenue outcomes. Understanding why is not just interesting — it is the difference between a profitable pricing decision and a catastrophic one.",
+      "coreIdea": "Total revenue (TR = P·Q) depends on both price and quantity, and these move in opposite directions along a demand curve. The relationship between revenue and price is governed by elasticity: when demand is elastic (|ε| > 1), a price increase reduces revenue; when inelastic (|ε| < 1), a price increase raises revenue. Revenue optimization plays the central role in monopoly pricing and price discrimination.",
+      "mathSetup": "TR = P · Q(P). Marginal revenue: MR = dTR/dP · (dP/dQ)^{-1} = P(1 + 1/ε). Alternatively: MR = d(PQ)/dQ = P + Q·(dP/dQ) = P·(1 + 1/ε). Revenue rule: dTR/dP = Q(1 + ε). Since ε < 0: dTR/dP > 0 iff ε > -1 (i.e., |ε| < 1, inelastic). dTR/dP < 0 iff |ε| > 1 (elastic). dTR/dP = 0 iff ε = -1 (unit elastic — revenue maximum). Revenue is maximized at |ε| = 1. For linear demand P = a - bQ: TR = aQ - bQ², maximized at Q = a/(2b).",
+      "derivation": "1. TR = P·Q. Take derivative with respect to Q: dTR/dQ = MR = P + Q·(dP/dQ). Economic reason: selling one more unit earns P but requires reducing price on all existing units. 2. Factor out P: MR = P(1 + Q/P · dP/dQ) = P(1 + 1/ε). Economic reason: 1/ε is the percentage price response to a percentage quantity change — this is the revenue-destroying effect of expanding output. 3. MR > 0 iff |ε| > 1 (elastic) — expanding quantity raises revenue. MR < 0 iff |ε| < 1 (inelastic) — expanding quantity reduces revenue. 4. Revenue maximization: set MR = 0 → P(1 + 1/ε) = 0 → ε = -1. Economic reason: at unit elasticity, the quantity gain and the price reduction exactly cancel — revenue is at its peak.",
+      "graphicalIntuition": "On a graph with quantity on the horizontal axis, draw the linear demand curve P = a - bQ and below it the marginal revenue curve MR = a - 2bQ. The MR curve has twice the slope of demand. TR is maximized where MR = 0 (quantity = a/(2b)). To the left of this point, MR > 0 (elastic region, TR rising with Q). To the right, MR < 0 (inelastic region, TR falling with Q). A separate TR curve plotted beneath shows a hump-shaped parabola peaking at Q = a/(2b).",
+      "workedExample": "Given: Demand P = 50 - 2Q. Find the revenue-maximizing quantity and price, and verify using elasticity.\nSolution: TR = PQ = (50-2Q)Q = 50Q - 2Q². dTR/dQ = MR = 50 - 4Q = 0 → Q* = 12.5. P* = 50 - 2(12.5) = $25. TR* = 25×12.5 = $312.50. Elasticity check: ε = (dQ/dP)·(P/Q) = (-1/2)·(25/12.5) = -1. ✓ Unit elastic at revenue maximum.\nInterpret: At P=$25, Q=12.5, ε = -1 — revenue is maximized. Any price above $25 (inelastic region) reduces revenue because quantity falls more proportionally than price rises. Any price below $25 (elastic region) also reduces revenue because price falls more proportionally.",
+      "boundaryConditions": "1. Perfectly inelastic demand: MR = P always. Revenue always rises with price — there is no revenue-maximizing interior price, only a maximum price limited by consumer budget. 2. Perfectly elastic demand: MR = 0 always (price-taking firm). Revenue is P·Q where P is fixed — the firm cannot affect revenue by choosing price. 3. Non-linear demand: Revenue function TR(Q) may have multiple local maxima. Revenue maximization requires global check, not just MR = 0.",
+      "examTraps": [
+        "A student might think raising price always raises revenue, but the correct answer is that raising price raises revenue only in the inelastic region (|ε| < 1); in the elastic region raising price reduces revenue because quantity falls proportionally more.",
+        "A student might think MR = P for all sellers, but the correct answer is that MR = P only for perfectly competitive firms (price-takers) where ε = -∞; for any downward-sloping demand MR = P(1 + 1/ε) < P because expanding output requires a price cut on all units.",
+        "A student might think revenue is maximized at the highest possible price, but the correct answer is that revenue is maximized at the unit-elastic point (ε = -1) where MR = 0 — at the choke price, quantity is zero so revenue is also zero.",
+        "A student might think the MR curve has the same slope as the demand curve, but the correct answer is that for linear demand P = a - bQ, MR = a - 2bQ has twice the slope — MR hits zero at half the quantity where demand hits zero."
+      ],
+      "frq": {
+        "prompt": "A concert venue faces inverse demand P = 120 - 3Q for tickets (in hundreds of people).",
+        "parts": [
+          "Derive the marginal revenue function. Find the revenue-maximizing quantity and price.",
+          "Calculate total revenue at the revenue-maximizing price and at P = $30. Which generates more revenue?",
+          "At P = $30, calculate own-price elasticity. Is the venue in the elastic or inelastic region? What does this imply for a price increase?",
+          "Explain why a profit-maximizing monopolist always prices in the elastic region of demand, even though revenue is higher at the unit-elastic point. What determines where in the elastic region they price?"
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Formula: Marginal revenue as a function of price and elasticity.",
+        "back": "MR = P(1 + 1/ε), where ε = own-price elasticity of demand (negative). Since ε < 0: MR < P always for a downward-sloping demand curve. MR = 0 when ε = -1 (unit elastic — revenue maximum). MR > 0 when |ε| > 1 (elastic). MR < 0 when |ε| < 1 (inelastic). Connect to monopoly: profit-maximizing monopolist sets MR = MC > 0, requiring |ε| > 1.",
+        "type": "formula"
+      },
+      {
+        "front": "Revenue rule: how does total revenue change when price rises?",
+        "back": "dTR/dP = Q(1 + ε). Since ε < 0 and Q > 0: TR rises when price rises iff 1+ε > 0, i.e., ε > -1, i.e., |ε| < 1 (inelastic). TR falls when price rises iff |ε| > 1 (elastic). TR unchanged when ε = -1 (unit elastic). Mnemonic: elastic demand means revenue and price move in opposite directions; inelastic demand means they move in the same direction.",
+        "type": "formula"
+      },
+      {
+        "front": "For linear demand P = a - bQ, derive the MR curve.",
+        "back": "TR = PQ = (a-bQ)Q = aQ - bQ². MR = dTR/dQ = a - 2bQ. The MR curve is twice as steep as the demand curve: it has the same vertical intercept a but hits zero at Q = a/(2b), which is half the horizontal intercept of demand. Revenue is maximized at Q* = a/(2b), P* = a/2. This geometry always holds for linear demand.",
+        "type": "formula"
+      },
+      {
+        "front": "What does the shape of the TR curve look like for linear demand?",
+        "back": "TR = PQ = (a-bQ)Q = aQ - bQ² — a downward-opening parabola in Q. Starts at TR=0 when Q=0 (no sales), rises to a peak at Q=a/(2b) (unit-elastic point), then falls back to TR=0 at Q=a/b (where P=0). The peak corresponds to MR=0. To the left of the peak: MR>0, elastic region. To the right: MR<0, inelastic region.",
+        "type": "graph"
+      },
+      {
+        "front": "Why does a monopolist never price in the inelastic region?",
+        "back": "In the inelastic region (|ε| < 1): MR < 0. Producing one more unit reduces total revenue. Since marginal cost MC > 0, profit falls doubly — revenue falls and cost rises. The monopolist can always increase profit by raising price (reducing quantity) until MR = MC > 0, which requires |ε| > 1. Therefore the profit-maximizing price is always in the elastic region of demand.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t75",
+    "learn": {
+      "openingTension": "Buyers want low prices; sellers want high prices. How does a market produce a single price that both sides accept? And once it does, is that price 'correct' in any meaningful sense — or just a truce between opposing interests that could shift at any moment?",
+      "coreIdea": "Market equilibrium is the price-quantity pair where quantity demanded equals quantity supplied: Q_D(p*) = Q_S(p*). The optimization roles here are dual: on the demand side, consumers maximize utility; on the supply side, firms maximize profit. Equilibrium is where these two optimizations simultaneously produce compatible plans — no agent has incentive to change behavior unilaterally.",
+      "mathSetup": "Equilibrium conditions: Q_D(p*) = Q_S(p*). For linear supply and demand: Q_D = a - bP and Q_S = c + dP (d > 0). Set equal: a - bP = c + dP → P* = (a-c)/(b+d). Q* = a - b·P* = a - b·(a-c)/(b+d). Alternatively, using inverse demand and supply: P_D(Q) = P_S(Q) at equilibrium. Excess demand: ED(P) = Q_D(P) - Q_S(P). Equilibrium at P* where ED(P*) = 0. If ED > 0: shortage (price below equilibrium). If ED < 0: surplus (price above equilibrium).",
+      "derivation": "1. Write demand Q_D(p) and supply Q_S(p). Economic reason: each represents the aggregate optimization outcomes (utility max and profit max) at price p. 2. Set Q_D(p) = Q_S(p) and solve for p*. Economic reason: equilibrium requires all plans to be mutually consistent — no unsatisfied buyers or sellers at the margin. 3. Plug p* back to find Q* = Q_D(p*) = Q_S(p*). 4. Stability check: if p < p*, excess demand > 0, price pressure is upward. If p > p*, excess supply > 0, price pressure is downward. Equilibrium is stable if the market tends to return to p* after small perturbations.",
+      "graphicalIntuition": "On a standard supply-demand graph with price on the vertical axis and quantity on the horizontal axis, draw the downward-sloping demand curve and upward-sloping supply curve. Their intersection is the equilibrium (p*, Q*). Below p*: the demand curve lies above the supply curve — at that price, Q_D > Q_S (shortage), creating upward price pressure. Above p*: supply curve lies above demand — Q_S > Q_D (surplus), creating downward price pressure. Arrows on the price axis pointing toward p* show stability.",
+      "workedExample": "Given: Q_D = 80 - 4P, Q_S = 20 + 2P. Find equilibrium price and quantity.\nSolution: Set Q_D = Q_S: 80 - 4P = 20 + 2P → 60 = 6P → P* = $10. Q* = 80 - 4(10) = 40 units.\nVerify: Q_S = 20 + 2(10) = 40. ✓ At P=$8: Q_D = 48, Q_S = 36 — shortage of 12 units. Price rises toward $10. At P=$12: Q_D = 32, Q_S = 44 — surplus of 12 units. Price falls toward $10.\nInterpret: The market clears at P=$10, Q=40. Below $10 there is a shortage; above $10 a surplus. Both forces drive toward equilibrium.",
+      "boundaryConditions": "1. Corner equilibrium: If supply exceeds demand at all positive prices, equilibrium is at p=0 (free good). If demand exceeds supply even at the maximum supply price, equilibrium may not exist as a standard interior solution. 2. Multiple equilibria: With non-monotone supply or demand (backward-bending labor supply, Giffen demand), multiple price-quantity pairs satisfy Q_D = Q_S. Not all will be stable — unstable equilibria are not observed empirically. 3. Price controls: A price ceiling below p* creates a persistent shortage; a price floor above p* creates a persistent surplus. The market cannot equilibrate when prevented from moving to p*.",
+      "examTraps": [
+        "A student might think equilibrium means both buyers and sellers are happy, but the correct answer is that equilibrium means plans are consistent — buyers buy what they plan to buy and sellers sell what they plan to sell — not that all agents get their most preferred outcome.",
+        "A student might think the equilibrium price is 'fair,' but the correct answer is that the equilibrium price is determined by supply and demand — there is no normative content in the market-clearing condition. Equity concerns require separate analysis.",
+        "A student might think a shortage means there is not enough of the good in existence, but the correct answer is that a shortage means Q_D > Q_S at the current price — it is a price problem, not a physical scarcity problem, and it disappears when price rises to equilibrium."
+      ],
+      "frq": {
+        "prompt": "Market supply: Q_S = -10 + 3P. Market demand: Q_D = 110 - 2P.",
+        "parts": [
+          "Find equilibrium price and quantity. Show all steps.",
+          "At P = $15, calculate excess demand or excess supply. Explain the adjustment mechanism.",
+          "Suppose a drought reduces supply by 20 units at every price (new Q_S = -30 + 3P). Find the new equilibrium and calculate the change in equilibrium price and quantity.",
+          "Explain in words why the price change from the supply shock is smaller than the full shortage that would exist at the original equilibrium price. Connect to the slopes of supply and demand."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define market equilibrium. What condition must hold?",
+        "back": "Market equilibrium is the price-quantity pair (P*, Q*) where quantity demanded equals quantity supplied: Q_D(P*) = Q_S(P*). No agent has an incentive to unilaterally change behavior — buyers buy what they plan, sellers sell what they plan. Excess demand = Q_D - Q_S = 0 at equilibrium.",
+        "type": "definition"
+      },
+      {
+        "front": "Formula: Equilibrium price for linear supply Q_S = c + dP and demand Q_D = a - bP.",
+        "back": "Set Q_D = Q_S: a - bP = c + dP → P* = (a-c)/(b+d). Then Q* = a - bP* = a - b(a-c)/(b+d) = (ad+bc)/(b+d). Check: a > c for positive equilibrium price; both b, d > 0 for well-behaved supply and demand. The denominator b+d is the sum of demand and supply price sensitivities.",
+        "type": "formula"
+      },
+      {
+        "front": "What is excess demand and how does it drive price adjustment?",
+        "back": "Excess demand ED(P) = Q_D(P) - Q_S(P). At equilibrium: ED(P*) = 0. If P < P*: ED > 0 (shortage) — buyers compete for goods, bidding price up toward P*. If P > P*: ED < 0 (surplus) — sellers compete for buyers, cutting price down toward P*. Stability requires that excess demand is a decreasing function of price (demand slopes down, supply slopes up).",
+        "type": "definition"
+      },
+      {
+        "front": "What is the effect of a price ceiling set below equilibrium?",
+        "back": "A price ceiling at P_cap < P* creates a persistent shortage: Q_D(P_cap) > Q_S(P_cap). Price cannot rise to clear the market. Shortage = Q_D(P_cap) - Q_S(P_cap) > 0. The quantity transacted is min(Q_D, Q_S) = Q_S(P_cap) — supply-constrained. Examples: rent control, gasoline price caps. Deadweight loss arises from forgone mutually beneficial transactions.",
+        "type": "condition"
+      },
+      {
+        "front": "Comparative statics: if demand increases (rightward shift), what happens to equilibrium?",
+        "back": "A rightward demand shift (demand increases at every price) raises both equilibrium price P* and equilibrium quantity Q*. Mechanism: at old P*, Q_D now exceeds Q_S (positive excess demand) → price rises → Q_S rises and Q_D falls until new equilibrium. The magnitude of price and quantity changes depends on supply slope: steeper supply → larger price change, smaller quantity change.",
+        "type": "definition"
+      }
+    ]
+  },
+  {
+    "id": "t76",
+    "learn": {
+      "openingTension": "The government imposes a $5 tax on every unit of gasoline sold. The gas station sends the tax check to the IRS. So consumers pay the same price as before, right? Wrong — in almost every case the tax is partially passed through to consumers via a higher retail price, regardless of who literally writes the check to the government.",
+      "coreIdea": "A unit tax (specific tax) is a fixed dollar amount per unit of a good sold or bought, imposed either on the buyer (demand tax) or seller (supply tax). Unit taxes create a wedge between the price buyers pay and the price sellers receive: P_B = P_S + t. The optimization roles are: buyers maximize utility subject to the gross price P_B; sellers maximize profit subject to the net price P_S = P_B - t. The equilibrium conditions become Q_D(P_B) = Q_S(P_S) = Q_S(P_B - t).",
+      "mathSetup": "Tax wedge: P_B - P_S = t (unit tax). Equilibrium: Q_D(P_B) = Q_S(P_B - t). For linear supply Q_S = c + dP_S and demand Q_D = a - bP_B: substitute P_S = P_B - t: Q_S = c + d(P_B - t). Set Q_D = Q_S: a - bP_B = c + d(P_B - t) → P_B* = (a - c + dt)/(b+d). Pre-tax equilibrium: P* = (a-c)/(b+d). Price change: ΔP_B = dt/(b+d). Tax revenue: T = t·Q*. Consumer's share: ΔP_B/t = d/(b+d). Producer's share: 1 - d/(b+d) = b/(b+d).",
+      "derivation": "1. Pre-tax equilibrium: P* where Q_D(P*) = Q_S(P*). Tax wedge t inserted. 2. With demand tax (buyer pays t extra): demand shifts down by t — at each quantity buyers are willing to pay t less to the seller. New equilibrium: P_S falls, P_B = P_S + t may rise or fall. 3. With supply tax (seller remits t): supply shifts up by t — at each quantity sellers require t more from buyers to cover tax. New equilibrium: same wedge P_B - P_S = t, same P_B and P_S regardless of who officially pays. Economic reason: the statutory incidence (who writes the check) does not determine economic incidence (who bears the burden). 4. The price burden splits according to relative elasticities. Steep supply (inelastic) → sellers bear more. Steep demand (inelastic) → buyers bear more.",
+      "graphicalIntuition": "On a supply-demand graph, a unit tax shifts either the supply curve up by t (tax on sellers) or the demand curve down by t (tax on buyers). Either way, the new equilibrium has the same wedge t between P_B (demand curve height) and P_S (supply curve height). The quantity falls from Q* to Q_t. Tax revenue = t × Q_t = the rectangle between the two price levels. Deadweight loss = the triangle to the right of Q_t but to the left of Q* — the lost gains from trade on units no longer produced.",
+      "workedExample": "Given: Q_D = 100 - 4P_B, Q_S = 20 + 2P_S. Unit tax t = $6 per unit imposed on sellers.\nSolution: Tax wedge: P_B = P_S + 6. Substitute into demand: Q_D = 100 - 4(P_S + 6) = 76 - 4P_S. Set Q_D = Q_S: 76 - 4P_S = 20 + 2P_S → 56 = 6P_S → P_S* = $9.33. P_B* = 9.33 + 6 = $15.33. Pre-tax P* = (100-20)/(4+2) = $13.33. ΔP_B = $2 increase. ΔP_S = $9.33 - $13.33 = -$4 decrease. Q_t = 20 + 2(9.33) = 38.67 units. Tax revenue = 6 × 38.67 = $232.\nInterpret: Buyers pay $2 more, sellers receive $4 less. The $6 tax splits 1/3 to buyers, 2/3 to sellers.",
+      "boundaryConditions": "1. Perfectly inelastic demand (b=0): ΔP_B = t — buyers bear entire tax; price rises by full amount of tax. Q unchanged. No deadweight loss. 2. Perfectly elastic demand (b→∞): ΔP_B = 0 — sellers bear entire tax; buyer price unchanged. Q falls substantially. Large deadweight loss. 3. Perfectly inelastic supply (d=0): ΔP_S = -t — sellers bear entire tax; buyer price unchanged. No quantity change. No deadweight loss. 4. Symmetry result: tax on buyers vs. tax on sellers of equal magnitude t yields identical equilibrium P_B, P_S, Q — only the legal obligation differs.",
+      "examTraps": [
+        "A student might think the legal payer of a tax determines who bears the economic burden, but the correct answer is that economic incidence is determined by the relative elasticities of supply and demand — not by who writes the check to the government.",
+        "A student might think the buyer price rises by the full amount of the tax, but the correct answer is that buyers and sellers share the tax burden; the buyer price rises by less than t unless supply is perfectly elastic or demand is perfectly inelastic.",
+        "A student might think taxing buyers and taxing sellers produce different equilibrium outcomes, but the correct answer is that a tax of $t on buyers and a tax of $t on sellers produce identical equilibrium prices P_B, P_S and identical quantities — only statutory incidence differs."
+      ],
+      "frq": {
+        "prompt": "Market demand: Q_D = 60 - 3P_B. Market supply: Q_S = 12 + 2P_S. Government imposes a unit tax of t = $5 per unit on sellers.",
+        "parts": [
+          "Find the pre-tax equilibrium price and quantity.",
+          "Find the new equilibrium P_B, P_S, and Q after the tax. Show all algebraic steps.",
+          "Calculate the tax burden on consumers (ΔP_B) and producers (ΔP_S). Verify they sum to t = $5.",
+          "Show that if the $5 tax were imposed on buyers instead of sellers, the equilibrium P_B, P_S, and Q would be identical. Explain why this equivalence holds."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define a unit (specific) tax and state the tax wedge condition.",
+        "back": "A unit tax is a fixed dollar amount t per unit of a good traded. The tax wedge condition: P_B - P_S = t, where P_B is the price buyers pay (gross price) and P_S is the price sellers receive (net price). Equilibrium requires Q_D(P_B) = Q_S(P_S) = Q_S(P_B - t). The wedge t is fixed regardless of who legally remits the tax.",
+        "type": "definition"
+      },
+      {
+        "front": "How does a unit tax shift the supply and demand curves graphically?",
+        "back": "Tax on sellers: shifts supply curve up by t (sellers need higher buyer price to cover same net price). Tax on buyers: shifts demand curve down by t (buyers are willing to pay sellers t less for the same total cost). Both create the same wedge P_B - P_S = t in equilibrium, with identical P_B, P_S, and Q. The curves shift in the same economic direction regardless of legal incidence.",
+        "type": "graph"
+      },
+      {
+        "front": "Tax burden formula: how much of a unit tax falls on buyers vs. sellers?",
+        "back": "For linear demand (slope -b) and supply (slope +d): Buyer's price increase: ΔP_B = t · d/(b+d). Seller's price decrease: ΔP_S = -t · b/(b+d). Check: ΔP_B - ΔP_S = t · d/(b+d) + t · b/(b+d) = t. ✓ Buyers bear more when demand is inelastic (large b) relative to supply. Sellers bear more when supply is inelastic (small d) relative to demand.",
+        "type": "formula"
+      },
+      {
+        "front": "Statutory vs. economic incidence of a tax: what is the difference?",
+        "back": "Statutory incidence: who legally remits the tax (who writes the check). Economic incidence: who actually bears the burden (whose real income falls). They differ because the party who does not legally pay can adjust their price. A unit tax on sellers raises buyer price and lowers seller net price — both bear part of the burden regardless of who pays the government. Economic incidence depends solely on elasticities.",
+        "type": "distinction"
+      },
+      {
+        "front": "Under what conditions does the entire tax burden fall on buyers? On sellers?",
+        "back": "Entire burden on buyers: perfectly inelastic demand (vertical demand curve, b→∞ in Q=a-bP form) OR perfectly elastic supply. Buyer price rises by exactly t; quantity unchanged. Entire burden on sellers: perfectly inelastic supply (vertical supply curve) OR perfectly elastic demand (horizontal demand curve). Seller net price falls by exactly t; buyer price unchanged. Both extreme cases have zero deadweight loss.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t77",
+    "learn": {
+      "openingTension": "A $5 per-unit tax on a $10 item costs the same as a 50% tax rate on the same item — at the initial price. But as prices change, the two taxes diverge completely: the unit tax stays fixed while the percentage tax grows with the price. This is not a minor technicality — it changes who bears the burden and by how much.",
+      "coreIdea": "An ad valorem tax is a percentage tax on the value (price) of a good rather than a fixed dollar amount per unit. Common forms: sales taxes, VAT, tariffs expressed as percentages. The optimization setup changes because the tax wedge between buyer and seller prices now scales with price: P_B = P_S · (1 + τ) or P_S = P_B / (1 + τ) = P_B · (1 - τ'), where τ is the tax rate. Unlike unit taxes, the ad valorem wedge is not constant — it grows in dollar terms as price rises.",
+      "mathSetup": "Ad valorem tax rate τ (fraction). If imposed on sellers: P_S = P_B(1-τ) [seller keeps fraction (1-τ) of buyer price]. If imposed on buyers: P_B = P_S(1+τ) [buyer pays τ fraction above seller price]. Equilibrium: Q_D(P_B) = Q_S(P_S). For linear supply Q_S = c + d·P_S and demand Q_D = a - b·P_B with tax on sellers: P_S = (1-τ)P_B, so Q_S = c + d(1-τ)P_B. Set equal to Q_D: a - bP_B = c + d(1-τ)P_B → P_B* = (a-c) / (b + d(1-τ)). Compare to unit tax: P_B* = (a-c+dt) / (b+d). The formulas differ because the ad valorem wedge changes with price.",
+      "derivation": "1. Ad valorem tax τ on sellers: the seller's net price is P_S = P_B(1-τ). The supply curve in terms of P_B effectively becomes steeper — sellers require a higher buyer price to supply the same quantity because they only keep fraction (1-τ). 2. Graphically: the supply curve rotates upward (not a parallel shift as with unit tax). Economic reason: the tax is proportional to price, so the dollar wedge is larger at high prices than low prices. 3. At equilibrium, set Q_D(P_B) = Q_S(P_B·(1-τ)) and solve. 4. Tax revenue: T = τ·P_B·Q* = total tax collected. This differs from unit tax where T = t·Q*.",
+      "graphicalIntuition": "On a supply-demand graph, a unit tax shifts the supply curve up by a fixed dollar amount t (parallel shift). An ad valorem tax rotates the supply curve — the curve pivots around the zero-quantity intercept, becoming steeper because the percentage markup is constant but the dollar markup grows with price. At low quantities (low prices), the dollar wedge is small; at high quantities (high prices), the dollar wedge is large. This is why ad valorem and unit taxes produce different equilibrium outcomes for the same initial burden.",
+      "workedExample": "Given: Q_D = 80 - 2P_B, Q_S = 10 + P_S. Ad valorem tax τ = 0.20 (20%) imposed on sellers (P_S = 0.8·P_B).\nFind: Equilibrium P_B, P_S, and Q.\nSolution: Substitute P_S = 0.8P_B into supply: Q_S = 10 + 0.8P_B. Set Q_D = Q_S: 80 - 2P_B = 10 + 0.8P_B → 70 = 2.8P_B → P_B* = $25. P_S* = 0.8×25 = $20. Q* = 80 - 2(25) = 30 units. Tax revenue = τ·P_B·Q = 0.20×25×30 = $150. Or: wedge = P_B - P_S = 25 - 20 = $5 per unit × 30 = $150. ✓\nPre-tax equilibrium: 80 - 2P = 10 + P → P* = $23.33, Q* = 33.33. Buyers pay $1.67 more; sellers receive $3.33 less.",
+      "boundaryConditions": "1. Equivalence to unit tax at initial price: a unit tax t = τ·P* has the same effect as ad valorem rate τ at the initial price P*. They diverge when prices change substantially. For small tax changes, they are approximately equivalent. 2. Ad valorem taxes and redistribution: Ad valorem taxes on luxury goods are progressive (higher dollar tax on expensive goods), while unit taxes are regressive in percentage terms for low-price goods. 3. Ad valorem taxes in international trade: tariffs expressed as percentages are ad valorem. As import prices rise (exchange rate depreciation), ad valorem tariff revenue rises automatically — unit tariffs do not provide this automatic stabilizer.",
+      "examTraps": [
+        "A student might think ad valorem and unit taxes always produce the same equilibrium, but the correct answer is they only coincide at the specific price P* where t = τ·P*; at all other prices (and in general equilibrium) they produce different P_B, P_S, and Q.",
+        "A student might think an ad valorem tax on sellers shifts the supply curve up in parallel, but the correct answer is that it rotates the supply curve because the dollar wedge (τ·P_B) grows with price — not a parallel shift as with a unit tax.",
+        "A student might think the tax revenue formula is the same for both tax types, but the correct answer is: unit tax revenue = t·Q; ad valorem tax revenue = τ·P_B·Q = wedge·Q. They are equal only when t equals the ad valorem dollar wedge."
+      ],
+      "frq": {
+        "prompt": "Market demand: Q_D = 120 - 3P_B. Market supply: Q_S = 4P_S - 20. The government imposes an ad valorem tax of τ = 25% on buyers (so P_B = 1.25·P_S).",
+        "parts": [
+          "Find the pre-tax equilibrium price and quantity.",
+          "With the ad valorem tax, set up the equilibrium condition and solve for P_S*, P_B*, and Q*.",
+          "Calculate tax revenue and the tax burden on buyers (ΔP_B) and sellers (ΔP_S).",
+          "Compare this ad valorem tax to a unit tax that raises the same revenue. Show whether the unit tax would require a higher or lower per-unit amount, and explain intuitively why the two taxes differ in their market effects."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define ad valorem tax and state the tax wedge condition.",
+        "back": "An ad valorem tax τ is a percentage of the good's price (value), not a fixed dollar amount. Tax wedge: P_B = P_S(1+τ) [tax on buyers] or P_S = P_B(1-τ) [tax on sellers]. The dollar wedge = τ·P varies with price — larger at high prices, smaller at low prices. Examples: sales tax, VAT, percentage tariffs. Contrast with unit tax where wedge = t (fixed dollars).",
+        "type": "definition"
+      },
+      {
+        "front": "How does an ad valorem tax shift the supply curve differently from a unit tax?",
+        "back": "Unit tax: parallel upward shift by fixed amount t — same dollar wedge at every price. Ad valorem tax: rotational shift (pivot) around the zero-quantity intercept — becomes steeper because the dollar wedge τ·P grows proportionally with price. At low prices: ad valorem dollar wedge < unit tax t. At high prices: ad valorem dollar wedge > t (if τ·P > t). This is why they produce different equilibria.",
+        "type": "distinction"
+      },
+      {
+        "front": "Formula: Equilibrium buyer price under an ad valorem tax τ on sellers with linear Q_D = a - bP_B and Q_S = c + dP_S.",
+        "back": "With P_S = (1-τ)P_B: Q_S = c + d(1-τ)P_B. Set Q_D = Q_S: a - bP_B = c + d(1-τ)P_B → P_B* = (a-c) / (b + d(1-τ)). Compare to no-tax: P* = (a-c)/(b+d). Ad valorem raises P_B* because d(1-τ) < d reduces effective supply responsiveness. Tax revenue = τ·P_B*·Q*.",
+        "type": "formula"
+      },
+      {
+        "front": "When do a unit tax and ad valorem tax produce identical market outcomes?",
+        "back": "A unit tax t and ad valorem tax τ produce identical P_B, P_S, and Q if and only if t = τ·P*, where P* is the equilibrium price under the tax. They are approximately equivalent for small taxes around the same initial price. They diverge when prices change substantially or when comparing across different price levels — the ad valorem tax adjusts automatically while the unit tax does not.",
+        "type": "condition"
+      },
+      {
+        "front": "Tax revenue formula: unit tax vs. ad valorem tax.",
+        "back": "Unit tax revenue: T = t · Q* (fixed per-unit tax times equilibrium quantity). Ad valorem tax revenue: T = τ · P_B* · Q* = (P_B* - P_S*) · Q* (the per-unit wedge times quantity). If both are calibrated to produce the same P_B at the same equilibrium: revenues are identical. The ad valorem tax automatically increases revenue when prices rise; unit tax revenue is fixed per unit.",
+        "type": "formula"
+      }
+    ]
+  }
+]

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { isQuestionSaved, saveQuestion, removeQuestion } from '@/lib/savedQuestions'
+import { isQuestionReported, reportQuestion } from '@/lib/reportedQuestions'
 import SaveAsFlashcardButton from '@/components/flashcards/SaveAsFlashcardButton'
 
 interface Question {
@@ -71,6 +72,8 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
   const [selected, setSelected] = useState<number | null>(null)
   const [isSaved, setIsSaved] = useState(false)
   const [showToast, setShowToast] = useState(false)
+  const [isReported, setIsReported] = useState(false)
+  const [showReportedConfirmation, setShowReportedConfirmation] = useState(false)
   const [showKeyboardHint, setShowKeyboardHint] = useState(true)
   const usedIndicesRef = useRef<Set<number>>(new Set())
 
@@ -81,6 +84,8 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
     setQuestion(null)
     setIsSaved(false)
     setShowToast(false)
+    setIsReported(false)
+    setShowReportedConfirmation(false)
 
     if (questions && questions.length > 0) {
       let available = questions.map((_, i) => i).filter((i) => !usedIndicesRef.current.has(i))
@@ -93,6 +98,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       const picked = shuffleOptions(questions[idx])
       setQuestion(picked)
       setIsSaved(isQuestionSaved(courseSlug, picked.question))
+      setIsReported(isQuestionReported(courseSlug, picked.question))
       setLoading(false)
       return
     }
@@ -110,6 +116,7 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       const q = shuffleOptions(data as Question)
       setQuestion(q)
       setIsSaved(isQuestionSaved(courseSlug, q.question))
+      setIsReported(isQuestionReported(courseSlug, q.question))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not load question. Please try again.')
     } finally {
@@ -168,6 +175,24 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
       question.type ?? '',
       question.difficulty ?? '',
     )
+  }
+
+  function handleReport() {
+    if (!question || isReported) return
+    reportQuestion({
+      questionText: question.question,
+      topicSlug,
+      topicName: topicTitle,
+      courseSlug,
+      reportedAt: new Date().toISOString(),
+      options: question.options,
+      correctIndex: question.correctIndex,
+      explanation: question.explanation,
+      type: question.type,
+    })
+    setIsReported(true)
+    setShowReportedConfirmation(true)
+    setTimeout(() => setShowReportedConfirmation(false), 2000)
   }
 
   function handleSaveToggle() {
@@ -296,23 +321,40 @@ export default function PracticeQuestion({ topicTitle, topicSlug, courseSlug, co
         </p>
       )}
 
-      {/* Save for later button */}
-      <div className="mb-6">
-        <button
-          onClick={handleSaveToggle}
-          className={`block w-full text-left py-2 text-xs font-medium transition-colors ${
-            isSaved
-              ? 'text-amber-600 dark:text-amber-400 hover:text-red-500 dark:hover:text-red-400'
-              : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
-          }`}
-        >
-          {isSaved ? '✓ Saved — tap to remove' : '🚩 Save for later'}
-        </button>
-        {showToast && (
-          <p className="mt-1.5 text-xs text-green-600 dark:text-green-400">
-            Question saved to your review list ✓
-          </p>
-        )}
+      {/* Save for later + Report question buttons */}
+      <div className="mb-6 flex items-start gap-6">
+        <div>
+          <button
+            onClick={handleSaveToggle}
+            className={`block py-2 text-xs font-medium transition-colors ${
+              isSaved
+                ? 'text-amber-600 dark:text-amber-400 hover:text-red-500 dark:hover:text-red-400'
+                : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+            }`}
+          >
+            {isSaved ? '✓ Saved — tap to remove' : '🚩 Save for later'}
+          </button>
+          {showToast && (
+            <p className="mt-1.5 text-xs text-green-600 dark:text-green-400">
+              Question saved to your review list ✓
+            </p>
+          )}
+        </div>
+        <div>
+          <button
+            onClick={handleReport}
+            disabled={isReported}
+            className={`block py-2 text-xs font-medium transition-colors ${
+              isReported
+                ? 'text-gray-300 dark:text-gray-600 cursor-default'
+                : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+            }`}
+          >
+            {isReported
+              ? (showReportedConfirmation ? 'Reported' : 'Reported ✓')
+              : '⚑ Report question'}
+          </button>
+        </div>
       </div>
 
       {answered && (

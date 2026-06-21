@@ -1,0 +1,223 @@
+[
+  {
+    "id": "t59",
+    "learn": {
+      "openingTension": "A Treasury bond yields 4% and a corporate bond yields 7%. Both promise to pay in 1 year. Why would any rational investor choose the Treasury when the corporate pays more? The answer is risk — and the risk premium is the extra expected return that compensates for bearing it.",
+      "coreIdea": "The risk premium is the excess expected return (above the risk-free rate) that investors require to willingly hold a risky asset. It links the certainty equivalent to asset pricing: the risk premium equals E[c] - c_CE expressed as a return differential. In equilibrium, all assets must offer a risk-adjusted return equal to the risk-free rate — otherwise investors would reallocate until prices adjust. Probability structure: states {s} with probabilities {pi_s}; risk premium lambda = E[c] - c_CE.",
+      "mathSetup": "Risk-free rate: r_f (guaranteed return). Risky asset expected return: E[R] = sum pi_s * R_s. Risk premium: lambda = E[R] - r_f. Certainty equivalent return: r_CE = c_CE/investment - 1. Lambda = E[R] - r_CE for return-based formulation. Arrow-Pratt approximation: lambda ≈ A(c) * Cov(c, market return) for market risk. CAPM: E[R_i] - r_f = beta_i * (E[R_m] - r_f), where beta = Cov(R_i, R_m)/Var(R_m) and (E[R_m] - r_f) = market risk premium.",
+      "derivation": "1. Start with the probability structure: states {g,b} with pi_g + pi_b = 1. Risky asset pays R_g in the good state and R_b in the bad state. Economic reason: the risk premium only makes sense once we define what risks exist and their probabilities. 2. Compute E[R] = pi_g * R_g + pi_b * R_b. Economic reason: the investor cares about probability-weighted returns. 3. Compute EU = pi_g * u(W*(1+R_g)) + pi_b * u(W*(1+R_b)). Economic reason: utility is defined over final wealth, not returns. 4. Find c_CE: u(c_CE) = EU. Economic reason: the certainty equivalent converts the risky prospect to a certain equivalent. 5. Risk premium = E[c] - c_CE (in dollars) or E[R] - r_f (in returns). Economic reason: an investor requires E[R] - r_f extra return to willingly hold the risky asset instead of the risk-free asset. 6. Equilibrium: assets are priced until the risk premium exactly compensates for each investor's risk exposure — no reallocation is desired.",
+      "graphicalIntuition": "On a graph with risk (sigma or beta) on the horizontal axis and expected return on the vertical axis, the risk premium is the vertical distance above the risk-free rate r_f for any given level of risk. In the CAPM, the Security Market Line (SML) is a straight line: E[R] = r_f + beta * (E[R_m] - r_f). The slope of the SML is the market risk premium (E[R_m] - r_f). Assets above the SML are underpriced (offer too much return for their beta — a buying opportunity); assets below the SML are overpriced.",
+      "workedExample": "Given: r_f = 4%. Risky stock: Good state (pi=0.6, return 20%), Bad state (pi=0.4, return -5%). u(c) = ln(c), W = $1,000.\nFind: Expected return, EU, CE, and risk premium.\nSolution: E[R] = 0.6*0.20 + 0.4*(-0.05) = 0.12 - 0.02 = 10%. Good state wealth: 1000*1.20 = $1,200. Bad state wealth: 1000*0.95 = $950. EU = 0.6*ln(1200) + 0.4*ln(950) = 0.6*7.090 + 0.4*6.856 = 4.254 + 2.742 = 6.996. c_CE = e^{6.996} = $1,094. Return CE = 1094/1000 - 1 = 9.4%. Risk premium = E[R] - r_CE = 10% - 9.4% = 0.6%.\nInterpret: The stock must offer at least r_f = 4% plus the risk premium to be worth holding. It offers E[R] = 10% which exceeds r_f (4%), so the investor does hold it. The 0.6% gap between E[R] (10%) and r_CE (9.4%) is the excess compensation above what the investor requires.",
+      "boundaryConditions": "1. Zero risk premium: Risk-neutral agents require no compensation for risk — they only care about expected return. If all investors were risk-neutral, all assets would be priced to yield r_f in expectation. 2. Idiosyncratic vs. systematic risk: The CAPM risk premium is only for systematic risk (beta) — idiosyncratic risk is diversifiable and earns no premium in equilibrium. Holding undiversified portfolios means bearing idiosyncratic risk without compensation. 3. Time-varying risk premiums: The market risk premium varies over time, rising in recessions (when risk aversion increases) and falling in booms. Models with constant risk premiums miss this important feature of asset pricing cycles.",
+      "examTraps": [
+        "A student might think higher risk always implies higher actual return, but the correct answer is that higher risk implies higher required expected return — the actual realized return can be anything depending on which state occurs.",
+        "A student might think the risk premium compensates for all risk, but the correct answer under the CAPM is that only systematic (non-diversifiable) risk earns a premium — idiosyncratic risk is priced at zero in a well-diversified portfolio.",
+        "A student might think the risk premium is constant across all investors, but the correct answer is that it depends on each investor's risk aversion — more risk-averse investors require larger risk premiums before they willingly hold risky assets.",
+        "A student might think that r_f + risk premium equals the actual return, but the correct answer is it equals the expected return — the actual return is stochastic and equals the expected return only if the good state occurs every time."
+      ],
+      "frq": {
+        "prompt": "A market has two assets: Asset A is risk-free with return 5%. Asset B has return 15% in the good state (probability 0.7) and -5% in the bad state (probability 0.3). An investor has u(c) = sqrt(c) and $10,000 to invest.",
+        "parts": [
+          "Compute the expected return on Asset B and the nominal risk premium (E[R_B] - r_f).",
+          "Compute the certainty equivalent return on Asset B for this investor.",
+          "Compute the effective risk premium this investor requires (r_CE - r_f). Compare to the nominal risk premium and explain the difference.",
+          "At what expected return on Asset B would this investor be exactly indifferent between the two assets? Explain what drives the gap between that return and r_f."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define the risk premium on a risky asset.",
+        "back": "Risk premium = E[R] - r_f = the excess expected return above the risk-free rate required to induce a risk-averse investor to hold the risky asset. Equivalently: lambda = E[c] - c_CE (in dollar terms). In equilibrium, the market sets prices so that the risk premium exactly compensates investors for bearing systematic risk — no profitable reallocation is possible.",
+        "type": "definition"
+      },
+      {
+        "front": "State the CAPM formula and identify the market risk premium.",
+        "back": "E[R_i] = r_f + beta_i * (E[R_m] - r_f). Market risk premium = E[R_m] - r_f = slope of the Security Market Line. Beta_i = Cov(R_i, R_m)/Var(R_m) = the asset's systematic risk relative to the market. An asset with beta > 1 is more volatile than the market and earns a larger risk premium. Idiosyncratic risk earns zero premium under CAPM.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the Security Market Line (SML)?",
+        "back": "The SML plots E[R] against beta: a straight line with intercept r_f and slope (E[R_m] - r_f). All correctly priced assets lie on the SML. Assets above the SML have positive alpha (expected return exceeds CAPM prediction) — they are underpriced. Assets below have negative alpha — overpriced. In equilibrium, trading drives all assets back onto the SML.",
+        "type": "graph"
+      },
+      {
+        "front": "Why does idiosyncratic risk earn no risk premium in equilibrium?",
+        "back": "Idiosyncratic risk can be eliminated by diversification at zero cost. If idiosyncratic risk earned a premium, investors would diversify and earn excess returns without extra systematic risk — an arbitrage. Competition drives the price of idiosyncratic risk to zero. Only systematic risk (correlated with the market) cannot be diversified away and therefore earns a premium.",
+        "type": "condition"
+      },
+      {
+        "front": "What is the relationship between the risk premium and Arrow-Pratt risk aversion?",
+        "back": "Small-gamble approximation: lambda ≈ (1/2) * A(c) * sigma^2, where A(c) = -u''(c)/u'(c) and sigma^2 = variance. The required risk premium is proportional to both risk aversion (A) and variance (sigma^2). More risk-averse investors require larger premiums; riskier assets command larger premiums from all investors. This connects individual risk preferences to market equilibrium pricing.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t60",
+    "learn": {
+      "openingTension": "Nobody expects to have a car accident. Yet the vast majority of people pay for car insurance even though they expect to lose money on the policy (expected payout < premium). Why? And how can an insurer profit from exactly the same transaction that makes the consumer better off? The answer lies in the asymmetric value of risk reduction for risk-averse agents.",
+      "coreIdea": "Insurance is a contract that transfers risk from a risk-averse individual to an insurer (or a pool of individuals). Both parties can gain: the risk-averse individual pays a premium below their risk premium to eliminate risk; the insurer collects premiums from many individuals and uses diversification to bear the aggregate risk at near-zero variance. This is contingent consumption theory applied: the optimal insurance choice is where the expected utility optimality condition holds — at full coverage for fair insurance.",
+      "mathSetup": "Probability structure: states {No Loss, Loss} with probabilities {pi_0, pi_L}, pi_0 + pi_L = 1. Loss amount: L. Wealth without insurance: W in No Loss state, W - L in Loss state. Insurance with coverage K, premium gamma: Wealth = (W - gamma) in No Loss state, (W - gamma - L + K) in Loss state. Actuarially fair premium: gamma* = pi_L * K. Optimal coverage (maximize EU): max_{K} pi_0 * u(W-gamma) + pi_L * u(W-gamma-L+K) subject to gamma = pi_L * K.",
+      "derivation": "1. Define the probability structure: pi_L = probability of loss, pi_0 = 1 - pi_L. Endowment: (W, W-L) in (no-loss, loss) states. Economic reason: the consumer's wealth depends on which state occurs. 2. Introduce insurance: premium gamma = pi_L * K for coverage K. New consumption: c_0 = W - gamma (no-loss state), c_L = W - gamma - L + K (loss state). Economic reason: insurance redistributes wealth across states. 3. Substitute gamma = pi_L * K: c_0 = W - pi_L*K, c_L = W - pi_L*K - L + K = W - pi_L*K + (1-pi_L)*K - L = W - pi_L*K + pi_0*K - L. 4. Maximize EU over K: dEU/dK = -pi_L * pi_0 * u'(c_0) + pi_L * pi_0 * u'(c_L) = 0 (after simplification). Economic reason: the first-order condition for optimal K. 5. This gives u'(c_0) = u'(c_L), so c_0 = c_L (full coverage is optimal at actuarially fair rates). Economic reason: equalizing marginal utilities across states is optimal — the agent insures fully.",
+      "graphicalIntuition": "On a graph with c_0 (no-loss state) on the horizontal axis and c_L (loss state) on the vertical axis, the endowment is at (W, W-L) below the 45-degree line. The actuarially fair budget line passes through the endowment with slope -(pi_0/pi_L). The 45-degree line represents full insurance (c_0 = c_L). The EU indifference curves have slope -(pi_0*u'(c_0))/(pi_L*u'(c_L)) — at the 45-degree line this equals -(pi_0/pi_L), exactly matching the budget line slope. Tangency at the 45-degree line confirms full insurance is optimal.",
+      "workedExample": "Given: u(c) = sqrt(c). W = $10,000, L = $6,400. Probability of loss: pi_L = 0.25. Actuarially fair insurance available.\nFind: Optimal coverage K and resulting consumption in each state.\nSolution: Fair premium per unit: pi_L = 0.25. With full coverage K = L = $6,400: premium = 0.25*6,400 = $1,600. c_0 = 10,000 - 1,600 = $8,400. c_L = 10,000 - 1,600 - 6,400 + 6,400 = $8,400. EU = sqrt(8,400) = 91.65.\nVerify: EU at endowment = 0.75*sqrt(10,000) + 0.25*sqrt(3,600) = 0.75*100 + 0.25*60 = 75 + 15 = 90 < 91.65. Full insurance is strictly preferred.",
+      "boundaryConditions": "1. Moral hazard: If purchasing insurance reduces the agent's loss-prevention effort (because the insurer bears the cost of accidents), the probability pi_L is not exogenous — it increases with coverage. Optimal insurance design must balance risk reduction against moral hazard: deductibles and co-pays are instruments to restore incentives. 2. Adverse selection: If higher-risk individuals are more likely to purchase insurance but the insurer cannot distinguish risk types, the insurer's break-even premium attracts disproportionately high-risk customers — the pool worsens. This can unravel the insurance market (Akerlof lemons model applied to insurance). 3. Correlated risks: Insurance works by diversifying across many independent risks. If risks are correlated (natural disasters, financial crises), the law of large numbers fails — the insurer cannot diversify and must charge much higher premiums or exit.",
+      "examTraps": [
+        "A student might think insurance is only valuable if you expect to make a loss on the policy, but the correct answer is that insurance is valuable to risk-averse agents even when the expected payout is less than the premium — the reduction in variance provides utility above the expected value loss.",
+        "A student might think full insurance is always optimal, but the correct answer is that full insurance is optimal only under actuarially fair pricing — with loaded premiums or moral hazard, partial coverage is optimal.",
+        "A student might think insurance companies profit because they charge unfair premiums, but the correct answer is that insurers can profit even at actuarially fair premiums through diversification — pooling independent risks reduces variance nearly to zero, allowing them to bear risk cheaply.",
+        "A student might think adverse selection is the same as moral hazard, but the correct answer is that adverse selection is pre-contract (hidden type: high-risk individuals self-select into insurance) while moral hazard is post-contract (hidden action: coverage reduces loss-prevention effort)."
+      ],
+      "frq": {
+        "prompt": "A homeowner with u(c) = ln(c) has wealth $500,000 and faces a 10% probability of a fire causing $200,000 in damage. Actuarially fair fire insurance is available.",
+        "parts": [
+          "Write the homeowner's expected utility without insurance.",
+          "Compute the actuarially fair premium for full coverage ($200,000). Compute EU with full insurance.",
+          "Confirm that EU(full insurance) > EU(no insurance). Compute the certainty equivalent of each option.",
+          "Explain in words why the insurer can offer actuarially fair insurance and still earn a profit in the long run, referring to the law of large numbers and diversification."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Why does a risk-averse agent purchase actuarially fair insurance even though the expected payout equals the premium?",
+        "back": "Actuarially fair insurance does not change expected wealth, but it reduces variance to zero. For a concave u(c): u(E[c]) > E[u(c)] by Jensen's inequality — the certain expected wealth is worth more in utility than the uncertain gamble. The agent pays to convert a risky prospect into a certain outcome, gaining utility from the risk reduction alone.",
+        "type": "condition"
+      },
+      {
+        "front": "What is the optimal insurance coverage rule for a risk-averse EU maximizer with actuarially fair insurance?",
+        "back": "Full insurance (K = L) is optimal: the agent should insure the entire loss. This follows from the FOC: u'(c_0) = u'(c_L) => c_0 = c_L (full insurance sets consumption equal in all states). The 45-degree line (c_0 = c_L) is always the tangency point when the budget line slope equals -(pi_0/pi_L) and u is strictly concave.",
+        "type": "condition"
+      },
+      {
+        "front": "Define moral hazard in the context of insurance.",
+        "back": "Moral hazard: the insured agent takes less care to prevent losses after purchasing insurance, because the insurer bears the financial consequences of accidents. It is a post-contract information problem — the insurer cannot observe or contract on the agent's effort level. Instruments to mitigate moral hazard: deductibles (agent bears first $X of loss), co-pays (agent bears fraction of loss), policy limits.",
+        "type": "definition"
+      },
+      {
+        "front": "Define adverse selection in insurance markets.",
+        "back": "Adverse selection: high-risk individuals are more likely to purchase insurance than low-risk individuals, but insurers cannot distinguish types. At any given premium, the insurer attracts a pool skewed toward high-risk customers. To break even, the insurer must raise premiums, which drives out lower-risk customers further — the market may unravel entirely (Akerlof). Instruments: screening, waiting periods, medical underwriting.",
+        "type": "definition"
+      },
+      {
+        "front": "How does diversification allow insurers to offer actuarially fair insurance profitably?",
+        "back": "If insured risks are independent across policyholders, the law of large numbers ensures that the fraction of losses approaches pi_L as the number of policies n → infinity. The variance of the insurer's per-policy payout goes to zero. The insurer bears virtually no risk on a large diversified pool, so accepting actuarially fair premiums is viable. Fails when risks are correlated (e.g., hurricane, financial crisis) — diversification cannot reduce aggregate systematic risk.",
+        "type": "definition"
+      }
+    ]
+  },
+  {
+    "id": "t61",
+    "learn": {
+      "openingTension": "The stock of a pharmaceutical company might gain 50% or lose 40% depending on a single drug trial. The S&P 500 might gain 10% or lose 5% in the same year. Why does holding both together produce a smoother return than holding either alone? And why does adding more stocks eventually stop reducing risk?",
+      "coreIdea": "Diversification reduces portfolio risk by combining assets whose returns are not perfectly correlated. When asset returns are imperfectly correlated, the variance of the portfolio sum is less than the sum of individual variances — the risks partially cancel. The key principle: idiosyncratic (firm-specific) risk can be diversified away; systematic (market-wide) risk cannot. Probability structure: each asset i has return R_i with states {s} and probabilities {pi_s}.",
+      "mathSetup": "Portfolio of two assets with weights w and (1-w): E[R_p] = w*E[R_1] + (1-w)*E[R_2]. Var[R_p] = w^2*sigma_1^2 + (1-w)^2*sigma_2^2 + 2*w*(1-w)*sigma_12, where sigma_12 = Cov(R_1,R_2) = rho*sigma_1*sigma_2. Correlation rho in [-1,1]. When rho = 1: no diversification benefit. When rho < 1: portfolio variance < weighted average variance. When rho = -1: perfect hedge possible (zero variance). For n equal-weight assets with equal variance sigma^2 and pairwise covariance sigma_12: Var[R_p] = sigma^2/n + (n-1)/n * sigma_12 → sigma_12 as n → infinity.",
+      "derivation": "1. Define portfolio return: R_p = w*R_1 + (1-w)*R_2. Economic reason: a portfolio is a weighted combination of asset returns. 2. Compute portfolio variance using the covariance formula: Var[R_p] = w^2*Var[R_1] + (1-w)^2*Var[R_2] + 2*w*(1-w)*Cov(R_1,R_2). Economic reason: variance of a sum includes cross terms (covariances) that can be negative. 3. When Cov(R_1,R_2) < sigma_1*sigma_2 (i.e., rho < 1): Var[R_p] < [w*sigma_1 + (1-w)*sigma_2]^2. Economic reason: imperfect correlation means the assets do not move in lockstep — gains in one can offset losses in the other. 4. As n → infinity with equal weights: portfolio variance = sigma^2/n + (n-1)/n * avg_covariance → average pairwise covariance. Economic reason: the firm-specific component (sigma^2/n) vanishes; what remains is systematic covariance. 5. The irreducible minimum variance = average covariance = systematic risk. No amount of diversification eliminates it.",
+      "graphicalIntuition": "On a graph with portfolio standard deviation (sigma_p) on the horizontal axis and expected return E[R_p] on the vertical axis, the set of all possible portfolios of two risky assets traces a bullet-shaped curve (the portfolio frontier). When rho < 1, the curve bends to the left — meaning lower sigma_p is achievable for the same E[R_p]. When rho = -1, the frontier reaches the vertical axis (zero variance is possible). The leftmost point on the frontier is the minimum variance portfolio (MVP). Adding more assets shifts the frontier further left, but with diminishing gains as n increases.",
+      "workedExample": "Given: Asset 1: E[R_1]=12%, sigma_1=20%. Asset 2: E[R_2]=8%, sigma_2=10%. Correlation rho=0.2. Portfolio weights: w=0.5.\nFind: Portfolio expected return and standard deviation.\nSolution: E[R_p] = 0.5*12% + 0.5*8% = 10%. Cov(R_1,R_2) = rho*sigma_1*sigma_2 = 0.2*0.20*0.10 = 0.004. Var[R_p] = (0.5)^2*(0.04) + (0.5)^2*(0.01) + 2*(0.5)*(0.5)*(0.004) = 0.01 + 0.0025 + 0.002 = 0.0145. sigma_p = sqrt(0.0145) = 12.04%.\nInterpret: Weighted average sigma = 0.5*20% + 0.5*10% = 15%. Portfolio sigma = 12.04% < 15% — diversification reduces risk from 15% to 12.04% for the same weighted average expected return of 10%.",
+      "boundaryConditions": "1. Perfect positive correlation (rho=1): No diversification benefit. Portfolio sigma = w*sigma_1 + (1-w)*sigma_2 — a weighted average. Risk cannot be reduced below the weighted average of individual risks. 2. Perfect negative correlation (rho=-1): Perfect hedge. A specific weight eliminates all variance: set w = sigma_2/(sigma_1+sigma_2). The portfolio earns a certain return. 3. Factor models: Systematic risk comes from common factors (market, sector). Even in a diversified portfolio, factor exposures create irreducible variance — this is the basis of the CAPM and multifactor models (Fama-French).",
+      "examTraps": [
+        "A student might think diversification eliminates all risk, but the correct answer is that diversification only eliminates idiosyncratic risk — systematic risk (market risk) remains and cannot be diversified away by combining assets in the same market.",
+        "A student might think adding more assets always reduces risk equally, but the correct answer is that the marginal benefit of adding assets diminishes rapidly — most diversification benefit is captured with 20-30 stocks, and adding beyond ~50 produces negligible further reduction.",
+        "A student might think correlation and covariance are the same, but the correct answer is that correlation is the standardized covariance: rho = Cov(R1,R2)/(sigma_1*sigma_2). Covariance depends on the scale of returns; correlation is unit-free and lies in [-1,1].",
+        "A student might think holding many high-return assets is always better than diversifying, but the correct answer is that the portfolio frontier shows there is a tradeoff — to get the same expected return with less risk, diversification across imperfectly correlated assets is strictly preferable."
+      ],
+      "frq": {
+        "prompt": "An investor has $10,000 to split between two assets. Asset A: E[R]=15%, sigma=25%. Asset B: E[R]=7%, sigma=12%. Correlation = -0.3.",
+        "parts": [
+          "Compute the expected return and variance of a 60% A / 40% B portfolio.",
+          "Compare the portfolio standard deviation to the weighted average standard deviation. How large is the diversification benefit?",
+          "As n risky assets are added to the portfolio (all with equal variance sigma^2 and equal pairwise covariance sigma_c), write the formula for portfolio variance and identify what happens as n → infinity.",
+          "Explain why systematic risk cannot be diversified away, and what this implies for the compensation investors can expect for bearing it."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Write the portfolio variance formula for two assets with weights w and (1-w).",
+        "back": "Var[R_p] = w^2*sigma_1^2 + (1-w)^2*sigma_2^2 + 2*w*(1-w)*Cov(R_1,R_2). Equivalently: use rho*sigma_1*sigma_2 for the covariance. When rho < 1, portfolio variance < the squared weighted average of individual standard deviations — the diversification benefit. When rho = 1, no benefit; when rho = -1, perfect hedge is possible.",
+        "type": "formula"
+      },
+      {
+        "front": "What happens to portfolio variance as n equal-weight assets are added (equal variance sigma^2, equal pairwise covariance sigma_c)?",
+        "back": "Var[R_p] = sigma^2/n + (n-1)/n * sigma_c. As n → infinity: Var → sigma_c (the average pairwise covariance). The idiosyncratic component sigma^2/n → 0; only systematic variance sigma_c remains. This shows diversification eliminates firm-specific risk but not market-wide covariance — the irreducible floor is systematic risk.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the distinction between idiosyncratic and systematic risk?",
+        "back": "Idiosyncratic (unsystematic) risk: firm-specific factors (product recalls, CEO departure, lawsuits) that are uncorrelated across firms. Fully diversifiable — goes to zero in a large portfolio. Earns no risk premium in equilibrium (CAPM). Systematic risk: economy-wide factors (recession, interest rate changes, inflation) that affect all firms simultaneously. Not diversifiable. Earns the market risk premium in equilibrium.",
+        "type": "distinction"
+      },
+      {
+        "front": "What is the minimum variance portfolio (MVP)?",
+        "back": "The portfolio with the lowest possible variance for given assets and their correlations. Weight: w_MVP = (sigma_2^2 - Cov(R1,R2)) / (sigma_1^2 + sigma_2^2 - 2*Cov(R1,R2)). The MVP is the leftmost point on the portfolio frontier. For risk-averse investors, no portfolio to the left of the MVP is achievable — it is the global minimum risk portfolio.",
+        "type": "definition"
+      },
+      {
+        "front": "How does correlation affect the diversification benefit?",
+        "back": "Lower correlation → greater diversification benefit → portfolio frontier bows further left. Rho = 1: no benefit (linear frontier). Rho = 0: substantial benefit. Rho = -1: perfect hedge possible (zero variance at specific weights). This is why international diversification (lower cross-country correlation) can reduce portfolio risk more than domestic diversification alone.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t62",
+    "learn": {
+      "openingTension": "Why do stocks historically earn more than bonds? The standard answer — stocks are riskier — is correct but incomplete. The equity premium puzzle shows that the historical stock return premium (about 6-8% above Treasury bills) seems far too large to be explained by standard risk aversion. Understanding the risk-return tradeoff requires both the theory and a clear-eyed view of where it breaks down.",
+      "coreIdea": "The risk-return tradeoff is the fundamental principle that higher expected returns require higher risk: investors will only willingly accept higher risk if compensated with higher expected returns. In the mean-variance framework, efficient portfolios maximize expected return for a given level of variance. The Capital Market Line (CML) and Security Market Line (SML) together describe the equilibrium risk-return relationship. Probability structure: S states with {pi_s}; expected return and variance are computed over all states.",
+      "mathSetup": "Probability structure: S states with {pi_s}, each asset i has return R_i^s in state s. E[R_i] = sum pi_s * R_i^s. Var[R_i] = sum pi_s * (R_i^s - E[R_i])^2. Sharpe ratio: SR = (E[R_p] - r_f) / sigma_p — expected excess return per unit of total risk. Capital Market Line (CML): E[R_p] = r_f + [(E[R_m] - r_f)/sigma_m] * sigma_p — all efficient portfolios lie on the CML. Security Market Line (SML): E[R_i] = r_f + beta_i * (E[R_m] - r_f) — all assets in equilibrium lie on the SML. Beta: beta_i = Cov(R_i, R_m) / Var(R_m).",
+      "derivation": "1. Define state-space probability structure: S states {pi_s}, asset returns {R_i^s}. Economic reason: all expected returns and variances are computed from these primitives. 2. In mean-variance space (E[R] vs sigma), the set of feasible portfolios of risky assets is a bullet-shaped frontier. Economic reason: diversification bends the frontier leftward — the portfolio variance formula allows lower sigma for given E[R]. 3. Adding the risk-free asset: any combination of a risk-free asset (at (0, r_f)) and a risky portfolio lies on a straight line in (sigma, E[R]) space. The highest slope (Sharpe ratio) line through (0, r_f) is tangent to the risky frontier — this is the Capital Market Line. Economic reason: investors prefer the steepest feasible return-risk tradeoff. 4. In equilibrium, the tangency portfolio = the market portfolio (all risky assets weighted by market cap). Economic reason: if all investors hold the same tangency portfolio (separation theorem), the market must clear with the tangency = market. 5. Each asset's equilibrium expected return is r_f + beta * market risk premium. Economic reason: only systematic risk (beta) is compensated — idiosyncratic risk earns zero premium.",
+      "graphicalIntuition": "On a graph with sigma_p on the horizontal axis and E[R_p] on the vertical axis, the risky asset frontier is a bullet-shaped curve. The Capital Market Line (CML) is the tangent line from r_f on the vertical axis to the frontier — its slope is the Sharpe ratio of the market portfolio (E[R_m]-r_f)/sigma_m. All efficient portfolios lie on the CML; no portfolio above the CML is achievable. A separate graph (beta on horizontal, E[R] on vertical) shows the SML — a straight line where all correctly priced assets must lie. Assets above the SML offer positive alpha (excess return) and are underpriced.",
+      "workedExample": "Given: r_f = 3%. Market: E[R_m] = 11%, sigma_m = 15%. Asset X: E[R_X] = 14%, beta_X = 1.2.\nFind: SML expected return for Asset X, Sharpe ratio of the market, and whether X offers alpha.\nSolution: SML: E[R_X]^SML = 3% + 1.2*(11%-3%) = 3% + 9.6% = 12.6%. Market Sharpe ratio = (11%-3%)/15% = 0.533. Asset X alpha = 14% - 12.6% = +1.4%.\nInterpret: Asset X offers 14% expected return versus the CAPM prediction of 12.6% — it has positive alpha of 1.4%. In an efficient market, this is impossible in equilibrium — investors would buy X, driving up its price until E[R_X] falls to 12.6%. The positive alpha is an arbitrage signal in the CAPM framework.",
+      "boundaryConditions": "1. Equity premium puzzle: Historical U.S. equity premium of ~6-8% above T-bills implies implausibly high risk aversion (coefficient ~30-50) under standard utility functions. Standard CAPM with reasonable risk aversion predicts a much smaller premium. Proposed solutions include rare disaster risk, habit formation utility, and limited participation. 2. Mean-variance approximation: The mean-variance framework is exact only for normal distributions or quadratic utility. For fat-tailed returns (as in financial crises), skewness and kurtosis matter and the two-moment description is insufficient. 3. Multifactor models: CAPM beta explains only a fraction of cross-sectional return variation. Fama-French three-factor model adds size and value factors; momentum is a fourth empirical factor. These may represent systematic risk factors not in the CAPM, or they may represent mispricings.",
+      "examTraps": [
+        "A student might think the CML and SML are the same, but the correct answer is the CML plots E[R_p] vs sigma_p (total risk) for efficient portfolios while the SML plots E[R_i] vs beta_i (systematic risk) for all individual assets — they answer different questions.",
+        "A student might think a higher Sharpe ratio always means a better investment, but the correct answer is that the Sharpe ratio is the right metric only for well-diversified portfolios — for a single asset that will be combined with other assets, beta (contribution to portfolio risk) is the relevant measure.",
+        "A student might think positive alpha always signals a great investment, but the correct answer is that alpha measures return relative to CAPM — it could reflect omitted risk factors rather than true mispricing, and those factors may be compensated risks rather than free lunches.",
+        "A student might think the efficient frontier includes all possible portfolios, but the correct answer is that the efficient frontier is only the upper part of the portfolio frontier — portfolios below the minimum variance portfolio are inefficient because higher E[R] is available at the same sigma."
+      ],
+      "frq": {
+        "prompt": "An economy has a risk-free rate of 4%, market expected return of 12%, and market standard deviation of 20%. Asset A has beta = 0.8, sigma = 25%, and expected return = 11%. Asset B has beta = 1.4, sigma = 30%, and expected return = 14%.",
+        "parts": [
+          "Compute the CAPM expected return (SML prediction) for Asset A and Asset B.",
+          "Compute the alpha for each asset. Which is underpriced and which is overpriced according to the CAPM?",
+          "Compute the Sharpe ratio for Asset A and Asset B. Explain why the Sharpe ratio is not the right measure for evaluating individual assets in a diversified portfolio.",
+          "Describe what market forces would drive Asset A's price if it truly offers a positive alpha, and explain at what equilibrium price the alpha disappears."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "State the CAPM Security Market Line and define each term.",
+        "back": "E[R_i] = r_f + beta_i * (E[R_m] - r_f). r_f = risk-free rate; beta_i = Cov(R_i,R_m)/Var(R_m) = systematic risk measure; (E[R_m]-r_f) = market risk premium = slope of SML. In equilibrium, all assets lie on the SML. Deviations (alpha) should be zero in an efficient market. CAPM connects individual expected returns to a single systematic risk factor.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the Sharpe ratio and when is it the appropriate performance measure?",
+        "back": "Sharpe ratio = (E[R_p] - r_f) / sigma_p. Appropriate for evaluating a standalone portfolio (the entire investment) because sigma_p is the relevant total risk measure. Inappropriate for evaluating a single asset that is one component of a larger portfolio — for that, beta (contribution to portfolio risk) is correct. Highest Sharpe ratio portfolio on the CML = market portfolio.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the Capital Market Line (CML) and how does it differ from the SML?",
+        "back": "CML: E[R_p] = r_f + [(E[R_m]-r_f)/sigma_m] * sigma_p — plots efficient portfolios (combinations of market portfolio and risk-free asset) in (sigma, E[R]) space. SML: E[R_i] = r_f + beta_i*(E[R_m]-r_f) — plots all assets and portfolios in (beta, E[R]) space. CML is for efficient portfolios using total risk (sigma); SML is for all assets using systematic risk (beta).",
+        "type": "distinction"
+      },
+      {
+        "front": "What is alpha, and what does it imply if an asset has positive alpha?",
+        "back": "Alpha = E[R_i] - [r_f + beta_i*(E[R_m]-r_f)] = actual expected return minus CAPM predicted return. Positive alpha: asset earns more than its systematic risk justifies — it is underpriced. In an efficient market, positive alpha triggers buying, which raises price and lowers expected return until alpha = 0. Negative alpha: asset is overpriced. Persistent positive alpha (after transaction costs) contradicts the efficient market hypothesis.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the equity premium puzzle?",
+        "back": "The historical U.S. equity premium (~6-8% above T-bills) implies a coefficient of relative risk aversion of ~30-50 under standard expected utility — implausibly high. Standard theory cannot reconcile observed equity premiums with observed consumption volatility and plausible risk aversion. Proposed solutions: rare disaster risk, habit formation, limited stock market participation, ambiguity aversion. It is one of the most important unresolved puzzles in macroeconomics and finance.",
+        "type": "definition"
+      },
+      {
+        "front": "For a well-diversified portfolio, what determines expected return according to the CAPM?",
+        "back": "Only systematic risk (beta) determines expected return. Idiosyncratic risk contributes to variance for individual assets but earns zero premium because it can be diversified away. Thus: E[R_i] = r_f + beta_i*(E[R_m]-r_f). A portfolio with beta=2 earns twice the market risk premium above r_f. Higher idiosyncratic sigma does not increase expected return — connects directly to the diversification principle from t61.",
+        "type": "condition"
+      }
+    ]
+  }
+]

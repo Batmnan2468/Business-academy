@@ -1,0 +1,272 @@
+[
+  {
+    "id": "t54",
+    "learn": {
+      "openingTension": "When you buy car insurance, you are paying money today for something you hope never happens. But 'nothing happening' and 'something happening' cannot both occur — the future must fall into one scenario or another. How do economists model decisions when the future is uncertain but the set of possible futures is known?",
+      "coreIdea": "A state of nature is a complete description of all relevant aspects of the world in some future scenario. States partition the set of possible futures into mutually exclusive, exhaustive outcomes. This is the foundational vocabulary for decision-making under uncertainty: before we can write down preferences or constraints, we need to define what the world might look like. The probability structure assigns pi_s to each state s, where sum pi_s = 1.",
+      "mathSetup": "Probability structure: S states of nature {s1, s2, ..., sS} with probabilities {pi_1, pi_2, ..., pi_S}, where pi_s >= 0 for all s and sum_{s=1}^{S} pi_s = 1. State-contingent payoff: x_s = amount received if state s occurs. Expected value: E[x] = sum_{s=1}^{S} pi_s * x_s. Variance: Var[x] = sum_{s=1}^{S} pi_s * (x_s - E[x])^2. Standard deviation: sigma = sqrt(Var[x]). For binary states (good/bad): E[x] = pi_g * x_g + pi_b * x_b.",
+      "derivation": "1. Define the state space: enumerate all relevant possible futures. Economic reason: uncertainty must be structured — we need to know what might happen before we can evaluate options. 2. Assign probabilities: either objective (from frequency data) or subjective (personal beliefs). Economic reason: probability is the mathematical language for degree of belief about which state occurs. 3. Write state-contingent payoffs: specify what the consumer/agent receives in each state. Economic reason: most real-world situations involve different outcomes in different states — insurance pays only if you crash, stocks earn dividends only if solvent. 4. Compute expectations: probability-weight the payoffs. Economic reason: the expected value is the average outcome in the long run if the situation is repeated. 5. Note: expected value ignores risk — two assets can have the same E[x] but different variances and be valued differently by risk-averse agents.",
+      "graphicalIntuition": "Common Misreading: Students often confuse 'states of nature' with 'outcomes.' States are descriptions of the world (e.g., 'the economy recesses'); outcomes are what you receive given that state (e.g., '$500 if recession'). A single state can be associated with many different payoffs depending on what assets you hold — the state is exogenous (nature's move), the payoff is your return given the state and your portfolio choice.",
+      "workedExample": "Given: Two states — 'good economy' (probability 0.7, stock pays $200) and 'bad economy' (probability 0.3, stock pays $50).\nFind: Expected value, variance, and standard deviation of the stock payoff.\nSolution: E[x] = 0.7*200 + 0.3*50 = 140 + 15 = $155. Var[x] = 0.7*(200-155)^2 + 0.3*(50-155)^2 = 0.7*2025 + 0.3*11025 = 1417.5 + 3307.5 = 4725. sigma = sqrt(4725) = $68.75.\nInterpret: The stock pays $155 on average but varies by ±$68.75 (one standard deviation). A risk-averse investor may prefer a bond paying exactly $155 in both states — same expected value, zero variance.",
+      "boundaryConditions": "1. Subjective vs. objective probability: When frequencies are not observable (rare events, unique situations), probabilities become subjective beliefs. Different agents may assign different probabilities to the same states — leading to heterogeneous beliefs and trade. The model is consistent with both interpretations. 2. Ambiguity (Knightian uncertainty): When the probability distribution over states is itself unknown, standard expected utility theory breaks down. Ambiguity-averse agents prefer known-probability bets over unknown-probability bets — the Ellsberg paradox demonstrates this violates standard expected utility. 3. Moral hazard: When the agent's action affects which state occurs (e.g., effort reduces accident probability), states cannot be treated as fully exogenous — the probability distribution becomes endogenous to the agent's choices.",
+      "examTraps": [
+        "A student might think states of nature are chosen by the agent, but the correct answer is that states are exogenous — they describe what nature does, not what the agent does. The agent chooses how much to hold in each state, not which state occurs.",
+        "A student might think expected value fully describes a risky prospect, but the correct answer is that expected value alone ignores risk (variance) — two assets with the same E[x] but different variances are not equivalent for risk-averse agents.",
+        "A student might think the probabilities must be objective (known from data), but the correct answer is that the model accepts subjective probabilities — personalistic beliefs that vary across agents and lead to heterogeneous behavior.",
+        "A student might think more states of nature always mean more uncertainty, but the correct answer is that the number of states alone is irrelevant — it is the variance of outcomes across states that measures uncertainty, which depends on both the probability distribution and the magnitude of payoff differences."
+      ],
+      "frq": {
+        "prompt": "An investor holds an asset with the following payoffs: state Good (probability 0.6, payoff $500), state Medium (probability 0.3, payoff $200), state Bad (probability 0.1, payoff -$100).",
+        "parts": [
+          "Verify the probability structure is valid. Compute the expected payoff.",
+          "Compute the variance and standard deviation of the payoff.",
+          "A second asset pays $260 in all states. Compare the two assets in terms of expected value and risk. Which would a risk-averse agent prefer?",
+          "Explain what 'moral hazard' means in the context of states of nature, and give an example where the agent's behavior affects the probability distribution over states."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is a state of nature?",
+        "back": "A state of nature is a complete description of all relevant aspects of the world in a given scenario — it is nature's move before the agent acts or receives payoffs. States must be mutually exclusive (only one occurs) and exhaustive (one must occur). The probability structure assigns pi_s >= 0 to each state, with sum pi_s = 1.",
+        "type": "definition"
+      },
+      {
+        "front": "Write the expected value formula for a discrete random payoff with S states.",
+        "back": "E[x] = sum_{s=1}^{S} pi_s * x_s, where pi_s = probability of state s and x_s = payoff in state s. Expected value is the probability-weighted average outcome. Two assets with the same E[x] but different variance are NOT equivalent for a risk-averse agent — expected value is a necessary but insufficient description of a risky prospect.",
+        "type": "formula"
+      },
+      {
+        "front": "Write the variance formula for a state-contingent payoff.",
+        "back": "Var[x] = sum_{s=1}^{S} pi_s * (x_s - E[x])^2. Standard deviation: sigma = sqrt(Var[x]). Variance measures the average squared deviation from the mean, weighted by probability. High variance = high risk for given expected value. Connects to the tradeoff between risk and return that underlies all portfolio theory.",
+        "type": "formula"
+      },
+      {
+        "front": "Distinguish: risk vs. ambiguity (Knightian uncertainty).",
+        "back": "Risk: the probability distribution over states is known (or estimable from data). Standard expected utility applies. Ambiguity: the probability distribution itself is unknown — you do not know the chances of each state. Ambiguity-averse agents prefer known-risk bets, violating expected utility (Ellsberg paradox). Most standard microeconomic models assume risk, not ambiguity.",
+        "type": "distinction"
+      }
+    ]
+  },
+  {
+    "id": "t55",
+    "learn": {
+      "openingTension": "You can buy a raincoat today that will be useful only if it rains tomorrow. You can also buy sunscreen that is useful only if it is sunny. These are both goods, but their usefulness depends on which state of the world occurs. How do economists model consumption bundles when payoffs are state-contingent?",
+      "coreIdea": "Contingent consumption is consumption in a specific state of nature — a claim to goods that is received only if a particular state occurs. The key insight is that contingent consumption claims are just ordinary commodities: the consumer chooses a bundle of state-contingent claims (c_good, c_bad) subject to a budget constraint, exactly as in standard consumer theory. Insurance, financial derivatives, and portfolio choice are all applications of contingent consumption.",
+      "mathSetup": "Two-state model: states {g (good), b (bad)} with probabilities {pi_g, pi_b}, pi_g + pi_b = 1. Endowment: (m_g, m_b) — wealth in each state. Contingent consumption bundle: (c_g, c_b) — consumption in each state. Actuarially fair insurance: premium = pi_b * K where K = coverage amount. Budget line: c_b = m_b + K and c_g = m_g - premium. Eliminating K: c_g + (pi_b/pi_g) * c_b = m_g + (pi_b/pi_g) * m_b — the slope is -(pi_g/pi_b) for actuarially fair insurance.",
+      "derivation": "1. Define the state-contingent goods: (c_g, c_b) is a bundle where c_g units are consumed if the good state occurs, c_b if the bad state occurs. Economic reason: these are genuinely different goods — they are available in different circumstances. 2. Identify the endowment (m_g, m_b): the consumer's wealth in each state without insurance or financial contracting. Economic reason: this is the starting allocation before any risk-sharing. 3. Insurance or financial contracts allow the consumer to trade state-contingent claims — moving along a budget line in (c_g, c_b) space. Economic reason: buying insurance reduces c_g (paying premium) in exchange for increasing c_b (receiving payout). 4. The price of a unit of c_b in terms of c_g is pi_b/pi_g for actuarially fair insurance. Economic reason: the insurer breaks even when premium = probability * coverage. 5. The budget constraint in state-contingent consumption space has slope -(pi_g/pi_b) and passes through the endowment.",
+      "graphicalIntuition": "On a graph with c_g on the horizontal axis and c_b on the vertical axis, the budget constraint is a line passing through the endowment (m_g, m_b) with slope -(pi_g/pi_b). The 45-degree line represents full insurance — where c_g = c_b (equal consumption regardless of state). A risk-averse agent's optimal choice is on the 45-degree line when insurance is actuarially fair. Moving northwest along the budget line means buying more insurance (giving up some c_g to gain c_b).",
+      "workedExample": "Given: pi_g = 0.8, pi_b = 0.2. Endowment: m_g = $100, m_b = $40. Actuarially fair insurance available.\nFind: Budget constraint in contingent consumption space and the optimal choice for a risk-averse agent.\nSolution: Budget line: c_g + (0.2/0.8)*c_b = 100 + (0.2/0.8)*40 = 100 + 10 = 110. So c_g + 0.25*c_b = 110. Slope = -(0.8/0.2) = -4. Full insurance (45-degree line: c_g = c_b): solve c + 0.25c = 110, so 1.25c = 110, c* = $88.\nInterpret: At the optimum, the consumer pays a premium of 100 - 88 = $12 (= pi_b * K = 0.2 * 60, where K = 60 = coverage) to guarantee $88 in both states. The expected wealth check: 0.8*88 + 0.2*88 = $88 = 0.8*100 + 0.2*40 = $88. Actuarially fair insurance does not change expected wealth.",
+      "boundaryConditions": "1. Actuarially unfair insurance: If the insurer charges a loading factor (premium > pi_b * K), the budget line rotates inward — its slope steepens beyond -(pi_g/pi_b). A risk-averse agent will buy less than full insurance and the optimum is inside the 45-degree line. 2. Uninsurable risks: Some states cannot be contracted on because they are not verifiable or observable — moral hazard and adverse selection restrict the market for contingent claims. When full markets for contingent claims do not exist, the Arrow-Debreu first welfare theorem fails. 3. No short-selling: The consumer cannot sell contingent claims they do not own (c_g, c_b >= 0). This truncates the budget set on both sides.",
+      "examTraps": [
+        "A student might think the optimal choice always equals the endowment, but the correct answer is that a risk-averse agent with access to actuarially fair insurance optimally moves to the 45-degree line — full insurance at lower but equal consumption in both states.",
+        "A student might think the budget line for contingent consumption has slope -1, but the correct answer is the slope is -(pi_g/pi_b) for actuarially fair insurance — it reflects the probability ratio, not a 1:1 exchange.",
+        "A student might think higher insurance premiums always make you worse off, but the correct answer is that a risk-averse agent may be willing to pay actuarially unfair premiums — the utility gain from reduced risk can exceed the expected payment loss.",
+        "A student might think contingent consumption is only relevant for insurance, but the correct answer is that stocks, bonds, options, and any asset with state-contingent payoffs are all analyzed using this framework — finance IS contingent consumption theory."
+      ],
+      "frq": {
+        "prompt": "A farmer faces two states: Rain (probability 0.6, crop value $20,000) and Drought (probability 0.4, crop value $5,000). Actuarially fair crop insurance is available.",
+        "parts": [
+          "Write the farmer's endowment and construct the budget constraint in (c_Rain, c_Drought) space. What is the slope of the budget line?",
+          "Find the full-insurance bundle (on the 45-degree line). Compute the insurance premium and coverage amount.",
+          "Show that full insurance does not change expected wealth — verify algebraically.",
+          "If the insurance company charges a 20% loading (premium = 1.2 * pi_b * K), explain how the budget line changes and whether the farmer will still buy full insurance. No calculation needed — use a graph description."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is a contingent consumption claim?",
+        "back": "A claim to a specific amount of consumption in a specific state of nature — received only if that state occurs. (c_g, c_b) represents consumption in the good state and bad state respectively. Contingent claims are ordinary goods in a state-space model — the consumer optimizes over them just as over (x1, x2) in standard consumer theory.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the slope of the budget line in contingent consumption space under actuarially fair insurance?",
+        "back": "Slope = -(pi_g/pi_b), where pi_g and pi_b are the probabilities of the good and bad states. This follows because a fair premium of pi_b per unit of coverage costs pi_b units of c_g to gain 1 unit of c_b. The budget line passes through the endowment (m_g, m_b).",
+        "type": "formula"
+      },
+      {
+        "front": "What does the 45-degree line represent in contingent consumption space?",
+        "back": "The 45-degree line (c_g = c_b) represents full insurance — equal consumption in all states regardless of which occurs. A risk-averse agent with actuarially fair insurance will always choose full insurance (optimal point on the 45-degree line) because the tangency condition implies MRS = pi_g/pi_b at c_g = c_b for expected utility maximizers.",
+        "type": "graph"
+      },
+      {
+        "front": "How does actuarially unfair insurance shift the optimal contingent consumption choice?",
+        "back": "Actuarially unfair insurance (with loading) steepens the budget line beyond -(pi_g/pi_b). The agent can no longer reach the 45-degree line at the same expected wealth — the optimum is interior, with c_b > c_g typically (still some insurance but not full). The agent buys partial insurance: gives up expected value to reduce risk, but stops before full coverage because the marginal cost exceeds the actuarially fair price.",
+        "type": "condition"
+      },
+      {
+        "front": "Why does actuarially fair insurance preserve expected wealth?",
+        "back": "Premium = pi_b * K. In the good state, the agent pays the premium: c_g = m_g - pi_b*K. In the bad state, the agent receives coverage: c_b = m_b + (1-pi_b)*K. Expected wealth: pi_g*(m_g - pi_b*K) + pi_b*(m_b + (1-pi_b)*K) = pi_g*m_g + pi_b*m_b after algebra. Insurance redistributes wealth across states without changing the expected total — it is a risk-sharing device, not a wealth creator.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t56",
+    "learn": {
+      "openingTension": "Most people prefer a certain $100 to a 50-50 gamble between $0 and $200 — even though both have the same expected value of $100. Standard expected value maximization cannot explain this. Expected utility theory explains it by applying diminishing marginal utility to uncertain outcomes, and it forms the basis of all modern decision theory under risk.",
+      "coreIdea": "Expected utility theory (EUT) is the canonical model of rational choice under uncertainty: agents maximize the probability-weighted average of utility — not of dollar outcomes. The probability structure assigns pi_s to state s, and the agent has a von Neumann-Morgenstern utility function u(c) over consumption. The optimization problem is max sum_{s} pi_s * u(c_s) subject to the budget constraint. For t54-t62, the probability structure is: S states with probabilities {pi_s} satisfying sum pi_s = 1, and expected utility is EU = sum_{s=1}^{S} pi_s * u(c_s).",
+      "mathSetup": "Probability structure: S states, probabilities {pi_1, ..., pi_S} with sum pi_s = 1 and pi_s >= 0. Von Neumann-Morgenstern utility function: u(c) defined over consumption c. Expected utility: EU = sum_{s=1}^{S} pi_s * u(c_s). For two states: EU = pi_g * u(c_g) + pi_b * u(c_b). The function u(c) must be cardinal (unique up to positive affine transformation): u*(c) = a + b*u(c) represents the same preferences. Risk aversion is captured by concavity: u''(c) < 0. Risk neutrality: u''(c) = 0. Risk seeking: u''(c) > 0.",
+      "derivation": "1. Start with the probability structure: pi_g, pi_b with pi_g + pi_b = 1. Define state-contingent consumption (c_g, c_b). Economic reason: uncertainty is fully characterized by stating which state occurs and what is consumed in each state. 2. Write expected utility: EU = pi_g * u(c_g) + pi_b * u(c_b). Economic reason: the vNM theorem shows that consistent preferences over lotteries imply they can be represented by expected utility — not a behavioral assumption but a representation theorem. 3. The optimization problem in contingent consumption space: max EU subject to the budget constraint. Economic reason: same structure as standard consumer theory — just replace goods (x1,x2) with state-contingent consumption (c_g,c_b) and utility U(x1,x2) with EU = pi_g*u(c_g)+pi_b*u(c_b). 4. First-order conditions: pi_g * u'(c_g) = lambda * (price of c_g) and pi_b * u'(c_b) = lambda * (price of c_b). Economic reason: probability-weighted marginal utility per dollar must equalize across states. 5. For actuarially fair insurance (slope = -pi_g/pi_b): optimality condition is pi_g*u'(c_g) / pi_b*u'(c_b) = pi_g/pi_b, which simplifies to u'(c_g) = u'(c_b), implying c_g = c_b (full insurance) when u is strictly concave.",
+      "graphicalIntuition": "On a graph with c_g horizontal and c_b vertical, expected utility indifference curves are the EU analogs of standard indifference curves. The slope of an EU indifference curve is -[pi_g * u'(c_g)] / [pi_b * u'(c_b)]. At the 45-degree line (c_g = c_b), the slope equals -pi_g/pi_b — exactly the slope of the actuarially fair budget line. This is why a concave-utility agent always optimally chooses the 45-degree line under fair insurance: the tangency condition is satisfied there.",
+      "workedExample": "Given: pi_g = 0.6, pi_b = 0.4. Endowment: (c_g, c_b) = ($100, $36). u(c) = sqrt(c). Full insurance available at actuarially fair rate.\nFind: EU at endowment, EU at full insurance (c*=c*), and verify full insurance is optimal.\nSolution: EU(endowment) = 0.6*sqrt(100) + 0.4*sqrt(36) = 0.6*10 + 0.4*6 = 6 + 2.4 = 8.4. Expected wealth: 0.6*100 + 0.4*36 = 60 + 14.4 = $74.4. Full insurance: c* = $74.4. EU(full insurance) = 0.6*sqrt(74.4) + 0.4*sqrt(74.4) = sqrt(74.4) = 8.625.\nInterpret: EU rises from 8.4 to 8.625 by purchasing full insurance — even though expected wealth is unchanged at $74.40. The agent gives up income variation for certainty, gaining utility from the reduced risk.",
+      "boundaryConditions": "1. Allais paradox: Systematic violations of expected utility occur in experiments — agents exhibit 'certainty effects,' overweighting certain outcomes relative to EU predictions. Prospect theory replaces EU with probability weighting functions. 2. Independence axiom: EUT requires the independence axiom (adding a common lottery to both options does not change their ranking). This is violated systematically in laboratory experiments, suggesting EUT is descriptively imperfect even if normatively appealing. 3. Non-expected utility: Rank-dependent utility, ambiguity models, and cumulative prospect theory generalize EUT when independence fails. These models are used in behavioral finance and insurance economics when standard EUT predictions fail.",
+      "examTraps": [
+        "A student might think expected utility is the same as expected value, but the correct answer is that expected utility is the expected value of u(c), not of c itself — EU = E[u(c)] which equals E[c] only if u is linear (risk-neutral case).",
+        "A student might think a risk-averse agent never takes gambles, but the correct answer is that risk-averse agents take gambles when compensated with a sufficiently high risk premium — risk aversion means preferring certainty at the same expected value, not refusing all uncertainty.",
+        "A student might think the vNM utility function is unique (like ordinal utility), but the correct answer is that it is cardinal and unique only up to positive affine transformations: u*(c) = a + b*u(c) represents identical preferences for b > 0.",
+        "A student might think full insurance is always optimal, but the correct answer is that full insurance is optimal only when insurance is actuarially fair — with an actuarially unfair (loaded) premium, the optimal coverage is partial."
+      ],
+      "frq": {
+        "prompt": "A risk-averse agent has u(c) = ln(c), faces states Good (pi=0.7, c_g=$400) and Bad (pi=0.3, c_b=$100). Actuarially fair insurance is available.",
+        "parts": [
+          "Write down the expected utility formula and compute EU at the initial endowment (no insurance).",
+          "Compute the full-insurance consumption level. Is it lower, equal to, or higher than expected wealth? Explain.",
+          "Compute EU under full insurance. Confirm that EU(full insurance) > EU(no insurance).",
+          "Explain why a risk-averse agent prefers full insurance even though expected wealth is identical with and without insurance — use the concept of Jensen's inequality."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "State the expected utility formula for S states of nature.",
+        "back": "EU = sum_{s=1}^{S} pi_s * u(c_s), where pi_s = probability of state s, u(c_s) = utility if state s occurs, and sum pi_s = 1. This is the von Neumann-Morgenstern expected utility. Before any derivation: the probability structure must be specified — which states exist, what probabilities they carry, and what consumption occurs in each.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the von Neumann-Morgenstern utility theorem?",
+        "back": "If preferences over lotteries satisfy completeness, transitivity, continuity, and the independence axiom, then they can be represented by an expected utility function EU = sum pi_s * u(c_s). The function u(c) is cardinal — unique up to positive affine transformation: u*(c) = a + b*u(c) represents the same preferences for any a, b > 0.",
+        "type": "definition"
+      },
+      {
+        "front": "What does concavity of u(c) imply about risk preferences?",
+        "back": "u''(c) < 0 (concave): risk-averse — prefers certainty to a gamble with same expected value. u''(c) = 0 (linear): risk-neutral — indifferent between certainty and fair gamble. u''(c) > 0 (convex): risk-seeking — prefers the gamble. Concavity captures diminishing marginal utility: each additional dollar of consumption yields less additional utility, so losing $1 hurts more than gaining $1 helps.",
+        "type": "condition"
+      },
+      {
+        "front": "What is Jensen's Inequality and what does it imply for risk aversion?",
+        "back": "Jensen's Inequality: for a concave function u, E[u(c)] < u(E[c]). This means a risk-averse agent's expected utility from a gamble is strictly less than the utility of receiving the expected value with certainty. Therefore, the agent prefers the certain expected value to the risky gamble — the formal foundation for risk aversion. Connects to the certainty equivalent being less than expected value.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the optimality condition for expected utility maximization in contingent consumption space?",
+        "back": "[pi_g * u'(c_g)] / [pi_b * u'(c_b)] = p_g / p_b, where p_g/p_b is the relative price of consumption in the good vs. bad state. For actuarially fair insurance, p_g/p_b = pi_g/pi_b, so the condition simplifies to u'(c_g) = u'(c_b), implying c_g = c_b. This is why a risk-averse EU-maximizer buys full insurance when it is actuarially fair.",
+        "type": "formula"
+      },
+      {
+        "front": "Distinguish: expected utility EU = E[u(c)] vs. utility of expected value u(E[c]).",
+        "back": "EU = sum pi_s * u(c_s) = expected value of utility. u(E[c]) = utility evaluated at the expected consumption level. For concave u: EU < u(E[c]) — Jensen's inequality. The gap u(E[c]) - EU measures how much the agent dislikes the risk. The certainty equivalent is the c_CE where u(c_CE) = EU — the certain amount that gives the same utility as the gamble.",
+        "type": "distinction"
+      }
+    ]
+  },
+  {
+    "id": "t57",
+    "learn": {
+      "openingTension": "Two assets both return $100 on average. Asset A always returns exactly $100. Asset B returns $0 or $200 with equal probability. A rational investor who cares only about expected value is indifferent. But almost every real investor prefers Asset A. Risk aversion is the preference for certainty over risk at the same expected value — and it is among the most empirically robust regularities in economics.",
+      "coreIdea": "Risk aversion is the preference for a certain outcome over a risky prospect with the same expected value. It arises from diminishing marginal utility: u''(c) < 0. A risk-averse agent is willing to pay to avoid risk (buy insurance, accept lower expected returns for safety). The Arrow-Pratt measures quantify the degree of risk aversion: how much the agent will sacrifice in expected value to eliminate risk.",
+      "mathSetup": "Probability structure: two states {g, b} with pi_g + pi_b = 1; or S states generally. Expected utility: EU = sum pi_s * u(c_s). Risk aversion: u''(c) < 0. Absolute risk aversion (ARA): A(c) = -u''(c)/u'(c). Relative risk aversion (RRA): R(c) = -c*u''(c)/u'(c). CARA (constant absolute risk aversion): u(c) = -e^(-alpha*c), A(c) = alpha. CRRA (constant relative risk aversion): u(c) = c^(1-rho)/(1-rho) for rho != 1, or u(c) = ln(c) for rho = 1. For ln(c): A(c) = 1/c (decreasing ARA), R(c) = 1 (constant RRA).",
+      "derivation": "1. Define risk aversion: agent prefers E[c] with certainty to a gamble with the same expected value. Economic reason: concave utility means u(E[c]) > E[u(c)] by Jensen's inequality. 2. Absolute risk aversion A(c) = -u''(c)/u'(c) measures how much the agent is willing to pay (in dollars) to avoid a small actuarially fair gamble. Economic reason: A(c) is invariant to positive affine transformations of u — it captures pure risk preferences. 3. Decreasing ARA (DARA): A'(c) < 0 — richer agents are willing to take on more absolute risk. Empirically observed: wealthy individuals hold riskier portfolios. 4. Relative risk aversion R(c) = c*A(c) measures willingness to pay as a fraction of wealth. CRRA (constant RRA) is the most widely used in macroeconomics and finance because portfolio shares are independent of wealth. 5. For ln(c): u'(c) = 1/c, u''(c) = -1/c^2, A(c) = (1/c^2)/(1/c) = 1/c (DARA), R(c) = 1 (CRRA).",
+      "graphicalIntuition": "On a graph with c on the horizontal axis and u(c) on the vertical axis, risk aversion is visible as a concave (bowed downward) utility curve. For a 50-50 gamble between c_L (low) and c_H (high): EU = 0.5*u(c_L) + 0.5*u(c_H) = the midpoint on the chord connecting (c_L, u(c_L)) and (c_H, u(c_H)). The utility of expected value u(E[c]) = u(0.5*c_L + 0.5*c_H) is on the curve above this chord midpoint. The horizontal distance from E[c] to the certainty equivalent is the risk premium.",
+      "workedExample": "Given: u(c) = sqrt(c). States: Good (pi=0.5, c_g=$144), Bad (pi=0.5, c_b=$36).\nFind: EU, E[c], u(E[c]), and verify risk aversion.\nSolution: EU = 0.5*sqrt(144) + 0.5*sqrt(36) = 0.5*12 + 0.5*6 = 6 + 3 = 9. E[c] = 0.5*144 + 0.5*36 = 90. u(E[c]) = sqrt(90) = 9.487.\nInterpret: EU = 9 < 9.487 = u(E[c]): Jensen's inequality holds — the agent strictly prefers receiving $90 with certainty over the 50-50 gamble. ARA = -u''(c)/u'(c) = (1/4c^(3/2)) / (1/2c^(1/2)) = 1/(2c). Since A'(c) < 0, this agent exhibits decreasing absolute risk aversion — richer agents take more absolute risk.",
+      "boundaryConditions": "1. Risk neutrality: If u(c) = a + bc (linear), then ARA = RRA = 0, and E[u(c)] = u(E[c]). Risk-neutral agents only care about expected value — insurance has no value to them. 2. Risk seeking: u''(c) > 0 (convex utility) means the agent prefers the gamble to the certain expected value. Gambling behavior at low stakes for some individuals is consistent with locally convex utility in the loss domain (Friedman-Savage utility). 3. CARA vs. DARA: CARA (constant ARA) implies portfolio choice is independent of wealth level, which is empirically counterfactual — wealthy people do hold riskier portfolios. DARA (decreasing ARA) is needed to match the observed portfolio facts.",
+      "examTraps": [
+        "A student might think risk aversion means refusing all risky choices, but the correct answer is that risk-averse agents take risky options when compensated by a sufficient risk premium — they require higher expected returns for bearing more risk.",
+        "A student might think all concave utility functions have the same degree of risk aversion, but the correct answer is that the Arrow-Pratt measure A(c) = -u''(c)/u'(c) captures differences in degree of risk aversion across utility functions with the same concavity direction.",
+        "A student might think absolute and relative risk aversion always move together, but the correct answer is that for ln(c), ARA = 1/c decreases in wealth while RRA = 1 stays constant — they measure different things and can behave differently.",
+        "A student might think risk aversion is a behavioral bias, but the correct answer is that risk aversion follows from any concave utility function — it is a fundamental feature of rational expected utility maximization, not an irrationality."
+      ],
+      "frq": {
+        "prompt": "Two consumers both face the same 50-50 gamble between $100 and $0. Consumer A has utility u_A(c) = sqrt(c). Consumer B has utility u_B(c) = c^(0.25).",
+        "parts": [
+          "Compute EU for each consumer. Compute E[c] and u(E[c]) for each. Verify Jensen's inequality holds for both.",
+          "Compute the Arrow-Pratt absolute risk aversion A(c) for each utility function. At c = $50, which consumer is more risk-averse?",
+          "Compute the certainty equivalent for each consumer (the c_CE such that u(c_CE) = EU). Which consumer has the lower certainty equivalent, and what does this reveal about their risk aversion?",
+          "Explain in words what it means to say Consumer B is 'more risk-averse' than Consumer A, in terms of what each is willing to pay to avoid the gamble."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define risk aversion and state its mathematical characterization.",
+        "back": "Risk aversion: preference for a certain outcome over a gamble with the same expected value. Mathematical characterization: u''(c) < 0 (concavity of the utility function). Equivalently, by Jensen's inequality: E[u(c)] < u(E[c]) for any non-degenerate gamble. Risk aversion is the standard assumption in consumer, insurance, and portfolio theory.",
+        "type": "definition"
+      },
+      {
+        "front": "State the Arrow-Pratt absolute risk aversion (ARA) formula.",
+        "back": "A(c) = -u''(c) / u'(c). This is the negative of the ratio of second to first derivative of utility. A(c) is invariant to positive affine transformations of u — it captures pure risk preferences. For sqrt(c): A(c) = 1/(2c). For ln(c): A(c) = 1/c. For -e^(-alpha*c): A(c) = alpha (constant — CARA).",
+        "type": "formula"
+      },
+      {
+        "front": "State the Arrow-Pratt relative risk aversion (RRA) formula.",
+        "back": "R(c) = -c * u''(c) / u'(c) = c * A(c). RRA measures willingness to pay as a fraction of wealth to avoid a proportional gamble. For ln(c): R(c) = 1 (CRRA = 1). For c^(1-rho)/(1-rho): R(c) = rho (constant RRA). CRRA utility is widely used in macroeconomics and finance because it implies constant portfolio shares across wealth levels.",
+        "type": "formula"
+      },
+      {
+        "front": "What is decreasing absolute risk aversion (DARA) and why does it matter empirically?",
+        "back": "DARA: A'(c) < 0 — absolute risk aversion decreases as wealth increases. Implication: wealthier agents willingly take on more absolute risk (invest more dollars in risky assets). Empirically observed: wealthy households hold riskier portfolios. CARA utility (constant ARA) is theoretically convenient but empirically counterfactual — DARA utility (like ln(c)) better matches observed behavior.",
+        "type": "condition"
+      },
+      {
+        "front": "Explain risk aversion graphically using the utility function curve.",
+        "back": "For a concave u(c), the chord connecting (c_L, u(c_L)) and (c_H, u(c_H)) lies strictly below the curve. EU of the 50-50 gamble = midpoint of the chord < u(midpoint of c_L and c_H) = u(E[c]). The horizontal distance between E[c] and the certainty equivalent (where u(c_CE) = EU) is the risk premium — what the agent would pay to avoid the gamble.",
+        "type": "graph"
+      }
+    ]
+  },
+  {
+    "id": "t58",
+    "learn": {
+      "openingTension": "If someone offered you a 50-50 chance at $0 or $1,000, how much would you pay for that gamble? Almost certainly less than $500 (the expected value). The amount you would be just willing to pay is your certainty equivalent — and the gap between $500 and your certainty equivalent measures your risk aversion in precise dollar terms.",
+      "coreIdea": "The certainty equivalent (CE) is the certain dollar amount that makes the agent indifferent between receiving CE for certain and accepting a risky prospect. It is always less than or equal to the expected value for risk-averse agents, equal to E[c] for risk-neutral agents, and greater than E[c] for risk-seeking agents. The CE provides a dollar measure of risk preferences and is the foundation for pricing insurance and options.",
+      "mathSetup": "Probability structure: S states with probabilities {pi_s}, s=1,...,S. Risky prospect: (c_1,...,c_S) with E[c] = sum pi_s * c_s. Expected utility: EU = sum pi_s * u(c_s). Certainty equivalent: c_CE such that u(c_CE) = EU. Solving: c_CE = u^(-1)(EU). For u(c) = sqrt(c): EU = sum pi_s * sqrt(c_s), so c_CE = EU^2. For u(c) = ln(c): EU = sum pi_s * ln(c_s) = ln(product c_s^{pi_s}), so c_CE = product c_s^{pi_s} (geometric mean of the c_s values weighted by probabilities).",
+      "derivation": "1. Compute EU = sum pi_s * u(c_s). Economic reason: EU is the utility value of the gamble, taking into account both probabilities and outcomes. 2. Find c_CE = u^{-1}(EU): the certain consumption that delivers the same utility. Economic reason: indifference requires equal utility levels. 3. Compare c_CE to E[c]: For concave u (risk-averse): c_CE < E[c]. Economic reason: Jensen's inequality — u(E[c]) > E[u(c)] = u(c_CE), so E[c] > c_CE. 4. The risk premium lambda = E[c] - c_CE: the maximum amount the agent would pay to eliminate risk (get E[c] for certain). Economic reason: this is the most the agent would willingly pay for full insurance. 5. An insurer can charge any premium up to lambda and the agent will still buy insurance — lambda is the consumer surplus from insurance.",
+      "graphicalIntuition": "On a graph with c on the horizontal axis and u(c) on the vertical, mark c_L and c_H on the horizontal axis. Draw the chord from (c_L, u(c_L)) to (c_H, u(c_H)). The expected utility EU is on the chord above E[c] = pi_L*c_L + pi_H*c_H. The certainty equivalent c_CE is found by moving horizontally left from EU on the chord until you hit the u(c) curve — c_CE is that horizontal coordinate. The gap (E[c] - c_CE) is the risk premium, which equals the length of the horizontal segment between the curve and the chord at the EU height.",
+      "workedExample": "Given: u(c) = ln(c). States: Good (pi=0.6, c_g=$400), Bad (pi=0.4, c_b=$100).\nFind: CE and risk premium.\nSolution: EU = 0.6*ln(400) + 0.4*ln(100) = 0.6*5.991 + 0.4*4.605 = 3.595 + 1.842 = 5.437. c_CE = e^{5.437} = $229.7. E[c] = 0.6*400 + 0.4*100 = 280.\nInterpret: The agent is indifferent between receiving $229.70 for certain and the gamble. Risk premium = E[c] - c_CE = 280 - 229.70 = $50.30. An insurer could charge up to $50.30 above actuarially fair premium and the agent would still buy coverage. The gap of $50.30 reflects the dollar cost of risk to this agent.",
+      "boundaryConditions": "1. Risk-neutral agents: CE = E[c] — no risk premium. Insurance has no value; the agent is indifferent between the gamble and its expected value. 2. Approximation formula (for small gambles): lambda ≈ 0.5 * A(c) * sigma^2, where A(c) = ARA at mean consumption and sigma^2 = variance of consumption. This shows that risk premium is proportional to both risk aversion and variance — a key result in portfolio theory. 3. CE depends on the entire probability distribution, not just mean and variance: for non-normal distributions or highly nonlinear utility, the mean-variance approximation fails, and the full CE calculation using u^{-1}(EU) must be used.",
+      "examTraps": [
+        "A student might think the certainty equivalent equals the expected value for all agents, but the correct answer is c_CE = E[c] only for risk-neutral agents — for risk-averse agents c_CE < E[c], and for risk-seeking agents c_CE > E[c].",
+        "A student might think the risk premium is what the agent pays for insurance, but the correct answer is that the risk premium is the maximum the agent would pay — actual insurance premiums can be anywhere from the actuarially fair level up to the risk premium.",
+        "A student might think calculating CE requires knowing which state occurs, but the correct answer is that CE is a deterministic quantity computed from the entire distribution — it converts the gamble into a certain equivalent before any uncertainty is resolved.",
+        "A student might think a larger variance always means a larger risk premium, but the correct answer is that the risk premium depends on both variance and the degree of risk aversion (ARA) — a more risk-averse agent has a larger risk premium for the same gamble."
+      ],
+      "frq": {
+        "prompt": "A consumer has u(c) = sqrt(c) and faces a gamble: with probability 0.5 receive $64, with probability 0.5 receive $16.",
+        "parts": [
+          "Compute expected consumption E[c] and expected utility EU.",
+          "Compute the certainty equivalent c_CE. Show that c_CE < E[c].",
+          "Compute the risk premium lambda = E[c] - c_CE.",
+          "Explain what the risk premium means economically — specifically, what is the maximum insurance premium the consumer would pay to replace the gamble with a certain payment of E[c]? Justify without additional calculations."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define the certainty equivalent of a risky prospect.",
+        "back": "The certainty equivalent c_CE is the certain dollar amount such that u(c_CE) = EU = sum pi_s * u(c_s). It is found by inverting the utility function: c_CE = u^{-1}(EU). For risk-averse agents: c_CE < E[c]. For risk-neutral: c_CE = E[c]. The CE converts a risky prospect into its certain equivalent value — the natural unit for comparing risky options.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the risk premium lambda?",
+        "back": "lambda = E[c] - c_CE. It is the maximum amount a risk-averse agent would pay to eliminate risk — to exchange the gamble for its expected value with certainty. For small gambles: lambda ≈ (1/2) * A(c) * sigma^2, where A(c) = ARA and sigma^2 = variance. The risk premium is the monetary measure of the disutility of risk.",
+        "type": "definition"
+      },
+      {
+        "front": "For u(c) = ln(c), what is the certainty equivalent of a binary gamble (c_L with pi_L, c_H with pi_H)?",
+        "back": "EU = pi_L * ln(c_L) + pi_H * ln(c_H) = ln(c_L^{pi_L} * c_H^{pi_H}). Therefore c_CE = c_L^{pi_L} * c_H^{pi_H} — the geometric mean weighted by probabilities. For ln utility, CE = geometric mean < arithmetic mean = E[c] whenever c_L != c_H. This is the AM-GM inequality applied to certainty equivalents.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the small-gamble approximation for the risk premium?",
+        "back": "lambda ≈ (1/2) * A(c) * sigma^2, where A(c) = -u''(c)/u'(c) = Arrow-Pratt absolute risk aversion and sigma^2 = Var[c]. The approximation is valid for small gambles around mean c. Key insight: risk premium is proportional to both ARA and variance — double the variance, double the risk premium; double ARA, double the risk premium. Larger for more risk-averse agents and riskier gambles.",
+        "type": "formula"
+      },
+      {
+        "front": "How is the certainty equivalent used to value insurance?",
+        "back": "An insurer can charge a premium up to lambda = E[c] - c_CE and the agent will still prefer insurance to the risky prospect. At premium = lambda, the agent receives E[c] - lambda = c_CE with certainty — exactly indifferent. Premiums below lambda make the agent strictly better off; premiums above lambda are rejected. The risk premium is therefore the consumer surplus captured by the insurer at the breakeven point.",
+        "type": "condition"
+      }
+    ]
+  }
+]

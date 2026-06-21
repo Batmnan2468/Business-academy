@@ -1,0 +1,218 @@
+[
+  {
+    "id": "t50",
+    "learn": {
+      "openingTension": "A stock bought for $100 pays a $3 dividend and is now worth $110. What did you earn? Simply saying '$13' ignores whether that took one year or ten. Rate of return collapses time, dollars, and compounding into a single comparable number — but which rate of return, and how you compute it, changes the answer dramatically.",
+      "coreIdea": "The rate of return is the percentage gain per period from holding an asset, combining both income (dividends, coupons) and capital gains (price appreciation). Rates of return are the universal unit for comparing assets across different prices, periods, and cash flow structures. In the intertemporal budget framework, the rate of return on the endowment is exactly the interest rate r — what you gain per unit of period-1 income foregone.",
+      "mathSetup": "One-period return: R = (P1 - P0 + D) / P0 where P0 = purchase price, P1 = ending price, D = income (dividend/coupon) received. Capital gains yield: (P1 - P0)/P0. Income yield (dividend yield): D/P0. R = capital gains yield + income yield. Multi-period: annualized geometric return = [(1+R1)(1+R2)...(1+Rn)]^(1/n) - 1. Arithmetic average: (R1+R2+...+Rn)/n. Real return: (1+R_real) = (1+R_nominal)/(1+pi).",
+      "derivation": "1. Define the one-period holding return: R = (P1 - P0 + D)/P0. Economic reason: total return must include both the price change (capital gain) and any income received — omitting either mismeasures the gain. 2. Decompose: R = (P1-P0)/P0 + D/P0 = capital gains yield + dividend yield. Economic reason: each component can independently drive returns. 3. For multi-period returns, use the geometric mean to find the constant annual rate that would produce the same compound result. Economic reason: compounding is multiplicative, not additive — the arithmetic mean overstates the true return when returns vary. 4. Apply the Fisher equation: R_real ≈ R_nominal - pi. Economic reason: the purchasing power gain, not the nominal gain, is what the consumer cares about. 5. Compare across assets using real risk-adjusted returns to determine which asset is preferred.",
+      "graphicalIntuition": "On a graph with time on the horizontal axis and portfolio value on the vertical axis, two assets with the same arithmetic average return can produce very different ending values if one has more volatility. The geometric mean return produces the path that matches the actual ending value. The compound growth effect means that a 50% loss followed by a 50% gain does NOT break even — it produces a 25% loss: 1 * 0.5 * 1.5 = 0.75.",
+      "workedExample": "Given: A stock is purchased for $80. After 1 year: price = $92, dividend = $4.\nFind: Total return, capital gains yield, and dividend yield.\nSolution: Capital gains yield = (92-80)/80 = 15%. Dividend yield = 4/80 = 5%. Total return R = 15% + 5% = 20%.\nInterpret: A $1 invested grows to $1.20 in one year. If inflation was 3%, real return = 1.20/1.03 - 1 = 16.5%. This asset outperformed if the opportunity cost (market return) was less than 20%.",
+      "boundaryConditions": "1. Geometric vs arithmetic mean: The arithmetic mean overstates the true compound return whenever returns are variable. The correct metric for 'what return did I actually earn over multiple periods' is always the geometric mean. Use the arithmetic mean only when estimating the expected single-period return for a forward-looking calculation. 2. Survivorship bias: Reported historical rates of return systematically overstate true expected returns because failed funds and bankrupt companies are dropped from the sample. 3. Short holding periods: Annualizing a one-week return by multiplying by 52 is misleading if the return is unsustainable — it assumes weekly gains compound, which they typically do not.",
+      "examTraps": [
+        "A student might think the average return over two years is the arithmetic mean, but the correct answer for compound growth is the geometric mean — a 100% gain followed by a 50% loss returns to zero, even though the arithmetic mean is 25%.",
+        "A student might think a high dividend yield always means a good investment, but the correct answer is that total return includes both dividends and capital gains — a high dividend yield may accompany falling prices, offsetting the income.",
+        "A student might think nominal and real rates of return are related by simple subtraction (real = nominal - inflation), but the correct answer uses the Fisher equation: (1+real) = (1+nominal)/(1+inflation) — simple subtraction is only an approximation.",
+        "A student might think rates of return on different assets are directly comparable, but the correct answer requires risk adjustment — a higher return on a riskier asset does not indicate it dominated a lower-return safe asset."
+      ],
+      "frq": {
+        "prompt": "An investor buys a bond for $950, receives $60 in coupon payments during the year, and sells it at year-end for $970.",
+        "parts": [
+          "Calculate the investor's total one-period rate of return, decomposed into income yield and capital gains yield.",
+          "If inflation during the year was 2.5%, calculate the real rate of return using the exact Fisher equation.",
+          "A second asset returned 10% over the same period with the same risk. Based solely on rate of return, which asset should the investor prefer?",
+          "Explain why comparing rates of return across assets with different risk levels requires an additional adjustment, and describe what that adjustment captures."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Write the one-period rate of return formula and its two components.",
+        "back": "R = (P1 - P0 + D) / P0 = [(P1-P0)/P0] + [D/P0] = capital gains yield + income yield. P0 = purchase price, P1 = ending price, D = dividend or coupon received. Both components must be included — omitting either mismeasures the true return from holding the asset.",
+        "type": "formula"
+      },
+      {
+        "front": "Why is the geometric mean the correct measure of multi-period return, not the arithmetic mean?",
+        "back": "Geometric mean = [(1+R1)(1+R2)...(1+Rn)]^(1/n) - 1. It accounts for compounding: returns multiply, they do not add. A 50% loss then 50% gain = 1*0.5*1.5 = 0.75 — a 25% net loss. Arithmetic mean = 0% — completely wrong. Arithmetic mean always exceeds geometric mean when returns vary, overstating the true compound growth rate.",
+        "type": "distinction"
+      },
+      {
+        "front": "What is the relationship between an asset's rate of return and the interest rate in the intertemporal model?",
+        "back": "In the intertemporal model, the interest rate r IS the rate of return on saving — the percentage gain per period from lending. The budget constraint slope -(1+r) reflects that holding the endowment earns r. Generalizing, any asset's rate of return replaces r in the intertemporal analysis when that asset is the savings vehicle.",
+        "type": "definition"
+      },
+      {
+        "front": "What is survivorship bias in reported historical returns?",
+        "back": "Historical return databases typically include only assets that survived — funds that failed or companies that went bankrupt are dropped. This mechanically raises the reported average return above the true ex-ante expected return, because losses from failed assets are excluded. Investors who relied on historical averages without survivorship adjustment systematically overestimated future returns.",
+        "type": "definition"
+      }
+    ]
+  },
+  {
+    "id": "t51",
+    "learn": {
+      "openingTension": "Gold costs $1,800 per ounce in New York and $1,802 per ounce in London. Can you make a guaranteed profit buying in New York and selling in London? Almost — but only if transaction costs are low enough. Arbitrage is the force that prevents persistent price discrepancies, and its possibility (or impossibility) pins down asset prices, exchange rates, and interest rates simultaneously.",
+      "coreIdea": "Arbitrage is the simultaneous purchase and sale of equivalent assets at different prices to earn a risk-free profit. In competitive markets, arbitrage opportunities are competed away instantly — this 'law of one price' is the foundation of asset pricing. The optimization role of arbitrage is not a single agent's maximization problem but rather the market-level equilibrating mechanism that enforces consistent pricing across markets.",
+      "mathSetup": "Arbitrage condition (law of one price): two assets with identical cash flows must have identical prices. P_A = P_B if CF_A(t) = CF_B(t) for all t. Interest rate parity (covered): (1+r_domestic) = (F/S)(1+r_foreign), where S = spot rate (domestic/foreign) and F = forward rate. Commodity arbitrage: if P_NY + transport_cost < P_London, buy in NY, sell in London. Cash-and-carry arbitrage for futures: F = S*(1+r)^T (fair futures price).",
+      "derivation": "1. Identify two assets (or portfolios) with identical payoffs in all states of the world. Economic reason: identical payoffs under all conditions = perfectly substitutable. 2. If prices differ, buy the cheap one and sell the expensive one simultaneously. Economic reason: simultaneous trading eliminates market risk — the profit is locked in immediately. 3. Cash in the price difference as risk-free profit. Economic reason: risk-free profit with no capital invested is arbitrage. 4. Buying raises the cheap asset's price; selling lowers the expensive asset's price. Economic reason: arbitrageurs' trades are large enough to move prices. 5. Equilibrium: prices converge until arbitrage profit = 0, i.e., the law of one price holds. Economic reason: competition drives risk-free profits to zero.",
+      "graphicalIntuition": "Common Misreading: Students often think arbitrage requires large price differences or special access. In practice, arbitrage requires only: (1) two identical assets, (2) a price difference, and (3) the ability to simultaneously buy one and sell the other. The 'law of one price' is not assumed — it is derived as the equilibrium outcome when arbitrageurs can trade freely. When trading is costly or restricted, persistent small price differences can survive: this is 'limits to arbitrage.'",
+      "workedExample": "Given: A 1-year Treasury bill with face value $1,000 trades at $950 in Market A and $940 in Market B. r_f = 5% (risk-free rate). Transaction cost = $3 per trade.\nFind: Whether an arbitrage profit exists.\nSolution: Buy T-bill in Market B for $940, sell in Market A for $950. Gross profit = $10. Transaction costs = $3 (buy) + $3 (sell) = $6. Net arbitrage profit = $10 - $6 = $4 per T-bill.\nInterpret: A positive net profit exists. Arbitrageurs will scale this up until the price gap narrows to $6 (= transaction costs), at which point no further arbitrage is profitable. The law of one price holds only net of transaction costs.",
+      "boundaryConditions": "1. Limits to arbitrage: Trades may be capital-constrained (requires posting margin), execution risk (prices move before both legs complete), or noise trader risk (the mispricing widens before it converges). Rational arbitrageurs may not exploit all apparent opportunities. 2. Non-identical assets: Apparent arbitrage on 'similar' assets (e.g., near-substitute stocks) exposes basis risk — the spread may widen rather than converge. True arbitrage requires identical cash flows, not merely correlated ones. 3. Short-selling constraints: Arbitrage often requires selling short (selling what you do not own). If short-selling is restricted or expensive, only one leg of the arbitrage is feasible, limiting the disciplining force.",
+      "examTraps": [
+        "A student might think arbitrage always earns a guaranteed profit in practice, but the correct answer is that limits to arbitrage — transaction costs, capital constraints, short-sale restrictions — can prevent full exploitation of apparent price differences.",
+        "A student might think arbitrage requires finding undervalued assets, but the correct answer is that arbitrage requires finding two assets with identical cash flows at different prices — it is about relative mispricing, not absolute valuation.",
+        "A student might think the law of one price means all assets have the same price, but the correct answer is that assets with identical cash flows must have identical prices — different cash flow assets should have different prices.",
+        "A student might think arbitrage opportunities are abundant and persistent, but the correct answer is that in liquid markets with low transaction costs, arbitrage opportunities are tiny and fleeting — competition from arbitrageurs enforces near-instantaneous price convergence."
+      ],
+      "frq": {
+        "prompt": "Gold trades at $1,800/oz in the spot market. A 6-month gold futures contract trades at $1,860/oz. The 6-month risk-free interest rate is 4% (annualized), and storage costs for gold are $10/oz for 6 months.",
+        "parts": [
+          "Compute the fair futures price using the cash-and-carry formula: F = (S + storage) * (1 + r)^(0.5).",
+          "Determine whether the market futures price of $1,860 represents an arbitrage opportunity. Show which direction to trade.",
+          "Describe precisely how a trader would execute a cash-and-carry arbitrage, step by step, and state the risk-free profit.",
+          "Explain what forces drive the futures price back toward the fair value, and at what point the arbitrage disappears."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define arbitrage and state the law of one price.",
+        "back": "Arbitrage: the simultaneous purchase and sale of equivalent assets in different markets to earn a risk-free profit with no net investment. Law of one price: two assets with identical payoffs in all states must trade at the same price — otherwise, arbitrage profit is available. The law holds exactly in frictionless markets; transaction costs create a band within which small price differences can persist.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the fair futures price formula (cash-and-carry)?",
+        "back": "F = S * (1+r)^T + storage costs (in future value terms), where S = current spot price, r = risk-free rate, T = time to maturity. This formula is derived by no-arbitrage: the cost of buying spot and carrying to maturity must equal the futures price. If F > S(1+r)^T + storage, buy spot and sell futures; if F < this value, do the reverse.",
+        "type": "formula"
+      },
+      {
+        "front": "What are 'limits to arbitrage' and why do they matter?",
+        "back": "Limits to arbitrage are frictions that prevent rational investors from fully exploiting apparent mispricings: (1) capital constraints (margin requirements), (2) execution risk (price moves before both legs complete), (3) noise trader risk (mispricing widens before it converges), (4) short-sale restrictions. They explain why mispricings can persist in real markets despite the theoretical no-arbitrage condition.",
+        "type": "definition"
+      },
+      {
+        "front": "Distinguish: pure arbitrage vs. risk arbitrage (statistical arbitrage).",
+        "back": "Pure arbitrage: simultaneous trade on identical assets with zero risk — profit is locked in immediately. Example: same bond at different prices in two markets. Risk arbitrage: trade on similar but not identical assets based on historical correlation — exposed to basis risk if the correlation breaks down. The law of one price guarantees profits only for pure arbitrage; risk arbitrage can lose money.",
+        "type": "distinction"
+      },
+      {
+        "front": "How does interest rate parity use the arbitrage principle?",
+        "back": "Covered interest rate parity: (1+r_d) = (F/S)(1+r_f), where r_d = domestic rate, r_f = foreign rate, S = spot FX rate, F = forward FX rate. If this equality fails, borrow in the low-rate currency, invest in the high-rate currency, and hedge with a forward contract — creating a risk-free profit. Arbitrage competition enforces the parity condition in liquid FX markets.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t52",
+    "learn": {
+      "openingTension": "Two lottery jackpots: $1,000,000 paid today, or $1,000,000 paid in $50,000 annual installments over 20 years. The second option totals $1,000,000 in nominal terms. Why is it worth less, often dramatically less, and by exactly how much? Present discounted value gives the precise answer.",
+      "coreIdea": "Present discounted value (PDV) is the systematic application of discounting to any stream of future cash flows — it converts a sequence of future payments into a single current equivalent value. PDV is the central tool for comparing any two streams of payments regardless of their timing, duration, or pattern. This topic IS the formal mechanics of intertemporal optimization: the budget constraint's right-hand side is the PDV of lifetime income.",
+      "mathSetup": "PDV of stream {C1, C2, ..., CT}: PDV = sum_{t=1}^{T} C_t / (1+r)^t. Special cases: Annuity (equal payments C for T periods): PDV = C * [1 - (1+r)^(-T)] / r. Perpetuity (equal payments C forever): PDV = C/r. Growing perpetuity (payments grow at rate g forever): PDV = C1/(r-g), r > g. Growing annuity (C1, growing at g for T periods): PDV = C1/r-g * [1 - ((1+g)/(1+r))^T].",
+      "derivation": "1. Write the PDV sum: PDV = C1/(1+r) + C2/(1+r)^2 + ... + CT/(1+r)^T. Economic reason: each payment is worth less the further in the future it arrives. 2. For an annuity (all C_t = C), factor out C: PDV = C * sum_{t=1}^{T} 1/(1+r)^t. Economic reason: uniform payments simplify to a geometric series. 3. Evaluate the geometric series: sum = [1-(1+r)^(-T)]/r. Economic reason: this is a standard geometric series sum with ratio 1/(1+r). 4. As T → infinity, (1+r)^(-T) → 0, giving PDV = C/r for a perpetuity. Economic reason: the limit of the annuity formula as maturity extends to infinity. 5. For a growing perpetuity: PDV = C1/(r-g). Economic reason: each term in the sum is C1*((1+g)/(1+r))^t, a geometric series with ratio (1+g)/(1+r) < 1 when r > g.",
+      "graphicalIntuition": "On a graph with the interest rate r on the horizontal axis and PDV on the vertical axis, the relationship is hyperbolic and decreasing — higher r means steeper discounting and lower PDV. For a perpetuity, PDV = C/r means the curve is exactly a rectangular hyperbola: PDV * r = C. The curve is steeper for longer-duration assets — the same change in r causes a larger PDV change for a 30-year annuity than a 5-year annuity.",
+      "workedExample": "Given: A lottery pays $50,000 per year for 20 years, starting in one year. r = 6%.\nFind: PDV of the annuity.\nSolution: PDV = 50,000 * [1 - (1.06)^(-20)] / 0.06. Compute (1.06)^(-20) = 1/3.207 = 0.3118. Annuity factor = (1 - 0.3118)/0.06 = 0.6882/0.06 = 11.47. PDV = 50,000 * 11.47 = $573,500.\nInterpret: The $1,000,000 in total nominal payments is worth only $573,500 today at 6% — a 43% reduction from the nominal total. A lump-sum offer of $600,000 today is better; $550,000 is not.",
+      "boundaryConditions": "1. Discount rate sensitivity for long streams: PDV of a 30-year annuity changes dramatically with r. At 3%, the annuity factor is 19.6; at 8%, it is 11.3 — a 42% difference with the same payments. Long-duration streams require very precise discount rate estimates. 2. Constant-payment assumption: Annuity/perpetuity formulas assume level payments. If payments are irregular, you must compute each term individually. 3. Growing perpetuity: The formula C1/(r-g) requires r > g. When r approaches g, PDV approaches infinity — a small change in the growth assumption has a massive effect on value. This is the key fragility of growth stock valuation.",
+      "examTraps": [
+        "A student might think the PDV of a perpetuity paying $100 is infinite, but the correct answer is PDV = C/r — a finite value, because the discount factor shrinks each payment fast enough that the infinite sum converges.",
+        "A student might think the annuity formula PDV = C/r applies for finite annuities, but the correct answer is that C/r applies only for perpetuities — finite annuities use PDV = C * [1-(1+r)^(-T)]/r.",
+        "A student might think doubling the payment stream doubles the PDV, but the correct answer is yes — PDV is linear in C. However, doubling T does not double the PDV because the additional payments are heavily discounted.",
+        "A student might think a higher discount rate always means a lower PDV, but the correct answer is true for standard positive cash flow streams — but for cash flows with sign changes (some negative), a higher r can increase or decrease NPV depending on the pattern."
+      ],
+      "frq": {
+        "prompt": "A company is evaluating two projects. Project A: pays $100,000 in year 1 and nothing thereafter. Project B: pays $20,000 per year forever, starting in year 1. The discount rate is r = 5%.",
+        "parts": [
+          "Compute the PDV of each project.",
+          "At what discount rate are the two projects equally valuable? Set up and solve the equation.",
+          "The company's discount rate changes from 5% to 8%. Compute the new PDV of each project. Which project's value fell more in percentage terms, and why?",
+          "Explain in words why the perpetuity (Project B) is more sensitive to changes in the discount rate than the single-payment project (Project A), using the concept of duration."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is the PDV formula for an annuity paying C per period for T periods?",
+        "back": "PDV = C * [1 - (1+r)^(-T)] / r. The factor [1-(1+r)^(-T)]/r is the annuity discount factor. As T → infinity, it approaches 1/r — the perpetuity formula. Annuity formulas are the workhorses of mortgage, lease, and bond valuation.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the PDV of a perpetuity paying C per period starting next period?",
+        "back": "PDV = C/r. Derived by letting T → infinity in the annuity formula: [1-(1+r)^(-T)]/r → 1/r. Example: a perpetuity paying $100/year at r=5% is worth $100/0.05 = $2,000. The perpetuity formula is also the basis for the Gordon Growth Model (C growing at rate g: PDV = C1/(r-g)).",
+        "type": "formula"
+      },
+      {
+        "front": "State the growing perpetuity formula and its key condition.",
+        "back": "PDV = C1 / (r - g), where C1 = first payment, r = discount rate, g = constant growth rate of payments. Condition: r > g (otherwise PDV is infinite — the series diverges). Used to value stocks (Gordon Growth Model) and real assets with growing cash flows. Highly sensitive to the assumed g when r and g are close.",
+        "type": "formula"
+      },
+      {
+        "front": "What is duration, and why does it measure PDV sensitivity to interest rate changes?",
+        "back": "Duration = weighted-average time to receipt of cash flows, where weights are each payment's share of PDV. Mathematically, dPDV/dr ≈ -Duration * PDV / (1+r). Assets with longer duration experience larger PDV changes for a given change in r. A perpetuity has the longest possible duration; a single payment at time 1 has duration = 1.",
+        "type": "definition"
+      },
+      {
+        "front": "How much is a nominal payment stream worth vs. its nominal total, and why?",
+        "back": "PDV of any stream < nominal total (for r > 0) because discounting reduces each payment's present worth. The annuity example: $50,000/year for 20 years totals $1,000,000 nominally but is worth only ~$573,500 at 6% — a 43% reduction. The gap increases with the discount rate and the length of the payment stream.",
+        "type": "condition"
+      }
+    ]
+  },
+  {
+    "id": "t53",
+    "learn": {
+      "openingTension": "A government bond promises to pay $30 per year forever, and you can buy it for $600. A student argues: 'This is a bad deal — you'd have to live forever to collect all the payments.' But the PDV of the entire infinite stream is already captured in the $600 price. Why does the price of an infinite stream converge to a finite number, and what determines it?",
+      "coreIdea": "Bonds are debt instruments with specific cash flow structures (coupon + principal), and perpetuities are the limiting case (coupons forever, no principal). Both are valued by discounting future cash flows at the market yield. This is intertemporal consumer theory applied to fixed-income assets: prices are PDVs, and the yield IS the discount rate that equates market price to PDV.",
+      "mathSetup": "Bond with face value F, annual coupon C, maturity T periods, yield y: P = sum_{t=1}^{T} C/(1+y)^t + F/(1+y)^T = C * [1-(1+y)^(-T)]/y + F/(1+y)^T. Perpetuity (T → infinity, F=0): P = C/y. For a consol (British perpetuity): y = C/P — yield equals coupon divided by price. Current yield = C/P. YTM y is found by solving the bond equation numerically. Macaulay duration: D = sum t * [C_t/(1+y)^t] / P.",
+      "derivation": "1. Write cash flows: coupon C each period for T periods, plus face value F at maturity. Economic reason: a bond obligates the issuer to these specific payments. 2. Discount each cash flow at yield y. Economic reason: y is the return required by investors given the bond's risk — it is the opportunity cost. 3. The coupon stream is an annuity: PV(coupons) = C * [1-(1+y)^(-T)]/y. Economic reason: equal periodic payments = annuity formula. 4. The principal is a single lump sum: PV(principal) = F/(1+y)^T. Economic reason: received once at maturity, discounted T periods. 5. Bond price P = PV(coupons) + PV(principal). Economic reason: linearity of discounting — sum the components. 6. For perpetuity: as T → infinity, F/(1+y)^T → 0 and annuity factor → 1/y, giving P = C/y.",
+      "graphicalIntuition": "On a graph with yield y on the horizontal axis and bond price P on the vertical axis, the P(y) relationship is downward sloping and convex. The convexity means: for a given change in y, price rises more when rates fall than it falls when rates rise (for equal rate moves). Zero-coupon bonds and long-maturity bonds are the most convex — their price-yield curves are the most bowed. At y = coupon rate, P = F (par). At y > coupon rate, P < F (discount). At y < coupon rate, P > F (premium).",
+      "workedExample": "Given: A bond has F = $1,000, annual coupon C = $80 (8% coupon rate), T = 3 years, market yield y = 10%.\nFind: Bond price and whether it trades at discount or premium.\nSolution: PV(coupons) = 80 * [1-(1.10)^(-3)]/0.10 = 80 * [1-0.7513]/0.10 = 80 * 2.487 = $198.96. PV(principal) = 1,000/(1.10)^3 = 1,000/1.331 = $751.31. P = 198.96 + 751.31 = $950.27.\nInterpret: Bond trades at a discount ($950.27 < $1,000) because the market yield (10%) exceeds the coupon rate (8%). Investors demand a lower purchase price to earn the market yield from a below-market coupon.",
+      "boundaryConditions": "1. Default risk: Bond pricing assumes promised cash flows are received with certainty. If there is default risk, cash flows must be probability-weighted (expected cash flows) and discounted at a higher risk-adjusted yield. Credit spreads — the excess yield over Treasuries — price default risk. 2. Callable bonds: If the issuer can redeem early, investors face reinvestment risk — they receive face value when rates are low and must reinvest at unfavorable rates. Call provisions lower bond prices below the equivalent non-callable bond. 3. Inflation-linked bonds: For inflation-indexed bonds (TIPS), payments are adjusted for realized inflation, so discounting must use real yields — the nominal bond formula does not apply.",
+      "examTraps": [
+        "A student might think a bond with a higher coupon rate is always worth more, but the correct answer is that a bond's value depends on the relationship between its coupon rate and the market yield — a 10% coupon bond trades below par if the market yield is 12%.",
+        "A student might think YTM equals the current yield C/P, but the correct answer is that current yield ignores capital gains or losses at maturity — YTM accounts for the full return including price convergence to face value.",
+        "A student might think a perpetuity is impossible to price because it has infinite payments, but the correct answer is that the infinite sum converges to C/y — a finite and calculable present value — because each payment is discounted by an exponentially growing factor.",
+        "A student might think that duration equals maturity, but the correct answer is that duration is always less than or equal to maturity for coupon bonds — the intermediate coupon payments pull the weighted-average receipt time before the maturity date."
+      ],
+      "frq": {
+        "prompt": "A bond has face value $1,000, annual coupon of $50 (5% coupon rate), and 4 years to maturity. The current market yield is 7%.",
+        "parts": [
+          "Compute the bond's market price using the full discounting formula.",
+          "Classify the bond as trading at par, discount, or premium. Explain why without doing any calculation — use the relationship between coupon rate and yield.",
+          "If the market yield drops to 4% tomorrow, compute the new price and calculate the percentage price change (capital gain).",
+          "Explain what Macaulay duration measures and why a bond with longer duration experiences a larger price change for a given change in yield."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Write the complete bond pricing formula.",
+        "back": "P = C * [1-(1+y)^(-T)]/y + F/(1+y)^T, where C = periodic coupon, y = yield to maturity, T = periods to maturity, F = face value. The first term is the PV of the coupon annuity; the second is the PV of the principal lump sum. This formula is the direct application of PDV to a structured cash flow stream.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the perpetuity price formula, and how is it derived from the bond formula?",
+        "back": "P = C/y. Derived by letting T → infinity in the bond formula: F/(1+y)^T → 0 and [1-(1+y)^(-T)]/y → 1/y. Rearranged: y = C/P — the yield on a perpetuity equals the coupon divided by the price. This is also the formula for the current yield of a long-duration bond as an approximation.",
+        "type": "formula"
+      },
+      {
+        "front": "State the three cases: bond at par, discount, and premium.",
+        "back": "At par (P = F): market yield y = coupon rate. At discount (P < F): y > coupon rate — investors require more return than coupon provides, so price falls until YTM is satisfied. At premium (P > F): y < coupon rate — the above-market coupon commands a price above face value. The three cases follow mechanically from the PDV formula: higher y lowers price.",
+        "type": "condition"
+      },
+      {
+        "front": "What is Macaulay duration and what does it measure?",
+        "back": "Macaulay duration D = sum_{t=1}^{T} t * [C_t/(1+y)^t] / P — the weighted-average time to receipt of cash flows, where weights are each payment's share of total PDV. Modified duration = D/(1+y) measures price sensitivity: %ΔP ≈ -Modified Duration * Δy. Zero-coupon bonds have duration = maturity; coupon bonds have duration < maturity.",
+        "type": "definition"
+      },
+      {
+        "front": "What is current yield vs. yield to maturity, and when do they differ?",
+        "back": "Current yield = C/P (annual coupon divided by current price — ignores capital gains/losses). YTM = the single discount rate y that makes PDV of all cash flows equal the current price — includes both coupon income and price convergence to face value at maturity. They are equal only for perpetuities. For discount bonds (P < F), YTM > current yield because of capital gain at maturity.",
+        "type": "distinction"
+      },
+      {
+        "front": "Why does bond convexity benefit investors regardless of whether rates rise or fall?",
+        "back": "Convexity means the P(y) curve is bowed inward — price rises more for a rate decrease than it falls for an equal rate increase. This asymmetry is always favorable to the bondholder: you gain more than you lose from equal rate moves in either direction. Higher convexity assets are more valuable than lower convexity assets with the same yield and duration — investors pay a premium for convexity.",
+        "type": "condition"
+      }
+    ]
+  }
+]

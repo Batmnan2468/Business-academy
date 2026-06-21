@@ -1,0 +1,287 @@
+[
+  {
+    "id": "t45",
+    "learn": {
+      "openingTension": "You earn $50,000 this year and expect $50,000 next year. A friend with identical earnings but access to borrowing markets can consume $60,000 this year. How? And why does the interest rate — not just income — determine what you can afford over your lifetime?",
+      "coreIdea": "Intertemporal choice IS the same consumer theory toolkit applied to time: the consumer maximizes utility over present and future consumption subject to a budget constraint, where the 'prices' are determined by the interest rate. The optimization role is identical to the two-good consumer problem — only the interpretation of goods and prices changes.",
+      "mathSetup": "Let c1 = period-1 consumption, c2 = period-2 consumption, m1 = period-1 income, m2 = period-2 income, r = interest rate. Budget constraint: c1 + c2/(1+r) = m1 + m2/(1+r). This is the present-value form. Equivalently in future-value form: (1+r)c1 + c2 = (1+r)m1 + m2. The relative price of c1 in terms of c2 is (1+r): consuming one unit today costs (1+r) units tomorrow.",
+      "derivation": "1. Write the two-period flow constraints: c1 + s = m1 (period 1: consume plus save equals income), c2 = m2 + (1+r)s (period 2: consume equals income plus savings with interest). Economic reason: saving is the only link between periods. 2. Solve for s from period 1: s = m1 - c1. Economic reason: s can be negative (borrowing). 3. Substitute into period 2 constraint: c2 = m2 + (1+r)(m1 - c1). Economic reason: this links both periods into a single equation. 4. Rearrange to budget line: c1 + c2/(1+r) = m1 + m2/(1+r). Economic reason: left side is present value of consumption, right side is present value of income (wealth). 5. The constraint passes through (m1, m2) — the endowment point — because zero saving is always feasible. Economic reason: the consumer can always just consume their income each period.",
+      "graphicalIntuition": "On a graph with c1 on the horizontal axis and c2 on the vertical axis, the intertemporal budget line passes through the endowment point (m1, m2). The slope is -(1+r): giving up one unit of c1 frees (1+r) units of c2. The horizontal intercept is the maximum present-value wealth (m1 + m2/(1+r)) if c2=0; the vertical intercept is the maximum future wealth (1+r)m1 + m2 if c1=0. A rise in r rotates the line around the endowment point, making it steeper.",
+      "workedExample": "Given: m1 = $40,000, m2 = $44,000, r = 0.10 (10%).\nFind: The intertemporal budget constraint and both intercepts.\nSolution: PV of wealth = 40,000 + 44,000/1.10 = 40,000 + 40,000 = $80,000. Budget line: c1 + c2/1.10 = 80,000. Horizontal intercept (c2=0): c1 = $80,000. Vertical intercept (c1=0): c2 = $88,000.\nInterpret: The consumer can consume at most $80,000 in present value. The endowment (40,000; 44,000) lies on the line because 40,000 + 44,000/1.10 = 80,000 exactly.",
+      "boundaryConditions": "1. Borrowing constraint (liquidity constraint): If the consumer cannot borrow (s >= 0 imposed), the budget set is truncated — the constraint kinks at the endowment point. Consumers who want to borrow but cannot are stuck at (m1, m2) and the standard tangency solution is infeasible. 2. Different borrowing and lending rates: If the interest rate for borrowing (rb) exceeds the rate for lending (rl), the budget line has a kink at the endowment — slope -(1+rb) to the right, slope -(1+rl) to the left. Standard single-line analysis fails.",
+      "examTraps": [
+        "A student might think the intertemporal budget line passes through the origin, but the correct answer is that it passes through the endowment point (m1, m2), because consuming exactly your income each period is always feasible without borrowing or saving.",
+        "A student might think a higher interest rate always makes the consumer better off, but the correct answer is that lenders (savers, m1 > c1) benefit from higher r while borrowers (c1 > m1) are harmed, because the endowment point stays fixed but the slope steepens around it.",
+        "A student might think the slope of the intertemporal budget line is -r, but the correct answer is -(1+r), because giving up one unit of c1 frees that unit plus the interest it earns.",
+        "A student might think present value of consumption equals present value of income only at the optimum, but the correct answer is this equality holds everywhere on the budget line — it is the constraint itself, not just at the optimum."
+      ],
+      "frq": {
+        "prompt": "A consumer has period-1 income m1 = $30,000 and period-2 income m2 = $33,000. The interest rate is r = 0.10.",
+        "parts": [
+          "Write the intertemporal budget constraint in present-value form and compute the present value of the consumer's lifetime wealth.",
+          "Compute both intercepts of the budget line and explain the economic meaning of each intercept.",
+          "The interest rate rises to r = 0.20. Show how the budget line changes. Identify which intercept changes and which does not, and explain why.",
+          "The consumer currently saves $5,000 in period 1. Explain in words — without solving for an optimum — whether the consumer is made better or worse off by the interest rate increase, and what determines the answer."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Write the intertemporal budget constraint in present-value form.",
+        "back": "c1 + c2/(1+r) = m1 + m2/(1+r). Left side: present value of consumption. Right side: present value of lifetime income (wealth). The constraint is exactly analogous to p1x1 + p2x2 = m in standard consumer theory, with 1/(1+r) acting as the price of future consumption.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the slope of the intertemporal budget line, and what does it mean?",
+        "back": "Slope = -(1+r). To consume one more unit today, the consumer must give up (1+r) units of future consumption — one unit of principal plus the interest it would have earned. This connects to the concept of opportunity cost: the real cost of current consumption is foregone future consumption.",
+        "type": "formula"
+      },
+      {
+        "front": "Why does the intertemporal budget line always pass through the endowment point (m1, m2)?",
+        "back": "Because consuming exactly your income each period requires zero saving and zero borrowing — always feasible regardless of the interest rate. When r changes, the line rotates around (m1, m2) rather than shifting. This is the same logic as an endowment budget line in the exchange economy model.",
+        "type": "condition"
+      },
+      {
+        "front": "How does an increase in r affect borrowers vs. lenders on the intertemporal budget line?",
+        "back": "The line rotates around the endowment point, becoming steeper. Lenders (who plan c1 < m1) move to a budget set that includes more options — they are better off. Borrowers (who plan c1 > m1) face a shrunken feasible set — they are worse off. The endowment point itself is always attainable regardless of r.",
+        "type": "distinction"
+      },
+      {
+        "front": "What is a liquidity (borrowing) constraint, and how does it change the budget set?",
+        "back": "A liquidity constraint requires s >= 0 — the consumer cannot borrow. It truncates the budget set at the endowment point: the consumer can save (move left of endowment along the line) but cannot borrow (the region right of endowment is infeasible). Optimal choices requiring borrowing are blocked, and the consumer is constrained to (m1, m2) if unconstrained optimum requires c1 > m1.",
+        "type": "condition"
+      },
+      {
+        "front": "What is the future-value form of the intertemporal budget constraint?",
+        "back": "(1+r)c1 + c2 = (1+r)m1 + m2. Left side: future value of consumption. Right side: future value of lifetime income. Both forms are equivalent — multiplying the present-value form by (1+r) gives the future-value form. Use whichever is algebraically convenient for the problem at hand.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t46",
+    "learn": {
+      "openingTension": "Two people with identical lifetime incomes can end up with radically different consumption paths — one living lavishly today, one saving aggressively. What determines whether someone borrows, lends, or neither, and why does the same interest rate change hurt one type and help the other?",
+      "coreIdea": "Borrowing and lending are the two sides of the intertemporal optimization. This topic IS consumer theory applied to time: the consumer maximizes utility U(c1,c2) subject to the intertemporal budget constraint, and the optimal choice determines whether the consumer borrows (c1 > m1) or lends (c1 < m1). The interest rate is the relative price that governs this decision.",
+      "mathSetup": "Maximize U(c1, c2) subject to c1 + c2/(1+r) = m1 + m2/(1+r). At interior optimum: MRS(c1,c2) = -(1+r). Where MRS = -(MU1/MU2) = marginal rate of substitution between present and future consumption. For Cobb-Douglas U = c1^a * c2^b: MU1/MU2 = (a/b)(c2/c1), so optimum satisfies c2/c1 = (b/a)(1+r). Saving s = m1 - c1* (positive = lender, negative = borrower).",
+      "derivation": "1. Set up Lagrangian: L = U(c1,c2) + lambda[m1 + m2/(1+r) - c1 - c2/(1+r)]. Economic reason: the constraint is the intertemporal budget equation. 2. First-order conditions: dL/dc1 = MU1 - lambda = 0 and dL/dc2 = MU2 - lambda/(1+r) = 0. Economic reason: marginal utility per dollar must equalize across periods. 3. Divide: MU1/MU2 = (1+r). Economic reason: the ratio of marginal utilities equals the relative price of c1 in terms of c2. 4. Interpret: if MU1/MU2 > (1+r) at the endowment, the consumer wants to borrow (values current consumption highly). If MU1/MU2 < (1+r), the consumer wants to lend. 5. Solve demand functions c1*(r,m), c2*(r,m) and compute s* = m1 - c1*.",
+      "graphicalIntuition": "On a graph with c1 horizontal and c2 vertical, the optimal choice is where the highest indifference curve is tangent to the budget line. If the tangency point lies to the right of the endowment (m1,m2), the consumer borrows (c1* > m1, so s < 0). If the tangency lies to the left, the consumer lends (c1* < m1, s > 0). If preferences are very patient (steep indifference curves), the consumer lends; if very impatient (flat indifference curves), the consumer borrows.",
+      "workedExample": "Given: U(c1,c2) = ln(c1) + 0.9*ln(c2), m1 = $50,000, m2 = $55,000, r = 0.10.\nFind: Optimal consumption and whether the consumer borrows or lends.\nSolution: MRS = MU1/MU2 = c2/(0.9*c1). Set equal to (1+r)=1.10: c2 = 0.99*c1. Budget constraint: c1 + c2/1.10 = 50,000 + 55,000/1.10 = 100,000. Substitute: c1 + 0.99c1/1.10 = c1(1 + 0.9) = 1.9c1 = 100,000. So c1* = $52,632, c2* = 0.99*52,632 = $52,105.\nInterpret: s = 50,000 - 52,632 = -$2,632. The consumer borrows $2,632 in period 1, repaying 2,632*1.10 = $2,895 in period 2, leaving c2 = 55,000 - 2,895 = $52,105.",
+      "boundaryConditions": "1. Corner solutions: If preferences are so impatient that MU1/MU2 > (1+r) even at c1 = m1 + m2/(1+r) (maximum borrowing), and borrowing is limited, the consumer is constrained at the maximum borrowing limit. 2. Non-separable utility: If utility is not separable across periods (e.g., habit formation where c2 utility depends on c1), the standard MRS = (1+r) condition still applies algebraically but the economic interpretation of 'impatience' becomes more complex. 3. Multiple interest rates: If borrowing rate rb > lending rate rl, consumers with MRS between (1+rl) and (1+rb) at the endowment will choose not to borrow or lend — they consume at the endowment regardless of small rate changes.",
+      "examTraps": [
+        "A student might think a higher interest rate always induces more saving, but the correct answer is ambiguous for savers due to offsetting income and substitution effects — the substitution effect increases saving but the income effect (richer lenders) may reduce it.",
+        "A student might think the consumer is a borrower if their income is low, but the correct answer is that borrowing depends on the MRS at the endowment relative to (1+r) — a patient consumer with low income may still lend while an impatient high-income consumer borrows.",
+        "A student might think the optimality condition is MU1 = MU2, but the correct answer is MU1/MU2 = (1+r), because the price of current consumption relative to future consumption is (1+r), not 1.",
+        "A student might think borrowing and lending decisions are separate markets, but the correct answer is they are the same market — a lender's supply of funds is a borrower's demand for funds, and the equilibrium interest rate clears both simultaneously."
+      ],
+      "frq": {
+        "prompt": "A consumer has utility U(c1,c2) = c1^0.5 * c2^0.5, period-1 income m1 = $40,000, period-2 income m2 = $42,000, and faces interest rate r = 0.05.",
+        "parts": [
+          "Derive the optimality condition (MRS = relative price) and write the two equations that determine the optimal consumption bundle.",
+          "Solve for c1* and c2*, then determine whether the consumer borrows or lends and by how much.",
+          "The interest rate rises to r = 0.10. Without resolving, use the substitution and income effects to predict the direction of change in c1* for this consumer. Justify your answer.",
+          "Explain in words why the direction of the interest rate effect on saving is theoretically ambiguous for a lender but unambiguous for a borrower."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is the optimality condition for intertemporal consumption choice?",
+        "back": "MU1/MU2 = (1+r), or equivalently MRS(c1,c2) = (1+r). The consumer equates the marginal rate of substitution between present and future consumption to the relative price (1+r). This is exactly the standard tangency condition p1/p2 = MRS from two-good consumer theory.",
+        "type": "formula"
+      },
+      {
+        "front": "How do you determine whether a consumer is a borrower or lender at the optimum?",
+        "back": "Compute s* = m1 - c1*. If s* > 0 (c1* < m1): lender — saving in period 1. If s* < 0 (c1* > m1): borrower — consuming more than period-1 income. The sign of saving is determined by the MRS at the endowment relative to (1+r).",
+        "type": "condition"
+      },
+      {
+        "front": "What does it mean graphically that a consumer is a 'borrower' in the intertemporal model?",
+        "back": "The optimal consumption bundle lies to the right of the endowment point on the budget line — the consumer chooses c1* > m1. The indifference curve tangency is in the borrowing region. On a graph, this means the optimal point is southeast of the endowment, connected to it by moving right along the budget line.",
+        "type": "graph"
+      },
+      {
+        "front": "Why is the effect of a higher interest rate on saving ambiguous for a lender?",
+        "back": "Substitution effect: higher r makes future consumption cheaper relative to current, encouraging more saving (less c1). Income effect: higher r makes a lender wealthier (more interest income), which tends to increase c1 (consume more now). These effects oppose each other for lenders. For borrowers both effects reduce c1 — saving rises unambiguously.",
+        "type": "distinction"
+      },
+      {
+        "front": "What happens to an optimal intertemporal choice when borrowing and lending rates differ?",
+        "back": "The budget line has a kink at the endowment: slope -(1+rb) to the right (borrowing region) and -(1+rl) to the left (lending region), where rb > rl. Consumers whose MRS at the endowment falls between (1+rl) and (1+rb) optimally consume the endowment — they neither borrow nor lend. Small interest rate changes have no effect on their behavior.",
+        "type": "condition"
+      },
+      {
+        "front": "For U(c1,c2) = c1^a * c2^b, what is the optimal c1 as a function of wealth W = m1 + m2/(1+r)?",
+        "back": "c1* = [a/(a+b)] * W. This follows from the Cobb-Douglas demand formula: spend share a/(a+b) of wealth on good 1. Since c1* is a fixed fraction of wealth, the consumer's borrowing/lending decision shifts proportionally with wealth. Connects to the general result that Cobb-Douglas preferences generate constant expenditure shares.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t47",
+    "learn": {
+      "openingTension": "A bank advertises a 6% annual interest rate. But 6% of what, paid when, compounded how often? Three loans at '6%' can have wildly different actual costs. Why does the precise definition of an interest rate matter enormously for economic decisions?",
+      "coreIdea": "The interest rate is the relative price of current consumption in terms of future consumption — it is the price of time. In the intertemporal consumer model, r enters the budget constraint as the key price parameter: a higher r makes present consumption more expensive relative to future consumption, rotating the budget line around the endowment.",
+      "mathSetup": "Nominal interest rate r: the stated rate of return per period. Real interest rate rr: adjusted for inflation pi. Fisher equation: (1+rr) = (1+r)/(1+pi), or approximately rr ≈ r - pi. Compound interest: PV * (1+r)^t = FV. Continuous compounding: PV * e^(rt) = FV. APR (annual percentage rate) vs. EAR (effective annual rate): EAR = (1 + APR/n)^n - 1 where n = compounding periods per year.",
+      "derivation": "1. Define the nominal rate r as the per-period price of borrowing: borrowing $1 today requires repaying $(1+r) next period. Economic reason: lenders require compensation for delayed consumption (pure time preference) plus risk. 2. Adjust for inflation: if all prices rise by pi, a nominal repayment of (1+r) buys (1+r)/(1+pi) times the real goods it could have bought. This is the real interest rate (1+rr). Economic reason: real consumption is what utility depends on. 3. Compute compound interest: $1 invested for t periods at rate r yields (1+r)^t. Economic reason: interest earned in each period itself earns interest in subsequent periods. 4. The budget constraint slope -(1+r) uses the relevant real after-tax rate for consumption decisions. Economic reason: tax deductions and inflation both affect the true cost of borrowing.",
+      "graphicalIntuition": "On a graph of the intertemporal budget line (c1 horizontal, c2 vertical), the interest rate determines the slope: -(1+r). An increase in r steepens the line, rotating it clockwise around the fixed endowment point (m1,m2). The horizontal intercept shrinks (less maximum present consumption) while the vertical intercept expands (more maximum future consumption). The endowment point itself never moves because it is always feasible regardless of r.",
+      "workedExample": "Given: Nominal rate r = 8%, inflation pi = 3%, $10,000 invested for 5 years, compounded annually.\nFind: Real interest rate, nominal future value, real future value.\nSolution: Real rate: (1+rr) = 1.08/1.03 = 1.0485, so rr ≈ 4.85%. Nominal FV = 10,000 * (1.08)^5 = $14,693. Real FV = 10,000 * (1.0485)^5 = $12,677.\nInterpret: The nominal account shows $14,693 but it only buys $12,677 worth of today's goods. The nominal gain overstates the real gain by the accumulated price level increase of 1.03^5 = 1.159.",
+      "boundaryConditions": "1. Zero lower bound: Nominal interest rates cannot (easily) go below zero because holders of cash earn zero nominal return — they would not lend at negative nominal rates unless the convenience value of deposits exceeds the loss. This makes monetary policy ineffective at the zero lower bound. 2. Hyperinflation: The Fisher equation requires pi to be moderate; under hyperinflation, nominal rates lose their information content entirely and real rates become impossible to measure in real time because pi is uncertain. 3. Risk: The real interest rate in the model is risk-free. Risky assets require a risk premium added on top, breaking the clean r = rr + pi decomposition.",
+      "examTraps": [
+        "A student might think the real interest rate is simply r minus pi, but the correct answer is (1+rr) = (1+r)/(1+pi), which gives rr = (r - pi)/(1+pi) — the simple subtraction is only an approximation valid when pi is small.",
+        "A student might think a higher nominal rate always means higher real cost of borrowing, but the correct answer is that higher nominal rates accompanying higher inflation leave the real rate unchanged — only the real rate determines real consumption decisions.",
+        "A student might think more frequent compounding at the same APR lowers the cost of a loan, but the correct answer is that more frequent compounding raises the effective annual rate EAR above the APR — the borrower actually pays more.",
+        "A student might think the interest rate only affects borrowers, but the correct answer is that the interest rate is the relative price of time for both borrowers and lenders — it affects the opportunity cost of all intertemporal decisions."
+      ],
+      "frq": {
+        "prompt": "A bank offers a savings account with a nominal annual interest rate of 6%, compounded monthly. Inflation is expected to be 2% per year.",
+        "parts": [
+          "Compute the effective annual rate (EAR) on this savings account.",
+          "Compute the real interest rate using the exact Fisher equation.",
+          "A consumer deposits $20,000 today. Compute the real value of the account after 3 years, in terms of today's purchasing power.",
+          "Explain why the real interest rate — not the nominal rate — is the correct rate to use when drawing the intertemporal budget constraint for a consumer making consumption decisions."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "State the Fisher equation (exact form) relating nominal rate, real rate, and inflation.",
+        "back": "(1+r) = (1+rr)(1+pi), or rearranged: (1+rr) = (1+r)/(1+pi). Approximate version (valid for small rates): rr ≈ r - pi. The Fisher equation matters because consumers' utility depends on real consumption — nominal rates must be deflated before use in the intertemporal budget constraint.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the EAR formula for a nominal rate APR compounded n times per year?",
+        "back": "EAR = (1 + APR/n)^n - 1. As n → infinity (continuous compounding): EAR = e^(APR) - 1. A 12% APR compounded monthly gives EAR = (1.01)^12 - 1 = 12.68%. More frequent compounding always raises EAR above APR — connects to the concept that compound interest accelerates growth.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the future value of PV dollars invested for t periods at rate r (annual compounding)?",
+        "back": "FV = PV * (1+r)^t. Economic interpretation: each period's interest itself earns interest in all subsequent periods — compounding. For continuous compounding: FV = PV * e^(rt). This is the foundation of present value analysis — PV and FV are equivalent values at different points in time.",
+        "type": "formula"
+      },
+      {
+        "front": "How does the interest rate enter the intertemporal budget constraint, and what does it represent geometrically?",
+        "back": "r determines the slope -(1+r) of the budget line. Geometrically, (1+r) is the relative price of c1 in terms of c2. A higher r steepens the line, rotating it clockwise around the endowment point. This is directly analogous to a change in the price ratio p1/p2 rotating the standard budget line around the income-scaled point.",
+        "type": "graph"
+      },
+      {
+        "front": "Distinguish nominal vs. real interest rates in terms of which belongs in economic models.",
+        "back": "Nominal rate r: return in money terms, not adjusted for inflation. Real rate rr: return in goods terms — the rate relevant for real consumption decisions. The intertemporal budget constraint should use the real after-tax rate because utility is defined over real consumption bundles, not nominal dollar amounts. Using nominal rates overstates the cost of borrowing when inflation is positive.",
+        "type": "distinction"
+      }
+    ]
+  },
+  {
+    "id": "t48",
+    "learn": {
+      "openingTension": "A court awards you $100,000 to be paid in 10 years. Your neighbor is offered $55,000 today. Who has the better deal? You cannot simply compare the dollar amounts — time is not free, and a dollar today is categorically different from a dollar in the future. Present value is the tool that puts them on equal footing.",
+      "coreIdea": "Present value (PV) converts a future cash flow into its equivalent current worth by discounting at the opportunity cost of capital. It is the foundational concept linking intertemporal choice to asset pricing: any asset's value equals the present value of its expected future cash flows. The optimization role is to provide the common unit (today's dollars) that makes future amounts comparable to current amounts.",
+      "mathSetup": "PV of single payment C received t periods from now: PV = C / (1+r)^t. PV of stream of payments C1, C2, ..., Cn: PV = sum_{t=1}^{n} C_t / (1+r)^t. Discount factor for period t: df_t = 1/(1+r)^t, which lies in (0,1) for r > 0. Net present value of an investment: NPV = -I0 + sum C_t/(1+r)^t where I0 is upfront cost. The discount rate r is the opportunity cost — the return available on the next best alternative.",
+      "derivation": "1. Define equivalence: two cash flow streams are equivalent if an agent is indifferent between them. Economic reason: indifference means same utility value — the definition of 'worth the same.' 2. A payment C in period t is equivalent to C/(1+r)^t today, because investing C/(1+r)^t at rate r for t periods yields C. Economic reason: compounding converts PV to FV. 3. Present value therefore equals C/(1+r)^t. The discount factor 1/(1+r)^t shrinks with t — more distant payments are worth less. Economic reason: patient waiting has an opportunity cost. 4. Sum PV of a stream: each payment is discounted independently, then summed. Economic reason: the present value of a portfolio equals the sum of present values of its components (linearity of discounting). 5. Choose the option with higher NPV: this is the wealth-maximizing decision, which — under the separation theorem — is independent of the consumer's time preferences.",
+      "graphicalIntuition": "On a graph with c1 horizontal and c2 vertical, the present value of any bundle (c1, c2) on the budget line equals the horizontal intercept: PV = c1 + c2/(1+r) = constant = wealth. Moving along the budget line changes the composition of consumption but not its present value. The discount factor 1/(1+r) is the slope coefficient on c2 — higher r makes the slope steeper and reduces the present value of future amounts.",
+      "workedExample": "Given: An investment pays $10,000 at end of year 1, $15,000 at end of year 2, $20,000 at end of year 3. r = 8%.\nFind: Present value of the cash flow stream.\nSolution: PV = 10,000/1.08 + 15,000/(1.08)^2 + 20,000/(1.08)^3 = 9,259 + 12,860 + 15,877 = $37,996.\nInterpret: The three future payments together are worth $37,996 today. An investor should pay up to $37,996 for this asset. If it costs $35,000, NPV = +$2,996 — buy it. If it costs $40,000, NPV = -$2,004 — do not buy it.",
+      "boundaryConditions": "1. Discount rate uncertainty: PV is highly sensitive to r, especially for distant cash flows. A small change in r drastically changes the PV of 30-year cash flows but barely changes the PV of next year's payment. Projects with long horizons are riskier to value. 2. Certainty assumption: Standard PV assumes cash flows are known with certainty. Under uncertainty, expected cash flows must be discounted at a risk-adjusted rate that adds a risk premium to the risk-free rate. Using the risk-free rate to discount risky cash flows overstates NPV. 3. Inflation: All cash flows should be in real terms if discounting at the real rate, or all in nominal terms if discounting at the nominal rate — mixing them gives wrong answers.",
+      "examTraps": [
+        "A student might think the discount factor increases over time (more waiting = more value), but the correct answer is that 1/(1+r)^t decreases as t increases — more distant cash flows are worth less today, not more.",
+        "A student might think you should always prefer the higher nominal cash flow, but the correct answer is that you should prefer the option with the higher present value, which accounts for when cash flows are received.",
+        "A student might think the NPV rule and the IRR rule always give the same investment decision, but the correct answer is they can disagree for mutually exclusive projects or when cash flows change sign more than once.",
+        "A student might think present value discounting only applies to financial assets, but the correct answer is that PV is the general tool for any intertemporal comparison — including human capital investment, education, and policy cost-benefit analysis."
+      ],
+      "frq": {
+        "prompt": "Two investment options: Option A pays $50,000 in year 1 and $30,000 in year 2. Option B pays $20,000 in year 1 and $70,000 in year 2. The market interest rate is r = 0.10.",
+        "parts": [
+          "Compute the present value of each option.",
+          "Which option should a wealth-maximizing agent choose? Show your calculation.",
+          "At what interest rate are the two options equally valuable? Set up the equation (you do not need to solve it numerically).",
+          "Explain why the answer to part (b) is independent of the investor's personal time preferences — what principle does this reflect?"
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is the present value formula for a single cash flow C received t periods from now?",
+        "back": "PV = C / (1+r)^t. The denominator (1+r)^t is the compound growth factor, and 1/(1+r)^t is called the discount factor. Higher r or larger t both reduce PV — more impatience or longer waiting shrinks present worth. Connects to the FV formula: PV * (1+r)^t = FV.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the present value of a stream of cash flows C1, C2, ..., Cn?",
+        "back": "PV = sum_{t=1}^{n} C_t / (1+r)^t. Each cash flow is discounted to today independently at the appropriate power of the discount factor, then summed. This works because present values are additive — the value today of a portfolio equals the sum of the present values of its components.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the NPV rule for investment decisions?",
+        "back": "NPV = -I0 + PV of future cash flows. Accept investment if NPV > 0 (it creates value above opportunity cost), reject if NPV < 0. The NPV rule is wealth-maximizing and independent of time preferences under the Fisher separation theorem — all investors agree on NPV regardless of their personal impatience.",
+        "type": "formula"
+      },
+      {
+        "front": "Why does the discount rate r matter so much more for long-horizon cash flows?",
+        "back": "The discount factor 1/(1+r)^t shrinks exponentially with t. A 1% increase in r barely changes 1/(1.06)^1 but dramatically reduces 1/(1.06)^30. Long-lived projects (infrastructure, real estate, climate policy) are therefore extremely sensitive to the choice of discount rate — small changes in r flip NPV from positive to negative.",
+        "type": "condition"
+      },
+      {
+        "front": "What is the Fisher separation theorem?",
+        "back": "Under perfect capital markets, the investment decision (maximize NPV) is separate from the financing/consumption decision. All agents — regardless of impatience — agree on which investments to take (those with NPV > 0), then adjust their consumption timing through borrowing and lending. Breaks down when capital markets are imperfect (borrowing constraints, differential rates).",
+        "type": "definition"
+      }
+    ]
+  },
+  {
+    "id": "t49",
+    "learn": {
+      "openingTension": "Why does the price of a bond fall when interest rates rise, even though the bond's promised payments never change? Why does the stock market drop when the Federal Reserve signals higher rates? The answer in both cases is present value — and asset markets are simply the organized application of this principle.",
+      "coreIdea": "An asset market is a market where ownership claims on future cash flows are traded. Asset prices equal the present discounted value of those future cash flows: P = PV(future cash flows). This makes asset prices directly linked to interest rates and expected future earnings. The optimization role is price discovery — market prices aggregate all available information about future cash flows and discount rates.",
+      "mathSetup": "Asset price: P = sum_{t=1}^{T} C_t / (1+r)^t. For a stock with dividend stream D_t growing at rate g forever (Gordon growth model): P = D1 / (r - g), valid when r > g. For a bond with face value F, coupon C, maturity T, and yield y: P = sum_{t=1}^{T} C/(1+y)^t + F/(1+y)^T. Yield to maturity y is the r that makes P equal to the market price — solving requires numerical methods for most bonds.",
+      "derivation": "1. Define asset: a claim to a future cash flow stream (C1, C2, ..., CT). Economic reason: an asset is worth owning only because of what it pays, not intrinsically. 2. No-arbitrage pricing: P = PV(cash flows). If P < PV, buying the asset and selling the replicating portfolio yields a risk-free profit — this arbitrage opportunity cannot persist. Economic reason: competition eliminates arbitrage. 3. When r rises, each discount factor 1/(1+r)^t falls — every future dollar is worth less. So P falls. Economic reason: the opportunity cost of holding the asset rises. 4. When expected cash flows rise (better earnings or dividends), P rises directly. Economic reason: higher numerators raise present value. 5. Price and yield move inversely for bonds: if market yield rises above the coupon rate, the bond trades at a discount (P < F); if market yield falls below the coupon rate, it trades at a premium (P > F).",
+      "graphicalIntuition": "On a graph with the discount rate r on the horizontal axis and asset price P on the vertical axis, the P(r) curve is downward sloping and convex (bowed toward the origin). Convexity means that price rises more from a rate decrease than it falls from an equal rate increase — this is bond convexity. The curve is steeper for assets with longer duration (more distant cash flows), reflecting their greater sensitivity to rate changes.",
+      "workedExample": "Given: A stock pays dividends of $5 next year, growing at g = 3% per year forever. The required rate of return is r = 8%.\nFind: Current stock price using the Gordon growth model.\nSolution: P = D1/(r - g) = 5/(0.08 - 0.03) = 5/0.05 = $100.\nInterpret: If the required return rises to 9%, P = 5/0.06 = $83.33 — a 17% price drop from a 1 percentage point rate increase. If r falls to 7%, P = 5/0.04 = $125 — a 25% price increase. The inverse relationship is asymmetric because of convexity.",
+      "boundaryConditions": "1. Gordon growth model requires r > g: if g >= r, the present value sum diverges — the model breaks down. This is why fast-growing companies with g approaching r are very difficult to value. 2. Risk: The model uses a single discount rate for all cash flows. In reality, distant cash flows are riskier and should be discounted at higher rates — using a flat discount rate understates risk for long-lived assets. 3. Liquidity: Prices in illiquid markets may deviate from PV for extended periods because arbitrage is costly — the 'no-arbitrage' foundation requires the ability to trade quickly at low cost.",
+      "examTraps": [
+        "A student might think a bond is a good investment when interest rates are rising, but the correct answer is that rising rates reduce bond prices — an investor who must sell before maturity realizes a capital loss.",
+        "A student might think the yield to maturity equals the coupon rate, but the correct answer is they are equal only when the bond trades at par (P = F); when P < F, YTM > coupon rate; when P > F, YTM < coupon rate.",
+        "A student might think asset price increases reflect only earnings growth, but the correct answer is that price increases can also result from discount rate decreases — the same earnings stream is worth more when r falls.",
+        "A student might think stock prices today reflect only next year's dividend, but the correct answer is that prices reflect the entire future stream of dividends, discounted to the present — even a company paying no dividend today has value if future dividends are expected."
+      ],
+      "frq": {
+        "prompt": "A corporate bond has a face value of $1,000, pays an annual coupon of $60 (coupon rate = 6%), and matures in 3 years. The current market yield on comparable bonds is 8%.",
+        "parts": [
+          "Compute the current market price of the bond. Show all discounting steps.",
+          "Explain why this bond trades at a discount (P < $1,000) given that the coupon rate is 6% but the market yield is 8%.",
+          "If the market yield falls to 5% tomorrow, compute the new bond price. Calculate the percentage price change.",
+          "A student says: 'I should prefer bonds with higher coupon rates because they pay more.' Evaluate this claim using present value reasoning."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What determines the price of any asset in a competitive market?",
+        "back": "The price equals the present value of all expected future cash flows, discounted at the appropriate risk-adjusted rate: P = sum C_t / (1+r)^t. This is the fundamental asset pricing equation. It implies that asset prices fall when interest rates rise (higher denominator) and rise when expected cash flows increase (higher numerator).",
+        "type": "formula"
+      },
+      {
+        "front": "State the Gordon Growth Model and its conditions for validity.",
+        "back": "P = D1 / (r - g), where D1 = next-period dividend, r = required return, g = constant perpetual dividend growth rate. Valid only when r > g. If g >= r, the present value sum is infinite and the model breaks down. Used for mature companies with stable, sustainable growth rates.",
+        "type": "formula"
+      },
+      {
+        "front": "When does a bond trade at a premium, at par, and at a discount?",
+        "back": "At par (P = F): market yield = coupon rate. At a discount (P < F): market yield > coupon rate — investors require more return than the coupon provides, so the price falls until YTM matches. At a premium (P > F): market yield < coupon rate. The relationship between price and yield is always inverse. Connects to the general PV principle: higher r lowers the value of any fixed future payment.",
+        "type": "condition"
+      },
+      {
+        "front": "What is yield to maturity (YTM)?",
+        "back": "YTM is the single discount rate y that equates the bond's market price to the present value of all its future cash flows: P = sum C/(1+y)^t + F/(1+y)^T. YTM is the bond's internal rate of return. It represents the annual return if the bond is held to maturity and all coupons are reinvested at YTM.",
+        "type": "definition"
+      },
+      {
+        "front": "Why do long-duration assets have greater price sensitivity to interest rate changes?",
+        "back": "Duration measures how far into the future cash flows are weighted. For a long-duration asset, most cash flows are distant, so the high-power discount factors 1/(1+r)^t dominate. A small change in r shifts all high-power discount factors substantially, causing a large price change. Mathematically, dP/dr is more negative for higher t — connects to the concept of convexity.",
+        "type": "condition"
+      },
+      {
+        "front": "What is the no-arbitrage pricing principle?",
+        "back": "In competitive markets, an asset's price must equal the present value of its cash flows. If P < PV, arbitrageurs buy the asset and sell the replicating portfolio for a risk-free profit — buying pressure raises P until equality is restored. If P > PV, they do the reverse. No-arbitrage is the discipline that makes asset pricing theorems work — it connects financial markets to the intertemporal budget constraint.",
+        "type": "definition"
+      }
+    ]
+  }
+]

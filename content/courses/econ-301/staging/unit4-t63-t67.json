@@ -1,0 +1,281 @@
+[
+  {
+    "id": "t63",
+    "learn": {
+      "openingTension": "You walk into a store willing to pay $50 for a shirt. The price tag says $30. You buy it. Are you better off than before you walked in? By exactly how much? Willingness to pay gives us a monetary unit for value that economists can actually measure — but only if we're careful about what it means.",
+      "coreIdea": "Willingness to pay (WTP) is the maximum price a consumer would pay for one more unit of a good and still be at least as well off as without it. It equals the marginal utility of the good in dollar terms, and it plays the role of the demand side's value measure in the optimization: a consumer buys a unit if and only if WTP ≥ price.",
+      "mathSetup": "Formal setup: Let u(x1, x2) be a utility function with x2 as the numeraire (money). Consumer's WTP for the nth unit of x1 is defined as the amount of x2 they would give up to obtain that unit: WTP_n = u(n, m - WTP_n) = u(n-1, m), where m is income. For quasilinear utility u(x1, x2) = v(x1) + x2, WTP_n = v(n) - v(n-1) = marginal utility of the nth unit. Key formula: WTP_n = MU_x1 / MU_x2 evaluated at the margin.",
+      "derivation": "1. Start with a consumer considering whether to buy one more unit. Economic reason: the decision is marginal — compare the gain in utility to the cost. 2. Find the dollar equivalent of the utility gain. For quasilinear utility: WTP_n = v(n) - v(n-1). Economic reason: x2 is money, so utils from x2 are one-for-one with dollars. 3. A unit is purchased if WTP_n ≥ p. Economic reason: buying yields net surplus WTP_n - p ≥ 0, so the consumer is weakly better off. 4. WTP is diminishing: v(n) - v(n-1) decreases as n increases. Economic reason: diminishing marginal utility — each additional unit provides less additional utility. This generates a downward-sloping demand schedule.",
+      "graphicalIntuition": "On a graph, plot quantity on the horizontal axis and WTP on the vertical. Each bar of height WTP_n for the nth unit forms a step-down staircase. The demand curve is the envelope of these bars. The price is a horizontal line at p. All bars above p represent units purchased; the last bar just at p is the marginal unit. The area of all bars above p and to the left of quantity demanded equals total consumer surplus in the discrete case.",
+      "workedExample": "Given: A consumer's WTP for units 1–5 of a good are $10, $8, $6, $4, $2. Market price p = $5.\nFind: How many units does the consumer buy, and what is total WTP for those units?\nSolution: Buy unit if WTP ≥ p = $5. Unit 1: $10 ≥ $5 ✓. Unit 2: $8 ≥ $5 ✓. Unit 3: $6 ≥ $5 ✓. Unit 4: $4 < $5 ✗. Consumer buys 3 units. Total WTP = $10 + $8 + $6 = $24.\nInterpret: The consumer values 3 units at $24 total but only pays 3 × $5 = $15 — a surplus of $9. The 4th unit would cost more than it's worth.",
+      "boundaryConditions": "1. Non-quasilinear utility: WTP depends on income because the marginal utility of money changes as the consumer spends. This means WTP is not a clean dollar measure of utility — it shifts with wealth. Use compensating or equivalent variation instead. 2. Indivisibility: If the good must be bought as a discrete bundle (car, house), WTP for the bundle ≠ sum of marginal WTPs for components. Must use a reservation price approach for the whole unit.",
+      "examTraps": [
+        "A student might think WTP equals the price paid, but the correct answer is that WTP is the maximum a consumer would pay, which is typically above the actual price paid, because if WTP equaled price there would be no consumer surplus.",
+        "A student might think WTP is constant per consumer, but the correct answer is that WTP declines with quantity due to diminishing marginal utility — the WTP for the 1st unit exceeds WTP for the 2nd, and so on.",
+        "A student might think WTP measures how much someone wants a good in emotional terms, but the correct answer is that WTP is a precise monetary measure — the most dollars they would sacrifice to obtain the good while remaining equally well off.",
+        "A student might think WTP is always independent of income, but the correct answer is that this holds only for quasilinear utility where MU of money is constant; for general utility, WTP rises with income."
+      ],
+      "frq": {
+        "prompt": "A consumer has quasilinear utility u(x, m) = 4√x + m, where x is units of a good and m is money. The price of x is p = $2 per unit.",
+        "parts": [
+          "Derive the consumer's willingness to pay for the nth unit of x as a function of n.",
+          "Find the quantity of x the consumer purchases at p = $2. Show the optimality condition.",
+          "Calculate total willingness to pay for the quantity purchased and the consumer surplus.",
+          "Explain in words why WTP declines with each additional unit purchased, connecting to the shape of the demand curve."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define willingness to pay (WTP) for the nth unit of a good.",
+        "back": "WTP for the nth unit is the maximum price a consumer would pay for that unit and remain at least as well off as without it — equal to the utility gain in dollar terms. For quasilinear utility u = v(x) + m, WTP_n = v(n) - v(n-1). This is the foundation of the demand curve and consumer surplus.",
+        "type": "definition"
+      },
+      {
+        "front": "What is the purchase decision rule using WTP?",
+        "back": "Buy the nth unit if and only if WTP_n ≥ p (market price). The consumer equates the marginal benefit (WTP) to the marginal cost (price) at the last unit purchased. This generates the demand schedule: quantity demanded is the largest n such that WTP_n ≥ p.",
+        "type": "condition"
+      },
+      {
+        "front": "Why does WTP decline with quantity?",
+        "back": "Diminishing marginal utility: each additional unit yields less additional utility than the previous one. Since WTP = MU / MU_money in dollar terms, falling MU implies falling WTP. This is why demand curves slope downward — the value of each extra unit falls as the consumer has more of it.",
+        "type": "definition"
+      },
+      {
+        "front": "Under what condition is WTP a clean dollar measure of value?",
+        "back": "WTP is income-independent and a clean dollar measure only under quasilinear utility u(x, m) = v(x) + m, where the marginal utility of money (MU_m = 1) is constant. With general utility, WTP shifts with income because richer consumers have a lower MU of money, making the dollar measure misleading.",
+        "type": "condition"
+      },
+      {
+        "front": "How does the WTP schedule relate to the demand curve?",
+        "back": "The WTP for each discrete unit traces out the demand schedule: the inverse demand curve P(Q) equals the marginal WTP at quantity Q. In the continuous case, WTP_marginal = P(Q) exactly, so the demand curve is the marginal WTP curve. Consumer surplus is the area between the demand curve and the price line.",
+        "type": "graph"
+      },
+      {
+        "front": "Formula: WTP_n for quasilinear utility u(x,m) = v(x) + m",
+        "back": "WTP_n = v(n) - v(n-1) = the discrete marginal utility of the nth unit. In the continuous limit, WTP(x) = v'(x) = marginal utility of x. This equals the inverse demand function P(x) because optimization requires v'(x) = p at the margin. Connect to consumer surplus: CS = v(x*) - p·x*.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t64",
+    "learn": {
+      "openingTension": "A consumer buys a gallon of water for $1 — but would have paid $100 to avoid dying of thirst. The $99 difference goes unrecorded in any transaction. Why should we care about this invisible surplus, and what does it actually measure about human welfare?",
+      "coreIdea": "Consumer surplus (CS) is the difference between what a consumer is willing to pay and what they actually pay — it measures the net benefit from participating in a market. CS plays the role of welfare measure in consumer optimization: it quantifies how much better off the consumer is at the market price than at a price that would drive them out of the market entirely.",
+      "mathSetup": "Discrete case: CS = Σ(WTP_n - p) for all units purchased, summing over n = 1 to x*. Continuous case: CS = ∫₀^{x*} P(x)dx - p·x* = area under demand curve minus total expenditure. For inverse demand P(x), consumer surplus at price p* is CS = ∫₀^{x*} [P(x) - p*] dx where x* solves P(x*) = p*. For linear demand P = a - bx: CS = (1/2)(a - p*)(x*) = triangle area above price, below demand curve.",
+      "derivation": "1. Consumer buys x* units where WTP(x*) = p. Economic reason: stop buying when marginal WTP equals price. 2. For each unit purchased, the consumer receives WTP_n but pays only p. Net gain per unit = WTP_n - p. Economic reason: each unit where WTP > p makes the consumer better off. 3. Sum across all units: CS = Σ(WTP_n - p). In continuous case, take the integral: CS = ∫₀^{x*} P(x)dx - p·x*. 4. Geometric interpretation: area of triangle (for linear demand) above price line and below demand curve. Economic reason: the demand curve is the WTP curve, so the area above price is surplus value retained by consumer.",
+      "graphicalIntuition": "On a graph with price on the vertical axis and quantity on the horizontal axis, draw a downward-sloping demand curve. Mark the market price p* as a horizontal line. The equilibrium quantity x* is where the demand curve meets the price line. Consumer surplus is the triangular area above the price line and below the demand curve, from 0 to x*. When price falls, the triangle grows — consumers gain surplus both from paying less on existing units and from buying new units they previously couldn't afford.",
+      "workedExample": "Given: Inverse demand P = 20 - 2Q. Market price p* = $8.\nFind: Equilibrium quantity and consumer surplus.\nSolution: Set P = p*: 20 - 2Q = 8, so Q* = 6. CS = area of triangle above p* below demand curve = (1/2)(base)(height) = (1/2)(6)(20 - 8) = (1/2)(6)(12) = $36.\nInterpret: Consumers collectively pay 6 × $8 = $48 but value the good at $48 + $36 = $84. The $36 surplus is the welfare gain from market participation — captured neither by firms nor government.",
+      "boundaryConditions": "1. Non-quasilinear utility: The area under the demand curve is not an exact welfare measure because as income changes (from price changes), the demand curve shifts — the area is only an approximation. Use CV or EV for exact welfare measurement. 2. Discrete goods: Cannot use integral; must sum discrete WTP_n - p terms. For a single indivisible good (car), CS = WTP_total - p, where WTP_total is the reservation price for the whole bundle.",
+      "examTraps": [
+        "A student might think consumer surplus is the total amount spent, but the correct answer is that CS is what the consumer gains above what they paid — total spending is p·x*, which must be subtracted from total WTP to get CS.",
+        "A student might think a lower price always increases consumer surplus, but the correct answer is that a lower price always increases CS (unless the good is Giffen or demand is perfectly inelastic), because the consumer pays less per unit and typically buys more units.",
+        "A student might think consumer surplus is the same as profit for consumers, but the correct answer is that CS is an analog — it is the consumer's net gain from trade — but unlike profit it has no accounting identity and is not observable in transactions.",
+        "A student might think the CS triangle formula (1/2)(base)(height) always applies, but the correct answer is it applies only for linear demand; for nonlinear demand, integrate ∫[P(x) - p*]dx."
+      ],
+      "frq": {
+        "prompt": "Market demand for concert tickets is Q = 1200 - 4P. The venue sets price at P = $50 per ticket.",
+        "parts": [
+          "Find equilibrium quantity demanded at P = $50.",
+          "Calculate consumer surplus at P = $50 using the correct geometric formula. Show all work.",
+          "The venue raises price to P = $80. Calculate the new consumer surplus and the change in consumer surplus. Decompose the loss into two parts: loss on existing units and loss from reduced quantity.",
+          "Explain in words what the lost consumer surplus represents in terms of consumer welfare, and why it does not simply transfer to the venue as profit."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define consumer surplus (CS) and give the formula for continuous linear demand.",
+        "back": "CS = total WTP - total expenditure = ∫₀^{x*} P(x)dx - p·x*. For linear inverse demand P = a - bx at price p*: CS = (1/2)(x*)(a - p*) = area of the triangle above price and below demand curve. CS measures the welfare gain from market participation — what consumers would pay for the right to buy at the market price.",
+        "type": "formula"
+      },
+      {
+        "front": "How does CS change when price falls from p1 to p2 (p2 < p1)?",
+        "back": "ΔCS = (p1 - p2)·x1 + (1/2)(p1 - p2)(x2 - x1). Two components: (1) gain on existing units x1 (pay less on what they were already buying), (2) gain from new units x2 - x1 (triangle from expanded quantity). Connect to welfare: a price decrease unambiguously raises CS because both terms are positive.",
+        "type": "formula"
+      },
+      {
+        "front": "When is the area under the demand curve an exact welfare measure vs. an approximation?",
+        "back": "Exact only under quasilinear utility (u = v(x) + m), where income effects are zero and the demand curve does not shift when income changes. With general preferences, it is an approximation — income effects from price changes shift demand, making the area under the original demand curve inaccurate. Use CV or EV for exact measures.",
+        "type": "condition"
+      },
+      {
+        "front": "Graphically, what does consumer surplus look like on a supply-demand diagram?",
+        "back": "CS is the triangle (or area for nonlinear demand) above the price line and below the demand curve, from Q = 0 to Q = Q*. The demand curve represents marginal WTP at each quantity, and the price line is the constant marginal cost to the consumer. CS is the excess of value over cost, summed across all units. This region shrinks when price rises and expands when price falls.",
+        "type": "graph"
+      },
+      {
+        "front": "Discrete CS formula for a consumer who buys units with WTP = {$10, $8, $6} at price p = $5.",
+        "back": "CS = (10 - 5) + (8 - 5) + (6 - 5) = 5 + 3 + 1 = $9. Buy all units where WTP ≥ p. The 4th unit (WTP $4 < $5) is not purchased. This discrete sum converges to the integral ∫[P(x) - p]dx as units become infinitesimally small. Connect to demand curve: each WTP value is one point on the discrete demand schedule.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t65",
+    "learn": {
+      "openingTension": "You can buy half a bottle of shampoo, but you can't buy half a car. Does this distinction matter for how we measure demand and welfare, or is it just a computational nuisance economists can wave away?",
+      "coreIdea": "Demand can be discrete (integer quantities — cars, houses, appliances) or continuous (divisible goods — gasoline, food, time). The distinction determines the correct optimization technique and welfare formula. In the discrete case, the optimization role is played by a reservation price comparison; in the continuous case, by equating marginal WTP to price.",
+      "mathSetup": "Discrete demand: Consumer has reservation prices r1 ≥ r2 ≥ ... ≥ rn for units 1 through n. Buy unit k if rk ≥ p. Optimal quantity x* = max{k : rk ≥ p}. CS_discrete = Σ_{k=1}^{x*} (rk - p). Continuous demand: x*(p) solves v'(x) = p (for quasilinear utility). CS_continuous = v(x*) - p·x* = ∫₀^{x*} [P(x) - p] dx. Connection: as discrete units become infinitesimally small (Δx → 0), the staircase of discrete reservation prices converges to the continuous demand curve.",
+      "derivation": "1. Discrete case: list reservation prices in descending order r1, r2, r3, ... Each represents the consumer's WTP for exactly one more unit. Buy if rk ≥ p. Economic reason: buying unit k when rk ≥ p adds rk - p ≥ 0 to net surplus. 2. Optimal stopping rule: stop at unit x* where rx* ≥ p > rx*+1. Economic reason: the marginal unit still yields non-negative surplus; the next would not. 3. Continuous case: take the limit as Δx → 0. The reservation price schedule becomes a continuous function P(x). The optimality condition v'(x) = p is the continuous analog of rk = p at the margin. 4. Welfare calculation: discrete CS is a sum; continuous CS is an integral. Both equal value minus expenditure.",
+      "graphicalIntuition": "On a graph, discrete demand looks like a descending staircase: each step is one unit wide (height = reservation price for that unit). Continuous demand is the smooth curve that the staircase approximates. The market price p is a horizontal line. CS in the discrete case is the sum of the heights of each step above the price line. In the continuous case, CS is the smooth triangular area under the demand curve and above the price. As the step size shrinks to zero (good becomes more divisible), discrete CS converges to continuous CS.",
+      "workedExample": "Given: A consumer's reservation prices for units of a good are: r1=$12, r2=$9, r3=$7, r4=$4, r5=$2. Price p=$6.\nFind: Optimal quantity demanded (discrete) and consumer surplus.\nSolution: Compare each reservation price to p=$6. r1=$12≥$6 ✓, r2=$9≥$6 ✓, r3=$7≥$6 ✓, r4=$4<$6 ✗. Buy 3 units. CS = (12-6)+(9-6)+(7-6) = 6+3+1 = $10.\nInterpret: The consumer values the 3 purchased units at $12+$9+$7=$28 total, pays 3×$6=$18, and retains $10 as surplus. The 4th unit at r4=$4 would cost $6 — not worth buying.",
+      "boundaryConditions": "1. Indivisible single unit: When goods are strictly discrete (car, house), the entire demand is 0 or 1 unit. The relevant comparison is just r1 vs. p. Cannot apply calculus. Welfare is r1 - p if purchased, 0 otherwise. 2. Continuous approximation failure: For goods with very large discrete steps and income effects (house), approximating with a continuous demand function may significantly misstate CS. Use reservation price approach directly. 3. Corner solution in continuous case: If v'(0) < p, the consumer buys zero — the continuous FOC v'(x) = p has no interior solution.",
+      "examTraps": [
+        "A student might think discrete and continuous demand are interchangeable for welfare calculations, but the correct answer is that they use different formulas — sums vs. integrals — and the continuous formula is only an approximation for truly discrete goods.",
+        "A student might think the consumer in the discrete case sets MU = price, but the correct answer is that they compare reservation price rk to price p for each unit; the continuous MU = p condition is the limit of this comparison as units become infinitesimally small.",
+        "A student might think buying stops when reservation price equals price exactly, but the correct answer is that the consumer buys units as long as rk ≥ p and stops when rk+1 < p — the boundary unit earns zero surplus but is still purchased."
+      ],
+      "frq": {
+        "prompt": "A collector's reservation prices for baseball cards are r1=$20, r2=$15, r3=$11, r4=$8, r5=$5, r6=$2. The market price is p=$9.",
+        "parts": [
+          "Determine how many cards the collector buys and calculate consumer surplus.",
+          "If price falls to p=$5, how many cards does the collector now buy? Calculate the new CS and the change in CS.",
+          "Sketch the discrete demand curve (staircase diagram) for this collector. Mark the price lines at p=$9 and p=$5 and shade the CS area at p=$9.",
+          "Explain why the continuous demand approximation would overstate or understate CS here, and under what conditions the approximation becomes more accurate."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "What is a reservation price in the context of discrete demand?",
+        "back": "The reservation price rk for the kth unit is the maximum price the consumer would pay for exactly that unit — their WTP for unit k. Units are purchased in descending order of reservation prices. The consumer buys unit k if and only if rk ≥ p. This is the discrete analog of the continuous condition v'(x) = p.",
+        "type": "definition"
+      },
+      {
+        "front": "Discrete vs. continuous demand: how does the optimization condition differ?",
+        "back": "Discrete: buy unit k if rk ≥ p; stop when rk+1 < p. Continuous: choose x* such that v'(x*) = p (equate marginal utility to price). As the unit size shrinks to zero, discrete reservation prices converge to the continuous marginal WTP function P(x) = v'(x), and the sum Σ(rk - p) converges to ∫[P(x)-p]dx.",
+        "type": "distinction"
+      },
+      {
+        "front": "Formula: Consumer surplus for discrete demand with reservation prices r1 ≥ r2 ≥ ... at price p.",
+        "back": "CS = Σ_{k=1}^{x*} (rk - p), where x* is the last unit with rk ≥ p. Each term (rk - p) is the net surplus on the kth unit. The boundary unit (rx* = p exactly) earns zero surplus but is still purchased. Compare to continuous CS = ∫₀^{x*}[P(x)-p]dx.",
+        "type": "formula"
+      },
+      {
+        "front": "What does a discrete demand curve look like graphically, and how does it relate to a continuous demand curve?",
+        "back": "A discrete demand curve is a descending staircase: each step is one unit wide and has height equal to the reservation price for that unit. The smooth continuous demand curve is the curve that connects the tops of all steps. As unit size → 0, the staircase converges to the smooth curve. CS is the area of the steps above the price line (discrete) vs. the smooth triangle area (continuous).",
+        "type": "graph"
+      }
+    ]
+  },
+  {
+    "id": "t66",
+    "learn": {
+      "openingTension": "A price increase hits you. Your boss offers two options: 'I'll give you extra cash so you can afford what you used to buy' or 'I'll reduce your pay by the maximum you'd accept to avoid the price increase entirely.' These two offers sound similar but yield different dollar amounts. Why, and which one is the right measure of welfare loss?",
+      "coreIdea": "Compensating variation (CV) is the amount of money that must be transferred to (or from) a consumer after a price change to return them to their original utility level. It answers: 'how much compensation is needed to make this person indifferent to the price change?' CV plays the role of exact welfare measure in the consumer's expenditure minimization problem — it is the change in expenditure function at constant original utility.",
+      "mathSetup": "Let e(p, u) = expenditure function = minimum spending needed to reach utility u at prices p. After a price increase from p0 to p1 (with income m fixed): CV = e(p1, u0) - e(p0, u0) = e(p1, u0) - m. Interpretation: CV is how much extra income the consumer needs at new prices to reach old utility u0. For a price decrease, CV < 0 (consumer would give this amount up). Key relationship: CV = -ΔCS when utility is quasilinear; CV ≠ ΔCS with income effects.",
+      "derivation": "1. Consumer is initially at utility u0 with income m at prices p0. Economic reason: u0 = v(x*(p0, m)) is the baseline welfare level. 2. Price changes to p1. Consumer now reaches utility u1 = v(x*(p1, m)) < u0 (for price increase). 3. CV asks: how much extra income Δm at prices p1 would return utility to u0? Formally: v(x*(p1, m + CV)) = u0. 4. Using the expenditure function: m + CV = e(p1, u0), so CV = e(p1, u0) - m = e(p1, u0) - e(p0, u0). Economic reason: e(p0, u0) = m because the consumer was optimizing at (p0, m). 5. CV is measured at the original utility level u0 — this is the key distinction from EV, which uses the new utility level u1.",
+      "graphicalIntuition": "On a graph with x1 on the horizontal axis and x2 (money) on the vertical axis, draw the original budget line (slope -p0) tangent to indifference curve u0. After the price increase, the new budget line (slope -p1) is steeper and tangent to u1 < u0. CV is the vertical distance you must shift the new budget line upward (adding income at new prices) until it is tangent to u0 again. On a compensated demand curve diagram, CV equals the area under the Hicksian (compensated) demand curve between p0 and p1.",
+      "workedExample": "Given: u(x1, x2) = x1^0.5 · x2^0.5, income m = $100. Price of x1 rises from p0 = $1 to p1 = $4. Price of x2 = $1 throughout.\nFind: Compensating variation.\nSolution: Expenditure function for Cobb-Douglas: e(p1, p2, u) = 2·u·√(p1·p2). Initial utility: x1* = m/(2p1) = 50, x2* = 50, u0 = √(50·50) = 50. CV = e(p1_new, p2, u0) - e(p1_old, p2, u0) = 2·50·√(4·1) - 2·50·√(1·1) = 200 - 100 = $100.\nInterpret: The consumer needs $100 in additional income at the new prices to return to original utility. They are exactly $100 worse off in welfare terms from this price increase.",
+      "boundaryConditions": "1. Quasilinear utility: CV = EV = ΔCS (area under Marshallian demand). Income effects are zero, so all three measures coincide. This is when the area under the Marshallian demand curve is an exact welfare measure. 2. Large income effects: CV and EV diverge significantly. CV uses original utility, EV uses new utility — when income effects are large (inferior/Giffen goods), these give very different answers. 3. Multiple price changes: CV for a sequence of price changes is path-dependent in general but path-independent when cross-price effects are symmetric (when expenditure function is well-behaved).",
+      "examTraps": [
+        "A student might think CV equals the change in consumer surplus (area under Marshallian demand), but the correct answer is that CV uses the Hicksian (compensated) demand curve, not the Marshallian — they coincide only under quasilinear utility where income effects are zero.",
+        "A student might think CV and EV give the same answer for any price change, but the correct answer is that CV uses original utility u0 while EV uses new utility u1, and they differ whenever income effects are nonzero — CV answers 'compensation needed at new prices,' EV answers 'equivalent gain at old prices.'",
+        "A student might think a positive CV means the consumer is better off, but the correct answer is that for a price increase CV > 0 means the consumer needs additional income to return to original welfare — they are worse off, not better off.",
+        "A student might think CV is only relevant for price increases, but the correct answer is that CV is defined for any price change: for a price decrease CV < 0, meaning the consumer would give up that amount of income and still be as well off as before — it is a measure of gain."
+      ],
+      "frq": {
+        "prompt": "A consumer has utility u(x, m) = ln(x) + m, where x is gasoline (gallons) and m is all other goods (dollars). Income = $200. The price of gasoline rises from $2 to $5 per gallon.",
+        "parts": [
+          "Find the consumer's optimal gasoline consumption before and after the price change.",
+          "Calculate the compensating variation (CV) for this price increase. Show all steps using the expenditure function or direct compensation approach.",
+          "Explain what CV measures in words — what is the consumer being compensated for, and at which utility level is compensation evaluated?",
+          "For quasilinear utility, CV equals the change in consumer surplus. Verify this by computing ΔCS for the demand curve derived in part (a), then explain why they are equal here."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define Compensating Variation (CV).",
+        "back": "CV = e(p1, u0) - e(p0, u0), where e(p, u) is the expenditure function and u0 is original utility. CV is the income transfer needed after a price change to return the consumer to original utility u0. For a price increase: CV > 0 (consumer needs compensation). For a price decrease: CV < 0 (consumer would give up income). CV is evaluated at the original utility level.",
+        "type": "definition"
+      },
+      {
+        "front": "Formula: CV using the expenditure function.",
+        "back": "CV = e(p1, u0) - e(p0, u0) = e(p1, u0) - m, since e(p0, u0) = m (consumer was optimizing at original prices). The expenditure function e(p, u) = minimum spending to achieve utility u at prices p. CV equals the area under the Hicksian (compensated) demand curve at utility u0, between p0 and p1.",
+        "type": "formula"
+      },
+      {
+        "front": "What is the Hicksian demand curve and why is it used for CV?",
+        "back": "The Hicksian (compensated) demand curve h(p, u) gives the quantity demanded at price p while holding utility constant at u. It eliminates income effects. CV = ∫_{p0}^{p1} h(p, u0) dp — the area under the Hicksian demand curve. Used for CV because CV holds utility fixed at u0 — the same utility level that defines the Hicksian demand.",
+        "type": "definition"
+      },
+      {
+        "front": "When do CV, EV, and ΔCS (Marshallian) all give the same welfare measure?",
+        "back": "Under quasilinear utility u(x, m) = v(x) + m, income effects are zero (x*(p, m) does not depend on m). Therefore Hicksian = Marshallian demand, and CV = EV = ΔCS = area under the Marshallian demand curve. This is the key condition: zero income effects make all three measures identical.",
+        "type": "condition"
+      },
+      {
+        "front": "CV vs EV: which utility level does each use?",
+        "back": "CV uses original utility u0 — it asks 'how much income at new prices restores original welfare?' EV uses new utility u1 — it asks 'how much income change at old prices would be equivalent to this price change?' They give different answers when income effects exist. CV = EV only when income effects are zero (quasilinear utility).",
+        "type": "distinction"
+      },
+      {
+        "front": "For a Cobb-Douglas utility u = x1^a · x2^b, what is the expenditure function used to compute CV?",
+        "back": "e(p1, p2, u) = u · (p1/a)^a · (p2/b)^b · (a+b)^(a+b) / [(a^a)(b^b)] [general form]. For equal exponents u = x1^0.5 · x2^0.5: e(p1, p2, u) = 2u√(p1·p2). CV = e(p1_new, p2, u0) - e(p1_old, p2, u0). Connect to EV: EV uses the same formula but evaluated at u1 instead of u0.",
+        "type": "formula"
+      }
+    ]
+  },
+  {
+    "id": "t67",
+    "learn": {
+      "openingTension": "Instead of compensating a consumer after a price change, what if we asked: how much would they pay in advance to prevent the price change from happening? This is a different question, and it gives a different answer — sometimes a very different one. Why does the order of evaluation matter for welfare measurement?",
+      "coreIdea": "Equivalent variation (EV) is the amount of income change at original prices that would be equivalent in welfare terms to the actual price change. It answers: 'how much income would the consumer trade for this price change, if offered the choice at current prices?' EV plays the role of welfare measure evaluated at the new utility level u1, using original prices as the reference.",
+      "mathSetup": "EV = e(p0, u1) - e(p0, u0) = e(p0, u1) - m. Interpretation: how much would the consumer's income need to change at original prices p0 to reach the same utility u1 they end up at after the price change? For a price increase (u1 < u0): EV < 0 — a reduction in income at old prices is 'equivalent' to the price increase. For a price decrease (u1 > u0): EV > 0. Key: EV is evaluated at new utility u1 but at old prices p0.",
+      "derivation": "1. After price change to p1, consumer reaches u1. Economic reason: they optimize at new prices with same income. 2. EV asks: what income change Δm at old prices p0 would give the same utility u1? 3. Formally: v(x*(p0, m + EV)) = u1, which means m + EV = e(p0, u1). 4. So EV = e(p0, u1) - m = e(p0, u1) - e(p0, u0). Economic reason: e(p0, u0) = m (original optimum). 5. EV equals the area under the Hicksian demand curve at utility u1 (not u0 as in CV) between p0 and p1. This is what makes EV differ from CV: different utility level used to compute compensated demand.",
+      "graphicalIntuition": "On a graph with x1 and x2 on the axes, draw the original budget line tangent to u0 and the new (steeper) budget line tangent to u1. EV is the vertical distance by which the original budget line must shift downward (reducing income at old prices) until it is tangent to u1. This is different from CV: CV shifts the new budget line up to u0, while EV shifts the old budget line down to u1. On a compensated demand diagram, EV = area under the Hicksian demand curve at u1.",
+      "workedExample": "Given: u(x1, x2) = x1^0.5 · x2^0.5, income m = $100. Price of x1 rises from p0 = $1 to p1 = $4. Price of x2 = $1 throughout. (Same setup as CV example.)\nFind: Equivalent variation.\nSolution: New equilibrium: x1* = m/(2p1) = 100/8 = 12.5, x2* = 50. u1 = √(12.5 × 50) = √625 = 25. EV = e(p0_old, p2, u1) - m = 2·25·√(1·1) - 100 = 50 - 100 = -$50.\nInterpret: EV = -$50. In absolute value: the consumer would give up $50 at original prices to avoid this price increase. Compare to CV = $100: at new prices they need $100 in compensation, but at old prices they'd sacrifice only $50. The gap reflects income effects.",
+      "boundaryConditions": "1. Quasilinear utility: EV = CV = ΔCS. Income effects vanish and both measures collapse to the area under the Marshallian demand curve. This is the only case where EV and CV give identical answers. 2. Normal goods: For a price increase, |CV| > |EV| because at new higher prices, the cost of restoring original utility u0 is larger than the equivalent income loss at old prices. 3. Inferior goods: |CV| < |EV| for a price increase — the income effect works in the opposite direction.",
+      "examTraps": [
+        "A student might think CV and EV always give the same answer, but the correct answer is they are equal only under quasilinear utility (zero income effects); with income effects, CV uses u0 and EV uses u1, producing different dollar amounts.",
+        "A student might think EV > CV always, but the correct answer is that for normal goods with a price increase |CV| > |EV|, while for inferior goods the inequality reverses — the direction depends on whether the good is normal or inferior.",
+        "A student might think EV measures how much the consumer is paid after the price change, but the correct answer is that EV is a hypothetical income change at old prices — it is a 'what if' measure, not an actual transfer, unlike CV which could be an actual payment.",
+        "A student might think both CV and EV use the Marshallian demand curve for calculation, but the correct answer is that both use Hicksian (compensated) demand curves — CV uses the Hicksian at u0, EV uses the Hicksian at u1."
+      ],
+      "frq": {
+        "prompt": "A consumer has Cobb-Douglas utility u(x1, x2) = x1^0.5 · x2^0.5 and income m = $200. The price of x1 falls from p0 = $4 to p1 = $1. The price of x2 = $1.",
+        "parts": [
+          "Calculate the consumer's utility before and after the price change.",
+          "Compute the Compensating Variation (CV) for this price decrease. Interpret the sign.",
+          "Compute the Equivalent Variation (EV) for this price decrease. Interpret the sign.",
+          "CV and EV differ here. Explain in words why they differ, which measure is larger in absolute value, and what this tells us about whether x1 is a normal or inferior good. Then state the one condition under which CV and EV would give the same answer."
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "front": "Define Equivalent Variation (EV).",
+        "back": "EV = e(p0, u1) - e(p0, u0) = e(p0, u1) - m, where u1 is the new (post-change) utility level and p0 are original prices. EV asks: how much income change at old prices p0 would yield the same utility as the actual price change? EV is evaluated at new utility u1 but old prices p0 — opposite to CV which uses new prices p1 and old utility u0.",
+        "type": "definition"
+      },
+      {
+        "front": "CV vs. EV: exact comparison.",
+        "back": "CV = e(p1, u0) - m — compensation at NEW prices to restore OLD utility u0. EV = e(p0, u1) - m — equivalent income at OLD prices to reach NEW utility u1. They are equal only when income effects are zero (quasilinear utility). For normal goods and a price increase: |CV| > |EV|. For inferior goods: |CV| < |EV|. Both use Hicksian demand curves — CV at u0, EV at u1.",
+        "type": "distinction"
+      },
+      {
+        "front": "Formula: EV using the expenditure function for Cobb-Douglas u = x1^0.5 · x2^0.5.",
+        "back": "e(p1, p2, u) = 2u√(p1·p2). EV = e(p0_old, p2, u1) - e(p0_old, p2, u0) = 2√(p1_old·p2)·(u1 - u0). Where u1 = utility at new prices. Note: uses old prices p0 throughout, evaluated at new utility u1. Compare: CV = 2√(p1_new·p2)·(u0 - u0) = uses new prices at old utility.",
+        "type": "formula"
+      },
+      {
+        "front": "When do CV and EV give identical answers?",
+        "back": "CV = EV if and only if income effects are zero — equivalently, if utility is quasilinear: u(x, m) = v(x) + m. In this case, Hicksian demand at u0 = Hicksian demand at u1 = Marshallian demand (all identical), so all three measures CV = EV = ΔCS coincide. Any nonzero income effect causes CV ≠ EV.",
+        "type": "condition"
+      },
+      {
+        "front": "For a price increase on a normal good: is |CV| greater or less than |EV|? Why?",
+        "back": "|CV| > |EV| for a price increase on a normal good. CV compensates at new (higher) prices to restore higher utility u0 — more expensive. EV measures equivalent income loss at old (lower) prices to reach lower utility u1 — cheaper. The normal good income effect amplifies the required CV (consumer wants more of the good at lower income, so restoration costs more) but dampens EV.",
+        "type": "condition"
+      },
+      {
+        "front": "What does EV < 0 mean for a price increase?",
+        "back": "EV < 0 for a price increase means the consumer would accept a reduction in income (at old prices) that is 'equivalent' to the harm from the price increase. They are worse off: u1 < u0. The negative sign indicates welfare loss. In magnitude, |EV| is the dollar value of the welfare loss measured in old-price terms. Connect: if EV = -$50 and CV = -$100, the consumer is harmed but the two measures differ because income effects matter.",
+        "type": "definition"
+      }
+    ]
+  }
+]

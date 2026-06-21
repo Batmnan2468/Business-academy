@@ -121,15 +121,15 @@
     {
       "type": 2,
       "typeName": "Comparative Statics",
-      "question": "A simultaneous game between two firms has no welfare or surplus calculation because payoffs are ordinal utility scores, not dollar profits. A new law removes one of Firm 2's strategies from the game. What type of question replaces welfare analysis here, and what is the correct effect?",
+      "question": "Two suppliers simultaneously choose to Cheat or Cooperate on quality. Payoffs: (Cheat, Cheat)=(2,2), (Cheat, Cooperate)=(6,0), (Cooperate, Cheat)=(0,6), (Cooperate, Cooperate)=(4,4). A new contract imposes a penalty of 3 on any firm that cheats. What is the Nash equilibrium after the penalty?",
       "choices": {
-        "A": "A Type 2 comparative-statics question replaces Type 7; removing a strategy changes Firm 2's strategy set and may change equilibrium predictions.",
-        "B": "A Type 7 welfare question still applies; removing a strategy always increases total surplus.",
-        "C": "A Type 1 constrained-optimization question applies; Firm 1 now maximizes subject to Firm 2's budget line.",
-        "D": "A Type 3 graph question applies; removing a strategy changes only the slope of an indifference curve."
+        "A": "Nash equilibrium changes from (Cheat, Cheat) to (Cooperate, Cooperate) because the penalty makes Cooperate dominant for both firms.",
+        "B": "Nash equilibrium stays at (Cheat, Cheat) because dominant strategies cannot change from external penalties.",
+        "C": "There is no pure-strategy Nash equilibrium after the penalty.",
+        "D": "Both (Cheat, Cooperate) and (Cooperate, Cheat) become Nash equilibria because payoffs are now asymmetric."
       },
       "correct": "A",
-      "explanation": "A is correct. Welfare analysis is not directly applicable because the topic concerns basic game structure with ordinal payoffs, so this question uses a second Type 2 comparative-statics item. Removing a strategy changes the game form and may change best responses and equilibria. B invents a welfare conclusion. C imports consumer optimization. D imports consumer graph language."
+      "explanation": "After the penalty, subtracting 3 from each cheating payoff gives: (Cheat,Cheat)=(-1,-1), (Cheat,Coop)=(3,0), (Coop,Cheat)=(0,3), (Coop,Coop)=(4,4). Against Cheat, Cooperate yields 0 > -1; against Cooperate, Cooperate yields 4 > 3. Cooperate now dominates for both firms, making (Cooperate,Cooperate) the unique Nash equilibrium. B falsely treats dominant-strategy equilibria as immune to payoff changes. C is wrong because (Cooperate,Cooperate) is a valid pure NE. D picks asymmetric profiles that are not NE because each firm prefers to deviate to Cooperate."
     }
   ]
 }
