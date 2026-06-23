@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import type { Course, Topic, PracticeQuestion } from '@/types'
-import { isLearnContentV2 } from '@/types'
+
 import type { TermCard, ConceptCard } from '@/lib/courseFlashcards'
 
 export function getAllTopics(course: Course): Topic[] {
@@ -38,7 +38,7 @@ export function getCourse(slug: string): Course | null {
 
 export function hasLearnContent(course: Course): boolean {
   const topics = getAllTopics(course)
-  return topics.some((t) => t.learn && isLearnContentV2(t.learn))
+  return topics.some((t) => !!t.learn)
 }
 
 export function hasPracticeQuestions(courseSlug: string): boolean {
